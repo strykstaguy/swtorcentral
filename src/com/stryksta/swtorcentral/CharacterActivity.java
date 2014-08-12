@@ -25,6 +25,7 @@ public class CharacterActivity extends FragmentActivity {
 	private CharacterDatabase db;
 	ArrayList<CharacterItem> characterArray = new ArrayList<CharacterItem>();
 	private static final int ADD_PARTICIPANT = 1121;
+	private static final int ADD_PARTICIPANT2 = 1122;
 	CharacterAdapter adapter;
 	
     @Override
@@ -101,8 +102,15 @@ public class CharacterActivity extends FragmentActivity {
 			public boolean onItemLongClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// TODO Auto-generated method stub
+				//
 				
-				Toast.makeText(CharacterActivity.this, adapter.getItem(position).getName(), Toast.LENGTH_SHORT).show();
+				Bundle bundle = new Bundle();
+				bundle.putInt("character_id", adapter.getItem(position).getId());
+				
+				Intent addCharacterIntent = new Intent(CharacterActivity.this, CharacterEditActivity.class);
+				addCharacterIntent.putExtras(bundle);
+		    	startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
+				//Toast.makeText(CharacterActivity.this, String.valueOf(adapter.getItem(position).getId()), Toast.LENGTH_SHORT).show();
 				return false;
 			}
         }); 

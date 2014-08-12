@@ -77,6 +77,10 @@
             android:label="@string/character_add_main" >
         </activity>
         <activity
+            android:name="com.stryksta.swtorcentral.CharacterEditActivity"
+            android:label="@string/character_edit_main" >
+        </activity>
+        <activity
             android:name="com.stryksta.swtorcentral.TestActivity"
             android:label="@string/test_main" >
         </activity>

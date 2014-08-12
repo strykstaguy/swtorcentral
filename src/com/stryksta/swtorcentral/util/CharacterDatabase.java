@@ -14,6 +14,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteQueryBuilder;
 import android.util.Log;
 
 public class CharacterDatabase extends SQLiteOpenHelper {
@@ -134,7 +135,7 @@ public class CharacterDatabase extends SQLiteOpenHelper {
         */
     }
     
-    public void editCharacter(CharacterItem character, int ID){
+    public void editCharacter(AddCharacterItem character, int ID){
         
     	SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -152,6 +153,52 @@ public class CharacterDatabase extends SQLiteOpenHelper {
         values.put("description", character.getDescription());
         db.update("character", values, "_id = ? ", new String[] {String.valueOf(ID)});
     }
+    
+    public HashMap<String, String> getCharacter(int id) {
+   	 HashMap<String, String> character = new HashMap<String, String>();
+  		SQLiteDatabase db = getReadableDatabase();
+  		StringBuilder builder = new StringBuilder();
+  		String sqlSelect = builder
+  	        	.append("SELECT character._id, character.name, character.level, character.description, race.name race, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
+  	            .append("FROM character ")
+  	            .append("LEFT JOIN race ")
+  	            .append("ON race._id = character.race_id ")
+  	            .append("LEFT JOIN advanced_classes ")
+  	            .append("ON character.advanced_class_id = advanced_classes._id ")
+  	            .append("LEFT JOIN gender ")
+  	            .append("ON character.gender_id = gender._id ")
+  	            .append("LEFT JOIN alignment ")
+  	            .append("ON character.alignment_id = alignment._id ")
+  	            .append("LEFT JOIN crew_skill cs1 ")
+  	            .append("ON character.crew_skill_id_1 = cs1._id ")
+  	            .append("LEFT JOIN crew_skill cs2 ")
+  	            .append("ON character.crew_skill_id_2 = cs2._id ")
+  	            .append("LEFT JOIN crew_skill cs3 ")
+  	            .append("ON character.crew_skill_id_3 = cs3._id ")
+  	            .append("WHERE character._id  = ?")
+  	        .toString();
+  		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(id)});
+  		
+  		if (c.moveToFirst()) {
+              do {
+            	  character.put("name", c.getString(c.getColumnIndex("name")));
+            	  character.put("level", c.getString(c.getColumnIndex("level")));
+            	  character.put("description", c.getString(c.getColumnIndex("description")));
+            	  character.put("race", c.getString(c.getColumnIndex("race")));
+            	  character.put("advanced_class", c.getString(c.getColumnIndex("advanced_class")));
+            	  character.put("gender", c.getString(c.getColumnIndex("gender")));
+            	  character.put("alignment", c.getString(c.getColumnIndex("alignment")));
+            	  character.put("crew_skill_1", c.getString(c.getColumnIndex("crew_skill_1")));
+            	  character.put("crew_skill_2", c.getString(c.getColumnIndex("crew_skill_2")));
+            	  character.put("crew_skill_3", c.getString(c.getColumnIndex("crew_skill_3")));
+              } while (c.moveToNext());
+          }
+  		
+  		//c.moveToFirst();
+  		c.close();
+  		return character;
+
+  	}
     
     public boolean isCharacterExist(SQLiteDatabase db, String character) {
         Cursor cursor = db.rawQuery("SELECT 1 FROM " + "character"
@@ -255,4 +302,28 @@ public class CharacterDatabase extends SQLiteOpenHelper {
         db.close();
         return crewSkillsItem;
     }
+    
+    public String getClass(String txtAdvancedClass) {
+		String txtClassName = null;
+		SQLiteDatabase db = getReadableDatabase();
+		StringBuilder builder = new StringBuilder();
+		String sqlSelect = builder
+			.append("SELECT classes.name ")
+		    .append("FROM classes ")
+		    .append("LEFT JOIN advanced_classes ")
+		    .append("ON advanced_classes.class_id = classes._id ")
+		    .append("WHERE advanced_classes.class = ?")
+		.toString();
+		
+		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtAdvancedClass)});
+		
+		if (c.moveToFirst()) {
+			txtClassName = c.getString(c.getColumnIndex("name"));
+        }
+		
+		//c.moveToFirst();
+		c.close();
+		return txtClassName;
+
+	}
 }

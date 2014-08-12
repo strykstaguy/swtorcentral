@@ -40,7 +40,8 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 	LinkedHashMap<String, Integer> classItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> advancedclassItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> crewSkillsclassItem = new LinkedHashMap<String, Integer>();
-	
+	HashMap<String, String> characterHash = new HashMap<String, String>();
+	 
 	static EditText characterLevel;
 	static EditText characterName;
 	static EditText characterDescription;
@@ -64,6 +65,20 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 	int cClass;
 	int cAdvanced;
 	int cCharacterID;
+	
+	String hName;
+	String hClass;
+    String hLevel;
+    String hDescription;
+    String hRace;
+    String hAdvanced_class;
+    String hGender;
+    String hAlignment;
+    String hCrew_skill_1;
+    String hCrew_skill_2;
+    String hCrew_skill_3;
+    
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +89,13 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
         actionbar.setHomeButtonEnabled(true);
         
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        
+        Bundle bundle = getIntent().getExtras();
+		
+        if ( bundle != null ) {
+        	cCharacterID = bundle.getInt("character_id");
+        	
+        }
         
         characterLevel = (EditText) findViewById(R.id.characterLevel);
         characterName = (EditText) findViewById(R.id.characterName);
@@ -86,6 +108,28 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
         characterCrewSkill1 = (Spinner) findViewById(R.id.characterCrewSkill1);
         characterCrewSkill2 = (Spinner) findViewById(R.id.characterCrewSkill2);
         characterCrewSkill3 = (Spinner) findViewById(R.id.characterCrewSkill3);
+        
+        CharacterDatabase db = new CharacterDatabase(this);
+        characterHash = db.getCharacter(cCharacterID);
+        
+        
+        
+        //Set character values
+        hName = characterHash.get("name");
+        hLevel = characterHash.get("level");
+        hDescription = characterHash.get("description");
+        hRace = characterHash.get("race");
+        hAdvanced_class = characterHash.get("advanced_class");
+        hGender = characterHash.get("gender");
+        hAlignment = characterHash.get("alignment");
+        hCrew_skill_1 = characterHash.get("crew_skill_1");
+        hCrew_skill_2 = characterHash.get("crew_skill_2");
+        hCrew_skill_3 = characterHash.get("crew_skill_3");
+        hClass = db.getClass(hAdvanced_class);
+        
+        characterName.setText(hName);
+        characterLevel.setText(hLevel);
+        characterDescription.setText(hDescription);
         
         addGenders();
         addRaces();
@@ -124,7 +168,7 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.character_add_menu, menu);
+        inflater.inflate(R.menu.character_edit_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
     
@@ -183,6 +227,8 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterClass.setAdapter(dataAdapter);
+		
+		characterClass.setSelection(dataAdapter.getPosition(hClass));
 	}
 	
 	public void addAdvancedClasses(int classid) {
@@ -193,6 +239,8 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterAdvancedClass.setAdapter(dataAdapter);
+		
+		characterAdvancedClass.setSelection(dataAdapter.getPosition(hAdvanced_class));
 	}
 	
 	public void addGenders() {
@@ -203,6 +251,8 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterGender.setAdapter(dataAdapter);
+		
+		characterGender.setSelection(dataAdapter.getPosition(hGender));
 	}
 	
 	public void addRaces() {
@@ -213,6 +263,8 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterRace.setAdapter(dataAdapter);
+		
+		characterRace.setSelection(dataAdapter.getPosition(hRace));
 	}
 	
 	public void addAlignment() {
@@ -223,6 +275,8 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterAlignment.setAdapter(dataAdapter);
+		
+		characterAlignment.setSelection(dataAdapter.getPosition(hAlignment));
 	}
 	
 	public void addCrewSkills() {
@@ -242,6 +296,10 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 		CrewSkill3Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterCrewSkill3.setAdapter(CrewSkill3Adapter);
 		db.close();
+		
+		characterCrewSkill1.setSelection(CrewSkill1Adapter.getPosition(hCrew_skill_1));
+        characterCrewSkill2.setSelection(CrewSkill2Adapter.getPosition(hCrew_skill_2));
+        characterCrewSkill3.setSelection(CrewSkill3Adapter.getPosition(hCrew_skill_3));
 	}
 	
 	public static void setCharacterLevel(final Context context){
@@ -293,10 +351,9 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 		}
 
 		protected void onPostExecute(Void result) {
-			//db.addCharacter(new CharacterItem(0, 1, 0, 0, 0, 55, cName, 0, 0, 0, 7000000, cDescription));
-			db.addCharacter(new AddCharacterItem(cAdvanced, cRace, cGender, cAlignment, 0, cLevel, cName, cCrewSkill1, cCrewSkill2, cCrewSkill3, cDescription));
+			db.editCharacter(new AddCharacterItem(cAdvanced, cRace, cGender, cAlignment, 0, cLevel, cName, cCrewSkill1, cCrewSkill2, cCrewSkill3, cDescription), cCharacterID);
 			db.close();
-			Toast.makeText(CharacterEditActivity.this, "Character Added Successfully", Toast.LENGTH_LONG).show();
+			Toast.makeText(CharacterEditActivity.this, "Character Edited Successfully", Toast.LENGTH_LONG).show();
 			setResult(Activity.RESULT_OK);
 			CharacterEditActivity.this.finish();
 			
