@@ -15,6 +15,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
  
@@ -22,6 +25,7 @@ public class CharacterActivity extends FragmentActivity {
 	private CharacterDatabase db;
 	ArrayList<CharacterItem> characterArray = new ArrayList<CharacterItem>();
 	private static final int ADD_PARTICIPANT = 1121;
+	CharacterAdapter adapter;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,8 +94,18 @@ public class CharacterActivity extends FragmentActivity {
         characterArray = db.getCharacters();
         
         ListView characterList = (ListView) findViewById(R.id.characterListView);
-        CharacterAdapter adapter = new CharacterAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, characterArray);
+        adapter = new CharacterAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, characterArray);
         characterList.setAdapter(adapter);
+        characterList.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			public boolean onItemLongClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				
+				Toast.makeText(CharacterActivity.this, adapter.getItem(position).getName(), Toast.LENGTH_SHORT).show();
+				return false;
+			}
+        }); 
 		db.close();
 	}
 }

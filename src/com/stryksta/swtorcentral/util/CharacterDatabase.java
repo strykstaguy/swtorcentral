@@ -133,7 +133,26 @@ public class CharacterDatabase extends SQLiteOpenHelper {
         }
         */
     }
-
+    
+    public void editCharacter(CharacterItem character, int ID){
+        
+    	SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        
+        values.put("advanced_class_id", character.getAdvancedClassId());
+        values.put("race_id", character.getRace());
+        values.put("gender_id", character.getGender());
+        values.put("alignment_id", character.getAlignment());
+        values.put("skill_tree_build_id", character.getSkillTreeBuildId());
+        values.put("level", character.getLevel());
+        values.put("name", character.getName());
+        values.put("crew_skill_id_1", character.getCrewSkillId_1());
+        values.put("crew_skill_id_2", character.getCrewSkillId_2());
+        values.put("crew_skill_id_3", character.getCrewSkillId_3());
+        values.put("description", character.getDescription());
+        db.update("character", values, "_id = ? ", new String[] {String.valueOf(ID)});
+    }
+    
     public boolean isCharacterExist(SQLiteDatabase db, String character) {
         Cursor cursor = db.rawQuery("SELECT 1 FROM " + "character"
                 + " WHERE name = '" + character + "'", new String[] {});

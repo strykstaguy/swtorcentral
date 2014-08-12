@@ -43,11 +43,11 @@
         app:firstColor="@color/text"
         app:firstSize="20"
         app:lastColor="@color/text"
-        app:lastSize="18"
+        app:lastSize="20"
         app:lineColor="@color/text"
         app:lineWidth="6dp"
         app:middleColor="@color/text"
-        app:middleSize="10"
+        app:middleSize="20"
         app:timeline_type="line" />
     
 </LinearLayout>

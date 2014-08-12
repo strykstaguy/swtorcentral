@@ -157,11 +157,11 @@ public abstract class TimelineView extends View {
         centerY = contentWidth / 2;
 
         if (timelineType == TimelineType.START) {
-            canvas.drawRect(startY, centerX, endY, endX, linePaint);
+        	canvas.drawRect(centerX, startX, endY, centerY, linePaint);
             drawStart(canvas, firstPaint, centerY, centerX, mStartSize);
         } else if (timelineType == TimelineType.MIDDLE) {
-            canvas.drawRect(startX, startY, endX, endY, linePaint);
-            drawMiddle(canvas, middlePaint, centerX, centerY, mMiddleSize);
+            canvas.drawRect(startY, startX, endY, centerY, linePaint);
+            drawMiddle(canvas, middlePaint, centerY, centerX, mMiddleSize);
         } else if (timelineType == TimelineType.END) {
             canvas.drawRect(startY, startX, endX, centerY, linePaint);
             drawEnd(canvas, lastPaint, centerY, centerX, mEndSize);

@@ -13,6 +13,7 @@
  	android:background="@color/background"
  	android:paddingTop="5.0dip"
  	android:divider="@drawable/divider"
+ 	android:longClickable="true"
  	android:duplicateParentState="false"
  	android:cacheColorHint="@android:color/transparent" >
  </ListView>
