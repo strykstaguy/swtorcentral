@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:padding="5.0dip" >
+ 
+    <LinearLayout
+        android:id="@+id/CharacterAddLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5.0dip" >
+ 		
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        
+        <EditText
+            android:id="@+id/characterName"
+            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/character_name_hint" />
+ 		
+        <EditText
+            android:id="@+id/characterLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:focusable="false"
+            android:hint="@string/character_level_hint"
+            android:inputType="number" />
+        
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        	
+            <TextView
+                android:id="@+id/labelGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_label_gender"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Spinner
+        		android:id="@+id/characterGender"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_marginBottom="10dp" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        	
+            <TextView
+                android:id="@+id/labelClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_label_class"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Spinner
+        		android:id="@+id/characterClass"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_marginBottom="10dp" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        	
+            <TextView
+                android:id="@+id/labelAdvancedClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_label_advancedclass"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Spinner
+        		android:id="@+id/characterAdvancedClass"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_marginBottom="10dp" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        	
+            <TextView
+                android:id="@+id/labelRace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="@string/character_label_race"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Spinner
+        		android:id="@+id/characterRace"
+        		android:layout_width="match_parent"
+        		android:layout_marginBottom="10dp"
+        		android:layout_height="wrap_content" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        	
+            <TextView
+                android:id="@+id/labelAlignment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="@string/character_label_alignment"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Spinner
+            	android:id="@+id/characterAlignment"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_marginBottom="10dp" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        	
+            <TextView
+                android:id="@+id/labelSkill1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_label_crew1"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Spinner
+            	android:id="@+id/characterCrewSkill1"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_marginBottom="10dp" />
+            
+        </LinearLayout>
+        
+		<LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        	
+            <TextView
+                android:id="@+id/labelSkill2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_label_crew2"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Spinner
+            	android:id="@+id/characterCrewSkill2"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_marginBottom="10dp" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+        	
+            <TextView
+                android:id="@+id/labelSkill3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_label_crew3"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            <Spinner
+            	android:id="@+id/characterCrewSkill3"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_marginBottom="10dp" />
+            
+        </LinearLayout>
+        
+        <EditText
+            android:id="@+id/characterDescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/character_description_hint"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="20dp" />
+
+    </LinearLayout>
+ 
+</ScrollView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="drawerItems">
+        <item>draweritem1</item>
+        <item>draweritem2</item>
+        <item>draweritem3</item>
+        <item>draweritem4</item>
+        <item>draweritem5</item>
+        <item>draweritem6</item>
+        <item>draweritem7</item>
+        <item>draweritem8</item>
+        <item>draweritem9</item>
+        <item>draweritem10</item>
+    </string-array>
+	
+    <array name="drawerIcons">
+        <item>ic_action_feed</item>
+        <item>ic_action_database</item>
+        <item>ic_datacron</item>
+        <item>ic_action_shield</item>
+        <item>ic_action_gear</item>
+        <item>ic_progression</item>
+        <item>ic_action_calendar_month</item>
+        <item>ic_action_users</item>
+        <item>ic_action_gear</item>
+        <item>ic_achievement</item>
+    </array>
+    
+    <string-array name="syncFrequency">
+        <item name="1">Once a day</item>
+        <item name="7">Once a week</item>
+        <item name="3">Once a year</item>
+        <item name="0">Never (Update maually)</item>
+    </string-array>
+    
+    <string-array name="syncFrequencyValues">
+        <item name="1">1</item>
+        <item name="7">7</item>
+        <item name="30">30</item>
+        <item name="0">0</item>
+    </string-array>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/datacronpadding"
+   	android:background="@drawable/card_background" >
+
+    <TextView
+        android:id="@+id/txtReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+        android:textColor="@color/regularColor"
+        android:layout_gravity="left"
+        android:textStyle="bold"
+        android:text="@string/testreward"
+        android:textSize="14sp" />
+
+     <TextView
+        android:id="@+id/txtPlanet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+        android:textColor="@color/regularColor"
+        android:layout_gravity="left"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="5dp"
+        android:text="@string/testcoord"
+        android:textColor="@color/regularColor"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/txtCodex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:textColor="@color/regularColor"
+        android:layout_gravity="left"
+        android:textSize="14sp" />
+</LinearLayout>

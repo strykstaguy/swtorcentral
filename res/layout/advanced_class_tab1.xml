@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="10.0dip"
+   	android:background="#DCDCDC" >
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:padding="5.0dip"
+   	android:background="@drawable/card_background"  >
+   	
+    <LinearLayout 
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="150.0dip" >
+   		
+     <ImageView
+     	android:id="@+id/imgAdvancedClass"
+        android:layout_width="150.0dip"
+        android:layout_height="150.0dip"
+        android:contentDescription="@string/image_placeholder"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter" />
+     
+     <LinearLayout 
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="150.0dip"
+   		android:gravity="center_vertical" >
+     <TextView
+        android:id="@+id/txtRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:layout_gravity="left"
+        android:textSize="14sp" />
+     
+     <TextView
+        android:id="@+id/txtArmor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:layout_gravity="left"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/txtWeapons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:layout_gravity="left"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/txtAttribute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:layout_gravity="left"
+        android:textSize="14sp" />
+    	</LinearLayout>
+     </LinearLayout>
+	
+    <TextView
+        android:id="@+id/txtAdvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="16sp" />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <declare-styleable name="TimelineView">
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="color" />
+
+        <attr name="middleSize" format="float" />
+        <attr name="middleColor" format="color" />
+
+        <attr name="firstSize" format="float" />
+        <attr name="firstColor" format="color" />
+
+        <attr name="lastSize" format="float" />
+        <attr name="lastColor" format="color" />
+
+        <attr name="timeline_type" format="enum">
+            <enum name="start" value="-1" />
+            <enum name="middle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="end" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="regularColor">#000000</color>
+    <color name="lightColor">#0aa421</color>
+    <color name="standardColor">#eebe00</color>
+    <color name="heavyColor">#FFA545</color>
+    <color name="veryheavyColor">#FF4E4E</color>
+    <color name="fullColor">#FF4E4E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#DCDCDC</color>
+    <color name="backgroundlight">#E5E5E5</color>
+    <color name="text">#333333</color>
+    <color name="subtext">#949494</color>
+    <color name="gray_35">#232323</color>
+    <color name="gray_46">#2e2e2e</color>
+    <color name="gray_23">#3b3b3b</color>
+    <color name="gray_33">#545454</color>
+    <color name="gray_86">#DCDCDC</color>
+    <color name="swtor_blue">#3F9FE0</color>
+    <color name="swtor_green">#99cc00</color>
+    <color name="swtor_orange">#FFCB00</color>
+</resources>
