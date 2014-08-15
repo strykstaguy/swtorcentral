@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.Toast;
 
 public class Category4Fragment extends Fragment {
 	private AchievementsDatabase db;
@@ -61,6 +63,19 @@ public class Category4Fragment extends Fragment {
 		
         achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
         achievementListView.setAdapter(achievementAdapter);
+        
+        achievementListView.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			public boolean onItemLongClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				//
+				view.setBackground(getResources().getDrawable(R.drawable.card_selected_background));
+				//Toast.makeText(getActivity(), "Test", Toast.LENGTH_SHORT).show();
+				return false;
+			}
+        }); 
+        
      	return vw_layout;
 	}
 	

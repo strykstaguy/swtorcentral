@@ -1,8 +1,5 @@
 package com.stryksta.swtorcentral;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -22,14 +19,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.stryksta.swtorcentral.data.DrawerItem;
+import com.stryksta.swtorcentral.util.SessionManager;
 
 public class MainActivity extends FragmentActivity  {
 
@@ -40,11 +38,18 @@ public class MainActivity extends FragmentActivity  {
 	private ActionBarDrawerToggle mDrawerToggle;
 	
 	Spinner userCharacter;
+	TextView mUserCharacter;
+	TextView mUserStatus;
+	ImageView mUserIcon;
+	ImageView mUserAddorSwitch;
 	
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
 	private String[] menuItems;
 	private String[] menuItemsIcon;
+	
+	SessionManager session;
+	
 	//End Drawer
 	
 	/**
@@ -55,6 +60,8 @@ public class MainActivity extends FragmentActivity  {
 		super.onCreate(savedInstanceState);
 		// Set view
 		setContentView(R.layout.activity_main);
+
+		session = new SessionManager(getApplicationContext());
 		
 		//Start Drawer
 		mTitle = mDrawerTitle = getTitle();
@@ -63,7 +70,22 @@ public class MainActivity extends FragmentActivity  {
 	    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 	    mDrawerList = (ListView) findViewById(R.id.drawer);
 	    mDrawerView = (LinearLayout) this.findViewById(R.id.drawer_view);
-	    		
+	    
+	    mUserCharacter = (TextView) findViewById(R.id.userCharacter);
+	    mUserStatus = (TextView) findViewById(R.id.userStatus);
+	    mUserIcon = (ImageView) findViewById(R.id.imgClassIcon);
+	    mUserAddorSwitch = (ImageView) findViewById(R.id.imgAddorSwitch);
+	    
+	    if (session.isLoggedIn()) {
+	    	mUserStatus.setText("Logged in");
+	    } else {
+	    	mUserStatus.setText("Logged in");
+	    	mUserAddorSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_switch_user));
+	    	//mUserIcon.setVisibility(View.GONE);
+	    	
+	    	
+	    }
+	    
 	    //Character Selection
 	    /*
 	    userCharacter = (Spinner) findViewById(R.id.userCharacter);
