@@ -37,7 +37,7 @@
     <dimen name="row_margin">10dp</dimen>
     <dimen name="datacronpadding">5dp</dimen>
     <dimen name="advclasspadding">10dp</dimen>
-    <dimen name="title_size">18sp</dimen>
+    <dimen name="title_size">16sp</dimen>
     <color name="title_color">#ffffff</color>
     <color name="title_detail_color">#000000</color>
     <dimen name="advclass_img_height">300dp</dimen>
