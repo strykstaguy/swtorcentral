@@ -326,4 +326,28 @@ public class CharacterDatabase extends SQLiteOpenHelper {
 		return txtClassName;
 
 	}
+    
+    public ArrayList<String> CharacterSelectionList(String txtplanet) {
+		SQLiteDatabase db = getReadableDatabase();
+		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+		
+		ArrayList<String> characterArray = new ArrayList<String>();
+		
+		String [] sqlSelect = {"0 _id", "name"}; 
+		String sqlTables = "character";
+
+		qb.setTables(sqlTables);
+		Cursor c = qb.query(db, sqlSelect, null, null, null, null, null);
+		
+		if (c.moveToFirst()) {
+			String characterName;
+			characterName = c.getString(c.getColumnIndex("name"));
+			characterArray.add(characterName);
+        }
+		
+		//c.moveToFirst();
+		c.close();
+		return characterArray;
+
+	}
 }

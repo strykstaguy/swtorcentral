@@ -37,6 +37,9 @@ public class MainActivity extends FragmentActivity  {
 	private LinearLayout mDrawerView;
 	private ActionBarDrawerToggle mDrawerToggle;
 	
+	private AlertDialog characterSelectionDialog;
+	private String[] charcters = {"None", "Benner","Crimewave","Defacto"};
+	
 	Spinner userCharacter;
 	TextView mUserCharacter;
 	TextView mUserStatus;
@@ -76,11 +79,32 @@ public class MainActivity extends FragmentActivity  {
 	    mUserIcon = (ImageView) findViewById(R.id.imgClassIcon);
 	    mUserAddorSwitch = (ImageView) findViewById(R.id.imgAddorSwitch);
 	    
+	    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+	    builder.setTitle("Choose your class");
+	    builder.setIcon(R.drawable.ic_action_user);
+	    builder.setItems(charcters, new DialogInterface.OnClickListener() {
+	    
+	    public void onClick(DialogInterface dialog, int which) {
+	    Toast toast = Toast.makeText(getApplicationContext(), "Selected: "+ charcters[which], Toast.LENGTH_SHORT);
+	    toast.show();
+	    }
+	    });
+	    builder.setCancelable(false);
+	    characterSelectionDialog = builder.create();
+	    
+	    mUserAddorSwitch.setOnClickListener(new View.OnClickListener() {
+
+	        public void onClick(View v) {
+	        	characterSelectionDialog.show();
+	        }
+	    });
+	    
 	    if (session.isLoggedIn()) {
 	    	mUserStatus.setText("Logged in");
-	    } else {
-	    	mUserStatus.setText("Logged in");
 	    	mUserAddorSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_switch_user));
+	    } else {
+	    	mUserStatus.setText("Logged out");
+	    	mUserAddorSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_add));
 	    	//mUserIcon.setVisibility(View.GONE);
 	    	
 	    	
