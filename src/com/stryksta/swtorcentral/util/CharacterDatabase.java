@@ -327,17 +327,14 @@ public class CharacterDatabase extends SQLiteOpenHelper {
 
 	}
     
-    public ArrayList<String> CharacterSelectionList(String txtplanet) {
+    public ArrayList<String> CharacterSelectionList() {
 		SQLiteDatabase db = getReadableDatabase();
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 		
 		ArrayList<String> characterArray = new ArrayList<String>();
 		
-		String [] sqlSelect = {"0 _id", "name"}; 
-		String sqlTables = "character";
-
-		qb.setTables(sqlTables);
-		Cursor c = qb.query(db, sqlSelect, null, null, null, null, null);
+		String sqlSelect = "SELECT * FROM character";
+        Cursor c = db.rawQuery(sqlSelect, null);
 		
 		if (c.moveToFirst()) {
 			String characterName;
@@ -348,6 +345,23 @@ public class CharacterDatabase extends SQLiteOpenHelper {
 		//c.moveToFirst();
 		c.close();
 		return characterArray;
+
+	}
+    
+    public String getCharacterID(String txtName) {
+		String txtID = null;
+		SQLiteDatabase db = getReadableDatabase();
+		
+		 String sqlSelect = "SELECT _id FROM character WHERE name = ?";
+	     Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtName)});
+		
+		if (c.moveToFirst()) {
+			txtID = c.getString(c.getColumnIndex("_id"));
+        }
+		
+		//c.moveToFirst();
+		c.close();
+		return txtID;
 
 	}
 }

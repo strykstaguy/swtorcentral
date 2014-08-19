@@ -1,6 +1,8 @@
 package com.stryksta.swtorcentral.util;
 
 import java.util.ArrayList;
+
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -119,5 +121,23 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
         }
 		c.close();
 		return achievementItem;
+	}
+	
+	public void setCompleted (int characterID, int achievementID) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		
+		ContentValues values = new ContentValues();
+		values.put("character_id", characterID);
+		values.put("achievement_id", achievementID);
+		
+		db.insert("character", null, values);
+		db.close();
+	}
+	
+	public void removeCompleted (int characterID, int achievementID) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		String sqlSelect = "character_id = ? AND achievement_id = ?";
+		db.delete("character_achievements", sqlSelect , new String[]{String.valueOf(characterID), String.valueOf(achievementID)});
+		db.close();
 	}
 }

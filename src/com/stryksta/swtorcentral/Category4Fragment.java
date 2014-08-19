@@ -2,9 +2,11 @@ package com.stryksta.swtorcentral;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -23,9 +25,12 @@ public class Category4Fragment extends Fragment {
 	private AchievementsDatabase db;
 	ArrayList<AchievementsItem> achievements = new ArrayList<AchievementsItem>();
 	AchievementItemsAdapter achievementAdapter;
+	SessionManager session;
 	String Category1;
 	String Category2;
 	String Category3;
+	String characterName;
+	String characterID;
 	View vw_layout;
 	
 	@Override
@@ -45,7 +50,7 @@ public class Category4Fragment extends Fragment {
 		
         vw_layout = inflater.inflate(R.layout.achievement_category_main, container, false);
         
-       
+        session = new SessionManager(getActivity());
         
         if ( getArguments().getString("category1") != null ) {
         	Category1 = getArguments().getString("category1");
@@ -53,7 +58,10 @@ public class Category4Fragment extends Fragment {
         	Category3 = getArguments().getString("category3");
         }
         
-        
+        //get user data from session
+        HashMap<String, String> user = session.getUserDetails();
+        characterName = user.get(SessionManager.KEY_NAME);
+        characterID = user.get(SessionManager.KEY_ID);
         getActivity().setTitle(Category3);
         
         db = new AchievementsDatabase(getActivity());
@@ -70,8 +78,8 @@ public class Category4Fragment extends Fragment {
 					int position, long id) {
 				// TODO Auto-generated method stub
 				//
-				view.setBackground(getResources().getDrawable(R.drawable.card_selected_background));
-				//Toast.makeText(getActivity(), "Test", Toast.LENGTH_SHORT).show();
+				//view.setBackground(getResources().getDrawable(R.drawable.card_selected_background));
+				Toast.makeText(getActivity(), "Character ID: " + characterID + " Achievment ID: " + achievementAdapter.getItem(position).getAchievementID(), Toast.LENGTH_SHORT).show();
 				return false;
 			}
         }); 

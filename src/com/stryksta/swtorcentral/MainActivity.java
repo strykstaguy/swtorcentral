@@ -1,5 +1,6 @@
 package com.stryksta.swtorcentral;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.app.AlertDialog;
@@ -29,6 +30,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.stryksta.swtorcentral.data.DrawerItem;
+import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.PlanetDatabase;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 public class MainActivity extends FragmentActivity  {
@@ -41,6 +44,7 @@ public class MainActivity extends FragmentActivity  {
 	
 	private AlertDialog characterSelectionDialog;
 	private String[] charcters = {"Benner","Crimewave","Defacto"};
+	ArrayList<String> characterArray = new ArrayList<String>();
 	
 	Spinner userCharacter;
 	TextView mUserCharacter;
@@ -52,6 +56,8 @@ public class MainActivity extends FragmentActivity  {
 	private CharSequence mTitle;
 	private String[] menuItems;
 	private String[] menuItemsIcon;
+	
+	private CharacterDatabase db;
 	
 	SessionManager session;
 	
@@ -67,6 +73,7 @@ public class MainActivity extends FragmentActivity  {
 		setContentView(R.layout.activity_main);
 
 		session = new SessionManager(getApplicationContext());
+		db = new CharacterDatabase(MainActivity.this);
 		
 		//Start Drawer
 		mTitle = mDrawerTitle = getTitle();
@@ -81,31 +88,49 @@ public class MainActivity extends FragmentActivity  {
 	    mUserIcon = (ImageView) findViewById(R.id.imgClassIcon);
 	    mUserAddorSwitch = (ImageView) findViewById(R.id.imgAddorSwitch);
 	    
+	    //characterArray = db.CharacterSelectionList();
+	    
+	    
+	    
 	    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 	    builder.setTitle("Choose your class");
 	    builder.setIcon(R.drawable.ic_action_user);
-	    builder.setItems(charcters, new DialogInterface.OnClickListener() {
 	    
-	    public void onClick(DialogInterface dialog, int which) {
-	    //Toast toast = Toast.makeText(getApplicationContext(), "Selected: "+ charcters[which], Toast.LENGTH_SHORT);
-	    //toast.show();
-	    	session.createLoginSession(charcters[which]);
-	    	mUserCharacter.setText(charcters[which]);
-	    	mUserStatus.setText("Logged in");
+	    if (characterArray.isEmpty()) {
+	    	builder.setMessage("You have no characters, please cancel and add one.");
+	    } else {
+	    	
+	    	CharSequence[] cs = characterArray.toArray(new CharSequence[characterArray.size()]);
+	    	builder.setItems(charcters, new DialogInterface.OnClickListener() {
+	    	    
+	    	    //Character Selection
+	    	    public void onClick(DialogInterface dialog, int which) {
+	    	    //Toast toast = Toast.makeText(getApplicationContext(), "Selected: "+ charcters[which], Toast.LENGTH_SHORT);
+	    	    //toast.show();
+	    	    	
+	    	 		int characterID = Integer.parseInt(db.getCharacterID(charcters[which]));
+	    	 		
+	    	    	session.createLoginSession(charcters[which], characterID);
+	    	    	mUserCharacter.setText(charcters[which]);
+	    	    	mUserStatus.setText("Logged in");
+	    	    }
+	    	    });
 	    }
+	    
+	    builder.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
+	    	public void onClick(DialogInterface dialog, int which) {
+	    		session.logoutUser();
+	    		mUserCharacter.setText("None");
+		    	mUserStatus.setText("Logged out");
+	    	}
 	    });
 	    
-	    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+	    //Cancel
+	    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 	    	public void onClick(DialogInterface dialog, int which) {
-	    	MainActivity.this.finish();
+	    		dialog.cancel();
 	    	}
-	    	});
-
-	    	builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-	    	public void onClick(DialogInterface dialog, int which) {
-	    	dialog.cancel();
-	    	}
-	    	});
+	    });
 	    	
 	    builder.setCancelable(true);
 	    characterSelectionDialog = builder.create();
