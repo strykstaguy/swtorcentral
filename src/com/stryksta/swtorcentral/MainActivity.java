@@ -1,5 +1,7 @@
 package com.stryksta.swtorcentral;
 
+import java.util.HashMap;
+
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -38,7 +40,7 @@ public class MainActivity extends FragmentActivity  {
 	private ActionBarDrawerToggle mDrawerToggle;
 	
 	private AlertDialog characterSelectionDialog;
-	private String[] charcters = {"None", "Benner","Crimewave","Defacto"};
+	private String[] charcters = {"Benner","Crimewave","Defacto"};
 	
 	Spinner userCharacter;
 	TextView mUserCharacter;
@@ -85,11 +87,27 @@ public class MainActivity extends FragmentActivity  {
 	    builder.setItems(charcters, new DialogInterface.OnClickListener() {
 	    
 	    public void onClick(DialogInterface dialog, int which) {
-	    Toast toast = Toast.makeText(getApplicationContext(), "Selected: "+ charcters[which], Toast.LENGTH_SHORT);
-	    toast.show();
+	    //Toast toast = Toast.makeText(getApplicationContext(), "Selected: "+ charcters[which], Toast.LENGTH_SHORT);
+	    //toast.show();
+	    	session.createLoginSession(charcters[which]);
+	    	mUserCharacter.setText(charcters[which]);
+	    	mUserStatus.setText("Logged in");
 	    }
 	    });
-	    builder.setCancelable(false);
+	    
+	    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+	    	public void onClick(DialogInterface dialog, int which) {
+	    	MainActivity.this.finish();
+	    	}
+	    	});
+
+	    	builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+	    	public void onClick(DialogInterface dialog, int which) {
+	    	dialog.cancel();
+	    	}
+	    	});
+	    	
+	    builder.setCancelable(true);
 	    characterSelectionDialog = builder.create();
 	    
 	    mUserAddorSwitch.setOnClickListener(new View.OnClickListener() {
@@ -100,9 +118,18 @@ public class MainActivity extends FragmentActivity  {
 	    });
 	    
 	    if (session.isLoggedIn()) {
+	    	
+	    	// get user data from session
+	        HashMap<String, String> user = session.getUserDetails();
+	        
+	        // name
+	        String name = user.get(SessionManager.KEY_NAME);
+	    	
+	    	mUserCharacter.setText(name);
 	    	mUserStatus.setText("Logged in");
 	    	mUserAddorSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_switch_user));
 	    } else {
+	    	mUserCharacter.setText("None");
 	    	mUserStatus.setText("Logged out");
 	    	mUserAddorSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_add));
 	    	//mUserIcon.setVisibility(View.GONE);
