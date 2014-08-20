@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import com.stryksta.swtorcentral.data.AddCharacterItem;
 import com.stryksta.swtorcentral.data.CharacterItem;
 
@@ -17,48 +18,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.util.Log;
 
-public class CharacterDatabase extends SQLiteOpenHelper {
+public class CharacterDatabase extends SQLiteAssetHelper {
 	
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "swtor";
-   
-	public CharacterDatabase(Context context) {
-		super(context, DATABASE_NAME, null, DATABASE_VERSION);	
+    
+    public CharacterDatabase(Context context) {
+		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
-
-	@Override
-	public void onCreate(SQLiteDatabase db) {
-		// SQL statement to create book table
-		String CREATE_SWTOR_TABLE = "CREATE TABLE character ( " +
-                "_id INTEGER PRIMARY KEY AUTOINCREMENT, " + 
-				"advanced_class_id INTEGER NOT NULL," +
-    			"race_id INTEGER NOT NULL," +
-    			"gender_id INTEGER NOT NULL," +
-    			"alignment_id INTEGER NOT NULL DEFAULT '2'," +
-    			"skill_tree_build_id INTEGER," +
-    			"level INTEGER NOT NULL DEFAULT '55'," +
-    		    "title TEXT NOT NULL," +
-    		    "crew_skill_id_1 INTEGER," +
-    		    "crew_skill_id_2 INTEGER," +
-    		    "crew_skill_id_3 INTEGER," +
-    		    "description TEXT," +
-    		    "image TEXT," +
-    		    "published DATETIME)";
-		
-		// create books table
-		db.execSQL(CREATE_SWTOR_TABLE);
-	}
-
-	@Override
-	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// Drop older books table if existed
-        db.execSQL("DROP TABLE IF EXISTS character");
-        
-        // create fresh books table
-        this.onCreate(db);
-	}
-	//---------------------------------------------------------------------
-   
+    
 	public ArrayList<CharacterItem> getCharacters() {
         ArrayList<CharacterItem> characterItem = new ArrayList<CharacterItem>();
         

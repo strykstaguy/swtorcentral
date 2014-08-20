@@ -130,7 +130,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		values.put("character_id", characterID);
 		values.put("achievement_id", achievementID);
 		
-		db.insert("character", null, values);
+		db.insert("character_achievements", "character_id", values);
 		db.close();
 	}
 	

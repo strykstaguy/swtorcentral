@@ -41,6 +41,7 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
 				TextView txtViewTitle = (TextView) rowView.findViewById(R.id.txtTitle);
 				TextView txtViewDescription = (TextView) rowView.findViewById(R.id.txtDescription);
 				TextView txtViewCount = (TextView) rowView.findViewById(R.id.txtCount);
+				TextView txtViewReward = (TextView) rowView.findViewById(R.id.txtRewards);
 				
 				if (item != null) {
 					
@@ -48,6 +49,11 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
 					txtViewDescription.setText(insertNewLine(item.getDescription()));
 					txtViewCount.setText(String.valueOf(item.getPoints()));
 					
+					if (item.getRewards() == null) {
+						txtViewReward.setVisibility(View.GONE);
+			        } else {
+			        	txtViewReward.setText(insertNewLine(String.valueOf(item.getRewards())));
+			        }
 				}
 				
 		    return rowView;

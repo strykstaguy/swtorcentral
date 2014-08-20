@@ -78,8 +78,9 @@ public class Category4Fragment extends Fragment {
 					int position, long id) {
 				// TODO Auto-generated method stub
 				//
-				//view.setBackground(getResources().getDrawable(R.drawable.card_selected_background));
-				Toast.makeText(getActivity(), "Character ID: " + characterID + " Achievment ID: " + achievementAdapter.getItem(position).getAchievementID(), Toast.LENGTH_SHORT).show();
+				view.setBackground(getResources().getDrawable(R.drawable.card_selected_background));
+				//Toast.makeText(getActivity(), "Character ID: " + characterID + " Achievement ID: " + achievementAdapter.getItem(position).getAchievementID(), Toast.LENGTH_SHORT).show();
+				db.setCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID());
 				return false;
 			}
         }); 
@@ -91,5 +92,6 @@ public class Category4Fragment extends Fragment {
 	public void onDestroyView() {
 	    super.onDestroyView();
 	    //getActivity().getActionBar().setTitle("Achievements");
+	    db.close();
 	}
 }

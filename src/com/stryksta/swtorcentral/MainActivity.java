@@ -88,7 +88,7 @@ public class MainActivity extends FragmentActivity  {
 	    mUserIcon = (ImageView) findViewById(R.id.imgClassIcon);
 	    mUserAddorSwitch = (ImageView) findViewById(R.id.imgAddorSwitch);
 	    
-	    //characterArray = db.CharacterSelectionList();
+	    characterArray = db.CharacterSelectionList();
 	    
 	    
 	    
@@ -101,7 +101,7 @@ public class MainActivity extends FragmentActivity  {
 	    } else {
 	    	
 	    	CharSequence[] cs = characterArray.toArray(new CharSequence[characterArray.size()]);
-	    	builder.setItems(charcters, new DialogInterface.OnClickListener() {
+	    	builder.setItems(cs, new DialogInterface.OnClickListener() {
 	    	    
 	    	    //Character Selection
 	    	    public void onClick(DialogInterface dialog, int which) {

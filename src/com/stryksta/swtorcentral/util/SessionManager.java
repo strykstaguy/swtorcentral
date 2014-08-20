@@ -87,7 +87,7 @@ public class SessionManager {
 		HashMap<String, String> user = new HashMap<String, String>();
 		// user name
 		user.put(KEY_NAME, pref.getString(KEY_NAME, null));
-		user.put(KEY_ID, String.valueOf(pref.getString(KEY_ID, null)));
+		user.put(KEY_ID, String.valueOf(pref.getInt(KEY_ID, 0)));
 		
 		// return user
 		return user;
