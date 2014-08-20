@@ -10,14 +10,15 @@ public class AchievementsItem {
     public int points;
     public String rewards;
     public int count;
+    public int completed;
     private boolean isGroupHeader = false;
 
     public AchievementsItem(String title) {
-		this(0, "", "", "", title, "", 0, "", 0);
+		this(0, "", "", "", title, "", 0, "", 0, 0);
 		isGroupHeader = true;
 	}
     
-    public AchievementsItem(int achievementID, String category1, String category2, String category3, String title, String description, int points, String rewards, int count) {
+    public AchievementsItem(int achievementID, String category1, String category2, String category3, String title, String description, int points, String rewards, int count, int completed) {
     	this.achievementID = achievementID;
         this.category1 = category1;
         this.category2 = category2;
@@ -27,6 +28,7 @@ public class AchievementsItem {
         this.points = points;
         this.rewards = rewards;
         this.count = count;
+        this.completed = completed;
     }
     
     
@@ -100,6 +102,14 @@ public class AchievementsItem {
 
     public void setCount(int count){
         this.count = count;
+    }
+    
+    public int getCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(int completed){
+        this.completed = completed;
     }
     
     public boolean isGroupHeader() {

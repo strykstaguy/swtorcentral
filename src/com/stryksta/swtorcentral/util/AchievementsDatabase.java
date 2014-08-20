@@ -38,7 +38,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	String rewards = c.getString(c.getColumnIndex("rewards"));
             	int count = c.getInt(c.getColumnIndex("count"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count));
+            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0));
             } while (c.moveToNext());
         }
 		c.close();
@@ -65,7 +65,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	String rewards = c.getString(c.getColumnIndex("rewards"));
             	int count = c.getInt(c.getColumnIndex("count"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count));
+            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0));
             } while (c.moveToNext());
         }
 		c.close();
@@ -91,7 +91,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	String rewards = c.getString(c.getColumnIndex("rewards"));
             	int count = c.getInt(c.getColumnIndex("count"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count));
+            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0));
             } while (c.moveToNext());
         }
 		c.close();
@@ -102,7 +102,20 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		ArrayList<AchievementsItem> achievementItem = new ArrayList<AchievementsItem>();
 		SQLiteDatabase db = getReadableDatabase();
 
-		String sqlSelect = "SELECT * FROM achievements WHERE category1 = ? AND category2 = ? AND category3 = ? ORDER BY _id asc";
+		//String sqlSelect = "SELECT * FROM achievements WHERE category1 = ? AND category2 = ? AND category3 = ? ORDER BY _id asc";
+		StringBuilder builder = new StringBuilder();
+		String sqlSelect = builder
+			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden, ")
+		    .append("CASE WHEN (a.character_id is not null) ")
+		    .append("THEN \'1\' ")
+		    .append("ELSE \'0\' ")
+		    .append("END AS completed ")
+		    .append("FROM achievements ")
+		    .append("LEFT JOIN character_achievements a ")
+		    .append("ON achievements._id = a.achievements_id ")
+		    .append("WHERE category1 = ? AND category2 = ? and category3 = ?")
+		.toString();
+		
 		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtcategory1), String.valueOf(txtcategory2), String.valueOf(txtcategory3)});
 		
 		if (c.moveToFirst()) {
@@ -115,8 +128,9 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	String description = c.getString(c.getColumnIndex("description"));
             	int points = c.getInt(c.getColumnIndex("points"));
             	String rewards = c.getString(c.getColumnIndex("rewards"));
+            	int completed = c.getInt(c.getColumnIndex("completed"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, 0));
+            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, 0, completed));
             } while (c.moveToNext());
         }
 		c.close();
@@ -128,7 +142,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		
 		ContentValues values = new ContentValues();
 		values.put("character_id", characterID);
-		values.put("achievement_id", achievementID);
+		values.put("achievements_id", achievementID);
 		
 		db.insert("character_achievements", "character_id", values);
 		db.close();
