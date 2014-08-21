@@ -11,6 +11,7 @@ import com.stryksta.swtorcentral.util.SessionManager;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +28,7 @@ public class Category4Fragment extends Fragment {
 	ArrayList<AchievementsItem> achievements = new ArrayList<AchievementsItem>();
 	AchievementItemsAdapter achievementAdapter;
 	SessionManager session;
+	Handler handler;
 	String Category1;
 	String Category2;
 	String Category3;
@@ -52,6 +54,8 @@ public class Category4Fragment extends Fragment {
         vw_layout = inflater.inflate(R.layout.achievement_category_main, container, false);
         
         session = new SessionManager(getActivity());
+        
+        handler = new Handler();
         
         if ( getArguments().getString("category1") != null ) {
         	Category1 = getArguments().getString("category1");
@@ -100,22 +104,24 @@ public class Category4Fragment extends Fragment {
 	}
 	
 	public void updateItems() {
+		
+		/*handler.postDelayed(new Runnable() {
+		       public void run() {
+		    	   
+		       }
+		     }, 500);*/
+		
+		db = new AchievementsDatabase(getActivity());
 	    
-        getActivity().runOnUiThread(new Runnable() {
-        	public void run()  {
-        		db = new AchievementsDatabase(getActivity());
-        	    
-        	    //achievementAdapter.setNotifyOnChange(false); 
-        	    achievements.clear();
-                achievements = db.getAchievements(Category1, Category2, Category3);
-                
-                achievementAdapter.addAll(achievements);
-                
-                //achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
-                //achievementListView.setAdapter(achievementAdapter);
-                achievementAdapter.notifyDataSetChanged();
-        	}
-        });
+	    achievementAdapter.setNotifyOnChange(false); 
+	    achievements.clear();
+        achievements = db.getAchievements(Category1, Category2, Category3);
+	    achievementAdapter.clear();
+        achievementAdapter.addAll(achievements);
+        
+        //achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
+        //achievementListView.setAdapter(achievementAdapter);
+        achievementAdapter.notifyDataSetChanged();
 	}
 	
 	@Override
