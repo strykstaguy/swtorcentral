@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.AchievementsItem;
+import com.stryksta.swtorcentral.util.TextProgressBar;
 
 import android.content.Context;
 import android.content.Intent;
@@ -51,7 +52,8 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 				//LinearLayout abilityLinearLayout = (LinearLayout) rowView.findViewById(R.id.abilitylinearlayout);
 				
 				TextView txtViewCategory1 = (TextView) rowView.findViewById(R.id.txtCategory1);
-				TextView txtViewCategory1Progress = (TextView) rowView.findViewById(R.id.txtCategory1Progress);
+				//TextView txtViewCategory1Progress = (TextView) rowView.findViewById(R.id.txtCategory1Progress);
+				TextProgressBar txtViewProgress = (TextProgressBar) rowView.findViewById(R.id.progressBarWithText);
 				
 				if (item != null) {
 					
@@ -66,7 +68,8 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 						
 					}
 					
-					txtViewCategory1Progress.setText("0/" + item.getCount());
+					
+					txtViewProgress.setText("0/" + item.getCount());
 					
 				}
 				

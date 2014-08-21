@@ -114,7 +114,7 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
     
     private String insertNewLine(String description) {
         /* "\\\t"  - tab*/
-        return description.replaceAll("~", "\\\n");
+        return description.replaceAll("~", "\\\n" + "\\\t");
             
     }
 }

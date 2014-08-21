@@ -5,9 +5,12 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.SWTORProgressbar;
+import com.stryksta.swtorcentral.util.TextProgressBar;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +18,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class Category1Fragment extends Fragment {
 	private AchievementsDatabase db;
@@ -43,9 +49,8 @@ public class Category1Fragment extends Fragment {
         
         db = new AchievementsDatabase(getActivity());
         achievements = db.getCategory1();
-        
+
         ListView achievementListView = (ListView) vw_layout.findViewById(R.id.achievementlistview);
-		
         achievementAdapter = new AchievementAdapter(getActivity(), achievements, "category1");
         achievementListView.setAdapter(achievementAdapter);
         achievementListView.setOnItemClickListener(new OnItemClickListener() {

@@ -3,17 +3,17 @@ int array drawerItems 0x7f060000
 int array syncFrequency 0x7f060002
 int array syncFrequencyValues 0x7f060003
 int attr cellSpacing 0x7f010001
-int attr firstColor 0x7f010010
-int attr firstSize 0x7f01000f
+int attr firstColor 0x7f010013
+int attr firstSize 0x7f010012
 int attr gravity 0x7f010009
 int attr isCircularScroll 0x7f010002
 int attr isViewPager 0x7f010005
-int attr lastColor 0x7f010012
-int attr lastSize 0x7f010011
-int attr lineColor 0x7f01000c
-int attr lineWidth 0x7f01000b
-int attr middleColor 0x7f01000e
-int attr middleSize 0x7f01000d
+int attr lastColor 0x7f010015
+int attr lastSize 0x7f010014
+int attr lineColor 0x7f01000f
+int attr lineWidth 0x7f01000e
+int attr middleColor 0x7f010011
+int attr middleSize 0x7f010010
 int attr numberOfViewsPerCell 0x7f010008
 int attr orientation 0x7f010000
 int attr ratio 0x7f01000a
@@ -21,7 +21,10 @@ int attr selectOnSnap 0x7f010004
 int attr selectWhileScrolling 0x7f010007
 int attr snapPosition 0x7f010006
 int attr snapToPosition 0x7f010003
-int attr timeline_type 0x7f010013
+int attr text 0x7f01000b
+int attr textColor 0x7f01000c
+int attr textSize 0x7f01000d
+int attr timeline_type 0x7f010016
 int color background 0x7f070008
 int color backgroundlight 0x7f070009
 int color black 0x7f070007
@@ -334,6 +337,7 @@ int id pager_title_strip 0x7f050021
 int id planetBackground 0x7f050087
 int id planet_pager 0x7f05008a
 int id planet_title_strip 0x7f05008b
+int id progressBarWithText 0x7f050016
 int id progressionList1 0x7f050095
 int id progressionList2 0x7f050097
 int id reader_list 0x7f050098
@@ -362,7 +366,6 @@ int id txtArmor 0x7f050027
 int id txtAttribute 0x7f05002c
 int id txtBonus 0x7f050029
 int id txtCategory1 0x7f050015
-int id txtCategory1Progress 0x7f050016
 int id txtChanneled 0x7f050045
 int id txtClass 0x7f050062
 int id txtClass1 0x7f05006c
@@ -585,7 +588,11 @@ int styleable ListView_selectOnSnap 4
 int styleable ListView_selectWhileScrolling 7
 int styleable ListView_snapPosition 6
 int styleable ListView_snapToPosition 3
-int[] styleable TimelineView { 0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013 }
+int[] styleable TextProgressBar { 0x7f01000b, 0x7f01000c, 0x7f01000d }
+int styleable TextProgressBar_text 0
+int styleable TextProgressBar_textColor 1
+int styleable TextProgressBar_textSize 2
+int[] styleable TimelineView { 0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015, 0x7f010016 }
 int styleable TimelineView_firstColor 5
 int styleable TimelineView_firstSize 4
 int styleable TimelineView_lastColor 7
