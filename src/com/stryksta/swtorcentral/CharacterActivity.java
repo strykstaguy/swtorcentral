@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.CharacterItem;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
-import com.stryksta.swtorcentral.util.CharacterDatabase;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -19,13 +17,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
  
 public class CharacterActivity extends FragmentActivity {
-	private CharacterDatabase db;
 	ArrayList<CharacterItem> characterArray = new ArrayList<CharacterItem>();
 	private static final int ADD_PARTICIPANT = 1121;
-	private static final int ADD_PARTICIPANT2 = 1122;
 	CharacterAdapter adapter;
 	
     @Override

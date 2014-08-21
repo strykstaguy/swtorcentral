@@ -18,6 +18,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,7 +32,7 @@ import android.widget.Toast;
 
 import com.stryksta.swtorcentral.data.DrawerItem;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
-import com.stryksta.swtorcentral.util.PlanetDatabase;
+import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 public class MainActivity extends FragmentActivity  {
@@ -282,17 +283,20 @@ public class MainActivity extends FragmentActivity  {
    	 switch(position) {
 	    case 1:
 	    	//Toast.makeText(getApplicationContext(), "First Fragment", Toast.LENGTH_SHORT).show();
-	    	switchFragment(new ReaderActivity());
+	    	//switchFragment(new ReaderActivity());
+	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new ReaderActivity(), "Reader");
 	        break;
 	    case 2:
 	    	Intent serverIntent = new Intent(this, ServerActivity.class);
 	        startActivity(serverIntent);
 	        break;
 	    case 3:
-	    	switchFragment(new DatacronActivity());
+	    	//switchFragment(new DatacronActivity());
+	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new DatacronActivity(), "Datacron");
 	        break;
 	    case 4:
-	    	switchFragment(new ClassesActivity());
+	    	//switchFragment(new ClassesActivity());
+	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new ClassesActivity(), "Classes");
 	        break;
 	    case 5:
 	    	Intent settingsIntent = new Intent(this, SettingsActivity.class);
@@ -327,11 +331,19 @@ public class MainActivity extends FragmentActivity  {
     }
     
     public void switchFragment(Fragment newFragment) {
-    	getFragmentManager()
-                .beginTransaction()
-                .replace(R.id.main, newFragment)
-                .addToBackStack(null)
-                .commit();
+    	if (newFragment.isAdded()) {
+    		getFragmentManager()
+			.beginTransaction()
+			.show(newFragment)
+			.commit();
+    	} else {
+    		getFragmentManager()
+        	.beginTransaction()
+        	.replace(R.id.main, newFragment)
+        	.addToBackStack(null)
+        	.commit();
+    	}
+    	
     }
     
     @Override
@@ -387,11 +399,11 @@ public class MainActivity extends FragmentActivity  {
     }
     
     public void onBackPressed() {
-    	FragmentManager fm = this.getFragmentManager();
-    	if(fm.getBackStackEntryCount() == 1){
+    	if(mDrawerLayout.isDrawerOpen(GravityCompat.START)){
     		exitByBackKey();
         } else {
-        	fm.popBackStack();
+        	mDrawerLayout.openDrawer(Gravity.LEFT);
+        	
         }
     }
 }
