@@ -46,6 +46,7 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
             holder.txtViewDescription = (TextView) v.findViewById(R.id.txtDescription);
             holder.txtViewCount = (TextView) v.findViewById(R.id.txtCount);
             holder.txtViewReward = (TextView) v.findViewById(R.id.txtRewards);
+            holder.txtViewStatus = (TextView) v.findViewById(R.id.txtStatus);
             
             v.setTag(holder);
         } else {
@@ -65,10 +66,12 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
             	holder.txtViewReward.setText(insertNewLine(String.valueOf(rowItem.getRewards())));
             }
             
-            if (rowItem.getCompleted() < 0) {
-            	v.setBackgroundResource(R.drawable.card_selected_background);
+            if (rowItem.getCompleted() == 1) {
+            	holder.txtViewStatus.setText(Html.fromHtml("Status: <b>Complete</b>"));
+            	//v.setBackgroundResource(R.drawable.card_selected_background);
             } else {
-            	v.setBackgroundResource(R.drawable.card_background);
+            	holder.txtViewStatus.setText(Html.fromHtml("Status: <b>Incomplete</b>"));
+            	//v.setBackgroundResource(R.drawable.card_background);
             }
         }
         
@@ -81,7 +84,7 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
         public TextView txtViewDescription;
         public TextView txtViewCount;
         public TextView txtViewReward;
-        boolean backgroundChanged = false;
+        public TextView txtViewStatus;
     }
     /*
     public void setItemCheckedState(int position, boolean checked) {

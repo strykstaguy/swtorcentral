@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:background="@drawable/card_background"
     android:orientation="horizontal"
-    android:padding="@dimen/datacronpadding" >
+    android:layout_margin="@dimen/datacronpadding" >
 
     <LinearLayout
         android:layout_width="0dp"
@@ -39,6 +39,16 @@
             android:paddingLeft="5dp"
             android:textColor="@color/regularColor"
             android:textSize="12sp" />
+        
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/regularColor"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <TextView
@@ -48,7 +58,6 @@
         android:paddingLeft="5dp"
         android:textColor="@color/swtor_blue"
         android:textSize="20sp"
-        android:gravity="center"
-        android:textStyle="bold" />
+        android:gravity="center" />
 
 </LinearLayout>

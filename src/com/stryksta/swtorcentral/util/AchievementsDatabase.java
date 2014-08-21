@@ -150,7 +150,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 	
 	public void removeCompleted (int characterID, int achievementID) {
 		SQLiteDatabase db = this.getWritableDatabase();
-		String sqlSelect = "character_id = ? AND achievement_id = ?";
+		String sqlSelect = "character_id = ? AND achievements_id = ?";
 		db.delete("character_achievements", sqlSelect , new String[]{String.valueOf(characterID), String.valueOf(achievementID)});
 		db.close();
 	}

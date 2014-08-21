@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 public class Category4Fragment extends Fragment {
 	private AchievementsDatabase db;
+	ListView achievementListView;
 	ArrayList<AchievementsItem> achievements = new ArrayList<AchievementsItem>();
 	AchievementItemsAdapter achievementAdapter;
 	SessionManager session;
@@ -67,7 +68,7 @@ public class Category4Fragment extends Fragment {
         db = new AchievementsDatabase(getActivity());
         achievements = db.getAchievements(Category1, Category2, Category3);
         
-        ListView achievementListView = (ListView) vw_layout.findViewById(R.id.achievementlistview);
+        achievementListView = (ListView) vw_layout.findViewById(R.id.achievementlistview);
 		
         achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
         achievementListView.setAdapter(achievementAdapter);
@@ -82,12 +83,39 @@ public class Category4Fragment extends Fragment {
 				//view.setSelected(true);
 				//view.setite
 				//Toast.makeText(getActivity(), "Character ID: " + characterID + " Achievement ID: " + achievementAdapter.getItem(position).getAchievementID(), Toast.LENGTH_SHORT).show();
-				db.setCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID());
+				int status = achievementAdapter.getItem(position).getCompleted();
+				if (status == 0) {
+					db.setCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID());
+				} else {
+					db.removeCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID());
+				}
+				
+				updateItems();
+				
 				return false;
 			}
         }); 
         
      	return vw_layout;
+	}
+	
+	public void updateItems() {
+	    
+        getActivity().runOnUiThread(new Runnable() {
+        	public void run()  {
+        		db = new AchievementsDatabase(getActivity());
+        	    
+        	    //achievementAdapter.setNotifyOnChange(false); 
+        	    achievements.clear();
+                achievements = db.getAchievements(Category1, Category2, Category3);
+                
+                achievementAdapter.addAll(achievements);
+                
+                //achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
+                //achievementListView.setAdapter(achievementAdapter);
+                achievementAdapter.notifyDataSetChanged();
+        	}
+        });
 	}
 	
 	@Override
