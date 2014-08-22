@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,6 +48,7 @@ public class RssAdapter extends ArrayAdapter<RssItem> {
 		}
 		RssItem rssItem = results.get(position);
 		if (rssItem != null) {
+			//holder.textViewName.setLayoutParams(new AbsListView.LayoutParams(Width,Height));
 			holder.textViewName.setText(rssItem.getTitle());
 			//holder.textViewDesc.setText(rssItem.getDescription());
 			
@@ -58,7 +60,7 @@ public class RssAdapter extends ArrayAdapter<RssItem> {
 			Picasso.with(v.getContext())
 			.load(rssItem.getImage())
 			.into(holder.imgViewThumb);
-
+			
 			holder.imgViewThumb.setTag(rssItem.getImage());
 			//holder.textViewDesc.setText(Html.fromHtml(rssItem.getDescription()));
 			

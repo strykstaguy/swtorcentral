@@ -17,6 +17,7 @@ public class AbilityDetailActivity extends FragmentActivity {
 	private AbilitiesDatabase db;
 	ArrayList<AbilitiesItem> ability = new ArrayList<AbilitiesItem>();
 	AbilityDetailAdapter abilityAdapter;
+	@SuppressWarnings("unused")
 	private String ClassName;
 	private String AbilityName;
 	private String ClassResource;

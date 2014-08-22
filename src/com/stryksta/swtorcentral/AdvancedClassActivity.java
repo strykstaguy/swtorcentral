@@ -2,10 +2,7 @@ package com.stryksta.swtorcentral;
  
 import java.util.ArrayList;
 
-import com.stryksta.swtorcentral.util.AdvancedClassesDatabase;
-
 import android.app.ActionBar;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;

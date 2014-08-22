@@ -3,22 +3,24 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
-    android:background="@color/background"
-    android:scrollbarStyle="outsideOverlay"
-    android:overScrollMode="never" >
+    android:background="@color/background">
 	
     <GridView
     	android:id="@+id/reader_list"
-    	android:numColumns="1"
+    	android:numColumns="auto_fit"
     	android:gravity="center"
-    	android:columnWidth="160dp"
+    	android:columnWidth="192dp"
     	android:stretchMode="columnWidth"
+    	android:scrollbarStyle="outsideInset"
     	android:layout_width="fill_parent"
-    	android:layout_height="fill_parent"
-    	android:background="#DCDCDC"
+    	android:layout_height="wrap_content"
+    	android:background="@color/background"
     	android:verticalSpacing="5dp"
-    	android:horizontalSpacing="5dp" 
-    	android:padding="@dimen/test_padding" >
+    	android:paddingTop="10dp"
+    	android:paddingLeft="10dp"
+    	android:paddingBottom="10dp"
+    	android:horizontalSpacing="5dp"
+    	android:clipToPadding="false" >
 	</GridView>
 	
 </LinearLayout>

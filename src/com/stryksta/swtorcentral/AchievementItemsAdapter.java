@@ -1,12 +1,8 @@
 package com.stryksta.swtorcentral;
 
 import android.content.Context;
-import android.graphics.Typeface;
+import android.graphics.Paint;
 import android.text.Html;
-import android.text.SpannableStringBuilder;
-import android.text.style.CharacterStyle;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,11 +64,16 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
             
             if (rowItem.getCompleted() == 1) {
             	holder.txtViewStatus.setText(Html.fromHtml("Status: <b>Complete</b>"));
+            	//holder.txtViewTitle.setPaintFlags(holder.txtViewTitle.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            	//holder.txtViewDescription.setPaintFlags(holder.txtViewDescription.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            	//holder.txtViewCount.setPaintFlags(holder.txtViewCount.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             	//v.setBackgroundResource(R.drawable.card_selected_background);
             } else {
             	holder.txtViewStatus.setText(Html.fromHtml("Status: <b>Incomplete</b>"));
             	//v.setBackgroundResource(R.drawable.card_background);
             }
+            
+            
         }
         
         

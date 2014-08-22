@@ -2,10 +2,7 @@ package com.stryksta.swtorcentral;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.text.Html;
 import android.text.SpannableStringBuilder;
-import android.text.style.CharacterStyle;
-import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
