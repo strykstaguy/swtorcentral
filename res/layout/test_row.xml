@@ -39,15 +39,15 @@
     <com.stryksta.swtorcentral.util.RoundTimelineView
         android:id="@+id/timeline"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="28dp"
         app:firstColor="@color/text"
-        app:firstSize="20"
+        app:firstSize="10"
         app:lastColor="@color/text"
-        app:lastSize="20"
+        app:lastSize="10"
         app:lineColor="@color/text"
-        app:lineWidth="6dp"
+        app:lineWidth="1dp"
         app:middleColor="@color/text"
-        app:middleSize="20"
+        app:middleSize="10"
         app:timeline_type="line" />
     
 </LinearLayout>

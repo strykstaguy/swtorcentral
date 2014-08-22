@@ -45,8 +45,7 @@ public class CharacterActivity extends FragmentActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == ADD_PARTICIPANT && resultCode == Activity.RESULT_OK)
-        {
+        if (requestCode == ADD_PARTICIPANT && resultCode == Activity.RESULT_OK) {
         	updateCharacters();
         }
     }

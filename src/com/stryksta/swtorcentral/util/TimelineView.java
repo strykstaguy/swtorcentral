@@ -148,8 +148,12 @@ public abstract class TimelineView extends View {
         int contentWidth = getWidth() - paddingLeft - paddingRight;
         int contentHeight = getHeight() - paddingTop - paddingBottom;
 
-        startX = contentHeight / 2 - mLineWidth;
-        endX = contentHeight / 2 + mLineWidth;
+        //startX = contentHeight / 2 - mLineWidth;
+        //endX = contentHeight / 2 + mLineWidth;
+        
+        startX = contentHeight / 2 - mLineWidth / 2;
+        endX = contentHeight / 2 + mLineWidth / 2;
+        
         startY = paddingLeft;
         endY = contentWidth;
 
