@@ -9,8 +9,11 @@
  	android:layout_width="fill_parent"
  	android:layout_height="fill_parent"
  	android:background="#DCDCDC"
- 	android:padding="@dimen/datacronpadding"
+ 	android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="10dp"
  	android:divider="@drawable/divider"
+ 	android:scrollbarStyle="outsideInset"
  	android:cacheColorHint="@android:color/transparent" >
  </com.hb.views.PinnedSectionListView>
  

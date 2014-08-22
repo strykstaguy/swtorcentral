@@ -13,6 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@color/background"
+        android:scrollbarStyle="outsideInset"
         android:dividerHeight="10dip"
-        android:padding="10.0dip" />
+        android:paddingTop="10dp"
+    	android:paddingLeft="10dp"
+    	android:paddingBottom="10dp" />
 </LinearLayout>

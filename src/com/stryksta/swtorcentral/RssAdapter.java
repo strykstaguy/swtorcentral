@@ -2,12 +2,17 @@ package com.stryksta.swtorcentral;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -17,7 +22,10 @@ import com.stryksta.swtorcentral.data.RssItem;
 import java.util.ArrayList;
 
 public class RssAdapter extends ArrayAdapter<RssItem> {
-
+	
+	int width;
+	int height;
+	
 	private final Activity activity;
 	private final ArrayList<RssItem> results;
 	public RssAdapter(final Activity a, final int textViewResourceId,
@@ -39,22 +47,34 @@ public class RssAdapter extends ArrayAdapter<RssItem> {
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			v = inflater.inflate(R.layout.reader_row, parent, false);
 			holder = new ViewHolder();
+			
+			//v.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+			width = v.getMeasuredWidth();
+			height = v.getMeasuredHeight();
+			//v.setLayoutParams(new GridView.LayoutParams(GridView.AUTO_FIT, height));
+			
+			//Log.d("SWTORCentral", "Height: " + height);
+			
 			holder.textViewName = (TextView) v.findViewById(R.id.txtTitle);
-			//holder.textViewDesc = (TextView) v.findViewById(R.id.description);
 			holder.imgViewThumb = (ImageView) v.findViewById(R.id.imgThumbnail);
+			
+			v.setOnClickListener(new View.OnClickListener() {
+
+	            public void onClick(View v) {
+	            	//
+	            }
+	        });
+			
 			v.setTag(holder);
 		} else {
 			holder = (ViewHolder) v.getTag();
 		}
 		RssItem rssItem = results.get(position);
 		if (rssItem != null) {
-			//holder.textViewName.setLayoutParams(new AbsListView.LayoutParams(Width,Height));
 			holder.textViewName.setText(rssItem.getTitle());
-			//holder.textViewDesc.setText(rssItem.getDescription());
 			
 			//Log.d("ITCRssReader", rssItem.getImage());
-			//imageLoader.displayImage(rssItem.getImage(), holder.imgViewThumb);
-			
+
 			holder.imgViewThumb.setImageResource(R.drawable.placeholder); 
 			
 			Picasso.with(v.getContext())
@@ -62,7 +82,6 @@ public class RssAdapter extends ArrayAdapter<RssItem> {
 			.into(holder.imgViewThumb);
 			
 			holder.imgViewThumb.setTag(rssItem.getImage());
-			//holder.textViewDesc.setText(Html.fromHtml(rssItem.getDescription()));
 			
 		}
 		return v;
@@ -70,7 +89,7 @@ public class RssAdapter extends ArrayAdapter<RssItem> {
 
 	private static class ViewHolder {
 		public TextView textViewName;
-		//public TextView textViewDesc;
 		public ImageView imgViewThumb;
 	}
+	
 }

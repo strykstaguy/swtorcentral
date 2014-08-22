@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
@@ -27,6 +28,7 @@ public class ReaderActivity extends Fragment {
 	private RssAdapter adapter;
 	private RssDatabaseHandler db;
 	GridView gridView;
+	boolean gridViewResized;
 	View vw_layout;
 	ArrayList<RssItem> rssItems;
 	
@@ -62,7 +64,7 @@ public class ReaderActivity extends Fragment {
         //}
         
 		
-
+    		gridViewResized = false;
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
 		
@@ -131,6 +133,5 @@ public class ReaderActivity extends Fragment {
 		}
 		
 	}
-	
 	
 }
