@@ -10,14 +10,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="10.0dip"
-        android:padding="5.0dip" >
+        android:background="@drawable/card_background_middle" 
+        android:padding="15.0dip" >
 		
         <ImageView
         	android:id="@+id/imgPlanet"
         	android:layout_width="96.0dip"
         	android:layout_height="96.0dip"
-        	android:layout_marginTop="15.0dip"
         	android:clickable="false"
         	android:layout_gravity="center"
         	android:contentDescription="@string/image_placeholder"
@@ -28,7 +27,6 @@
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
         	android:clickable="false"
-        	android:layout_marginTop="2.0dip"
         	android:layout_gravity="center"
         	android:gravity="center"
         	android:textAppearance="?android:textAppearanceSmall"
@@ -36,7 +34,7 @@
         
         <TextView
             android:id="@+id/txtPlanet"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
@@ -61,9 +59,8 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:paddingLeft="5dp"
-        android:textColor="@color/text"
-        android:textStyle="bold"
-        android:textSize="22sp" />
+        android:textColor="@color/subtext"
+        android:textSize="18sp" />
     
     <com.stryksta.swtorcentral.util.RoundTimelineView
         android:id="@+id/timeline"

@@ -3,14 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background" >
+	
+    <TextView
+        android:id="@+id/txtFactionEmpire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:text="@string/empire"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/text"
+        android:textSize="24sp" />
 
     <com.stryksta.swtorcentral.util.HorizontalListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_below="@+id/txtFactionEmpire"
+        android:layout_centerHorizontal="true"
         android:layout_margin="10.0dip"
+        android:background="@color/background"
         android:divider="@null"
-        android:background="@drawable/card_background" 
-        android:dividerHeight="0dp" />
+        android:dividerHeight="0dp" >
+    </com.stryksta.swtorcentral.util.HorizontalListView>
 
 </RelativeLayout>
