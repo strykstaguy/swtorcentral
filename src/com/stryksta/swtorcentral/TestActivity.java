@@ -7,15 +7,21 @@ import com.stryksta.swtorcentral.util.TimelineType;
 import com.stryksta.swtorcentral.util.HorizontalListView;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
  
 public class TestActivity extends FragmentActivity {
-	private HorizontalListView listView;
-    private ArrayList<TestItem> planets;
+	private HorizontalListView progressionList1;
+	private HorizontalListView progressionList2;
+    private TestAdapter progression1;
+	private TestAdapter progression2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,11 +33,33 @@ public class TestActivity extends FragmentActivity {
         
         getActionBar().setTitle("Timeline");
         
-        listView = (HorizontalListView) findViewById(android.R.id.list);
-
-        planets = generateEmpireData();
+        progression1 = new TestAdapter(this, generateEmpireData());
+        progressionList1 = (HorizontalListView) findViewById(R.id.progressionList1);
+        progressionList1.setAdapter(progression1);
+        progressionList1.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			    {
+					Bundle bundle = new Bundle();
+					bundle.putString("planet", progression1.getItem(position).getPlanet());
+	            
+					Intent intent = new Intent(getApplicationContext(), PlanetActivity.class);
+					intent.putExtras(bundle);
+					startActivity(intent);
+			    }});
         
-        listView.setAdapter(new TestAdapter(this, planets));
+        progression2 = new TestAdapter(this, generateRepublicData());
+        progressionList2 = (HorizontalListView) findViewById(R.id.progressionList2);
+        progressionList2.setAdapter(progression2);
+        progressionList2.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			    {
+					Bundle bundle = new Bundle();
+					bundle.putString("planet", progression2.getItem(position).getPlanet());
+	            
+					Intent intent = new Intent(getApplicationContext(), PlanetActivity.class);
+					intent.putExtras(bundle);
+					startActivity(intent);
+			    }});
         
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());

@@ -1,8 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background" >
+    android:background="@color/background"
+    android:weightSum="1"
+    android:orientation="vertical" >
 	
     <TextView
         android:id="@+id/txtFactionEmpire"
@@ -10,23 +12,47 @@
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
         android:paddingTop="5dp"
-        android:paddingBottom="5dp"
         android:gravity="center"
         android:text="@string/empire"
         android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@color/text"
-        android:textSize="24sp" />
+        android:textSize="22sp" />
 
     <com.stryksta.swtorcentral.util.HorizontalListView
-        android:id="@android:id/list"
+        android:id="@+id/progressionList1"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_below="@+id/txtFactionEmpire"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10.0dip"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginBottom="10.0dip"
         android:background="@color/background"
         android:divider="@null"
         android:dividerHeight="0dp" >
     </com.stryksta.swtorcentral.util.HorizontalListView>
-
-</RelativeLayout>
+	
+    <TextView
+        android:id="@+id/txtFactionRepublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:gravity="center"
+        android:text="@string/republic"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/text"
+        android:textSize="22sp" />
+    
+    <com.stryksta.swtorcentral.util.HorizontalListView
+        android:id="@+id/progressionList2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:background="@color/background"
+        android:divider="@null"
+        android:dividerHeight="0dp" >
+    </com.stryksta.swtorcentral.util.HorizontalListView>
+</LinearLayout>

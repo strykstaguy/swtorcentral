@@ -29,7 +29,7 @@ public class PlanetAdapter extends ArrayAdapter<DatacronItem> {
 		if (v == null) {
 			LayoutInflater inflater = (LayoutInflater) getContext()
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			v = inflater.inflate(R.layout.planet_tab2_row, parent, false);
+			v = inflater.inflate(R.layout.planet_row, parent, false);
 			holder = new ViewHolder();
 			//holder.txtViewPlanet = (TextView) v.findViewById(R.id.txtPlanet);
 			holder.chkViewDatacron = (CheckBox) v.findViewById(R.id.chkDatacron);

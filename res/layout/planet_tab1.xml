@@ -2,19 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="10dp"
     android:orientation="vertical" >
     
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/planetBackground"
+    	android:orientation="vertical"
     	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content" >
-   
+    	android:layout_height="175.0dip" >
+	</LinearLayout>
+	
+    <TextView
+ 	    android:id="@+id/txtPlanetTitle"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_gravity="center"
+ 	    android:text="@string/test_main"
+ 	    android:textColor="@color/text"
+ 	    android:textSize="20dp" />
+ 	
+ 	<TextView
+        android:id="@+id/txtPlanetSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/subtext"
+        android:text="@string/advanced_classes"
+        android:textSize="14dp" />
+ 	
+    <LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:background="@drawable/card_background"
+    	android:padding="10dp"
+    	android:orientation="vertical" >
+    	
+ 	
+ 	
     <TextView
         android:id="@+id/txtDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 		android:paddingLeft="5dp"
         android:textColor="#000000"
-        android:gravity="center"
+        android:gravity="left"
         android:textSize="16sp" />
-	</ScrollView>
+	</LinearLayout>
+	
 </LinearLayout>
