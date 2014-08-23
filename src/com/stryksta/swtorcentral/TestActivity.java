@@ -15,7 +15,7 @@ import android.widget.ListView;
  
 public class TestActivity extends FragmentActivity {
 	private HorizontalListView listView;
-    private ArrayList<TestItem> eventos;
+    private ArrayList<TestItem> planets;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,21 +29,18 @@ public class TestActivity extends FragmentActivity {
         
         listView = (HorizontalListView) findViewById(android.R.id.list);
 
-        eventos = new ArrayList<TestItem>();
+        planets = new ArrayList<TestItem>();
 
-        TestItem eventoFirst = new TestItem("Starter Planets", TimelineType.START);
-        eventos.add(eventoFirst);
-
-        eventos.add(new TestItem("Planet 1", TimelineType.MIDDLE));
-        eventos.add(new TestItem("Planet 2", TimelineType.MIDDLE));
-        eventos.add(new TestItem("Planet 3", TimelineType.MIDDLE));
-        eventos.add(new TestItem("Planet 4", TimelineType.MIDDLE));
-        eventos.add(new TestItem("Planet 5", TimelineType.MIDDLE));
+        planets.add(new TestItem("Korriban", "Level 1-10", R.drawable.pl_korriban, "", TimelineType.START));
+        planets.add(new TestItem("Hutta", "Level 1-10", R.drawable.pl_hutta, "", TimelineType.LINE));
+        planets.add(new TestItem("The Black Talon", "Flashpoint", R.drawable.ic_flashpoint, "Prologue", TimelineType.LINE));
+        planets.add(new TestItem("Dromund Kaas", "Level 11-16", R.drawable.pl_dromundkaas, "", TimelineType.LINE));
+        planets.add(new TestItem("Hammer Station", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.END));
         
-        TestItem eventoLast = new TestItem("End Game Planets", TimelineType.END);
-        eventos.add(eventoLast);
+        planets.add(new TestItem("Balmorra", "Level 16-19", R.drawable.pl_balmorra, "", TimelineType.START));
+        planets.add(new TestItem("Balmorra", "Bonus Series", R.drawable.faction_both_black, "", TimelineType.END));
 
-        listView.setAdapter(new TestAdapter(this, eventos));
+        listView.setAdapter(new TestAdapter(this, planets));
         
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());

@@ -564,7 +564,6 @@ containing a value of this type.
         public static final int start=0x7f050003;
         public static final int statslayout=0x7f050041;
         public static final int textEventinfo=0x7f050080;
-        public static final int textView=0x7f0500a0;
         public static final int timeline=0x7f0500a1;
         public static final int top=0x7f050008;
         public static final int txtAbilityTitle=0x7f05004a;
@@ -624,6 +623,7 @@ containing a value of this type.
         public static final int txtStatus=0x7f050012;
         public static final int txtSub=0x7f050071;
         public static final int txtSummary=0x7f050042;
+        public static final int txtTimeLineLabel=0x7f0500a0;
         public static final int txtTitle=0x7f05000f;
         public static final int txtType=0x7f050092;
         public static final int txtWeapon=0x7f050028;

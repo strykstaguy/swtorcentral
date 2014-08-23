@@ -353,7 +353,6 @@ int id skillabilitylist3 0x7f05003d
 int id start 0x7f050003
 int id statslayout 0x7f050041
 int id textEventinfo 0x7f050080
-int id textView 0x7f0500a0
 int id timeline 0x7f0500a1
 int id top 0x7f050008
 int id txtAbilityTitle 0x7f05004a
@@ -413,6 +412,7 @@ int id txtStats 0x7f050026
 int id txtStatus 0x7f050012
 int id txtSub 0x7f050071
 int id txtSummary 0x7f050042
+int id txtTimeLineLabel 0x7f0500a0
 int id txtTitle 0x7f05000f
 int id txtType 0x7f050092
 int id txtWeapon 0x7f050028

@@ -2,37 +2,67 @@ package com.stryksta.swtorcentral.data;
 
 import com.stryksta.swtorcentral.util.TimelineType;
 
-/**
- * Created by Bernat on 06/04/2014.
- */
 public class TestItem {
+	
+	private int imgPlanet;
+    private String planet;
+    private String level;
+    private String label;
+    private TimelineType type;
 
-    private String name;
-    private TimelineType tipo;
-
-    public TestItem(String name) {
-        this.name = name;
-        this.tipo = TimelineType.LINE;
+    public TestItem(String planet, String level, int imgPlanet, String label) {
+        this.planet = planet;
+        this.level = level;
+        this.imgPlanet = imgPlanet;
+        this.label = label;
+        this.type = TimelineType.LINE;
     }
 
-    public TestItem(String name, TimelineType tipo) {
-        this.name = name;
-        this.tipo = tipo;
+    public TestItem(String planet, String level, int imgPlanet, String label, TimelineType type) {
+        this.planet = planet;
+        this.level = level;
+        this.imgPlanet = imgPlanet;
+        this.label = label;
+        this.type = type;
+    }
+    
+    public int getimgPlanet() {
+		return imgPlanet;
+	}
+	
+	public void setimgPlanet(int imgPlanet) {
+		this.imgPlanet = imgPlanet;
+	}
+	
+    public String getPlanet() {
+        return planet;
     }
 
-    public String getName() {
-        return name;
+    public void setPlanet(String planet) {
+        this.planet = planet;
+    }
+    
+    public String getLevel() {
+        return level;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLevel(String level) {
+        this.level = level;
+    }
+    
+    public String getLabel() {
+        return label;
     }
 
-    public TimelineType getTipo() {
-        return tipo;
+    public void setLabel(String label) {
+        this.label = label;
+    }
+    
+    public TimelineType getType() {
+        return type;
     }
 
-    public void setTipo(TimelineType tipo) {
-        this.tipo = tipo;
+    public void setType(TimelineType type) {
+        this.type = type;
     }
 }

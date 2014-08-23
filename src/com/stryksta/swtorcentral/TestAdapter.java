@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.util.TimelineView;
@@ -12,9 +13,6 @@ import com.stryksta.swtorcentral.data.TestItem;
 
 import java.util.List;
 
-/**
- * Created by Bernat on 06/04/2014.
- */
 public class TestAdapter extends ArrayAdapter<TestItem> {
     private final LayoutInflater mInflater;
 
@@ -26,14 +24,20 @@ public class TestAdapter extends ArrayAdapter<TestItem> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = mInflater.inflate(R.layout.test_row, null);
-
-        TextView text = (TextView) v.findViewById(R.id.textView);
+        
+        ImageView imgPlanet = (ImageView) v.findViewById(R.id.imgPlanet);
+        TextView txtPlanet = (TextView) v.findViewById(R.id.txtPlanet);
+        TextView txtLevel = (TextView) v.findViewById(R.id.txtLevel);
+        TextView txtTimeLineLabel = (TextView) v.findViewById(R.id.txtTimeLineLabel);
         TimelineView timeline = (TimelineView) v.findViewById(R.id.timeline);
 
-        TestItem evento = getItem(position);
-
-        text.setText(evento.getName());
-        timeline.setTimelineType(evento.getTipo());
+        TestItem event = getItem(position);
+        
+        imgPlanet.setImageResource(event.getimgPlanet());
+        txtPlanet.setText(event.getPlanet());
+        txtLevel.setText(event.getLevel());
+        txtTimeLineLabel.setText(event.getLabel());
+        timeline.setTimelineType(event.getType());
 
         return v;
     }
