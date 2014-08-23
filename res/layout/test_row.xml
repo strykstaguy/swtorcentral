@@ -45,7 +45,7 @@
         app:lastColor="@color/text"
         app:lastSize="10"
         app:lineColor="@color/text"
-        app:lineWidth="1dp"
+        app:lineWidth="5dp"
         app:middleColor="@color/text"
         app:middleSize="10"
         app:timeline_type="line" />
