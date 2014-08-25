@@ -303,8 +303,9 @@ public class MainActivity extends FragmentActivity  {
 	        startActivity(settingsIntent);
 	        break;
 	    case 6:
-	    	Intent factionIntent = new Intent(this, FactionActivity.class);
-	        startActivity(factionIntent);
+	    	//Intent factionIntent = new Intent(this, FactionActivity.class);
+	        //startActivity(factionIntent);
+	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new FactionFragment(), "Faction");
 	        break;
 	    case 7:
 	    	Intent eventIntent = new Intent(this, EventsActivity.class);
@@ -315,10 +316,6 @@ public class MainActivity extends FragmentActivity  {
 	        startActivity(characterIntent);
 	        break;
 	    case 9:
-	    	Intent testIntent = new Intent(this, TestActivity.class);
-	        startActivity(testIntent);
-	        break;
-	    case 10:
 	    	Intent achievementIntent = new Intent(this, AchievementActivity.class);
 	        startActivity(achievementIntent);
 	        break;

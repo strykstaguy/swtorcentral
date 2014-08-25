@@ -19,7 +19,7 @@ public class AbilityAdapter extends ArrayAdapter<AbilitiesItem> {
 		int AdvancedPos2;
 
 		public AbilityAdapter(Context context, ArrayList<AbilitiesItem> swtorAbilities) {
-			super(context, R.layout.progression_item_single, swtorAbilities);
+			super(context, R.layout.achievement_row, swtorAbilities);
 			
 			this.context = context;
 			this.swtorAbilities = swtorAbilities;

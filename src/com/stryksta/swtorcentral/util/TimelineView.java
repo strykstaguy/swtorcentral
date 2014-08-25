@@ -27,8 +27,8 @@ public abstract class TimelineView extends View {
     private TimelineType timelineType = TimelineType.LINE;
 
     private Paint linePaint, middlePaint, firstPaint, lastPaint;
-    private float startX, startY, startYSingle;
-    private float endX, endY, endYSingle;
+    private float startX, startY;
+    private float endX, endY;
     private float centerX, centerY;
 
     public TimelineView(Context context) {
@@ -124,35 +124,25 @@ public abstract class TimelineView extends View {
         int contentWidth = getWidth() - paddingLeft - paddingRight;
         int contentHeight = getHeight() - paddingTop - paddingBottom;
 
-        //startX = contentHeight / 2 - mLineWidth;
-        //endX = contentHeight / 2 + mLineWidth;
-        
-        startX = contentHeight / 2 - mLineWidth / 2;
-        endX = contentHeight / 2 + mLineWidth / 2;
-        
-        startYSingle = paddingLeft + mLineWidth + 5;
-        startY = paddingLeft;
-        endY = contentWidth;
-        endYSingle = contentWidth - mLineWidth - 5;
-        
-        centerX = contentHeight / 2;
-        centerY = contentWidth / 2;
+        startX = contentWidth / 2 - mLineWidth / 2;
+        endX = contentWidth / 2 + mLineWidth / 2;
+        startY = paddingTop;
+        endY = contentHeight;
+
+        centerX = contentWidth / 2;
+        centerY = contentHeight / 2;
 
         if (timelineType == TimelineType.START) {
-        	canvas.drawRect(centerY, startX, endY, endX, linePaint);
-            drawStart(canvas, firstPaint, centerY, centerX, mStartSize);
+            canvas.drawRect(startX, centerY, endX, endY, linePaint);
+            drawStart(canvas, firstPaint, centerX, centerY, mStartSize);
         } else if (timelineType == TimelineType.MIDDLE) {
-            canvas.drawRect(startY, startX, endY, endX, linePaint);
-            drawMiddle(canvas, middlePaint, centerY, centerX, mMiddleSize);
+            canvas.drawRect(startX, startY, endX, endY, linePaint);
+            drawMiddle(canvas, middlePaint, centerX, centerY, mMiddleSize);
         } else if (timelineType == TimelineType.END) {
-            canvas.drawRect(startY, startX, centerY, endX, linePaint);
-            drawEnd(canvas, lastPaint, centerY, centerX, mEndSize);
-        } else if (timelineType == TimelineType.SINGLE) {
-        	canvas.drawRect(startYSingle, startX, endYSingle, endX, linePaint);
-        	drawStart(canvas, firstPaint, startYSingle, centerX, mStartSize);
-            drawEnd(canvas, lastPaint, endYSingle, centerX, mEndSize);
+            canvas.drawRect(startX, startY, endX, centerY, linePaint);
+            drawEnd(canvas, lastPaint, centerX, centerY, mEndSize);
         } else {
-            canvas.drawRect(startY, startX, endY, endX, linePaint);
+            canvas.drawRect(startX, startY, endX, endY, linePaint);
         }
     }
 

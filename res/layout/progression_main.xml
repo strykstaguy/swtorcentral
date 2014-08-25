@@ -3,62 +3,38 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/gray_86"
-    android:weightSum="1"
     android:orientation="vertical" >
-
+	
     <TextView
-        android:id="@+id/txtFactionRepublic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/republic"
+        android:id="@+id/txtFaction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
         android:gravity="center"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
-
-    <mobi.parchment.widget.adapterview.listview.ListView
-       xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:parchment="http://schemas.android.com/apk/res/com.stryksta.swtorcentral"
-       android:id="@+id/progressionList1"
-       android:layout_width="fill_parent"
-       parchment:orientation="horizontal"
-       parchment:snapPosition="start"
-       parchment:snapToPosition="true"
-       android:layout_height="0dp"
-       android:layout_weight="0.5"
-       android:layout_margin="10.0dip"
-       android:divider="@color/gray_86"
-       android:dividerHeight="0px"
-       android:background="@drawable/card_background" /> 
-
-    <TextView
-        android:id="@+id/txtFactionEmpire"
-        android:layout_width="match_parent"
+        android:layout_marginTop="10.0dip"
+        android:textSize="20.0dip"
+        android:textColor="@color/text"
+        />
+    
+   	 <TextView
+   	 	android:id="@+id/txtNameSub"
+   	    android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
+        android:textSize="14.0dip"
+        android:textColor="@color/subtext"
         android:gravity="center"
-        android:text="@string/empire"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
-
-	<mobi.parchment.widget.adapterview.listview.ListView
-       xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:parchment="http://schemas.android.com/apk/res/com.stryksta.swtorcentral"
-       android:id="@+id/progressionList2"
-       android:layout_width="fill_parent"
-       parchment:orientation="horizontal"
-       parchment:snapPosition="start"
-       parchment:snapToPosition="true"
-       android:layout_height="0dp"
-       android:layout_weight="0.5"
-       android:layout_margin="10.0dip"
-       android:divider="@color/gray_86"
-       android:dividerHeight="0px"
-       android:background="@drawable/card_background" /> 
+        android:text="@string/progressionsub"
+        android:paddingBottom="5.0dip"
+         />
+   	 	
+    <ListView
+        android:id="@+id/progressionList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@color/background"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+ 
 </LinearLayout>

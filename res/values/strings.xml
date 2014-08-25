@@ -39,8 +39,7 @@
     <string name="draweritem6">Progression</string>
     <string name="draweritem7">In-Game Events</string>
     <string name="draweritem8">Characters</string>
-    <string name="draweritem9">Timeline</string>
-    <string name="draweritem10">Achievements</string>
+    <string name="draweritem9">Achievements</string>
     <string name="header2">Advanced</string>
 	<string name="tab1">US Servers</string>
     <string name="tab2">European Servers</string>
@@ -69,6 +68,11 @@
     
     <string name="informationsub">Information</string>
     <string name="datacronsub">Datacrons</string>
+    
+    <string name="faction">Faction</string>
+    <string name="factionsub">Please Choose</string>
+    
+    <string name="progressionsub">Progression</string>
     
     <string name="characters">Characters</string>
     <string name="character_menu_add">Add Character</string>

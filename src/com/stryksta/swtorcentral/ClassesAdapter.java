@@ -26,7 +26,7 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 		int AdvancedPos2;
 
 		public ClassesAdapter(Context context, ArrayList<ClassItem> swtorClasses) {
-			super(context, R.layout.progression_item_single, swtorClasses);
+			super(context, R.layout.achievement_row, swtorClasses);
 			
 			this.context = context;
 			this.swtorClasses = swtorClasses;

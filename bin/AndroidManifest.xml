@@ -48,7 +48,7 @@
             android:label="@string/settings_header" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.FactionActivity"
+            android:name="com.stryksta.swtorcentral.ProgressionActivity"
             android:label="@string/progression_main">
         </activity>
         <activity

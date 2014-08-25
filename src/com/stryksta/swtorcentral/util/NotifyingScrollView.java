@@ -1,17 +1,14 @@
 package com.stryksta.swtorcentral.util;
 
 import android.content.Context;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.ScrollView;
 
 /**
- * @author Cyril Mottier with modifications from Manuel Peinado
+ * @author Cyril Mottier
  */
 public class NotifyingScrollView extends ScrollView {
-    // Edge-effects don't mix well with the translucent action bar in Android 2.X
-    private boolean mDisableEdgeEffects = true;
-
+	private boolean mIsOverScrollEnabled = true;
     /**
      * @author Cyril Mottier
      */
@@ -44,22 +41,27 @@ public class NotifyingScrollView extends ScrollView {
     public void setOnScrollChangedListener(OnScrollChangedListener listener) {
         mOnScrollChangedListener = listener;
     }
+    
+    public void setOverScrollEnabled(boolean enabled) {
+        mIsOverScrollEnabled = enabled;
+    }
 
-    @Override
-    protected float getTopFadingEdgeStrength() {
-        // http://stackoverflow.com/a/6894270/244576
-        if (mDisableEdgeEffects && Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
-            return 0.0f;
-        }
-        return super.getTopFadingEdgeStrength();
+    public boolean isOverScrollEnabled() {
+        return mIsOverScrollEnabled;
     }
 
     @Override
-    protected float getBottomFadingEdgeStrength() {
-        // http://stackoverflow.com/a/6894270/244576
-        if (mDisableEdgeEffects && Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
-            return 0.0f;
-        }
-        return super.getBottomFadingEdgeStrength();
+    protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX, int scrollRangeY,
+                                   int maxOverScrollX, int maxOverScrollY, boolean isTouchEvent) {
+        return super.overScrollBy(
+                deltaX,
+                deltaY,
+                scrollX,
+                scrollY,
+                scrollRangeX,
+                scrollRangeY,
+                mIsOverScrollEnabled ? maxOverScrollX : 0,
+                mIsOverScrollEnabled ? maxOverScrollY : 0,
+                isTouchEvent);
     }
 }

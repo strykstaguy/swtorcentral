@@ -2,18 +2,22 @@ package com.stryksta.swtorcentral;
  
 import java.util.ArrayList;
 
+import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 import com.stryksta.swtorcentral.data.DatacronItem;
 import com.stryksta.swtorcentral.util.DatacronDatabase;
 import com.stryksta.swtorcentral.util.NonScrollListView;
+import com.stryksta.swtorcentral.util.NotifyingScrollView;
 import com.stryksta.swtorcentral.util.PlanetDatabase;
 
 import android.app.ActionBar;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ScrollView;
@@ -47,10 +51,22 @@ public class PlanetActivity extends FragmentActivity {
 		String planetDescription = dbPlanet.PlanetDescription(planetText);
 		dbPlanet.close();
 		
-        LinearLayout ll = (LinearLayout) findViewById(R.id.planetBackground);
+        
+        
+        FadingActionBarHelper helper = new FadingActionBarHelper()
+        	.actionBarBackground(R.drawable.ab_solid_swtor)
+        	.headerLayout(R.layout.transparent_header)
+        	.parallax(true)
+        	.contentLayout(R.layout.planet_main);
+        setContentView(helper.createView(this));
+        helper.initActionBar(this);
+        
+        ImageView ll = (ImageView) findViewById(R.id.transparentBackground);
         int resId = getResources().getIdentifier(planetBackground, "drawable", getPackageName());
         ll.setBackgroundResource(resId);
-        
+        //ll.getLayoutParams().height = 300;
+        //ll.requestLayout();
+       
 		TextView txtDescription = (TextView) findViewById(R.id.txtDescription);
 		txtDescription.setText(planetDescription);
 		

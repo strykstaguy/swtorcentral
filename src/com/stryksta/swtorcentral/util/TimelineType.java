@@ -4,8 +4,7 @@ public enum TimelineType {
     LINE,
     START,
     MIDDLE,
-    END,
-    SINGLE;
+    END;
 
     static TimelineType fromId(int type) {
         switch (type) {
@@ -17,8 +16,6 @@ public enum TimelineType {
                 return TimelineType.END;
             case 2:
                 return TimelineType.LINE;
-            case 3:
-                return TimelineType.SINGLE;
             default:
                 return TimelineType.LINE;
         }

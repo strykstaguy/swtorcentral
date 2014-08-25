@@ -21,7 +21,7 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 		String type;
 
 		public AchievementAdapter(Context context, ArrayList<AchievementsItem> swtorAchievements, String type) {
-			super(context, R.layout.progression_item_single, swtorAchievements);
+			super(context, R.layout.achievement_row, swtorAchievements);
 			
 			this.context = context;
 			this.swtorAchievements = swtorAchievements;
