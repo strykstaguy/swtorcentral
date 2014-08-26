@@ -53,7 +53,7 @@ public class ProgressionActivity extends FragmentActivity {
 			    {
 					Bundle bundle = new Bundle();
 					bundle.putString("planet", factionAdapter.getItem(position).getPlanet());
-	            
+					bundle.putString("faction", FactionText);
 					Intent intent = new Intent(getApplicationContext(), PlanetActivity.class);
 					intent.putExtras(bundle);
 					startActivity(intent);

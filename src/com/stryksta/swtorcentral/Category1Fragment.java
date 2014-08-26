@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SWTORProgressbar;
 import com.stryksta.swtorcentral.util.TextProgressBar;
 
@@ -61,13 +62,11 @@ public class Category1Fragment extends Fragment {
 		    	 args.putString("category1", achievementAdapter.getItem(position).getCategory1());
 		    	 category2frag.setArguments(args);
 				
-				getFragmentManager()
-                .beginTransaction()
-                .replace(R.id.achievementmain, category2frag)
-                .addToBackStack(null)
-                .commit();
-				
+		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementmain, category2frag, "Category2");
+
 			}});
+        
+        
         
      	return vw_layout;
 	}
@@ -75,6 +74,11 @@ public class Category1Fragment extends Fragment {
 	@Override
 	public void onDestroyView() {
 	    super.onDestroyView();
-	    //getActivity().getActionBar().setTitle("SWTOR Central");
+	    //getActivity().getActionBar().setTitle("Achivements");
+	}
+	
+	public void onResume() {
+		super.onResume();
+		//getActivity().getActionBar().setTitle("Achivements");
 	}
 }

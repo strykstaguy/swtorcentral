@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.FragmentUtils;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -64,11 +65,7 @@ public class Category2Fragment extends Fragment {
 		    	 args.putString("category2", achievementAdapter.getItem(position).getCategory2());
 		    	 category3frag.setArguments(args);
 				
-				getFragmentManager()
-                .beginTransaction()
-                .replace(R.id.achievementmain, category3frag)
-                .addToBackStack(null)
-                .commit();
+		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementmain, category3frag, "Category3");
 			}});
         
      	return vw_layout;

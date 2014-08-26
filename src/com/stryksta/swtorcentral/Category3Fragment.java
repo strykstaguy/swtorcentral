@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.FragmentUtils;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -70,11 +71,7 @@ public class Category3Fragment extends Fragment {
 		    	 args.putString("category3", achievementAdapter.getItem(position).getCategory3());
 		    	 category4frag.setArguments(args);
 				
-				getFragmentManager()
-                .beginTransaction()
-                .replace(R.id.achievementmain, category4frag)
-                .addToBackStack(null)
-                .commit();
+		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementmain, category4frag, "Category4");
 			}});
         
      	return vw_layout;
@@ -83,6 +80,6 @@ public class Category3Fragment extends Fragment {
 	@Override
 	public void onDestroyView() {
 	    super.onDestroyView();
-	    //getActivity().getActionBar().setTitle("Achievements");
+	    //getActivity().getActionBar().setTitle(Category1);
 	}
 }

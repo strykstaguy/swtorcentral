@@ -25,6 +25,7 @@ import android.widget.TextView;
  
 public class PlanetActivity extends FragmentActivity {
 	private String planetText;
+	private String factionText;
 	private PlanetDatabase dbPlanet;
 	private DatacronDatabase dbDatacrons;
 	private ArrayList<DatacronItem> datacrons;
@@ -42,6 +43,7 @@ public class PlanetActivity extends FragmentActivity {
 		
         if ( bundle != null ) {
         	planetText = bundle.getString("planet");
+        	factionText = bundle.getString("faction");
         }
         
         getActionBar().setTitle(planetText);
@@ -77,7 +79,7 @@ public class PlanetActivity extends FragmentActivity {
 		txtDatacronTitle.setText(planetText);
 		
 		dbDatacrons = new DatacronDatabase(this);
-		datacrons = dbDatacrons.getDatacronsPerPlanet(planetText);
+		datacrons = dbDatacrons.getDatacronsPerPlanet(planetText, factionText);
 		
 		NonScrollListView datacronItems = (NonScrollListView) findViewById(R.id.lstDatacron);
 		

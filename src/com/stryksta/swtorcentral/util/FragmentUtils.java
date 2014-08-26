@@ -13,6 +13,7 @@ public class FragmentUtils {
         FragmentTransaction ft = fm.beginTransaction();
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.add(containerId, fragment, tag);
+        ft.addToBackStack(tag);
         ft.commit();
     }
 
@@ -39,7 +40,7 @@ public class FragmentUtils {
         FragmentManager fm = act.getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        ft.replace(containerId, newFragment, tag);
+        ft.add(containerId, newFragment, tag);
         ft.commit();
     }
 

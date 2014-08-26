@@ -58,18 +58,13 @@ public class DatacronDatabase extends SQLiteAssetHelper {
 
 	}
 	
-	public ArrayList<DatacronItem> getDatacronsPerPlanet(String txtplanet) {
+	public ArrayList<DatacronItem> getDatacronsPerPlanet(String txtplanet, String txtfaction) {
 		ArrayList<DatacronItem> datacronItem = new ArrayList<DatacronItem>();
 		SQLiteDatabase db = getReadableDatabase();
-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-
-		String [] sqlSelect = {"0 _id", "faction", "planet", "map", "reward", "location", "reward", "codex"}; 
-		String sqlTables = "datacrons";
-
-		qb.setTables(sqlTables);
-		//Cursor c = qb.query(db, sqlSelect, null, null, null, null, null);
-		Cursor c = qb.query(db, sqlSelect, "planet" + " = ?", new String[]{String.valueOf(txtplanet)}, null, null, null);
 		
+		String sqlSelect = "SELECT * FROM datacrons where planet = ? AND faction = ?";
+	    Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtplanet), String.valueOf(txtfaction)});
+	        
 		if (c.moveToFirst()) {
             do {
             	String planet = c.getString(c.getColumnIndex("planet"));

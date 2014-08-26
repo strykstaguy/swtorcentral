@@ -1,5 +1,7 @@
 package com.stryksta.swtorcentral;
  
+import com.stryksta.swtorcentral.util.FragmentUtils;
+
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -18,19 +20,23 @@ public class AchievementActivity extends FragmentActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeButtonEnabled(true);
         
-        switchFragment(new Category1Fragment());
+        //switchFragment(new Category1Fragment());
+        
+        if (savedInstanceState != null) {
+            FragmentUtils.getFragmentByTag(AchievementActivity.this, "Category1");
+        } else {
+        	FragmentUtils.addFragmentsInActivity(AchievementActivity.this, R.id.achievementmain, new Category1Fragment(), "Category1");
+        }
         
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         
     }
     
-    public void switchFragment(Fragment newFragment) {
-    	getFragmentManager()
-                .beginTransaction()
-                .replace(R.id.achievementmain, newFragment)
-                .addToBackStack(null)
-                .commit();
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
     }
     
     @Override
@@ -45,10 +51,10 @@ public class AchievementActivity extends FragmentActivity {
 	}
 	
 	public void onBackPressed() {
-		if (getFragmentManager().getBackStackEntryCount() == 1) {
-	        this.finish();
+		if (getFragmentManager().getBackStackEntryCount() > 1) {
+			getFragmentManager().popBackStack();
 	    } else {
-	        getFragmentManager().popBackStack();
+	        this.finish();
 	    }
     }
 }
