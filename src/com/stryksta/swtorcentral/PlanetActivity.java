@@ -17,6 +17,7 @@ import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -26,6 +27,7 @@ import android.widget.TextView;
 public class PlanetActivity extends FragmentActivity {
 	private String planetText;
 	private String factionText;
+	private String typeText;
 	private PlanetDatabase dbPlanet;
 	private DatacronDatabase dbDatacrons;
 	private ArrayList<DatacronItem> datacrons;
@@ -44,6 +46,7 @@ public class PlanetActivity extends FragmentActivity {
         if ( bundle != null ) {
         	planetText = bundle.getString("planet");
         	factionText = bundle.getString("faction");
+        	typeText = bundle.getString("type");
         }
         
         getActionBar().setTitle(planetText);
@@ -76,15 +79,28 @@ public class PlanetActivity extends FragmentActivity {
 		txtPlanetTitle.setText(planetText);
 		
 		TextView txtDatacronTitle = (TextView) findViewById(R.id.txtDatacronTitle);
+		TextView txtDatacronSubTitle = (TextView) findViewById(R.id.txtDatacronSubTitle);
 		txtDatacronTitle.setText(planetText);
-		
-		dbDatacrons = new DatacronDatabase(this);
-		datacrons = dbDatacrons.getDatacronsPerPlanet(planetText, factionText);
 		
 		NonScrollListView datacronItems = (NonScrollListView) findViewById(R.id.lstDatacron);
 		
-		PlanetAdapter adapter = new PlanetAdapter(this, R.layout.planet_row, android.R.id.text1, datacrons);
-		datacronItems.setAdapter(adapter);
+		if (typeText.equals("Bonus Series") || typeText.equals("Flashpoint")) {
+			txtDatacronSubTitle.setVisibility(View.GONE);
+			txtDatacronTitle.setVisibility(View.GONE);
+			datacronItems.setVisibility(View.GONE);
+			
+		} else {
+			dbDatacrons = new DatacronDatabase(this);
+			datacrons = dbDatacrons.getDatacronsPerPlanet(planetText, factionText);
+			
+			PlanetAdapter adapter = new PlanetAdapter(this, R.layout.planet_row, android.R.id.text1, datacrons);
+			datacronItems.setAdapter(adapter);
+		}
+		
+		
+		
+		
+		
 		
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());

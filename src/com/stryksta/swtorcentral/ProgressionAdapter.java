@@ -10,14 +10,14 @@ import android.widget.TextView;
 
 import com.stryksta.swtorcentral.util.TimelineView;
 import com.stryksta.swtorcentral.util.VerticalTextView;
-import com.stryksta.swtorcentral.data.TestItem;
+import com.stryksta.swtorcentral.data.ProgressionItem;
 
 import java.util.List;
 
-public class ProgressionAdapter extends ArrayAdapter<TestItem> {
+public class ProgressionAdapter extends ArrayAdapter<ProgressionItem> {
     private final LayoutInflater mInflater;
 
-    public ProgressionAdapter(Context context, List<TestItem> objects) {
+    public ProgressionAdapter(Context context, List<ProgressionItem> objects) {
         super(context, 0, objects);
         mInflater = LayoutInflater.from(context);
     }
@@ -32,7 +32,7 @@ public class ProgressionAdapter extends ArrayAdapter<TestItem> {
         VerticalTextView txtTimeLineLabel = (VerticalTextView) v.findViewById(R.id.txtTimeLineLabel);
         TimelineView timeline = (TimelineView) v.findViewById(R.id.timeline);
 
-        TestItem event = getItem(position);
+        ProgressionItem event = getItem(position);
         
         imgPlanet.setImageResource(event.getimgPlanet());
         txtPlanet.setText(event.getPlanet());

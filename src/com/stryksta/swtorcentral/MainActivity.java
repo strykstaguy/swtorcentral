@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -29,6 +30,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemLongClickListener;
 
 import com.stryksta.swtorcentral.data.DrawerItem;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
@@ -46,6 +48,7 @@ public class MainActivity extends FragmentActivity  {
 	private AlertDialog characterSelectionDialog;
 	private String[] charcters = {"Benner","Crimewave","Defacto"};
 	ArrayList<String> characterArray = new ArrayList<String>();
+	private static final int ADD_PARTICIPANT = 1121;
 	
 	Spinner userCharacter;
 	TextView mUserCharacter;
@@ -74,7 +77,7 @@ public class MainActivity extends FragmentActivity  {
 		setContentView(R.layout.activity_main);
 
 		session = new SessionManager(getApplicationContext());
-		db = new CharacterDatabase(MainActivity.this);
+		
 		
 		//Start Drawer
 		mTitle = mDrawerTitle = getTitle();
@@ -89,17 +92,45 @@ public class MainActivity extends FragmentActivity  {
 	    mUserIcon = (ImageView) findViewById(R.id.imgClassIcon);
 	    mUserAddorSwitch = (ImageView) findViewById(R.id.imgAddorSwitch);
 	    
-	    characterArray = db.CharacterSelectionList();
+	    updateCharacters();
 	    
-	    
-	    
-	    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-	    builder.setTitle("Choose your class");
-	    builder.setIcon(R.drawable.ic_action_user);
-	    
+	    //if there are no characters off to add one or allow to choose if there are
 	    if (characterArray.isEmpty()) {
-	    	builder.setMessage("You have no characters, please cancel and add one.");
+	    	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+		    builder.setTitle("Choose your class");
+		    builder.setIcon(R.drawable.ic_action_user);
+		    
+	    	builder.setMessage("You have no characters, would you like to add one?");
+	    	
+	    	builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+		    	public void onClick(DialogInterface dialog, int which) {
+		    		Intent addCharacterIntent = new Intent(MainActivity.this, CharacterAddActivity.class);
+			    	startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
+		    	}
+		    });
+		    
+		    //Cancel
+		    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+		    	public void onClick(DialogInterface dialog, int which) {
+		    		dialog.cancel();
+		    	}
+		    });
+		    
+		    builder.setCancelable(true);
+		    characterSelectionDialog = builder.create();
+		    mUserAddorSwitch.setOnClickListener(new View.OnClickListener() {
+
+		        public void onClick(View v) {
+		        	characterSelectionDialog.show();
+		        }
+		    });
 	    } else {
+	    	
+	    	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+		    builder.setTitle("Choose your class");
+		    builder.setIcon(R.drawable.ic_action_user);
+		    
+	    	builder.setMessage("You have no characters, please cancel and add one.");
 	    	
 	    	CharSequence[] cs = characterArray.toArray(new CharSequence[characterArray.size()]);
 	    	builder.setItems(cs, new DialogInterface.OnClickListener() {
@@ -116,32 +147,31 @@ public class MainActivity extends FragmentActivity  {
 	    	    	mUserStatus.setText("Logged in");
 	    	    }
 	    	    });
-	    }
-	    
-	    builder.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
-	    	public void onClick(DialogInterface dialog, int which) {
-	    		session.logoutUser();
-	    		mUserCharacter.setText("None");
-		    	mUserStatus.setText("Logged out");
-	    	}
-	    });
-	    
-	    //Cancel
-	    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-	    	public void onClick(DialogInterface dialog, int which) {
-	    		dialog.cancel();
-	    	}
-	    });
 	    	
-	    builder.setCancelable(true);
-	    characterSelectionDialog = builder.create();
-	    
-	    mUserAddorSwitch.setOnClickListener(new View.OnClickListener() {
+	    	builder.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
+		    	public void onClick(DialogInterface dialog, int which) {
+		    		session.logoutUser();
+		    		mUserCharacter.setText("None");
+			    	mUserStatus.setText("Logged out");
+		    	}
+		    });
+		    
+		    //Cancel
+		    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+		    	public void onClick(DialogInterface dialog, int which) {
+		    		dialog.cancel();
+		    	}
+		    });
+		    
+		    builder.setCancelable(true);
+		    characterSelectionDialog = builder.create();
+		    mUserAddorSwitch.setOnClickListener(new View.OnClickListener() {
 
-	        public void onClick(View v) {
-	        	characterSelectionDialog.show();
-	        }
-	    });
+		        public void onClick(View v) {
+		        	characterSelectionDialog.show();
+		        }
+		    });
+	    }
 	    
 	    if (session.isLoggedIn()) {
 	    	
@@ -163,25 +193,6 @@ public class MainActivity extends FragmentActivity  {
 	    	
 	    }
 	    
-	    //Character Selection
-	    /*
-	    userCharacter = (Spinner) findViewById(R.id.userCharacter);
-	    
-	    List<String> list = new ArrayList<String>();
-			list.add("Benner");
-			list.add("Crimewave");
-			ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.user_character_selection, list);
-			dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-			userCharacter.setAdapter(dataAdapter);
-			userCharacter.setOnItemSelectedListener(new OnItemSelectedListener() {
-			 public void onItemSelected(AdapterView<?> arg0, View arg1,int arg2, long arg3) {
-				 
-			 }
-			 public void onNothingSelected(AdapterView<?> arg0) {
-				 
-			 }
-			});
-			*/
 	 	// set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         
@@ -240,6 +251,22 @@ public class MainActivity extends FragmentActivity  {
 
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
+	}
+	
+	@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == ADD_PARTICIPANT && resultCode == Activity.RESULT_OK) {
+        	updateCharacters();
+        	Toast.makeText(getApplicationContext(), "Added Character", Toast.LENGTH_SHORT).show();
+        }
+    }
+	
+	public void updateCharacters(){
+		db = new CharacterDatabase(MainActivity.this);
+		characterArray = db.CharacterSelectionList();
+		db.close();
 	}
 	
 	@Override
@@ -318,6 +345,10 @@ public class MainActivity extends FragmentActivity  {
 	    case 9:
 	    	Intent achievementIntent = new Intent(this, AchievementActivity.class);
 	        startActivity(achievementIntent);
+	        break;
+	    case 10:
+	    	Intent testIntent = new Intent(this, TestActivity.class);
+	        startActivity(testIntent);
 	        break;
 	    default:
 	}

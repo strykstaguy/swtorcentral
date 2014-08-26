@@ -62,7 +62,9 @@ public class DatacronDatabase extends SQLiteAssetHelper {
 		ArrayList<DatacronItem> datacronItem = new ArrayList<DatacronItem>();
 		SQLiteDatabase db = getReadableDatabase();
 		
-		String sqlSelect = "SELECT * FROM datacrons where planet = ? AND faction = ?";
+		String sqlSelect = "SELECT * FROM datacrons where planet = ? AND (faction= ? OR faction='Both')";
+		
+		
 	    Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtplanet), String.valueOf(txtfaction)});
 	        
 		if (c.moveToFirst()) {

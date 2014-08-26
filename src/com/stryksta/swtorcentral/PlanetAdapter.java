@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.TextView;
 
 
 public class PlanetAdapter extends ArrayAdapter<DatacronItem> {
@@ -31,7 +30,6 @@ public class PlanetAdapter extends ArrayAdapter<DatacronItem> {
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			v = inflater.inflate(R.layout.planet_row, parent, false);
 			holder = new ViewHolder();
-			//holder.txtViewPlanet = (TextView) v.findViewById(R.id.txtPlanet);
 			holder.chkViewDatacron = (CheckBox) v.findViewById(R.id.chkDatacron);
 			v.setTag(holder);
 
@@ -42,7 +40,6 @@ public class PlanetAdapter extends ArrayAdapter<DatacronItem> {
 		DatacronItem testItem = results.get(position);
 		
 		if (testItem != null) {
-			//holder.txtViewPlanet.setText(testItem.getPlanet());
 			holder.chkViewDatacron.setText(testItem.getReward());
 		}
 		
@@ -50,7 +47,6 @@ public class PlanetAdapter extends ArrayAdapter<DatacronItem> {
 	}
 	
 	private static class ViewHolder {
-		public TextView txtViewPlanet;
 		public CheckBox chkViewDatacron;
 	}
 }

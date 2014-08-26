@@ -27,8 +27,8 @@ public abstract class TimelineView extends View {
     private TimelineType timelineType = TimelineType.LINE;
 
     private Paint linePaint, middlePaint, firstPaint, lastPaint;
-    private float startX, startY;
-    private float endX, endY;
+    private float startX, startY, startYSingle;
+    private float endX, endY, endYSingle;
     private float centerX, centerY;
 
     public TimelineView(Context context) {
@@ -126,7 +126,11 @@ public abstract class TimelineView extends View {
 
         startX = contentWidth / 2 - mLineWidth / 2;
         endX = contentWidth / 2 + mLineWidth / 2;
+        
+        startYSingle = paddingTop + mLineWidth + 5;
         startY = paddingTop;
+        
+        endYSingle = contentHeight - mLineWidth - 5;
         endY = contentHeight;
 
         centerX = contentWidth / 2;
@@ -141,6 +145,11 @@ public abstract class TimelineView extends View {
         } else if (timelineType == TimelineType.END) {
             canvas.drawRect(startX, startY, endX, centerY, linePaint);
             drawEnd(canvas, lastPaint, centerX, centerY, mEndSize);
+        } else if (timelineType == TimelineType.SINGLE) {
+            canvas.drawRect(startX, startYSingle, endX, endYSingle, linePaint);
+            drawStart(canvas, lastPaint, centerX, startYSingle, mEndSize);
+            drawEnd(canvas, lastPaint, centerX, endYSingle, mEndSize);
+            
         } else {
             canvas.drawRect(startX, startY, endX, endY, linePaint);
         }
