@@ -2,12 +2,16 @@ package com.stryksta.swtorcentral;
 
 import java.util.HashMap;
 import java.util.List;
+
+import com.stryksta.swtorcentral.util.SessionManager;
+
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class TestExpandableListAdapter extends BaseExpandableListAdapter {
@@ -15,12 +19,14 @@ public class TestExpandableListAdapter extends BaseExpandableListAdapter {
     private Context context;
     private List<String> expandableListTitle;
     private HashMap<String, List<String>> expandableListDetail;
+    SessionManager session;
 
     public TestExpandableListAdapter(Context context, List<String> expandableListTitle,
                                  HashMap<String, List<String>> expandableListDetail) {
         this.context = context;
         this.expandableListTitle = expandableListTitle;
         this.expandableListDetail = expandableListDetail;
+        session = new SessionManager(context);
     }
 
     public Object getChild(int listPosition, int expandedListPosition) {
@@ -40,9 +46,14 @@ public class TestExpandableListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.test_list_item, null);
         }
-        TextView expandedListTextView = (TextView) convertView
-                .findViewById(R.id.expandedListItem);
+        TextView expandedListTextView = (TextView) convertView.findViewById(R.id.expandedListItem);
         expandedListTextView.setText(expandedListText);
+        
+        if (expandedListText.equals("Add Character")) {
+        	ImageView expandedimgAction = (ImageView) convertView.findViewById(R.id.imgAction);
+        	expandedimgAction.setImageResource(R.drawable.ic_action_add_dark);
+        }
+        
         return convertView;
     }
 
@@ -71,8 +82,15 @@ public class TestExpandableListAdapter extends BaseExpandableListAdapter {
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.test_list_group, null);
         }
-        TextView listTitleTextView = (TextView) convertView
-                .findViewById(R.id.listTitle);
+        TextView listTitleTextView = (TextView) convertView.findViewById(R.id.userCharacter);
+        TextView mUserStatus = (TextView) convertView.findViewById(R.id.userStatus);
+        
+        if (session.isLoggedIn()) {
+        	mUserStatus.setText("Logged in");
+        } else {
+        	mUserStatus.setText("Logged out");
+        }
+        
         listTitleTextView.setTypeface(null, Typeface.BOLD);
         listTitleTextView.setText(listTitle);
         return convertView;

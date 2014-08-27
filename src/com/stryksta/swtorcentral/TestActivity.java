@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.stryksta.swtorcentral.util.SessionManager;
+
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -11,6 +13,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
@@ -22,6 +25,8 @@ public class TestActivity extends FragmentActivity {
     TestExpandableListAdapter expandableListAdapter;
     List<String> expandableListTitle;
     HashMap<String, List<String>> expandableListDetail;
+    SessionManager session;
+    String mUserCharacter;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +40,31 @@ public class TestActivity extends FragmentActivity {
         getActionBar().setTitle("Test");
         
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-        expandableListDetail = TestExpandableListDataPump.getData();
+        
+        session = new SessionManager(getApplicationContext());
+        
+        if (session.isLoggedIn()) {
+	        HashMap<String, String> user = session.getUserDetails();
+	        mUserCharacter = user.get(SessionManager.KEY_NAME);
+        } else {
+        	mUserCharacter = "None";
+        }
+        
+        expandableListDetail = new HashMap<String, List<String>>();
+        List<String> characters = new ArrayList<String>();
+        
+        characters.add("Benner");
+        characters.add("Crimewave");
+        characters.add("Voxtrot");
+        characters.add("Defacto");
+        characters.add("Add Character");
+        
+        expandableListDetail.put(mUserCharacter, characters);
+        
         expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
         expandableListAdapter = new TestExpandableListAdapter(this, expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
+        
         expandableListView.setOnGroupExpandListener(new OnGroupExpandListener() {
 
             public void onGroupExpand(int groupPosition) {
