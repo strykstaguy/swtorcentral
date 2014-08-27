@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.CharacterDatabase;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.ActionBar;
@@ -27,6 +29,8 @@ public class TestActivity extends FragmentActivity {
     HashMap<String, List<String>> expandableListDetail;
     SessionManager session;
     String mUserCharacter;
+    private CharacterDatabase db;
+    ArrayList<String> characterArray = new ArrayList<String>();
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,10 @@ public class TestActivity extends FragmentActivity {
         
         session = new SessionManager(getApplicationContext());
         
+        db = new CharacterDatabase(TestActivity.this);
+			characterArray = db.CharacterSelectionList();
+		db.close();
+		
         if (session.isLoggedIn()) {
 	        HashMap<String, String> user = session.getUserDetails();
 	        mUserCharacter = user.get(SessionManager.KEY_NAME);
@@ -50,52 +58,35 @@ public class TestActivity extends FragmentActivity {
         	mUserCharacter = "None";
         }
         
+        
         expandableListDetail = new HashMap<String, List<String>>();
-        List<String> characters = new ArrayList<String>();
-        
-        characters.add("Benner");
-        characters.add("Crimewave");
-        characters.add("Voxtrot");
-        characters.add("Defacto");
-        characters.add("Add Character");
-        
-        expandableListDetail.put(mUserCharacter, characters);
+        expandableListDetail.put(mUserCharacter, characterArray);
         
         expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
         expandableListAdapter = new TestExpandableListAdapter(this, expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
         
-        expandableListView.setOnGroupExpandListener(new OnGroupExpandListener() {
-
-            public void onGroupExpand(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
-                        expandableListTitle.get(groupPosition) + " List Expanded.",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        expandableListView.setOnGroupCollapseListener(new OnGroupCollapseListener() {
-
-            public void onGroupCollapse(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
-                        expandableListTitle.get(groupPosition) + " List Collapsed.",
-                        Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
         expandableListView.setOnChildClickListener(new OnChildClickListener() {
             public boolean onChildClick(ExpandableListView parent, View v,
             		int groupPosition, int childPosition, long id) {
-                Toast.makeText(
-                        getApplicationContext(),
-                        expandableListTitle.get(groupPosition)
-                                + " -> "
-                                + expandableListDetail.get(
-                                expandableListTitle.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT
-                )
-                        .show();
+                		//Toast.makeText(getApplicationContext(), expandableListDetail.get(expandableListTitle.get(groupPosition)).get(childPosition), Toast.LENGTH_SHORT).show();
+            			
+                		String characterSelectionText = expandableListDetail.get(expandableListTitle.get(groupPosition)).get(childPosition);
+                		//expandableListTitle.get(groupPosition);
+                		//expandableListTitle.set(groupPosition, "test");
+                		if (characterSelectionText.equals("Add Character")) {
+                			Toast.makeText(getApplicationContext(), "Add Character!", Toast.LENGTH_SHORT).show();
+                		} else if (characterSelectionText.equals(mUserCharacter)) {
+                			Toast.makeText(getApplicationContext(), "You are already logged in to this character", Toast.LENGTH_SHORT).show();
+                		} else {
+                			//characterLogin(characterSelectionText);
+                			//Log selected user in
+                			int characterID = Integer.parseInt(db.getCharacterID(characterSelectionText));
+                	    	session.createLoginSession(characterSelectionText, characterID);
+                			Toast.makeText(getApplicationContext(), characterSelectionText + " logged in.", Toast.LENGTH_SHORT).show();
+                			expandableListAdapter.notifyDataSetChanged();
+                		}
+                		
                 return false;
             }
         });

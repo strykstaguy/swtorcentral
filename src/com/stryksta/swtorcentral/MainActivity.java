@@ -2,6 +2,7 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -24,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -31,6 +33,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ExpandableListView.OnChildClickListener;
 
 import com.stryksta.swtorcentral.data.DrawerItem;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
@@ -42,27 +45,23 @@ public class MainActivity extends FragmentActivity  {
 	// Drawer
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
+	
 	private LinearLayout mDrawerView;
 	private ActionBarDrawerToggle mDrawerToggle;
-	
-	private AlertDialog characterSelectionDialog;
-	private String[] charcters = {"Benner","Crimewave","Defacto"};
-	ArrayList<String> characterArray = new ArrayList<String>();
-	private static final int ADD_PARTICIPANT = 1121;
-	
-	Spinner userCharacter;
-	TextView mUserCharacter;
-	TextView mUserStatus;
-	ImageView mUserIcon;
-	ImageView mUserAddorSwitch;
 	
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
 	private String[] menuItems;
 	private String[] menuItemsIcon;
-	
+	private String mUserCharacter;
 	private CharacterDatabase db;
 	
+	private ExpandableListView mCharacterListView;
+	TestExpandableListAdapter mCharacterAdapter;
+	ArrayList<String> mCharacterArray = new ArrayList<String>();
+	List<String> mCharacterTitles;
+    HashMap<String, List<String>> mCharacterDetails;
+    
 	SessionManager session;
 	
 	//End Drawer
@@ -78,7 +77,6 @@ public class MainActivity extends FragmentActivity  {
 
 		session = new SessionManager(getApplicationContext());
 		
-		
 		//Start Drawer
 		mTitle = mDrawerTitle = getTitle();
 		menuItems = getResources().getStringArray(R.array.drawerItems);
@@ -86,119 +84,55 @@ public class MainActivity extends FragmentActivity  {
 	    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 	    mDrawerList = (ListView) findViewById(R.id.drawer);
 	    mDrawerView = (LinearLayout) this.findViewById(R.id.drawer_view);
+	    mCharacterListView = (ExpandableListView) findViewById(R.id.expandableListView);
 	    
-	    mUserCharacter = (TextView) findViewById(R.id.userCharacter);
-	    mUserStatus = (TextView) findViewById(R.id.userStatus);
-	    mUserIcon = (ImageView) findViewById(R.id.imgClassIcon);
-	    mUserAddorSwitch = (ImageView) findViewById(R.id.imgAddorSwitch);
-	    
-	    updateCharacters();
-	    
-	    //if there are no characters off to add one or allow to choose if there are
-	    if (characterArray.isEmpty()) {
-	    	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-		    builder.setTitle("Choose your class");
-		    builder.setIcon(R.drawable.ic_action_user);
-		    
-	    	builder.setMessage("You have no characters, would you like to add one?");
-	    	
-	    	builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
-		    	public void onClick(DialogInterface dialog, int which) {
-		    		Intent addCharacterIntent = new Intent(MainActivity.this, CharacterAddActivity.class);
-			    	startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
-		    	}
-		    });
-		    
-		    //Cancel
-		    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-		    	public void onClick(DialogInterface dialog, int which) {
-		    		dialog.cancel();
-		    	}
-		    });
-		    
-		    builder.setCancelable(true);
-		    characterSelectionDialog = builder.create();
-		    mUserAddorSwitch.setOnClickListener(new View.OnClickListener() {
-
-		        public void onClick(View v) {
-		        	characterSelectionDialog.show();
-		        }
-		    });
-	    } else {
-	    	
-	    	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-		    builder.setTitle("Choose your class");
-		    builder.setIcon(R.drawable.ic_action_user);
-		    
-	    	builder.setMessage("You have no characters, please cancel and add one.");
-	    	
-	    	CharSequence[] cs = characterArray.toArray(new CharSequence[characterArray.size()]);
-	    	builder.setItems(cs, new DialogInterface.OnClickListener() {
-	    	    
-	    	    //Character Selection
-	    	    public void onClick(DialogInterface dialog, int which) {
-	    	    //Toast toast = Toast.makeText(getApplicationContext(), "Selected: "+ charcters[which], Toast.LENGTH_SHORT);
-	    	    //toast.show();
-	    	    	
-	    	 		int characterID = Integer.parseInt(db.getCharacterID(charcters[which]));
-	    	 		
-	    	    	session.createLoginSession(charcters[which], characterID);
-	    	    	mUserCharacter.setText(charcters[which]);
-	    	    	mUserStatus.setText("Logged in");
-	    	    }
-	    	    });
-	    	
-	    	builder.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
-		    	public void onClick(DialogInterface dialog, int which) {
-		    		session.logoutUser();
-		    		mUserCharacter.setText("None");
-			    	mUserStatus.setText("Logged out");
-		    	}
-		    });
-		    
-		    //Cancel
-		    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-		    	public void onClick(DialogInterface dialog, int which) {
-		    		dialog.cancel();
-		    	}
-		    });
-		    
-		    builder.setCancelable(true);
-		    characterSelectionDialog = builder.create();
-		    mUserAddorSwitch.setOnClickListener(new View.OnClickListener() {
-
-		        public void onClick(View v) {
-		        	characterSelectionDialog.show();
-		        }
-		    });
-	    }
-	    
-	    if (session.isLoggedIn()) {
-	    	
-	    	// get user data from session
-	        HashMap<String, String> user = session.getUserDetails();
-	        
-	        // name
-	        String name = user.get(SessionManager.KEY_NAME);
-	    	
-	    	mUserCharacter.setText(name);
-	    	mUserStatus.setText("Logged in");
-	    	mUserAddorSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_switch_user));
-	    } else {
-	    	mUserCharacter.setText("None");
-	    	mUserStatus.setText("Logged out");
-	    	mUserAddorSwitch.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_add));
-	    	//mUserIcon.setVisibility(View.GONE);
-	    	
-	    	
-	    }
+	    //get characters
+	    db = new CharacterDatabase(MainActivity.this);
+	    mCharacterArray = db.CharacterSelectionList();
+		db.close();
+		
+		//if user is logged in set the user information or set to none
+		if (session.isLoggedIn()) {
+			HashMap<String, String> user = session.getUserDetails();
+			mUserCharacter = user.get(SessionManager.KEY_NAME);
+		} else {
+			mUserCharacter = "None";
+		}
+		
+		mCharacterDetails = new HashMap<String, List<String>>();
+		mCharacterDetails.put(mUserCharacter, mCharacterArray);
+        
+        mCharacterTitles = new ArrayList<String>(mCharacterDetails.keySet());
+        mCharacterAdapter = new TestExpandableListAdapter(this, mCharacterTitles, mCharacterDetails);
+        mCharacterListView.setAdapter(mCharacterAdapter);
+        
+        mCharacterListView.setOnChildClickListener(new OnChildClickListener() {
+            public boolean onChildClick(ExpandableListView parent, View v,
+            		int groupPosition, int childPosition, long id) {
+                		String characterSelectionText = mCharacterDetails.get(mCharacterTitles.get(groupPosition)).get(childPosition);
+                		if (characterSelectionText.equals("Add Character")) {
+                			Toast.makeText(getApplicationContext(), "Add Character!", Toast.LENGTH_SHORT).show();
+                		} else if (characterSelectionText.equals(mUserCharacter)) {
+                			Toast.makeText(getApplicationContext(), "You are already logged in to this character", Toast.LENGTH_SHORT).show();
+                		} else {
+                			//Log selected user in
+                			int characterID = Integer.parseInt(db.getCharacterID(characterSelectionText));
+                	    	session.createLoginSession(characterSelectionText, characterID);
+                			Toast.makeText(getApplicationContext(), characterSelectionText + " logged in.", Toast.LENGTH_SHORT).show();
+                			mCharacterAdapter.notifyDataSetChanged();
+                		}
+                		
+                return false;
+            }
+        });
+	    //updateCharacters();
 	    
 	 	// set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         
         DrawerAdapter mAdapter = new DrawerAdapter(this);// Add First Header
         
-        mAdapter.addHeader(R.string.header1);
+        //mAdapter.addHeader(R.string.header1);
         
         int res = 0;
 		for (String item : menuItems) {
@@ -251,22 +185,6 @@ public class MainActivity extends FragmentActivity  {
 
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
-	}
-	
-	@Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == ADD_PARTICIPANT && resultCode == Activity.RESULT_OK) {
-        	updateCharacters();
-        	Toast.makeText(getApplicationContext(), "Added Character", Toast.LENGTH_SHORT).show();
-        }
-    }
-	
-	public void updateCharacters(){
-		db = new CharacterDatabase(MainActivity.this);
-		characterArray = db.CharacterSelectionList();
-		db.close();
 	}
 	
 	@Override
@@ -380,7 +298,7 @@ public class MainActivity extends FragmentActivity  {
         getActionBar().setTitle(mTitle);
     }
     
-    public static  boolean isNetworkAvailable(Context c) {
+    public static boolean isNetworkAvailable(Context c) {
         ConnectivityManager manager = (ConnectivityManager)
                 c.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = manager.getActiveNetworkInfo();

@@ -15,7 +15,7 @@
         android:singleLine="true"
         android:text=""
         android:textAllCaps="true"
-        android:textColor="@color/white"
+        android:textColor="@color/text"
         android:textAppearance="@android:style/TextAppearance.Small"
         android:textStyle="bold" />
 
@@ -24,6 +24,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@+id/menurow_title"
-        android:src="@color/gray_46" />
+        android:src="@color/backgroundlight" />
 
 </RelativeLayout>

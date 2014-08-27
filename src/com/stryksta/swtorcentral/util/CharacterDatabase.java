@@ -297,20 +297,22 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     
     public ArrayList<String> CharacterSelectionList() {
 		SQLiteDatabase db = getReadableDatabase();
-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 		
 		ArrayList<String> characterArray = new ArrayList<String>();
 		
 		String sqlSelect = "SELECT * FROM character";
         Cursor c = db.rawQuery(sqlSelect, null);
 		
-		if (c.moveToFirst()) {
-			String characterName;
-			characterName = c.getString(c.getColumnIndex("name"));
-			characterArray.add(characterName);
+        if (c.moveToFirst()) {
+            do {
+            	String characterName;
+    			characterName = c.getString(c.getColumnIndex("name"));
+    			characterArray.add(characterName);
+            } while (c.moveToNext());
         }
 		
-		//c.moveToFirst();
+        characterArray.add("Add Character");
+
 		c.close();
 		return characterArray;
 

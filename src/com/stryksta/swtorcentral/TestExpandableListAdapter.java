@@ -6,6 +6,7 @@ import java.util.List;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.content.Context;
+import android.database.DataSetObserver;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,8 +59,7 @@ public class TestExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     public int getChildrenCount(int listPosition) {
-        return this.expandableListDetail.get(this.expandableListTitle.get(listPosition))
-                .size();
+        return this.expandableListDetail.get(this.expandableListTitle.get(listPosition)).size();
     }
 
     public Object getGroup(int listPosition) {
@@ -85,14 +85,18 @@ public class TestExpandableListAdapter extends BaseExpandableListAdapter {
         TextView listTitleTextView = (TextView) convertView.findViewById(R.id.userCharacter);
         TextView mUserStatus = (TextView) convertView.findViewById(R.id.userStatus);
         
+        listTitleTextView.setTypeface(null, Typeface.BOLD);
         if (session.isLoggedIn()) {
         	mUserStatus.setText("Logged in");
+        	HashMap<String, String> user = session.getUserDetails();
+            String mUserCharacter = user.get(SessionManager.KEY_NAME);
+        	listTitleTextView.setText(mUserCharacter);
         } else {
+        	listTitleTextView.setText(listTitle);
         	mUserStatus.setText("Logged out");
         }
         
-        listTitleTextView.setTypeface(null, Typeface.BOLD);
-        listTitleTextView.setText(listTitle);
+        
         return convertView;
     }
 
