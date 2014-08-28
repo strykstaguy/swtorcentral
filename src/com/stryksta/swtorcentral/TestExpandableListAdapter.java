@@ -52,7 +52,7 @@ public class TestExpandableListAdapter extends BaseExpandableListAdapter {
         
         if (expandedListText.equals("Add Character")) {
         	ImageView expandedimgAction = (ImageView) convertView.findViewById(R.id.imgAction);
-        	expandedimgAction.setImageResource(R.drawable.ic_action_add_dark);
+        	expandedimgAction.setImageResource(R.drawable.ic_action_add);
         }
         
         return convertView;

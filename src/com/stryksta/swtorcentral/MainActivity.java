@@ -178,7 +178,7 @@ public class MainActivity extends FragmentActivity  {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         if (savedInstanceState == null) {
-            selectItem(1);
+            selectItem(0);
         }
 		//End Drawer
 		
@@ -226,45 +226,45 @@ public class MainActivity extends FragmentActivity  {
         // update the main content by replacing fragments
         
    	 switch(position) {
-	    case 1:
+	    case 0:
 	    	//Toast.makeText(getApplicationContext(), "First Fragment", Toast.LENGTH_SHORT).show();
 	    	//switchFragment(new ReaderActivity());
 	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new ReaderActivity(), "Reader");
 	        break;
-	    case 2:
+	    case 1:
 	    	Intent serverIntent = new Intent(this, ServerActivity.class);
 	        startActivity(serverIntent);
 	        break;
-	    case 3:
+	    case 2:
 	    	//switchFragment(new DatacronActivity());
 	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new DatacronActivity(), "Datacron");
 	        break;
-	    case 4:
+	    case 3:
 	    	//switchFragment(new ClassesActivity());
 	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new ClassesActivity(), "Classes");
 	        break;
-	    case 5:
+	    case 4:
 	    	Intent settingsIntent = new Intent(this, SettingsActivity.class);
 	        startActivity(settingsIntent);
 	        break;
-	    case 6:
+	    case 5:
 	    	//Intent factionIntent = new Intent(this, FactionActivity.class);
 	        //startActivity(factionIntent);
 	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new FactionFragment(), "Faction");
 	        break;
-	    case 7:
+	    case 6:
 	    	Intent eventIntent = new Intent(this, EventsActivity.class);
 	        startActivity(eventIntent);
 	        break;
-	    case 8:
+	    case 7:
 	    	Intent characterIntent = new Intent(this, CharacterActivity.class);
 	        startActivity(characterIntent);
 	        break;
-	    case 9:
+	    case 8:
 	    	Intent achievementIntent = new Intent(this, AchievementActivity.class);
 	        startActivity(achievementIntent);
 	        break;
-	    case 10:
+	    case 9:
 	    	Intent testIntent = new Intent(this, TestActivity.class);
 	        startActivity(testIntent);
 	        break;
