@@ -36,6 +36,7 @@ public class DatacronActivity extends ListFragment {
         
         db = new DatacronDatabase(getActivity());
 		datacrons = db.getDatacrons();
+		db.close();
 		
         ListView itcItems = (ListView) vw_layout.findViewById(android.R.id.list);
         

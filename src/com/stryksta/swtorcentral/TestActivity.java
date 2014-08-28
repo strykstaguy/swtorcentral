@@ -1,101 +1,117 @@
 package com.stryksta.swtorcentral;
  
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import com.stryksta.swtorcentral.util.AchievementsDatabase;
-import com.stryksta.swtorcentral.util.CharacterDatabase;
-import com.stryksta.swtorcentral.util.SessionManager;
-
 import android.app.ActionBar;
+import android.app.ProgressDialog;
+import android.graphics.PixelFormat;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnPreparedListener;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
-import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.ExpandableListView.OnGroupCollapseListener;
-import android.widget.ExpandableListView.OnGroupExpandListener;
-import android.widget.Toast;
+import android.widget.MediaController;
+import android.widget.VideoView;
  
 public class TestActivity extends FragmentActivity {
-    
-	ExpandableListView expandableListView;
-    TestExpandableListAdapter expandableListAdapter;
-    List<String> expandableListTitle;
-    HashMap<String, List<String>> expandableListDetail;
-    SessionManager session;
-    String mUserCharacter;
-    private CharacterDatabase db;
-    ArrayList<String> characterArray = new ArrayList<String>();
-    
+	ProgressDialog pDialog;
+	VideoView videoView;
+    String videoTitle = "New Play Tutorial";
+	String VideoURL = "http://cdn-www.swtor.com/sites/all/files/en/vc/tutorials/01_movement.mp4";
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  
+        WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.test_main);
         
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
+        //ActionBar actionbar = getActionBar();
+        //actionbar.setDisplayHomeAsUpEnabled(true);
+        //actionbar.setHomeButtonEnabled(true);
         
-        getActionBar().setTitle("Test");
-        
-        expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-        
-        session = new SessionManager(getApplicationContext());
-        
-        db = new CharacterDatabase(TestActivity.this);
-			characterArray = db.CharacterSelectionList();
-		db.close();
+        //getActionBar().setTitle("Test");
+        Bundle bundle = getIntent().getExtras();
 		
-        if (session.isLoggedIn()) {
-	        HashMap<String, String> user = session.getUserDetails();
-	        mUserCharacter = user.get(SessionManager.KEY_NAME);
-        } else {
-        	mUserCharacter = "None";
+        if ( bundle != null ) {
+        	VideoURL = bundle.getString("videourl");
+        	videoTitle = bundle.getString("title");
         }
         
+        videoView = (VideoView) findViewById(R.id.VideoView);
         
-        expandableListDetail = new HashMap<String, List<String>>();
-        expandableListDetail.put(mUserCharacter, characterArray);
-        
-        expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-        expandableListAdapter = new TestExpandableListAdapter(this, expandableListTitle, expandableListDetail);
-        expandableListView.setAdapter(expandableListAdapter);
-        
-        expandableListView.setOnChildClickListener(new OnChildClickListener() {
-            public boolean onChildClick(ExpandableListView parent, View v,
-            		int groupPosition, int childPosition, long id) {
-                		//Toast.makeText(getApplicationContext(), expandableListDetail.get(expandableListTitle.get(groupPosition)).get(childPosition), Toast.LENGTH_SHORT).show();
-            			
-                		String characterSelectionText = expandableListDetail.get(expandableListTitle.get(groupPosition)).get(childPosition);
-                		//expandableListTitle.get(groupPosition);
-                		//expandableListTitle.set(groupPosition, "test");
-                		if (characterSelectionText.equals("Add Character")) {
-                			Toast.makeText(getApplicationContext(), "Add Character!", Toast.LENGTH_SHORT).show();
-                		} else if (characterSelectionText.equals(mUserCharacter)) {
-                			Toast.makeText(getApplicationContext(), "You are already logged in to this character", Toast.LENGTH_SHORT).show();
-                		} else {
-                			//characterLogin(characterSelectionText);
-                			//Log selected user in
-                			int characterID = Integer.parseInt(db.getCharacterID(characterSelectionText));
-                	    	session.createLoginSession(characterSelectionText, characterID);
-                			Toast.makeText(getApplicationContext(), characterSelectionText + " logged in.", Toast.LENGTH_SHORT).show();
-                			expandableListAdapter.notifyDataSetChanged();
-                		}
-                		
-                return false;
-            }
-        });
+        new StreamVideo().execute();
         
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         
     }
     
+ // StreamVideo AsyncTask
+ 	private class StreamVideo extends AsyncTask<Void, Void, Void> {
+ 		protected void onPreExecute() {
+ 			super.onPreExecute();
+ 			// Create a progressbar
+ 			pDialog = new ProgressDialog(TestActivity.this);
+ 			// Set progressbar title
+ 			pDialog.setTitle(videoTitle);
+ 			// Set progressbar message
+ 			pDialog.setMessage("Loading...");
+ 			pDialog.setIndeterminate(false);
+ 			// Show progressbar
+ 			pDialog.show();
+
+ 		}
+
+ 		@Override
+ 		protected Void doInBackground(Void... params) {
+ 			// TODO Auto-generated method stub
+ 			return null;
+ 		}
+
+ 		@Override
+ 		protected void onPostExecute(Void args) {
+
+ 			try {
+ 				// Start the MediaController
+ 				MediaController mediacontroller = new MediaController(TestActivity.this);
+ 				mediacontroller.setAnchorView(videoView);
+ 				// Get the URL from String VideoURL
+ 				Uri video = Uri.parse(VideoURL);
+ 				videoView.setMediaController(mediacontroller);
+ 				videoView.setVideoURI(video);
+
+ 				videoView.requestFocus();
+ 				videoView.setOnPreparedListener(new OnPreparedListener() {
+ 					// Close the progress bar and play the video
+ 					public void onPrepared(MediaPlayer mp) {
+ 						pDialog.dismiss();
+ 						videoView.start();
+ 					}
+ 				});
+ 				
+ 				videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+ 				    public void onCompletion(MediaPlayer mp) {
+ 				    	finish();    
+ 				    }
+ 				});
+ 			} catch (Exception e) {
+ 				pDialog.dismiss();
+ 				Log.e("Error", e.getMessage());
+ 				e.printStackTrace();
+ 			}
+
+ 		}
+
+ 	}
+ 	
     @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {

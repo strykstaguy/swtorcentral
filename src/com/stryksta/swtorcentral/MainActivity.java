@@ -57,7 +57,7 @@ public class MainActivity extends FragmentActivity  {
 	private CharacterDatabase db;
 	
 	private ExpandableListView mCharacterListView;
-	TestExpandableListAdapter mCharacterAdapter;
+	CharacterDrawerAdapter mCharacterAdapter;
 	ArrayList<String> mCharacterArray = new ArrayList<String>();
 	List<String> mCharacterTitles;
     HashMap<String, List<String>> mCharacterDetails;
@@ -103,7 +103,7 @@ public class MainActivity extends FragmentActivity  {
 		mCharacterDetails.put(mUserCharacter, mCharacterArray);
         
         mCharacterTitles = new ArrayList<String>(mCharacterDetails.keySet());
-        mCharacterAdapter = new TestExpandableListAdapter(this, mCharacterTitles, mCharacterDetails);
+        mCharacterAdapter = new CharacterDrawerAdapter(this, mCharacterTitles, mCharacterDetails);
         mCharacterListView.setAdapter(mCharacterAdapter);
         
         mCharacterListView.setOnChildClickListener(new OnChildClickListener() {
@@ -265,7 +265,7 @@ public class MainActivity extends FragmentActivity  {
 	        startActivity(achievementIntent);
 	        break;
 	    case 9:
-	    	Intent testIntent = new Intent(this, TestActivity.class);
+	    	Intent testIntent = new Intent(this, TutorialActivity.class);
 	        startActivity(testIntent);
 	        break;
 	    default:

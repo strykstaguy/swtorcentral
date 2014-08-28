@@ -24,7 +24,7 @@
         <item>ic_action_calendar_month</item>
         <item>ic_action_users</item>
         <item>ic_action_achievement</item>
-        <item>ic_action_gear</item>
+        <item>ic_action_book</item>
     </array>
     
     <string-array name="syncFrequency">

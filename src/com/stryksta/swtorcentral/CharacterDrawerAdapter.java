@@ -15,14 +15,14 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class TestExpandableListAdapter extends BaseExpandableListAdapter {
+public class CharacterDrawerAdapter extends BaseExpandableListAdapter {
 
     private Context context;
     private List<String> expandableListTitle;
     private HashMap<String, List<String>> expandableListDetail;
     SessionManager session;
 
-    public TestExpandableListAdapter(Context context, List<String> expandableListTitle,
+    public CharacterDrawerAdapter(Context context, List<String> expandableListTitle,
                                  HashMap<String, List<String>> expandableListDetail) {
         this.context = context;
         this.expandableListTitle = expandableListTitle;
@@ -45,14 +45,17 @@ public class TestExpandableListAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.test_list_item, null);
+            convertView = layoutInflater.inflate(R.layout.drawer_character_item, null);
         }
         TextView expandedListTextView = (TextView) convertView.findViewById(R.id.expandedListItem);
+        ImageView expandedimgAction = (ImageView) convertView.findViewById(R.id.imgAction);
+        
         expandedListTextView.setText(expandedListText);
         
         if (expandedListText.equals("Add Character")) {
-        	ImageView expandedimgAction = (ImageView) convertView.findViewById(R.id.imgAction);
         	expandedimgAction.setImageResource(R.drawable.ic_action_add);
+        } else {
+        	expandedimgAction.setImageResource(R.drawable.ic_action_cancel);
         }
         
         return convertView;
@@ -80,7 +83,7 @@ public class TestExpandableListAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.test_list_group, null);
+            convertView = layoutInflater.inflate(R.layout.drawer_character_group, null);
         }
         TextView listTitleTextView = (TextView) convertView.findViewById(R.id.userCharacter);
         TextView mUserStatus = (TextView) convertView.findViewById(R.id.userStatus);

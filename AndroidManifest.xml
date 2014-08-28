@@ -88,6 +88,10 @@
             android:name="com.stryksta.swtorcentral.AchievementActivity"
             android:label="@string/achievements_main" >
         </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.TutorialActivity"
+            android:label="@string/tutorials_main" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,19 +1,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black" >
 
-    <ExpandableListView
-        android:id="@+id/expandableListView"
-        android:layout_height="match_parent"
+    <VideoView
+        android:id="@+id/VideoView"
         android:layout_width="match_parent"
-        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
-        android:indicatorRight="?android:attr/expandableListPreferredItemIndicatorRight"
-        android:divider="#A4C739"
-        android:dividerHeight="0.5dp" />
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>

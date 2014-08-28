@@ -23,6 +23,6 @@
         android:layout_gravity="center_vertical"
         android:contentDescription="@string/image_placeholder"
         android:scaleType="fitCenter"
-        android:src="@drawable/ic_action_cancel_dark" />
+        android:src="@drawable/ic_action_cancel" />
 
 </LinearLayout>
