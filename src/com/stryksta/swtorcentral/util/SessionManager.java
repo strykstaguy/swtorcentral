@@ -31,6 +31,9 @@ public class SessionManager {
 	
 	// User id (make variable public to access from outside)
 	public static final String KEY_ID = "id";
+
+	// User id (make variable public to access from outside)
+	public static final String KEY_IMAGE = "image";
 		
 	// Constructor
 	public SessionManager(Context context){
@@ -42,7 +45,7 @@ public class SessionManager {
 	/**
 	 * Create login session
 	 * */
-	public void createLoginSession(String name, int id){
+	public void createLoginSession(String name, int id, String userimage){
 		// Storing login value as TRUE
 		editor.putBoolean(IS_LOGIN, true);
 		
@@ -51,6 +54,9 @@ public class SessionManager {
 		
 		// Storing id in pref
 		editor.putInt(KEY_ID, id);
+		
+		// Storing id in pref
+		editor.putString(KEY_IMAGE, userimage);
 				
 		// commit changes
 		editor.commit();
@@ -88,6 +94,7 @@ public class SessionManager {
 		// user name
 		user.put(KEY_NAME, pref.getString(KEY_NAME, null));
 		user.put(KEY_ID, String.valueOf(pref.getInt(KEY_ID, 0)));
+		user.put(KEY_IMAGE, pref.getString(KEY_IMAGE, null));
 		
 		// return user
 		return user;

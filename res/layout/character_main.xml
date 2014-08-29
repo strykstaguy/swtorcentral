@@ -3,7 +3,6 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="10.0dip"
     android:background="@color/background" >
     
  <ListView
@@ -11,8 +10,11 @@
  	android:layout_width="fill_parent"
  	android:layout_height="fill_parent"
  	android:background="@color/background"
- 	android:paddingTop="5.0dip"
+ 	android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="10dp"
  	android:divider="@drawable/divider"
+ 	android:scrollbarStyle="outsideInset"
  	android:longClickable="true"
  	android:duplicateParentState="false"
  	android:cacheColorHint="@android:color/transparent" >

@@ -3,8 +3,10 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.TutorialItem;
+import com.stryksta.swtorcentral.util.ListViewUtil;
 import com.stryksta.swtorcentral.util.TutorialAdapter;
 import com.stryksta.swtorcentral.util.TutorialDatabase;
+import com.stryksta.swtorcentral.util.Utility;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -18,6 +20,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.Toast;
  
 public class TutorialActivity extends FragmentActivity {
 	private TutorialDatabase db;
@@ -47,6 +50,7 @@ public class TutorialActivity extends FragmentActivity {
         tutorialList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
+				Toast.makeText(getApplicationContext(), tutorialAdapter.getCellHeight(position, parent), Toast.LENGTH_SHORT).show();
 					Bundle bundle = new Bundle();
 					bundle.putString("videourl", tutorialAdapter.getItem(position).getVideoURL());
 					bundle.putString("title", tutorialAdapter.getItem(position).getTitle());
@@ -55,7 +59,6 @@ public class TutorialActivity extends FragmentActivity {
 					startActivity(addTestIntent);
 		}});
         
-
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         

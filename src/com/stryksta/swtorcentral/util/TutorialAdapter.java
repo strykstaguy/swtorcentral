@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class TutorialAdapter extends ArrayAdapter<TutorialItem> {
 
 		private final Context context;
+		private View commonItemView;
 		private final ArrayList<TutorialItem> tutorialItems;
 
 		public TutorialAdapter(Context context, ArrayList<TutorialItem> tutorialItems) {
@@ -24,6 +25,7 @@ public class TutorialAdapter extends ArrayAdapter<TutorialItem> {
 			
 			this.context = context;
 			this.tutorialItems = tutorialItems;
+			this.commonItemView = null;
 		}
 		
 		@Override
@@ -50,7 +52,20 @@ public class TutorialAdapter extends ArrayAdapter<TutorialItem> {
 				.fit()
 				.into(imgViewThumb);
 			}
-
+			
+			this.commonItemView = rowView;
+			
 		    return rowView;
+		}
+		
+		public int getCellHeight(int row, int column) {
+			
+			View view = this.commonItemView;
+			
+			if (view != null) {
+				return view.getMeasuredHeight();
+			} else {
+				return 0;
+			}
 		}
 }

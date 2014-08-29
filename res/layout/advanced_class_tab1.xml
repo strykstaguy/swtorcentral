@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="10.0dip"
+   	android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="10dp"
+   	android:scrollbarStyle="outsideInset"
    	android:background="#DCDCDC" >
-
+    
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:padding="5.0dip"
    	android:background="@drawable/card_background"  >
    	
@@ -78,4 +80,4 @@
         android:gravity="center"
         android:textSize="16sp" />
 	</LinearLayout>
-</LinearLayout>
+</ScrollView>

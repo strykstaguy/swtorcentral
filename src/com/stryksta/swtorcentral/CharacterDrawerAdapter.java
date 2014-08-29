@@ -8,6 +8,7 @@ import com.stryksta.swtorcentral.util.SessionManager;
 import android.content.Context;
 import android.database.DataSetObserver;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,8 +32,7 @@ public class CharacterDrawerAdapter extends BaseExpandableListAdapter {
     }
 
     public Object getChild(int listPosition, int expandedListPosition) {
-        return this.expandableListDetail.get(this.expandableListTitle.get(listPosition))
-                .get(expandedListPosition);
+        return this.expandableListDetail.get(this.expandableListTitle.get(listPosition)).get(expandedListPosition);
     }
 
     public long getChildId(int listPosition, int expandedListPosition) {
@@ -54,8 +54,10 @@ public class CharacterDrawerAdapter extends BaseExpandableListAdapter {
         
         if (expandedListText.equals("Add Character")) {
         	expandedimgAction.setImageResource(R.drawable.ic_action_add);
+        } else if (expandedListText.equals("Logout")) {
+        	expandedimgAction.setImageResource(R.drawable.ic_action_logout);
         } else {
-        	expandedimgAction.setImageResource(R.drawable.ic_action_cancel);
+        	expandedimgAction.setImageResource(android.R.color.transparent);
         }
         
         return convertView;
@@ -87,12 +89,25 @@ public class CharacterDrawerAdapter extends BaseExpandableListAdapter {
         }
         TextView listTitleTextView = (TextView) convertView.findViewById(R.id.userCharacter);
         TextView mUserStatus = (TextView) convertView.findViewById(R.id.userStatus);
+        ImageView imgExpandCollapse = (ImageView) convertView.findViewById(R.id.imgExpandCollapse);
+        ImageView imgCharacterImage = (ImageView) convertView.findViewById(R.id.imgClassIcon);
+
+        // check if GroupView is expanded and set imageview for expand/collapse-action
+        if(isExpanded){
+            imgExpandCollapse.setImageResource(R.drawable.ic_action_indicator_up);
+        }
+        else{
+            imgExpandCollapse.setImageResource(R.drawable.ic_action_indicator_down);
+        }
         
         listTitleTextView.setTypeface(null, Typeface.BOLD);
         if (session.isLoggedIn()) {
         	mUserStatus.setText("Logged in");
         	HashMap<String, String> user = session.getUserDetails();
             String mUserCharacter = user.get(SessionManager.KEY_NAME);
+            int mCharacterImage = context.getResources().getIdentifier(user.get(SessionManager.KEY_IMAGE), "drawable", context.getPackageName());
+            
+            imgCharacterImage.setImageResource(mCharacterImage);
         	listTitleTextView.setText(mUserCharacter);
         } else {
         	listTitleTextView.setText(listTitle);

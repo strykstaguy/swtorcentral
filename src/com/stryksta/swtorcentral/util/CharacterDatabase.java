@@ -312,6 +312,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         }
 		
         characterArray.add("Add Character");
+        characterArray.add("Logout");
 
 		c.close();
 		return characterArray;
@@ -327,6 +328,29 @@ public class CharacterDatabase extends SQLiteAssetHelper {
 		
 		if (c.moveToFirst()) {
 			txtID = c.getString(c.getColumnIndex("_id"));
+        }
+		
+		//c.moveToFirst();
+		c.close();
+		return txtID;
+	}
+    
+    public String getCharacterImage(String txtName) {
+		String txtID = "ic_action_user";
+		SQLiteDatabase db = getReadableDatabase();
+		StringBuilder builder = new StringBuilder();
+		String sqlSelect = builder
+			.append("SELECT advanced_classes.advanced_class_icon ")
+		    .append("FROM character ")
+		    .append("LEFT JOIN advanced_classes ")
+		    .append("ON character.advanced_class_id = advanced_classes._id ")
+		    .append("WHERE character.name = ?")
+		.toString();
+		
+	    Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtName)});
+	    	 
+		if (c.moveToFirst()) {
+			txtID = c.getString(c.getColumnIndex("advanced_class_icon")) + "_light";
         }
 		
 		//c.moveToFirst();

@@ -64,6 +64,7 @@ public class MainActivity extends FragmentActivity  {
     
 	SessionManager session;
 	
+	private static final int ADD_PARTICIPANT = 1120;
 	//End Drawer
 	
 	/**
@@ -86,46 +87,7 @@ public class MainActivity extends FragmentActivity  {
 	    mDrawerView = (LinearLayout) this.findViewById(R.id.drawer_view);
 	    mCharacterListView = (ExpandableListView) findViewById(R.id.expandableListView);
 	    
-	    //get characters
-	    db = new CharacterDatabase(MainActivity.this);
-	    mCharacterArray = db.CharacterSelectionList();
-		db.close();
-		
-		//if user is logged in set the user information or set to none
-		if (session.isLoggedIn()) {
-			HashMap<String, String> user = session.getUserDetails();
-			mUserCharacter = user.get(SessionManager.KEY_NAME);
-		} else {
-			mUserCharacter = "None";
-		}
-		
-		mCharacterDetails = new HashMap<String, List<String>>();
-		mCharacterDetails.put(mUserCharacter, mCharacterArray);
-        
-        mCharacterTitles = new ArrayList<String>(mCharacterDetails.keySet());
-        mCharacterAdapter = new CharacterDrawerAdapter(this, mCharacterTitles, mCharacterDetails);
-        mCharacterListView.setAdapter(mCharacterAdapter);
-        
-        mCharacterListView.setOnChildClickListener(new OnChildClickListener() {
-            public boolean onChildClick(ExpandableListView parent, View v,
-            		int groupPosition, int childPosition, long id) {
-                		String characterSelectionText = mCharacterDetails.get(mCharacterTitles.get(groupPosition)).get(childPosition);
-                		if (characterSelectionText.equals("Add Character")) {
-                			Toast.makeText(getApplicationContext(), "Add Character!", Toast.LENGTH_SHORT).show();
-                		} else if (characterSelectionText.equals(mUserCharacter)) {
-                			Toast.makeText(getApplicationContext(), "You are already logged in to this character", Toast.LENGTH_SHORT).show();
-                		} else {
-                			//Log selected user in
-                			int characterID = Integer.parseInt(db.getCharacterID(characterSelectionText));
-                	    	session.createLoginSession(characterSelectionText, characterID);
-                			Toast.makeText(getApplicationContext(), characterSelectionText + " logged in.", Toast.LENGTH_SHORT).show();
-                			mCharacterAdapter.notifyDataSetChanged();
-                		}
-                		
-                return false;
-            }
-        });
-	    //updateCharacters();
+	    CharacterSelection();
 	    
 	 	// set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
@@ -185,6 +147,62 @@ public class MainActivity extends FragmentActivity  {
 
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
+	}
+	
+	@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == ADD_PARTICIPANT && resultCode == Activity.RESULT_OK) {
+        	CharacterSelection();
+        }
+    }
+	
+	public void CharacterSelection() {
+		//get characters
+	    db = new CharacterDatabase(MainActivity.this);
+	    mCharacterArray = db.CharacterSelectionList();
+		db.close();
+		
+		//if user is logged in set the user information or set to none
+		if (session.isLoggedIn()) {
+			HashMap<String, String> user = session.getUserDetails();
+			mUserCharacter = user.get(SessionManager.KEY_NAME);
+		} else {
+			mUserCharacter = "None";
+		}
+		
+		mCharacterDetails = new HashMap<String, List<String>>();
+		mCharacterDetails.put(mUserCharacter, mCharacterArray);
+        
+        mCharacterTitles = new ArrayList<String>(mCharacterDetails.keySet());
+        mCharacterAdapter = new CharacterDrawerAdapter(this, mCharacterTitles, mCharacterDetails);
+        mCharacterListView.setAdapter(mCharacterAdapter);
+        
+        mCharacterListView.setOnChildClickListener(new OnChildClickListener() {
+            public boolean onChildClick(ExpandableListView parent, View v,
+            		int groupPosition, int childPosition, long id) {
+                		String characterSelectionText = mCharacterDetails.get(mCharacterTitles.get(groupPosition)).get(childPosition);
+                		if (characterSelectionText.equals("Add Character")) {
+
+                	        Intent characterAddIntent = new Intent(MainActivity.this, CharacterAddActivity.class);
+                	    	startActivityForResult(characterAddIntent, ADD_PARTICIPANT);
+                		} else if (characterSelectionText.equals("Logout")) {
+                			session.logoutUser();
+                		} else if (characterSelectionText.equals(mUserCharacter)) {
+                			Toast.makeText(getApplicationContext(), "You are already logged in to this character", Toast.LENGTH_SHORT).show();
+                		} else {
+                			//Log selected user in
+                			int characterID = Integer.parseInt(db.getCharacterID(characterSelectionText));
+                			String characterImage = db.getCharacterImage(characterSelectionText);
+                	    	session.createLoginSession(characterSelectionText, characterID, characterImage);
+                			Toast.makeText(getApplicationContext(), characterSelectionText + " logged in.", Toast.LENGTH_SHORT).show();
+                			mCharacterAdapter.notifyDataSetChanged();
+                		}
+                		
+                return false;
+            }
+        });
 	}
 	
 	@Override

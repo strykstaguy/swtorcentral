@@ -32,8 +32,7 @@
        	 	android:layout_height="match_parent"
         	android:layout_width="match_parent"
         	android:background="@color/characterlogin"
-        	android:indicatorLeft="250dp"
-        	android:indicatorRight="300dp"
+        	android:groupIndicator="@null"
         	android:divider="#A4C739"
         	android:dividerHeight="0.5dp" />
   		</LinearLayout>
