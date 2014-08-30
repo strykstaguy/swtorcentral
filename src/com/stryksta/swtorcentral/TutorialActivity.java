@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.TutorialItem;
+import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.ListViewUtil;
 import com.stryksta.swtorcentral.util.TutorialAdapter;
 import com.stryksta.swtorcentral.util.TutorialDatabase;
@@ -43,14 +44,14 @@ public class TutorialActivity extends FragmentActivity {
 		db.close();
 		
 
-		GridView tutorialList = (GridView) findViewById(R.id.tutorial_list);
+		AutoMeasureGridView tutorialList = (AutoMeasureGridView) findViewById(R.id.tutorial_list);
         tutorialAdapter = new TutorialAdapter(TutorialActivity.this, datacrons);
         tutorialList.setAdapter(tutorialAdapter);
 		
         tutorialList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-				Toast.makeText(getApplicationContext(), tutorialAdapter.getCellHeight(position, parent), Toast.LENGTH_SHORT).show();
+				//Toast.makeText(getApplicationContext(), tutorialAdapter.getCellHeight(position, parent), Toast.LENGTH_SHORT).show();
 					Bundle bundle = new Bundle();
 					bundle.putString("videourl", tutorialAdapter.getItem(position).getVideoURL());
 					bundle.putString("title", tutorialAdapter.getItem(position).getTitle());
