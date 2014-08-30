@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import com.stryksta.swtorcentral.data.AchievementsItem;
@@ -38,7 +39,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	String rewards = c.getString(c.getColumnIndex("rewards"));
             	int count = c.getInt(c.getColumnIndex("count"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0));
+            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0, ""));
             } while (c.moveToNext());
         }
 		c.close();
@@ -65,7 +66,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	String rewards = c.getString(c.getColumnIndex("rewards"));
             	int count = c.getInt(c.getColumnIndex("count"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0));
+            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0, ""));
             } while (c.moveToNext());
         }
 		c.close();
@@ -91,7 +92,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	String rewards = c.getString(c.getColumnIndex("rewards"));
             	int count = c.getInt(c.getColumnIndex("count"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0));
+            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0, ""));
             } while (c.moveToNext());
         }
 		c.close();
@@ -101,11 +102,9 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 	public ArrayList<AchievementsItem> getAchievements(String txtcategory1, String txtcategory2, String txtcategory3) {
 		ArrayList<AchievementsItem> achievementItem = new ArrayList<AchievementsItem>();
 		SQLiteDatabase db = getReadableDatabase();
-
-		//String sqlSelect = "SELECT * FROM achievements WHERE category1 = ? AND category2 = ? AND category3 = ? ORDER BY _id asc";
 		StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
-			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden, ")
+			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden,character.name, ")
 		    .append("CASE WHEN (a.character_id is not null) ")
 		    .append("THEN \'1\' ")
 		    .append("ELSE \'0\' ")
@@ -113,6 +112,8 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		    .append("FROM achievements ")
 		    .append("LEFT JOIN character_achievements a ")
 		    .append("ON achievements._id = a.achievements_id ")
+		    .append("LEFT JOIN character")
+		    .append("ON a.character_id = character._id ")
 		    .append("WHERE category1 = ? AND category2 = ? and category3 = ?")
 		.toString();
 		
@@ -129,8 +130,11 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	int points = c.getInt(c.getColumnIndex("points"));
             	String rewards = c.getString(c.getColumnIndex("rewards"));
             	int completed = c.getInt(c.getColumnIndex("completed"));
+            	String player = c.getString(c.getColumnIndex("name"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, 0, completed));
+            	Log.d("SWTORCentral", player);
+            	
+            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, 0, completed, player));
             } while (c.moveToNext());
         }
 		c.close();

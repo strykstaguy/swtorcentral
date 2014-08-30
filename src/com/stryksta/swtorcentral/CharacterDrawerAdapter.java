@@ -79,9 +79,7 @@ public class CharacterDrawerAdapter extends BaseExpandableListAdapter {
         return listPosition;
     }
 
-    public View getGroupView(int listPosition, boolean isExpanded,
-                             View convertView, ViewGroup parent) {
-        String listTitle = (String) getGroup(listPosition);
+    public View getGroupView(int listPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -110,7 +108,8 @@ public class CharacterDrawerAdapter extends BaseExpandableListAdapter {
             imgCharacterImage.setImageResource(mCharacterImage);
         	listTitleTextView.setText(mUserCharacter);
         } else {
-        	listTitleTextView.setText(listTitle);
+        	imgCharacterImage.setImageResource(R.drawable.ic_action_user);
+        	listTitleTextView.setText("None");
         	mUserStatus.setText("Logged out");
         }
         

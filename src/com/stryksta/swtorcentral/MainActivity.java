@@ -189,6 +189,8 @@ public class MainActivity extends FragmentActivity  {
                 	    	startActivityForResult(characterAddIntent, ADD_PARTICIPANT);
                 		} else if (characterSelectionText.equals("Logout")) {
                 			session.logoutUser();
+                			Toast.makeText(getApplicationContext(), "Logged out", Toast.LENGTH_SHORT).show();
+                			mCharacterAdapter.notifyDataSetChanged();
                 		} else if (characterSelectionText.equals(mUserCharacter)) {
                 			Toast.makeText(getApplicationContext(), "You are already logged in to this character", Toast.LENGTH_SHORT).show();
                 		} else {

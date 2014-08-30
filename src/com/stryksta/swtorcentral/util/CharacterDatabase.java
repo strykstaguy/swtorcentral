@@ -303,6 +303,8 @@ public class CharacterDatabase extends SQLiteAssetHelper {
 		String sqlSelect = "SELECT * FROM character";
         Cursor c = db.rawQuery(sqlSelect, null);
 		
+        characterArray.add("Add Character");
+        
         if (c.moveToFirst()) {
             do {
             	String characterName;
@@ -311,9 +313,8 @@ public class CharacterDatabase extends SQLiteAssetHelper {
             } while (c.moveToNext());
         }
 		
-        characterArray.add("Add Character");
         characterArray.add("Logout");
-
+        
 		c.close();
 		return characterArray;
 

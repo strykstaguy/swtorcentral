@@ -1,8 +1,6 @@
 package com.stryksta.swtorcentral;
  
-import android.app.ActionBar;
 import android.app.ProgressDialog;
-import android.graphics.PixelFormat;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
@@ -13,7 +11,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.ExpandableListView;
 import android.widget.MediaController;
 import android.widget.VideoView;
  

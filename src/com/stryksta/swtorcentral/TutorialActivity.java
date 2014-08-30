@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import com.stryksta.swtorcentral.data.TutorialItem;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.ListViewUtil;
-import com.stryksta.swtorcentral.util.TutorialAdapter;
 import com.stryksta.swtorcentral.util.TutorialDatabase;
 import com.stryksta.swtorcentral.util.Utility;
 

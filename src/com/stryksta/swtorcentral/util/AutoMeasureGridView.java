@@ -1,5 +1,7 @@
 package com.stryksta.swtorcentral.util;
 
+import com.stryksta.swtorcentral.TutorialAdapter;
+
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.GridView;

@@ -43,6 +43,7 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
             holder.txtViewCount = (TextView) v.findViewById(R.id.txtCount);
             holder.txtViewReward = (TextView) v.findViewById(R.id.txtRewards);
             holder.txtViewStatus = (TextView) v.findViewById(R.id.txtStatus);
+            holder.txtViewCharacter = (TextView) v.findViewById(R.id.txtCharacter);
             
             v.setTag(holder);
         } else {
@@ -73,6 +74,14 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
             	//v.setBackgroundResource(R.drawable.card_background);
             }
             
+            //rowItem.getCharacter();
+            
+            
+            if (rowItem.getPlayer() != null) {
+            	holder.txtViewCharacter.setText(Html.fromHtml("player: <b>"+ rowItem.getPlayer() + "</b>"));
+            } else {
+            	//holder.txtViewCharacter.setVisibility(View.GONE);
+            }
             
         }
         
@@ -86,6 +95,7 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
         public TextView txtViewCount;
         public TextView txtViewReward;
         public TextView txtViewStatus;
+        public TextView txtViewCharacter;
     }
     /*
     public void setItemCheckedState(int position, boolean checked) {

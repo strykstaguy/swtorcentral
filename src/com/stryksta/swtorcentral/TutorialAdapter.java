@@ -1,12 +1,14 @@
-package com.stryksta.swtorcentral.util;
+package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
 import com.squareup.picasso.Picasso;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.data.TutorialItem;
+import com.stryksta.swtorcentral.util.GridViewItemLayout;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -85,5 +87,9 @@ public class TutorialAdapter extends ArrayAdapter<TutorialItem> {
 	            // Force measuring
 	            itemView.requestLayout();
 	            itemView.measure(widthMeasureSpec, heightMeasureSpec);
+	            
+	            Log.d("SWTORCentral", "Height: " + heightMeasureSpec + "Width: " + widthMeasureSpec);
 	    }
+		
+		
 }
