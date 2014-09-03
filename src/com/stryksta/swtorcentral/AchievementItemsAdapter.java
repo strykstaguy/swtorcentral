@@ -78,9 +78,10 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
             
             
             if (rowItem.getPlayer() != null) {
-            	holder.txtViewCharacter.setText(Html.fromHtml("player: <b>"+ rowItem.getPlayer() + "</b>"));
+            	holder.txtViewCharacter.setText(Html.fromHtml("Player: <b>"+ rowItem.getPlayer() + "</b>"));
             } else {
             	//holder.txtViewCharacter.setVisibility(View.GONE);
+            	holder.txtViewCharacter.setText("");
             }
             
         }

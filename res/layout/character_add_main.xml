@@ -35,7 +35,15 @@
             android:hint="@string/character_level_hint"
             android:inputType="number" />
         
+        
         </LinearLayout>
+        
+        <EditText
+            android:id="@+id/characterLegacy"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/character_legacy_hint" />
         
         <LinearLayout
         	android:layout_width="fill_parent"

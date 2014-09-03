@@ -43,6 +43,7 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 	
 	static EditText characterLevel;
 	static EditText characterName;
+	static EditText characterLegacy;
 	static EditText characterDescription;
 	static Spinner characterClass;
 	static Spinner characterAdvancedClass;
@@ -54,6 +55,7 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 	static Spinner characterCrewSkill3;
 	int cLevel;
 	String cName;
+	String cLegacy;
 	String cDescription;
 	int cGender;
 	int cRace;
@@ -77,6 +79,8 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
         
         characterLevel = (EditText) findViewById(R.id.characterLevel);
         characterName = (EditText) findViewById(R.id.characterName);
+        characterLegacy = (EditText) findViewById(R.id.characterLegacy);
+        
         characterDescription = (EditText) findViewById(R.id.characterDescription);
         characterClass = (Spinner) findViewById(R.id.characterClass);
         characterAdvancedClass = (Spinner) findViewById(R.id.characterAdvancedClass);
@@ -148,6 +152,7 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 	    		CharacterDatabase db = new CharacterDatabase(this);
 	    		
 	    		cName = characterName.getText().toString();
+	    		cLegacy = characterLegacy.getText().toString();
 	    		cLevel = Integer.parseInt(characterLevel.getText().toString());
 				cDescription = characterDescription.getText().toString();
 				cGender = genderItem.get(characterGender.getSelectedItem().toString());
@@ -294,7 +299,7 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 
 		protected void onPostExecute(Void result) {
 			//db.addCharacter(new CharacterItem(0, 1, 0, 0, 0, 55, cName, 0, 0, 0, 7000000, cDescription));
-			db.addCharacter(new AddCharacterItem(cAdvanced, cRace, cGender, cAlignment, 0, cLevel, cName, cCrewSkill1, cCrewSkill2, cCrewSkill3, cDescription));
+			db.addCharacter(new AddCharacterItem(cAdvanced, cRace, cGender, cAlignment, 0, cLevel, cName, cLegacy, cCrewSkill1, cCrewSkill2, cCrewSkill3, cDescription));
 			db.close();
 			Toast.makeText(CharacterAddActivity.this, "Character Added Successfully", Toast.LENGTH_LONG).show();
 			setResult(Activity.RESULT_OK);

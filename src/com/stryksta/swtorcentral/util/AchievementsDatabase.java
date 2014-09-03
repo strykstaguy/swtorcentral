@@ -104,7 +104,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		SQLiteDatabase db = getReadableDatabase();
 		StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
-			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden,character.name, ")
+			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden, character.name, ")
 		    .append("CASE WHEN (a.character_id is not null) ")
 		    .append("THEN \'1\' ")
 		    .append("ELSE \'0\' ")
@@ -112,7 +112,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		    .append("FROM achievements ")
 		    .append("LEFT JOIN character_achievements a ")
 		    .append("ON achievements._id = a.achievements_id ")
-		    .append("LEFT JOIN character")
+		    .append("LEFT JOIN character ")
 		    .append("ON a.character_id = character._id ")
 		    .append("WHERE category1 = ? AND category2 = ? and category3 = ?")
 		.toString();
@@ -132,7 +132,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	int completed = c.getInt(c.getColumnIndex("completed"));
             	String player = c.getString(c.getColumnIndex("name"));
             	
-            	Log.d("SWTORCentral", player);
+            	Log.d("SWTORCentral", sqlSelect);
             	
             	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, 0, completed, player));
             } while (c.moveToNext());

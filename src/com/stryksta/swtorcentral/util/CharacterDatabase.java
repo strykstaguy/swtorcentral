@@ -34,7 +34,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         //String sqlSelect = "SELECT * FROM character order by _id asc";
         StringBuilder builder = new StringBuilder();
         String sqlSelect = builder
-        	.append("SELECT character._id, character.name, character.level, character.description, race.name race, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
+        	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
             .append("FROM character ")
             .append("LEFT JOIN race ")
             .append("ON race._id = character.race_id ")
@@ -63,12 +63,13 @@ public class CharacterDatabase extends SQLiteAssetHelper {
                 String alignment = c.getString(c.getColumnIndex("alignment"));
                 String level = c.getString(c.getColumnIndex("level"));
                 String name = c.getString(c.getColumnIndex("name"));
+                String legacy = c.getString(c.getColumnIndex("legacy"));
                 String crew_skill_1 = c.getString(c.getColumnIndex("crew_skill_1"));
                 String crew_skill_2 = c.getString(c.getColumnIndex("crew_skill_2"));
                 String crew_skill_3 = c.getString(c.getColumnIndex("crew_skill_3"));
                 String description = c.getString(c.getColumnIndex("description"));
 
-                characterItem.add(new CharacterItem(CharacterID, advanced_class, race, gender, alignment, level, name, crew_skill_1, crew_skill_2, crew_skill_3, description));
+                characterItem.add(new CharacterItem(CharacterID, advanced_class, race, gender, alignment, level, name, legacy, crew_skill_1, crew_skill_2, crew_skill_3, description));
             } while (c.moveToNext());
         }
         
@@ -91,6 +92,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         values.put("skill_tree_build_id", character.getSkillTreeBuildId());
         values.put("level", character.getLevel());
         values.put("name", character.getName());
+        values.put("legacy", character.getLegacy());
         values.put("crew_skill_id_1", character.getCrewSkillId_1());
         values.put("crew_skill_id_2", character.getCrewSkillId_2());
         values.put("crew_skill_id_3", character.getCrewSkillId_3());
@@ -115,6 +117,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         values.put("skill_tree_build_id", character.getSkillTreeBuildId());
         values.put("level", character.getLevel());
         values.put("name", character.getName());
+        values.put("legacy", character.getLegacy());
         values.put("crew_skill_id_1", character.getCrewSkillId_1());
         values.put("crew_skill_id_2", character.getCrewSkillId_2());
         values.put("crew_skill_id_3", character.getCrewSkillId_3());
@@ -127,7 +130,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
   		SQLiteDatabase db = getReadableDatabase();
   		StringBuilder builder = new StringBuilder();
   		String sqlSelect = builder
-  	        	.append("SELECT character._id, character.name, character.level, character.description, race.name race, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
+  	        	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
   	            .append("FROM character ")
   	            .append("LEFT JOIN race ")
   	            .append("ON race._id = character.race_id ")
@@ -149,6 +152,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
   		
   		if (c.moveToFirst()) {
               do {
+            	  character.put("legacy", c.getString(c.getColumnIndex("legacy")));
             	  character.put("name", c.getString(c.getColumnIndex("name")));
             	  character.put("level", c.getString(c.getColumnIndex("level")));
             	  character.put("description", c.getString(c.getColumnIndex("description")));

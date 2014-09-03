@@ -10,6 +10,7 @@ public class AddCharacterItem {
 	private int skill_tree_build_id;
 	private int level;
 	private String name;
+	private String legacy;
 	private int crew_skill_id_1;
 	private int crew_skill_id_2;
 	private int crew_skill_id_3;
@@ -17,7 +18,7 @@ public class AddCharacterItem {
 		
 	public AddCharacterItem(){}
 
-	public AddCharacterItem(int advanced_class_id, int race_id, int gender_id, int alignment, int skill_tree_build_id, int level, String name,  int crew_skill_id_1,  int crew_skill_id_2,  int crew_skill_id_3, String description) {
+	public AddCharacterItem(int advanced_class_id, int race_id, int gender_id, int alignment, int skill_tree_build_id, int level, String name, String legacy, int crew_skill_id_1,  int crew_skill_id_2,  int crew_skill_id_3, String description) {
 		super();
 		
 		this.advanced_class_id = advanced_class_id;
@@ -27,6 +28,7 @@ public class AddCharacterItem {
 		this.skill_tree_build_id = skill_tree_build_id;
 		this.level = level;
 		this.name = name;
+		this.legacy = legacy;
 		this.crew_skill_id_1 = crew_skill_id_1;
 		this.crew_skill_id_2 = crew_skill_id_2;
 		this.crew_skill_id_3 = crew_skill_id_3;
@@ -93,7 +95,15 @@ public class AddCharacterItem {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(String legacy) {
+		this.legacy = legacy;
+	}
+	
+	public String getLegacy() {
+		return legacy;
+	}
+
+	public void setLegacy(String name) {
 		this.name = name;
 	}
 	

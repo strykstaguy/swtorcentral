@@ -9,6 +9,7 @@ public class CharacterItem {
 	private String alignment;
 	private String level;
 	private String name;
+	private String legacy;
 	private String crew_skill_1;
 	private String crew_skill_2;
 	private String crew_skill_3;
@@ -16,7 +17,7 @@ public class CharacterItem {
 		
 	public CharacterItem(){}
 
-	public CharacterItem(int id, String advanced_class, String race, String gender, String alignment, String level, String name,  String crew_skill_1,  String crew_skill_2,  String crew_skill_3, String description) {
+	public CharacterItem(int id, String advanced_class, String race, String gender, String alignment, String level, String name, String legacy, String crew_skill_1,  String crew_skill_2,  String crew_skill_3, String description) {
 		super();
 		this.id = id;
 		this.advanced_class = advanced_class;
@@ -25,6 +26,7 @@ public class CharacterItem {
 		this.alignment = alignment;
 		this.level = level;
 		this.name = name;
+		this.legacy = legacy;
 		this.crew_skill_1 = crew_skill_1;
 		this.crew_skill_2 = crew_skill_2;
 		this.crew_skill_3 = crew_skill_3;
@@ -85,6 +87,14 @@ public class CharacterItem {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getLegacy() {
+		return legacy;
+	}
+
+	public void setLegacy(String legacy) {
+		this.legacy = legacy;
 	}
 	
 	public String getCrewSkill_1() {
