@@ -132,7 +132,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             	int completed = c.getInt(c.getColumnIndex("completed"));
             	String player = c.getString(c.getColumnIndex("name"));
             	
-            	Log.d("SWTORCentral", sqlSelect);
+            	//Log.d("SWTORCentral", sqlSelect);
             	
             	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, 0, completed, player));
             } while (c.moveToNext());
@@ -141,21 +141,22 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		return achievementItem;
 	}
 	
-	public void setCompleted (int characterID, int achievementID) {
+	public void setCompleted (int characterID, int achievementID, String characterLegacy) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		
 		ContentValues values = new ContentValues();
 		values.put("character_id", characterID);
 		values.put("achievements_id", achievementID);
+		values.put("legacy", characterLegacy);
 		
 		db.insert("character_achievements", "character_id", values);
 		db.close();
 	}
 	
-	public void removeCompleted (int characterID, int achievementID) {
+	public void removeCompleted (int characterID, int achievementID, String characterLegacy) {
 		SQLiteDatabase db = this.getWritableDatabase();
-		String sqlSelect = "character_id = ? AND achievements_id = ?";
-		db.delete("character_achievements", sqlSelect , new String[]{String.valueOf(characterID), String.valueOf(achievementID)});
+		String sqlSelect = "character_id = ? AND achievements_id = ? AND legacy = ?";
+		db.delete("character_achievements", sqlSelect , new String[]{String.valueOf(characterID), String.valueOf(achievementID), String.valueOf(characterLegacy)});
 		db.close();
 	}
 }

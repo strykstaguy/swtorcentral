@@ -54,6 +54,7 @@ public class MainActivity extends FragmentActivity  {
 	private String[] menuItems;
 	private String[] menuItemsIcon;
 	private String mUserCharacter;
+	private String mUserCharacterLegacy;
 	private CharacterDatabase db;
 	
 	private ExpandableListView mCharacterListView;
@@ -168,9 +169,12 @@ public class MainActivity extends FragmentActivity  {
 		if (session.isLoggedIn()) {
 			HashMap<String, String> user = session.getUserDetails();
 			mUserCharacter = user.get(SessionManager.KEY_NAME);
+			mUserCharacterLegacy = user.get(SessionManager.KEY_LEGACY);
 		} else {
 			mUserCharacter = "None";
 		}
+		
+		Toast.makeText(getApplicationContext(), "Legacy: " + mUserCharacterLegacy, Toast.LENGTH_SHORT).show();
 		
 		mCharacterDetails = new HashMap<String, List<String>>();
 		mCharacterDetails.put(mUserCharacter, mCharacterArray);
@@ -197,7 +201,9 @@ public class MainActivity extends FragmentActivity  {
                 			//Log selected user in
                 			int characterID = Integer.parseInt(db.getCharacterID(characterSelectionText));
                 			String characterImage = db.getCharacterImage(characterSelectionText);
-                	    	session.createLoginSession(characterSelectionText, characterID, characterImage);
+                			String characterLegacy = db.getCharacterLegacy(characterSelectionText);
+                			
+                	    	session.createLoginSession(characterSelectionText, characterID, characterImage, characterLegacy);
                 			Toast.makeText(getApplicationContext(), characterSelectionText + " logged in.", Toast.LENGTH_SHORT).show();
                 			mCharacterAdapter.notifyDataSetChanged();
                 		}

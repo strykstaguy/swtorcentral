@@ -30,6 +30,7 @@ public class Category4Fragment extends Fragment {
 	String Category3;
 	String characterName;
 	String characterID;
+	String characterlegacy;
 	View vw_layout;
 	
 	@Override
@@ -63,6 +64,7 @@ public class Category4Fragment extends Fragment {
         HashMap<String, String> user = session.getUserDetails();
         characterName = user.get(SessionManager.KEY_NAME);
         characterID = user.get(SessionManager.KEY_ID);
+        characterlegacy = user.get(SessionManager.KEY_LEGACY);
         getActivity().setTitle(Category3);
         
         db = new AchievementsDatabase(getActivity());
@@ -85,9 +87,9 @@ public class Category4Fragment extends Fragment {
 				//Toast.makeText(getActivity(), "Character ID: " + characterID + " Achievement ID: " + achievementAdapter.getItem(position).getAchievementID(), Toast.LENGTH_SHORT).show();
 				int status = achievementAdapter.getItem(position).getCompleted();
 				if (status == 0) {
-					db.setCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID());
+					db.setCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID(), characterlegacy);
 				} else {
-					db.removeCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID());
+					db.removeCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID(), characterlegacy);
 				}
 				
 				updateItems();

@@ -31,7 +31,6 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         ArrayList<CharacterItem> characterItem = new ArrayList<CharacterItem>();
         
         SQLiteDatabase db = this.getReadableDatabase();
-        //String sqlSelect = "SELECT * FROM character order by _id asc";
         StringBuilder builder = new StringBuilder();
         String sqlSelect = builder
         	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
@@ -362,5 +361,21 @@ public class CharacterDatabase extends SQLiteAssetHelper {
 		c.close();
 		return txtID;
 
+	}
+    
+    public String getCharacterLegacy(String txtName) {
+		String txtLegacy = null;
+		SQLiteDatabase db = getReadableDatabase();
+		
+		 String sqlSelect = "SELECT legacy FROM character WHERE name = ?";
+	     Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtName)});
+		
+		if (c.moveToFirst()) {
+			txtLegacy = c.getString(c.getColumnIndex("legacy"));
+        }
+		
+		//c.moveToFirst();
+		c.close();
+		return txtLegacy;
 	}
 }
