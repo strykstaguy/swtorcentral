@@ -54,9 +54,9 @@ public class TutorialActivity extends FragmentActivity {
 					Bundle bundle = new Bundle();
 					bundle.putString("videourl", tutorialAdapter.getItem(position).getVideoURL());
 					bundle.putString("title", tutorialAdapter.getItem(position).getTitle());
-					Intent addTestIntent = new Intent(TutorialActivity.this, TestActivity.class);
-					addTestIntent.putExtras(bundle);
-					startActivity(addTestIntent);
+					Intent addVideoIntent = new Intent(TutorialActivity.this, VideoActivity.class);
+					addVideoIntent.putExtras(bundle);
+					startActivity(addVideoIntent);
 		}});
         
      // Debug the thread name

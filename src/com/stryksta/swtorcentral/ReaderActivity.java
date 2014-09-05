@@ -18,6 +18,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.stryksta.swtorcentral.data.RssItem;
+import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.RssReader;
 import com.stryksta.swtorcentral.util.RssDatabaseHandler;
 
@@ -27,8 +28,7 @@ public class ReaderActivity extends Fragment {
 	// A reference to the local object
 	private RssAdapter adapter;
 	private RssDatabaseHandler db;
-	GridView gridView;
-	boolean gridViewResized;
+	AutoMeasureGridView gridView;
 	View vw_layout;
 	ArrayList<RssItem> rssItems;
 	
@@ -52,7 +52,7 @@ public class ReaderActivity extends Fragment {
 		
         vw_layout = inflater.inflate(R.layout.reader_main, container, false);
 
-        gridView = (GridView) vw_layout.findViewById(R.id.reader_list);
+        
         
         //if (MainActivity.isNetworkAvailable(getActivity())) {
         	GetRSSDataTask task = new GetRSSDataTask();
@@ -63,8 +63,6 @@ public class ReaderActivity extends Fragment {
             
         //}
         
-		
-    		gridViewResized = false;
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
 		
@@ -111,6 +109,7 @@ public class ReaderActivity extends Fragment {
 					//End Add to Database
 					
 					// Get a ListView from main view
+					gridView = (AutoMeasureGridView) vw_layout.findViewById(R.id.reader_list);
 					adapter = new RssAdapter(getActivity(), android.R.layout.simple_list_item_1, rssItems);
 					gridView.setAdapter(adapter);
 					

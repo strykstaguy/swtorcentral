@@ -5,9 +5,9 @@
     android:orientation="vertical" 
     android:background="@color/background">
 	
-    <GridView
+    <com.stryksta.swtorcentral.util.AutoMeasureGridView
     	android:id="@+id/reader_list"
-    	android:numColumns="auto_fit"
+    	android:numColumns="1"
     	android:gravity="center"
     	android:columnWidth="192dp"
     	android:stretchMode="columnWidth"
@@ -21,6 +21,6 @@
     	android:paddingBottom="10dp"
     	android:horizontalSpacing="5dp"
     	android:clipToPadding="false" >
-	</GridView>
+	</com.stryksta.swtorcentral.util.AutoMeasureGridView>
 	
 </LinearLayout>

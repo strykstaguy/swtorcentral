@@ -38,13 +38,37 @@
         
         </LinearLayout>
         
-        <EditText
-            android:id="@+id/characterLegacy"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/character_legacy_hint" />
-        
+            android:orientation="horizontal"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@+id/labelLegacy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_legacy_label1"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/characterLegacy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:hint="@string/character_legacy_hint" />
+
+            <TextView
+                android:id="@+id/labelLegacy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/character_legacy_label2"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+       	
         <LinearLayout
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content"

@@ -184,6 +184,8 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         String sqlSelect = "SELECT * FROM classes order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
         
+        classItem.put("", 0);
+        
         if (c.moveToFirst()) {
             do {
             	classItem.put(c.getString(c.getColumnIndex("name")), c.getInt(c.getColumnIndex("_id")));
@@ -199,6 +201,8 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     	SQLiteDatabase db = this.getReadableDatabase();
         String sqlSelect = "SELECT * FROM advanced_classes where class_id = ? order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(classid)});
+        
+        advancedclassItem.put("", 0);
         
         if (c.moveToFirst()) {
             do {
@@ -216,6 +220,8 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         String sqlSelect = "SELECT * FROM gender order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
         
+        genderItem.put("", 0);
+        
         if (c.moveToFirst()) {
             do {
                	genderItem.put(c.getString(c.getColumnIndex("name")), c.getInt(c.getColumnIndex("_id")));
@@ -231,6 +237,8 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     	SQLiteDatabase db = this.getReadableDatabase();
         String sqlSelect = "SELECT * FROM race order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
+        
+        raceItem.put("", 0);
         
         if (c.moveToFirst()) {
             do {
@@ -248,6 +256,8 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         String sqlSelect = "SELECT * FROM alignment order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
         
+        alignmentItem.put("", 2);
+        
         if (c.moveToFirst()) {
             do {
             	alignmentItem.put(c.getString(c.getColumnIndex("name")), c.getInt(c.getColumnIndex("_id")));
@@ -263,6 +273,8 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     	SQLiteDatabase db = this.getReadableDatabase();
         String sqlSelect = "SELECT * FROM crew_skill order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
+        
+        crewSkillsItem.put("", 0);
         
         if (c.moveToFirst()) {
             do {

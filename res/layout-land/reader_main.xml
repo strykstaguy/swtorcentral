@@ -6,8 +6,8 @@
     android:background="@color/background">
 	
     <com.stryksta.swtorcentral.util.AutoMeasureGridView
-    	android:id="@+id/tutorial_list"
-    	android:numColumns="1"
+    	android:id="@+id/reader_list"
+    	android:numColumns="2"
     	android:gravity="center"
     	android:columnWidth="192dp"
     	android:stretchMode="columnWidth"

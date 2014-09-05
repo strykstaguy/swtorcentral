@@ -48,11 +48,6 @@ public class RssAdapter extends ArrayAdapter<RssItem> {
 			v = inflater.inflate(R.layout.reader_row, parent, false);
 			holder = new ViewHolder();
 			
-			//v.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
-			width = v.getMeasuredWidth();
-			height = v.getMeasuredHeight();
-			//v.setLayoutParams(new GridView.LayoutParams(GridView.AUTO_FIT, height));
-			
 			//Log.d("SWTORCentral", "Height: " + height);
 			
 			holder.textViewName = (TextView) v.findViewById(R.id.txtTitle);

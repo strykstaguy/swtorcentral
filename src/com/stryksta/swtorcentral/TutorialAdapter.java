@@ -71,25 +71,6 @@ public class TutorialAdapter extends ArrayAdapter<TutorialItem> {
 			}
 		}
 		
-		 /**
-	     * Run a pass through each item and force a measure to determine the max height for each row
-	     */
-		public void measureItems(int columnWidth) {
-	        // Obtain system inflater
-	        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-	        // Inflate temp layout object for measuring
-	        GridViewItemLayout itemView = (GridViewItemLayout)inflater.inflate(R.layout.tutorial_row, null);
-	        
-	        // Create measuring specs
-	        int widthMeasureSpec = MeasureSpec.makeMeasureSpec(columnWidth, MeasureSpec.EXACTLY);
-	        int heightMeasureSpec = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
-
-	            // Force measuring
-	            itemView.requestLayout();
-	            itemView.measure(widthMeasureSpec, heightMeasureSpec);
-	            
-	            Log.d("SWTORCentral", "Height: " + heightMeasureSpec + "Width: " + widthMeasureSpec);
-	    }
 		
 		
 }
