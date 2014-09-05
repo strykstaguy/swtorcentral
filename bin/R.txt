@@ -296,8 +296,8 @@ int id VideoView 0x7f0500a9
 int id abilitydetails_layout 0x7f05000d
 int id abilitylayout 0x7f05003e
 int id abilitylinearlayout 0x7f05003d
+int id achievementframe 0x7f050016
 int id achievementlistview 0x7f05000f
-int id achievementmain 0x7f050016
 int id action_settings 0x7f0500b1
 int id advancedclassabilitylist 0x7f050033
 int id bottom 0x7f050009

@@ -62,7 +62,7 @@ public class Category1Fragment extends Fragment {
 		    	 args.putString("category1", achievementAdapter.getItem(position).getCategory1());
 		    	 category2frag.setArguments(args);
 				
-		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementmain, category2frag, "Category2");
+		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category2frag, "Category2");
 
 			}});
         

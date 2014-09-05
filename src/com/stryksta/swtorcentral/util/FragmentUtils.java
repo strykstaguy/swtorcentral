@@ -11,7 +11,7 @@ public class FragmentUtils {
                                               int containerId, Fragment fragment, String tag) {
         FragmentManager fm = act.getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.setTransition(FragmentTransaction.TRANSIT_NONE);
         ft.add(containerId, fragment, tag);
         ft.addToBackStack(tag);
         ft.commit();
@@ -21,7 +21,7 @@ public class FragmentUtils {
                                                  int containerId, Fragment fragment) {
         FragmentManager fm = act.getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+        ft.setTransition(FragmentTransaction.TRANSIT_NONE);
         ft.remove(fragment);
         ft.commit();
     }
@@ -30,7 +30,7 @@ public class FragmentUtils {
                                                  int containerId, String tag) {
         FragmentManager fm = act.getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+        ft.setTransition(FragmentTransaction.TRANSIT_NONE);
         ft.remove(fm.findFragmentByTag(tag));
         ft.commit();
     }
@@ -39,8 +39,9 @@ public class FragmentUtils {
                                                  int containerId, Fragment newFragment, String tag) {
         FragmentManager fm = act.getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.setTransition(FragmentTransaction.TRANSIT_NONE);
         ft.add(containerId, newFragment, tag);
+        ft.addToBackStack(tag);
         ft.commit();
     }
 

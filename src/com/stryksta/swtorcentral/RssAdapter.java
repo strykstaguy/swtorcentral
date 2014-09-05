@@ -58,13 +58,6 @@ public class RssAdapter extends ArrayAdapter<RssItem> {
 			holder.textViewName = (TextView) v.findViewById(R.id.txtTitle);
 			holder.imgViewThumb = (ImageView) v.findViewById(R.id.imgThumbnail);
 			
-			v.setOnClickListener(new View.OnClickListener() {
-
-	            public void onClick(View v) {
-	            	//
-	            }
-	        });
-			
 			v.setTag(holder);
 		} else {
 			holder = (ViewHolder) v.getTag();

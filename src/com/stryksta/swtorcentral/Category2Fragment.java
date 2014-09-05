@@ -65,7 +65,7 @@ public class Category2Fragment extends Fragment {
 		    	 args.putString("category2", achievementAdapter.getItem(position).getCategory2());
 		    	 category3frag.setArguments(args);
 				
-		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementmain, category3frag, "Category3");
+		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category3frag, "Category3");
 			}});
         
      	return vw_layout;

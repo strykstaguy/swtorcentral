@@ -22,11 +22,14 @@ public class AchievementActivity extends FragmentActivity {
         
         //switchFragment(new Category1Fragment());
         
-        if (savedInstanceState != null) {
-            FragmentUtils.getFragmentByTag(AchievementActivity.this, "Category1");
-        } else {
-        	FragmentUtils.addFragmentsInActivity(AchievementActivity.this, R.id.achievementmain, new Category1Fragment(), "Category1");
+       // if (savedInstanceState == null) {
+          
+        if (!FragmentUtils.isFragmentPresent(AchievementActivity.this, "Category1")) {
+        	FragmentUtils.switchFragmentsInActivity(AchievementActivity.this, R.id.achievementframe, new Category1Fragment(), "Category1");
         }
+        //} else {
+        	//FragmentUtils.getFragmentByTag(AchievementActivity.this, "Category1");
+        //}
         
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());

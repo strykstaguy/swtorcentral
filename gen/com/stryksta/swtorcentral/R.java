@@ -508,8 +508,8 @@ containing a value of this type.
         public static final int abilitydetails_layout=0x7f05000d;
         public static final int abilitylayout=0x7f05003e;
         public static final int abilitylinearlayout=0x7f05003d;
+        public static final int achievementframe=0x7f050016;
         public static final int achievementlistview=0x7f05000f;
-        public static final int achievementmain=0x7f050016;
         public static final int action_settings=0x7f0500b1;
         public static final int advancedclassabilitylist=0x7f050033;
         public static final int bottom=0x7f050009;
