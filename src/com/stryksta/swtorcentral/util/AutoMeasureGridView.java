@@ -1,7 +1,5 @@
 package com.stryksta.swtorcentral.util;
 
-import com.stryksta.swtorcentral.TutorialAdapter;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.GridView;
@@ -50,12 +48,7 @@ public class AutoMeasureGridView extends GridView {
             
             if(getAdapter() != null) {
             	GridViewItemLayout.initItemLayout(numColumns, getAdapter().getCount());
-            } else {
-            	  //do another thing
             }
-            
-            
-            
             
             /*if(numColumns > 1) {
                 int columnWidth = getMeasuredWidth() / numColumns;

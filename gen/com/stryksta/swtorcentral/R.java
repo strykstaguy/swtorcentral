@@ -622,7 +622,7 @@ containing a value of this type.
         public static final int txtCategory1=0x7f050017;
         public static final int txtChanneled=0x7f050044;
         public static final int txtCharacter=0x7f050014;
-        public static final int txtClass=0x7f050064;
+        public static final int txtClass=0x7f050065;
         public static final int txtClass1=0x7f05006e;
         public static final int txtClass2=0x7f050071;
         public static final int txtClassAbility=0x7f05002e;
@@ -643,8 +643,8 @@ containing a value of this type.
         public static final int txtFaction=0x7f05008f;
         public static final int txtFactionSub=0x7f050090;
         public static final int txtFootnote=0x7f050048;
-        public static final int txtGender=0x7f050065;
         public static final int txtHighlight=0x7f050047;
+        public static final int txtLegacy=0x7f050064;
         public static final int txtLevel=0x7f05003f;
         public static final int txtLocation=0x7f050075;
         public static final int txtName=0x7f050021;

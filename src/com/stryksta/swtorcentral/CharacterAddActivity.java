@@ -142,12 +142,16 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 	    case R.id.character_menu_save:
 	    	if (characterLevel.getText().length() == 0) {
 	    		AlertDialog.Builder alert = new AlertDialog.Builder(CharacterAddActivity.this);
-         		alert.setTitle("Name is Required");
-         		alert.setMessage("A Character Name is Required");
+         		alert.setTitle("Level is Required");
+         		alert.setMessage("Please select a level");
          		alert.setPositiveButton("OK", null);
          		alert.show();
 	    	} else if(characterName.getText().length() == 0) {
-	    		
+	    		AlertDialog.Builder alert = new AlertDialog.Builder(CharacterAddActivity.this);
+         		alert.setTitle("Character Name is Required");
+         		alert.setMessage("Please name your character");
+         		alert.setPositiveButton("OK", null);
+         		alert.show();
 	    	} else {
 	    		CharacterDatabase db = new CharacterDatabase(this);
 	    		

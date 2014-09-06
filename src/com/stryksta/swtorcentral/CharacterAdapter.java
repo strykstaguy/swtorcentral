@@ -35,10 +35,10 @@ public class CharacterAdapter extends ArrayAdapter<CharacterItem> {
 			holder = new ViewHolder();
 
 			holder.txtViewName = (TextView) v.findViewById(R.id.txtName);
+			holder.txtViewLegacy = (TextView) v.findViewById(R.id.txtLegacy);
 			holder.txtViewDescription = (TextView) v.findViewById(R.id.txtDescription);
 			holder.txtViewLevel = (TextView) v.findViewById(R.id.txtLevel);
 			holder.txtViewClass = (TextView) v.findViewById(R.id.txtClass);
-			holder.txtViewGender = (TextView) v.findViewById(R.id.txtGender);
 			holder.txtViewRace = (TextView) v.findViewById(R.id.txtRace);
 			holder.txtViewAlignment = (TextView) v.findViewById(R.id.txtAlignment);
 			holder.txtViewCrewSkill1 = (TextView) v.findViewById(R.id.txtCrewSkill1);
@@ -54,16 +54,63 @@ public class CharacterAdapter extends ArrayAdapter<CharacterItem> {
 		CharacterItem characterItem = results.get(position);
 		
 		if (characterItem != null) {
-			holder.txtViewName.setText(characterItem.getName());
-			holder.txtViewDescription.setText(characterItem.getDescription());
+			
+			//Required
+	        holder.txtViewName.setText(characterItem.getName());
 			holder.txtViewLevel.setText("Level " + characterItem.getLevel());
-			holder.txtViewClass.setText(characterItem.getAdvancedClass());
-			holder.txtViewGender.setText("Gender: " + characterItem.getGender());
-			holder.txtViewRace.setText("Race: " + characterItem.getRace());
-			holder.txtViewAlignment.setText("Alignment: " + characterItem.getAlignment());
-			holder.txtViewCrewSkill1.setText("Crew Skill 1: " + characterItem.getCrewSkill_1());
-			holder.txtViewCrewSkill2.setText("Crew Skill 2: " + characterItem.getCrewSkill_2());
-			holder.txtViewCrewSkill3.setText("Crew Skill 3: " + characterItem.getCrewSkill_3());
+			
+			//Optional
+			if (characterItem.getDescription() == null) {
+	        	holder.txtViewDescription.setVisibility(View.GONE);
+	        } else {
+	        	holder.txtViewDescription.setText(characterItem.getDescription());
+	        }
+			
+			if (characterItem.getLegacy().equals("")) {
+				holder.txtViewLegacy.setText("No Legacy");
+	        } else {
+	        	holder.txtViewLegacy.setText("The " + characterItem.getLegacy() + " Legacy");
+	        }
+			
+			if (characterItem.getAdvancedClass() == null) {
+				holder.txtViewClass.setVisibility(View.GONE);
+	        } else {
+	        	holder.txtViewClass.setText(characterItem.getAdvancedClass());
+	        }
+			
+			if (characterItem.getGender() == null && characterItem.getRace() == null) {
+				holder.txtViewRace.setVisibility(View.GONE);
+	        } else if(characterItem.getGender() == null && characterItem.getRace() != null) {
+	        	holder.txtViewRace.setText(characterItem.getRace());
+	        } else if(characterItem.getGender() != null && characterItem.getRace() == null) {
+	        	holder.txtViewRace.setText(characterItem.getGender());
+	        } else {
+	        	holder.txtViewRace.setText(characterItem.getGender() + " " + characterItem.getRace());
+	        }
+			
+			if (characterItem.getAlignment() == null) {
+				holder.txtViewAlignment.setVisibility(View.GONE);
+	        } else {
+	        	holder.txtViewAlignment.setText("Alignment: " + characterItem.getAlignment());
+	        }
+			
+			if (characterItem.getCrewSkill_1() == null) {
+				holder.txtViewCrewSkill1.setVisibility(View.GONE);
+	        } else {
+	        	holder.txtViewCrewSkill1.setText("Crew Skill 1: " + characterItem.getCrewSkill_1());
+	        }
+			
+			if (characterItem.getCrewSkill_2() == null) {
+				holder.txtViewCrewSkill2.setVisibility(View.GONE);
+	        } else {
+	        	holder.txtViewCrewSkill2.setText("Crew Skill 2: " + characterItem.getCrewSkill_2());
+	        }
+			
+			if (characterItem.getCrewSkill_3() == null) {
+				holder.txtViewCrewSkill3.setVisibility(View.GONE);
+	        } else {
+	        	holder.txtViewCrewSkill3.setText("Crew Skill 3: " + characterItem.getCrewSkill_3());
+	        }
 		}
 		
 		return v;
@@ -71,6 +118,7 @@ public class CharacterAdapter extends ArrayAdapter<CharacterItem> {
 	
 	private static class ViewHolder {
 		public TextView txtViewName;
+		public TextView txtViewLegacy;
 		public TextView txtViewDescription;
 		public TextView txtViewLevel;
 		public TextView txtViewClass;

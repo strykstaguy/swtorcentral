@@ -410,7 +410,7 @@ int id txtBonus 0x7f050028
 int id txtCategory1 0x7f050017
 int id txtChanneled 0x7f050044
 int id txtCharacter 0x7f050014
-int id txtClass 0x7f050064
+int id txtClass 0x7f050065
 int id txtClass1 0x7f05006e
 int id txtClass2 0x7f050071
 int id txtClassAbility 0x7f05002e
@@ -431,8 +431,8 @@ int id txtEventDates 0x7f050086
 int id txtFaction 0x7f05008f
 int id txtFactionSub 0x7f050090
 int id txtFootnote 0x7f050048
-int id txtGender 0x7f050065
 int id txtHighlight 0x7f050047
+int id txtLegacy 0x7f050064
 int id txtLevel 0x7f05003f
 int id txtLocation 0x7f050075
 int id txtName 0x7f050021
