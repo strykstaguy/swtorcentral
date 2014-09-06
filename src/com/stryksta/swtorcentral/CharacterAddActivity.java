@@ -97,8 +97,6 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
         addCrewSkills();
         addClasses();
         
-        
-        
         characterLevel.setOnClickListener(new View.OnClickListener() { 
             public void onClick(View v) {
             	setCharacterLevel(CharacterAddActivity.this);
@@ -165,7 +163,7 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 				cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
 				cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
 				cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
-				//cClass = classItem.get(characterClass.getSelectedItem().toString());
+				cClass = classItem.get(characterClass.getSelectedItem().toString());
 				cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
 	    		
 	    		db.close();
@@ -222,6 +220,8 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterRace.setAdapter(dataAdapter);
+		
+		characterRace.setSelection(dataAdapter.getPosition("Human"));
 	}
 	
 	public void addAlignment() {
@@ -302,8 +302,7 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 		}
 
 		protected void onPostExecute(Void result) {
-			//db.addCharacter(new CharacterItem(0, 1, 0, 0, 0, 55, cName, 0, 0, 0, 7000000, cDescription));
-			db.addCharacter(new AddCharacterItem(cAdvanced, cRace, cGender, cAlignment, 0, cLevel, cName, cLegacy, cCrewSkill1, cCrewSkill2, cCrewSkill3, cDescription));
+			db.addCharacter(new AddCharacterItem(cClass, cAdvanced, cRace, cGender, cAlignment, 0, cLevel, cName, cLegacy, cCrewSkill1, cCrewSkill2, cCrewSkill3, cDescription));
 			db.close();
 			Toast.makeText(CharacterAddActivity.this, "Character Added Successfully", Toast.LENGTH_LONG).show();
 			setResult(Activity.RESULT_OK);

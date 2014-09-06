@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import com.stryksta.swtorcentral.data.AchievementsItem;
@@ -99,9 +101,10 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		return achievementItem;
 	}
 	
-	public ArrayList<AchievementsItem> getAchievements(String txtcategory1, String txtcategory2, String txtcategory3) {
+	public ArrayList<AchievementsItem> getAchievements(String txtcategory1, String txtcategory2, String txtcategory3, String userID) {
 		ArrayList<AchievementsItem> achievementItem = new ArrayList<AchievementsItem>();
 		SQLiteDatabase db = getReadableDatabase();
+		
 		StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
 			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden, character.name, ")
@@ -112,12 +115,13 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		    .append("FROM achievements ")
 		    .append("LEFT JOIN character_achievements a ")
 		    .append("ON achievements._id = a.achievements_id ")
+		    .append("AND (a.character_id = ?) ")
 		    .append("LEFT JOIN character ")
 		    .append("ON a.character_id = character._id ")
 		    .append("WHERE category1 = ? AND category2 = ? and category3 = ?")
 		.toString();
 		
-		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtcategory1), String.valueOf(txtcategory2), String.valueOf(txtcategory3)});
+		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(userID), String.valueOf(txtcategory1), String.valueOf(txtcategory2), String.valueOf(txtcategory3)});
 		
 		if (c.moveToFirst()) {
             do {
@@ -149,14 +153,29 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		values.put("achievements_id", achievementID);
 		values.put("legacy", characterLegacy);
 		
-		db.insert("character_achievements", "character_id", values);
+		try {
+			db.insert("character_achievements", "character_id", values);
+			//Toast.makeText(getApplicationContext(), "Character ID: " + characterID + " Achievement ID: " + achievementAdapter.getItem(position).getAchievementID(), Toast.LENGTH_SHORT).show();
+			Log.d("SWTORCentral", "Added Successfully");
+		} catch (SQLException ex) {
+		      
+		}
+		
+		
 		db.close();
 	}
 	
 	public void removeCompleted (int characterID, int achievementID, String characterLegacy) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		String sqlSelect = "character_id = ? AND achievements_id = ? AND legacy = ?";
-		db.delete("character_achievements", sqlSelect , new String[]{String.valueOf(characterID), String.valueOf(achievementID), String.valueOf(characterLegacy)});
+		
+		try {
+			db.delete("character_achievements", sqlSelect , new String[]{String.valueOf(characterID), String.valueOf(achievementID), String.valueOf(characterLegacy)});
+			Log.d("SWTORCentral", "Removed Successfully");
+		} catch (SQLException ex) {
+		      
+		}
+		
 		db.close();
 	}
 }

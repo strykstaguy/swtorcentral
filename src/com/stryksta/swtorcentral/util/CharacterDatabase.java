@@ -33,10 +33,12 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         StringBuilder builder = new StringBuilder();
         String sqlSelect = builder
-        	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
+        	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, classes.name class, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
             .append("FROM character ")
             .append("LEFT JOIN race ")
             .append("ON race._id = character.race_id ")
+            .append("LEFT JOIN classes ")
+            .append("ON character.class_id = classes._id ")
             .append("LEFT JOIN advanced_classes ")
             .append("ON character.advanced_class_id = advanced_classes._id ")
             .append("LEFT JOIN gender ")
@@ -56,6 +58,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         if (c.moveToFirst()) {
             do {
                 int CharacterID = c.getInt(c.getColumnIndex("_id"));
+                String characterclass = c.getString(c.getColumnIndex("class"));
                 String advanced_class = c.getString(c.getColumnIndex("advanced_class"));
                 String race = c.getString(c.getColumnIndex("race"));
                 String gender = c.getString(c.getColumnIndex("gender"));
@@ -68,7 +71,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
                 String crew_skill_3 = c.getString(c.getColumnIndex("crew_skill_3"));
                 String description = c.getString(c.getColumnIndex("description"));
 
-                characterItem.add(new CharacterItem(CharacterID, advanced_class, race, gender, alignment, level, name, legacy, crew_skill_1, crew_skill_2, crew_skill_3, description));
+                characterItem.add(new CharacterItem(CharacterID, characterclass, advanced_class, race, gender, alignment, level, name, legacy, crew_skill_1, crew_skill_2, crew_skill_3, description));
             } while (c.moveToNext());
         }
         
@@ -84,6 +87,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     	SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         
+        values.put("class_id", character.getClassId());
         values.put("advanced_class_id", character.getAdvancedClassId());
         values.put("race_id", character.getRace());
         values.put("gender_id", character.getGender());
@@ -109,6 +113,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     	SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         
+        values.put("class_id", character.getClassId());
         values.put("advanced_class_id", character.getAdvancedClassId());
         values.put("race_id", character.getRace());
         values.put("gender_id", character.getGender());
@@ -129,10 +134,12 @@ public class CharacterDatabase extends SQLiteAssetHelper {
   		SQLiteDatabase db = getReadableDatabase();
   		StringBuilder builder = new StringBuilder();
   		String sqlSelect = builder
-  	        	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
+  	        	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, classes.name class, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
   	            .append("FROM character ")
   	            .append("LEFT JOIN race ")
   	            .append("ON race._id = character.race_id ")
+  	            .append("LEFT JOIN classes ")
+  	            .append("ON character.class_id = classes._id ")
   	            .append("LEFT JOIN advanced_classes ")
   	            .append("ON character.advanced_class_id = advanced_classes._id ")
   	            .append("LEFT JOIN gender ")
@@ -151,6 +158,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
   		
   		if (c.moveToFirst()) {
               do {
+            	  character.put("class", c.getString(c.getColumnIndex("class")));
             	  character.put("legacy", c.getString(c.getColumnIndex("legacy")));
             	  character.put("name", c.getString(c.getColumnIndex("name")));
             	  character.put("level", c.getString(c.getColumnIndex("level")));
@@ -237,8 +245,6 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     	SQLiteDatabase db = this.getReadableDatabase();
         String sqlSelect = "SELECT * FROM race order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
-        
-        raceItem.put("", 0);
         
         if (c.moveToFirst()) {
             do {

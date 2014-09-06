@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral.data;
 public class AddCharacterItem {
 
 	private int id;
+	private int class_id;
 	private int advanced_class_id;
 	private int race_id;
 	private int gender_id;
@@ -18,9 +19,10 @@ public class AddCharacterItem {
 		
 	public AddCharacterItem(){}
 
-	public AddCharacterItem(int advanced_class_id, int race_id, int gender_id, int alignment, int skill_tree_build_id, int level, String name, String legacy, int crew_skill_id_1,  int crew_skill_id_2,  int crew_skill_id_3, String description) {
+	public AddCharacterItem(int class_id, int advanced_class_id, int race_id, int gender_id, int alignment, int skill_tree_build_id, int level, String name, String legacy, int crew_skill_id_1,  int crew_skill_id_2,  int crew_skill_id_3, String description) {
 		super();
 		
+		this.class_id = class_id;
 		this.advanced_class_id = advanced_class_id;
 		this.race_id = race_id;
 		this.gender_id = gender_id;
@@ -41,6 +43,14 @@ public class AddCharacterItem {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public int getClassId() {
+		return class_id;
+	}
+
+	public void setClassId(int class_id) {
+		this.class_id = class_id;
 	}
 	
 	public int getAdvancedClassId() {

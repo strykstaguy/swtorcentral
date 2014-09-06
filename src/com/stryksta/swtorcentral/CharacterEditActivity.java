@@ -128,7 +128,8 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
         hCrew_skill_1 = characterHash.get("crew_skill_1");
         hCrew_skill_2 = characterHash.get("crew_skill_2");
         hCrew_skill_3 = characterHash.get("crew_skill_3");
-        hClass = db.getClass(hAdvanced_class);
+        //hClass = db.getClass(hAdvanced_class);
+        hClass = characterHash.get("class");
         
         characterName.setText(hName);
         characterLegacy.setText(hLegacy);
@@ -207,6 +208,7 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 				cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
 				cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
 				cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
+				cClass = classItem.get(characterAdvancedClass.getSelectedItem().toString());
 				cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
 	    		
 	    		db.close();
@@ -357,7 +359,7 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 		}
 
 		protected void onPostExecute(Void result) {
-			db.editCharacter(new AddCharacterItem(cAdvanced, cRace, cGender, cAlignment, 0, cLevel, cName, cLegacy, cCrewSkill1, cCrewSkill2, cCrewSkill3, cDescription), cCharacterID);
+			db.editCharacter(new AddCharacterItem(cClass, cAdvanced, cRace, cGender, cAlignment, 0, cLevel, cName, cLegacy, cCrewSkill1, cCrewSkill2, cCrewSkill3, cDescription), cCharacterID);
 			db.close();
 			Toast.makeText(CharacterEditActivity.this, "Character Edited Successfully", Toast.LENGTH_LONG).show();
 			setResult(Activity.RESULT_OK);
