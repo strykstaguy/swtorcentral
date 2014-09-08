@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -57,7 +58,7 @@ public class Category3Fragment extends Fragment {
         db = new AchievementsDatabase(getActivity());
         achievements = db.getCategory3(Category1, Category2);
         
-        ListView achievementListView = (ListView) vw_layout.findViewById(R.id.achievementlistview);
+        GridView achievementListView = (GridView) vw_layout.findViewById(R.id.achievementlistview);
 		
         achievementAdapter = new AchievementAdapter(getActivity(), achievements, "category3");
         achievementListView.setAdapter(achievementAdapter);

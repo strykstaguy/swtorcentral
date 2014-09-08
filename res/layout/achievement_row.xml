@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:components="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="5dp"
-   	android:background="@drawable/card_background" >
+    android:background="@drawable/card_background"
+    android:orientation="vertical"
+    android:padding="5dp" >
 
     <TextView
         android:id="@+id/txtCategory1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-		android:paddingLeft="5dp"
+        android:layout_gravity="center"
+        android:paddingLeft="5dp"
         android:textColor="@color/text"
-        android:layout_gravity="left"
         android:textSize="16sp" />
 
-     <com.stryksta.swtorcentral.util.TextProgressBar
-    	android:id="@+id/progressBarWithText"
-    	style="@style/CustomProgressBar"
-    	android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:layout_marginTop="5dp"
-    	android:max="100"
-    	android:maxHeight="15dp"
-    	android:minHeight="15dp"
-    	android:progress="70"
-    	components:textSize="14dp" 
-    	components:textColor="@android:color/white" 
-    	components:text="0/12265" />
+    <com.stryksta.swtorcentral.util.TextProgressBar
+        android:id="@+id/progressBarWithText"
+        style="@style/CustomProgressBarCircle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:max="100"
+        android:maxHeight="15dp"
+        android:minHeight="15dp"
+        android:progress="70"
+        components:text="0/12265"
+        components:textColor="@color/text"
+        components:textSize="14sp" />
 
 </LinearLayout>

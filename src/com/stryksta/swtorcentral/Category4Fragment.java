@@ -15,12 +15,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemLongClickListener;
 
 public class Category4Fragment extends Fragment {
 	private AchievementsDatabase db;
-	ListView achievementListView;
+	GridView achievementListView;
 	ArrayList<AchievementsItem> achievements = new ArrayList<AchievementsItem>();
 	AchievementItemsAdapter achievementAdapter;
 	SessionManager session;
@@ -69,9 +70,9 @@ public class Category4Fragment extends Fragment {
         getActivity().setTitle(Category3);
         
         db = new AchievementsDatabase(getActivity());
-        achievements = db.getAchievements(Category1, Category2, Category3, characterID);
+        achievements = db.getAchievements(Category1, Category2, Category3, characterlegacy);
         
-        achievementListView = (ListView) vw_layout.findViewById(R.id.achievementlistview);
+        achievementListView = (GridView) vw_layout.findViewById(R.id.achievementlistview);
 		
         achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
         achievementListView.setAdapter(achievementAdapter);
@@ -113,7 +114,7 @@ public class Category4Fragment extends Fragment {
 	    
 	    achievementAdapter.setNotifyOnChange(false); 
 	    achievements.clear();
-        achievements = db.getAchievements(Category1, Category2, Category3, characterID);
+        achievements = db.getAchievements(Category1, Category2, Category3, characterlegacy);
 	    achievementAdapter.clear();
         achievementAdapter.addAll(achievements);
         

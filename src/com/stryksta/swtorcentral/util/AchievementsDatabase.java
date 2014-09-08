@@ -45,6 +45,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             } while (c.moveToNext());
         }
 		c.close();
+		db.close();
 		return achievementItem;
 
 	}
@@ -72,6 +73,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             } while (c.moveToNext());
         }
 		c.close();
+		db.close();
 		return achievementItem;
 	}
 	
@@ -98,16 +100,17 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             } while (c.moveToNext());
         }
 		c.close();
+		db.close();
 		return achievementItem;
 	}
 	
-	public ArrayList<AchievementsItem> getAchievements(String txtcategory1, String txtcategory2, String txtcategory3, String userID) {
+	public ArrayList<AchievementsItem> getAchievements(String txtcategory1, String txtcategory2, String txtcategory3, String userLegacy) {
 		ArrayList<AchievementsItem> achievementItem = new ArrayList<AchievementsItem>();
 		SQLiteDatabase db = getReadableDatabase();
 		
 		StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
-			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden, character.name, ")
+			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden, character.name, character.legacy, ")
 		    .append("CASE WHEN (a.character_id is not null) ")
 		    .append("THEN \'1\' ")
 		    .append("ELSE \'0\' ")
@@ -115,13 +118,13 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		    .append("FROM achievements ")
 		    .append("LEFT JOIN character_achievements a ")
 		    .append("ON achievements._id = a.achievements_id ")
-		    .append("AND (a.character_id = ?) ")
+		    .append("AND (a.legacy = ?) ")
 		    .append("LEFT JOIN character ")
-		    .append("ON a.character_id = character._id ")
+		    .append("ON a.character_id = character._id AND character.legacy = ? ")
 		    .append("WHERE category1 = ? AND category2 = ? and category3 = ?")
 		.toString();
 		
-		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(userID), String.valueOf(txtcategory1), String.valueOf(txtcategory2), String.valueOf(txtcategory3)});
+		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(userLegacy), String.valueOf(userLegacy), String.valueOf(txtcategory1), String.valueOf(txtcategory2), String.valueOf(txtcategory3)});
 		
 		if (c.moveToFirst()) {
             do {
@@ -142,6 +145,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
             } while (c.moveToNext());
         }
 		c.close();
+		db.close();
 		return achievementItem;
 	}
 	

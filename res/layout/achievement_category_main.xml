@@ -8,14 +8,20 @@
     android:orientation="vertical"
     android:background="@color/background" >
     
-    <ListView
-        android:id="@+id/achievementlistview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="@color/background"
-        android:scrollbarStyle="outsideInset"
-        android:dividerHeight="10dip"
-        android:paddingTop="10dp"
+    <GridView
+    	android:id="@+id/achievementlistview"
+    	android:numColumns="2"
+    	android:gravity="center"
+    	android:columnWidth="160dp"
+    	android:stretchMode="columnWidth"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="@color/background"
+    	android:verticalSpacing="5dp"
+    	android:horizontalSpacing="5dp" 
+    	android:paddingTop="10dp"
     	android:paddingLeft="10dp"
-    	android:paddingBottom="10dp" />
+    	android:paddingBottom="10dp"
+    	android:scrollbarStyle="outsideInset" >
+	</GridView>
 </LinearLayout>
