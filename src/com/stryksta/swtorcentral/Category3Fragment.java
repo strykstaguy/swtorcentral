@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 
 import android.app.Fragment;
@@ -58,7 +59,7 @@ public class Category3Fragment extends Fragment {
         db = new AchievementsDatabase(getActivity());
         achievements = db.getCategory3(Category1, Category2);
         
-        GridView achievementListView = (GridView) vw_layout.findViewById(R.id.achievementlistview);
+        AutoMeasureGridView achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementlistview);
 		
         achievementAdapter = new AchievementAdapter(getActivity(), achievements, "category3");
         achievementListView.setAdapter(achievementAdapter);

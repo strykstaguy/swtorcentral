@@ -4,23 +4,16 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.TutorialItem;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
-import com.stryksta.swtorcentral.util.ListViewUtil;
 import com.stryksta.swtorcentral.util.TutorialDatabase;
-import com.stryksta.swtorcentral.util.Utility;
-
 import android.app.ActionBar;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.Toast;
  
 public class TutorialActivity extends FragmentActivity {
 	private TutorialDatabase db;

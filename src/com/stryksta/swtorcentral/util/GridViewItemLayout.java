@@ -2,13 +2,13 @@ package com.stryksta.swtorcentral.util;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 
 /**
  * Custom view group that shares a common max height
  * @author Chase Colburn
  */
-public class GridViewItemLayout extends RelativeLayout {
+public class GridViewItemLayout extends LinearLayout {
 
     // Array of max cell heights for each row
     private static int[] mMaxRowHeight;

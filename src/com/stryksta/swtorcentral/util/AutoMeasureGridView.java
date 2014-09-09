@@ -58,5 +58,4 @@ public class AutoMeasureGridView extends GridView {
         super.onLayout(changed, l, t, r, b);
     }
     
-   
 }

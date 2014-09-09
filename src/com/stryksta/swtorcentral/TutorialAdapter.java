@@ -5,13 +5,9 @@ import java.util.ArrayList;
 import com.squareup.picasso.Picasso;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.data.TutorialItem;
-import com.stryksta.swtorcentral.util.GridViewItemLayout;
-
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -20,7 +16,6 @@ import android.widget.TextView;
 public class TutorialAdapter extends ArrayAdapter<TutorialItem> {
 
 		private final Context context;
-		private View commonItemView;
 		private final ArrayList<TutorialItem> tutorialItems;
 
 		public TutorialAdapter(Context context, ArrayList<TutorialItem> tutorialItems) {
@@ -28,7 +23,6 @@ public class TutorialAdapter extends ArrayAdapter<TutorialItem> {
 			
 			this.context = context;
 			this.tutorialItems = tutorialItems;
-			this.commonItemView = null;
 		}
 		
 		@Override
@@ -54,23 +48,6 @@ public class TutorialAdapter extends ArrayAdapter<TutorialItem> {
 				.fit()
 				.into(imgViewThumb);
 			}
-			
-			this.commonItemView = rowView;
-			
 		    return rowView;
 		}
-		
-		public int getCellHeight(int row, int column) {
-			
-			View view = this.commonItemView;
-			
-			if (view != null) {
-				return view.getMeasuredHeight();
-			} else {
-				return 0;
-			}
-		}
-		
-		
-		
 }

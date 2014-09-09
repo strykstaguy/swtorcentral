@@ -66,7 +66,6 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 					
 					
 					txtViewProgress.setText("0 / " + item.getCount());
-					
 				}
 				
 				/*abilityLinearLayout.setOnClickListener(new View.OnClickListener() {

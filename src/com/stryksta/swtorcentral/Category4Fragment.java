@@ -49,7 +49,7 @@ public class Category4Fragment extends Fragment {
 			return null;
 		}
 		
-        vw_layout = inflater.inflate(R.layout.achievement_category_main, container, false);
+        vw_layout = inflater.inflate(R.layout.achievement_item_main, container, false);
         
         session = new SessionManager(getActivity());
         
@@ -73,7 +73,7 @@ public class Category4Fragment extends Fragment {
         achievements = db.getAchievements(Category1, Category2, Category3, characterlegacy);
         
         achievementListView = (GridView) vw_layout.findViewById(R.id.achievementlistview);
-		
+        
         achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
         achievementListView.setAdapter(achievementAdapter);
         

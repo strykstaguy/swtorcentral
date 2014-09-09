@@ -98,31 +98,6 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
         public TextView txtViewStatus;
         public TextView txtViewCharacter;
     }
-    /*
-    public void setItemCheckedState(int position, boolean checked) {
-        PhoneListView item = data[position];
-        
-        item.setItemToggled(checked);
-            
-        //if checked and not yet in the list, put it in the list
-        if (checked)
-            if (!checkedItem.contains(item))
-            {
-                checkedItem.add("" + item.getId());
-            }
-        } else 
-        {
-            //remove from checked list
-            checkedItem.remove("" + item.getId());
-        }
-    }
-    
-    public boolean isItemChecked(int position) {
-        return data[position].isItemToggled();
-    }
-    */
-    
-    
     
     private String insertNewLine(String description) {
         /* "\\\t"  - tab*/
