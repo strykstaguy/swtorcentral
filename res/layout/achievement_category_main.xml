@@ -9,14 +9,14 @@
     android:background="@color/background" >
     
     <com.stryksta.swtorcentral.util.AutoMeasureGridView
-    	android:id="@+id/achievementlistview"
+    	android:id="@+id/achievementgridview"
     	android:numColumns="2"
     	android:gravity="center"
     	android:columnWidth="192dp"
     	android:stretchMode="columnWidth"
     	android:scrollbarStyle="outsideInset"
     	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
+    	android:layout_height="fill_parent"
     	android:background="@color/background"
     	android:verticalSpacing="5dp"
     	android:paddingTop="10dp"

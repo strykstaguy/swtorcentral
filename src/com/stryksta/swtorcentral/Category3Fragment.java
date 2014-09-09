@@ -59,7 +59,7 @@ public class Category3Fragment extends Fragment {
         db = new AchievementsDatabase(getActivity());
         achievements = db.getCategory3(Category1, Category2);
         
-        AutoMeasureGridView achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementlistview);
+        AutoMeasureGridView achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementgridview);
 		
         achievementAdapter = new AchievementAdapter(getActivity(), achievements, "category3");
         achievementListView.setAdapter(achievementAdapter);

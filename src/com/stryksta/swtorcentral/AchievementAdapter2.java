@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
+public class AchievementAdapter2 extends ArrayAdapter<AchievementsItem> {
 
 		private final Context context;
 		private final ArrayList<AchievementsItem> swtorAchievements;
@@ -22,7 +22,7 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 		int AdvancedPos2;
 		String type;
 
-		public AchievementAdapter(Context context, ArrayList<AchievementsItem> swtorAchievements, String type) {
+		public AchievementAdapter2(Context context, ArrayList<AchievementsItem> swtorAchievements, String type) {
 			super(context, R.layout.achievement_row, swtorAchievements);
 			
 			this.context = context;
@@ -63,7 +63,7 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 						
 					}
 					
-					rowView.setMinimumHeight(300);
+					
 					txtViewProgress.setText("0 / " + item.getCount());
 				}
 				

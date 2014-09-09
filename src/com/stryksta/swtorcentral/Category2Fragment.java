@@ -48,8 +48,10 @@ public class Category2Fragment extends Fragment {
         db = new AchievementsDatabase(getActivity());
         achievements = db.getCategory2(Category1);
         
-        achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementlistview);
+        achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementgridview);
         achievementAdapter = new AchievementAdapter(getActivity(), achievements, "category2");
+        achievementAdapter.notifyDataSetChanged();
+        achievementListView.invalidateViews();
         achievementListView.setAdapter(achievementAdapter);
         
         achievementListView.setOnItemClickListener(new OnItemClickListener() {

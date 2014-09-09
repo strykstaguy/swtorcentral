@@ -45,9 +45,9 @@ public class TutorialActivity extends FragmentActivity {
 			    {
 				//Toast.makeText(getApplicationContext(), tutorialAdapter.getCellHeight(position, parent), Toast.LENGTH_SHORT).show();
 					Bundle bundle = new Bundle();
-					bundle.putString("videourl", tutorialAdapter.getItem(position).getVideoURL());
+					bundle.putString("video_url", tutorialAdapter.getItem(position).getVideoURL());
 					bundle.putString("title", tutorialAdapter.getItem(position).getTitle());
-					Intent addVideoIntent = new Intent(TutorialActivity.this, VideoActivity.class);
+					Intent addVideoIntent = new Intent(TutorialActivity.this, VideoPlayerActivity.class);
 					addVideoIntent.putExtras(bundle);
 					startActivity(addVideoIntent);
 		}});

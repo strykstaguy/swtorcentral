@@ -85,6 +85,10 @@
             android:label="@string/video_main" >
         </activity>
         <activity
+            android:name="com.stryksta.swtorcentral.VideoPlayerActivity"
+            android:label="@string/video_main" >
+        </activity>
+        <activity
             android:name="com.stryksta.swtorcentral.AchievementActivity"
             android:label="@string/achievements_main" >
         </activity>
