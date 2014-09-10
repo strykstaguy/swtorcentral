@@ -231,28 +231,30 @@ containing a value of this type.
         public static final int timeline_type=0x7f010016;
     }
     public static final class color {
-        public static final int background=0x7f070008;
-        public static final int backgroundlight=0x7f070009;
-        public static final int black=0x7f070007;
-        public static final int characterlogin=0x7f070010;
+        public static final int background=0x7f070009;
+        public static final int backgroundlight=0x7f07000a;
+        public static final int black=0x7f070008;
+        public static final int characterlogin=0x7f070011;
         public static final int fullColor=0x7f070005;
-        public static final int gray_23=0x7f07000e;
-        public static final int gray_33=0x7f07000f;
-        public static final int gray_35=0x7f07000c;
-        public static final int gray_46=0x7f07000d;
-        public static final int gray_86=0x7f070011;
+        public static final int gray=0x7f070007;
+        public static final int gray_23=0x7f07000f;
+        public static final int gray_33=0x7f070010;
+        public static final int gray_35=0x7f07000d;
+        public static final int gray_46=0x7f07000e;
+        public static final int gray_86=0x7f070012;
         public static final int heavyColor=0x7f070003;
         public static final int lightColor=0x7f070001;
         public static final int regularColor=0x7f070000;
         public static final int standardColor=0x7f070002;
-        public static final int subtext=0x7f07000b;
-        public static final int swtor_blue=0x7f070012;
-        public static final int swtor_green=0x7f070013;
-        public static final int swtor_orange=0x7f070014;
-        public static final int tab_text_color=0x7f070017;
-        public static final int text=0x7f07000a;
-        public static final int title_color=0x7f070015;
-        public static final int title_detail_color=0x7f070016;
+        public static final int subtext=0x7f07000c;
+        public static final int swtor_blue=0x7f070013;
+        public static final int swtor_blue_light=0x7f070014;
+        public static final int swtor_green=0x7f070015;
+        public static final int swtor_orange=0x7f070016;
+        public static final int tab_text_color=0x7f070019;
+        public static final int text=0x7f07000b;
+        public static final int title_color=0x7f070017;
+        public static final int title_detail_color=0x7f070018;
         public static final int veryheavyColor=0x7f070004;
         public static final int white=0x7f070006;
     }

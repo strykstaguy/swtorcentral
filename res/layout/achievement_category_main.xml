@@ -10,7 +10,7 @@
     
     <com.stryksta.swtorcentral.util.AutoMeasureGridView
     	android:id="@+id/achievementgridview"
-    	android:numColumns="2"
+    	android:numColumns="1"
     	android:gravity="center"
     	android:columnWidth="192dp"
     	android:stretchMode="columnWidth"

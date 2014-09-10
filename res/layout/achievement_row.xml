@@ -4,32 +4,33 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/card_background"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:gravity="center"
     android:padding="5dp" >
 
     <TextView
         android:id="@+id/txtCategory1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingLeft="5dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.95"
         android:gravity="center"
+        android:paddingLeft="5dp"
+        android:text="Flashpoints"
         android:textColor="@color/text"
         android:textSize="16sp" />
 
     <com.stryksta.swtorcentral.util.TextProgressBar
         android:id="@+id/progressBarWithText"
         style="@style/CustomProgressBarCircle"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginTop="5dp"
-        android:layout_gravity="center"
         android:max="100"
         android:maxHeight="15dp"
         android:minHeight="15dp"
         android:progress="70"
         components:text="0/12265"
         components:textColor="@color/text"
-        components:textSize="14sp" />
+        components:textSize="12sp" />
 
 </com.stryksta.swtorcentral.util.GridViewItemLayout>
