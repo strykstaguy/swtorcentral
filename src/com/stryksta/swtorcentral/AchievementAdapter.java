@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
+import com.stryksta.swtorcentral.util.GridViewItemLayout;
 import com.stryksta.swtorcentral.util.TextProgressBar;
 
 import android.content.Context;
@@ -16,16 +17,16 @@ import android.widget.TextView;
 
 public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 
-		private final Context context;
+		private final Context mContext;
 		private final ArrayList<AchievementsItem> swtorAchievements;
 		int AdvancedPos1;
 		int AdvancedPos2;
 		String type;
 
-		public AchievementAdapter(Context context, ArrayList<AchievementsItem> swtorAchievements, String type) {
-			super(context, R.layout.achievement_row, swtorAchievements);
+		public AchievementAdapter(Context mContext, ArrayList<AchievementsItem> swtorAchievements, String type) {
+			super(mContext, R.layout.achievement_row, swtorAchievements);
 			
-			this.context = context;
+			this.mContext = mContext;
 			this.swtorAchievements = swtorAchievements;
 			this.type = type;
 		}
@@ -33,7 +34,7 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 		@Override
 		public View getView(int position, View convertView, final ViewGroup parent) {
 		    
-			LayoutInflater inflater = (LayoutInflater) context
+			LayoutInflater inflater = (LayoutInflater) mContext
 		        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 			View rowView = null;
@@ -48,6 +49,8 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 				rowView = inflater.inflate(R.layout.achievement_row, parent, false);
 				
 				TextView txtViewCategory1 = (TextView) rowView.findViewById(R.id.txtCategory1);
+				TextView txtViewSubCategory = (TextView) rowView.findViewById(R.id.txtSubCategory);
+				
 				TextProgressBar txtViewProgress = (TextProgressBar) rowView.findViewById(R.id.progressBarWithText);
 				
 				if (item != null) {
@@ -63,11 +66,30 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 						
 					}
 					
-					rowView.setMinimumHeight(300);
-					txtViewProgress.setText("0 / " + item.getCount());
+					//rowView.setMinimumHeight(300);
+					txtViewProgress.setText("70%");
+					txtViewSubCategory.setText("0 / " + item.getCount());
 				}
 				
 			}
 		    return rowView;
 		}
+		
+		/**
+	     * Run a pass through each item and force a measure to determine the max height for each row
+	     */
+	    public void measureItems(int columnWidth) {
+	        // Obtain system inflater
+	        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	        // Inflate temp layout object for measuring
+	        GridViewItemLayout itemView = (GridViewItemLayout)inflater.inflate(R.layout.achievement_row, null);
+
+	        // Create measuring specs
+	        int widthMeasureSpec = MeasureSpec.makeMeasureSpec(columnWidth, MeasureSpec.EXACTLY);
+	        int heightMeasureSpec = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
+	        
+	            // Force measuring
+	            itemView.requestLayout();
+	            itemView.measure(widthMeasureSpec, heightMeasureSpec);
+	    }
 }
