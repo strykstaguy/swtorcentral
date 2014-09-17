@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.GridViewItemLayout;
+import com.stryksta.swtorcentral.util.SizeAdjustingTextView;
 import com.stryksta.swtorcentral.util.TextProgressBar;
 
 import android.content.Context;
@@ -48,7 +49,7 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 			} else {
 				rowView = inflater.inflate(R.layout.achievement_row, parent, false);
 				
-				TextView txtViewCategory1 = (TextView) rowView.findViewById(R.id.txtCategory1);
+				SizeAdjustingTextView txtViewCategory1 = (SizeAdjustingTextView) rowView.findViewById(R.id.txtCategory1);
 				TextView txtViewSubCategory = (TextView) rowView.findViewById(R.id.txtSubCategory);
 				
 				TextProgressBar txtViewProgress = (TextProgressBar) rowView.findViewById(R.id.progressBarWithText);
