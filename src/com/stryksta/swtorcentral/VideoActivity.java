@@ -17,6 +17,8 @@ import android.widget.VideoView;
 public class VideoActivity extends FragmentActivity {
 	ProgressDialog pDialog;
 	VideoView videoView;
+
+	private int position = 0;
     String videoTitle = "New Play Tutorial";
 	String VideoURL = "http://cdn-www.swtor.com/sites/all/files/en/vc/tutorials/01_movement.mp4";
 	
@@ -38,13 +40,14 @@ public class VideoActivity extends FragmentActivity {
         Bundle bundle = getIntent().getExtras();
 		
         if ( bundle != null ) {
-        	VideoURL = bundle.getString("videourl");
+        	VideoURL = bundle.getString("video_url");
         	videoTitle = bundle.getString("title");
         }
         
         videoView = (VideoView) findViewById(R.id.VideoView);
         
         new StreamVideo().execute();
+        
         
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
@@ -90,6 +93,9 @@ public class VideoActivity extends FragmentActivity {
  					// Close the progress bar and play the video
  					public void onPrepared(MediaPlayer mp) {
  						pDialog.dismiss();
+ 						videoView.requestFocus();
+ 						
+ 						videoView.seekTo(position);
  						videoView.start();
  					}
  				});
@@ -109,6 +115,22 @@ public class VideoActivity extends FragmentActivity {
 
  	}
  	
+ 	@Override
+	public void onSaveInstanceState(Bundle savedInstanceState) {
+		super.onSaveInstanceState(savedInstanceState);
+		//we use onSaveInstanceState in order to store the video playback position for orientation change
+		savedInstanceState.putInt("Position", videoView.getCurrentPosition());
+		videoView.pause();
+	}
+
+	@Override
+	public void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		//we use onRestoreInstanceState in order to play the video playback from the stored position 
+		position = savedInstanceState.getInt("Position");
+		videoView.seekTo(position);
+	}
+	
     @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
