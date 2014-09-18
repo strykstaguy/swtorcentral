@@ -11,6 +11,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.data.AchievementsItem;
 
 public class AchievementsDatabase extends SQLiteAssetHelper {
@@ -22,31 +23,36 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 	
-	public ArrayList<AchievementsItem> getCategory1() {
-		ArrayList<AchievementsItem> achievementItem = new ArrayList<AchievementsItem>();
+	public ArrayList<AchievementCategoryItem> getCategory1() {
+		ArrayList<AchievementCategoryItem> categoryItem = new ArrayList<AchievementCategoryItem>();
 		SQLiteDatabase db = getReadableDatabase();
-
-		String sqlSelect = "SELECT *, sum(points) AS count FROM achievements GROUP BY category1 ORDER BY _id asc";
+		
+		StringBuilder builder = new StringBuilder();
+		String sqlSelect = builder
+			.append("SELECT a.category1 as category, ")
+			.append("SUM(CASE WHEN ca.achievements_id is not null then points end) AS completed, ")
+			.append("SUM(points) total ")
+			.append("FROM achievements a ")
+		    .append("LEFT JOIN character_achievements ca ")
+		    .append("ON ca.achievements_id = a._id ")
+		    .append("GROUP BY a.category1 ")
+		    .append("ORDER BY a._id asc ")
+		.toString();
+		
 		Cursor c = db.rawQuery(sqlSelect, null);
 		
 		if (c.moveToFirst()) {
             do {
-            	int achievementID = c.getInt(c.getColumnIndex("_id"));
-            	String category1 = c.getString(c.getColumnIndex("category1"));
-            	String category2 = c.getString(c.getColumnIndex("category2"));
-            	String category3 = c.getString(c.getColumnIndex("category3"));
-            	String title = c.getString(c.getColumnIndex("title"));
-            	String description = c.getString(c.getColumnIndex("description"));
-            	int points = c.getInt(c.getColumnIndex("points"));
-            	String rewards = c.getString(c.getColumnIndex("rewards"));
-            	int count = c.getInt(c.getColumnIndex("count"));
+            	String category = c.getString(c.getColumnIndex("category"));
+            	int completed = c.getInt(c.getColumnIndex("completed"));
+            	int total = c.getInt(c.getColumnIndex("total"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0, ""));
+            	categoryItem.add(new AchievementCategoryItem(category, completed, total));
             } while (c.moveToNext());
         }
 		c.close();
 		db.close();
-		return achievementItem;
+		return categoryItem;
 
 	}
 	

@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
+import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
@@ -27,8 +28,8 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class Category1Fragment extends Fragment {
 	private AchievementsDatabase db;
-	ArrayList<AchievementsItem> achievements = new ArrayList<AchievementsItem>();
-	AchievementAdapter achievementAdapter;
+	ArrayList<AchievementCategoryItem> categories = new ArrayList<AchievementCategoryItem>();
+	AchievementCategoryAdapter achievementAdapter;
 	View vw_layout;
 	
 	@Override
@@ -51,24 +52,22 @@ public class Category1Fragment extends Fragment {
         getActivity().setTitle("Achievements");
         
         db = new AchievementsDatabase(getActivity());
-        achievements = db.getCategory1();
+        categories = db.getCategory1();
 
         AutoMeasureGridView achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementgridview);
-        achievementAdapter = new AchievementAdapter(getActivity(), achievements, "category1");
+        achievementAdapter = new AchievementCategoryAdapter(getActivity(), categories);
         achievementListView.setAdapter(achievementAdapter);
         achievementListView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 				Category2Fragment category2frag = new Category2Fragment();
 				
 				Bundle args = new Bundle();
-		    	 args.putString("category1", achievementAdapter.getItem(position).getCategory1());
+		    	 args.putString("category1", achievementAdapter.getItem(position).getCategory());
 		    	 category2frag.setArguments(args);
 				
 		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category2frag, "Category2");
 
 			}});
-        
-        
         
      	return vw_layout;
 	}
