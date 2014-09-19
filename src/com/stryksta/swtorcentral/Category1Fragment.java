@@ -2,6 +2,7 @@ package com.stryksta.swtorcentral;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.data.AchievementsItem;
@@ -9,6 +10,7 @@ import com.stryksta.swtorcentral.util.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SWTORProgressbar;
+import com.stryksta.swtorcentral.util.SessionManager;
 import com.stryksta.swtorcentral.util.TextProgressBar;
 
 import android.app.Fragment;
@@ -28,6 +30,12 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class Category1Fragment extends Fragment {
 	private AchievementsDatabase db;
+	
+	SessionManager session;
+	String characterName;
+	String characterID;
+	String characterlegacy;
+	
 	ArrayList<AchievementCategoryItem> categories = new ArrayList<AchievementCategoryItem>();
 	AchievementCategoryAdapter achievementAdapter;
 	View vw_layout;
@@ -49,10 +57,18 @@ public class Category1Fragment extends Fragment {
 		
         vw_layout = inflater.inflate(R.layout.achievement_category_main, container, false);
         
+        session = new SessionManager(getActivity());
+        
         getActivity().setTitle("Achievements");
         
+      //get user data from session
+        HashMap<String, String> user = session.getUserDetails();
+        characterName = user.get(SessionManager.KEY_NAME);
+        characterID = user.get(SessionManager.KEY_ID);
+        characterlegacy = user.get(SessionManager.KEY_LEGACY);
+        
         db = new AchievementsDatabase(getActivity());
-        categories = db.getCategory1();
+        categories = db.getCategory1(characterID, characterlegacy);
 
         AutoMeasureGridView achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementgridview);
         achievementAdapter = new AchievementCategoryAdapter(getActivity(), categories);

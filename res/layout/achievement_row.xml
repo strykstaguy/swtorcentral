@@ -14,7 +14,6 @@
         android:layout_gravity="center"
         android:paddingLeft="5dp"
         android:gravity="center"
-        android:text="Test"
         android:maxLines="2"
         android:ellipsize = "end"
         android:textColor="@color/text"
@@ -27,7 +26,6 @@
         android:layout_gravity="center"
         android:paddingLeft="5dp"
         android:gravity="center"
-        android:text="0/12556"
         android:textColor="@color/subtext"
         android:textSize="14sp" />
 	
