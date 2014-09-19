@@ -2,11 +2,14 @@ package com.stryksta.swtorcentral;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
+import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.FragmentUtils;
+import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -22,8 +25,14 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class Category3Fragment extends Fragment {
 	private AchievementsDatabase db;
-	ArrayList<AchievementsItem> achievements = new ArrayList<AchievementsItem>();
-	AchievementAdapter achievementAdapter;
+	ArrayList<AchievementCategoryItem> achievements = new ArrayList<AchievementCategoryItem>();
+	AchievementCategoryAdapter achievementAdapter;
+	
+	SessionManager session;
+	String characterName;
+	String characterID;
+	String characterlegacy;
+	
 	String Category1;
 	String Category2;
 	View vw_layout;
@@ -45,7 +54,13 @@ public class Category3Fragment extends Fragment {
 		
         vw_layout = inflater.inflate(R.layout.achievement_category_main, container, false);
         
-       
+        session = new SessionManager(getActivity());
+        
+        //get user data from session
+        HashMap<String, String> user = session.getUserDetails();
+        characterName = user.get(SessionManager.KEY_NAME);
+        characterID = user.get(SessionManager.KEY_ID);
+        characterlegacy = user.get(SessionManager.KEY_LEGACY);
         
         if ( getArguments().getString("category1") != null ) {
         	Category1 = getArguments().getString("category1");
@@ -57,20 +72,20 @@ public class Category3Fragment extends Fragment {
         getActivity().setTitle(Category2);
         
         db = new AchievementsDatabase(getActivity());
-        achievements = db.getCategory3(Category1, Category2);
+        achievements = db.getCategory3(characterID, characterlegacy, Category1, Category2);
         
         AutoMeasureGridView achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementgridview);
 		
-        achievementAdapter = new AchievementAdapter(getActivity(), achievements, "category3");
+        achievementAdapter = new AchievementCategoryAdapter(getActivity(), achievements);
         achievementListView.setAdapter(achievementAdapter);
         achievementListView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
 				Category4Fragment category4frag = new Category4Fragment();
 				
 				Bundle args = new Bundle();
-		    	 args.putString("category1", achievementAdapter.getItem(position).getCategory1());
-		    	 args.putString("category2", achievementAdapter.getItem(position).getCategory2());
-		    	 args.putString("category3", achievementAdapter.getItem(position).getCategory3());
+		    	 args.putString("category1", Category1);
+		    	 args.putString("category2", Category2);
+		    	 args.putString("category3", achievementAdapter.getItem(position).getCategory());
 		    	 category4frag.setArguments(args);
 				
 		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category4frag, "Category4");

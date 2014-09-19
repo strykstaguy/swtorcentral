@@ -88,31 +88,37 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		return categoryItem;
 	}
 	
-	public ArrayList<AchievementsItem> getCategory3(String txtcategory1, String txtcategory2) {
-		ArrayList<AchievementsItem> achievementItem = new ArrayList<AchievementsItem>();
+	public ArrayList<AchievementCategoryItem> getCategory3(String characterID, String Legacy, String Category1, String Category2) {
+		ArrayList<AchievementCategoryItem> categoryItem = new ArrayList<AchievementCategoryItem>();
 		SQLiteDatabase db = getReadableDatabase();
-
-		String sqlSelect = "SELECT *, sum(points) AS count FROM achievements WHERE category1 = ? AND category2 = ? GROUP BY category3 ORDER BY _id asc";
-		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtcategory1), String.valueOf(txtcategory2)});
+		
+		StringBuilder builder = new StringBuilder();
+		String sqlSelect = builder
+			.append("SELECT a.category3 as category, ")
+			.append("SUM(CASE WHEN ca.achievements_id is not null then points end) AS completed, ")
+			.append("SUM(points) total ")
+			.append("FROM achievements a ")
+		    .append("LEFT JOIN character_achievements ca ")
+		    .append("ON ca.achievements_id = a._id AND (ca.character_id = ? OR ca.legacy = ?) ")
+		    .append("WHERE a.category1 = ? AND a.category2 = ? ")
+		    .append("GROUP BY a.category3 ")
+		    .append("ORDER BY a._id asc ")
+		.toString();
+		
+		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(characterID), String.valueOf(Legacy), String.valueOf(Category1), String.valueOf(Category2)});
 		
 		if (c.moveToFirst()) {
             do {
-            	int achievementID = c.getInt(c.getColumnIndex("_id"));
-            	String category1 = c.getString(c.getColumnIndex("category1"));
-            	String category2 = c.getString(c.getColumnIndex("category2"));
-            	String category3 = c.getString(c.getColumnIndex("category3"));
-            	String title = c.getString(c.getColumnIndex("title"));
-            	String description = c.getString(c.getColumnIndex("description"));
-            	int points = c.getInt(c.getColumnIndex("points"));
-            	String rewards = c.getString(c.getColumnIndex("rewards"));
-            	int count = c.getInt(c.getColumnIndex("count"));
+            	String category = c.getString(c.getColumnIndex("category"));
+            	int completed = c.getInt(c.getColumnIndex("completed"));
+            	int total = c.getInt(c.getColumnIndex("total"));
             	
-            	achievementItem.add(new AchievementsItem(achievementID, category1, category2, category3, title, description, points, rewards, count, 0, ""));
+            	categoryItem.add(new AchievementCategoryItem(category, completed, total));
             } while (c.moveToNext());
         }
 		c.close();
 		db.close();
-		return achievementItem;
+		return categoryItem;
 	}
 	
 	public ArrayList<AchievementsItem> getAchievements(String txtcategory1, String txtcategory2, String txtcategory3, String userLegacy) {
