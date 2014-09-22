@@ -515,7 +515,7 @@ containing a value of this type.
         public static final int achievementframe=0x7f050017;
         public static final int achievementgridview=0x7f05000f;
         public static final int achievementlistview=0x7f050010;
-        public static final int action_settings=0x7f0500b6;
+        public static final int action_settings=0x7f0500b8;
         public static final int advancedclassabilitylist=0x7f050035;
         public static final int bottom=0x7f050009;
         public static final int center=0x7f050002;
@@ -535,6 +535,8 @@ containing a value of this type.
         public static final int character_level=0x7f050064;
         public static final int character_level_msg=0x7f050063;
         public static final int character_menu_add=0x7f0500b4;
+        public static final int character_menu_delete=0x7f0500b6;
+        public static final int character_menu_edit=0x7f0500b5;
         public static final int character_menu_save=0x7f0500b3;
         public static final int chkDatacron=0x7f05009f;
         public static final int classabilitylist=0x7f050032;
@@ -585,7 +587,7 @@ containing a value of this type.
         public static final int lstDatacron=0x7f05009e;
         public static final int main=0x7f05001c;
         public static final int menu_divider=0x7f050081;
-        public static final int menu_refresh=0x7f0500b5;
+        public static final int menu_refresh=0x7f0500b7;
         public static final int menurow_counter=0x7f050084;
         public static final int menurow_icon=0x7f050083;
         public static final int menurow_title=0x7f050080;
@@ -754,7 +756,8 @@ containing a value of this type.
         public static final int character_add_menu=0x7f0c0000;
         public static final int character_edit_menu=0x7f0c0001;
         public static final int character_menu=0x7f0c0002;
-        public static final int main=0x7f0c0003;
+        public static final int character_options_menu=0x7f0c0003;
+        public static final int main=0x7f0c0004;
     }
     public static final class string {
         public static final int abilities=0x7f0a0018;
@@ -766,24 +769,26 @@ containing a value of this type.
         public static final int app_name=0x7f0a0000;
         public static final int button=0x7f0a0039;
         public static final int character_add_main=0x7f0a0011;
-        public static final int character_description_hint=0x7f0a004c;
+        public static final int character_description_hint=0x7f0a004e;
         public static final int character_edit_main=0x7f0a0012;
-        public static final int character_label_advancedclass=0x7f0a0050;
-        public static final int character_label_alignment=0x7f0a0052;
-        public static final int character_label_class=0x7f0a004f;
-        public static final int character_label_crew1=0x7f0a0053;
-        public static final int character_label_crew2=0x7f0a0054;
-        public static final int character_label_crew3=0x7f0a0055;
-        public static final int character_label_gender=0x7f0a004e;
-        public static final int character_label_race=0x7f0a0051;
-        public static final int character_legacy_hint=0x7f0a004b;
-        public static final int character_legacy_label1=0x7f0a0049;
-        public static final int character_legacy_label2=0x7f0a004a;
-        public static final int character_level_hint=0x7f0a004d;
+        public static final int character_label_advancedclass=0x7f0a0052;
+        public static final int character_label_alignment=0x7f0a0054;
+        public static final int character_label_class=0x7f0a0051;
+        public static final int character_label_crew1=0x7f0a0055;
+        public static final int character_label_crew2=0x7f0a0056;
+        public static final int character_label_crew3=0x7f0a0057;
+        public static final int character_label_gender=0x7f0a0050;
+        public static final int character_label_race=0x7f0a0053;
+        public static final int character_legacy_hint=0x7f0a004d;
+        public static final int character_legacy_label1=0x7f0a004b;
+        public static final int character_legacy_label2=0x7f0a004c;
+        public static final int character_level_hint=0x7f0a004f;
         public static final int character_main=0x7f0a0010;
         public static final int character_menu_add=0x7f0a0046;
+        public static final int character_menu_delete=0x7f0a0049;
+        public static final int character_menu_edit=0x7f0a0048;
         public static final int character_menu_save=0x7f0a0047;
-        public static final int character_name_hint=0x7f0a0048;
+        public static final int character_name_hint=0x7f0a004a;
         public static final int characters=0x7f0a0045;
         public static final int class_header=0x7f0a0005;
         public static final int companion=0x7f0a0019;

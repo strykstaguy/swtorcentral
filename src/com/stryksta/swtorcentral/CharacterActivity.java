@@ -1,27 +1,38 @@
 package com.stryksta.swtorcentral;
  
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.stryksta.swtorcentral.data.CharacterItem;
+import com.stryksta.swtorcentral.util.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.SessionManager;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
  
 public class CharacterActivity extends FragmentActivity {
 	ArrayList<CharacterItem> characterArray = new ArrayList<CharacterItem>();
 	private static final int ADD_PARTICIPANT = 1121;
+	ListView characterList;
+	SessionManager session;
 	CharacterAdapter adapter;
+	String mUserCharacter;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +44,11 @@ public class CharacterActivity extends FragmentActivity {
         actionbar.setHomeButtonEnabled(true);
         
         //getActionBar().setTitle("Blank");
+        
+        session = new SessionManager(getApplicationContext());
+        
+        characterList = (ListView) findViewById(R.id.characterListView);
+        registerForContextMenu(characterList);
         
         updateCharacters();
         
@@ -76,6 +92,55 @@ public class CharacterActivity extends FragmentActivity {
 	    return super.onOptionsItemSelected(item);
 	}
 	
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
+          super.onCreateContextMenu(menu, v, menuInfo);
+          if (v.getId() == R.id.characterListView) {
+              MenuInflater inflater = getMenuInflater();
+              inflater.inflate(R.menu.character_options_menu, menu);
+          }
+    }
+    
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+          AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+          switch(item.getItemId()) {
+             case R.id.character_menu_edit:
+            	 
+            	Bundle bundle = new Bundle();
+ 				bundle.putInt("character_id", adapter.getItem(info.position).getId());
+ 				
+ 				Intent addCharacterIntent = new Intent(CharacterActivity.this, CharacterEditActivity.class);
+ 				addCharacterIntent.putExtras(bundle);
+ 		    	startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
+ 		    	
+                return true;
+             case R.id.character_menu_delete:
+            	 CharacterDatabase db = new CharacterDatabase(this);
+            	 int characterID = adapter.getItem(info.position).getId();
+            	 String selectedCharacter = adapter.getItem(info.position).getName();
+            	 
+            	 if (session.isLoggedIn()) {
+            		 HashMap<String, String> user = session.getUserDetails();
+            		 mUserCharacter = user.get(SessionManager.KEY_NAME);
+           		 }
+            	 
+            	 if (session.isLoggedIn() && mUserCharacter == selectedCharacter) {
+            		 Toast.makeText(CharacterActivity.this, "Please logout first, then try again.", Toast.LENGTH_SHORT).show();
+            	 } else {
+            		 if (db.removeCharacter(characterID)) {
+                		 updateCharacters();
+                		 Toast.makeText(CharacterActivity.this, "Successfully Removed", Toast.LENGTH_SHORT).show();
+                	 } else {
+                		 Toast.makeText(CharacterActivity.this, "There was an error, try again.", Toast.LENGTH_SHORT).show();
+                	 }
+            	 }
+                return true;
+              default:
+                return super.onContextItemSelected(item);
+          }
+    }
+    
 	public void onBackPressed() {
 		if (getFragmentManager().getBackStackEntryCount() == 0) {
 	        this.finish();
@@ -85,29 +150,19 @@ public class CharacterActivity extends FragmentActivity {
     }
 	
 	private void updateCharacters(){
+		
 		CharacterDatabase db = new CharacterDatabase(this);
-        characterArray = db.getCharacters();
-        
-        ListView characterList = (ListView) findViewById(R.id.characterListView);
-        adapter = new CharacterAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, characterArray);
+		adapter = new CharacterAdapter(this, android.R.layout.simple_list_item_1, android.R.id.text1, characterArray);
         characterList.setAdapter(adapter);
-        characterList.setOnItemLongClickListener(new OnItemLongClickListener() {
-
-			public boolean onItemLongClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				// TODO Auto-generated method stub
-				//
-				
-				Bundle bundle = new Bundle();
-				bundle.putInt("character_id", adapter.getItem(position).getId());
-				
-				Intent addCharacterIntent = new Intent(CharacterActivity.this, CharacterEditActivity.class);
-				addCharacterIntent.putExtras(bundle);
-		    	startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
-				//Toast.makeText(CharacterActivity.this, String.valueOf(adapter.getItem(position).getId()), Toast.LENGTH_SHORT).show();
-				return false;
-			}
-        }); 
+        
+        adapter.setNotifyOnChange(false); 
+        characterArray.clear();
+        characterArray = db.getCharacters();
+        adapter.clear();
+        adapter.addAll(characterArray);
+        
+        adapter.notifyDataSetChanged();
+        
 		db.close();
 	}
 }

@@ -208,7 +208,7 @@ public class CharacterEditActivity extends FragmentActivity implements OnItemSel
 				cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
 				cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
 				cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
-				cClass = classItem.get(characterAdvancedClass.getSelectedItem().toString());
+				cClass = classItem.get(characterClass.getSelectedItem().toString());
 				cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
 	    		
 	    		db.close();

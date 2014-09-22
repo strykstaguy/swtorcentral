@@ -79,7 +79,9 @@
     
     <string name="characters">Characters</string>
     <string name="character_menu_add">Add Character</string>
-    <string name="character_menu_save">Save Character</string>
+    <string name="character_menu_save">Save</string>
+    <string name="character_menu_edit">Edit</string>
+    <string name="character_menu_delete">Delete</string>
     
     <string name="character_name_hint">Name</string>
     <string name="character_legacy_label1">The</string>

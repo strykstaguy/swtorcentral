@@ -13,6 +13,7 @@ import com.stryksta.swtorcentral.data.CharacterItem;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
@@ -395,5 +396,20 @@ public class CharacterDatabase extends SQLiteAssetHelper {
 		//c.moveToFirst();
 		c.close();
 		return txtLegacy;
+	}
+    
+    public boolean removeCharacter (int characterID) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		String sqlSelect = "_id = ?";
+		boolean deletedChar = false;
+		try {
+			db.delete("character", sqlSelect , new String[]{String.valueOf(characterID)});
+			deletedChar = true;
+		} catch (SQLException ex) {
+			deletedChar = false;
+		}
+		
+		db.close();
+		return deletedChar;
 	}
 }

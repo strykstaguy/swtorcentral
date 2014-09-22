@@ -15,7 +15,7 @@
         android:paddingLeft="5dp"
         android:gravity="center"
         android:maxLines="2"
-        android:ellipsize = "end"
+        android:ellipsize="end"
         android:textColor="@color/text"
         android:textSize="18sp" />
     
