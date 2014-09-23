@@ -4,8 +4,8 @@
    android:layout_width="fill_parent"
    android:layout_height="fill_parent"
    android:background="@drawable/card_background"
-   android:padding="7.0dip"
-   android:orientation="horizontal">
+   android:padding="6.0dip"
+   android:orientation="vertical">
  
     <ImageView
        android:id="@+id/serverIcon"
@@ -13,22 +13,14 @@
        android:layout_height="36.0dip"
        android:layout_gravity="center"
        android:contentDescription="@string/image_placeholder"
-       android:src="@drawable/pl_korriban"
-       
        android:scaleType="fitCenter" />
-    
- <LinearLayout
-     android:layout_width="fill_parent"
-     android:layout_height="wrap_content"
-     android:orientation="vertical"
-     android:paddingLeft="10dip" >
    		
-    <TextView
+    <com.stryksta.swtorcentral.util.SizeAdjustingTextView
         android:id="@+id/serverTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="The Shadowlands"
         android:gravity="center"
+        android:maxLines="1"
         android:textAppearance="?android:textAppearanceSmall"
         android:textColor="@color/regularColor" />
 
@@ -36,10 +28,7 @@
         android:id="@+id/serverStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Light"
         android:gravity="center"
         android:textColor="@android:color/black"
         android:textSize="14sp" />
-
- 	</LinearLayout>
 </LinearLayout>

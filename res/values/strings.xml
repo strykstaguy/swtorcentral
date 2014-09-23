@@ -11,6 +11,9 @@
     <string name="menu_refresh">Refresh</string>
     <string name="menu_server">Server Status</string>
     <string name="server_main">Server Status</string>
+    <string name="server_us">United States</string>
+    <string name="server_eu">European</string>
+    <string name="server_sub">Servers</string>
     <string name="advanced_main">Advanced Class</string>
     <string name="progression_main">Progression</string>
     <string name="faction_main">Faction</string>
