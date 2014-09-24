@@ -24,7 +24,7 @@
  	    	android:layout_height="wrap_content"
  	    	android:layout_gravity="center"
  	    	android:textColor="@color/text"
- 	    	android:textSize="20dp" />
+ 	    	android:textSize="@dimen/title" />
  	
  		<TextView
         	android:id="@+id/txtPlanetSubTitle"
@@ -33,7 +33,7 @@
         	android:layout_gravity="center"
         	android:textColor="@color/subtext"
         	android:text="@string/informationsub"
-        	android:textSize="14dp"
+        	android:textSize="@dimen/subtitle"
         	android:paddingBottom="5dp" />
  			
  		<TextView
@@ -52,7 +52,7 @@
  	    	android:layout_height="wrap_content"
  	    	android:layout_gravity="center"
  	    	android:textColor="@color/text"
- 	    	android:textSize="20dp"
+ 	    	android:textSize="@dimen/title"
  	    	android:layout_marginLeft="10dp"
     		android:layout_marginTop="10dp" 
     		android:layout_marginRight="10dp" />
@@ -64,7 +64,7 @@
         	android:layout_gravity="center"
         	android:textColor="@color/subtext"
         	android:text="@string/datacronsub"
-        	android:textSize="14dp"
+        	android:textSize="@dimen/subtitle"
         	android:paddingBottom="5dp" />
  			
  		<com.stryksta.swtorcentral.util.NonScrollListView
@@ -73,5 +73,26 @@
         	android:layout_height="fill_parent"
         	android:background="@drawable/card_background"
 			android:padding="5dp" />
+ 		
+ 		<TextView
+ 	    	android:id="@+id/txtLocationsTitle"
+ 	    	android:layout_width="wrap_content"
+ 	    	android:layout_height="wrap_content"
+ 	    	android:layout_gravity="center"
+ 	    	android:textColor="@color/text"
+ 	    	android:textSize="@dimen/title"
+ 	    	android:layout_marginLeft="10dp"
+    		android:layout_marginTop="10dp" 
+    		android:layout_marginRight="10dp" />
+ 	
+ 		<TextView
+        	android:id="@+id/txtLocationsSubTitle"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="center"
+        	android:textColor="@color/subtext"
+        	android:text="@string/locationssub"
+        	android:textSize="@dimen/subtitle"
+        	android:paddingBottom="5dp" />
 	</LinearLayout>
 </com.stryksta.swtorcentral.util.NotifyingScrollView>

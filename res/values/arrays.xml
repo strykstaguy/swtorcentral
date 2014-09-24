@@ -12,6 +12,7 @@
         <item>draweritem8</item>
         <item>draweritem9</item>
         <item>draweritem10</item>
+        <item>draweritem11</item>
     </string-array>
 	
     <array name="drawerIcons">
@@ -25,6 +26,7 @@
         <item>ic_action_users</item>
         <item>ic_action_achievement</item>
         <item>ic_action_book</item>
+        <item>ic_action_gear</item>
     </array>
     
     <string-array name="syncFrequency">

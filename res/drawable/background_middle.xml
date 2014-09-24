@@ -3,12 +3,6 @@
     <item>
         <shape android:shape="rectangle"
             android:dither="true">
-            <solid android:color="#CCC" />
-        </shape>
-    </item>
-    <item android:bottom="2dp">
-        <shape android:shape="rectangle"
-            android:dither="true">
             <solid android:color="#FFF" />
             <padding android:bottom="6dp"
                 android:left="4dp"

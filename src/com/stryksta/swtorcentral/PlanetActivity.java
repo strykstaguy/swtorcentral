@@ -82,6 +82,9 @@ public class PlanetActivity extends FragmentActivity {
 		TextView txtDatacronSubTitle = (TextView) findViewById(R.id.txtDatacronSubTitle);
 		txtDatacronTitle.setText(planetText);
 		
+		TextView txtLocationsTitle = (TextView) findViewById(R.id.txtLocationsTitle);
+		txtLocationsTitle.setText(planetText);
+		
 		NonScrollListView datacronItems = (NonScrollListView) findViewById(R.id.lstDatacron);
 		
 		if (typeText.equals("Bonus Series") || typeText.equals("Flashpoint")) {
@@ -96,11 +99,6 @@ public class PlanetActivity extends FragmentActivity {
 			PlanetAdapter adapter = new PlanetAdapter(this, R.layout.planet_row, android.R.id.text1, datacrons);
 			datacronItems.setAdapter(adapter);
 		}
-		
-		
-		
-		
-		
 		
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());

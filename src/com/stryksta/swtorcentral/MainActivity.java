@@ -291,7 +291,11 @@ public class MainActivity extends FragmentActivity  {
 	        startActivity(achievementIntent);
 	        break;
 	    case 9:
-	    	Intent testIntent = new Intent(this, TutorialActivity.class);
+	    	Intent tutorialIntent = new Intent(this, TutorialActivity.class);
+	        startActivity(tutorialIntent);
+	        break;
+	    case 10:
+	    	Intent testIntent = new Intent(this, TestActivity.class);
 	        startActivity(testIntent);
 	        break;
 	    default:

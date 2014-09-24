@@ -46,6 +46,7 @@
     <string name="draweritem8">Characters</string>
     <string name="draweritem9">Achievements</string>
     <string name="draweritem10">Tutorials</string>
+    <string name="draweritem11">Test</string>
     <string name="header2">Advanced</string>
 	<string name="tab1">US Servers</string>
     <string name="tab2">European Servers</string>
@@ -74,6 +75,7 @@
     
     <string name="informationsub">Information</string>
     <string name="datacronsub">Datacrons</string>
+    <string name="locationssub">Locations</string>
     
     <string name="faction">Faction</string>
     <string name="factionsub">Please Choose</string>

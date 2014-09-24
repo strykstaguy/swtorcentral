@@ -4,8 +4,8 @@
         <shape android:shape="rectangle"
             android:dither="true">
             <corners
-        		android:topRightRadius="2dp"
-        		android:bottomRightRadius="2dp" />
+        		android:bottomRightRadius="2dp"
+        		android:bottomLeftRadius="2dp" />
             <solid android:color="#CCC" />
         </shape>
     </item>
@@ -13,8 +13,8 @@
         <shape android:shape="rectangle"
             android:dither="true">
             <corners
-        		android:topRightRadius="2dp"
-        		android:bottomRightRadius="2dp" />
+        		android:bottomRightRadius="2dp"
+        		android:bottomLeftRadius="2dp" />
             <solid android:color="#FFF" />
             <padding android:bottom="6dp"
                 android:left="4dp"

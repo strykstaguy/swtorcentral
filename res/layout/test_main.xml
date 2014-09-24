@@ -1,3 +1,19 @@
-<com.stryksta.swtorcentral.util.DashboardLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+    
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+ 	    android:id="@+id/loreListview"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="match_parent"
+ 	    android:background="@color/background"
+ 	    android:cacheColorHint="@android:color/transparent"
+ 	    android:divider="@null"
+ 	    android:dividerHeight="0dp"
+ 	    android:padding="10dp" >
 
-</com.stryksta.swtorcentral.util.DashboardLayout>
+ 	</com.stryksta.swtorcentral.util.NonScrollListView>
+</LinearLayout>
