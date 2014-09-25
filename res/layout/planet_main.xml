@@ -1,98 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.stryksta.swtorcentral.util.NotifyingScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/planetScollView"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    android:focusable="false"
-    android:focusableInTouchMode="true"
-    >
-    
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+   	
     <LinearLayout
-    	android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-    	android:background="@color/background"
+        android:id="@+id/planetBackground"
     	android:orientation="vertical"
-    	android:layout_marginLeft="10dp"
-    	android:layout_marginTop="10dp" 
-    	android:layout_marginBottom="10dp" 
-    	android:layout_marginRight="10dp"  >
-		
-    	<TextView
- 	    	android:id="@+id/txtPlanetTitle"
- 	    	android:layout_width="wrap_content"
- 	    	android:layout_height="wrap_content"
- 	    	android:layout_gravity="center"
- 	    	android:textColor="@color/text"
- 	    	android:textSize="@dimen/title" />
- 	
- 		<TextView
-        	android:id="@+id/txtPlanetSubTitle"
-        	android:layout_width="wrap_content"
+    	android:layout_width="fill_parent"
+    	android:layout_height="175.0dip" />
+    	
+    <TextView
+        android:id="@+id/txtFaction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:gravity="center"
+        android:layout_marginTop="10.0dip"
+        android:textSize="20.0dip"
+        android:text="Tython"
+        android:textColor="@color/text" />
+    
+	<android.support.v4.view.ViewPager
+    	android:id="@+id/planet_pager"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+    
+    	<android.support.v4.view.PagerTitleStrip
+        	android:id="@+id/planet_title_strip"
+        	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
-        	android:layout_gravity="center"
+        	android:layout_gravity="top"
+        	android:background="@color/background"
         	android:textColor="@color/subtext"
-        	android:text="@string/informationsub"
-        	android:textSize="@dimen/subtitle"
-        	android:paddingBottom="5dp" />
- 			
- 		<TextView
-        	android:id="@+id/txtDescription"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:background="@drawable/card_background"
-			android:padding="5dp"
-        	android:textColor="@color/text"
-        	android:gravity="left"
-        	android:textSize="16sp" />
- 			
- 		<TextView
- 	    	android:id="@+id/txtDatacronTitle"
- 	    	android:layout_width="wrap_content"
- 	    	android:layout_height="wrap_content"
- 	    	android:layout_gravity="center"
- 	    	android:textColor="@color/text"
- 	    	android:textSize="@dimen/title"
- 	    	android:layout_marginLeft="10dp"
-    		android:layout_marginTop="10dp" 
-    		android:layout_marginRight="10dp" />
- 	
- 		<TextView
-        	android:id="@+id/txtDatacronSubTitle"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:layout_gravity="center"
-        	android:textColor="@color/subtext"
-        	android:text="@string/datacronsub"
-        	android:textSize="@dimen/subtitle"
-        	android:paddingBottom="5dp" />
- 			
- 		<com.stryksta.swtorcentral.util.NonScrollListView
-       		android:id="@+id/lstDatacron"
-        	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
-        	android:background="@drawable/card_background"
-			android:padding="5dp" />
- 		
- 		<TextView
- 	    	android:id="@+id/txtLocationsTitle"
- 	    	android:layout_width="wrap_content"
- 	    	android:layout_height="wrap_content"
- 	    	android:layout_gravity="center"
- 	    	android:textColor="@color/text"
- 	    	android:textSize="@dimen/title"
- 	    	android:layout_marginLeft="10dp"
-    		android:layout_marginTop="10dp" 
-    		android:layout_marginRight="10dp" />
- 	
- 		<TextView
-        	android:id="@+id/txtLocationsSubTitle"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:layout_gravity="center"
-        	android:textColor="@color/subtext"
-        	android:text="@string/locationssub"
-        	android:textSize="@dimen/subtitle"
-        	android:paddingBottom="5dp" />
-	</LinearLayout>
-</com.stryksta.swtorcentral.util.NotifyingScrollView>
+        	android:textSize="14.0dip"
+        	android:paddingBottom="5.0dp" />
+	</android.support.v4.view.ViewPager>
+	
+</LinearLayout>

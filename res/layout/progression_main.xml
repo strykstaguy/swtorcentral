@@ -12,8 +12,7 @@
         android:gravity="center"
         android:layout_marginTop="10.0dip"
         android:textSize="20.0dip"
-        android:textColor="@color/text"
-        />
+        android:textColor="@color/text" />
     
    	 <TextView
    	 	android:id="@+id/txtNameSub"

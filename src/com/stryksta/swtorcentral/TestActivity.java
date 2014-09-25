@@ -1,25 +1,28 @@
 package com.stryksta.swtorcentral;
  
 import java.util.ArrayList;
-
-import com.stryksta.swtorcentral.data.ClassItem;
-import com.stryksta.swtorcentral.data.LoreItem;
-import com.stryksta.swtorcentral.util.ClassesDatabase;
-import com.stryksta.swtorcentral.util.LoreDatabase;
+import java.util.HashMap;
+import java.util.List;
 
 import android.app.ActionBar;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.ExpandableListView.OnGroupCollapseListener;
+import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.Toast;
  
 public class TestActivity extends FragmentActivity {
     
-	ArrayList<LoreItem> loreItemsArray = new ArrayList<LoreItem>();
-	ListView listView;
-	TestAdapter adapter;
-	private LoreDatabase db;
+	ExpandableListView expandableListView;
+    ExpandableListAdapter expandableListAdapter;
+    List<String> expandableListTitle;
+    HashMap<String, List<String>> expandableListDetail;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,19 +35,60 @@ public class TestActivity extends FragmentActivity {
         
         getActionBar().setTitle("Lore");
         
-        listView = (ListView) findViewById(R.id.loreListview);
+        expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
         
-        db = new LoreDatabase(TestActivity.this);
+        List<String> locations = new ArrayList<String>();
+        locations.add("Jedi Temple");
+        locations.add("Kalikori Village");
+        locations.add("Ruins of Kaleth");
+        locations.add("The Forge");
+        locations.add("The Chamber of Speech");
+        locations.add("The Gnarls");
+        locations.add("Tythos Ridge");
+        
+        expandableListDetail = new HashMap<String, List<String>>();
+        expandableListDetail.put("Location", locations);
+        
+        expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
+        expandableListAdapter = new ExpandableListAdapter(this, expandableListTitle, expandableListDetail);
+        expandableListView.setAdapter(expandableListAdapter);
+        expandableListView.expandGroup(0);
+        expandableListView.setOnGroupExpandListener(new OnGroupExpandListener() {
 
-        //loreItemsArray = db.getLocationLore("Tython", "Republic");
-        loreItemsArray.add(new LoreItem("Tython", "Locations Lore"));
-        loreItemsArray.addAll(db.getLocationLore("Tython", "Republic"));
+            public void onGroupExpand(int groupPosition) {
+                Toast.makeText(getApplicationContext(),
+                        expandableListTitle.get(groupPosition) + " List Expanded.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        expandableListView.setOnGroupCollapseListener(new OnGroupCollapseListener() {
+
+            public void onGroupCollapse(int groupPosition) {
+                Toast.makeText(getApplicationContext(),
+                        expandableListTitle.get(groupPosition) + " List Collapsed.",
+                        Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        expandableListView.setOnChildClickListener(new OnChildClickListener() {
+            public boolean onChildClick(ExpandableListView parent, View v,
+					int groupPosition, int childPosition, long id) {
+            	Toast.makeText(
+                        getApplicationContext(),
+                        expandableListTitle.get(groupPosition)
+                                + " -> "
+                                + expandableListDetail.get(
+                                expandableListTitle.get(groupPosition)).get(
+                                childPosition), Toast.LENGTH_SHORT
+                )
+                        .show();
+            	
+				return false;
+			}
+        });
         
-        db.close();
-        
-        adapter = new TestAdapter(TestActivity.this, loreItemsArray);
-		listView.setAdapter(adapter);
-		
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         

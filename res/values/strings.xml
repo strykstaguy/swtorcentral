@@ -75,7 +75,8 @@
     
     <string name="informationsub">Information</string>
     <string name="datacronsub">Datacrons</string>
-    <string name="locationssub">Locations</string>
+    <string name="locationslore">Locations</string>
+    <string name="lore">Lore</string>
     
     <string name="faction">Faction</string>
     <string name="factionsub">Please Choose</string>

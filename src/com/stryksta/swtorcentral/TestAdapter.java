@@ -42,18 +42,20 @@ public class TestAdapter extends ArrayAdapter<LoreItem> {
 				TextView txtTitle = (TextView) rowView.findViewById(R.id.txtTitle);
 				TextView txtSubtitle = (TextView) rowView.findViewById(R.id.txtSubtitle);
 				
+				
 				txtTitle.setText(item.getFaction());
 				txtSubtitle.setText(item.getPlanet());
 
 			} else {
 				rowView = inflater.inflate(R.layout.test_row, parent, false);
-				
+				View txtSep = (View) rowView.findViewById(R.id.txtSep);
 				LinearLayout layoutRow = (LinearLayout) rowView.findViewById(R.id.layoutRow);
 				
 				if(position == 1) {
 					setViewBackgroundWithoutResettingPadding(layoutRow, R.drawable.background_top);
 				} else if (position == getCount()-1) {
 					setViewBackgroundWithoutResettingPadding(layoutRow, R.drawable.background_bottom);
+					txtSep.setVisibility(View.GONE);
 				}
 				
 				TextView txtCodex = (TextView) rowView.findViewById(R.id.txtCodex);

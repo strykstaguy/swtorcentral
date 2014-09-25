@@ -5,12 +5,9 @@
     android:orientation="vertical"
     android:padding="6dip" >
  
-    <CheckBox
-        android:id="@+id/chkDatacron"
+    <TextView
+        android:id="@+id/txtDatacron"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:focusable="false"
-        android:focusableInTouchMode="false" />
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

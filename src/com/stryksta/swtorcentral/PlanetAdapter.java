@@ -3,12 +3,14 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.DatacronItem;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 
 public class PlanetAdapter extends ArrayAdapter<DatacronItem> {
@@ -28,9 +30,9 @@ public class PlanetAdapter extends ArrayAdapter<DatacronItem> {
 		if (v == null) {
 			LayoutInflater inflater = (LayoutInflater) getContext()
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			v = inflater.inflate(R.layout.planet_row, parent, false);
+			v = inflater.inflate(R.layout.planet_tab2_row, parent, false);
 			holder = new ViewHolder();
-			holder.chkViewDatacron = (CheckBox) v.findViewById(R.id.chkDatacron);
+			holder.txtDatacron = (TextView) v.findViewById(R.id.txtDatacron);
 			v.setTag(holder);
 
 		} else {
@@ -40,13 +42,13 @@ public class PlanetAdapter extends ArrayAdapter<DatacronItem> {
 		DatacronItem testItem = results.get(position);
 		
 		if (testItem != null) {
-			holder.chkViewDatacron.setText(testItem.getReward());
+			holder.txtDatacron.setText(testItem.getReward());
 		}
 		
 		return v;
 	}
 	
 	private static class ViewHolder {
-		public CheckBox chkViewDatacron;
+		public TextView txtDatacron;
 	}
 }
