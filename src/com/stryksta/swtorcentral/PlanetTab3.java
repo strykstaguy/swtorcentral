@@ -19,6 +19,8 @@ public class PlanetTab3 extends Fragment {
 	private LoreDatabase db;
 	private ArrayList<LoreItem> loreItems;
 	private ArrayList<LoreItem> loreLocationItems;
+	private ArrayList<LoreItem> lorePersonsItems;
+	private ArrayList<LoreItem> loreTitlesItems;
 	private String planetText;
 	private String factionText;
 	private String typeText;
@@ -53,16 +55,29 @@ public class PlanetTab3 extends Fragment {
         db = new LoreDatabase(getActivity());
         loreItems = db.getLore(planetText, factionText);
         loreLocationItems = db.getLocationLore(planetText, factionText);
+        lorePersonsItems = db.getPersonsLore(planetText, factionText);
+        loreTitlesItems = db.getTitleLore(planetText, factionText);
 		db.close();
 		
+		//Lore
 		NonScrollListView loreItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstLore);
-		
 		LoreAdapter loreadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreItems);
 		loreItemsList.setAdapter(loreadapter);
 		
+		//Locations
 		NonScrollListView loreLocationsItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstLocationsLore);
 		LoreAdapter locationadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreLocationItems);
 		loreLocationsItemsList.setAdapter(locationadapter);
+
+		//Persons
+		NonScrollListView lorePersonsItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstPersonsLore);
+		LoreAdapter personsadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, lorePersonsItems);
+		lorePersonsItemsList.setAdapter(personsadapter);
+		
+		//Titles
+		NonScrollListView loreTitlesItemsList = (NonScrollListView) vw_layout.findViewById(R.id.listTitlesLore);
+		LoreAdapter titleadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreTitlesItems);
+		loreTitlesItemsList.setAdapter(titleadapter);
 		
 		return vw_layout;
 	}

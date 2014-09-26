@@ -104,4 +104,33 @@ public class LoreDatabase extends SQLiteAssetHelper {
 		db.close();
 		return loreItem;
 	}
+	
+	public ArrayList<LoreItem> getTitleLore(String txtPlanet, String txtFaction) {
+		ArrayList<LoreItem> loreItem = new ArrayList<LoreItem>();
+		SQLiteDatabase db = getReadableDatabase();
+		
+		StringBuilder builder = new StringBuilder();
+		String sqlSelect = builder
+			.append("SELECT faction, planet, category, codex, comment ")
+			.append("FROM lore ")
+		    .append("WHERE (faction = ? OR faction = 'Both') AND planet = ? AND category = 'Title' ")
+		    .append("ORDER BY category asc ")
+		.toString();
+		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtFaction), String.valueOf(txtPlanet)});
+		
+		if (c.moveToFirst()) {
+            do {
+            	String faction = c.getString(c.getColumnIndex("faction"));
+            	String planet = c.getString(c.getColumnIndex("planet"));
+            	String category = c.getString(c.getColumnIndex("category"));
+            	String codex = c.getString(c.getColumnIndex("codex"));
+            	String comment = c.getString(c.getColumnIndex("comment"));
+            	
+            	loreItem.add(new LoreItem(faction, planet, category, codex, comment));
+            } while (c.moveToNext());
+        }
+		c.close();
+		db.close();
+		return loreItem;
+	}
 }

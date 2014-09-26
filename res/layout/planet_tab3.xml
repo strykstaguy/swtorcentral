@@ -13,7 +13,8 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" 
-    android:background="@color/background" > 
+    android:background="@color/background"
+    android:padding="5dp" > 
     
     <com.stryksta.swtorcentral.util.NonScrollListView
     	android:id="@+id/lstLore"
@@ -27,23 +28,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp" 
         android:gravity="center"
         android:text="@string/locationslore"
         android:textColor="@color/text"
         android:textSize="@dimen/title" />
-    
- 	<TextView
- 	    android:id="@+id/txtLocationLoreSub"
- 	    android:layout_width="match_parent"
- 	    android:layout_height="wrap_content"
- 	    android:layout_marginBottom="10dp"
- 	    android:gravity="center"
- 	    android:text="@string/lore"
- 	    android:textColor="@color/subtext"
- 	    android:textSize="@dimen/subtitle" />
- 	
+   
  	<com.stryksta.swtorcentral.util.NonScrollListView
     	android:id="@+id/lstLocationsLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
+ 	<TextView
+        android:id="@+id/txtPersonsLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/personslore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/lstPersonsLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
+ 	<TextView
+        android:id="@+id/txtTitlesLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp" 
+        android:gravity="center"
+        android:text="@string/titleslore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/listTitlesLore"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/background"

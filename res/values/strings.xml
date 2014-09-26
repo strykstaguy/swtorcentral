@@ -76,6 +76,8 @@
     <string name="informationsub">Information</string>
     <string name="datacronsub">Datacrons</string>
     <string name="locationslore">Locations</string>
+    <string name="personslore">Persons</string>
+    <string name="titleslore">Titles</string>
     <string name="lore">Lore</string>
     
     <string name="faction">Faction</string>
