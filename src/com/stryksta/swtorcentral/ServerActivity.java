@@ -9,18 +9,28 @@ import org.jsoup.select.Elements;
 
 import com.stryksta.swtorcentral.data.ServerItem;
 import com.stryksta.swtorcentral.util.NonScrollGridView;
+import com.stryksta.swtorcentral.util.Utility;
 
 import android.app.ActionBar;
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.graphics.ColorFilter;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,7 +54,7 @@ public class ServerActivity extends FragmentActivity  {
         
         usGridView = (NonScrollGridView) findViewById(R.id.uslist);
         euGridView = (NonScrollGridView) findViewById(R.id.eulist);
-        
+
         if (MainActivity.isNetworkAvailable(ServerActivity.this)) {
        	 new GetServerStatus().execute();
        } else {
@@ -150,13 +160,53 @@ public class ServerActivity extends FragmentActivity  {
 		}
 	}
     
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.server_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    // Respond to the action bar's Up/Home button
 	    case android.R.id.home:
 	    	this.finish();
-	        return true;
+	    	break;
+	    case R.id.server_help:
+	    	// Here pass the activity's object.
+	           final Dialog dialog = new Dialog(ServerActivity.this);
+	           //dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+	           dialog.setTitle("Server Status Help");
+	           // Set up the content of the dialog to the help_screen.xml file.
+	           dialog.setContentView(R.layout.server_key);
+	           
+	          ImageView serverLight = (ImageView) dialog.findViewById(R.id.IMGserverLight);
+	          serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightColor)));
+	        
+	          ImageView serverStandard = (ImageView) dialog.findViewById(R.id.serverStandard);
+	         serverStandard.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.standardColor)));
+	          
+	          ImageView serverHeavy = (ImageView) dialog.findViewById(R.id.serverHeavy);
+	          serverHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.heavyColor)));
+	         
+	          ImageView serverVeryHeavy = (ImageView) dialog.findViewById(R.id.serverVeryHeavy);
+	          serverVeryHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.veryheavyColor)));
+	          
+	          ImageView serverFull = (ImageView) dialog.findViewById(R.id.serverFull);
+	          serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullColor)));
+	          
+	           dialog.setCanceledOnTouchOutside(true);
+	           //Dismiss the HelpScreen from touching anywhere on screen. 
+	           View view = dialog.findViewById(R.id.ServerKeyLayout);
+	              view.setOnClickListener(new View.OnClickListener() {
+	                  public void onClick(View view) {
+	                      dialog.dismiss();
+	                  }
+	              });
+	              dialog.show();
 	    }
 	    return super.onOptionsItemSelected(item);
 	}
@@ -168,4 +218,5 @@ public class ServerActivity extends FragmentActivity  {
 	        getFragmentManager().popBackStack();
 	    }
     }
+	
 }

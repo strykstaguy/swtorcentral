@@ -11,6 +11,7 @@
     <string name="menu_refresh">Refresh</string>
     <string name="menu_server">Server Status</string>
     <string name="server_main">Server Status</string>
+    <string name="serverkey_sub">Color Key</string>
     <string name="server_us">United States</string>
     <string name="server_eu">European</string>
     <string name="server_sub">Servers</string>
@@ -105,4 +106,11 @@
     <string name="character_label_crew1">Crew Skill 1: </string>
     <string name="character_label_crew2">Crew Skill 2: </string>
     <string name="character_label_crew3">Crew Skill 3: </string>
+    
+    <string name="server_light">Light</string>
+    <string name="server_standard">Standard</string>
+    <string name="server_heavy">Heavy</string>
+    <string name="server_veryheavy">Very Heavy</string>
+    <string name="server_full">Full</string>
+    <string name="server_menu">Help</string>
 </resources>

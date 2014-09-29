@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ServerKeyLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    android:padding="10dp" >
+    
+    <LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+        <ImageView
+       		android:id="@+id/IMGserverLight"
+       		android:layout_width="36.0dip"
+       		android:layout_height="36.0dip"
+       		android:layout_gravity="center"
+       		android:src="@drawable/ic_action_circle"
+       		android:contentDescription="@string/image_placeholder"
+       		android:scaleType="fitCenter" />
+        
+        <TextView
+ 	    	android:id="@+id/txtserverLight"
+ 	    	android:layout_width="wrap_content"
+ 	    	android:layout_height="wrap_content"
+ 	    	android:layout_gravity="center"
+ 	    	android:text="@string/server_light"
+ 	    	android:textColor="@color/text"
+ 	    	android:textSize="@dimen/title" />
+    </LinearLayout>
+   
+    <LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+        <ImageView
+       		android:id="@+id/serverStandard"
+       		android:layout_width="36.0dip"
+       		android:layout_height="36.0dip"
+       		android:layout_gravity="center"
+       		android:src="@drawable/ic_action_circle"
+       		android:contentDescription="@string/image_placeholder"
+       		android:scaleType="fitCenter" />
+        
+        <TextView
+ 	    	android:id="@+id/txtserverStandard"
+ 	    	android:layout_width="wrap_content"
+ 	    	android:layout_height="wrap_content"
+ 	    	android:layout_gravity="center"
+ 	    	android:text="@string/server_standard"
+ 	    	android:textColor="@color/text"
+ 	    	android:textSize="@dimen/title" />
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+        <ImageView
+       		android:id="@+id/serverHeavy"
+       		android:layout_width="36.0dip"
+       		android:layout_height="36.0dip"
+       		android:layout_gravity="center"
+       		android:src="@drawable/ic_action_circle"
+       		android:contentDescription="@string/image_placeholder"
+       		android:scaleType="fitCenter" />
+        
+        <TextView
+ 	    	android:id="@+id/txtserverHeavy"
+ 	    	android:layout_width="wrap_content"
+ 	    	android:layout_height="wrap_content"
+ 	    	android:layout_gravity="center"
+ 	    	android:text="@string/server_heavy"
+ 	    	android:textColor="@color/text"
+ 	    	android:textSize="@dimen/title" />
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+        <ImageView
+       		android:id="@+id/serverVeryHeavy"
+       		android:layout_width="36.0dip"
+       		android:layout_height="36.0dip"
+       		android:layout_gravity="center"
+       		android:src="@drawable/ic_action_circle"
+       		android:contentDescription="@string/image_placeholder"
+       		android:scaleType="fitCenter" />
+        
+        <TextView
+ 	    	android:id="@+id/txtserverVeryHeavy"
+ 	    	android:layout_width="wrap_content"
+ 	    	android:layout_height="wrap_content"
+ 	    	android:layout_gravity="center"
+ 	    	android:text="@string/server_veryheavy"
+ 	    	android:textColor="@color/text"
+ 	    	android:textSize="@dimen/title" />
+    </LinearLayout>
+    
+    <LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" >
+    
+        <ImageView
+       		android:id="@+id/serverFull"
+       		android:layout_width="36.0dip"
+       		android:layout_height="36.0dip"
+       		android:layout_gravity="center"
+       		android:src="@drawable/ic_action_circle"
+       		android:contentDescription="@string/image_placeholder"
+       		android:scaleType="fitCenter" />
+        
+        <TextView
+ 	    	android:id="@+id/txtserverFull"
+ 	    	android:layout_width="wrap_content"
+ 	    	android:layout_height="wrap_content"
+ 	    	android:layout_gravity="center"
+ 	    	android:text="@string/server_full"
+ 	    	android:textColor="@color/text"
+ 	    	android:textSize="@dimen/title" />
+    </LinearLayout>
+</LinearLayout>

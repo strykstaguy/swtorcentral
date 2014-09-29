@@ -1,5 +1,11 @@
 package com.stryksta.swtorcentral.util;
 
+import com.stryksta.swtorcentral.R;
+
+import android.content.Context;
+import android.graphics.ColorFilter;
+import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.ViewGroup.LayoutParams;
@@ -51,5 +57,21 @@ public class Utility {
         gridView.setLayoutParams(params);
         gridView.requestLayout();
         gridView.refreshDrawableState();
+    }
+    
+    
+    public static ColorFilter getColoredMatrix(int targetColor) {
+        int red = (targetColor & 0xFF0000) / 0xFFFF;
+        int green = (targetColor & 0xFF00) / 0xFF;
+        int blue = targetColor & 0xFF;
+
+        float[] matrix = { 0, 0, 0, 0, red
+                         , 0, 0, 0, 0, green
+                         , 0, 0, 0, 0, blue
+                         , 0, 0, 0, 1, 0 };
+
+        ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
+        
+        return colorFilter;
     }
 }
