@@ -21,6 +21,7 @@ public class PlanetTab3 extends Fragment {
 	private ArrayList<LoreItem> loreLocationItems;
 	private ArrayList<LoreItem> lorePersonsItems;
 	private ArrayList<LoreItem> loreTitlesItems;
+	private ArrayList<LoreItem> loreGameRulesItems;
 	private String planetText;
 	private String factionText;
 	private String typeText;
@@ -52,11 +53,18 @@ public class PlanetTab3 extends Fragment {
         	typeText = bundle.getString("type");
         }
         
+        if (planetText.equals("Republic Fleet")) {
+        	planetText = "Fleet";
+        } else if (planetText.equals("Imperial Fleet")){
+        	planetText = "Fleet";
+        }
+        
         db = new LoreDatabase(getActivity());
-        loreItems = db.getLore(planetText, factionText);
-        loreLocationItems = db.getLocationLore(planetText, factionText);
-        lorePersonsItems = db.getPersonsLore(planetText, factionText);
-        loreTitlesItems = db.getTitleLore(planetText, factionText);
+        loreItems = db.getLore(planetText, factionText, "Lore");
+        loreLocationItems = db.getLore(planetText, factionText, "Locations");
+        lorePersonsItems = db.getLore(planetText, factionText, "Persons");
+        loreTitlesItems = db.getLore(planetText, factionText, "Title");
+        loreGameRulesItems = db.getLore(planetText, factionText, "Game Rules");
 		db.close();
 		
 		//Lore
@@ -79,6 +87,11 @@ public class PlanetTab3 extends Fragment {
 		LoreAdapter titleadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreTitlesItems);
 		loreTitlesItemsList.setAdapter(titleadapter);
 		
+		//Game Rules
+		NonScrollListView listGameRulesLore = (NonScrollListView) vw_layout.findViewById(R.id.listGameRulesLore);
+		LoreAdapter gamerulesadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreGameRulesItems);
+		listGameRulesLore.setAdapter(gamerulesadapter);
+				
 		return vw_layout;
 	}
 }

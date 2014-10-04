@@ -41,13 +41,12 @@
     <string name="draweritem2">Server Status</string>
     <string name="draweritem3">Datacrons</string>
     <string name="draweritem4">Classes</string>
-    <string name="draweritem5">Settings</string>
-    <string name="draweritem6">Progression</string>
-    <string name="draweritem7">In-Game Events</string>
-    <string name="draweritem8">Characters</string>
-    <string name="draweritem9">Achievements</string>
-    <string name="draweritem10">Tutorials</string>
-    <string name="draweritem11">Test</string>
+    <string name="draweritem5">Progression</string>
+    <string name="draweritem6">In-Game Events</string>
+    <string name="draweritem7">Characters</string>
+    <string name="draweritem8">Achievements</string>
+    <string name="draweritem9">Tutorials</string>
+    <string name="draweritem10">Settings</string>
     <string name="header2">Advanced</string>
 	<string name="tab1">US Servers</string>
     <string name="tab2">European Servers</string>
@@ -79,6 +78,7 @@
     <string name="locationslore">Locations</string>
     <string name="personslore">Persons</string>
     <string name="titleslore">Titles</string>
+    <string name="gameruleslore">Game Rules</string>
     <string name="lore">Lore</string>
     
     <string name="faction">Faction</string>

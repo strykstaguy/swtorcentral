@@ -12,7 +12,6 @@
         <item>draweritem8</item>
         <item>draweritem9</item>
         <item>draweritem10</item>
-        <item>draweritem11</item>
     </string-array>
 	
     <array name="drawerIcons">
@@ -20,7 +19,6 @@
         <item>ic_action_database</item>
         <item>ic_datacron</item>
         <item>ic_action_shield</item>
-        <item>ic_action_gear</item>
         <item>ic_progression</item>
         <item>ic_action_calendar_month</item>
         <item>ic_action_users</item>

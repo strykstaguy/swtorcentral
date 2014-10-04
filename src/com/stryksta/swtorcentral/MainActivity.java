@@ -7,7 +7,6 @@ import java.util.List;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -26,13 +25,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ExpandableListView.OnChildClickListener;
 
 import com.stryksta.swtorcentral.data.DrawerItem;
@@ -76,9 +71,9 @@ public class MainActivity extends FragmentActivity  {
 		super.onCreate(savedInstanceState);
 		// Set view
 		setContentView(R.layout.activity_main);
-
-		session = new SessionManager(getApplicationContext());
 		
+	    session = new SessionManager(getApplicationContext());
+		 
 		//Start Drawer
 		mTitle = mDrawerTitle = getTitle();
 		menuItems = getResources().getStringArray(R.array.drawerItems);
@@ -235,7 +230,7 @@ public class MainActivity extends FragmentActivity  {
            return true;
        }
 	    switch (item.getItemId()) {
-	        case R.id.menu_refresh:
+	        case R.id.action_settings:
 	        	Toast.makeText(getApplicationContext(), "Refresh!", Toast.LENGTH_SHORT).show();
 	            break;
 	    }
@@ -253,8 +248,6 @@ public class MainActivity extends FragmentActivity  {
         
    	 switch(position) {
 	    case 0:
-	    	//Toast.makeText(getApplicationContext(), "First Fragment", Toast.LENGTH_SHORT).show();
-	    	//switchFragment(new ReaderActivity());
 	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new ReaderActivity(), "Reader");
 	        break;
 	    case 1:
@@ -262,40 +255,36 @@ public class MainActivity extends FragmentActivity  {
 	        startActivity(serverIntent);
 	        break;
 	    case 2:
-	    	//switchFragment(new DatacronActivity());
 	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new DatacronActivity(), "Datacron");
 	        break;
 	    case 3:
-	    	//switchFragment(new ClassesActivity());
 	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new ClassesActivity(), "Classes");
 	        break;
 	    case 4:
-	    	Intent settingsIntent = new Intent(this, SettingsActivity.class);
-	        startActivity(settingsIntent);
-	        break;
-	    case 5:
-	    	//Intent factionIntent = new Intent(this, FactionActivity.class);
-	        //startActivity(factionIntent);
 	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new FactionFragment(), "Faction");
 	        break;
-	    case 6:
+	    case 5:
 	    	Intent eventIntent = new Intent(this, EventsActivity.class);
 	        startActivity(eventIntent);
 	        break;
-	    case 7:
+	    case 6:
 	    	Intent characterIntent = new Intent(this, CharacterActivity.class);
 	        startActivity(characterIntent);
 	        break;
-	    case 8:
+	    case 7:
 	    	Intent achievementIntent = new Intent(this, AchievementActivity.class);
 	        startActivity(achievementIntent);
 	        break;
-	    case 9:
+	    case 8:
 	    	Intent tutorialIntent = new Intent(this, TutorialActivity.class);
 	        startActivity(tutorialIntent);
 	        break;
+	    case 9:
+	    	Intent settingsIntent = new Intent(this, SettingsActivity.class);
+	        startActivity(settingsIntent);
+	        break;
 	    case 10:
-	    	Intent testIntent = new Intent(this, TestActivity.class);
+	        Intent testIntent = new Intent(this, TestActivity.class);
 	        startActivity(testIntent);
 	        break;
 	    default:

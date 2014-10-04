@@ -77,5 +77,23 @@
         android:background="@drawable/background"
 		android:padding="5dp" />
  	
+ 	<TextView
+        android:id="@+id/txtGameRulesLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp" 
+        android:gravity="center"
+        android:text="@string/gameruleslore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/listGameRulesLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
 </LinearLayout>
 </ScrollView>

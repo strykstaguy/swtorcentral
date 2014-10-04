@@ -66,6 +66,7 @@ public class ProgressionActivity extends FragmentActivity {
 	    
 	    planets.add(new ProgressionItem("Tython", "Level 1-10", R.drawable.pl_tython, "", TimelineType.START));
 	    planets.add(new ProgressionItem("Ord Mantell", "Level 1-10", R.drawable.pl_ord_mantell, "", TimelineType.LINE));
+	    planets.add(new ProgressionItem("Republic Fleet", "Level 10+", R.drawable.ic_republic_black, "", TimelineType.LINE));
 	    planets.add(new ProgressionItem("The Esseles", "Flashpoint", R.drawable.ic_flashpoint, "Prologue", TimelineType.LINE));
 	    planets.add(new ProgressionItem("Coruscant", "Level 11-16", R.drawable.pl_coruscant, "", TimelineType.LINE));
 	    planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.END));
@@ -126,6 +127,7 @@ public class ProgressionActivity extends FragmentActivity {
 	    
 	    planets.add(new ProgressionItem("Korriban", "Level 1-10", R.drawable.pl_korriban, "", TimelineType.START));
 	    planets.add(new ProgressionItem("Hutta", "Level 1-10", R.drawable.pl_hutta, "", TimelineType.LINE));
+	    planets.add(new ProgressionItem("Empire Fleet", "Level 10+", R.drawable.ic_empire_black, "", TimelineType.LINE));
 	    planets.add(new ProgressionItem("The Black Talon", "Flashpoint", R.drawable.ic_flashpoint, "Prologue", TimelineType.LINE));
 	    planets.add(new ProgressionItem("Dromund Kaas", "Level 11-16", R.drawable.pl_dromundkaas, "", TimelineType.LINE));
 	    planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.END));

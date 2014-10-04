@@ -45,6 +45,10 @@ public class PlanetActivity extends FragmentActivity {
 		String planetBackground = dbPlanet.PlanetBackground(planetText);
 		dbPlanet.close();
 		
+		
+		TextView txtPlanet = (TextView) findViewById(R.id.txtPlanet);
+		txtPlanet.setText(planetText);
+		
         LinearLayout ll = (LinearLayout) findViewById(R.id.planetBackground);
         int resId = getResources().getIdentifier(planetBackground, "drawable", getPackageName());
         ll.setBackgroundResource(resId);
