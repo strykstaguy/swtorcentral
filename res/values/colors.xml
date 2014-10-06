@@ -23,4 +23,6 @@
     <color name="swtor_blue_light">#d1e8f8</color>
     <color name="swtor_green">#99cc00</color>
     <color name="swtor_orange">#FFCB00</color>
+    <color name="seperator">#bdbdbd</color>
+    
 </resources>
