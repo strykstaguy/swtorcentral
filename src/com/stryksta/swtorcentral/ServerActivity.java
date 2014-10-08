@@ -8,6 +8,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.stryksta.swtorcentral.data.ServerItem;
+import com.stryksta.swtorcentral.util.MaterialDialog;
 import com.stryksta.swtorcentral.util.NonScrollGridView;
 import com.stryksta.swtorcentral.util.Utility;
 
@@ -174,34 +175,33 @@ public class ServerActivity extends FragmentActivity  {
 	    	this.finish();
 	    	break;
 	    case R.id.server_help:
-	    	final Dialog dialog = new Dialog(ServerActivity.this);
+	    	View v = getLayoutInflater().inflate(R.layout.server_key, null);
+	        MaterialDialog.Builder builder = new MaterialDialog.Builder(this);
+	        builder.setTitle("Server Status Help");
+	        builder.setView(v);
 	        
-	    	dialog.setTitle("Server Status Help");
-	    	dialog.setContentView(R.layout.server_key);
-	           
-	          ImageView serverLight = (ImageView) dialog.findViewById(R.id.IMGserverLight);
-	          serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightColor)));
+	        ImageView serverLight = (ImageView) v.findViewById(R.id.IMGserverLight);
+	        serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightColor)));
 	        
-	          ImageView serverStandard = (ImageView) dialog.findViewById(R.id.serverStandard);
-	          serverStandard.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.standardColor)));
+	        ImageView serverStandard = (ImageView) v.findViewById(R.id.serverStandard);
+	        serverStandard.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.standardColor)));
 	          
-	          ImageView serverHeavy = (ImageView) dialog.findViewById(R.id.serverHeavy);
-	          serverHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.heavyColor)));
+	        ImageView serverHeavy = (ImageView) v.findViewById(R.id.serverHeavy);
+	        serverHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.heavyColor)));
 	         
-	          ImageView serverVeryHeavy = (ImageView) dialog.findViewById(R.id.serverVeryHeavy);
-	          serverVeryHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.veryheavyColor)));
+	        ImageView serverVeryHeavy = (ImageView) v.findViewById(R.id.serverVeryHeavy);
+	        serverVeryHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.veryheavyColor)));
 	          
-	          ImageView serverFull = (ImageView) dialog.findViewById(R.id.serverFull);
-	          serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullColor)));
+	        ImageView serverFull = (ImageView) v.findViewById(R.id.serverFull);
+	        serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullColor)));
 	          
-	          View view = dialog.findViewById(R.id.ServerKeyLayout);
-              view.setOnClickListener(new View.OnClickListener() {
-                  public void onClick(View view) {
-                      dialog.dismiss();
-                  }
-              });
-	          
-	         dialog.show();
+	        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+	        	public void onClick(DialogInterface dialog, int whichButton) {
+	        		dialog.dismiss();
+	            }
+	        });
+	        
+	        builder.show();
 	    }
 	    return super.onOptionsItemSelected(item);
 	}

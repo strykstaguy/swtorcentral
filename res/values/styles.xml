@@ -109,4 +109,29 @@
         <item name="android:minHeight">10dip</item>
         <item name="android:maxHeight">20dip</item>
     </style>
+    
+    <style name="Widget.SWTOR.Material.Dialog.Message" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/material_message</item>
+        <item name="android:textColor">@color/material_dialog_message</item>
+        <item name="android:alpha">.54</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+    
+    <style name="Widget.SWTOR.Material.Dialog.Title" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/material_title</item>
+        <item name="android:textColor">@color/material_dialog_title</item>
+        <item name="android:alpha">.87</item>
+        <item name="android:layout_margin">@dimen/material_spacing</item>
+    </style>
+    
+    <style name="Widget.SWTOR.Material.Dialog.Button" parent="android:Widget.TextView">
+        <item name="android:layout_width">@dimen/material_button_width</item>
+        <item name="android:layout_height">@dimen/material_button_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/material_button_text</item>
+        <item name="android:textColor">@color/material_dialog_button_default</item>
+        <item name="android:alpha">.87</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/material_button_selector</item>
+    </style>
 </resources>
