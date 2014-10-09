@@ -1,5 +1,7 @@
 package com.stryksta.swtorcentral;
  
+import com.stryksta.swtorcentral.util.MaterialProgress;
+
 import android.app.ProgressDialog;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
@@ -15,7 +17,7 @@ import android.widget.MediaController;
 import android.widget.VideoView;
  
 public class VideoActivity extends FragmentActivity {
-	ProgressDialog pDialog;
+	MaterialProgress pDialog;
 	VideoView videoView;
 
 	private int position = 0;
@@ -59,9 +61,9 @@ public class VideoActivity extends FragmentActivity {
  		protected void onPreExecute() {
  			super.onPreExecute();
  			// Create a progressbar
- 			pDialog = new ProgressDialog(VideoActivity.this);
+ 			pDialog = new MaterialProgress(VideoActivity.this, videoTitle);
  			// Set progressbar title
- 			pDialog.setTitle(videoTitle);
+ 			//pDialog.setTitle(videoTitle);
  			// Set progressbar message
  			pDialog.setMessage("Loading...");
  			pDialog.setIndeterminate(false);

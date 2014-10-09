@@ -3,29 +3,33 @@
 	android:orientation="horizontal"
     android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:paddingBottom="10dp" >
+	android:paddingBottom="10dp"
+	android:gravity="center" >
 	
 	<ProgressBar
-    	android:id="@+id/progressBar"
+    	android:id="@android:id/progress"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="50dp"
         android:layout_gravity="center"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:visibility="visible"
-        android:indeterminateDrawable="@drawable/material_progress" >
-    </ProgressBar>
+        android:indeterminateDrawable="@drawable/material_progress" />
         
 	<TextView
+	    android:id="@android:id/message"
 	    style="@style/Widget.SWTOR.Material.Dialog.Message"
-	    android:layout_width="match_parent"
+	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_gravity="center"
 	    android:layout_marginLeft="10dp"
-	    android:text="Loading..." >
-
-	</TextView> 
+	    android:text="Loading..." />
+	
+	<TextView
+	    android:id="@android:id/text1"
+        style="@style/Widget.SWTOR.Material.Dialog.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:singleLine="true" />
 </LinearLayout>
-
-
-

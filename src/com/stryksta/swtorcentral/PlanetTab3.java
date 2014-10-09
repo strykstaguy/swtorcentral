@@ -6,13 +6,18 @@ import com.stryksta.swtorcentral.data.DatacronItem;
 import com.stryksta.swtorcentral.data.LoreItem;
 import com.stryksta.swtorcentral.util.DatacronDatabase;
 import com.stryksta.swtorcentral.util.LoreDatabase;
+import com.stryksta.swtorcentral.util.MaterialDialog;
 import com.stryksta.swtorcentral.util.NonScrollListView;
 
 import android.support.v4.app.Fragment;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 
 
 public class PlanetTab3 extends Fragment {
@@ -21,7 +26,9 @@ public class PlanetTab3 extends Fragment {
 	private ArrayList<LoreItem> loreLocationItems;
 	private ArrayList<LoreItem> lorePersonsItems;
 	private ArrayList<LoreItem> loreTitlesItems;
+	private ArrayList<LoreItem> loreBeastItems;
 	private ArrayList<LoreItem> loreGameRulesItems;
+	LoreAdapter loreadapter;
 	private String planetText;
 	private String factionText;
 	private String typeText;
@@ -64,14 +71,29 @@ public class PlanetTab3 extends Fragment {
         loreLocationItems = db.getLore(planetText, factionText, "Locations");
         lorePersonsItems = db.getLore(planetText, factionText, "Persons");
         loreTitlesItems = db.getLore(planetText, factionText, "Title");
+        loreBeastItems = db.getLore(planetText, factionText, "Beast");
         loreGameRulesItems = db.getLore(planetText, factionText, "Game Rules");
 		db.close();
 		
 		//Lore
 		NonScrollListView loreItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstLore);
-		LoreAdapter loreadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreItems);
+		loreadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreItems);
 		loreItemsList.setAdapter(loreadapter);
 		
+		loreItemsList.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			    {
+					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
+					builder.setTitle(loreadapter.getItem(position).getCodex());
+					builder.setMessage("Lore Information");
+					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+		        	public void onClick(DialogInterface dialog, int whichButton) {
+		        		dialog.dismiss();
+		            }
+		        });
+		        builder.show();
+			    }});
+	
 		//Locations
 		NonScrollListView loreLocationsItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstLocationsLore);
 		LoreAdapter locationadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreLocationItems);
@@ -87,6 +109,11 @@ public class PlanetTab3 extends Fragment {
 		LoreAdapter titleadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreTitlesItems);
 		loreTitlesItemsList.setAdapter(titleadapter);
 		
+		//Beast
+		NonScrollListView listBeastLore = (NonScrollListView) vw_layout.findViewById(R.id.listBeastLore);
+		LoreAdapter beastadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreBeastItems);
+		listBeastLore.setAdapter(beastadapter);
+				
 		//Game Rules
 		NonScrollListView listGameRulesLore = (NonScrollListView) vw_layout.findViewById(R.id.listGameRulesLore);
 		LoreAdapter gamerulesadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreGameRulesItems);

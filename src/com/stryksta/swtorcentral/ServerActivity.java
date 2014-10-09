@@ -9,6 +9,7 @@ import org.jsoup.select.Elements;
 
 import com.stryksta.swtorcentral.data.ServerItem;
 import com.stryksta.swtorcentral.util.MaterialDialog;
+import com.stryksta.swtorcentral.util.MaterialProgress;
 import com.stryksta.swtorcentral.util.NonScrollGridView;
 import com.stryksta.swtorcentral.util.Utility;
 
@@ -44,7 +45,7 @@ public class ServerActivity extends FragmentActivity  {
 	ArrayList<ServerItem> usItems;
 	ArrayList<ServerItem> euItems;
 	
-	ProgressDialog pDialog;
+	MaterialProgress pDialog;
     @Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,8 +73,7 @@ public class ServerActivity extends FragmentActivity  {
     	protected void onPreExecute() {
  			super.onPreExecute();
  			// Create a progressbar
- 			pDialog = new ProgressDialog(ServerActivity.this);
- 			pDialog.setTitle("Server Status");
+ 			pDialog = new MaterialProgress(ServerActivity.this, "Server Status");
  			pDialog.setMessage("Loading...");
  			pDialog.setIndeterminate(false);
  			pDialog.show();
