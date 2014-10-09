@@ -85,7 +85,7 @@ public class PlanetTab3 extends Fragment {
 			    {
 					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
 					builder.setTitle(loreadapter.getItem(position).getCodex());
-					builder.setMessage("Lore Information");
+					builder.setMessage(loreadapter.getItem(position).getText());
 					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 		        	public void onClick(DialogInterface dialog, int whichButton) {
 		        		dialog.dismiss();

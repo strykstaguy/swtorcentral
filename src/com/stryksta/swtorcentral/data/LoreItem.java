@@ -5,19 +5,21 @@ public class LoreItem {
     public String planet;
     public String category;
     public String codex;
+    public String text;
     public String comment;
     private boolean isGroupHeader = false;
     
     public LoreItem(String txtTitle, String txtSubTitle) {
-		this(txtTitle, txtSubTitle, "", "", "");
+		this(txtTitle, txtSubTitle, "", "", "", "");
 		isGroupHeader = true;
 	}
     
-    public LoreItem(String faction, String planet, String category, String codex, String comment) {
+    public LoreItem(String faction, String planet, String category, String codex,  String text, String comment) {
     	this.faction = faction;
     	this.planet = planet;
     	this.category = category;
     	this.codex = codex;
+    	this.text = text;
     	this.comment = comment;
     }
     
@@ -51,6 +53,14 @@ public class LoreItem {
 
     public void setCodex(String codex){
         this.codex = codex;
+    }
+    
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text){
+        this.text = text;
     }
     
     public String getComment() {

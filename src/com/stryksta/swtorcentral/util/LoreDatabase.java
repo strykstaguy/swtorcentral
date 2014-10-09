@@ -24,7 +24,7 @@ public class LoreDatabase extends SQLiteAssetHelper {
 		
 		StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
-			.append("SELECT faction, planet, category, codex, comment ")
+			.append("SELECT faction, planet, category, codex, text, comment ")
 			.append("FROM lore ")
 		    .append("WHERE (faction = ? OR faction = 'Both') AND planet = ? AND category = ? ")
 		    .append("ORDER BY category asc ")
@@ -37,9 +37,10 @@ public class LoreDatabase extends SQLiteAssetHelper {
             	String planet = c.getString(c.getColumnIndex("planet"));
             	String category = c.getString(c.getColumnIndex("category"));
             	String codex = c.getString(c.getColumnIndex("codex"));
+            	String text = c.getString(c.getColumnIndex("text"));
             	String comment = c.getString(c.getColumnIndex("comment"));
             	
-            	loreItem.add(new LoreItem(faction, planet, category, codex, comment));
+            	loreItem.add(new LoreItem(faction, planet, category, codex, text, comment));
             } while (c.moveToNext());
         }
 		c.close();
