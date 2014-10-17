@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 
 
 public class PlanetTab3 extends Fragment {
@@ -28,7 +29,16 @@ public class PlanetTab3 extends Fragment {
 	private ArrayList<LoreItem> loreTitlesItems;
 	private ArrayList<LoreItem> loreBeastItems;
 	private ArrayList<LoreItem> loreGameRulesItems;
+	private ArrayList<LoreItem> loreOrganizationsItems;
+	
 	LoreAdapter loreadapter;
+	LoreAdapter locationadapter;
+	LoreAdapter personsadapter;
+	LoreAdapter titleadapter;
+	LoreAdapter beastadapter;
+	LoreAdapter gamerulesadapter;
+	LoreAdapter organizationsadapter;
+	
 	private String planetText;
 	private String factionText;
 	private String typeText;
@@ -73,6 +83,7 @@ public class PlanetTab3 extends Fragment {
         loreTitlesItems = db.getLore(planetText, factionText, "Title");
         loreBeastItems = db.getLore(planetText, factionText, "Beast");
         loreGameRulesItems = db.getLore(planetText, factionText, "Game Rules");
+        loreOrganizationsItems = db.getLore(planetText, factionText, "Organizations");
 		db.close();
 		
 		//Lore
@@ -96,29 +107,126 @@ public class PlanetTab3 extends Fragment {
 	
 		//Locations
 		NonScrollListView loreLocationsItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstLocationsLore);
-		LoreAdapter locationadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreLocationItems);
+		locationadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreLocationItems);
 		loreLocationsItemsList.setAdapter(locationadapter);
-
+		
+		loreLocationsItemsList.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			    {
+					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
+					builder.setTitle(locationadapter.getItem(position).getCodex());
+					builder.setMessage(locationadapter.getItem(position).getText());
+					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+		        	public void onClick(DialogInterface dialog, int whichButton) {
+		        		dialog.dismiss();
+		            }
+		        });
+		        builder.show();
+			    }});
+		
 		//Persons
 		NonScrollListView lorePersonsItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstPersonsLore);
-		LoreAdapter personsadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, lorePersonsItems);
+		personsadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, lorePersonsItems);
 		lorePersonsItemsList.setAdapter(personsadapter);
+		
+		lorePersonsItemsList.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			    {
+					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
+					builder.setTitle(personsadapter.getItem(position).getCodex());
+					builder.setMessage(personsadapter.getItem(position).getText());
+					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+		        	public void onClick(DialogInterface dialog, int whichButton) {
+		        		dialog.dismiss();
+		            }
+		        });
+		        builder.show();
+			    }});
 		
 		//Titles
 		NonScrollListView loreTitlesItemsList = (NonScrollListView) vw_layout.findViewById(R.id.listTitlesLore);
-		LoreAdapter titleadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreTitlesItems);
+		titleadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreTitlesItems);
 		loreTitlesItemsList.setAdapter(titleadapter);
+		
+		loreTitlesItemsList.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			    {
+					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
+					builder.setTitle(titleadapter.getItem(position).getCodex());
+					builder.setMessage(titleadapter.getItem(position).getText());
+					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+		        	public void onClick(DialogInterface dialog, int whichButton) {
+		        		dialog.dismiss();
+		            }
+		        });
+		        builder.show();
+			    }});
 		
 		//Beast
 		NonScrollListView listBeastLore = (NonScrollListView) vw_layout.findViewById(R.id.listBeastLore);
-		LoreAdapter beastadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreBeastItems);
+		beastadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreBeastItems);
 		listBeastLore.setAdapter(beastadapter);
-				
+		
+		listBeastLore.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			    {
+					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
+					builder.setTitle(beastadapter.getItem(position).getCodex());
+					builder.setMessage(beastadapter.getItem(position).getText());
+					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+		        	public void onClick(DialogInterface dialog, int whichButton) {
+		        		dialog.dismiss();
+		            }
+		        });
+		        builder.show();
+			    }});
+		
 		//Game Rules
 		NonScrollListView listGameRulesLore = (NonScrollListView) vw_layout.findViewById(R.id.listGameRulesLore);
-		LoreAdapter gamerulesadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreGameRulesItems);
-		listGameRulesLore.setAdapter(gamerulesadapter);
+		TextView txtGameRulesLore = (TextView) vw_layout.findViewById(R.id.txtGameRulesLore);
+		
+		if (loreGameRulesItems.size() > 0) {
+			gamerulesadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreGameRulesItems);
+			listGameRulesLore.setAdapter(gamerulesadapter);
+			
+			listGameRulesLore.setOnItemClickListener(new OnItemClickListener() {
+				public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+				    {
+						MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
+						builder.setTitle(gamerulesadapter.getItem(position).getCodex());
+						builder.setMessage(gamerulesadapter.getItem(position).getText());
+						builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			        	public void onClick(DialogInterface dialog, int whichButton) {
+			        		dialog.dismiss();
+			            }
+			        });
+			        builder.show();
+				    }});	
+		} else {
+			listGameRulesLore.setVisibility(View.GONE);
+			txtGameRulesLore.setVisibility(View.GONE);
+		}
+		
+		
+		//Organizations
+		NonScrollListView listOrganizationsLore = (NonScrollListView) vw_layout.findViewById(R.id.listOrganizationsLore);
+		organizationsadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreOrganizationsItems);
+		listOrganizationsLore.setAdapter(organizationsadapter);
 				
+		listOrganizationsLore.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+				{
+					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
+					builder.setTitle(organizationsadapter.getItem(position).getCodex());
+					builder.setMessage(organizationsadapter.getItem(position).getText());
+					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+				    public void onClick(DialogInterface dialog, int whichButton) {
+				    	dialog.dismiss();
+				    }
+				    });
+				    builder.show();
+					}});
+		
 		return vw_layout;
 	}
 }

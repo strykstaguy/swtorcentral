@@ -54,7 +54,8 @@
         android:gravity="right"
         android:layout_marginRight="@dimen/material_default_margin"
         android:layout_marginLeft="@dimen/material_default_margin"
-        android:layout_marginBottom="@dimen/material_default_margin" >
+        android:layout_marginTop="@dimen/material_default_margin_small"
+        android:layout_marginBottom="@dimen/material_default_margin_small" >
                 
         <LinearLayout
             android:id="@+id/leftSpacer"
