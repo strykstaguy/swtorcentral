@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/values-v19/styles.xml -->
+    <eat-comment />
+
+    <style name="ActionBar.Solid.Swtor" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_swtor</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_swtor</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_swtor</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Swtor</item>
+        <item name="android:icon">@drawable/ic_swtor_icon</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Swtor" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_swtor</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Swtor</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Swtor" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_swtor</item>
+    </style>
+
+    <style name="ActionBarTabText.Swtor" parent="@android:style/Widget.Holo.ActionBar.TabText">
+        <item name="android:textColor">@color/tab_text_color</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Swtor" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_swtor</item>
+    </style>
+
+    <style name="DropDownListView.Swtor" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_swtor</item>
+    </style>
+
+    <style name="DropDownNav.Swtor" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_swtor</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_swtor</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_swtor</item>
+    </style>
+
+    <style name="PopupMenu.Swtor" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_swtor</item>
+    </style>
+
+    <style name="ProgressBar.Swtor" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_swtor</item>
+    </style>
+
+    <style name="Theme.Swtor" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_swtor</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Swtor</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Swtor</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Swtor</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Swtor</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Swtor</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_swtor</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_swtor</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Swtor</item>
+        <item name="android:actionBarTabTextStyle">@style/ActionBarTabText.Swtor</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Swtor.Widget</item>
+    </style>
+
+    <style name="Theme.Swtor.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Swtor</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Swtor</item>
+    </style>
+
+</resources>

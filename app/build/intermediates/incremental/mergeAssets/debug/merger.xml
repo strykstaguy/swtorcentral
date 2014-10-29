@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\assets" >
+            <file
+                name="databases/swtor.zip"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\assets\databases\swtor.zip" />
+            <file
+                name="fonts/Roboto-Light.ttf"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\assets\fonts\Roboto-Light.ttf" />
+            <file
+                name="fonts/Roboto-Medium.ttf"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\assets\fonts\Roboto-Medium.ttf" />
+            <file
+                name="fonts/Roboto-Regular.ttf"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\assets\fonts\Roboto-Regular.ttf" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\debug\assets" />
+    </dataSet>
+
+</merger>

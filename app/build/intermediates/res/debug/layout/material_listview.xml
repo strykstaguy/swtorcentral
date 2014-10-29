@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_dialog_listview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:cacheColorHint="@null"
+    android:divider="@null"
+    android:dividerHeight="0dp"
+    android:listSelector="@drawable/material_list_selector"
+    android:scrollbars="vertical"
+    android:overScrollMode="ifContentScrolls"
+    android:textAlignment="viewStart" />
+<!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/material_listview.xml -->

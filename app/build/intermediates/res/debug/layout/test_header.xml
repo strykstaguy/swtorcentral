@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+   	android:layout_height="match_parent"
+   	android:layout_gravity="center"
+    android:background="@color/background"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:gravity="center"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+    
+ 	<TextView
+ 	    android:id="@+id/txtSubtitle"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_marginBottom="10dp"
+ 	    android:gravity="center"
+ 	    android:textColor="@color/subtext"
+ 	    android:textSize="@dimen/subtitle" />
+ 	
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/test_header.xml -->

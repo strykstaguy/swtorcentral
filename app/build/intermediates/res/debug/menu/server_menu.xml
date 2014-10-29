@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >	
+    <item android:id="@+id/server_help"
+          android:icon="@drawable/ic_action_help_white"
+          android:title="@string/server_menu"
+          android:showAsAction="ifRoom" />
+</menu><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/menu/server_menu.xml -->

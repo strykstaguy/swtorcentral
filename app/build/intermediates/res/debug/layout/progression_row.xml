@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:orientation="horizontal" >
+	
+    <com.stryksta.swtorcentral.util.VerticalTextView
+        android:id="@+id/txtTimeLineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/text"
+        android:textSize="18sp" />
+        
+    <com.stryksta.swtorcentral.util.RoundTimelineView
+        android:id="@+id/timeline"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        app:firstColor="@color/text"
+        app:firstSize="5"
+        app:lastColor="@color/text"
+        app:lastSize="5"
+        app:lineColor="@color/text"
+        app:lineWidth="5dp"
+        app:middleColor="@color/text"
+        app:middleSize="5"
+        app:timeline_type="line" />
+
+    <LinearLayout
+        android:id="@+id/layoutSinglePlanet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30.0dip"
+        android:layout_marginRight="30.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:background="@drawable/card_background"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imgPlanet"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_marginTop="2.0dip"
+            android:clickable="false"
+            android:padding="5.0dp"
+            android:contentDescription="@string/image_placeholder"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/txtPlanet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/progression_row.xml -->

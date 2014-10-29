@@ -1,0 +1,24 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+    
+<RelativeLayout
+    android:id="@+id/abilitydetails_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background" >
+
+    <com.stryksta.swtorcentral.util.NonScrollListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/background"
+    	android:dividerHeight="10dip"
+    	android:padding="10.0dip" >
+
+    </com.stryksta.swtorcentral.util.NonScrollListView>
+
+</RelativeLayout>
+</ScrollView><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/ability_details_main.xml -->

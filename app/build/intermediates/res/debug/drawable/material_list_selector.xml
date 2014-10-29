@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:exitFadeDuration="300">
+
+    <item android:state_pressed="true" android:drawable="@color/material_bg_item_press"/>
+    <item android:drawable="@color/material_transparent"/>
+
+</selector><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/drawable/material_list_selector.xml -->

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/abilitylinearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10.0dip"
+   	android:background="@drawable/card_background" >
+   	
+	<LinearLayout
+    	android:id="@+id/abilitylayout"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingBottom="5.0dip"
+    	android:orientation="horizontal" >
+
+		<TextView
+    		android:id="@+id/txtName"
+    		android:layout_height="wrap_content"
+    		android:layout_width="0dp"
+    		android:layout_weight="1"
+    		android:textColor="@color/text"
+    		android:textSize="18sp" />
+
+		<TextView
+    		android:id="@+id/txtLevel"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="0"
+    		android:textColor="@color/text"
+    		android:textSize="14sp" />
+	</LinearLayout>
+	
+	<LinearLayout
+    	android:id="@+id/statslayout"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingBottom="5.0dip"
+    	android:orientation="vertical" >
+	
+	<TextView
+    	android:id="@+id/txtSummary"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textStyle="bold"
+    	android:textColor="@color/text"
+    	android:textSize="14sp"
+    	android:paddingTop="5.0dip"
+    	android:paddingBottom="5.0dip" />
+
+	<TextView
+    	android:id="@+id/txtResource"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textSize="12sp" />
+	
+	<TextView
+    	android:id="@+id/txtActivation"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textSize="12sp" />
+	
+	<TextView
+    	android:id="@+id/txtChanneled"
+    	android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textSize="12sp" />
+
+	<TextView
+    	android:id="@+id/txtCooldown"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textSize="12sp" />
+	
+	<TextView
+    	android:id="@+id/txtRange"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textSize="12sp" />
+	
+	</LinearLayout>
+	
+	<TextView
+    	android:id="@+id/txtDescription"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:paddingBottom="5.0dip"
+    	android:textSize="12sp" />
+	
+	<TextView
+    	android:id="@+id/txtHighlight"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textStyle="bold"
+    	android:paddingTop="5.0dip"
+    	android:paddingBottom="5.0dip"
+    	android:textSize="12sp" />
+	
+	<TextView
+    	android:id="@+id/txtFootnote"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textStyle="italic"
+    	android:textSize="12sp" />
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/advanced_class_tab3_dialog_row.xml -->

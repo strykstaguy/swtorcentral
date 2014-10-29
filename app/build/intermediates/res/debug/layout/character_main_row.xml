@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/abilitylinearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   	android:background="@color/background" >
+   	
+		<TextView
+		    android:id="@+id/txtName"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:textColor="@color/text"
+		    android:textSize="20sp" />
+
+		<TextView
+		    android:id="@+id/txtLegacy"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:textColor="@color/subtext"
+		    android:textSize="14sp" />
+
+	<LinearLayout
+    	android:id="@+id/statslayout"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="5.0dip"
+    	android:padding="10.0dip"
+    	android:orientation="vertical"
+    	android:background="@drawable/card_background" >
+		
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginBottom="5.0dip" >
+
+	        <TextView
+	            android:id="@+id/txtClass"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:textColor="@color/text"
+	            android:textStyle="bold"
+	            android:textSize="16sp" />
+
+	        <TextView
+	            android:id="@+id/txtLevel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:paddingLeft="5dp"
+	            android:textColor="@color/swtor_blue"
+	            android:textSize="16sp" />
+	    </LinearLayout>
+
+	<TextView
+    	android:id="@+id/txtRace"
+    	android:layout_width="wrap_content"
+   	 	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textSize="14sp" />
+
+	<TextView
+    	android:id="@+id/txtAlignment"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textSize="14sp" />
+	
+	<TextView
+    	android:id="@+id/txtCrewSkill1"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textSize="14sp" />
+	
+	<TextView
+    	android:id="@+id/txtCrewSkill2"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textSize="14sp" />
+	
+	<TextView
+    	android:id="@+id/txtCrewSkill3"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:textSize="14sp" />
+	
+	<TextView
+    	android:id="@+id/txtDescription"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/text"
+    	android:paddingBottom="5.0dip"
+    	android:textSize="14sp" />
+	
+	</LinearLayout>
+	
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/character_main_row.xml -->

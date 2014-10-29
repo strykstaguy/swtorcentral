@@ -1,0 +1,3403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res" >
+            <file
+                name="tab_text_color"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\color\tab_text_color.xml"
+                qualifiers=""
+                type="color" />
+            <file
+                name="ab_background_textured_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\ab_background_textured_swtor.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="background"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="background_bottom"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\background_bottom.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="background_middle"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\background_middle.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="background_pressed"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\background_pressed.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="background_top"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\background_top.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="btn_cab_done_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\btn_cab_done_swtor.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="card_background"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\card_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="card_background_end"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\card_background_end.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="card_background_middle"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\card_background_middle.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="card_background_start"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\card_background_start.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="circle_shape"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\circle_shape.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="custom_progress_bar_circle"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\custom_progress_bar_circle.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="custom_progress_bar_horizontal"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\custom_progress_bar_horizontal.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="custom_selector"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\custom_selector.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="diagonal"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\diagonal.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="dialog_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\dialog_bg.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="divider"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\divider.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="gradient"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\gradient.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="material_background"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\material_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="material_button_selector"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\material_button_selector.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="material_list_selector"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\material_list_selector.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="material_progress"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\material_progress.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="progress_horizontal_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\progress_horizontal_swtor.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="rectangle"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\rectangle.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="selectable_background_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\selectable_background_swtor.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="spinner_background_ab_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\spinner_background_ab_swtor.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="tab_indicator_ab_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable\tab_indicator_ab_swtor.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ab_bottom_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ab_bottom_solid_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ab_solid_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_stacked_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ab_stacked_solid_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_texture_tile_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ab_texture_tile_swtor.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_transparent_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ab_transparent_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="action_help"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\action_help.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="action_help_32"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\action_help_32.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="action_search_32"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\action_search_32.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_assassin"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_assassin.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_assassin_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_assassin_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_commando"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_commando.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_commando_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_commando_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_guardian"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_guardian.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_guardian_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_guardian_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_gunslinger"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_gunslinger.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_gunslinger_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_gunslinger_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_juggernaut"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_juggernaut.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_juggernaut_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_juggernaut_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_marauder"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_marauder.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_marauder_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_marauder_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_mercenary"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_mercenary.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_mercenary_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_mercenary_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_operative"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_operative.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_operative_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_operative_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_powertech"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_powertech.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_powertech_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_powertech_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_sage"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_sage.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_sage_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_sage_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_scoundrel"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_scoundrel.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_scoundrel_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_scoundrel_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_sentinel"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_sentinel.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_sentinel_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_sentinel_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_shadow"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_shadow.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_shadow_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_shadow_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_sniper"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_sniper.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_sniper_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_sniper_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_sorcerer"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_sorcerer.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_sorcerer_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_sorcerer_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_vanguard"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_vanguard.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ac_vanguard_light"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ac_vanguard_light.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="alderaan_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\alderaan_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="assault_on_tython_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\assault_on_tython_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="athiss_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\athiss_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="balmorra_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\balmorra_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="battle_of_ilum_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\battle_of_ilum_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="belsavis_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\belsavis_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="black_talon_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\black_talon_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="boarding_party_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\boarding_party_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="bountycontractweek"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\bountycontractweek.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_default_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\btn_cab_done_default_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\btn_cab_done_focused_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\btn_cab_done_pressed_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="cab_background_bottom_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\cab_background_bottom_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="cab_background_top_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\cab_background_top_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="cademimu_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\cademimu_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="colicoid_war_games_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\colicoid_war_games_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="collections_cloud_32"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\collections_cloud_32.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="corellia_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\corellia_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="coruscant_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\coruscant_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="cz198_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\cz198_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="czerka_core_meltdown_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\czerka_core_meltdown_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="czerka_corporate_labs_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\czerka_corporate_labs_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="directive_7_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\directive_7_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="drawer_shadow"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\drawer_shadow.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="dromundkaas_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\dromundkaas_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="faction_both_black"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\faction_both_black.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="faction_both_white"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\faction_both_white.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="false_emperor_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\false_emperor_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="hammer_station_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\hammer_station_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="hoth_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\hoth_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="hutta_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\hutta_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_achievement"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_achievement.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_add"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_add.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_book"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_book.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_calendar_month"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_calendar_month.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_cancel"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_cancel.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_cancel_dark"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_cancel_dark.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_circle"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_circle.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_database"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_database.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_feed"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_feed.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_gear"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_gear.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_help.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help_white"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_help_white.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_indicator_down"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_indicator_down.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_indicator_up"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_indicator_up.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_logout"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_logout.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_playback_play"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_playback_play.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_serverdown"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_serverdown.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_serverup"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_serverup.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_shield"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_shield.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_user"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_user.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_users"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_action_users.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_class_bountyhunter"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_class_bountyhunter.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_class_consular"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_class_consular.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_class_imperialagent"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_class_imperialagent.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_class_inquisitor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_class_inquisitor.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_class_knight"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_class_knight.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_class_smuggler"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_class_smuggler.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_class_trooper"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_class_trooper.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_class_warrior"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_class_warrior.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_datacron"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_datacron.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_drawer"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_drawer.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_empire"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_empire.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_empire_black"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_empire_black.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_flashpoint"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_flashpoint.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_progression"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_progression.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_republic"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_republic.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_republic_black"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_republic_black.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_switch_user"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_switch_user.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_swtor_icon"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ic_swtor_icon.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ilum_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ilum_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="imperial_fleet"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\imperial_fleet.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="kaon_under_seige_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\kaon_under_seige_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="korriban_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\korriban_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="korriban_incursion_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\korriban_incursion_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="kuat_drive_yards_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\kuat_drive_yards_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="lifeday"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\lifeday.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="list_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\list_focused_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="list_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\list_pressed_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="lost_island_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\lost_island_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="maelstrom_prison_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\maelstrom_prison_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="makeb_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\makeb_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="mandalorian_raiders_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\mandalorian_raiders_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="menu_dropdown_panel_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\menu_dropdown_panel_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="narshadaa_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\narshadaa_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_down"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\navigation_down.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_refresh"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\navigation_refresh.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_up"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\navigation_up.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="night"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\night.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ordmantell_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\ordmantell_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="oricon_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\oricon_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="placeholder"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\placeholder.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_alderaan"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_alderaan.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_balmorra"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_balmorra.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_belsavis"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_belsavis.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_corellia"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_corellia.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_coruscant"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_coruscant.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_cz198"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_cz198.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_dromundkaas"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_dromundkaas.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_hoth"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_hoth.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_hutta"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_hutta.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_ilum"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_ilum.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_korriban"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_korriban.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_makeb"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_makeb.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_narshaddaa"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_narshaddaa.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_ord_mantell"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_ord_mantell.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_oricon"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_oricon.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_quesh"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_quesh.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_taris"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_taris.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_tatooine"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_tatooine.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_tython"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_tython.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="pl_voss"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\pl_voss.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_bg_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\progress_bg_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_primary_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\progress_primary_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_secondary_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\progress_secondary_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="quesh_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\quesh_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="rakghoul"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\rakghoul.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="red_reaper_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\red_reaper_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="relicsofthegree"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\relicsofthegree.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="republic_fleet"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\republic_fleet.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_default_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\spinner_ab_default_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_disabled_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\spinner_ab_disabled_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\spinner_ab_focused_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\spinner_ab_pressed_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="swtor_logo_small"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\swtor_logo_small.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\tab_selected_focused_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\tab_selected_pressed_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\tab_selected_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\tab_unselected_focused_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\tab_unselected_pressed_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\tab_unselected_swtor.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="taral_v_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\taral_v_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="taris_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\taris_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tatooine_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\tatooine_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="the_esseles_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\the_esseles_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="the_foundry_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\the_foundry_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="title_background"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\title_background.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tython_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\tython_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="voss_bg"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-hdpi\voss_bg.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_add"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_add.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_calendar_month"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_calendar_month.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_cancel"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_cancel.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_database"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_database.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_feed"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_feed.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_gear"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_gear.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_help.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_playback_play"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_playback_play.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_shield"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_shield.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_user"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_user.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_users"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-ldpi\ic_action_users.png"
+                qualifiers="ldpi-v4"
+                type="drawable" />
+            <file
+                name="ab_bottom_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ab_bottom_solid_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ab_solid_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_stacked_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ab_stacked_solid_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_texture_tile_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ab_texture_tile_swtor.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_transparent_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ab_transparent_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_default_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\btn_cab_done_default_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\btn_cab_done_focused_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_focused_swtord"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\btn_cab_done_focused_swtord.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\btn_cab_done_pressed_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="cab_background_bottom_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\cab_background_bottom_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="cab_background_top_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\cab_background_top_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="device_access_storage"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\device_access_storage.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="drawer_shadow"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\drawer_shadow.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_achievement"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_achievement.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_add"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_add.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_book"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_book.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_calendar_month"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_calendar_month.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_cancel"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_cancel.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_cancel_dark"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_cancel_dark.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_circle"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_circle.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_database"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_database.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_feed"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_feed.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_gear"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_gear.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_help.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help_white"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_help_white.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_indicator_down"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_indicator_down.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_indicator_up"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_indicator_up.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_logout"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_logout.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_playback_play"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_playback_play.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_serverdown"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_serverdown.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_serverup"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_serverup.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_shield"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_shield.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_user"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_user.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_users"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_action_users.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_datacron"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_datacron.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_drawer"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_drawer.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_progression"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_progression.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_swtor_icon"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\ic_swtor_icon.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="list_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\list_focused_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="list_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\list_pressed_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="menu_dropdown_panel_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\menu_dropdown_panel_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_down"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\navigation_down.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_refresh"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\navigation_refresh.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_up"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\navigation_up.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_bg_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\progress_bg_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_primary_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\progress_primary_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_secondary_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\progress_secondary_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_default_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\spinner_ab_default_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_disabled_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\spinner_ab_disabled_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\spinner_ab_focused_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\spinner_ab_pressed_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\tab_selected_focused_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\tab_selected_pressed_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\tab_selected_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\tab_unselected_focused_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\tab_unselected_pressed_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\tab_unselected_swtor.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="title_background"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-mdpi\title_background.9.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_bottom_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ab_bottom_solid_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ab_solid_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_stacked_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ab_stacked_solid_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_texture_tile_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ab_texture_tile_swtor.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_transparent_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ab_transparent_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_default_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\btn_cab_done_default_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\btn_cab_done_focused_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\btn_cab_done_pressed_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="cab_background_bottom_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\cab_background_bottom_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="cab_background_top_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\cab_background_top_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="device_access_storage"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\device_access_storage.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="drawer_shadow"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\drawer_shadow.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_achievement"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_achievement.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_add"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_add.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_book"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_book.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_calendar_month"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_calendar_month.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_cancel"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_cancel.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_circle"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_circle.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_database"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_database.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_feed"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_feed.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_gear"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_gear.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_help.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help_white"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_help_white.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_indicator_down"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_indicator_down.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_indicator_up"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_indicator_up.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_logout"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_logout.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_playback_play"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_playback_play.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_serverdown"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_serverdown.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_serverup"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_serverup.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_shield"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_shield.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_user"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_user.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_users"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_action_users.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_datacron"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_datacron.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_drawer"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_drawer.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_progression"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_progression.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_swtor_icon"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\ic_swtor_icon.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="list_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\list_focused_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="list_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\list_pressed_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="menu_dropdown_panel_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\menu_dropdown_panel_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_down"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\navigation_down.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_refresh"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\navigation_refresh.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="navigation_up"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\navigation_up.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_bg_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\progress_bg_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_primary_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\progress_primary_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_secondary_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\progress_secondary_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_default_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\spinner_ab_default_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_disabled_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\spinner_ab_disabled_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\spinner_ab_focused_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\spinner_ab_pressed_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\tab_selected_focused_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\tab_selected_pressed_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\tab_selected_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\tab_unselected_focused_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\tab_unselected_pressed_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\tab_unselected_swtor.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="title_background"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xhdpi\title_background.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_bottom_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ab_bottom_solid_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ab_solid_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_stacked_solid_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ab_stacked_solid_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_texture_tile_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ab_texture_tile_swtor.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ab_transparent_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ab_transparent_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_default_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\btn_cab_done_default_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\btn_cab_done_focused_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_cab_done_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\btn_cab_done_pressed_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="cab_background_bottom_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\cab_background_bottom_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="cab_background_top_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\cab_background_top_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_achievement"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_achievement.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_add"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_add.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_book"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_book.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_calendar_month"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_calendar_month.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_cancel"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_cancel.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_circle"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_circle.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_database"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_database.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_feed"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_feed.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_gear"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_gear.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_help.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_help_white"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_help_white.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_indicator_down"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_indicator_down.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_indicator_up"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_indicator_up.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_logout"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_logout.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_playback_play"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_playback_play.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_serverdown"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_serverdown.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_serverup"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_serverup.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_shield"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_shield.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_user"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_user.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_action_users"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_action_users.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_datacron"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_datacron.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_drawer"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_drawer.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_progression"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_progression.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_swtor_icon"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\ic_swtor_icon.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="list_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\list_focused_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="list_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\list_pressed_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="menu_dropdown_panel_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\menu_dropdown_panel_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_bg_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\progress_bg_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_primary_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\progress_primary_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="progress_secondary_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\progress_secondary_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_default_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\spinner_ab_default_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_disabled_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\spinner_ab_disabled_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\spinner_ab_focused_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="spinner_ab_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\spinner_ab_pressed_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\tab_selected_focused_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\tab_selected_pressed_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_selected_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\tab_selected_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_focused_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\tab_unselected_focused_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_pressed_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\tab_unselected_pressed_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="tab_unselected_swtor"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\drawable-xxhdpi\tab_unselected_swtor.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ability_details_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\ability_details_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="achievement_category_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\achievement_category_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="achievement_items_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\achievement_items_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="achievement_item_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\achievement_item_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="achievement_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\achievement_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="achievement_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\achievement_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="advanced_class_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\advanced_class_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="advanced_class_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\advanced_class_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="advanced_class_tab1"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\advanced_class_tab1.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="advanced_class_tab2"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\advanced_class_tab2.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="advanced_class_tab3"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\advanced_class_tab3.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="advanced_class_tab3_dialog_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\advanced_class_tab3_dialog_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="advanced_class_tab3_header"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\advanced_class_tab3_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="advanced_class_tab3_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\advanced_class_tab3_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="character_add_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\character_add_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="character_level_dialog"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\character_level_dialog.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="character_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\character_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="character_main_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\character_main_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="class_header"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\class_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="class_item"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\class_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="class_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\class_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="datacron_header"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\datacron_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="datacron_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\datacron_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="datacron_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\datacron_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="drawer_character_group"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\drawer_character_group.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="drawer_character_item"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\drawer_character_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="drawer_header"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\drawer_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="drawer_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\drawer_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="drawer_row_counter"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\drawer_row_counter.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="events_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\events_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="events_tab1"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\events_tab1.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="events_tab2"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\events_tab2.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="events_tab3"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\events_tab3.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="events_tab4"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\events_tab4.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="faction_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\faction_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="lore_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\lore_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="material_dialog_layout"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\material_dialog_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="material_listview"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\material_listview.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="material_list_item"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\material_list_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="material_progress"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\material_progress.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="material_progress_hori"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\material_progress_hori.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="material_singlechoice"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\material_singlechoice.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="planet_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\planet_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="planet_tab1"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\planet_tab1.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="planet_tab2"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\planet_tab2.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="planet_tab2_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\planet_tab2_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="planet_tab3"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\planet_tab3.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="progression_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\progression_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="progression_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\progression_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="reader_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\reader_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="reader_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\reader_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="server_key"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\server_key.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="server_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\server_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="server_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\server_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="test_group"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\test_group.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="test_header"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\test_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="test_list_item"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\test_list_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="test_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\test_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="test_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\test_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="transparent_header"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\transparent_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="tutorial_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\tutorial_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="tutorial_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\tutorial_row.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="user_character_selection"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\user_character_selection.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="video_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\video_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="video_surface_layout"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout\video_surface_layout.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="reader_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout-land\reader_main.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="tutorial_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout-land\tutorial_main.xml"
+                qualifiers="land"
+                type="layout" />
+            <file
+                name="datacron_main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout-sw720dp\datacron_main.xml"
+                qualifiers="sw720dp-v13"
+                type="layout" />
+            <file
+                name="datacron_row"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\layout-sw720dp\datacron_row.xml"
+                qualifiers="sw720dp-v13"
+                type="layout" />
+            <file
+                name="character_add_menu"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\menu\character_add_menu.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="character_edit_menu"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\menu\character_edit_menu.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="character_menu"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\menu\character_menu.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="character_options_menu"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\menu\character_options_menu.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="main"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\menu\main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="server_menu"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\menu\server_menu.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values\arrays.xml"
+                qualifiers="" >
+                <string-array name="syncFrequencyValues" >
+                    <item name="1">
+1
+                    </item>
+                    <item name="7">
+7
+                    </item>
+                    <item name="30">
+30
+                    </item>
+                    <item name="0">
+0
+                    </item>
+                </string-array>
+                <string-array name="syncFrequency" >
+                    <item name="1">
+Once a day
+                    </item>
+                    <item name="7">
+Once a week
+                    </item>
+                    <item name="3">
+Once a year
+                    </item>
+                    <item name="0">
+Never (Update maually)
+                    </item>
+                </string-array>
+
+                <array name="drawerIcons" >
+                    <item>
+ic_action_feed
+                    </item>
+                    <item>
+ic_action_database
+                    </item>
+                    <item>
+ic_datacron
+                    </item>
+                    <item>
+ic_action_shield
+                    </item>
+                    <item>
+ic_progression
+                    </item>
+                    <item>
+ic_action_calendar_month
+                    </item>
+                    <item>
+ic_action_users
+                    </item>
+                    <item>
+ic_action_achievement
+                    </item>
+                    <item>
+ic_action_book
+                    </item>
+                    <item>
+ic_action_gear
+                    </item>
+                </array>
+
+                <string-array name="drawerItems" >
+                    <item>
+draweritem1
+                    </item>
+                    <item>
+draweritem2
+                    </item>
+                    <item>
+draweritem3
+                    </item>
+                    <item>
+draweritem4
+                    </item>
+                    <item>
+draweritem5
+                    </item>
+                    <item>
+draweritem6
+                    </item>
+                    <item>
+draweritem7
+                    </item>
+                    <item>
+draweritem8
+                    </item>
+                    <item>
+draweritem9
+                    </item>
+                    <item>
+draweritem10
+                    </item>
+                </string-array>
+            </file>
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values\attrs.xml"
+                qualifiers="" >
+                <declare-styleable name="TextProgressBar" >
+                    <attr
+                        name="text"
+                        format="string" />
+                    <attr
+                        name="textColor"
+                        format="color" />
+                    <attr
+                        name="textSize"
+                        format="dimension" />
+                </declare-styleable>
+            </file>
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values\attrs_timeline_view.xml"
+                qualifiers="" >
+                <declare-styleable name="TimelineView" >
+                    <attr
+                        name="lineWidth"
+                        format="dimension" />
+                    <attr
+                        name="lineColor"
+                        format="color" />
+                    <attr
+                        name="middleSize"
+                        format="float" />
+                    <attr
+                        name="middleColor"
+                        format="color" />
+                    <attr
+                        name="firstSize"
+                        format="float" />
+                    <attr
+                        name="firstColor"
+                        format="color" />
+                    <attr
+                        name="lastSize"
+                        format="float" />
+                    <attr
+                        name="lastColor"
+                        format="color" />
+                    <attr
+                        name="timeline_type"
+                        format="enum" >
+                        <enum
+                            name="start"
+                            value="-1" />
+                        <enum
+                            name="middle"
+                            value="0" />
+                        <enum
+                            name="line"
+                            value="1" />
+                        <enum
+                            name="end"
+                            value="2" />
+                        <enum
+                            name="single"
+                            value="3" />
+                    </attr>
+                </declare-styleable>
+            </file>
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values\colors.xml"
+                qualifiers="" >
+                <color name="background" >#DCDCDC
+                </color>
+                <color name="swtor_blue" >#3F9FE0
+                </color>
+                <color name="swtor_green" >#99cc00
+                </color>
+                <color name="gray_33" >#545454
+                </color>
+                <color name="lightColor" >#0aa421
+                </color>
+                <color name="gray_35" >#232323
+                </color>
+                <color name="material_transparent" >#00000000
+                </color>
+                <color name="material_gray" >#80E0E0E0
+                </color>
+                <color name="material_background" >#fffafafa
+                </color>
+                <color name="black" >#000000
+                </color>
+                <color name="swtor_blue_light" >#d1e8f8
+                </color>
+                <color name="standardColor" >#eebe00
+                </color>
+                <color name="heavyColor" >#FFA545
+                </color>
+                <color name="backgroundlight" >#E5E5E5
+                </color>
+                <color name="subtext" >#949494
+                </color>
+                <color name="material_dialog_title" >#3C3C3D
+                </color>
+                <color name="seperator" >#bdbdbd
+                </color>
+                <color name="material_bg_item_press" >#ffdddddd
+                </color>
+                <color name="material_dialog_button_primary_default" >@android:color/holo_blue_light
+                </color>
+                <color name="material_primary_text_default" >#de000000
+                </color>
+                <color name="gray_46" >#2e2e2e
+                </color>
+                <color name="gray" >#EEEEEE
+                </color>
+                <color name="material_dialog_button_default" >#3C3C3D
+                </color>
+                <color name="swtor_orange" >#FFCB00
+                </color>
+                <color name="text" >#333333
+                </color>
+                <color name="veryheavyColor" >#ff2c2c
+                </color>
+                <color name="white" >#FFFFFF
+                </color>
+                <color name="gray_23" >#3b3b3b
+                </color>
+                <color name="material_seperator" >#bdbdbd
+                </color>
+                <color name="regularColor" >#000000
+                </color>
+                <color name="characterlogin" >#555555
+                </color>
+                <color name="gray_86" >#DCDCDC
+                </color>
+                <color name="fullColor" >#C50000
+                </color>
+                <color name="material_dialog_message" >#000000
+                </color>
+            </file>
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values\dimensions.xml"
+                qualifiers="" >
+                <dimen name="row_margin" >10dp
+                </dimen>
+                <dimen name="seekbar_handel_height" >30dp
+                </dimen>
+                <dimen name="title_size" >16sp
+                </dimen>
+                <dimen name="class_img_height" >60dp
+                </dimen>
+                <dimen name="slidingmenu_offset" >60dp
+                </dimen>
+                <dimen name="material_spacing" >24dp
+                </dimen>
+                <dimen name="edittext_border_size" >3dp
+                </dimen>
+
+                <integer name="num_cols" >
+1
+                </integer>
+
+                <dimen name="padding" >5dp
+                </dimen>
+                <dimen name="dim_10" >10dp
+                </dimen>
+                <dimen name="material_button_text" >12sp
+                </dimen>
+                <dimen name="material_button_width" >88dp
+                </dimen>
+                <dimen name="material_choice_item_height" >42dp
+                </dimen>
+                <dimen name="material_default_margin" >16dp
+                </dimen>
+                <dimen name="list_padding" >10dp
+                </dimen>
+                <dimen name="advclass_img_width" >160dp
+                </dimen>
+                <dimen name="divider_size" >1dp
+                </dimen>
+                <dimen name="width" >60dp
+                </dimen>
+                <dimen name="padding_large" >16.0dip
+                </dimen>
+                <dimen name="tex_size_small" >12sp
+                </dimen>
+                <dimen name="subtitle" >14sp
+                </dimen>
+                <dimen name="material_choice_item_text_size" >18sp
+                </dimen>
+                <dimen name="padding_medium" >8.0dip
+                </dimen>
+                <dimen name="row_padding" >5dp
+                </dimen>
+                <dimen name="material_button_height" >36dp
+                </dimen>
+                <dimen name="dim_20" >20dp
+                </dimen>
+                <dimen name="title" >20sp
+                </dimen>
+                <dimen name="material_edittext_spacing" >14dp
+                </dimen>
+                <dimen name="seekbar_height" >30dp
+                </dimen>
+                <dimen name="dim_50" >50dp
+                </dimen>
+                <dimen name="progressbar_height" >30dp
+                </dimen>
+                <dimen name="tutorial_image_height" >140dp
+                </dimen>
+                <dimen name="test_padding" >10dp
+                </dimen>
+                <dimen name="seekbar_handel_width" >40dp
+                </dimen>
+                <dimen name="tex_size_normal" >14sp
+                </dimen>
+                <dimen name="margin" >5dp
+                </dimen>
+                <dimen name="material_title" >18sp
+                </dimen>
+                <dimen name="material_message" >14sp
+                </dimen>
+                <dimen name="tex_size_xxsmall" >8sp
+                </dimen>
+                <dimen name="tex_size_xlarge" >18sp
+                </dimen>
+                <dimen name="dim_5" >5dp
+                </dimen>
+                <dimen name="tex_size_large" >16sp
+                </dimen>
+                <dimen name="image_height" >160dp
+                </dimen>
+                <dimen name="datacronpadding" >5dp
+                </dimen>
+                <dimen name="dim_40" >40dp
+                </dimen>
+
+                <color name="title_color" >#ffffff
+                </color>
+
+                <dimen name="tex_size_xsmall" >10sp
+                </dimen>
+                <dimen name="height" >50dp
+                </dimen>
+
+                <color name="title_detail_color" >#000000
+                </color>
+
+                <dimen name="material_default_margin_small" >8dp
+                </dimen>
+                <dimen name="material_choice_item_padding" >10dp
+                </dimen>
+                <dimen name="advclass_img_height" >300dp
+                </dimen>
+                <dimen name="dim_30" >30dp
+                </dimen>
+                <dimen name="shadow_width" >15dp
+                </dimen>
+                <dimen name="class_img_height_land" >90dp
+                </dimen>
+                <dimen name="tex_size_xxlarge" >20sp
+                </dimen>
+                <dimen name="padding_small" >8.0dip
+                </dimen>
+                <dimen name="advclasspadding" >10dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values\strings.xml"
+                qualifiers="" >
+                <string name="characters" >Characters
+                </string>
+                <string name="character_menu_delete" >Delete
+                </string>
+                <string name="character_label_advancedclass" >Advanced Class: 
+                </string>
+                <string name="character_menu_save" >Save
+                </string>
+                <string name="character_legacy_label1" >The
+                </string>
+                <string name="test_main" >Test
+                </string>
+                <string name="testcodex" >Codex: Galactic History 47: Naddist Rebels
+                </string>
+                <string name="ability_detail_main" >Ability Details
+                </string>
+                <string name="gameruleslore" >Game Rules
+                </string>
+                <string name="locationslore" >Locations
+                </string>
+                <string name="video_main" >Test
+                </string>
+                <string name="faction_main" >Faction
+                </string>
+                <string name="beastlore" >Beast
+                </string>
+                <string name="pref_user_name_summary" >Set your username
+                </string>
+                <string name="server_sub" >Servers
+                </string>
+                <string name="companion" >Companion
+                </string>
+                <string name="character_menu_edit" >Edit
+                </string>
+                <string name="draweritem10" >Settings
+                </string>
+                <string name="header2" >Advanced
+                </string>
+                <string name="character_legacy_label2" >Legacy
+                </string>
+                <string name="header1" >Menu
+                </string>
+                <string name="informationsub" >Information
+                </string>
+                <string name="lore" >Lore
+                </string>
+                <string name="abilities" >Abilities
+                </string>
+                <string name="drawer_open" >Open navigation drawer
+                </string>
+                <string name="progressionsub" >Progression
+                </string>
+                <string name="server_heavy" >Heavy
+                </string>
+                <string name="server_menu" >Help
+                </string>
+                <string name="action_settings" >Settings
+                </string>
+                <string name="character_edit_main" >Edit Character
+                </string>
+                <string name="pref_sync_frequency_summary" >Set the sync frequency
+                </string>
+                <string name="title_activity_main" >MainActivity
+                </string>
+                <string name="character_label_race" >Race: 
+                </string>
+                <string name="organizationslore" >Organizations
+                </string>
+                <string name="character_name_hint" >Name
+                </string>
+                <string name="achievements_main" >Achievements
+                </string>
+                <string name="pref_send_report_summary" >Helps to fix bugs
+                </string>
+                <string name="character_label_gender" >Gender: 
+                </string>
+                <string name="event_main" >In-Game Events
+                </string>
+                <string name="character_description_hint" >Description
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="menu_server" >Server Status
+                </string>
+                <string name="server1" >US Servers
+                </string>
+                <string name="main_header" >SWTOR Central
+                </string>
+                <string name="factionsub" >Please Choose
+                </string>
+                <string name="server_veryheavy" >Very Heavy
+                </string>
+                <string name="server_name" >Server Status
+                </string>
+                <string name="character_label_alignment" >Alignment: 
+                </string>
+                <string name="empire" >Empire
+                </string>
+                <string name="app_name" >SWTOR Central
+                </string>
+                <string name="advanced_classes" >Advanced Classes
+                </string>
+                <string name="pref_update_setting" >Update Settings
+                </string>
+                <string name="server_standard" >Standard
+                </string>
+                <string name="image_placeholder" >Placeholder for Images
+                </string>
+                <string name="character_main" >Characters
+                </string>
+                <string name="tutorials_main" >Tutorials
+                </string>
+                <string name="companiongifts" >Gifts:
+                </string>
+                <string name="image" >Thumbnail
+                </string>
+                <string name="character_label_crew3" >Crew Skill 3: 
+                </string>
+                <string name="character_label_crew2" >Crew Skill 2: 
+                </string>
+                <string name="character_label_crew1" >Crew Skill 1: 
+                </string>
+                <string name="progression_main" >Progression
+                </string>
+                <string name="menu_settings" >Settings
+                </string>
+                <string name="server_eu" >European
+                </string>
+                <string name="datacron_name" >Datacron
+                </string>
+                <string name="character_legacy_hint" >Legacy Name
+                </string>
+                <string name="pref_sync_frequency" >Sync frequency
+                </string>
+                <string name="serverkey_sub" >Color Key
+                </string>
+                <string name="drawer_close" >Close navigation drawer
+                </string>
+                <string name="advanced_main" >Advanced Class
+                </string>
+                <string name="pref_user_profile" >User Profile
+                </string>
+                <string name="server_light" >Light
+                </string>
+                <string name="titleslore" >Titles
+                </string>
+                <string name="server_us" >United States
+                </string>
+                <string name="character_add_main" >Add Character
+                </string>
+                <string name="reader_name" >News
+                </string>
+                <string name="personslore" >Persons
+                </string>
+                <string name="testcoord" >X: 1107, Y: 80
+                </string>
+                <string name="testreward" >Aim +4
+                </string>
+                <string name="pref_send_report" >Send crash reports
+                </string>
+                <string name="character_level_hint" >Level
+                </string>
+                <string name="button" >Add
+                </string>
+                <string name="datacronsub" >Datacrons
+                </string>
+                <string name="pref_user_name" >Set username
+                </string>
+                <string name="planet_main" >Planet
+                </string>
+                <string name="server_full" >Full
+                </string>
+                <string name="draweritem1" >News
+                </string>
+                <string name="faction" >Faction
+                </string>
+                <string name="republic" >Republic
+                </string>
+                <string name="menu_refresh" >Refresh
+                </string>
+                <string name="draweritem7" >Characters
+                </string>
+                <string name="draweritem6" >In-Game Events
+                </string>
+                <string name="draweritem9" >Tutorials
+                </string>
+                <string name="character_menu_add" >Add Character
+                </string>
+                <string name="draweritem8" >Achievements
+                </string>
+                <string name="settings_header" >Settings
+                </string>
+                <string name="draweritem3" >Datacrons
+                </string>
+                <string name="tab1" >US Servers
+                </string>
+                <string name="draweritem2" >Server Status
+                </string>
+                <string name="tab2" >European Servers
+                </string>
+                <string name="draweritem5" >Progression
+                </string>
+                <string name="draweritem4" >Classes
+                </string>
+                <string name="class_header" >Classes
+                </string>
+                <string name="character_label_class" >Class: 
+                </string>
+                <string name="server_main" >Server Status
+                </string>
+            </file>
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values\styles.xml"
+                qualifiers="" >
+
+                <style name="Widget.ActionBar.Transparent" >
+                    <item name="android:background">
+@android:color/transparent
+                    </item>
+                </style>
+
+                <style
+                    name="Widget.ActionBar"
+                    parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" >
+                    <item name="android:background">
+@drawable/ab_solid_swtor
+                    </item>
+                    <item name="android:icon">
+@drawable/ic_swtor_icon
+                    </item>
+                </style>
+
+                <style
+                    name="ProgressBar.Swtor"
+                    parent="@android:style/Widget.Holo.ProgressBar.Horizontal" >
+                    <item name="android:progressDrawable">
+@drawable/progress_horizontal_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="Theme.Swtor.Widget"
+                    parent="@android:style/Theme.Holo" >
+                    <item name="android:popupMenuStyle">
+@style/PopupMenu.Swtor
+                    </item>
+                    <item name="android:dropDownListViewStyle">
+@style/DropDownListView.Swtor
+                    </item>
+                </style>
+
+                <style name="PagerTitleStrip" >
+                    <item name="android:textColor">
+@color/white
+                    </item>
+                    <item name="android:background">
+#33b5e5
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBar.Solid.Swtor"
+                    parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" >
+                    <item name="android:background">
+@drawable/ab_solid_swtor
+                    </item>
+                    <item name="android:backgroundStacked">
+@drawable/ab_stacked_solid_swtor
+                    </item>
+                    <item name="android:backgroundSplit">
+@drawable/ab_bottom_solid_swtor
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Swtor
+                    </item>
+                    <item name="android:icon">
+@drawable/ic_swtor_icon
+                    </item>
+                </style>
+
+                <style
+                    name="PopupMenu.Swtor"
+                    parent="@android:style/Widget.Holo.ListPopupWindow" >
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="Widget.SWTOR.Material.Dialog.Button"
+                    parent="android:Widget.TextView" >
+                    <item name="android:layout_width">
+@dimen/material_button_width
+                    </item>
+                    <item name="android:layout_height">
+@dimen/material_button_height
+                    </item>
+                    <item name="android:gravity">
+center
+                    </item>
+                    <item name="android:textSize">
+@dimen/material_button_text
+                    </item>
+                    <item name="android:textColor">
+@color/material_dialog_button_default
+                    </item>
+                    <item name="android:alpha">
+.87
+                    </item>
+                    <item name="android:textAllCaps">
+true
+                    </item>
+                    <item name="android:background">
+@drawable/material_button_selector
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBar.Transparent.Swtor"
+                    parent="@android:style/Widget.Holo.ActionBar" >
+                    <item name="android:background">
+@drawable/ab_transparent_swtor
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Swtor
+                    </item>
+                </style>
+
+                <style
+                    name="ActionButton.CloseMode.Swtor"
+                    parent="@android:style/Widget.Holo.ActionButton.CloseMode" >
+                    <item name="android:background">
+@drawable/btn_cab_done_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="CustomProgressBar"
+                    parent="android:Widget.ProgressBar.Horizontal" >
+                    <item name="android:indeterminateOnly">
+false
+                    </item>
+                    <item name="android:progressDrawable">
+@drawable/custom_progress_bar_horizontal
+                    </item>
+                    <item name="android:minHeight">
+10dip
+                    </item>
+                    <item name="android:maxHeight">
+20dip
+                    </item>
+                </style>
+
+                <style name="TwoWayView" >
+                    <item name="android:orientation">
+horizontal
+                    </item>
+                </style>
+
+                <style
+                    name="Widget.SWTOR.Material.Dialog.Title"
+                    parent="android:Widget.TextView" >
+                    <item name="android:textSize">
+@dimen/material_title
+                    </item>
+                    <item name="android:textColor">
+@color/material_dialog_title
+                    </item>
+                    <item name="android:alpha">
+.87
+                    </item>
+                    <item name="android:layout_margin">
+@dimen/material_spacing
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBarTabStyle.Swtor"
+                    parent="@android:style/Widget.Holo.Light.ActionBar.TabView" >
+                    <item name="android:background">
+@drawable/tab_indicator_ab_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="DropDownNav.Swtor"
+                    parent="@android:style/Widget.Holo.Spinner" >
+                    <item name="android:background">
+@drawable/spinner_background_ab_swtor
+                    </item>
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_swtor
+                    </item>
+                    <item name="android:dropDownSelector">
+@drawable/selectable_background_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="Widget.SWTOR.Material.Dialog.Message"
+                    parent="android:Widget.TextView" >
+                    <item name="android:textSize">
+@dimen/material_message
+                    </item>
+                    <item name="android:textColor">
+@color/material_dialog_message
+                    </item>
+                    <item name="android:alpha">
+.54
+                    </item>
+                    <item name="android:lineSpacingMultiplier">
+1.15
+                    </item>
+                </style>
+
+                <style
+                    name="MyDialog"
+                    parent="@android:style/Theme.Dialog" >
+                    <item name="android:windowFrame">
+@null
+                    </item>
+                    <item name="android:windowBackground">
+@color/background
+                    </item>
+                    <item name="android:windowIsFloating">
+false
+                    </item>
+                    <item name="android:windowContentOverlay">
+@null
+                    </item>
+                    <item name="android:windowTitleStyle">
+@null
+                    </item>
+                    <item name="android:colorBackgroundCacheHint">
+@null
+                    </item>
+                    <item name="android:windowAnimationStyle">
+@android:style/Animation.Dialog
+                    </item>
+                    <item name="android:windowSoftInputMode">
+stateUnspecified|adjustPan
+                    </item>
+                    <item name="android:gravity">
+center
+                    </item>
+                </style>
+
+                <style
+                    name="DropDownListView.Swtor"
+                    parent="@android:style/Widget.Holo.ListView.DropDown" >
+                    <item name="android:listSelector">
+@drawable/selectable_background_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="CustomProgressBarCircle"
+                    parent="android:Widget.ProgressBar.Horizontal" >
+                    <item name="android:indeterminateOnly">
+false
+                    </item>
+                    <item name="android:progressDrawable">
+@drawable/custom_progress_bar_circle
+                    </item>
+                    <item name="android:minHeight">
+10dip
+                    </item>
+                    <item name="android:maxHeight">
+20dip
+                    </item>
+                </style>
+
+                <style
+                    name="Theme.Swtor"
+                    parent="@android:style/Theme.Holo.Light.DarkActionBar" >
+                    <item name="android:actionBarItemBackground">
+@drawable/selectable_background_swtor
+                    </item>
+                    <item name="android:popupMenuStyle">
+@style/PopupMenu.Swtor
+                    </item>
+                    <item name="android:dropDownListViewStyle">
+@style/DropDownListView.Swtor
+                    </item>
+                    <item name="android:actionBarTabStyle">
+@style/ActionBarTabStyle.Swtor
+                    </item>
+                    <item name="android:actionDropDownStyle">
+@style/DropDownNav.Swtor
+                    </item>
+                    <item name="android:actionBarStyle">
+@style/ActionBar.Solid.Swtor
+                    </item>
+                    <item name="android:actionModeBackground">
+@drawable/cab_background_top_swtor
+                    </item>
+                    <item name="android:actionModeSplitBackground">
+@drawable/cab_background_bottom_swtor
+                    </item>
+                    <item name="android:actionModeCloseButtonStyle">
+@style/ActionButton.CloseMode.Swtor
+                    </item>
+
+                    <!-- Light.DarkActionBar specific -->
+                    <item name="android:actionBarWidgetTheme">
+@style/Theme.Swtor.Widget
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBarTabText.Swtor"
+                    parent="@android:style/Widget.Holo.ActionBar.TabText" >
+                    <item name="android:textColor">
+@color/tab_text_color
+                    </item>
+                </style>
+            </file>
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values\themes.xml"
+                qualifiers="" >
+
+                <style
+                    name="Theme.TranslucentActionBar"
+                    parent="@android:style/Theme.Holo.Light.DarkActionBar" >
+                    <item name="android:actionBarStyle">
+@style/Widget.ActionBar
+                    </item>
+                    <item name="android:windowContentOverlay">
+@null
+                    </item>
+                </style>
+
+                <style name="Theme.TranslucentActionBar.ActionBar" />
+
+                <style
+                    name="SWTORMaterialDialog"
+                    parent="android:style/Theme.Dialog" >
+                    <item name="android:windowBackground">
+@android:color/transparent
+                    </item>
+                    <item name="android:windowNoTitle">
+true
+                    </item>
+                    <item name="android:windowIsFloating">
+true
+                    </item>
+                </style>
+
+                <style name="Theme.TranslucentActionBar.ActionBar.Overlay" >
+                    <item name="android:actionBarStyle">
+@style/Widget.ActionBar.Transparent
+                    </item>
+                    <item name="android:windowActionBarOverlay">
+true
+                    </item>
+                </style>
+            </file>
+            <file
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\values-v19\styles.xml"
+                qualifiers="v19" >
+
+                <style
+                    name="DropDownListView.Swtor"
+                    parent="@android:style/Widget.Holo.ListView.DropDown" >
+                    <item name="android:listSelector">
+@drawable/selectable_background_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="ActionButton.CloseMode.Swtor"
+                    parent="@android:style/Widget.Holo.ActionButton.CloseMode" >
+                    <item name="android:background">
+@drawable/btn_cab_done_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="PopupMenu.Swtor"
+                    parent="@android:style/Widget.Holo.ListPopupWindow" >
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBar.Solid.Swtor"
+                    parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse" >
+                    <item name="android:background">
+@drawable/ab_solid_swtor
+                    </item>
+                    <item name="android:backgroundStacked">
+@drawable/ab_stacked_solid_swtor
+                    </item>
+                    <item name="android:backgroundSplit">
+@drawable/ab_bottom_solid_swtor
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Swtor
+                    </item>
+                    <item name="android:icon">
+@drawable/ic_swtor_icon
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBarTabText.Swtor"
+                    parent="@android:style/Widget.Holo.ActionBar.TabText" >
+                    <item name="android:textColor">
+@color/tab_text_color
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBarTabStyle.Swtor"
+                    parent="@android:style/Widget.Holo.ActionBar.TabView" >
+                    <item name="android:background">
+@drawable/tab_indicator_ab_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="Theme.Swtor"
+                    parent="@android:style/Theme.Holo.Light.DarkActionBar" >
+                    <item name="android:actionBarItemBackground">
+@drawable/selectable_background_swtor
+                    </item>
+                    <item name="android:popupMenuStyle">
+@style/PopupMenu.Swtor
+                    </item>
+                    <item name="android:dropDownListViewStyle">
+@style/DropDownListView.Swtor
+                    </item>
+                    <item name="android:actionBarTabStyle">
+@style/ActionBarTabStyle.Swtor
+                    </item>
+                    <item name="android:actionDropDownStyle">
+@style/DropDownNav.Swtor
+                    </item>
+                    <item name="android:actionBarStyle">
+@style/ActionBar.Solid.Swtor
+                    </item>
+                    <item name="android:actionModeBackground">
+@drawable/cab_background_top_swtor
+                    </item>
+                    <item name="android:actionModeSplitBackground">
+@drawable/cab_background_bottom_swtor
+                    </item>
+                    <item name="android:actionModeCloseButtonStyle">
+@style/ActionButton.CloseMode.Swtor
+                    </item>
+                    <item name="android:actionBarTabTextStyle">
+@style/ActionBarTabText.Swtor
+                    </item>
+
+                    <!-- Light.DarkActionBar specific -->
+                    <item name="android:actionBarWidgetTheme">
+@style/Theme.Swtor.Widget
+                    </item>
+                </style>
+
+                <style
+                    name="Theme.Swtor.Widget"
+                    parent="@android:style/Theme.Holo" >
+                    <item name="android:popupMenuStyle">
+@style/PopupMenu.Swtor
+                    </item>
+                    <item name="android:dropDownListViewStyle">
+@style/DropDownListView.Swtor
+                    </item>
+                </style>
+
+                <style
+                    name="DropDownNav.Swtor"
+                    parent="@android:style/Widget.Holo.Spinner" >
+                    <item name="android:background">
+@drawable/spinner_background_ab_swtor
+                    </item>
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_swtor
+                    </item>
+                    <item name="android:dropDownSelector">
+@drawable/selectable_background_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBar.Transparent.Swtor"
+                    parent="@android:style/Widget.Holo.ActionBar" >
+                    <item name="android:background">
+@drawable/ab_transparent_swtor
+                    </item>
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Swtor
+                    </item>
+                </style>
+
+                <style
+                    name="ProgressBar.Swtor"
+                    parent="@android:style/Widget.Holo.ProgressBar.Horizontal" >
+                    <item name="android:progressDrawable">
+@drawable/progress_horizontal_swtor
+                    </item>
+                </style>
+            </file>
+            <file
+                name="settings"
+                path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\main\res\xml\settings.xml"
+                qualifiers=""
+                type="xml" />
+        </source>
+        <source path="C:\Users\e9900375\Desktop\SWTORCentral1\app\build\generated\res\rs\debug" />
+        <source path="C:\Users\e9900375\Desktop\SWTORCentral1\app\build\generated\res\generated\debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\Users\e9900375\Desktop\SWTORCentral1\app\src\debug\res" />
+    </dataSet>
+
+</merger>

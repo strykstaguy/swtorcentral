@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@android:id/secondaryProgress">
+   <shape
+        android:innerRadiusRatio="2.5"
+        android:shape="ring"
+        android:thickness="3dp"
+        android:useLevel="false">
+        <solid android:color="#c3c3c3"/>
+   </shape>
+  </item>
+  <item android:id="@android:id/progress">
+    <shape
+        android:innerRadiusRatio="2.5"
+        android:shape="ring"
+        android:thickness="3dp">
+        <solid android:color="@color/swtor_blue"/>
+    </shape>
+  </item>
+</layer-list>

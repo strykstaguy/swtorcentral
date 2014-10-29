@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <GridView
+    	android:id="@+id/companionlist"
+    	android:numColumns="1"
+    	android:gravity="center"
+    	android:columnWidth="160dp"
+    	android:stretchMode="columnWidth"
+    	android:scrollbarStyle="outsideInset"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="#DCDCDC"
+    	android:verticalSpacing="5dp"
+    	android:horizontalSpacing="5dp" 
+    	android:paddingTop="10dp"
+    	android:paddingLeft="10dp"
+    	android:paddingBottom="10dp" >
+	</GridView>
+
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/advanced_class_tab2.xml -->

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+   	
+    <LinearLayout
+        android:id="@+id/planetBackground"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="175.0dip" />
+    	
+    <TextView
+        android:id="@+id/txtPlanet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:gravity="center"
+        android:layout_marginTop="10.0dip"
+        android:textSize="20.0dip"
+        android:textColor="@color/text" />
+    
+	<android.support.v4.view.ViewPager
+    	android:id="@+id/planet_pager"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+    
+    	<android.support.v4.view.PagerTitleStrip
+        	android:id="@+id/planet_title_strip"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_gravity="top"
+        	android:background="@color/background"
+        	android:textColor="@color/subtext"
+        	android:textSize="14.0dip"
+        	android:paddingBottom="5.0dp" />
+	</android.support.v4.view.ViewPager>
+	
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/planet_main.xml -->

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+    
+     <ImageView 
+        android:id="@+id/imgThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_placeholder"
+        android:src="@drawable/rakghoul"
+        android:background="@android:color/darker_gray"/>
+     
+    <LinearLayout 
+        android:layout_width="60dip"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/imgThumbnail"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/title_background">
+       <TextView 
+       		android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:textSize="@dimen/tex_size_large"
+            android:textColor="@color/swtor_orange"
+            
+            android:textStyle="bold"
+            android:text="Offline" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/txtEventDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/imgThumbnail"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/title_background">
+       <TextView 
+            android:id="@+id/txtDates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:textSize="@dimen/tex_size_large"
+            android:textColor="@color/white"
+            android:layout_gravity="left"
+   			android:gravity="center"
+            android:text="JANUARY 21 – 28, 2014: BEGINS AND ENDS AT 2AM PST/10AM GMT" />
+    </LinearLayout>
+    <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/txtEventDates" >
+    
+    <TextView 
+            android:id="@+id/textEventinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:textSize="@dimen/tex_size_normal"
+            android:textColor="@color/black" />
+	</ScrollView>
+</RelativeLayout>
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/events_tab3.xml -->
