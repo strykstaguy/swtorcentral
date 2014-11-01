@@ -24,4 +24,4 @@
  	    android:text="Lore"
  	    android:textColor="@color/subtext"
  	    android:textSize="@dimen/subtitle" />
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/test_group.xml -->
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/test_group.xml -->

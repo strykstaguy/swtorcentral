@@ -22,7 +22,7 @@
         android:gravity="center"
         android:maxLines="1"
         android:textAppearance="?android:textAppearanceSmall"
-        android:textColor="@color/regularColor" />
+        android:textColor="@color/regularcolor" />
 
     <TextView
         android:id="@+id/serverStatus"

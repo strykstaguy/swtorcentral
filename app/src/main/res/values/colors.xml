@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="regularColor">#000000</color>
-    <color name="lightColor">#0aa421</color>
-    <color name="standardColor">#eebe00</color>
-    <color name="heavyColor">#FFA545</color>
-    <color name="veryheavyColor">#ff2c2c</color>
-    <color name="fullColor">#C50000</color>
+    <color name="regularcolor">#000000</color>
+    <color name="lightcolor">#0aa421</color>
+    <color name="standardcolor">#eebe00</color>
+    <color name="heavycolor">#ff8401</color>
+    <color name="veryheavycolor">#ff2c2c</color>
+    <color name="fullcolor">#C50000</color>
+
     <color name="white">#FFFFFF</color>
     <color name="gray">#EEEEEE</color>
     <color name="black">#000000</color>
-    <color name="background">#DCDCDC</color>
+    <color name="background">#dcdcdc</color>
     <color name="backgroundlight">#E5E5E5</color>
     <color name="text">#333333</color>
     <color name="subtext">#949494</color>
@@ -24,7 +25,7 @@
     <color name="swtor_green">#99cc00</color>
     <color name="swtor_orange">#FFCB00</color>
     <color name="seperator">#bdbdbd</color>
-    
+
     <color name="material_dialog_title">#3C3C3D</color>
     <color name="material_dialog_message">#000000</color>
     <color name="material_dialog_button_default">#3C3C3D</color>
@@ -32,7 +33,7 @@
     <color name="material_background">#fffafafa</color>
     <color name="material_gray">#80E0E0E0</color>
     <color name="material_primary_text_default">#de000000</color>
- 	<color name="material_seperator">#bdbdbd</color>
- 	<color name="material_bg_item_press">#ffdddddd</color>
+    <color name="material_seperator">#bdbdbd</color>
+    <color name="material_bg_item_press">#ffdddddd</color>
     <color name="material_transparent">#00000000</color>
 </resources>

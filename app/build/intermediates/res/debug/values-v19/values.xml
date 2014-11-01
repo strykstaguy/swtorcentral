@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/values-v19/styles.xml -->
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values-v19/styles.xml -->
     <eat-comment />
 
     <style name="ActionBar.Solid.Swtor" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">

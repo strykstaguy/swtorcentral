@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:paddingLeft="5dp"
-            android:textColor="@color/regularColor"
+            android:textColor="@color/regularcolor"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:paddingLeft="5dp"
-            android:textColor="@color/regularColor"
+            android:textColor="@color/regularcolor"
             android:textSize="14sp" />
 
         <TextView
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:paddingLeft="5dp"
-            android:textColor="@color/regularColor"
+            android:textColor="@color/regularcolor"
             android:textSize="12sp" />
         
         <LinearLayout
@@ -52,7 +52,7 @@
             android:layout_gravity="left"
             android:paddingLeft="5dp"
             android:paddingTop="10dp"
-            android:textColor="@color/regularColor"
+            android:textColor="@color/regularcolor"
             android:textSize="14sp" />
 
         <TextView
@@ -62,7 +62,7 @@
             android:layout_weight="1"
             android:paddingLeft="5dp"
             android:paddingTop="10dp"
-            android:textColor="@color/regularColor"
+            android:textColor="@color/regularcolor"
             android:textSize="14sp" />
 		</LinearLayout>
     </LinearLayout>
@@ -76,4 +76,4 @@
         android:textSize="20sp"
         android:gravity="center" />
 
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/achievement_items_row.xml -->
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/achievement_items_row.xml -->

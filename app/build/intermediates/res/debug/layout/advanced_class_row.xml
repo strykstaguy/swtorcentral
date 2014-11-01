@@ -31,7 +31,7 @@
     
     <TextView
         android:textSize="14.0dip"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:id="@+id/txtRole"
         android:paddingLeft="5.0dip"
         android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
     
     <TextView
         android:textSize="14.0dip"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:id="@+id/txtRomance"
         android:paddingLeft="5.0dip"
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
     
     <TextView
         android:textSize="14.0dip"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:id="@+id/txtStats"
         android:paddingLeft="5.0dip"
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
     
     <TextView
         android:textSize="14.0dip"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:id="@+id/txtArmor"
         android:paddingLeft="5.0dip"
         android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
     
     <TextView
         android:textSize="14.0dip"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:id="@+id/txtWeapon"
         android:paddingLeft="5.0dip"
         android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
     
     <TextView
         android:textSize="14.0dip"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:id="@+id/txtBonus"
         android:paddingLeft="5.0dip"
         android:layout_marginTop="10.0dip"
@@ -80,7 +80,7 @@
     
     <TextView
         android:textSize="14.0dip"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:id="@+id/txtDescription"
         android:paddingLeft="5.0dip"
         android:layout_marginTop="10.0dip"
@@ -88,4 +88,4 @@
         android:singleLine="false" 
         android:layout_height="wrap_content"  />
     </LinearLayout>
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/advanced_class_row.xml -->
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/advanced_class_row.xml -->

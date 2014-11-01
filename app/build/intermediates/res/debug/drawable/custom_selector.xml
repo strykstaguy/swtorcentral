@@ -3,4 +3,4 @@
 	<item android:drawable="@drawable/ic_action_indicator_up" android:state_empty="true">  </item>            
     <item android:drawable="@drawable/ic_action_indicator_down" android:state_expanded="true"></item>                
     <item android:drawable="@drawable/ic_action_indicator_up"></item>
-</selector><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/drawable/custom_selector.xml -->
+</selector><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/drawable/custom_selector.xml -->

@@ -22,7 +22,7 @@
         android:gravity="center"
         android:maxLines="1"
         android:textAppearance="?android:textAppearanceSmall"
-        android:textColor="@color/regularColor" />
+        android:textColor="@color/regularcolor" />
 
     <TextView
         android:id="@+id/serverStatus"
@@ -31,4 +31,4 @@
         android:gravity="center"
         android:textColor="@android:color/black"
         android:textSize="14sp" />
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/server_row.xml -->
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/server_row.xml -->

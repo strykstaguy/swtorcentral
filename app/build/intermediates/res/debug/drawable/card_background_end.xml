@@ -6,4 +6,4 @@
     <item android:drawable="@drawable/background_bottom" android:state_pressed="true"/>
     <item android:drawable="@drawable/background_bottom" android:state_active="true"/>
     <item android:drawable="@drawable/background_bottom"/>
-</selector><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/drawable/card_background_end.xml -->
+</selector><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/drawable/card_background_end.xml -->

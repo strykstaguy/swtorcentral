@@ -181,19 +181,19 @@ public class ServerActivity extends FragmentActivity  {
 	        builder.setView(v);
 	        
 	        ImageView serverLight = (ImageView) v.findViewById(R.id.IMGserverLight);
-	        serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightColor)));
+	        serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightcolor)));
 	        
 	        ImageView serverStandard = (ImageView) v.findViewById(R.id.serverStandard);
-	        serverStandard.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.standardColor)));
+	        serverStandard.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.standardcolor)));
 	          
 	        ImageView serverHeavy = (ImageView) v.findViewById(R.id.serverHeavy);
-	        serverHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.heavyColor)));
+	        serverHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.heavycolor)));
 	         
 	        ImageView serverVeryHeavy = (ImageView) v.findViewById(R.id.serverVeryHeavy);
-	        serverVeryHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.veryheavyColor)));
+	        serverVeryHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.veryheavycolor)));
 	          
 	        ImageView serverFull = (ImageView) v.findViewById(R.id.serverFull);
-	        serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullColor)));
+	        serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullcolor)));
 	          
 	        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 	        	public void onClick(DialogInterface dialog, int whichButton) {

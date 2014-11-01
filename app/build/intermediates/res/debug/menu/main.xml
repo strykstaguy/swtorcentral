@@ -4,4 +4,4 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
-</menu><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/menu/main.xml -->
+</menu><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/menu/main.xml -->

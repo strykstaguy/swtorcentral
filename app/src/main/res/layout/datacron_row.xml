@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 		android:paddingLeft="5dp"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:layout_gravity="left"
         android:textStyle="bold"
         android:text="@string/testreward"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 		android:paddingLeft="5dp"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:layout_gravity="left"
         android:textSize="16sp" />
 
@@ -33,7 +33,7 @@
         android:layout_gravity="left"
         android:paddingLeft="5dp"
         android:text="@string/testcoord"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:textSize="14sp" />
     
     <TextView
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
-        android:textColor="@color/regularColor"
+        android:textColor="@color/regularcolor"
         android:layout_gravity="left"
         android:textSize="14sp" />
 </LinearLayout>

@@ -26,4 +26,4 @@
         android:layout_below="@+id/menurow_title"
         android:src="@color/backgroundlight" />
 
-</RelativeLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral1/app/src/main/res/layout/drawer_header.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/drawer_header.xml -->
