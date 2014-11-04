@@ -118,8 +118,7 @@ public class ServerActivity extends FragmentActivity  {
 					if (!serverStatus.equals("DOWN")) {
 						serverStatusIMG = R.drawable.ic_action_serverup;
 		            }
-					
-					
+
 					//ServerItem mItem = new ServerItem(R.drawable.navigation_up, serverName, serverPop);
 					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop);
 					euItems.add(item);
