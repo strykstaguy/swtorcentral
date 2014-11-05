@@ -1,6 +1,7 @@
 package com.stryksta.swtorcentral;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,7 @@ public class EventAdapter extends ArrayAdapter<EventItem> {
             holder = new ViewHolder();
 
             holder.txtViewEventName = (TextView) v.findViewById(R.id.eventTitle);
+            holder.txtViewEventStatus = (TextView) v.findViewById(R.id.eventStatus);
             holder.txtViewEventDescription = (TextView) v.findViewById(R.id.eventDescription);
 
             v.setTag(holder);
@@ -45,11 +47,15 @@ public class EventAdapter extends ArrayAdapter<EventItem> {
         EventItem rowItem = results.get(position);
 
         	if (holder.txtViewEventName != null) {
-        		holder.txtViewEventName.setText(rowItem.geteventTitle());
+        		holder.txtViewEventName.setText(rowItem.getTitle());
             }
         	
         	if (holder.txtViewEventDescription != null) {
-        		holder.txtViewEventDescription.setText(rowItem.geteventDesc());
+        		holder.txtViewEventDescription.setText(Html.fromHtml(rowItem.getDescription()));
+            }
+
+            if (holder.txtViewEventStatus != null) {
+                holder.txtViewEventStatus.setText(rowItem.getStatus());
             }
 
         return v;
@@ -57,6 +63,7 @@ public class EventAdapter extends ArrayAdapter<EventItem> {
 
     private static class ViewHolder {
         public TextView txtViewEventName;
+        public TextView txtViewEventStatus;
         public TextView txtViewEventDescription;
     }
 }

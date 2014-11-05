@@ -24,6 +24,12 @@ public class EventsActivity extends FragmentActivity {
     GridView eventsGridView;
     ArrayList<EventItem> eventsItems;
     MaterialProgress pDialog;
+    String eventTitle;
+    String eventStatus;
+    String eventStart;
+    String eventEnd;
+    String eventDescription;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +73,6 @@ public class EventsActivity extends FragmentActivity {
                 eventsItems = new ArrayList<EventItem>();
 
                 Document doc = Jsoup.connect(URL).get();
-
                 Elements events = doc.select("div.section");
 
                 for(Element event: events) {
@@ -76,24 +81,46 @@ public class EventsActivity extends FragmentActivity {
 
                     //Convert to String
                     String h3Header = masthead.text();
-
                     String[] separated = h3Header.split(":");
 
+                    eventStatus = Utility.toTitleCase(separated[0]);
                     //Log.e("SWTORCentral", "Status: " + Utility.toTitleCase(separated[0]));
 
-                    //Remove last word
-                    //String TitleTxt = separated[2];
-                    Log.e("SWTORCentral", "Status: " + Utility.toTitleCase(separated[0]));
-                    Log.e("SWTORCentral", "Title: " + Utility.toTitleCase(separated[1]));
+                    //Remove last word and whitespace
+                    String TitleTxt = separated[1].replace("BEGINS","");
+                    TitleTxt.replaceAll("\\s+","");
 
-                    if (separated[2] != null) {
-                        Log.e("SWTORCentral", "Date: " + separated[2]);
+                    eventTitle = Utility.toTitleCase(TitleTxt);
+                    //Log.e("SWTORCentral", "Title: " + Utility.toTitleCase(TitleTxt));
+
+                    //If online or coming soon, print the dates
+                    if (!separated[0].equalsIgnoreCase("OFFLINE")) {
+                        //Remove last word and whitespace
+                        String beginsTxt = separated[2].replace("ENDS","");
+                        beginsTxt.replaceAll("\\s+","");
+
+                        eventStart = beginsTxt;
+                        eventEnd = separated[3];
+
+                        //Log.e("SWTORCentral", "Begins: " + beginsTxt);
+                        //Log.e("SWTORCentral", "Ends: " + separated[3]);
+                    } else {
+                        eventStart = "";
+                        eventEnd = "";
                     }
 
-                    //String eventDescription = event.select("desc").get(0).text();
+                    //Get Header
+                    Element description = event.select("div.desc").first();
 
-                    //EventItem item = new EventItem(R.drawable.ic_action_serverup, eventName, eventDescription);
-                    //eventsItems.add(item);
+                    //Convert to String
+                    eventDescription = description.html();
+
+                    //Log.e("SWTORCentral", "Descript: " + txtdescription);
+
+                    //String eventStatus, String eventTitle, String eventStart, String eventEnd, String eventDescription
+
+                    EventItem item = new EventItem(R.drawable.ic_action_serverup, eventStatus, eventTitle, eventStart, eventEnd, eventDescription);
+                    eventsItems.add(item);
                 }
             } catch (Exception e) {
                 pDialog.dismiss();
@@ -108,8 +135,8 @@ public class EventsActivity extends FragmentActivity {
         }
 
         protected void onPostExecute(ArrayList<EventItem> result) {
-            //EventAdapter eventsAdapter = new EventAdapter(EventsActivity.this, R.layout.event_row, eventsItems);
-            //eventsGridView.setAdapter(eventsAdapter);
+            EventAdapter eventsAdapter = new EventAdapter(EventsActivity.this, R.layout.event_row, eventsItems);
+            eventsGridView.setAdapter(eventsAdapter);
 
             pDialog.dismiss();
         }
