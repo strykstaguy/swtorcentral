@@ -96,10 +96,18 @@ public class EventsActivity extends FragmentActivity {
                     //If online or coming soon, print the dates
                     if (!separated[0].equalsIgnoreCase("OFFLINE")) {
                         //Remove last word and whitespace
+
                         String beginsTxt = separated[2].replace("ENDS","");
                         beginsTxt.replaceAll("\\s+","");
 
-                        eventStart = beginsTxt;
+                        String beforedate = beginsTxt.replaceAll("\\bAT\\b", "");
+
+                        //get everything before "AT"
+                        //String beforedate = Utility.toTitleCase(Utility.subStringBefore(beginsTxt, "AT"));
+
+                        Log.e("SWTORCentral", "Begins: " + beforedate);
+
+                        eventStart = beforedate;
                         eventEnd = separated[3];
 
                         //Log.e("SWTORCentral", "Begins: " + beginsTxt);

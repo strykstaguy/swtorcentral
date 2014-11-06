@@ -88,6 +88,19 @@ public class Utility {
         return newWord;
     }
 
+    public static String subStringBefore(String sentence, String after) {
+
+        int stopSub = subStringEndIndex(sentence, after);
+        /*
+        int idx = beginsTxt.indexOf("AT");
+        if (idx < 0)
+            throw new IllegalArgumentException("Word not found.");
+        String before = beginsTxt.substring(0, idx);
+        */
+        String newWord = sentence.substring(0, stopSub);
+        return newWord;
+    }
+
     public static int subStringStartIndex(String sentence, String delimiterBeforeWord) {
 
         int startIndex = 0;

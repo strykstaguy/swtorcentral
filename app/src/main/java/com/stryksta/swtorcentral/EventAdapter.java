@@ -7,7 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.stryksta.swtorcentral.data.EventItem;
+import com.stryksta.swtorcentral.util.Utility;
 
 import java.util.ArrayList;
 
@@ -38,6 +41,8 @@ public class EventAdapter extends ArrayAdapter<EventItem> {
             holder.txtViewEventName = (TextView) v.findViewById(R.id.eventTitle);
             holder.txtViewEventStatus = (TextView) v.findViewById(R.id.eventStatus);
             holder.txtViewEventDescription = (TextView) v.findViewById(R.id.eventDescription);
+            holder.txtViewEventStart = (TextView) v.findViewById(R.id.eventStart);
+            holder.txtViewEventEnd = (TextView) v.findViewById(R.id.eventEnd);
 
             v.setTag(holder);
         } else {
@@ -58,6 +63,25 @@ public class EventAdapter extends ArrayAdapter<EventItem> {
                 holder.txtViewEventStatus.setText(rowItem.getStatus());
             }
 
+            if (holder.txtViewEventEnd != null) {
+                if (rowItem.getEnd().equals("")) {
+                    holder.txtViewEventEnd.setVisibility(View.GONE);
+                } else {
+                    holder.txtViewEventEnd.setText("End: " + rowItem.getEnd());
+                    //String TestDate = Utility.convertDateFormat(rowItem.getEnd(), "M d, y", "dd/MM/yyyy", "Failed to convert");
+                   //Toast.makeText(mContext, TestDate, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            if (holder.txtViewEventStart != null) {
+
+                if (rowItem.getStart().equals("")) {
+                    holder.txtViewEventStart.setVisibility(View.GONE);
+                } else {
+                    holder.txtViewEventStart.setText("Start: " + rowItem.getStart());
+                }
+            }
+
         return v;
     }
 
@@ -65,5 +89,7 @@ public class EventAdapter extends ArrayAdapter<EventItem> {
         public TextView txtViewEventName;
         public TextView txtViewEventStatus;
         public TextView txtViewEventDescription;
+        public TextView txtViewEventEnd;
+        public TextView txtViewEventStart;
     }
 }
