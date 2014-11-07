@@ -84,31 +84,39 @@ public class EventsActivity extends FragmentActivity {
                     String[] separated = h3Header.split(":");
 
                     eventStatus = Utility.toTitleCase(separated[0]);
-                    //Log.e("SWTORCentral", "Status: " + Utility.toTitleCase(separated[0]));
 
                     //Remove last word and whitespace
                     String TitleTxt = separated[1].replace("BEGINS","");
                     TitleTxt.replaceAll("\\s+","");
 
                     eventTitle = Utility.toTitleCase(TitleTxt);
-                    //Log.e("SWTORCentral", "Title: " + Utility.toTitleCase(TitleTxt));
 
                     //If online or coming soon, print the dates
                     if (!separated[0].equalsIgnoreCase("OFFLINE")) {
                         //Remove last word and whitespace
 
-                        String beginsTxt = separated[2].replace("ENDS","");
-                        beginsTxt.replaceAll("\\s+","");
-
-                        String beforedate = beginsTxt.replaceAll("\\bAT\\b", "");
+                        String originalStart = separated[2].replace("ENDS","");
+                        originalStart = originalStart.trim();
 
                         //get everything before "AT"
-                        //String beforedate = Utility.toTitleCase(Utility.subStringBefore(beginsTxt, "AT"));
+                        String originalStartDate = Utility.toTitleCase(Utility.subStringBefore(originalStart, "AT"));
+                        //get everything after "AT"
+                        String originalStartTime = Utility.subStringBetween(originalStart, "AT", "/");
+                        originalStartTime = originalStartTime.trim();
 
-                        Log.e("SWTORCentral", "Begins: " + beforedate);
+                        eventStart = originalStartDate + originalStartTime;
 
-                        eventStart = beforedate;
-                        eventEnd = separated[3];
+
+                        String originalEnd = separated[3].replace("ENDS","");
+                        originalEnd = originalEnd.trim();
+
+                        //get everything before "AT"
+                        String originalEndDate = Utility.toTitleCase(Utility.subStringBefore(originalEnd, "AT"));
+                        //get everything after "AT"
+                        String originalEndTime = Utility.subStringBetween(originalEnd, "AT", "/");
+                        originalEndTime = originalEndTime.trim();
+
+                        eventEnd = originalEndDate + originalEndTime;
 
                         //Log.e("SWTORCentral", "Begins: " + beginsTxt);
                         //Log.e("SWTORCentral", "Ends: " + separated[3]);

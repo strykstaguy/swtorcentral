@@ -4,7 +4,7 @@
    android:layout_width="fill_parent"
    android:layout_height="fill_parent"
    android:background="@drawable/card_background"
-   android:padding="6.0dip"
+   android:padding="10.0dip"
    android:orientation="vertical">
 
     <LinearLayout
@@ -58,7 +58,8 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:text="BLAH BLAK TESTaj dfalsdjflasjfl;asjdf l;asjdf"
-        android:textColor="@android:color/black"
+        android:textColor="@color/text"
+        android:paddingTop="@dimen/dim_10"
         android:textSize="14sp" />
 
 </LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/event_row.xml -->

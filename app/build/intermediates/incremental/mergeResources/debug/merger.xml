@@ -2094,26 +2094,6 @@
                 qualifiers=""
                 type="layout" />
             <file
-                name="events_tab1"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\res\layout\events_tab1.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="events_tab2"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\res\layout\events_tab2.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="events_tab3"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\res\layout\events_tab3.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="events_tab4"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\res\layout\events_tab4.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="event_row"
                 path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\res\layout\event_row.xml"
                 qualifiers=""
@@ -2326,20 +2306,6 @@
             <file
                 path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\res\values\arrays.xml"
                 qualifiers="" >
-                <string-array name="syncFrequency" >
-                    <item name="1">
-Once a day
-                    </item>
-                    <item name="7">
-Once a week
-                    </item>
-                    <item name="3">
-Once a year
-                    </item>
-                    <item name="0">
-Never (Update maually)
-                    </item>
-                </string-array>
                 <string-array name="syncFrequencyValues" >
                     <item name="1">
 1
@@ -2352,6 +2318,20 @@ Never (Update maually)
                     </item>
                     <item name="0">
 0
+                    </item>
+                </string-array>
+                <string-array name="syncFrequency" >
+                    <item name="1">
+Once a day
+                    </item>
+                    <item name="7">
+Once a week
+                    </item>
+                    <item name="3">
+Once a year
+                    </item>
+                    <item name="0">
+Never (Update maually)
                     </item>
                 </string-array>
 
@@ -2498,9 +2478,9 @@ draweritem11
                 </color>
                 <color name="regularcolor" >#000000
                 </color>
-                <color name="swtor_blue" >#3F9FE0
-                </color>
                 <color name="background" >#dcdcdc
+                </color>
+                <color name="swtor_blue" >#3F9FE0
                 </color>
                 <color name="swtor_green" >#99cc00
                 </color>
@@ -2508,13 +2488,13 @@ draweritem11
                 </color>
                 <color name="gray_35" >#232323
                 </color>
-                <color name="material_gray" >#80E0E0E0
-                </color>
                 <color name="material_transparent" >#00000000
                 </color>
-                <color name="heavycolor" >#ff8401
+                <color name="material_gray" >#80E0E0E0
                 </color>
                 <color name="material_background" >#fffafafa
+                </color>
+                <color name="heavycolor" >#ff8401
                 </color>
                 <color name="black" >#000000
                 </color>
@@ -2542,9 +2522,9 @@ draweritem11
                 </color>
                 <color name="material_dialog_button_default" >#3C3C3D
                 </color>
-                <color name="swtor_orange" >#FFCB00
-                </color>
                 <color name="standardcolor" >#eebe00
+                </color>
+                <color name="swtor_orange" >#FFCB00
                 </color>
                 <color name="text" >#333333
                 </color>
@@ -2597,9 +2577,9 @@ draweritem11
                 </dimen>
                 <dimen name="material_default_margin" >16dp
                 </dimen>
-                <dimen name="advclass_img_width" >160dp
-                </dimen>
                 <dimen name="list_padding" >10dp
+                </dimen>
+                <dimen name="advclass_img_width" >160dp
                 </dimen>
                 <dimen name="divider_size" >1dp
                 </dimen>
@@ -2607,13 +2587,13 @@ draweritem11
                 </dimen>
                 <dimen name="padding_large" >16.0dip
                 </dimen>
-                <dimen name="subtitle" >14sp
-                </dimen>
                 <dimen name="tex_size_small" >12sp
                 </dimen>
-                <dimen name="padding_medium" >8.0dip
+                <dimen name="subtitle" >14sp
                 </dimen>
                 <dimen name="material_choice_item_text_size" >18sp
+                </dimen>
+                <dimen name="padding_medium" >8.0dip
                 </dimen>
                 <dimen name="row_padding" >5dp
                 </dimen>
@@ -2677,9 +2657,9 @@ draweritem11
                 </dimen>
                 <dimen name="advclass_img_height" >300dp
                 </dimen>
-                <dimen name="shadow_width" >15dp
-                </dimen>
                 <dimen name="dim_30" >30dp
+                </dimen>
+                <dimen name="shadow_width" >15dp
                 </dimen>
                 <dimen name="class_img_height_land" >90dp
                 </dimen>
@@ -2693,11 +2673,11 @@ draweritem11
             <file
                 path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\res\values\strings.xml"
                 qualifiers="" >
-                <string name="character_label_advancedclass" >Advanced Class: 
+                <string name="characters" >Characters
                 </string>
                 <string name="character_menu_delete" >Delete
                 </string>
-                <string name="characters" >Characters
+                <string name="character_label_advancedclass" >Advanced Class: 
                 </string>
                 <string name="character_menu_save" >Save
                 </string>
@@ -2707,9 +2687,9 @@ draweritem11
                 </string>
                 <string name="testcodex" >Codex: Galactic History 47: Naddist Rebels
                 </string>
-                <string name="gameruleslore" >Game Rules
-                </string>
                 <string name="ability_detail_main" >Ability Details
+                </string>
+                <string name="gameruleslore" >Game Rules
                 </string>
                 <string name="locationslore" >Locations
                 </string>
@@ -2749,21 +2729,21 @@ draweritem11
                 </string>
                 <string name="server_heavy" >Heavy
                 </string>
-                <string name="pref_sync_frequency_summary" >Set the sync frequency
-                </string>
-                <string name="character_edit_main" >Edit Character
+                <string name="server_menu" >Help
                 </string>
                 <string name="action_settings" >Settings
                 </string>
-                <string name="server_menu" >Help
+                <string name="character_edit_main" >Edit Character
                 </string>
-                <string name="character_label_race" >Race: 
+                <string name="pref_sync_frequency_summary" >Set the sync frequency
                 </string>
                 <string name="title_activity_main" >MainActivity
                 </string>
-                <string name="character_name_hint" >Name
+                <string name="character_label_race" >Race: 
                 </string>
                 <string name="organizationslore" >Organizations
+                </string>
+                <string name="character_name_hint" >Name
                 </string>
                 <string name="achievements_main" >Achievements
                 </string>
@@ -2883,25 +2863,25 @@ draweritem11
                 </string>
                 <string name="character_menu_add" >Add Character
                 </string>
-                <string name="settings_header" >Settings
-                </string>
                 <string name="draweritem8" >Achievements
                 </string>
-                <string name="tab1" >US Servers
+                <string name="settings_header" >Settings
                 </string>
                 <string name="draweritem3" >Datacrons
                 </string>
-                <string name="tab2" >European Servers
+                <string name="tab1" >US Servers
                 </string>
                 <string name="draweritem2" >Server Status
                 </string>
+                <string name="tab2" >European Servers
+                </string>
                 <string name="draweritem5" >Progression
                 </string>
-                <string name="character_label_class" >Class: 
+                <string name="draweritem4" >Classes
                 </string>
                 <string name="class_header" >Classes
                 </string>
-                <string name="draweritem4" >Classes
+                <string name="character_label_class" >Class: 
                 </string>
                 <string name="server_main" >Server Status
                 </string>
@@ -3055,28 +3035,6 @@ horizontal
                 </style>
 
                 <style
-                    name="DropDownNav.Swtor"
-                    parent="@android:style/Widget.Holo.Spinner" >
-                    <item name="android:background">
-@drawable/spinner_background_ab_swtor
-                    </item>
-                    <item name="android:popupBackground">
-@drawable/menu_dropdown_panel_swtor
-                    </item>
-                    <item name="android:dropDownSelector">
-@drawable/selectable_background_swtor
-                    </item>
-                </style>
-
-                <style
-                    name="ActionBarTabStyle.Swtor"
-                    parent="@android:style/Widget.Holo.Light.ActionBar.TabView" >
-                    <item name="android:background">
-@drawable/tab_indicator_ab_swtor
-                    </item>
-                </style>
-
-                <style
                     name="Widget.SWTOR.Material.Dialog.Title"
                     parent="android:Widget.TextView" >
                     <item name="android:textSize">
@@ -3094,10 +3052,41 @@ horizontal
                 </style>
 
                 <style
-                    name="DropDownListView.Swtor"
-                    parent="@android:style/Widget.Holo.ListView.DropDown" >
-                    <item name="android:listSelector">
+                    name="ActionBarTabStyle.Swtor"
+                    parent="@android:style/Widget.Holo.Light.ActionBar.TabView" >
+                    <item name="android:background">
+@drawable/tab_indicator_ab_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="DropDownNav.Swtor"
+                    parent="@android:style/Widget.Holo.Spinner" >
+                    <item name="android:background">
+@drawable/spinner_background_ab_swtor
+                    </item>
+                    <item name="android:popupBackground">
+@drawable/menu_dropdown_panel_swtor
+                    </item>
+                    <item name="android:dropDownSelector">
 @drawable/selectable_background_swtor
+                    </item>
+                </style>
+
+                <style
+                    name="Widget.SWTOR.Material.Dialog.Message"
+                    parent="android:Widget.TextView" >
+                    <item name="android:textSize">
+@dimen/material_message
+                    </item>
+                    <item name="android:textColor">
+@color/material_dialog_message
+                    </item>
+                    <item name="android:alpha">
+.54
+                    </item>
+                    <item name="android:lineSpacingMultiplier">
+1.15
                     </item>
                 </style>
 
@@ -3134,19 +3123,10 @@ center
                 </style>
 
                 <style
-                    name="Widget.SWTOR.Material.Dialog.Message"
-                    parent="android:Widget.TextView" >
-                    <item name="android:textSize">
-@dimen/material_message
-                    </item>
-                    <item name="android:textColor">
-@color/material_dialog_message
-                    </item>
-                    <item name="android:alpha">
-.54
-                    </item>
-                    <item name="android:lineSpacingMultiplier">
-1.15
+                    name="DropDownListView.Swtor"
+                    parent="@android:style/Widget.Holo.ListView.DropDown" >
+                    <item name="android:listSelector">
+@drawable/selectable_background_swtor
                     </item>
                 </style>
 
@@ -3301,18 +3281,18 @@ true
                 </style>
 
                 <style
-                    name="ActionBarTabStyle.Swtor"
-                    parent="@android:style/Widget.Holo.ActionBar.TabView" >
-                    <item name="android:background">
-@drawable/tab_indicator_ab_swtor
-                    </item>
-                </style>
-
-                <style
                     name="ActionBarTabText.Swtor"
                     parent="@android:style/Widget.Holo.ActionBar.TabText" >
                     <item name="android:textColor">
 @color/tab_text_color
+                    </item>
+                </style>
+
+                <style
+                    name="ActionBarTabStyle.Swtor"
+                    parent="@android:style/Widget.Holo.ActionBar.TabView" >
+                    <item name="android:background">
+@drawable/tab_indicator_ab_swtor
                     </item>
                 </style>
 
@@ -3357,13 +3337,13 @@ true
                 </style>
 
                 <style
-                    name="ActionBar.Transparent.Swtor"
-                    parent="@android:style/Widget.Holo.ActionBar" >
-                    <item name="android:background">
-@drawable/ab_transparent_swtor
+                    name="Theme.Swtor.Widget"
+                    parent="@android:style/Theme.Holo" >
+                    <item name="android:popupMenuStyle">
+@style/PopupMenu.Swtor
                     </item>
-                    <item name="android:progressBarStyle">
-@style/ProgressBar.Swtor
+                    <item name="android:dropDownListViewStyle">
+@style/DropDownListView.Swtor
                     </item>
                 </style>
 
@@ -3382,13 +3362,13 @@ true
                 </style>
 
                 <style
-                    name="Theme.Swtor.Widget"
-                    parent="@android:style/Theme.Holo" >
-                    <item name="android:popupMenuStyle">
-@style/PopupMenu.Swtor
+                    name="ActionBar.Transparent.Swtor"
+                    parent="@android:style/Widget.Holo.ActionBar" >
+                    <item name="android:background">
+@drawable/ab_transparent_swtor
                     </item>
-                    <item name="android:dropDownListViewStyle">
-@style/DropDownListView.Swtor
+                    <item name="android:progressBarStyle">
+@style/ProgressBar.Swtor
                     </item>
                 </style>
 
