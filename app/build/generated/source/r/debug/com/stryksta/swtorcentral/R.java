@@ -15,49 +15,6 @@ public final class R {
         public static final int syncFrequencyValues=0x7f050003;
     }
     public static final class attr {
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int firstColor=0x7f010008;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int firstSize=0x7f010007;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int lastColor=0x7f01000a;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int lastSize=0x7f010009;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int lineColor=0x7f010004;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -67,7 +24,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int lineWidth=0x7f010003;
+        public static final int cellSpacing=0x7f010004;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -76,7 +33,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int middleColor=0x7f010006;
+        public static final int firstColor=0x7f010013;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -84,7 +41,153 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int middleSize=0x7f010005;
+        public static final int firstSize=0x7f010012;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0x02</td><td></td></tr>
+<tr><td><code>right</code></td><td>0x04</td><td></td></tr>
+<tr><td><code>top</code></td><td>0x08</td><td></td></tr>
+<tr><td><code>bottom</code></td><td>0x10</td><td></td></tr>
+</table>
+         */
+        public static final int gravity=0x7f010002;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isCircularScroll=0x7f010005;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int isViewPager=0x7f010008;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lastColor=0x7f010015;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lastSize=0x7f010014;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lineColor=0x7f01000f;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int lineWidth=0x7f01000e;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int middleColor=0x7f010011;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int middleSize=0x7f010010;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int numberOfViewsPerCell=0x7f010001;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>horizontal</code></td><td>0</td><td></td></tr>
+<tr><td><code>vertical</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int orientation=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int ratio=0x7f010000;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectOnSnap=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectWhileScrolling=0x7f01000a;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>center</code></td><td>0</td><td></td></tr>
+<tr><td><code>start</code></td><td>1</td><td></td></tr>
+<tr><td><code>end</code></td><td>2</td><td></td></tr>
+<tr><td><code>onScreen</code></td><td>3</td><td></td></tr>
+</table>
+         */
+        public static final int snapPosition=0x7f010009;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int snapToPosition=0x7f010006;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -92,7 +195,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int text=0x7f010000;
+        public static final int text=0x7f01000b;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -101,7 +204,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int textColor=0x7f010001;
+        public static final int textColor=0x7f01000c;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -111,7 +214,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int textSize=0x7f010002;
+        public static final int textSize=0x7f01000d;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -125,7 +228,7 @@ containing a value of this type.
 <tr><td><code>single</code></td><td>3</td><td></td></tr>
 </table>
          */
-        public static final int timeline_type=0x7f01000b;
+        public static final int timeline_type=0x7f010016;
     }
     public static final class color {
         public static final int background=0x7f060000;
@@ -436,218 +539,225 @@ containing a value of this type.
         public static final int voss_bg=0x7f0200d1;
     }
     public static final class id {
-        public static final int AdvClass1=0x7f070067;
-        public static final int AdvClass2=0x7f07006a;
-        public static final int CharacterAddLayout=0x7f070045;
-        public static final int IMGserverLight=0x7f0700b2;
-        public static final int ServerKeyLayout=0x7f0700b1;
-        public static final int VideoPreviewPlayButton=0x7f0700cb;
-        public static final int VideoView=0x7f0700cc;
-        public static final int abilitydetails_layout=0x7f070005;
-        public static final int abilitylayout=0x7f070038;
-        public static final int abilitylinearlayout=0x7f070037;
-        public static final int achievementframe=0x7f07000f;
-        public static final int achievementgridview=0x7f070007;
-        public static final int achievementlistview=0x7f070008;
-        public static final int action_settings=0x7f0700d2;
-        public static final int advancedclassabilitylist=0x7f07002d;
-        public static final int button1=0x7f070096;
-        public static final int button2=0x7f070094;
-        public static final int button3=0x7f070095;
-        public static final int buttonPanel=0x7f070092;
-        public static final int characterAdvancedClass=0x7f070050;
-        public static final int characterAlignment=0x7f070054;
-        public static final int characterClass=0x7f07004e;
-        public static final int characterCrewSkill1=0x7f070056;
-        public static final int characterCrewSkill2=0x7f070058;
-        public static final int characterCrewSkill3=0x7f07005a;
-        public static final int characterDescription=0x7f07005b;
-        public static final int characterGender=0x7f07004c;
-        public static final int characterLegacy=0x7f070049;
-        public static final int characterLevel=0x7f070047;
-        public static final int characterListView=0x7f07005e;
-        public static final int characterName=0x7f070046;
-        public static final int characterRace=0x7f070052;
-        public static final int character_level=0x7f07005d;
-        public static final int character_level_msg=0x7f07005c;
-        public static final int character_menu_add=0x7f0700cf;
-        public static final int character_menu_delete=0x7f0700d1;
-        public static final int character_menu_edit=0x7f0700d0;
-        public static final int character_menu_save=0x7f0700ce;
-        public static final int classabilitylist=0x7f07002a;
-        public static final int companionlist=0x7f070027;
-        public static final int contentPanel=0x7f07008f;
-        public static final int drawer=0x7f070018;
-        public static final int drawer_layout=0x7f070013;
-        public static final int drawer_view=0x7f070015;
-        public static final int end=0x7f070003;
-        public static final int eulist=0x7f0700c1;
-        public static final int eventDescription=0x7f070083;
-        public static final int eventEnd=0x7f070082;
-        public static final int eventLayout=0x7f07007e;
-        public static final int eventStart=0x7f070081;
-        public static final int eventStatus=0x7f070080;
-        public static final int eventTitle=0x7f07007f;
-        public static final int event_list=0x7f070084;
-        public static final int expandableListView=0x7f070017;
-        public static final int expandedListItem=0x7f070077;
-        public static final int gridView=0x7f070071;
-        public static final int imgAction=0x7f070078;
-        public static final int imgAdvancedClass=0x7f070023;
-        public static final int imgClass1=0x7f070068;
-        public static final int imgClass2=0x7f07006b;
-        public static final int imgClassIcon=0x7f070073;
-        public static final int imgEmpire=0x7f07008b;
-        public static final int imgExpandCollapse=0x7f070076;
-        public static final int imgPlanet=0x7f0700ae;
-        public static final int imgRepublic=0x7f070088;
-        public static final int imgThumbnail=0x7f0700b0;
-        public static final int labelAdvancedClass=0x7f07004f;
-        public static final int labelAlignment=0x7f070053;
-        public static final int labelClass=0x7f07004d;
-        public static final int labelGender=0x7f07004b;
-        public static final int labelLegacy1=0x7f070048;
-        public static final int labelLegacy2=0x7f07004a;
-        public static final int labelRace=0x7f070051;
-        public static final int labelSkill1=0x7f070055;
-        public static final int labelSkill2=0x7f070057;
-        public static final int labelSkill3=0x7f070059;
-        public static final int layoutEmpire=0x7f07008a;
-        public static final int layoutRepublic=0x7f070087;
-        public static final int layoutRow=0x7f0700c6;
-        public static final int layoutSinglePlanet=0x7f0700ad;
-        public static final int leftSpacer=0x7f070093;
-        public static final int line=0x7f070002;
-        public static final int listBeastLore=0x7f0700a5;
-        public static final int listGameRulesLore=0x7f0700a7;
-        public static final int listOrganizationsLore=0x7f0700a9;
-        public static final int listTitlesLore=0x7f0700a3;
-        public static final int listView1=0x7f070006;
-        public static final int lstDatacron=0x7f07009b;
-        public static final int lstLocationsLore=0x7f07009f;
-        public static final int lstLore=0x7f07009d;
-        public static final int lstPersonsLore=0x7f0700a1;
-        public static final int mSeperator=0x7f07008e;
-        public static final int main=0x7f070014;
-        public static final int menu_divider=0x7f07007a;
-        public static final int menurow_counter=0x7f07007d;
-        public static final int menurow_icon=0x7f07007c;
-        public static final int menurow_title=0x7f070079;
-        public static final int message=0x7f070091;
-        public static final int middle=0x7f070001;
-        public static final int ns_menu_row=0x7f07007b;
-        public static final int pager=0x7f070019;
-        public static final int pager_title_strip=0x7f07001a;
-        public static final int planetBackground=0x7f070098;
-        public static final int planet_pager=0x7f070099;
-        public static final int planet_title_strip=0x7f07009a;
-        public static final int progressBarWithText=0x7f070012;
-        public static final int progressionList=0x7f0700aa;
-        public static final int reader_list=0x7f0700af;
-        public static final int scrollView=0x7f070090;
-        public static final int select_dialog_listview=0x7f070097;
-        public static final int serverFull=0x7f0700ba;
-        public static final int serverHeavy=0x7f0700b6;
-        public static final int serverIcon=0x7f0700c2;
-        public static final int serverStandard=0x7f0700b4;
-        public static final int serverStatus=0x7f0700c4;
-        public static final int serverTitle=0x7f0700c3;
-        public static final int serverVeryHeavy=0x7f0700b8;
-        public static final int server_help=0x7f0700d3;
-        public static final int single=0x7f070004;
-        public static final int skillabilitylist1=0x7f070030;
-        public static final int skillabilitylist2=0x7f070033;
-        public static final int skillabilitylist3=0x7f070036;
-        public static final int start=0x7f070000;
-        public static final int statslayout=0x7f07003a;
-        public static final int textView=0x7f070044;
-        public static final int timeline=0x7f0700ac;
-        public static final int title_message=0x7f07008d;
-        public static final int transparentBackground=0x7f0700c8;
-        public static final int tutorial_list=0x7f0700c9;
-        public static final int txtAbilityTitle=0x7f070043;
-        public static final int txtActivation=0x7f07003d;
-        public static final int txtAdvDesc=0x7f070026;
-        public static final int txtAdvancedClassAbility=0x7f07002b;
-        public static final int txtAdvancedClassAbilitySub=0x7f07002c;
-        public static final int txtAlignment=0x7f070062;
-        public static final int txtArmor=0x7f070020;
-        public static final int txtAttribute=0x7f070025;
-        public static final int txtBeastLore=0x7f0700a4;
-        public static final int txtBonus=0x7f070022;
-        public static final int txtCategory1=0x7f070010;
-        public static final int txtChanneled=0x7f07003e;
-        public static final int txtCharacter=0x7f07000d;
-        public static final int txtClass=0x7f070060;
-        public static final int txtClass1=0x7f070069;
-        public static final int txtClass2=0x7f07006c;
-        public static final int txtClassAbility=0x7f070028;
-        public static final int txtClassAbilitySub=0x7f070029;
-        public static final int txtClassSub=0x7f070066;
-        public static final int txtCodex=0x7f070072;
-        public static final int txtCooldown=0x7f07003f;
-        public static final int txtCount=0x7f07000e;
-        public static final int txtCrewSkill1=0x7f070063;
-        public static final int txtCrewSkill2=0x7f070064;
-        public static final int txtCrewSkill3=0x7f070065;
-        public static final int txtDatacron=0x7f07009c;
-        public static final int txtDescription=0x7f07000a;
-        public static final int txtEmpire=0x7f07008c;
-        public static final int txtFaction=0x7f070085;
-        public static final int txtFactionSub=0x7f070086;
-        public static final int txtFootnote=0x7f070042;
-        public static final int txtGameRulesLore=0x7f0700a6;
-        public static final int txtHighlight=0x7f070041;
-        public static final int txtLegacy=0x7f07005f;
-        public static final int txtLevel=0x7f070039;
-        public static final int txtLocation=0x7f070070;
-        public static final int txtLocationLore=0x7f07009e;
-        public static final int txtName=0x7f07001b;
-        public static final int txtNameSub=0x7f07001c;
-        public static final int txtOrganizationsLore=0x7f0700a8;
-        public static final int txtPersonsLore=0x7f0700a0;
-        public static final int txtPlanet=0x7f07006d;
-        public static final int txtRace=0x7f070061;
-        public static final int txtRange=0x7f070040;
-        public static final int txtRepublic=0x7f070089;
-        public static final int txtResource=0x7f07003c;
-        public static final int txtReward=0x7f07006f;
-        public static final int txtRewards=0x7f07000b;
-        public static final int txtRole=0x7f07001d;
-        public static final int txtRomance=0x7f07001e;
-        public static final int txtSep=0x7f0700c7;
-        public static final int txtServerEU=0x7f0700bf;
-        public static final int txtServerEUSub=0x7f0700c0;
-        public static final int txtServerUS=0x7f0700bc;
-        public static final int txtServerUSSub=0x7f0700bd;
-        public static final int txtSkillAbility1=0x7f07002e;
-        public static final int txtSkillAbility1Sub=0x7f07002f;
-        public static final int txtSkillAbility2=0x7f070031;
-        public static final int txtSkillAbility2Sub=0x7f070032;
-        public static final int txtSkillAbility3=0x7f070034;
-        public static final int txtSkillAbility3Sub=0x7f070035;
-        public static final int txtStats=0x7f07001f;
-        public static final int txtStatus=0x7f07000c;
-        public static final int txtSub=0x7f07006e;
-        public static final int txtSubCategory=0x7f070011;
-        public static final int txtSubtitle=0x7f0700c5;
-        public static final int txtSummary=0x7f07003b;
-        public static final int txtTimeLineLabel=0x7f0700ab;
-        public static final int txtTitle=0x7f070009;
-        public static final int txtTitlesLore=0x7f0700a2;
-        public static final int txtWeapon=0x7f070021;
-        public static final int txtWeapons=0x7f070024;
-        public static final int txtserverFull=0x7f0700bb;
-        public static final int txtserverHeavy=0x7f0700b7;
-        public static final int txtserverLight=0x7f0700b3;
-        public static final int txtserverStandard=0x7f0700b5;
-        public static final int txtserverVeryHeavy=0x7f0700b9;
-        public static final int userCharacter=0x7f070074;
-        public static final int userStatus=0x7f070075;
-        public static final int user_view=0x7f070016;
-        public static final int uslist=0x7f0700be;
-        public static final int video_surface_view=0x7f0700cd;
-        public static final int videoframe=0x7f0700ca;
+        public static final int AdvClass1=0x7f07006f;
+        public static final int AdvClass2=0x7f070072;
+        public static final int CharacterAddLayout=0x7f07004d;
+        public static final int IMGserverLight=0x7f0700ba;
+        public static final int ServerKeyLayout=0x7f0700b9;
+        public static final int VideoPreviewPlayButton=0x7f0700d2;
+        public static final int VideoView=0x7f0700d3;
+        public static final int abilitydetails_layout=0x7f07000d;
+        public static final int abilitylayout=0x7f070040;
+        public static final int abilitylinearlayout=0x7f07003f;
+        public static final int achievementframe=0x7f070017;
+        public static final int achievementgridview=0x7f07000f;
+        public static final int achievementlistview=0x7f070010;
+        public static final int action_settings=0x7f0700d9;
+        public static final int advancedclassabilitylist=0x7f070035;
+        public static final int bottom=0x7f070003;
+        public static final int button1=0x7f07009e;
+        public static final int button2=0x7f07009c;
+        public static final int button3=0x7f07009d;
+        public static final int buttonPanel=0x7f07009a;
+        public static final int center=0x7f070006;
+        public static final int characterAdvancedClass=0x7f070058;
+        public static final int characterAlignment=0x7f07005c;
+        public static final int characterClass=0x7f070056;
+        public static final int characterCrewSkill1=0x7f07005e;
+        public static final int characterCrewSkill2=0x7f070060;
+        public static final int characterCrewSkill3=0x7f070062;
+        public static final int characterDescription=0x7f070063;
+        public static final int characterGender=0x7f070054;
+        public static final int characterLegacy=0x7f070051;
+        public static final int characterLevel=0x7f07004f;
+        public static final int characterListView=0x7f070066;
+        public static final int characterName=0x7f07004e;
+        public static final int characterRace=0x7f07005a;
+        public static final int character_level=0x7f070065;
+        public static final int character_level_msg=0x7f070064;
+        public static final int character_menu_add=0x7f0700d6;
+        public static final int character_menu_delete=0x7f0700d8;
+        public static final int character_menu_edit=0x7f0700d7;
+        public static final int character_menu_save=0x7f0700d5;
+        public static final int classabilitylist=0x7f070032;
+        public static final int companionlist=0x7f07002f;
+        public static final int contentPanel=0x7f070097;
+        public static final int drawer=0x7f070020;
+        public static final int drawer_layout=0x7f07001b;
+        public static final int drawer_view=0x7f07001d;
+        public static final int end=0x7f070008;
+        public static final int eulist=0x7f0700c9;
+        public static final int eventDescription=0x7f07008b;
+        public static final int eventEnd=0x7f07008a;
+        public static final int eventLayout=0x7f070086;
+        public static final int eventStart=0x7f070089;
+        public static final int eventStatus=0x7f070088;
+        public static final int eventTitle=0x7f070087;
+        public static final int event_list=0x7f07008c;
+        public static final int expandableListView=0x7f07001f;
+        public static final int expandedListItem=0x7f07007f;
+        public static final int gridView=0x7f070079;
+        public static final int horizontal=0x7f070004;
+        public static final int imgAction=0x7f070080;
+        public static final int imgAdvancedClass=0x7f07002b;
+        public static final int imgClass1=0x7f070070;
+        public static final int imgClass2=0x7f070073;
+        public static final int imgClassIcon=0x7f07007b;
+        public static final int imgEmpire=0x7f070093;
+        public static final int imgExpandCollapse=0x7f07007e;
+        public static final int imgPlanet=0x7f0700b6;
+        public static final int imgRepublic=0x7f070090;
+        public static final int imgThumbnail=0x7f0700b8;
+        public static final int labelAdvancedClass=0x7f070057;
+        public static final int labelAlignment=0x7f07005b;
+        public static final int labelClass=0x7f070055;
+        public static final int labelGender=0x7f070053;
+        public static final int labelLegacy1=0x7f070050;
+        public static final int labelLegacy2=0x7f070052;
+        public static final int labelRace=0x7f070059;
+        public static final int labelSkill1=0x7f07005d;
+        public static final int labelSkill2=0x7f07005f;
+        public static final int labelSkill3=0x7f070061;
+        public static final int layoutEmpire=0x7f070092;
+        public static final int layoutRepublic=0x7f07008f;
+        public static final int layoutSinglePlanet=0x7f0700b5;
+        public static final int left=0x7f070000;
+        public static final int leftSpacer=0x7f07009b;
+        public static final int line=0x7f07000b;
+        public static final int listBeastLore=0x7f0700ad;
+        public static final int listGameRulesLore=0x7f0700af;
+        public static final int listOrganizationsLore=0x7f0700b1;
+        public static final int listTitlesLore=0x7f0700ab;
+        public static final int listView1=0x7f07000e;
+        public static final int lstDatacron=0x7f0700a3;
+        public static final int lstLocationsLore=0x7f0700a7;
+        public static final int lstLore=0x7f0700a5;
+        public static final int lstPersonsLore=0x7f0700a9;
+        public static final int mSeperator=0x7f070096;
+        public static final int main=0x7f07001c;
+        public static final int menu_divider=0x7f070082;
+        public static final int menurow_counter=0x7f070085;
+        public static final int menurow_icon=0x7f070084;
+        public static final int menurow_title=0x7f070081;
+        public static final int message=0x7f070099;
+        public static final int middle=0x7f07000a;
+        public static final int ns_menu_row=0x7f070083;
+        public static final int onScreen=0x7f070009;
+        public static final int pager=0x7f070021;
+        public static final int pager_title_strip=0x7f070022;
+        public static final int planetBackground=0x7f0700a0;
+        public static final int planet_pager=0x7f0700a1;
+        public static final int planet_title_strip=0x7f0700a2;
+        public static final int progressBarWithText=0x7f07001a;
+        public static final int progressionList=0x7f0700b2;
+        public static final int reader_list=0x7f0700b7;
+        public static final int right=0x7f070001;
+        public static final int scrollView=0x7f070098;
+        public static final int select_dialog_listview=0x7f07009f;
+        public static final int serverFull=0x7f0700c2;
+        public static final int serverHeavy=0x7f0700be;
+        public static final int serverIcon=0x7f0700ca;
+        public static final int serverStandard=0x7f0700bc;
+        public static final int serverStatus=0x7f0700cc;
+        public static final int serverTitle=0x7f0700cb;
+        public static final int serverVeryHeavy=0x7f0700c0;
+        public static final int server_help=0x7f0700da;
+        public static final int single=0x7f07000c;
+        public static final int skillabilitylist1=0x7f070038;
+        public static final int skillabilitylist2=0x7f07003b;
+        public static final int skillabilitylist3=0x7f07003e;
+        public static final int start=0x7f070007;
+        public static final int statslayout=0x7f070042;
+        public static final int testList=0x7f0700ce;
+        public static final int textView=0x7f07004c;
+        public static final int timeline=0x7f0700b4;
+        public static final int title_message=0x7f070095;
+        public static final int top=0x7f070002;
+        public static final int transparentBackground=0x7f0700cf;
+        public static final int tutorial_list=0x7f0700d0;
+        public static final int txtAbilityTitle=0x7f07004b;
+        public static final int txtActivation=0x7f070045;
+        public static final int txtAdvDesc=0x7f07002e;
+        public static final int txtAdvancedClassAbility=0x7f070033;
+        public static final int txtAdvancedClassAbilitySub=0x7f070034;
+        public static final int txtAlignment=0x7f07006a;
+        public static final int txtArmor=0x7f070028;
+        public static final int txtAttribute=0x7f07002d;
+        public static final int txtBeastLore=0x7f0700ac;
+        public static final int txtBonus=0x7f07002a;
+        public static final int txtCategory1=0x7f070018;
+        public static final int txtChanneled=0x7f070046;
+        public static final int txtCharacter=0x7f070015;
+        public static final int txtClass=0x7f070068;
+        public static final int txtClass1=0x7f070071;
+        public static final int txtClass2=0x7f070074;
+        public static final int txtClassAbility=0x7f070030;
+        public static final int txtClassAbilitySub=0x7f070031;
+        public static final int txtClassSub=0x7f07006e;
+        public static final int txtCodex=0x7f07007a;
+        public static final int txtCooldown=0x7f070047;
+        public static final int txtCount=0x7f070016;
+        public static final int txtCrewSkill1=0x7f07006b;
+        public static final int txtCrewSkill2=0x7f07006c;
+        public static final int txtCrewSkill3=0x7f07006d;
+        public static final int txtDatacron=0x7f0700a4;
+        public static final int txtDescription=0x7f070012;
+        public static final int txtEmpire=0x7f070094;
+        public static final int txtFaction=0x7f07008d;
+        public static final int txtFactionSub=0x7f07008e;
+        public static final int txtFootnote=0x7f07004a;
+        public static final int txtGameRulesLore=0x7f0700ae;
+        public static final int txtHighlight=0x7f070049;
+        public static final int txtLegacy=0x7f070067;
+        public static final int txtLevel=0x7f070041;
+        public static final int txtLocation=0x7f070078;
+        public static final int txtLocationLore=0x7f0700a6;
+        public static final int txtName=0x7f070023;
+        public static final int txtNameSub=0x7f070024;
+        public static final int txtOrganizationsLore=0x7f0700b0;
+        public static final int txtPersonsLore=0x7f0700a8;
+        public static final int txtPlanet=0x7f070075;
+        public static final int txtRace=0x7f070069;
+        public static final int txtRange=0x7f070048;
+        public static final int txtRepublic=0x7f070091;
+        public static final int txtResource=0x7f070044;
+        public static final int txtReward=0x7f070077;
+        public static final int txtRewards=0x7f070013;
+        public static final int txtRole=0x7f070025;
+        public static final int txtRomance=0x7f070026;
+        public static final int txtServerEU=0x7f0700c7;
+        public static final int txtServerEUSub=0x7f0700c8;
+        public static final int txtServerUS=0x7f0700c4;
+        public static final int txtServerUSSub=0x7f0700c5;
+        public static final int txtSkillAbility1=0x7f070036;
+        public static final int txtSkillAbility1Sub=0x7f070037;
+        public static final int txtSkillAbility2=0x7f070039;
+        public static final int txtSkillAbility2Sub=0x7f07003a;
+        public static final int txtSkillAbility3=0x7f07003c;
+        public static final int txtSkillAbility3Sub=0x7f07003d;
+        public static final int txtStats=0x7f070027;
+        public static final int txtStatus=0x7f070014;
+        public static final int txtSub=0x7f070076;
+        public static final int txtSubCategory=0x7f070019;
+        public static final int txtSubtitle=0x7f0700cd;
+        public static final int txtSummary=0x7f070043;
+        public static final int txtTimeLineLabel=0x7f0700b3;
+        public static final int txtTitle=0x7f070011;
+        public static final int txtTitlesLore=0x7f0700aa;
+        public static final int txtWeapon=0x7f070029;
+        public static final int txtWeapons=0x7f07002c;
+        public static final int txtserverFull=0x7f0700c3;
+        public static final int txtserverHeavy=0x7f0700bf;
+        public static final int txtserverLight=0x7f0700bb;
+        public static final int txtserverStandard=0x7f0700bd;
+        public static final int txtserverVeryHeavy=0x7f0700c1;
+        public static final int userCharacter=0x7f07007c;
+        public static final int userStatus=0x7f07007d;
+        public static final int user_view=0x7f07001e;
+        public static final int uslist=0x7f0700c6;
+        public static final int vertical=0x7f070005;
+        public static final int video_surface_view=0x7f0700d4;
+        public static final int videoframe=0x7f0700d1;
     }
     public static final class integer {
         public static final int num_cols=0x7f090000;
@@ -864,6 +974,231 @@ containing a value of this type.
         public static final int settings=0x7f040000;
     }
     public static final class styleable {
+        /** Attributes that can be used with a GridPatternView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #GridPatternView_ratio com.stryksta.swtorcentral:ratio}</code></td><td></td></tr>
+           </table>
+           @see #GridPatternView_ratio
+         */
+        public static final int[] GridPatternView = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#ratio}
+          attribute's value can be found in the {@link #GridPatternView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:ratio
+        */
+        public static final int GridPatternView_ratio = 0;
+        /** Attributes that can be used with a GridView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #GridView_gravity com.stryksta.swtorcentral:gravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #GridView_numberOfViewsPerCell com.stryksta.swtorcentral:numberOfViewsPerCell}</code></td><td></td></tr>
+           </table>
+           @see #GridView_gravity
+           @see #GridView_numberOfViewsPerCell
+         */
+        public static final int[] GridView = {
+            0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#gravity}
+          attribute's value can be found in the {@link #GridView} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0x02</td><td></td></tr>
+<tr><td><code>right</code></td><td>0x04</td><td></td></tr>
+<tr><td><code>top</code></td><td>0x08</td><td></td></tr>
+<tr><td><code>bottom</code></td><td>0x10</td><td></td></tr>
+</table>
+          @attr name com.stryksta.swtorcentral:gravity
+        */
+        public static final int GridView_gravity = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#numberOfViewsPerCell}
+          attribute's value can be found in the {@link #GridView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:numberOfViewsPerCell
+        */
+        public static final int GridView_numberOfViewsPerCell = 0;
+        /** Attributes that can be used with a ListView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ListView_cellSpacing com.stryksta.swtorcentral:cellSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListView_isCircularScroll com.stryksta.swtorcentral:isCircularScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListView_isViewPager com.stryksta.swtorcentral:isViewPager}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListView_orientation com.stryksta.swtorcentral:orientation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListView_selectOnSnap com.stryksta.swtorcentral:selectOnSnap}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListView_selectWhileScrolling com.stryksta.swtorcentral:selectWhileScrolling}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListView_snapPosition com.stryksta.swtorcentral:snapPosition}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListView_snapToPosition com.stryksta.swtorcentral:snapToPosition}</code></td><td></td></tr>
+           </table>
+           @see #ListView_cellSpacing
+           @see #ListView_isCircularScroll
+           @see #ListView_isViewPager
+           @see #ListView_orientation
+           @see #ListView_selectOnSnap
+           @see #ListView_selectWhileScrolling
+           @see #ListView_snapPosition
+           @see #ListView_snapToPosition
+         */
+        public static final int[] ListView = {
+            0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006,
+            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#cellSpacing}
+          attribute's value can be found in the {@link #ListView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:cellSpacing
+        */
+        public static final int ListView_cellSpacing = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#isCircularScroll}
+          attribute's value can be found in the {@link #ListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:isCircularScroll
+        */
+        public static final int ListView_isCircularScroll = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#isViewPager}
+          attribute's value can be found in the {@link #ListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:isViewPager
+        */
+        public static final int ListView_isViewPager = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#orientation}
+          attribute's value can be found in the {@link #ListView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>horizontal</code></td><td>0</td><td></td></tr>
+<tr><td><code>vertical</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.stryksta.swtorcentral:orientation
+        */
+        public static final int ListView_orientation = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#selectOnSnap}
+          attribute's value can be found in the {@link #ListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:selectOnSnap
+        */
+        public static final int ListView_selectOnSnap = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#selectWhileScrolling}
+          attribute's value can be found in the {@link #ListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:selectWhileScrolling
+        */
+        public static final int ListView_selectWhileScrolling = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#snapPosition}
+          attribute's value can be found in the {@link #ListView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>center</code></td><td>0</td><td></td></tr>
+<tr><td><code>start</code></td><td>1</td><td></td></tr>
+<tr><td><code>end</code></td><td>2</td><td></td></tr>
+<tr><td><code>onScreen</code></td><td>3</td><td></td></tr>
+</table>
+          @attr name com.stryksta.swtorcentral:snapPosition
+        */
+        public static final int ListView_snapPosition = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#snapToPosition}
+          attribute's value can be found in the {@link #ListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:snapToPosition
+        */
+        public static final int ListView_snapToPosition = 3;
         /** Attributes that can be used with a TextProgressBar.
            <p>Includes the following attributes:</p>
            <table>
@@ -879,7 +1214,7 @@ containing a value of this type.
            @see #TextProgressBar_textSize
          */
         public static final int[] TextProgressBar = {
-            0x7f010000, 0x7f010001, 0x7f010002
+            0x7f01000b, 0x7f01000c, 0x7f01000d
         };
         /**
           <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#text}
@@ -953,9 +1288,9 @@ containing a value of this type.
            @see #TimelineView_timeline_type
          */
         public static final int[] TimelineView = {
-            0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006,
-            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a,
-            0x7f01000b
+            0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
+            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015,
+            0x7f010016
         };
         /**
           <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#firstColor}

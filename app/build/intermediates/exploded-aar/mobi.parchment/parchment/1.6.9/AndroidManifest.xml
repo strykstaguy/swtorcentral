@@ -1,0 +1,6 @@
+<!-- From: file:/home/emir/android/workspace/parchment/library/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="3" android:versionName="1.6.8" package="mobi.parchment">
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="18"/>
+
+
+</manifest>

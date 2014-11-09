@@ -1,25 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layoutRow"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:padding="5.0dp"
-   	android:background="@drawable/background_middle" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/txtCodex"
+        android:id="@+id/txtTimeLineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/text"
+        android:layout_marginTop="@dimen/dim_10"
+        android:textSize="24sp" />
+
+    <com.stryksta.swtorcentral.util.RoundTimelineHView
+        android:id="@+id/timeline"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:firstColor="@color/text"
+        app:firstSize="5"
+        app:lastColor="@color/text"
+        app:lastSize="5"
+        app:lineColor="@color/text"
+        app:lineWidth="5dp"
+        app:middleColor="@color/text"
+        app:middleSize="5"
+        app:timeline_type="line" />
+
+    <LinearLayout
+        android:id="@+id/layoutSinglePlanet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:textColor="@color/text"
-        android:textSize="14sp" />
-	
-    <View
-        android:id="@+id/txtSep"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="0dp"
-        android:background="@color/backgroundlight" />
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:background="@drawable/card_background"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imgPlanet"
+            android:layout_width="160.0dip"
+            android:layout_height="160.0dip"
+            android:layout_marginTop="2.0dip"
+            android:clickable="false"
+            android:padding="5.0dp"
+            android:contentDescription="@string/image_placeholder"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/txtPlanet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
 </LinearLayout>

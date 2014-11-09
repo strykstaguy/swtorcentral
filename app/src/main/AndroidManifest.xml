@@ -20,20 +20,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.ReaderActivity"
-            android:label="@string/reader_name" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.DatacronActivity"
-            android:label="@string/server_name" >
-        </activity>
-        <activity
             android:name="com.stryksta.swtorcentral.ServerActivity"
             android:label="@string/server_main" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.ClassesActivity"
-            android:label="@string/class_header" >
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.AdvancedClassActivity"

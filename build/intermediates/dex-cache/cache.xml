@@ -20,6 +20,12 @@
         revision="20.0.0"
         sha1="1262995965440e28ba5c4d480c9c9ab4ccce84cc"/>
     <item
+        dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2905e7f5715eb8a37270f9e81c04a0ee6958ee15.jar"
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f1970eaa78ad078594934eebe7b5de96bfad8d91"/>
+    <item
         dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper-b730b8a1e960010d11afbb21a2ef1ccfefdd0e5f.jar"
         jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\android-sqlite-asset-helper.jar"
         jumboMode="false"

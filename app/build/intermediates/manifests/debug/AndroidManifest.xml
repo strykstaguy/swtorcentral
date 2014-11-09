@@ -4,13 +4,13 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -27,20 +27,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.ReaderActivity"
-            android:label="@string/reader_name" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.DatacronActivity"
-            android:label="@string/server_name" >
-        </activity>
-        <activity
             android:name="com.stryksta.swtorcentral.ServerActivity"
             android:label="@string/server_main" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.ClassesActivity"
-            android:label="@string/class_header" >
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.AdvancedClassActivity"
