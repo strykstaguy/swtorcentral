@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:gravity="center"
     android:background="@color/background"
     android:orientation="vertical" >
 
@@ -30,44 +31,58 @@
         app:middleSize="5"
         app:timeline_type="line" />
 
-    <LinearLayout
-        android:id="@+id/layoutSinglePlanet"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10.0dip"
-        android:layout_marginRight="10.0dip"
-        android:layout_marginTop="5.0dip"
-        android:layout_marginBottom="5.0dip"
-        android:background="@drawable/card_background"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical" >
-
-        <ImageView
-            android:id="@+id/imgPlanet"
-            android:layout_width="160.0dip"
-            android:layout_height="160.0dip"
-            android:layout_marginTop="2.0dip"
-            android:clickable="false"
-            android:padding="5.0dp"
-            android:contentDescription="@string/image_placeholder"
-            android:scaleType="fitCenter" />
-
-        <TextView
-            android:id="@+id/txtPlanet"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="5.0dip"
+            android:layout_marginBottom="5.0dip"
+            android:background="@drawable/card_background"
+            android:layout_gravity="center" >
 
-        <TextView
-            android:id="@+id/txtLevel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imgPlanet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/image_placeholder"
+                android:src="@drawable/pl_tython"
+                android:background="@android:color/white"/>
+
+            <LinearLayout
+                android:id="@+id/txtInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim_5"
+                android:background="@drawable/title_background"
+                android:layout_alignBottom="@+id/imgPlanet"
+                android:layout_alignLeft="@+id/imgPlanet"
+                android:layout_alignStart="@+id/imgPlanet"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtPlanet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="left"
+                    android:text="Tython"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/txtLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="left"
+                    android:text="Level 10" />
+
+            </LinearLayout>
+        </RelativeLayout>
 
 </LinearLayout>

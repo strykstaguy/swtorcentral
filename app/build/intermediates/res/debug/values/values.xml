@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/arrays.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/arrays.xml -->
     <eat-comment />
 
     <array name="drawerIcons">
@@ -43,7 +43,7 @@
         <item name="30">30</item>
         <item name="0">0</item>
     </string-array>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="background">#dcdcdc</color>
@@ -78,17 +78,17 @@
     <color name="swtor_green">#99cc00</color>
     <color name="swtor_orange">#FFCB00</color>
     <color name="text">#333333</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <color name="title_color">#ffffff</color>
     <color name="title_detail_color">#000000</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="veryheavycolor">#ff2c2c</color>
     <color name="white">#FFFFFF</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/mobi.parchment/parchment/1.6.9/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/mobi.parchment/parchment/1.6.9/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="GridPatternView">
@@ -121,7 +121,7 @@
         </attr>
         <attr name="selectWhileScrolling" format="boolean" />
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/attrs.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/attrs.xml -->
     <eat-comment />
 
     <declare-styleable name="TextProgressBar">
@@ -129,7 +129,7 @@
         <attr name="textColor" format="color" />
         <attr name="textSize" format="dimension" />
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/attrs_timeline_view.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/attrs_timeline_view.xml -->
     <eat-comment />
 
     <declare-styleable name="TimelineView">
@@ -149,7 +149,7 @@
             <enum name="single" value="3" />
         </attr>
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <dimen name="advclass_img_height">300dp</dimen>
@@ -208,8 +208,10 @@
     <dimen name="tutorial_image_height">140dp</dimen>
     <dimen name="width">60dp</dimen>
 
+    <item name="list_item_grid_view_column_count" format="integer" type="integer">2</item>
+
     <integer name="num_cols">1</integer>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string name="abilities">Abilities</string>
@@ -318,7 +320,7 @@
     <string name="titleslore">Titles</string>
     <string name="tutorials_main">Tutorials</string>
     <string name="video_main">Test</string>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="ActionBar.Solid.Swtor" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
@@ -394,7 +396,7 @@
     <style name="ProgressBar.Swtor" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_swtor</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
     <eat-comment />
 
     <style name="SWTORMaterialDialog" parent="android:style/Theme.Dialog">
@@ -402,7 +404,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="Theme.Swtor" parent="@android:style/Theme.Holo.Light.DarkActionBar">
@@ -424,7 +426,7 @@
         <item name="android:popupMenuStyle">@style/PopupMenu.Swtor</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Swtor</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
     <eat-comment />
 
     <style name="Theme.TranslucentActionBar" parent="@android:style/Theme.Holo.Light.DarkActionBar">
@@ -438,7 +440,7 @@
         <item name="android:actionBarStyle">@style/Widget.ActionBar.Transparent</item>
         <item name="android:windowActionBarOverlay">true</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="TwoWayView">

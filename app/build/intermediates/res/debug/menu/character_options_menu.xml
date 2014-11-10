@@ -5,4 +5,4 @@
     <item android:id="@+id/character_menu_delete"
           android:title="@string/character_menu_delete"
           android:showAsAction="always" />
-</menu><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/menu/character_options_menu.xml -->
+</menu><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/menu/character_options_menu.xml -->

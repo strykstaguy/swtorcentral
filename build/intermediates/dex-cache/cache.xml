@@ -2,34 +2,34 @@
 <pre-dex-items>
 
     <item
-        dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-b8fa6a3fdf94242b78000008b7d2b7447e57a13f.jar"
+        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\picasso-2.3.3-98af564e0026b96bad95bf3237a3ebf97058e803.jar"
+        jar="C:\Users\Josh\Desktop\SWTORCentral\app\libs\picasso-2.3.3.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="1262995965440e28ba5c4d480c9c9ab4ccce84cc"/>
+    <item
+        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-b8fa6a3fdf94242b78000008b7d2b7447e57a13f.jar"
         jar="C:\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
     <item
-        dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\jsoup-1.7.3-c0f243f36831372dcf7758d86e1daa00889663cf.jar"
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\jsoup-1.7.3.jar"
+        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper-94bfd0724f84c6b3db8eee951ddc73175b439cc8.jar"
+        jar="C:\Users\Josh\Desktop\SWTORCentral\app\libs\android-sqlite-asset-helper.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="20f039a3336c18f93cfddfa1a49ce91a55361c40"/>
+    <item
+        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\jsoup-1.7.3-ea9bca014096067705d36e987d4937f193a6d228.jar"
+        jar="C:\Users\Josh\Desktop\SWTORCentral\app\libs\jsoup-1.7.3.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da"/>
     <item
-        dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\picasso-2.3.3-24d4630a741737836ddc02216d33c5a34a96a8f1.jar"
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\picasso-2.3.3.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="1262995965440e28ba5c4d480c9c9ab4ccce84cc"/>
-    <item
-        dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2905e7f5715eb8a37270f9e81c04a0ee6958ee15.jar"
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\classes.jar"
+        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-8ad6f6f8645930b4a46bf868ac7dd88f7624f8f5.jar"
+        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="f1970eaa78ad078594934eebe7b5de96bfad8d91"/>
-    <item
-        dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper-b730b8a1e960010d11afbb21a2ef1ccfefdd0e5f.jar"
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\android-sqlite-asset-helper.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="20f039a3336c18f93cfddfa1a49ce91a55361c40"/>
 
 </pre-dex-items>

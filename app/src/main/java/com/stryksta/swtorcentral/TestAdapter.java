@@ -9,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.util.TimelineHView;
-import com.stryksta.swtorcentral.util.TimelineView;
-import com.stryksta.swtorcentral.util.VerticalTextView;
 import com.stryksta.swtorcentral.data.ProgressionItem;
 
 import java.util.List;
