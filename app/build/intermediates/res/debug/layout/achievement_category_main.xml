@@ -21,8 +21,9 @@
     	android:verticalSpacing="5dp"
     	android:paddingTop="10dp"
     	android:paddingLeft="10dp"
+        android:clipToPadding="false"
     	android:paddingBottom="10dp"
     	android:horizontalSpacing="5dp" >
 	</com.stryksta.swtorcentral.util.AutoMeasureGridView>
 	
-</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/achievement_category_main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/achievement_category_main.xml -->

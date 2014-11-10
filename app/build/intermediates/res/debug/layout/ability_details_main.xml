@@ -16,9 +16,10 @@
         android:layout_height="fill_parent"
         android:divider="@color/background"
     	android:dividerHeight="10dip"
+        android:clipToPadding="false"
     	android:padding="10.0dip" >
 
     </com.stryksta.swtorcentral.util.NonScrollListView>
 
 </RelativeLayout>
-</ScrollView><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/ability_details_main.xml -->
+</ScrollView><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/ability_details_main.xml -->

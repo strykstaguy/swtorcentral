@@ -16,6 +16,7 @@
         android:layout_height="fill_parent"
         android:divider="@color/background"
     	android:dividerHeight="10dip"
+        android:clipToPadding="false"
     	android:padding="10.0dip" >
 
     </com.stryksta.swtorcentral.util.NonScrollListView>

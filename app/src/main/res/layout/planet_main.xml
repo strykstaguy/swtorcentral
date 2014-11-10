@@ -4,25 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:background="@color/background" >
-   	
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
     <LinearLayout
         android:id="@+id/planetBackground"
     	android:orientation="vertical"
     	android:layout_width="fill_parent"
     	android:layout_height="175.0dip" />
-    	
-    <TextView
-        android:id="@+id/txtPlanet"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:gravity="center"
-        android:layout_marginTop="10.0dip"
-        android:textSize="20.0dip"
-        android:textColor="@color/text" />
-    
+
 	<android.support.v4.view.ViewPager
     	android:id="@+id/planet_pager"
     	android:layout_width="match_parent"
+        android:layout_marginTop="145dp"
     	android:layout_height="match_parent">
     
     	<android.support.v4.view.PagerTitleStrip
@@ -30,10 +28,9 @@
         	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
         	android:layout_gravity="top"
-        	android:background="@color/background"
-        	android:textColor="@color/subtext"
-        	android:textSize="14.0dip"
-        	android:paddingBottom="5.0dp" />
+        	android:background="@drawable/title_background2"
+        	android:textColor="@color/white"
+        	android:textSize="16.0dip" />
 	</android.support.v4.view.ViewPager>
-	
+    </FrameLayout>
 </LinearLayout>

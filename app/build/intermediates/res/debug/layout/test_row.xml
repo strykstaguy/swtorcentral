@@ -31,59 +31,46 @@
         app:middleSize="5"
         app:timeline_type="line" />
 
-        <RelativeLayout
+
+        <ImageView
+            android:id="@+id/imgPlanet"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:contentDescription="@string/image_placeholder"
+            android:src="@drawable/pl_tython"/>
+
+        <LinearLayout
+            android:id="@+id/txtInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10.0dip"
-            android:layout_marginRight="10.0dip"
-            android:layout_marginTop="5.0dip"
-            android:layout_marginBottom="5.0dip"
-            android:background="@drawable/card_background"
-            android:layout_gravity="center" >
+            android:orientation="vertical"
+            android:padding="@dimen/dim_5"
+            android:weightSum="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" >
 
-            <ImageView
-                android:id="@+id/imgPlanet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/image_placeholder"
-                android:src="@drawable/pl_tython"
-                android:background="@android:color/white"/>
+        <TextView
+            android:id="@+id/txtPlanet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:textSize="20dp"
+            android:textColor="@color/text"
+            android:layout_gravity="center"
+            android:text="Tython"
+            android:layout_weight="1" />
 
-            <LinearLayout
-                android:id="@+id/txtInfo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="@dimen/dim_5"
-                android:background="@drawable/title_background"
-                android:layout_alignBottom="@+id/imgPlanet"
-                android:layout_alignLeft="@+id/imgPlanet"
-                android:layout_alignStart="@+id/imgPlanet"
-                android:weightSum="1">
+        <TextView
+            android:id="@+id/txtLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:textSize="14dp"
+            android:textColor="@color/subtext"
+            android:layout_gravity="center"
+            android:text="Level 10" />
 
-                <TextView
-                    android:id="@+id/txtPlanet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin"
-                    android:textSize="20dp"
-                    android:textColor="@color/white"
-                    android:layout_gravity="left"
-                    android:text="Tython"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:id="@+id/txtLevel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin"
-                    android:textSize="20dp"
-                    android:textColor="@color/white"
-                    android:layout_gravity="left"
-                    android:text="Level 10" />
-
-            </LinearLayout>
-        </RelativeLayout>
-
+        </LinearLayout>
 </LinearLayout>
-<!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/test_row.xml -->
+<!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/test_row.xml -->

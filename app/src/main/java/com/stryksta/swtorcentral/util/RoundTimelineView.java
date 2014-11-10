@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 /**
  * Created by Bernat on 10/04/2014.
  */
-public class RoundTimelineView extends TimelineHView {
+public class RoundTimelineView extends TimelineView {
     public RoundTimelineView(Context context) {
         super(context);
     }

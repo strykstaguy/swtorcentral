@@ -66,47 +66,47 @@ public class TestActivity extends FragmentActivity {
         planets.add(new ProgressionItem("Tython", "Level 1-10", R.drawable.pl_tython, "", TimelineType.START));
         planets.add(new ProgressionItem("Ord Mantell", "Level 1-10", R.drawable.pl_ord_mantell, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Republic Fleet", "Level 10+", R.drawable.ic_republic_black, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("The Esseles", "Flashpoint", R.drawable.ic_flashpoint, "Prologue", TimelineType.LINE));
+        planets.add(new ProgressionItem("The Esseles", "Flashpoint", R.drawable.faction_both_black, "Prologue", TimelineType.LINE));
         planets.add(new ProgressionItem("Coruscant", "Level 11-16", R.drawable.pl_coruscant, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.END));
+        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.END));
 
         planets.add(new ProgressionItem("Taris", "Level 16-19", R.drawable.pl_taris, "", TimelineType.START));
         planets.add(new ProgressionItem("Taris", "Bonus Series", R.drawable.faction_both_black, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Athiss", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Athiss", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Nar Shaddaa", "Level 21-24", R.drawable.pl_narshaddaa, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Mandalorian Raiders", "Flashpoint", R.drawable.ic_flashpoint, "Chapter 1", TimelineType.LINE));
+        planets.add(new ProgressionItem("Mandalorian Raiders", "Flashpoint", R.drawable.faction_both_black, "Chapter 1", TimelineType.LINE));
         planets.add(new ProgressionItem("Tatooine", "Level 25-28", R.drawable.pl_tatooine, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Tatooine", "Bonus Series", R.drawable.faction_both_black, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Cademimu", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Cademimu", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Alderaan", "Level 29-32", R.drawable.pl_alderaan, "", TimelineType.END));
 
         planets.add(new ProgressionItem("Nar Shaddaa", "Bonus Series", R.drawable.faction_both_black, "", TimelineType.START));
-        planets.add(new ProgressionItem("Taral V", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Taral V", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Balmorra", "Level 32-36", R.drawable.pl_balmorra, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Balmorra", "Bonus Series 1", R.drawable.faction_both_black, "Chapter 2", TimelineType.LINE));
         planets.add(new ProgressionItem("Balmorra", "Bonus Series 2", R.drawable.faction_both_black, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Maelstrom Prison", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Maelstrom Prison", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Quesh", "Level 36-37", R.drawable.pl_quesh, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Hoth", "Level 37-41", R.drawable.pl_hoth, "", TimelineType.END));
 
         planets.add(new ProgressionItem("Alderaan", "Bonus Series", R.drawable.pl_alderaan, "", TimelineType.START));
-        planets.add(new ProgressionItem("Colicoid War Games", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Colicoid War Games", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Belsavis", "Level 41-44", R.drawable.pl_belsavis, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("The Red Reaper", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("The Red Reaper", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Voss", "Level 44-47", R.drawable.pl_voss, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Voss", "Bonus Series 1", R.drawable.faction_both_black, "Chapter 3", TimelineType.LINE));
         planets.add(new ProgressionItem("Voss", "Bonus Series 2", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Voss", "Bonus Series 3", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Hoth", "Bonus Series", R.drawable.faction_both_black, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Directive 7", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Directive 7", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Corellia", "Level 47-50", R.drawable.pl_corellia, "", TimelineType.END));
 
         planets.add(new ProgressionItem("Belsavis", "Bonus Series", R.drawable.faction_both_black, "", TimelineType.START));
         planets.add(new ProgressionItem("Ilum", "Level 50-53", R.drawable.pl_ilum, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Battle of Ilum", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("False Emperor", "Flashpoint", R.drawable.ic_flashpoint, "Interlude", TimelineType.LINE));
-        planets.add(new ProgressionItem("Kaon Under Seige", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Lost Island", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.END));
+        planets.add(new ProgressionItem("Battle of Ilum", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("False Emperor", "Flashpoint", R.drawable.faction_both_black, "Interlude", TimelineType.LINE));
+        planets.add(new ProgressionItem("Kaon Under Seige", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Lost Island", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.END));
 
         planets.add(new ProgressionItem("Makeb", "Level 53-55", R.drawable.pl_makeb, "Chapter 4", TimelineType.SINGLE));
 
