@@ -17,6 +17,7 @@
  	android:scrollbarStyle="outsideInset"
  	android:longClickable="true"
  	android:duplicateParentState="false"
+    android:clipToPadding="false"
  	android:cacheColorHint="@android:color/transparent" >
  </ListView>
 
