@@ -64,19 +64,19 @@ public class ServerAdapter extends ArrayAdapter<ServerItem> {
             
         	int iColor = mContext.getResources().getColor(R.color.regularcolor);
         	
-            if (rowItem.getserverStatus().toString().equalsIgnoreCase("Light")) {
+            if (rowItem.getserverStatus().equalsIgnoreCase("Light")) {
                 holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.lightcolor));
                 iColor = mContext.getResources().getColor(R.color.lightcolor);
-            } else if (rowItem.getserverStatus().toString().equalsIgnoreCase("Standard")) {
+            } else if (rowItem.getserverStatus().equalsIgnoreCase("Standard")) {
                 holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.standardcolor));
                 iColor = mContext.getResources().getColor(R.color.standardcolor);
-            } else if (rowItem.getserverStatus().toString().equalsIgnoreCase("Heavy")) {
+            } else if (rowItem.getserverStatus().equalsIgnoreCase("Heavy")) {
                 holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.heavycolor));
                 iColor = mContext.getResources().getColor(R.color.heavycolor);
-            } else if (rowItem.getserverStatus().toString().equalsIgnoreCase("Very Heavy")) {
+            } else if (rowItem.getserverStatus().equalsIgnoreCase("Very Heavy")) {
                 holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.veryheavycolor));
                 iColor = mContext.getResources().getColor(R.color.veryheavycolor);
-            } else if (rowItem.getserverStatus().toString().equalsIgnoreCase("Full")) {
+            } else if (rowItem.getserverStatus().equalsIgnoreCase("Full")) {
                 holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.fullcolor));
                 iColor = mContext.getResources().getColor(R.color.fullcolor);
             } else {

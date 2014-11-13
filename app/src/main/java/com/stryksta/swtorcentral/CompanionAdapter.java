@@ -30,7 +30,7 @@ public class CompanionAdapter extends ArrayAdapter<CompanionItem> {
             return null;
         
         string = DatabaseUtils.sqlEscapeString(string);
-        StringBuilder sb = new StringBuilder(string);
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder sb = new StringBuilder(string);
 
         return sb.toString().replaceAll("\\\n", "\n");
     }

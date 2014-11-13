@@ -5,28 +5,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
-import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.FragmentUtils;
-import com.stryksta.swtorcentral.util.SWTORProgressbar;
 import com.stryksta.swtorcentral.util.SessionManager;
-import com.stryksta.swtorcentral.util.TextProgressBar;
 
 import android.app.Fragment;
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ProgressBar;
-import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class Category1Fragment extends Fragment {
 	private AchievementsDatabase db;

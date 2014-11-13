@@ -1,18 +1,13 @@
 package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
-
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
-import com.stryksta.swtorcentral.data.AchievementsItem;
-import com.stryksta.swtorcentral.util.AutoMeasureGridView;
-import com.stryksta.swtorcentral.util.GridViewItemLayout;
 import com.stryksta.swtorcentral.util.SizeAdjustingTextView;
 import com.stryksta.swtorcentral.util.TextProgressBar;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;

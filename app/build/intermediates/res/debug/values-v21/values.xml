@@ -10,6 +10,7 @@
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
         <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:colorAccent">@color/swtor_blue</item>
     </style>
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v21/values.xml -->
     <eat-comment />
@@ -337,6 +338,20 @@
     </style>
 
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget.Material.Toolbar.Button.Navigation" />
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values-v21/values.xml -->
+    <eat-comment />
+
+    <style name="MD_Dark" parent="android:Theme.Material.Dialog.Alert">
+        <item name="md_divider">@color/md_divider_white</item>
+        <item name="md_selector">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="MD_Light" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="md_divider">@color/md_divider_black</item>
+        <item name="md_selector">?android:selectableItemBackground</item>
+    </style>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v21/values.xml -->
+    <eat-comment />
 
     <style name="Platform.AppCompat" parent="android:Theme.Material">
         <item name="android:windowNoTitle">true</item>

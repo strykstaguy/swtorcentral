@@ -9,37 +9,39 @@ import com.stryksta.swtorcentral.util.NonScrollListView;
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
  
-public class AbilityDetailActivity extends FragmentActivity {
-	
+public class AbilityDetailActivity extends ActionBarActivity {
+
 	private AbilitiesDatabase db;
 	ArrayList<AbilitiesItem> ability = new ArrayList<AbilitiesItem>();
 	AbilityDetailAdapter abilityAdapter;
-	@SuppressWarnings("unused")
-	private String ClassName;
-	private String AbilityName;
+    private String AbilityName;
 	private String ClassResource;
 	private String type;
 	private int ClassId;
 	private int AdvancedId;
 	private int SkillId;
-	
+    private Toolbar mToolbar;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ability_details_main);
-        
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         
         Bundle bundle = getIntent().getExtras();
 		
         if ( bundle != null ) {
-        	ClassName = bundle.getString("class");
+            String className = bundle.getString("class");
         	AbilityName = bundle.getString("ability_name");
         	ClassResource = bundle.getString("class_resource");
         	AdvancedId = bundle.getInt("advanced_class_id");
@@ -47,9 +49,9 @@ public class AbilityDetailActivity extends FragmentActivity {
         	SkillId = bundle.getInt("skill_id");
         	type = bundle.getString("type");
         }
-        
-        getActionBar().setTitle(AbilityName);
-        
+
+        getSupportActionBar().setTitle(AbilityName);
+
         db = new AbilitiesDatabase(this);
         
         if (type.equals("class")) {

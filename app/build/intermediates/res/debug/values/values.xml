@@ -49,6 +49,14 @@
     <attr name="drawerArrowStyle" format="reference" />
     <attr name="height" format="dimension" />
     <attr name="isLightTheme" format="boolean" />
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <eat-comment />
+
+    <attr name="md_divider" format="color" />
+    <attr name="md_selector" format="reference" />
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <eat-comment />
+
     <attr name="title" format="string" />
 
     <bool name="abc_action_bar_embed_tabs">true</bool>
@@ -96,10 +104,10 @@
     <eat-comment />
 
     <color name="characterlogin">#555555</color>
-    <color name="colorPrimary">@color/white</color>
-    <color name="colorPrimaryDark">@color/material_blue_grey_900</color>
-    <color name="colorSecondary">@color/material_deep_teal_200</color>
-    <color name="colorSecondaryDark">@color/material_deep_teal_500</color>
+    <color name="colorPrimary">#2186cb</color>
+    <color name="colorPrimaryDark">#2186cb</color>
+    <color name="colorSecondary">#2186cb</color>
+    <color name="colorSecondaryDark">#2186cb</color>
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
@@ -158,6 +166,14 @@
     <color name="material_primary_text_default">#de000000</color>
     <color name="material_seperator">#bdbdbd</color>
     <color name="material_transparent">#00000000</color>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="md_divider_black">#10000000</color>
+    <color name="md_divider_white">#10FFFFFF</color>
+    <color name="md_material_blue_500">#5677fc</color>
+    <color name="md_title_dark">#FFFFFF</color>
+    <color name="md_title_light">#000000</color>
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
@@ -1215,6 +1231,13 @@
     <dimen name="advclass_img_height">300dp</dimen>
     <dimen name="advclass_img_width">160dp</dimen>
     <dimen name="advclasspadding">10dp</dimen>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="button_min_width">64dp</dimen>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <eat-comment />
+
     <dimen name="class_img_height">60dp</dimen>
     <dimen name="class_img_height_land">90dp</dimen>
     <dimen name="datacronpadding">5dp</dimen>
@@ -1260,6 +1283,28 @@
     <dimen name="material_message">14sp</dimen>
     <dimen name="material_spacing">24dp</dimen>
     <dimen name="material_title">18sp</dimen>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <eat-comment />
+
+    <dimen name="md_button_height">48dp</dimen>
+    <dimen name="md_button_padding_frame_bottom">8dp</dimen>
+    <dimen name="md_button_padding_frame_side">16dp</dimen>
+    <dimen name="md_button_padding_horizontal_external">8dp</dimen>
+    <dimen name="md_button_padding_horizontal_internal">8dp</dimen>
+    <dimen name="md_button_padding_horizontal_internalexternal">32dp</dimen>
+    <dimen name="md_button_padding_vertical">12dp</dimen>
+    <dimen name="md_button_textsize">14sp</dimen>
+    <dimen name="md_content_textsize">18sp</dimen>
+    <dimen name="md_dialog_frame_margin">24dp</dimen>
+    <dimen name="md_listitem_control_margin">16dp</dimen>
+    <dimen name="md_listitem_height">48dp</dimen>
+    <dimen name="md_listitem_textsize">18sp</dimen>
+    <dimen name="md_main_frame_margin">16dp</dimen>
+    <dimen name="md_neutral_button_margin">16dp</dimen>
+    <dimen name="md_title_textsize">20sp</dimen>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <eat-comment />
+
     <dimen name="padding">5dp</dimen>
     <dimen name="padding_large">16.0dip</dimen>
     <dimen name="padding_medium">8.0dip</dimen>
@@ -1440,6 +1485,7 @@
     <style name="AppTheme.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/swtor_blue</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
@@ -2316,6 +2362,42 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
         <item name="android:minHeight">10dip</item>
         <item name="android:maxHeight">20dip</item>
     </style>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <eat-comment />
+
+    <style name="MD_ActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">@android:string/ok</item>
+        <item name="android:textSize">@dimen/md_button_textsize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_height">@dimen/md_button_height</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:paddingTop">@dimen/md_button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/md_button_padding_vertical</item>
+        <item name="android:paddingLeft">@dimen/md_button_padding_horizontal_internal</item>
+        <item name="android:paddingRight">@dimen/md_button_padding_horizontal_internal</item>
+        <item name="android:layout_marginLeft">@dimen/md_button_padding_horizontal_external</item>
+    </style>
+
+    <style name="MD_ActionButtonStacked" parent="@style/MD_ActionButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:paddingLeft">@dimen/md_button_padding_horizontal_internalexternal</item>
+        <item name="android:paddingRight">@dimen/md_button_padding_horizontal_internalexternal</item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+
+    <style name="MD_Dark" parent="android:Theme.Holo">
+        <item name="md_divider">@color/md_divider_white</item>
+        <item name="md_selector">@drawable/md_selector_dark</item>
+    </style>
+
+    <style name="MD_Light" parent="android:Theme.Holo.Light">
+        <item name="md_divider">@color/md_divider_black</item>
+        <item name="md_selector">@drawable/md_selector</item>
+    </style>
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
@@ -2624,22 +2706,6 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
-    <eat-comment />
-
-    <style name="Theme.TranslucentActionBar" parent="@android:style/Theme.Holo.Light.DarkActionBar">
-        <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
-        <item name="android:windowContentOverlay">@null</item>
-    </style>
-
-    <style name="Theme.TranslucentActionBar.ActionBar" />
-
-    <style name="Theme.TranslucentActionBar.ActionBar.Overlay">
-        <item name="android:actionBarStyle">@style/Widget.ActionBar.Transparent</item>
-        <item name="android:windowActionBarOverlay">true</item>
-    </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
-    <eat-comment />
 
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat" />
 
@@ -2650,19 +2716,6 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light" />
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
-    <eat-comment />
-
-    <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">@drawable/ab_solid_swtor</item>
-        <item name="android:icon">@drawable/ic_swtor_icon</item>
-    </style>
-
-    <style name="Widget.ActionBar.Transparent">
-        <item name="android:background">@android:color/transparent</item>
-    </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
-    <eat-comment />
 
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar" />
 

@@ -5,6 +5,8 @@
     android:background="@color/background"
     android:orientation="vertical">
 
+    <include layout="@layout/toolbar"/>
+
     <mobi.parchment.widget.adapterview.listview.ListView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:parchment="http://schemas.android.com/apk/res/com.stryksta.swtorcentral"

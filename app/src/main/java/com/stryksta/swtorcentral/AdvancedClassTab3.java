@@ -2,27 +2,20 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import com.stryksta.swtorcentral.data.AbilitiesItem;
 import com.stryksta.swtorcentral.util.AbilitiesDatabase;
 import com.stryksta.swtorcentral.util.NonScrollListView;
-
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Toast;
 
 
 public class AdvancedClassTab3 extends Fragment {

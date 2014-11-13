@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
@@ -27,7 +26,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		ArrayList<AchievementCategoryItem> categoryItem = new ArrayList<AchievementCategoryItem>();
 		SQLiteDatabase db = getReadableDatabase();
 		
-		StringBuilder builder = new StringBuilder();
+		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
 			.append("SELECT a.category1 as category, ")
 			.append("SUM(CASE WHEN ca.achievements_id is not null then points end) AS completed, ")
@@ -59,7 +58,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		ArrayList<AchievementCategoryItem> categoryItem = new ArrayList<AchievementCategoryItem>();
 		SQLiteDatabase db = getReadableDatabase();
 		
-		StringBuilder builder = new StringBuilder();
+		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
 			.append("SELECT a.category2 as category, ")
 			.append("SUM(CASE WHEN ca.achievements_id is not null then points end) AS completed, ")
@@ -92,7 +91,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		ArrayList<AchievementCategoryItem> categoryItem = new ArrayList<AchievementCategoryItem>();
 		SQLiteDatabase db = getReadableDatabase();
 		
-		StringBuilder builder = new StringBuilder();
+		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
 			.append("SELECT a.category3 as category, ")
 			.append("SUM(CASE WHEN ca.achievements_id is not null then points end) AS completed, ")
@@ -125,7 +124,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		ArrayList<AchievementsItem> achievementItem = new ArrayList<AchievementsItem>();
 		SQLiteDatabase db = getReadableDatabase();
 		
-		StringBuilder builder = new StringBuilder();
+		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
 			.append("SELECT achievements._id, achievements.category1, achievements.category2, achievements.category3, achievements.title, achievements.description, achievements.points, achievements.rewards, achievements.hidden, character.name, character.legacy, ")
 		    .append("CASE WHEN (a.character_id is not null) ")

@@ -9,5 +9,4 @@
     android:dividerHeight="0dp"
     android:listSelector="@drawable/material_list_selector"
     android:scrollbars="vertical"
-    android:overScrollMode="ifContentScrolls"
-    android:textAlignment="viewStart" />
+    android:overScrollMode="ifContentScrolls" />

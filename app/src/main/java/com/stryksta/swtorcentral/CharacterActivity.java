@@ -3,6 +3,8 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.Theme;
 import com.stryksta.swtorcentral.data.CharacterItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
@@ -85,11 +87,10 @@ public class CharacterActivity extends ActionBarActivity {
 	    	this.finish();
 	        return true;
 	    case R.id.character_menu_add:
-	    	
+
 	    	Intent addCharacterIntent = new Intent(this, CharacterAddActivity.class);
 	    	startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
-	        //startActivity(addCharacterIntent);
-	        
+
             return true;
 	    }
 	    return super.onOptionsItemSelected(item);
@@ -112,11 +113,11 @@ public class CharacterActivity extends ActionBarActivity {
             	 
             	Bundle bundle = new Bundle();
  				bundle.putInt("character_id", adapter.getItem(info.position).getId());
- 				
+
  				Intent addCharacterIntent = new Intent(CharacterActivity.this, CharacterEditActivity.class);
  				addCharacterIntent.putExtras(bundle);
  		    	startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
- 		    	
+
                 return true;
              case R.id.character_menu_delete:
             	 CharacterDatabase db = new CharacterDatabase(this);
@@ -128,7 +129,7 @@ public class CharacterActivity extends ActionBarActivity {
             		 mUserCharacter = user.get(SessionManager.KEY_NAME);
            		 }
             	 
-            	 if (session.isLoggedIn() && mUserCharacter == selectedCharacter) {
+            	 if (session.isLoggedIn() && mUserCharacter.equals(selectedCharacter) ) {
             		 Toast.makeText(CharacterActivity.this, "Please logout first, then try again.", Toast.LENGTH_SHORT).show();
             	 } else {
             		 if (db.removeCharacter(characterID)) {

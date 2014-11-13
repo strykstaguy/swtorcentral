@@ -68,6 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:hint="@string/character_legacy_hint" />
 
             <TextView
@@ -97,7 +98,9 @@
         		android:id="@+id/characterGender"
         		android:layout_width="match_parent"
         		android:layout_height="wrap_content"
-        		android:layout_marginBottom="10dp" />
+                android:spinnerStyle="@android:style/Widget.Spinner.DropDown"
+        		android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown" />
             
         </LinearLayout>
         
@@ -119,7 +122,8 @@
         		android:id="@+id/characterClass"
         		android:layout_width="match_parent"
         		android:layout_height="wrap_content"
-        		android:layout_marginBottom="10dp" />
+        		android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown"/>
             
         </LinearLayout>
         
@@ -141,7 +145,8 @@
         		android:id="@+id/characterAdvancedClass"
         		android:layout_width="match_parent"
         		android:layout_height="wrap_content"
-        		android:layout_marginBottom="10dp" />
+        		android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown"/>
             
         </LinearLayout>
         
@@ -163,7 +168,8 @@
         		android:id="@+id/characterRace"
         		android:layout_width="match_parent"
         		android:layout_marginBottom="10dp"
-        		android:layout_height="wrap_content" />
+        		android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"/>
             
         </LinearLayout>
         
@@ -185,7 +191,8 @@
             	android:id="@+id/characterAlignment"
             	android:layout_width="match_parent"
             	android:layout_height="wrap_content"
-            	android:layout_marginBottom="10dp" />
+            	android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown"/>
             
         </LinearLayout>
         
@@ -207,7 +214,8 @@
             	android:id="@+id/characterCrewSkill1"
             	android:layout_width="match_parent"
             	android:layout_height="wrap_content"
-            	android:layout_marginBottom="10dp" />
+            	android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown"/>
             
         </LinearLayout>
         
@@ -229,7 +237,8 @@
             	android:id="@+id/characterCrewSkill2"
             	android:layout_width="match_parent"
             	android:layout_height="wrap_content"
-            	android:layout_marginBottom="10dp" />
+            	android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown"/>
             
         </LinearLayout>
         
@@ -251,7 +260,8 @@
             	android:id="@+id/characterCrewSkill3"
             	android:layout_width="match_parent"
             	android:layout_height="wrap_content"
-            	android:layout_marginBottom="10dp" />
+            	android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown"/>
             
         </LinearLayout>
         

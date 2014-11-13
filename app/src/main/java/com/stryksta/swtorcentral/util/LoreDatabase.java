@@ -22,7 +22,7 @@ public class LoreDatabase extends SQLiteAssetHelper {
 		ArrayList<LoreItem> loreItem = new ArrayList<LoreItem>();
 		SQLiteDatabase db = getReadableDatabase();
 		
-		StringBuilder builder = new StringBuilder();
+		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
 			.append("SELECT faction, planet, category, codex, text, comment ")
 			.append("FROM lore ")

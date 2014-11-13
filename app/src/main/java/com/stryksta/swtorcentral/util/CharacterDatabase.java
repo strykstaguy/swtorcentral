@@ -32,7 +32,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         ArrayList<CharacterItem> characterItem = new ArrayList<CharacterItem>();
         
         SQLiteDatabase db = this.getReadableDatabase();
-        StringBuilder builder = new StringBuilder();
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
         String sqlSelect = builder
         	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, classes.name class, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
             .append("FROM character ")
@@ -133,7 +133,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     public HashMap<String, String> getCharacter(int id) {
    	 HashMap<String, String> character = new HashMap<String, String>();
   		SQLiteDatabase db = getReadableDatabase();
-  		StringBuilder builder = new StringBuilder();
+  		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
   		String sqlSelect = builder
   	        	.append("SELECT character._id, character.name, character.legacy, character.level, character.description, race.name race, classes.name class, advanced_classes.class advanced_class, gender.name gender, alignment.name alignment, cs1.name crew_skill_1, cs2.name crew_skill_2, cs3.name crew_skill_3 ")
   	            .append("FROM character ")
@@ -296,7 +296,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     public String getClass(String txtAdvancedClass) {
 		String txtClassName = null;
 		SQLiteDatabase db = getReadableDatabase();
-		StringBuilder builder = new StringBuilder();
+		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
 			.append("SELECT classes.name ")
 		    .append("FROM classes ")
@@ -361,7 +361,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     public String getCharacterImage(String txtName) {
 		String txtID = "ic_action_user";
 		SQLiteDatabase db = getReadableDatabase();
-		StringBuilder builder = new StringBuilder();
+		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
 		String sqlSelect = builder
 			.append("SELECT advanced_classes.advanced_class_icon ")
 		    .append("FROM character ")

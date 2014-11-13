@@ -1,17 +1,11 @@
 package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
-
-import com.stryksta.swtorcentral.data.DatacronItem;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.data.LoreItem;
-import com.stryksta.swtorcentral.util.DatacronDatabase;
 import com.stryksta.swtorcentral.util.LoreDatabase;
-import com.stryksta.swtorcentral.util.MaterialDialog;
 import com.stryksta.swtorcentral.util.NonScrollListView;
-
 import android.support.v4.app.Fragment;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -94,36 +88,28 @@ public class PlanetTab3 extends Fragment {
 		loreItemsList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
-					builder.setTitle(loreadapter.getItem(position).getCodex());
-					builder.setMessage(loreadapter.getItem(position).getText());
-					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-		        	public void onClick(DialogInterface dialog, int whichButton) {
-		        		dialog.dismiss();
-		            }
-		        });
-		        builder.show();
+                    new MaterialDialog.Builder(getActivity())
+                        .title(loreadapter.getItem(position).getCodex())
+                        .content(loreadapter.getItem(position).getText())
+                        .build()
+                        .show();
 			    }});
-	
+
 		//Locations
 		NonScrollListView loreLocationsItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstLocationsLore);
 		locationadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreLocationItems);
 		loreLocationsItemsList.setAdapter(locationadapter);
-		
+
 		loreLocationsItemsList.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id)
 			    {
-					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
-					builder.setTitle(locationadapter.getItem(position).getCodex());
-					builder.setMessage(locationadapter.getItem(position).getText());
-					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-		        	public void onClick(DialogInterface dialog, int whichButton) {
-		        		dialog.dismiss();
-		            }
-		        });
-		        builder.show();
+                    new MaterialDialog.Builder(getActivity())
+                        .title(locationadapter.getItem(position).getCodex())
+                        .content(locationadapter.getItem(position).getText())
+                        .build()
+                        .show();
 			    }});
-		
+
 		//Persons
 		NonScrollListView lorePersonsItemsList = (NonScrollListView) vw_layout.findViewById(R.id.lstPersonsLore);
 		personsadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, lorePersonsItems);
@@ -132,15 +118,11 @@ public class PlanetTab3 extends Fragment {
 		lorePersonsItemsList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
-					builder.setTitle(personsadapter.getItem(position).getCodex());
-					builder.setMessage(personsadapter.getItem(position).getText());
-					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-		        	public void onClick(DialogInterface dialog, int whichButton) {
-		        		dialog.dismiss();
-		            }
-		        });
-		        builder.show();
+                    new MaterialDialog.Builder(getActivity())
+                        .title(personsadapter.getItem(position).getCodex())
+                        .content(personsadapter.getItem(position).getText())
+                        .build()
+                        .show();
 			    }});
 		
 		//Titles
@@ -151,15 +133,11 @@ public class PlanetTab3 extends Fragment {
 		loreTitlesItemsList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
-					builder.setTitle(titleadapter.getItem(position).getCodex());
-					builder.setMessage(titleadapter.getItem(position).getText());
-					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-		        	public void onClick(DialogInterface dialog, int whichButton) {
-		        		dialog.dismiss();
-		            }
-		        });
-		        builder.show();
+                    new MaterialDialog.Builder(getActivity())
+                        .title(titleadapter.getItem(position).getCodex())
+                        .content(titleadapter.getItem(position).getText())
+                        .build()
+                        .show();
 			    }});
 		
 		//Beast
@@ -170,15 +148,11 @@ public class PlanetTab3 extends Fragment {
 		listBeastLore.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
-					builder.setTitle(beastadapter.getItem(position).getCodex());
-					builder.setMessage(beastadapter.getItem(position).getText());
-					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-		        	public void onClick(DialogInterface dialog, int whichButton) {
-		        		dialog.dismiss();
-		            }
-		        });
-		        builder.show();
+                    new MaterialDialog.Builder(getActivity())
+                        .title(titleadapter.getItem(position).getCodex())
+                        .content(titleadapter.getItem(position).getText())
+                        .build()
+                        .show();
 			    }});
 		
 		//Game Rules
@@ -188,20 +162,16 @@ public class PlanetTab3 extends Fragment {
 		if (loreGameRulesItems.size() > 0) {
 			gamerulesadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreGameRulesItems);
 			listGameRulesLore.setAdapter(gamerulesadapter);
-			
+
 			listGameRulesLore.setOnItemClickListener(new OnItemClickListener() {
-				public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+				public void onItemClick(AdapterView<?> parent, View view,int position, long id)
 				    {
-						MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
-						builder.setTitle(gamerulesadapter.getItem(position).getCodex());
-						builder.setMessage(gamerulesadapter.getItem(position).getText());
-						builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-			        	public void onClick(DialogInterface dialog, int whichButton) {
-			        		dialog.dismiss();
-			            }
-			        });
-			        builder.show();
-				    }});	
+                        new MaterialDialog.Builder(getActivity())
+                            .title(gamerulesadapter.getItem(position).getCodex())
+                            .content(gamerulesadapter.getItem(position).getText())
+                            .build()
+                            .show();
+				    }});
 		} else {
 			listGameRulesLore.setVisibility(View.GONE);
 			txtGameRulesLore.setVisibility(View.GONE);
@@ -212,21 +182,18 @@ public class PlanetTab3 extends Fragment {
 		NonScrollListView listOrganizationsLore = (NonScrollListView) vw_layout.findViewById(R.id.listOrganizationsLore);
 		organizationsadapter = new LoreAdapter(getActivity(), R.layout.lore_row, android.R.id.text1, loreOrganizationsItems);
 		listOrganizationsLore.setAdapter(organizationsadapter);
-				
+
 		listOrganizationsLore.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
+			public void onItemClick(AdapterView<?> parent, View view,int position, long id)
 				{
-					MaterialDialog.Builder builder = new MaterialDialog.Builder(getActivity());
-					builder.setTitle(organizationsadapter.getItem(position).getCodex());
-					builder.setMessage(organizationsadapter.getItem(position).getText());
-					builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-				    public void onClick(DialogInterface dialog, int whichButton) {
-				    	dialog.dismiss();
-				    }
-				    });
-				    builder.show();
+                    new MaterialDialog.Builder(getActivity())
+                        .title(organizationsadapter.getItem(position).getCodex())
+                        .content(organizationsadapter.getItem(position).getText())
+                        .build()
+                        .show();
+
 					}});
-		
+
 		return vw_layout;
 	}
 }

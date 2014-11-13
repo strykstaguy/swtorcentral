@@ -12,29 +12,9 @@
     <style name="AppTheme.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/swtor_blue</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-    </style>
-
-    <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">@drawable/ab_solid_swtor</item>
-        <item name="android:icon">@drawable/ic_swtor_icon</item>
-    </style>
-
-    <style name="Widget.ActionBar.Transparent">
-        <item name="android:background">@android:color/transparent</item>
-    </style>
-
-    <style name="Theme.TranslucentActionBar" parent="@android:style/Theme.Holo.Light.DarkActionBar">
-        <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
-        <item name="android:windowContentOverlay">@null</item>
-    </style>
-
-    <style name="Theme.TranslucentActionBar.ActionBar" />
-
-    <style name="Theme.TranslucentActionBar.ActionBar.Overlay">
-        <item name="android:actionBarStyle">@style/Widget.ActionBar.Transparent</item>
-        <item name="android:windowActionBarOverlay">true</item>
     </style>
 
     <style name="Widget.SWTOR.Material.Dialog.Message" parent="android:Widget.TextView">

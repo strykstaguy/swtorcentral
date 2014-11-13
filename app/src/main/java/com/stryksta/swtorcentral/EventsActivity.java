@@ -1,9 +1,7 @@
 package com.stryksta.swtorcentral;
  
-import android.app.ActionBar;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -11,8 +9,8 @@ import android.view.MenuItem;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.data.EventItem;
-import com.stryksta.swtorcentral.util.MaterialProgress;
 import com.stryksta.swtorcentral.util.Utility;
 
 import org.jsoup.Jsoup;
@@ -25,7 +23,7 @@ import java.util.ArrayList;
 public class EventsActivity extends ActionBarActivity {
     GridView eventsGridView;
     ArrayList<EventItem> eventsItems;
-    MaterialProgress pDialog;
+    MaterialDialog pDialog;
     private Toolbar mToolbar;
     String eventTitle;
     String eventStatus;
@@ -63,7 +61,8 @@ public class EventsActivity extends ActionBarActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Create a progressbar
-            pDialog = new MaterialProgress(EventsActivity.this, "Events");
+            pDialog  = new MaterialDialog.Builder(EventsActivity.this);
+            MaterialDialog pDialog new MaterialDialog.Builder(this);
             pDialog.setMessage("Loading...");
             pDialog.setIndeterminate(false);
             pDialog.show();

@@ -26,6 +26,7 @@ dependencies {
     compile 'com.android.support:support-v4:21.0.0'
     compile "com.android.support:appcompat-v7:21.0.0"
     compile 'mobi.parchment:parchment:1.6.9@aar'
+    compile 'com.afollestad:material-dialogs:0.0.6'
     compile files('libs/android-sqlite-asset-helper.jar')
     compile files('libs/jsoup-1.7.3.jar')
     compile files('libs/picasso-2.3.3.jar')

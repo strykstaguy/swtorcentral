@@ -1,10 +1,7 @@
 package com.stryksta.swtorcentral;
  
 import java.util.ArrayList;
-
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -14,12 +11,9 @@ import android.view.MenuItem;
  
 public class AdvancedClassActivity extends ActionBarActivity {
 	public static ArrayList<String> titles = new ArrayList<String>();
-	
-	private int AdvancedPos;
-    private String ClassText;
+
     private String AdvancedClassText;
-    private Toolbar mToolbar;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +25,12 @@ public class AdvancedClassActivity extends ActionBarActivity {
         Bundle bundle = getIntent().getExtras();
 		
         if ( bundle != null ) {
-        	AdvancedPos = bundle.getInt("position");
-        	ClassText = bundle.getString("class");
+            int advancedPos = bundle.getInt("position");
+            String classText = bundle.getString("class");
         	AdvancedClassText = bundle.getString("advancedclass");
         }
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

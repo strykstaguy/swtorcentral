@@ -58,7 +58,6 @@
             android:textSize="20dp"
             android:textColor="@color/text"
             android:layout_gravity="center"
-            android:text="Tython"
             android:layout_weight="1" />
 
         <TextView
@@ -68,8 +67,7 @@
             android:layout_marginLeft="@dimen/margin"
             android:textSize="14dp"
             android:textColor="@color/subtext"
-            android:layout_gravity="center"
-            android:text="Level 10" />
+            android:layout_gravity="center" />
 
         </LinearLayout>
 </LinearLayout>

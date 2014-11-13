@@ -1,9 +1,7 @@
 package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
-
 import com.stryksta.swtorcentral.data.AchievementsItem;
-import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.GridViewItemLayout;
 import com.stryksta.swtorcentral.util.SizeAdjustingTextView;
 import com.stryksta.swtorcentral.util.TextProgressBar;
