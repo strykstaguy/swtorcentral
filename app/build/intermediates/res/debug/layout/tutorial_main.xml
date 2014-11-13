@@ -4,7 +4,9 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" 
     android:background="@color/background">
-	
+
+    <include layout="@layout/toolbar"/>
+
     <com.stryksta.swtorcentral.util.AutoMeasureGridView
     	android:id="@+id/tutorial_list"
     	android:numColumns="1"

@@ -5,6 +5,8 @@
     android:orientation="vertical"
     android:background="@color/background">
 
+    <include layout="@layout/toolbar"/>
+
     <GridView
         android:id="@+id/event_list"
         android:numColumns="1"

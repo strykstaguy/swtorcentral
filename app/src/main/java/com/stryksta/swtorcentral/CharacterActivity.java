@@ -13,6 +13,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -26,9 +28,10 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
  
-public class CharacterActivity extends FragmentActivity {
+public class CharacterActivity extends ActionBarActivity {
 	ArrayList<CharacterItem> characterArray = new ArrayList<CharacterItem>();
 	private static final int ADD_PARTICIPANT = 1121;
+    private Toolbar mToolbar;
 	ListView characterList;
 	SessionManager session;
 	CharacterAdapter adapter;
@@ -38,13 +41,13 @@ public class CharacterActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.character_main);
-        
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
-        
-        //getActionBar().setTitle("Blank");
-        
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         session = new SessionManager(getApplicationContext());
         
         characterList = (ListView) findViewById(R.id.characterListView);

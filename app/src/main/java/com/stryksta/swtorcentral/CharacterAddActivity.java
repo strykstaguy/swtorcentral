@@ -17,6 +17,8 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -32,7 +34,7 @@ import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.Toast;
  
-public class CharacterAddActivity extends FragmentActivity implements OnItemSelectedListener {
+public class CharacterAddActivity extends ActionBarActivity implements OnItemSelectedListener {
 	private CharacterDatabase db;
 	LinkedHashMap<String, Integer> genderItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> raceItem = new LinkedHashMap<String, Integer>();
@@ -40,7 +42,9 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
 	LinkedHashMap<String, Integer> classItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> advancedclassItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> crewSkillsclassItem = new LinkedHashMap<String, Integer>();
-	
+
+    private Toolbar mToolbar;
+
 	static EditText characterLevel;
 	static EditText characterName;
 	static EditText characterLegacy;
@@ -70,11 +74,13 @@ public class CharacterAddActivity extends FragmentActivity implements OnItemSele
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.character_add_main);
-        
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
-        
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         
         characterLevel = (EditText) findViewById(R.id.characterLevel);

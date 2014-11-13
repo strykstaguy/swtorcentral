@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 21
     buildToolsVersion "20.0.0"
 
     defaultConfig {
         applicationId "com.stryksta.swtorcentral"
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 21
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_5
             targetCompatibility JavaVersion.VERSION_1_5
@@ -23,7 +23,8 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.android.support:support-v4:21.0.0'
+    compile "com.android.support:appcompat-v7:21.0.0"
     compile 'mobi.parchment:parchment:1.6.9@aar'
     compile files('libs/android-sqlite-asset-helper.jar')
     compile files('libs/jsoup-1.7.3.jar')

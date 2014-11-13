@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.Window;
@@ -16,7 +17,7 @@ import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
  
-public class VideoActivity extends FragmentActivity {
+public class VideoActivity extends ActionBarActivity {
 	MaterialProgress pDialog;
 	VideoView videoView;
 

@@ -14,10 +14,11 @@ import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -35,7 +36,7 @@ import com.stryksta.swtorcentral.util.CharacterDatabase;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
 
-public class MainActivity extends FragmentActivity  {
+public class MainActivity extends ActionBarActivity {
 
 	// Drawer
 	private DrawerLayout mDrawerLayout;
@@ -57,7 +58,7 @@ public class MainActivity extends FragmentActivity  {
 	ArrayList<String> mCharacterArray = new ArrayList<String>();
 	List<String> mCharacterTitles;
     HashMap<String, List<String>> mCharacterDetails;
-    
+    private Toolbar mToolbar;
 	SessionManager session;
 	
 	private static final int ADD_PARTICIPANT = 1120;
@@ -71,7 +72,13 @@ public class MainActivity extends FragmentActivity  {
 		super.onCreate(savedInstanceState);
 		// Set view
 		setContentView(R.layout.activity_main);
-		
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
 	    session = new SessionManager(getApplicationContext());
 		 
 		//Start Drawer
@@ -109,27 +116,22 @@ public class MainActivity extends FragmentActivity  {
                 R.layout.drawer_list_item, menuItems));*/
         mDrawerList.setAdapter(mAdapter); 
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-        
-     // enable ActionBar app icon to behave as action to toggle nav drawer
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
-        //getActionBar().setBackgroundDrawable(new ColorDrawable(this.getResources().getColor(R.color.action_bar)));
-     // ActionBarDrawerToggle ties together the the proper interactions
+
         // between the sliding drawer and the action bar app icon
         mDrawerToggle = new ActionBarDrawerToggle(
                 this,                  /* host Activity */
                 mDrawerLayout,         /* DrawerLayout object */
-                R.drawable.ic_drawer,  /* nav drawer image to replace 'Up' caret */
+                mToolbar,  /* toolbar */
                 R.string.drawer_open,  /* "open drawer" description for accessibility */
                 R.string.drawer_close  /* "close drawer" description for accessibility */
                 ) {
             public void onDrawerClosed(View view) {
-                getActionBar().setTitle(mTitle);
+                getSupportActionBar().setTitle(mTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 
             public void onDrawerOpened(View drawerView) {
-                getActionBar().setTitle(mDrawerTitle);
+                getSupportActionBar().setTitle(mDrawerTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
@@ -314,7 +316,7 @@ public class MainActivity extends FragmentActivity  {
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;
-        getActionBar().setTitle(mTitle);
+        getSupportActionBar().setTitle(mTitle);
     }
     
     public static boolean isNetworkAvailable(Context c) {

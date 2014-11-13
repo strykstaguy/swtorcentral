@@ -26,6 +26,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -37,7 +39,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ServerActivity extends FragmentActivity  {
+public class ServerActivity extends ActionBarActivity {
 	
 	NonScrollGridView usGridView;
 	NonScrollGridView euGridView;
@@ -46,14 +48,19 @@ public class ServerActivity extends FragmentActivity  {
 	ArrayList<ServerItem> euItems;
 	
 	MaterialProgress pDialog;
+
+    private Toolbar mToolbar;
+
     @Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.server_main);
-		
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         
         usGridView = (NonScrollGridView) findViewById(R.id.uslist);
         euGridView = (NonScrollGridView) findViewById(R.id.eulist);

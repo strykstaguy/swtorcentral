@@ -8,16 +8,19 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
  
-public class PlanetActivity extends FragmentActivity {
+public class PlanetActivity extends ActionBarActivity {
 	private String planetText;
 	private String factionText;
 	private String typeText;
 	private PlanetDatabase dbPlanet;
+    private Toolbar mToolbar;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +29,12 @@ public class PlanetActivity extends FragmentActivity {
         
         ViewPager viewPager = (ViewPager) findViewById(R.id.planet_pager);
         viewPager.setAdapter(new PlanetPagerAdapter(getSupportFragmentManager()));
-        
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         
         Bundle bundle = getIntent().getExtras();
 		
@@ -38,17 +43,13 @@ public class PlanetActivity extends FragmentActivity {
         	factionText = bundle.getString("faction");
         	typeText = bundle.getString("type");
         }
-        
-        getActionBar().setTitle(planetText);
+
+        getSupportActionBar().setTitle(planetText);
         
         dbPlanet = new PlanetDatabase(this);
 		String planetBackground = dbPlanet.PlanetBackground(planetText);
 		dbPlanet.close();
 
-        LinearLayout ll = (LinearLayout) findViewById(R.id.planetBackground);
-        int resId = getResources().getIdentifier(planetBackground, "drawable", getPackageName());
-        ll.setBackgroundResource(resId);
-        
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         

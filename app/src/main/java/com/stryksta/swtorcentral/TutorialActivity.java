@@ -9,27 +9,32 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
  
-public class TutorialActivity extends FragmentActivity {
+public class TutorialActivity extends ActionBarActivity {
 	private TutorialDatabase db;
 	private ArrayList<TutorialItem> datacrons;
 	TutorialAdapter tutorialAdapter;
-	
+    private Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tutorial_main);
-        
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
-        
-        getActionBar().setTitle("Tutorials");
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+        getSupportActionBar().setTitle("Tutorials");
         
         db = new TutorialDatabase(TutorialActivity.this);
 		datacrons = db.getTutorials();

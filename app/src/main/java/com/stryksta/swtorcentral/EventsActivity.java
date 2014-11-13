@@ -4,6 +4,8 @@ import android.app.ActionBar;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.GridView;
@@ -20,10 +22,11 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 
-public class EventsActivity extends FragmentActivity {
+public class EventsActivity extends ActionBarActivity {
     GridView eventsGridView;
     ArrayList<EventItem> eventsItems;
     MaterialProgress pDialog;
+    private Toolbar mToolbar;
     String eventTitle;
     String eventStatus;
     String eventStart;
@@ -36,9 +39,11 @@ public class EventsActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.events_main);
 
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         eventsGridView = (GridView) findViewById(R.id.event_list);
 

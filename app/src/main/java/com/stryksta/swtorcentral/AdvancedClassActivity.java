@@ -7,15 +7,18 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
  
-public class AdvancedClassActivity extends FragmentActivity {
+public class AdvancedClassActivity extends ActionBarActivity {
 	public static ArrayList<String> titles = new ArrayList<String>();
 	
 	private int AdvancedPos;
     private String ClassText;
     private String AdvancedClassText;
+    private Toolbar mToolbar;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +35,19 @@ public class AdvancedClassActivity extends FragmentActivity {
         	ClassText = bundle.getString("class");
         	AdvancedClassText = bundle.getString("advancedclass");
         }
-        
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         
         PagerTabStrip pagerTabStrip = (PagerTabStrip) findViewById(R.id.pager_title_strip);
         pagerTabStrip.setDrawFullUnderline(false);
         pagerTabStrip.setTabIndicatorColor(getResources().getColor(R.color.swtor_blue));
         
         //Get Titles
-        getActionBar().setTitle(AdvancedClassText);
+        getSupportActionBar().setTitle(AdvancedClassText);
         
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());

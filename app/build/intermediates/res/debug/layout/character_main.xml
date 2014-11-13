@@ -4,21 +4,23 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background" >
-    
- <ListView
- 	android:id="@+id/characterListView"
- 	android:layout_width="fill_parent"
- 	android:layout_height="fill_parent"
- 	android:background="@color/background"
- 	android:paddingTop="10dp"
-    android:paddingLeft="10dp"
-    android:paddingBottom="10dp"
- 	android:divider="@drawable/divider"
- 	android:scrollbarStyle="outsideInset"
- 	android:longClickable="true"
- 	android:duplicateParentState="false"
-    android:clipToPadding="false"
- 	android:cacheColorHint="@android:color/transparent" >
- </ListView>
+
+    <include layout="@layout/toolbar"/>
+
+    <ListView
+ 	    android:id="@+id/characterListView"
+ 	    android:layout_width="fill_parent"
+ 	    android:layout_height="fill_parent"
+ 	    android:background="@color/background"
+ 	    android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+ 	    android:divider="@drawable/divider"
+ 	    android:scrollbarStyle="outsideInset"
+ 	    android:longClickable="true"
+ 	    android:duplicateParentState="false"
+        android:clipToPadding="false"
+ 	    android:cacheColorHint="@android:color/transparent" >
+    </ListView>
 
 </LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/character_main.xml -->

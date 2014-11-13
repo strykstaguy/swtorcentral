@@ -10,7 +10,7 @@
 	 
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" android:theme="@style/Theme.Swtor" android:allowBackup="true">
+        android:label="@string/app_name" android:theme="@style/AppTheme" android:allowBackup="false">
         <activity
             android:name="com.stryksta.swtorcentral.MainActivity"
             android:label="@string/app_name" >
@@ -45,8 +45,7 @@
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.PlanetActivity"
-            android:label="@string/planet_main" 
-            android:theme="@style/Theme.TranslucentActionBar.ActionBar.Overlay">
+            android:label="@string/planet_main">
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.AbilityDetailActivity"

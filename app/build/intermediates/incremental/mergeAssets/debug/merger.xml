@@ -4,6 +4,12 @@
     <dataSet config="1.6.9" >
         <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\assets" />
     </dataSet>
+    <dataSet config="21.0.0" >
+        <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\assets" />
+    </dataSet>
+    <dataSet config="21.0.0" >
+        <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\assets" />
+    </dataSet>
     <dataSet config="main" >
         <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\assets" >
             <file

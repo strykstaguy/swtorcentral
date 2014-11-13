@@ -36,4 +36,13 @@
     <color name="material_seperator">#bdbdbd</color>
     <color name="material_bg_item_press">#ffdddddd</color>
     <color name="material_transparent">#00000000</color>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/material_blue_grey_900</color>
+
+    <color name="colorSecondary">@color/material_deep_teal_200</color>
+    <color name="colorSecondaryDark">@color/material_deep_teal_500</color>
+
+    <color name="windowBackgroundColor">#333333</color>
+    <color name="black_translucent">#80000000</color>
 </resources>

@@ -9,6 +9,8 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
@@ -16,21 +18,24 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
  
-public class ProgressionActivity extends FragmentActivity {
+public class ProgressionActivity extends ActionBarActivity {
 	private ProgressionAdapter factionAdapter;
 	String FactionText;
+    private Toolbar mToolbar;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.progression_main);
-        
-        ActionBar actionbar = getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeButtonEnabled(true);
-        
-        getActionBar().setTitle("Progression");
-        
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (mToolbar != null) {
+            setSupportActionBar(mToolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+        getSupportActionBar().setTitle("Progression");
+
         Bundle bundle = getIntent().getExtras();
         if ( bundle != null ) {
         	FactionText = bundle.getString("faction");
