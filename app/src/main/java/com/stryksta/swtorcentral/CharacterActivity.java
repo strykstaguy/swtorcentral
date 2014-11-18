@@ -8,11 +8,13 @@ import com.afollestad.materialdialogs.Theme;
 import com.stryksta.swtorcentral.data.CharacterItem;
 import com.stryksta.swtorcentral.util.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.FloatingActionButton;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
@@ -20,6 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -54,7 +57,21 @@ public class CharacterActivity extends ActionBarActivity {
         
         characterList = (ListView) findViewById(R.id.characterListView);
         registerForContextMenu(characterList);
-        
+
+        FloatingActionButton fabButton = new FloatingActionButton.Builder(this)
+                .withDrawable(getResources().getDrawable(R.drawable.ic_action_add))
+                .withButtonColor(getResources().getColor(R.color.swtor_blue))
+                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
+                .withMargins(0, 0, 16, 16)
+                .create();
+
+        fabButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent addCharacterIntent = new Intent(CharacterActivity.this, CharacterAddActivity.class);
+                startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
+            }
+        });
+
         updateCharacters();
         
      // Debug the thread name
@@ -72,26 +89,12 @@ public class CharacterActivity extends ActionBarActivity {
     }
     
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.character_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-    
-    @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    // Respond to the action bar's Up/Home button
 	    case android.R.id.home:
 	    	this.finish();
 	        return true;
-	    case R.id.character_menu_add:
-
-	    	Intent addCharacterIntent = new Intent(this, CharacterAddActivity.class);
-	    	startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
-
-            return true;
 	    }
 	    return super.onOptionsItemSelected(item);
 	}

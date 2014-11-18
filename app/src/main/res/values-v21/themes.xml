@@ -8,4 +8,13 @@
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
         <item name="android:colorAccent">@color/swtor_blue</item>
     </style>
+
+    <style name="AppTheme.Preference" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/swtor_blue</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
 </resources>

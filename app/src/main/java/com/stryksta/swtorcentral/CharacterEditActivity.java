@@ -8,18 +8,21 @@ import java.util.List;
 import com.stryksta.swtorcentral.data.AddCharacterItem;
 import com.stryksta.swtorcentral.data.CharacterItem;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.FloatingActionButton;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -146,7 +149,49 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
         addAlignment();
         addCrewSkills();
         addClasses();
-        
+
+        FloatingActionButton fabButton = new FloatingActionButton.Builder(this)
+                .withDrawable(getResources().getDrawable(R.drawable.ic_action_save))
+                .withButtonColor(getResources().getColor(R.color.swtor_blue))
+                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
+                .withMargins(0, 0, 16, 16)
+                .create();
+
+        fabButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if (characterLevel.getText().length() == 0) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(CharacterEditActivity.this);
+                    alert.setTitle("Level is Required");
+                    alert.setMessage("Please select a level");
+                    alert.setPositiveButton("OK", null);
+                    alert.show();
+                } else if(characterName.getText().length() == 0) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(CharacterEditActivity.this);
+                    alert.setTitle("Character Name is Required");
+                    alert.setMessage("Please name your character");
+                    alert.setPositiveButton("OK", null);
+                    alert.show();
+                } else {
+                    CharacterDatabase db = new CharacterDatabase(CharacterEditActivity.this);
+
+                    cName = characterName.getText().toString();
+                    cLegacy = characterLegacy.getText().toString();
+                    cLevel = Integer.parseInt(characterLevel.getText().toString());
+                    cDescription = characterDescription.getText().toString();
+                    cGender = genderItem.get(characterGender.getSelectedItem().toString());
+                    cRace = raceItem.get(characterRace.getSelectedItem().toString());
+                    cAlignment = alignmentItem.get(characterAlignment.getSelectedItem().toString());
+                    cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
+                    cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
+                    cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
+                    cClass = classItem.get(characterClass.getSelectedItem().toString());
+                    cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
+
+                    db.close();
+                    new saveCharacter().execute();
+                }
+            }
+        });
         characterLevel.setOnClickListener(new View.OnClickListener() { 
             public void onClick(View v) {
             	setCharacterLevel(CharacterEditActivity.this);
@@ -171,15 +216,7 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
     public void onNothingSelected(AdapterView<?> parent) {
         // Another interface callback
     }
-    
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.character_edit_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-    
+
     @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
@@ -187,43 +224,10 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
 	    case android.R.id.home:
 	    	this.finish();
 	    	break;
-	    case R.id.character_menu_save:
-	    	if (characterLevel.getText().length() == 0) {
-	    		AlertDialog.Builder alert = new AlertDialog.Builder(CharacterEditActivity.this);
-         		alert.setTitle("Level is Required");
-         		alert.setMessage("Please select a level");
-         		alert.setPositiveButton("OK", null);
-         		alert.show();
-	    	} else if(characterName.getText().length() == 0) {
-	    		AlertDialog.Builder alert = new AlertDialog.Builder(CharacterEditActivity.this);
-         		alert.setTitle("Character Name is Required");
-         		alert.setMessage("Please name your character");
-         		alert.setPositiveButton("OK", null);
-         		alert.show();
-	    	} else {
-	    		CharacterDatabase db = new CharacterDatabase(this);
-	    		
-	    		cName = characterName.getText().toString();
-	    		cLegacy = characterLegacy.getText().toString();
-	    		cLevel = Integer.parseInt(characterLevel.getText().toString());
-				cDescription = characterDescription.getText().toString();
-				cGender = genderItem.get(characterGender.getSelectedItem().toString());
-				cRace = raceItem.get(characterRace.getSelectedItem().toString());
-				cAlignment = alignmentItem.get(characterAlignment.getSelectedItem().toString());
-				cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
-				cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
-				cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
-				cClass = classItem.get(characterClass.getSelectedItem().toString());
-				cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
-	    		
-	    		db.close();
-	    		new saveCharacter().execute();
-	    	}
-	    	break;
 	    }
 	    return true;
 	}
-    
+
 	public void onBackPressed() {
 		if (getFragmentManager().getBackStackEntryCount() == 0) {
 	        this.finish();

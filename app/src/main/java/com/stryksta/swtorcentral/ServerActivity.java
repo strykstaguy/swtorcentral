@@ -8,6 +8,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.stryksta.swtorcentral.data.ServerItem;
+import com.stryksta.swtorcentral.util.FloatingActionButton;
 import com.stryksta.swtorcentral.util.MaterialDialog;
 import com.stryksta.swtorcentral.util.MaterialProgress;
 import com.stryksta.swtorcentral.util.NonScrollGridView;
@@ -18,6 +19,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.drawable.Drawable;
@@ -29,6 +31,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -70,7 +73,45 @@ public class ServerActivity extends ActionBarActivity {
        } else {
            Toast.makeText(ServerActivity.this, "Network is unavailable", Toast.LENGTH_LONG).show();
        }
-        
+
+        FloatingActionButton fabButton = new FloatingActionButton.Builder(this)
+                .withDrawable(getResources().getDrawable(R.drawable.ic_action_help_white))
+                .withButtonColor(getResources().getColor(R.color.swtor_blue))
+                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
+                .withMargins(0, 0, 16, 16)
+                .create();
+
+        fabButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                View v = getLayoutInflater().inflate(R.layout.server_key, null);
+                MaterialDialog.Builder builder = new MaterialDialog.Builder(ServerActivity.this);
+                builder.setTitle("Server Status Help");
+                builder.setView(v);
+
+                ImageView serverLight = (ImageView) v.findViewById(R.id.IMGserverLight);
+                serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightcolor)));
+
+                ImageView serverStandard = (ImageView) v.findViewById(R.id.serverStandard);
+                serverStandard.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.standardcolor)));
+
+                ImageView serverHeavy = (ImageView) v.findViewById(R.id.serverHeavy);
+                serverHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.heavycolor)));
+
+                ImageView serverVeryHeavy = (ImageView) v.findViewById(R.id.serverVeryHeavy);
+                serverVeryHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.veryheavycolor)));
+
+                ImageView serverFull = (ImageView) v.findViewById(R.id.serverFull);
+                serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullcolor)));
+
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        dialog.dismiss();
+                    }
+                });
+
+                builder.show();
+            }
+        });
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
 	}
@@ -164,15 +205,7 @@ public class ServerActivity extends ActionBarActivity {
 			txtServerEUSub.setVisibility(View.VISIBLE);
 		}
 	}
-    
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.server_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-    
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
@@ -180,34 +213,6 @@ public class ServerActivity extends ActionBarActivity {
 	    case android.R.id.home:
 	    	this.finish();
 	    	break;
-	    case R.id.server_help:
-	    	View v = getLayoutInflater().inflate(R.layout.server_key, null);
-	        MaterialDialog.Builder builder = new MaterialDialog.Builder(this);
-	        builder.setTitle("Server Status Help");
-	        builder.setView(v);
-	        
-	        ImageView serverLight = (ImageView) v.findViewById(R.id.IMGserverLight);
-	        serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightcolor)));
-	        
-	        ImageView serverStandard = (ImageView) v.findViewById(R.id.serverStandard);
-	        serverStandard.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.standardcolor)));
-	          
-	        ImageView serverHeavy = (ImageView) v.findViewById(R.id.serverHeavy);
-	        serverHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.heavycolor)));
-	         
-	        ImageView serverVeryHeavy = (ImageView) v.findViewById(R.id.serverVeryHeavy);
-	        serverVeryHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.veryheavycolor)));
-	          
-	        ImageView serverFull = (ImageView) v.findViewById(R.id.serverFull);
-	        serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullcolor)));
-	          
-	        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-	        	public void onClick(DialogInterface dialog, int whichButton) {
-	        		dialog.dismiss();
-	            }
-	        });
-	        
-	        builder.show();
 	    }
 	    return super.onOptionsItemSelected(item);
 	}

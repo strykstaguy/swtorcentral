@@ -7,6 +7,8 @@
         <item name="android:windowIsFloating">true</item>
     </style>
 
+    <style name="AppTheme.Preference" parent="android:Theme.Holo.Light"/>
+
     <style name="AppTheme" parent="AppTheme.Base"/>
 
     <style name="AppTheme.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">

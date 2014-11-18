@@ -61,11 +61,11 @@ public class EventsActivity extends ActionBarActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Create a progressbar
-            pDialog  = new MaterialDialog.Builder(EventsActivity.this);
-            MaterialDialog pDialog new MaterialDialog.Builder(this);
-            pDialog.setMessage("Loading...");
-            pDialog.setIndeterminate(false);
-            pDialog.show();
+            //pDialog  = new MaterialDialog.Builder(EventsActivity.this);
+            //MaterialDialog pDialog new MaterialDialog.Builder(this);
+            //pDialog.setMessage("Loading...");
+            //pDialog.setIndeterminate(false);
+            //pDialog.show();
 
         }
 

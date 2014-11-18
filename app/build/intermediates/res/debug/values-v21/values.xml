@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values-v21/themes.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values-v21/themes.xml -->
     <eat-comment />
 
     <style name="AppTheme" parent="AppTheme.Base">
@@ -12,7 +12,15 @@
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
         <item name="android:colorAccent">@color/swtor_blue</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v21/values.xml -->
+
+    <style name="AppTheme.Preference" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/swtor_blue</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v21/values.xml -->
     <eat-comment />
 
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material" />
@@ -338,7 +346,7 @@
     </style>
 
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget.Material.Toolbar.Button.Navigation" />
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values-v21/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values-v21/values.xml -->
     <eat-comment />
 
     <style name="MD_Dark" parent="android:Theme.Material.Dialog.Alert">
@@ -350,7 +358,7 @@
         <item name="md_divider">@color/md_divider_black</item>
         <item name="md_selector">?android:selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v21/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v21/values.xml -->
     <eat-comment />
 
     <style name="Platform.AppCompat" parent="android:Theme.Material">

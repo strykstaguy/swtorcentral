@@ -2,42 +2,42 @@
 <merger version="2" >
 
     <dataSet config="21.0.0" >
-        <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\assets" />
+        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\assets" />
     </dataSet>
     <dataSet config="21.0.0" >
-        <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\assets" />
+        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\assets" />
     </dataSet>
     <dataSet config="0.0.6" >
-        <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.0.6\assets" >
+        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.0.6\assets" >
             <file
                 name="Roboto-Medium.ttf"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.0.6\assets\Roboto-Medium.ttf" />
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.0.6\assets\Roboto-Medium.ttf" />
             <file
                 name="Roboto-Regular.ttf"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.0.6\assets\Roboto-Regular.ttf" />
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.0.6\assets\Roboto-Regular.ttf" />
         </source>
     </dataSet>
     <dataSet config="1.6.9" >
-        <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\assets" />
+        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\assets" />
     </dataSet>
     <dataSet config="main" >
-        <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\assets" >
+        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\assets" >
             <file
                 name="databases/swtor.zip"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\assets\databases\swtor.zip" />
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\assets\databases\swtor.zip" />
             <file
                 name="fonts/Roboto-Light.ttf"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\assets\fonts\Roboto-Light.ttf" />
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\assets\fonts\Roboto-Light.ttf" />
             <file
                 name="fonts/Roboto-Medium.ttf"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\assets\fonts\Roboto-Medium.ttf" />
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\assets\fonts\Roboto-Medium.ttf" />
             <file
                 name="fonts/Roboto-Regular.ttf"
-                path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\main\assets\fonts\Roboto-Regular.ttf" />
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\assets\fonts\Roboto-Regular.ttf" />
         </source>
     </dataSet>
     <dataSet config="debug" >
-        <source path="C:\Users\e9900375\Desktop\SWTORCentral\app\src\debug\assets" />
+        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\src\debug\assets" />
     </dataSet>
 
 </merger>
