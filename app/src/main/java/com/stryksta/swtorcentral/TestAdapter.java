@@ -8,39 +8,77 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.stryksta.swtorcentral.util.TimelineHView;
-import com.stryksta.swtorcentral.data.ProgressionItem;
+import com.stryksta.swtorcentral.data.TestItem;
+import com.stryksta.swtorcentral.util.PinnedSectionListView;
+import java.util.ArrayList;
 
-import java.util.List;
+public class TestAdapter extends ArrayAdapter<TestItem> implements PinnedSectionListView.PinnedSectionListAdapter {
+    private final ArrayList<TestItem> progressionItems;
+    Context mContext;
+    public TestAdapter(Context mContext, final ArrayList<TestItem> progressionItems) {
+        super(mContext, R.layout.test_row, progressionItems);
+        this.progressionItems = progressionItems;
+        this.mContext = mContext;
+    }
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
 
-public class TestAdapter extends ArrayAdapter<ProgressionItem> {
-    private final LayoutInflater mInflater;
+        View v = convertView;
+        ViewHolder holder;
 
-    public TestAdapter(Context context, List<ProgressionItem> objects) {
-        super(context, 0, objects);
-        mInflater = LayoutInflater.from(context);
+        if (v == null) {
+            LayoutInflater inflater = (LayoutInflater) getContext()
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            v = inflater.inflate(R.layout.test_row, parent, false);
+            holder = new ViewHolder();
+
+            holder.imgPlanet = (ImageView) v.findViewById(R.id.imgPlanet);
+            holder.txtPlanet = (TextView) v.findViewById(R.id.txtPlanet);
+            holder.txtLevel = (TextView) v.findViewById(R.id.txtLevel);
+            holder.txtLabel = (TextView) v.findViewById(R.id.txtLabel);
+
+            v.setTag(holder);
+
+        } else {
+            holder = (ViewHolder) v.getTag();
+        }
+
+        TestItem progressionItem = progressionItems.get(position);
+
+        if (progressionItem != null) {
+
+            holder.txtLabel.setText(progressionItem.getLabel());
+            holder.imgPlanet.setImageResource(progressionItem.getImgPlanet());
+            holder.txtPlanet.setText(progressionItem.getPlanet());
+            holder.txtLevel.setText(progressionItem.getLevel());
+
+            if (progressionItems.get(position).type == TestItem.ITEM) {
+                holder.txtLabel.setVisibility(View.GONE);
+            }
+        }
+
+        return v;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View v = mInflater.inflate(R.layout.test_row, null);
+    public int getViewTypeCount() {
+        return 2;
+    }
 
-        ImageView imgPlanet = (ImageView) v.findViewById(R.id.imgPlanet);
-        TextView txtPlanet = (TextView) v.findViewById(R.id.txtPlanet);
-        TextView txtLevel = (TextView) v.findViewById(R.id.txtLevel);
-        TextView txtTimeLineLabel = (TextView) v.findViewById(R.id.txtTimeLineLabel);
-        TimelineHView timeline = (TimelineHView) v.findViewById(R.id.timeline);
+    @Override
+    public int getItemViewType(int position) {
+        return getItem(position).type;
+    }
 
+    public boolean isItemViewTypePinned(int viewType) {
+        return viewType == TestItem.SECTION;
+    }
 
-
-        ProgressionItem event = getItem(position);
-
-        imgPlanet.setImageResource(event.getimgPlanet());
-        txtPlanet.setText(event.getPlanet());
-        txtLevel.setText(event.getLevel());
-        txtTimeLineLabel.setText(event.getLabel());
-        timeline.setTimelineType(event.getType());
-
-        return v;
+    private static class ViewHolder {
+        public ImageView imgPlanet;
+        public TextView txtPlanet;
+        public TextView txtLevel;
+        public TextView txtLabel;
     }
 }
