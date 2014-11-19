@@ -50,7 +50,7 @@ public class TestActivity extends ActionBarActivity {
            // factionAdapter = new TestAdapter(this, generateEmpireData());
         }
 
-        mobi.parchment.widget.adapterview.listview.ListView progressionList = (mobi.parchment.widget.adapterview.listview.ListView) findViewById(R.id.testList);
+        com.stryksta.swtorcentral.util.PinnedSectionListView progressionList = (com.stryksta.swtorcentral.util.PinnedSectionListView) findViewById(R.id.testList);
 
         progressionList.setAdapter(factionAdapter);
         progressionList.setOnItemClickListener(new OnItemClickListener() {
@@ -69,9 +69,12 @@ public class TestActivity extends ActionBarActivity {
     private ArrayList<TestItem> generateRepublicData(){
         ArrayList<TestItem> planets = new ArrayList<TestItem>();
 
-        planets.add(new TestItem("Tython", "Level 1-10", R.drawable.pl_tython, "Prologue", TestItem.SECTION));
+
+        planets.add(new TestItem("Prologue", TestItem.SECTION));
+        planets.add(new TestItem("Tython", "Level 1-10", R.drawable.pl_tython, "Prologue", TestItem.ITEM));
         planets.add(new TestItem("Ord Mantell", "Level 1-10", R.drawable.pl_ord_mantell, "Prologue", TestItem.ITEM));
         planets.add(new TestItem("Republic Fleet", "Level 10+", R.drawable.ic_republic_black, "Prologue", TestItem.ITEM));
+
         planets.add(new TestItem("The Esseles", "Flashpoint", R.drawable.faction_both_black, "Prologue", TestItem.ITEM));
         planets.add(new TestItem("Coruscant", "Level 11-16", R.drawable.pl_coruscant, "Prologue", TestItem.ITEM));
         planets.add(new TestItem("Hammer Station", "Flashpoint", R.drawable.faction_both_black, "Prologue", TestItem.ITEM));

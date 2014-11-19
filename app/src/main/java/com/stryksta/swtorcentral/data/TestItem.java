@@ -18,7 +18,11 @@ public class TestItem {
         this.imgPlanet = imgPlanet;
         this.label = label;
     }
-    
+
+    public TestItem(String label, int type){
+        this("", "", 0, label, type);
+    }
+
     public int getImgPlanet() {
 		return imgPlanet;
 	}

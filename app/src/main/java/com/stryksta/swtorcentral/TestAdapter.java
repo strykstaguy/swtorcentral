@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.stryksta.swtorcentral.data.DatacronItem;
 import com.stryksta.swtorcentral.data.TestItem;
 import com.stryksta.swtorcentral.util.PinnedSectionListView;
 import java.util.ArrayList;
@@ -30,7 +31,11 @@ public class TestAdapter extends ArrayAdapter<TestItem> implements PinnedSection
             LayoutInflater inflater = (LayoutInflater) getContext()
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            v = inflater.inflate(R.layout.test_row, parent, false);
+            int layout = R.layout.test_row;
+            if (getItem(position).type == TestItem.SECTION)
+                layout = R.layout.test_row_header;
+
+            v = inflater.inflate(layout, parent, false);
             holder = new ViewHolder();
 
             holder.imgPlanet = (ImageView) v.findViewById(R.id.imgPlanet);
@@ -48,13 +53,17 @@ public class TestAdapter extends ArrayAdapter<TestItem> implements PinnedSection
 
         if (progressionItem != null) {
 
-            holder.txtLabel.setText(progressionItem.getLabel());
-            holder.imgPlanet.setImageResource(progressionItem.getImgPlanet());
-            holder.txtPlanet.setText(progressionItem.getPlanet());
-            holder.txtLevel.setText(progressionItem.getLevel());
+            if (getItem(position).type == TestItem.ITEM){
 
-            if (progressionItems.get(position).type == TestItem.ITEM) {
                 holder.txtLabel.setVisibility(View.GONE);
+                holder.imgPlanet.setImageResource(progressionItem.getImgPlanet());
+                holder.txtPlanet.setText(progressionItem.getPlanet());
+                holder.txtLevel.setText(progressionItem.getLevel());
+
+
+
+            } else {
+                holder.txtLabel.setText(progressionItem.getLabel());
             }
         }
 
