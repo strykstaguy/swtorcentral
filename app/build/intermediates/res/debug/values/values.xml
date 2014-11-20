@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/arrays.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/arrays.xml -->
     <eat-comment />
 
     <array name="drawerIcons">
@@ -43,18 +43,18 @@
         <item name="30">30</item>
         <item name="0">0</item>
     </string-array>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <attr name="drawerArrowStyle" format="reference" />
     <attr name="height" format="dimension" />
     <attr name="isLightTheme" format="boolean" />
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
     <eat-comment />
 
     <attr name="md_divider" format="color" />
     <attr name="md_selector" format="reference" />
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <attr name="title" format="string" />
@@ -72,24 +72,24 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="background">#dcdcdc</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="background_floating_material_dark">#ff424242</color>
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
     <color name="background_material_light">#ffeeeeee</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="backgroundlight">#E5E5E5</color>
     <color name="black">#000000</color>
     <color name="black_translucent">#80000000</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -100,7 +100,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="characterlogin">#555555</color>
@@ -108,14 +108,14 @@
     <color name="colorPrimaryDark">#2186cb</color>
     <color name="colorSecondary">#2186cb</color>
     <color name="colorSecondaryDark">#2186cb</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="fullcolor">#C50000</color>
@@ -126,28 +126,28 @@
     <color name="gray_46">#2e2e2e</color>
     <color name="gray_86">#DCDCDC</color>
     <color name="heavycolor">#ff8401</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="lightcolor">#0aa421</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="material_background">#fffafafa</color>
     <color name="material_bg_item_press">#ffdddddd</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -155,7 +155,7 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="material_dialog_button_default">#3C3C3D</color>
@@ -166,7 +166,7 @@
     <color name="material_primary_text_default">#de000000</color>
     <color name="material_seperator">#bdbdbd</color>
     <color name="material_transparent">#00000000</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
     <eat-comment />
 
     <color name="md_divider_black">#10000000</color>
@@ -174,7 +174,7 @@
     <color name="md_material_blue_500">#5677fc</color>
     <color name="md_title_dark">#FFFFFF</color>
     <color name="md_title_light">#000000</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="primary_dark_material_dark">#ff000000</color>
@@ -185,11 +185,11 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="regularcolor">#000000</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="ripple_material_dark">#40ffffff</color>
@@ -198,18 +198,18 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="seperator">#bdbdbd</color>
     <color name="standardcolor">#eebe00</color>
     <color name="subtext">#949494</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="swtor_blue">#3F9FE0</color>
@@ -217,18 +217,18 @@
     <color name="swtor_green">#99cc00</color>
     <color name="swtor_orange">#FFCB00</color>
     <color name="text">#333333</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <color name="title_color">#ffffff</color>
     <color name="title_detail_color">#000000</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="veryheavycolor">#ff2c2c</color>
     <color name="white">#FFFFFF</color>
     <color name="windowBackgroundColor">#333333</color>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="ActionBar">
@@ -383,7 +383,7 @@
         <!-- The thickness (stroke size) for the bar paint -->
         <attr name="thickness" format="dimension" />
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/mobi.parchment/parchment/1.6.9/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/mobi.parchment/parchment/1.6.9/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="GridPatternView">
@@ -398,7 +398,7 @@
             <flag name="bottom" value="0x10" />
         </attr>
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="LinearLayoutCompat">
@@ -461,7 +461,7 @@
         <!-- Amount of pixels by which the drop down should be offset horizontally. -->
         <attr name="android:dropDownHorizontalOffset" />
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/mobi.parchment/parchment/1.6.9/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/mobi.parchment/parchment/1.6.9/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="ListView">
@@ -482,7 +482,7 @@
         </attr>
         <attr name="selectWhileScrolling" format="boolean" />
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="MenuGroup">
@@ -766,7 +766,7 @@
         <!-- Whether to draw on/off text. -->
         <attr name="showText" format="boolean" />
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/attrs.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/attrs.xml -->
     <eat-comment />
 
     <declare-styleable name="TextProgressBar">
@@ -774,7 +774,7 @@
         <attr name="textColor" format="color" />
         <attr name="textSize" format="dimension" />
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="Theme">
@@ -1084,7 +1084,7 @@
         <!-- The color applied to framework switch thumbs in their normal state. -->
         <attr name="colorSwitchThumbNormal" format="color" />
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/attrs_timeline_view.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/attrs_timeline_view.xml -->
     <eat-comment />
 
     <declare-styleable name="TimelineView">
@@ -1104,7 +1104,7 @@
             <enum name="single" value="3" />
         </attr>
     </declare-styleable>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <declare-styleable name="Toolbar">
@@ -1225,30 +1225,30 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <dimen name="advclass_img_height">300dp</dimen>
     <dimen name="advclass_img_width">160dp</dimen>
     <dimen name="advclasspadding">10dp</dimen>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
     <eat-comment />
 
     <dimen name="button_min_width">64dp</dimen>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <dimen name="class_img_height">60dp</dimen>
     <dimen name="class_img_height_land">90dp</dimen>
     <dimen name="datacronpadding">5dp</dimen>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
     <item name="dialog_fixed_width_major" type="dimen">320dp</item>
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <dimen name="dim_10">10dp</dimen>
@@ -1257,12 +1257,12 @@
     <dimen name="dim_40">40dp</dimen>
     <dimen name="dim_5">5dp</dimen>
     <dimen name="dim_50">50dp</dimen>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <item name="disabled_alpha_material_dark" format="float" type="dimen">0.30</item>
     <item name="disabled_alpha_material_light" format="float" type="dimen">0.26</item>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <dimen name="divider_size">1dp</dimen>
@@ -1283,7 +1283,7 @@
     <dimen name="material_message">14sp</dimen>
     <dimen name="material_spacing">24dp</dimen>
     <dimen name="material_title">18sp</dimen>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
     <eat-comment />
 
     <dimen name="md_button_height">48dp</dimen>
@@ -1302,7 +1302,7 @@
     <dimen name="md_main_frame_margin">16dp</dimen>
     <dimen name="md_neutral_button_margin">16dp</dimen>
     <dimen name="md_title_textsize">20sp</dimen>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <dimen name="padding">5dp</dimen>
@@ -1330,7 +1330,7 @@
     <dimen name="title_size">16sp</dimen>
     <dimen name="tutorial_image_height">140dp</dimen>
     <dimen name="width">60dp</dimen>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <item name="action_bar_activity_content" type="id"/>
@@ -1344,13 +1344,13 @@
     <item name="up" type="id"/>
 
     <integer name="abc_max_action_buttons">2</integer>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment />
 
     <item name="list_item_grid_view_column_count" format="integer" type="integer">2</item>
 
     <integer name="num_cols">1</integer>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -1368,7 +1368,7 @@
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string name="abilities">Abilities</string>
@@ -1432,6 +1432,7 @@
     <string name="image">Thumbnail</string>
     <string name="image_placeholder">Placeholder for Images</string>
     <string name="informationsub">Information</string>
+    <string name="loading">Loading...</string>
     <string name="locationslore">Locations</string>
     <string name="lore">Lore</string>
     <string name="main_header">SWTOR Central</string>
@@ -1477,7 +1478,7 @@
     <string name="titleslore">Titles</string>
     <string name="tutorials_main">Tutorials</string>
     <string name="video_main">Test</string>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
     <eat-comment />
 
     <style name="AppTheme" parent="AppTheme.Base" />
@@ -1491,7 +1492,7 @@
     </style>
 
     <style name="AppTheme.Preference" parent="android:Theme.Holo.Light" />
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
@@ -2348,7 +2349,7 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
     <eat-comment />
 
     <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
@@ -2364,7 +2365,7 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
         <item name="android:minHeight">10dip</item>
         <item name="android:maxHeight">20dip</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/values/values.xml -->
     <eat-comment />
 
     <style name="MD_ActionButton">
@@ -2400,7 +2401,7 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
         <item name="md_divider">@color/md_divider_black</item>
         <item name="md_selector">@drawable/md_selector</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <style name="Platform.AppCompat" parent="android:Theme">
@@ -2584,7 +2585,7 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
     <style name="RtlOverlay.Widget.AppCompat.SearchView.MagIcon" parent="android:Widget">
         <item name="android:layout_marginLeft">@dimen/abc_dropdownitem_text_padding_left</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
     <eat-comment />
 
     <style name="SWTORMaterialDialog" parent="android:style/Theme.Dialog">
@@ -2592,7 +2593,7 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat" />
@@ -2822,7 +2823,7 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar" />
 
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation" />
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
     <eat-comment />
 
     <style name="Widget.SWTOR.Material.Dialog.Button" parent="android:Widget.TextView">

@@ -1,5 +1,6 @@
 package com.stryksta.swtorcentral;
  
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -10,6 +11,10 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.Alignment;
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.Theme;
+
 import com.stryksta.swtorcentral.data.EventItem;
 import com.stryksta.swtorcentral.util.Utility;
 
@@ -62,6 +67,14 @@ public class EventsActivity extends ActionBarActivity {
             super.onPreExecute();
             // Create a progressbar
             //pDialog  = new MaterialDialog.Builder(EventsActivity.this);
+            //MaterialDialog dialog = new MaterialDialog.Builder(EventsActivity.this);
+            pDialog = new MaterialDialog.Builder(EventsActivity.this)
+                    .title("")
+                    .customView(R.layout.progress_alert)
+                    .positiveText("")
+                    .hideActions()
+                    .build();
+            pDialog.show();
             //MaterialDialog pDialog new MaterialDialog.Builder(this);
             //pDialog.setMessage("Loading...");
             //pDialog.setIndeterminate(false);
@@ -158,7 +171,7 @@ public class EventsActivity extends ActionBarActivity {
             EventAdapter eventsAdapter = new EventAdapter(EventsActivity.this, R.layout.event_row, eventsItems);
             eventsGridView.setAdapter(eventsAdapter);
 
-            pDialog.dismiss();
+            //pDialog.dismiss();
         }
     }
     @Override
