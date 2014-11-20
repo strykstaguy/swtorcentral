@@ -26,15 +26,6 @@
     <color name="swtor_orange">#FFCB00</color>
     <color name="seperator">#bdbdbd</color>
 
-    <color name="material_dialog_title">#3C3C3D</color>
-    <color name="material_dialog_message">#000000</color>
-    <color name="material_dialog_button_default">#3C3C3D</color>
-    <color name="material_dialog_button_primary_default">@android:color/holo_blue_light</color>
-    <color name="material_background">#fffafafa</color>
-    <color name="material_gray">#80E0E0E0</color>
-    <color name="material_primary_text_default">#de000000</color>
-    <color name="material_seperator">#bdbdbd</color>
-    <color name="material_bg_item_press">#ffdddddd</color>
     <color name="material_transparent">#00000000</color>
 
     <color name="colorPrimary">#2186cb</color>

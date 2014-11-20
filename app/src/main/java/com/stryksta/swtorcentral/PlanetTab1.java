@@ -41,7 +41,8 @@ public class PlanetTab1 extends Fragment {
         db = new PlanetDatabase(getActivity());
 		String Description = db.PlanetDescription(planetText);
 		TextView txtDescription = (TextView) vw_layout.findViewById(R.id.txtDescription);
-		
+		db.close();
+
 		txtDescription.setText(Description);
 		
 		return vw_layout;

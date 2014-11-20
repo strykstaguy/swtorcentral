@@ -1,14 +1,11 @@
 package com.stryksta.swtorcentral;
- 
-import com.stryksta.swtorcentral.util.MaterialProgress;
 
-import android.app.ProgressDialog;
+
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -16,9 +13,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
- 
+
+import com.afollestad.materialdialogs.MaterialDialog;
+
 public class VideoActivity extends ActionBarActivity {
-	MaterialProgress pDialog;
+    MaterialDialog pDialog;
 	VideoView videoView;
 
 	private int position = 0;
@@ -27,12 +26,12 @@ public class VideoActivity extends ActionBarActivity {
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
         
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.video_main);
         
         //ActionBar actionbar = getActionBar();
@@ -62,14 +61,13 @@ public class VideoActivity extends ActionBarActivity {
  		protected void onPreExecute() {
  			super.onPreExecute();
  			// Create a progressbar
- 			pDialog = new MaterialProgress(VideoActivity.this, videoTitle);
- 			// Set progressbar title
- 			//pDialog.setTitle(videoTitle);
- 			// Set progressbar message
- 			pDialog.setMessage("Loading...");
- 			pDialog.setIndeterminate(false);
- 			// Show progressbar
- 			pDialog.show();
+            pDialog = new MaterialDialog.Builder(VideoActivity.this)
+                    .title(videoTitle)
+                    .customView(R.layout.progress_alert)
+                    .positiveText("")
+                    .hideActions()
+                    .build();
+            pDialog.show();
 
  		}
 

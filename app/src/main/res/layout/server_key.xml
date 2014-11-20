@@ -22,7 +22,6 @@
         
         <TextView
  	    	android:id="@+id/txtserverLight"
- 	    	style="@style/Widget.SWTOR.Material.Dialog.Message"
  	    	android:layout_width="wrap_content"
  	    	android:layout_height="wrap_content"
  	    	android:layout_gravity="center"
@@ -47,7 +46,6 @@
         
         <TextView
  	    	android:id="@+id/txtserverStandard"
- 	    	style="@style/Widget.SWTOR.Material.Dialog.Message"
  	    	android:layout_width="wrap_content"
  	    	android:layout_height="wrap_content"
  	    	android:layout_gravity="center"
@@ -72,7 +70,6 @@
         
         <TextView
  	    	android:id="@+id/txtserverHeavy"
- 	    	style="@style/Widget.SWTOR.Material.Dialog.Message"
  	    	android:layout_width="wrap_content"
  	    	android:layout_height="wrap_content"
  	    	android:layout_gravity="center"
@@ -97,7 +94,6 @@
         
         <TextView
  	    	android:id="@+id/txtserverVeryHeavy"
- 	    	style="@style/Widget.SWTOR.Material.Dialog.Message"
  	    	android:layout_width="wrap_content"
  	    	android:layout_height="wrap_content"
  	    	android:layout_gravity="center"
@@ -122,7 +118,6 @@
         
         <TextView
  	    	android:id="@+id/txtserverFull"
- 	    	style="@style/Widget.SWTOR.Material.Dialog.Message"
  	    	android:layout_width="wrap_content"
  	    	android:layout_height="wrap_content"
  	    	android:layout_gravity="center"

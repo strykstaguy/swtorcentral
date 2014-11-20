@@ -34,22 +34,19 @@ public class ProgressionActivity extends ActionBarActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        getSupportActionBar().setTitle("Progression");
-
         Bundle bundle = getIntent().getExtras();
         if ( bundle != null ) {
         	FactionText = bundle.getString("faction");
         }
-        
+
+        getSupportActionBar().setTitle(FactionText + "Progression");
+
         if ( FactionText.equals("Republic")) {
         	factionAdapter = new ProgressionAdapter(this, generateRepublicData());
         } else {
         	factionAdapter = new ProgressionAdapter(this, generateEmpireData());
         }
-        
-        TextView factionTextView = (TextView) findViewById(R.id.txtFaction);
-        factionTextView.setText(FactionText);
-        
+
         ListView progressionList = (ListView) findViewById(R.id.progressionList);
         
         progressionList.setAdapter(factionAdapter);

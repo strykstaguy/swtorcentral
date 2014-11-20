@@ -8,6 +8,7 @@ import java.util.List;
 import com.stryksta.swtorcentral.data.AddCharacterItem;
 import com.stryksta.swtorcentral.data.CharacterItem;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.FloatingActionButton;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -20,6 +21,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -102,7 +104,50 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
         addAlignment();
         addCrewSkills();
         addClasses();
-        
+
+        FloatingActionButton fabButton = new FloatingActionButton.Builder(this)
+                .withDrawable(getResources().getDrawable(R.drawable.ic_action_save))
+                .withButtonColor(getResources().getColor(R.color.swtor_blue))
+                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
+                .withMargins(0, 0, 16, 16)
+                .create();
+
+        fabButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if (characterLevel.getText().length() == 0) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(CharacterAddActivity.this);
+                    alert.setTitle("Level is Required");
+                    alert.setMessage("Please select a level");
+                    alert.setPositiveButton("OK", null);
+                    alert.show();
+                } else if(characterName.getText().length() == 0) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(CharacterAddActivity.this);
+                    alert.setTitle("Character Name is Required");
+                    alert.setMessage("Please name your character");
+                    alert.setPositiveButton("OK", null);
+                    alert.show();
+                } else {
+                    CharacterDatabase db = new CharacterDatabase(CharacterAddActivity.this);
+
+                    cName = characterName.getText().toString();
+                    cLegacy = characterLegacy.getText().toString();
+                    cLevel = Integer.parseInt(characterLevel.getText().toString());
+                    cDescription = characterDescription.getText().toString();
+                    cGender = genderItem.get(characterGender.getSelectedItem().toString());
+                    cRace = raceItem.get(characterRace.getSelectedItem().toString());
+                    cAlignment = alignmentItem.get(characterAlignment.getSelectedItem().toString());
+                    cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
+                    cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
+                    cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
+                    cClass = classItem.get(characterClass.getSelectedItem().toString());
+                    cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
+
+                    db.close();
+                    new saveCharacter().execute();
+                }
+            }
+        });
+
         characterLevel.setOnClickListener(new View.OnClickListener() { 
             public void onClick(View v) {
             	setCharacterLevel(CharacterAddActivity.this);
@@ -127,54 +172,13 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
     public void onNothingSelected(AdapterView<?> parent) {
         // Another interface callback
     }
-    
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.character_add_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-    
+
     @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    // Respond to the action bar's Up/Home button
 	    case android.R.id.home:
 	    	this.finish();
-	    	break;
-	    case R.id.character_menu_save:
-	    	if (characterLevel.getText().length() == 0) {
-	    		AlertDialog.Builder alert = new AlertDialog.Builder(CharacterAddActivity.this);
-         		alert.setTitle("Level is Required");
-         		alert.setMessage("Please select a level");
-         		alert.setPositiveButton("OK", null);
-         		alert.show();
-	    	} else if(characterName.getText().length() == 0) {
-	    		AlertDialog.Builder alert = new AlertDialog.Builder(CharacterAddActivity.this);
-         		alert.setTitle("Character Name is Required");
-         		alert.setMessage("Please name your character");
-         		alert.setPositiveButton("OK", null);
-         		alert.show();
-	    	} else {
-	    		CharacterDatabase db = new CharacterDatabase(this);
-	    		
-	    		cName = characterName.getText().toString();
-	    		cLegacy = characterLegacy.getText().toString();
-	    		cLevel = Integer.parseInt(characterLevel.getText().toString());
-				cDescription = characterDescription.getText().toString();
-				cGender = genderItem.get(characterGender.getSelectedItem().toString());
-				cRace = raceItem.get(characterRace.getSelectedItem().toString());
-				cAlignment = alignmentItem.get(characterAlignment.getSelectedItem().toString());
-				cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
-				cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
-				cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
-				cClass = classItem.get(characterClass.getSelectedItem().toString());
-				cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
-	    		
-	    		db.close();
-	    		new saveCharacter().execute();
-	    	}
 	    	break;
 	    }
 	    return true;
@@ -196,6 +200,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterClass.setAdapter(dataAdapter);
+        db.close();
 	}
 	
 	public void addAdvancedClasses(int classid) {
@@ -206,6 +211,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterAdvancedClass.setAdapter(dataAdapter);
+        db.close();
 	}
 	
 	public void addGenders() {
@@ -216,6 +222,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterGender.setAdapter(dataAdapter);
+        db.close();
 	}
 	
 	public void addRaces() {
@@ -228,6 +235,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 		characterRace.setAdapter(dataAdapter);
 		
 		characterRace.setSelection(dataAdapter.getPosition("Human"));
+        db.close();
 	}
 	
 	public void addAlignment() {
@@ -238,6 +246,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		characterAlignment.setAdapter(dataAdapter);
+        db.close();
 	}
 	
 	public void addCrewSkills() {

@@ -61,10 +61,4 @@ public class FactionFragment extends Fragment {
      	
      	return vw_layout;
 	}
-	
-	@Override
-	public void onDestroyView() {
-	    super.onDestroyView();
-	    getActivity().getActionBar().setTitle("SWTOR Central");
-	}
 }

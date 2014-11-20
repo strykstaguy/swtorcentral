@@ -18,7 +18,7 @@ public class ProgressBarCircular extends RelativeLayout {
 
     final static String ANDROIDXML = "http://schemas.android.com/apk/res/android";
 
-    int backgroundColor = Color.parseColor("#1E88E5");
+    int backgroundColor = Color.parseColor("#3F9FE0");
 
 
     public ProgressBarCircular(Context context, AttributeSet attrs) {
@@ -49,7 +49,7 @@ public class ProgressBarCircular extends RelativeLayout {
             if (background != null)
                 setBackgroundColor(Color.parseColor(background));
             else
-                setBackgroundColor(Color.parseColor("#1E88E5"));
+                setBackgroundColor(Color.parseColor("#3F9FE0"));
         }
 
         setMinimumHeight(dpToPx(3, getResources()));
@@ -76,9 +76,9 @@ public class ProgressBarCircular extends RelativeLayout {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if (firstAnimationOver == false)
-            drawFirstAnimation(canvas);
-        if (cont > 0)
+        //if (firstAnimationOver == false)
+            //drawFirstAnimation(canvas);
+        //if (cont > 0)
             drawSecondAnimation(canvas);
         invalidate();
 

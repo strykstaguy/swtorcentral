@@ -7,35 +7,13 @@
 
     <include layout="@layout/toolbar"/>
 
-    <TextView
-        android:id="@+id/txtFaction"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" 
-        android:gravity="center"
-        android:layout_marginTop="10.0dip"
-        android:textSize="20.0dip"
-        android:textColor="@color/text" />
-    
-   	 <TextView
-   	 	android:id="@+id/txtNameSub"
-   	    android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="14.0dip"
-        android:textColor="@color/subtext"
-        android:gravity="center"
-        android:text="@string/progressionsub"
-        android:paddingBottom="5.0dip"
-         />
-   	 	
     <ListView
         android:id="@+id/progressionList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="10.0dip"
-        android:layout_marginLeft="10.0dip"
-        android:layout_marginTop="10.0dip"
         android:background="@color/background"
+        android:clipToPadding="false"
         android:divider="@null"
         android:dividerHeight="0dp" />
  
-</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/progression_main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/progression_main.xml -->

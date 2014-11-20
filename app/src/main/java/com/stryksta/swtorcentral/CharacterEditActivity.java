@@ -138,7 +138,9 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
         hCrew_skill_3 = characterHash.get("crew_skill_3");
         //hClass = db.getClass(hAdvanced_class);
         hClass = characterHash.get("class");
-        
+
+        db.close();
+
         characterName.setText(hName);
         characterLegacy.setText(hLegacy);
         characterLevel.setText(hLevel);
@@ -246,6 +248,7 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
 		characterClass.setAdapter(dataAdapter);
 		
 		characterClass.setSelection(dataAdapter.getPosition(hClass));
+        db.close();
 	}
 	
 	public void addAdvancedClasses(int classid) {
@@ -258,6 +261,7 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
 		characterAdvancedClass.setAdapter(dataAdapter);
 		
 		characterAdvancedClass.setSelection(dataAdapter.getPosition(hAdvanced_class));
+        db.close();
 	}
 	
 	public void addGenders() {
@@ -270,6 +274,7 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
 		characterGender.setAdapter(dataAdapter);
 		
 		characterGender.setSelection(dataAdapter.getPosition(hGender));
+        db.close();
 	}
 	
 	public void addRaces() {
@@ -282,6 +287,7 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
 		characterRace.setAdapter(dataAdapter);
 		
 		characterRace.setSelection(dataAdapter.getPosition(hRace));
+        db.close();
 	}
 	
 	public void addAlignment() {
@@ -294,6 +300,7 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
 		characterAlignment.setAdapter(dataAdapter);
 		
 		characterAlignment.setSelection(dataAdapter.getPosition(hAlignment));
+        db.close();
 	}
 	
 	public void addCrewSkills() {

@@ -7,37 +7,21 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.data.ServerItem;
 import com.stryksta.swtorcentral.util.FloatingActionButton;
-import com.stryksta.swtorcentral.util.MaterialDialog;
-import com.stryksta.swtorcentral.util.MaterialProgress;
 import com.stryksta.swtorcentral.util.NonScrollGridView;
 import com.stryksta.swtorcentral.util.Utility;
 
-import android.app.ActionBar;
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.ColorFilter;
-import android.graphics.ColorMatrixColorFilter;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.PagerTabStrip;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,8 +33,8 @@ public class ServerActivity extends ActionBarActivity {
 	
 	ArrayList<ServerItem> usItems;
 	ArrayList<ServerItem> euItems;
-	
-	MaterialProgress pDialog;
+
+    MaterialDialog pDialog;
 
     private Toolbar mToolbar;
 
@@ -84,9 +68,11 @@ public class ServerActivity extends ActionBarActivity {
         fabButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 View v = getLayoutInflater().inflate(R.layout.server_key, null);
-                MaterialDialog.Builder builder = new MaterialDialog.Builder(ServerActivity.this);
-                builder.setTitle("Server Status Help");
-                builder.setView(v);
+
+                MaterialDialog dialog = new MaterialDialog.Builder(ServerActivity.this)
+                        .title("Server Status")
+                        .customView(v)
+                        .build();
 
                 ImageView serverLight = (ImageView) v.findViewById(R.id.IMGserverLight);
                 serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightcolor)));
@@ -103,13 +89,9 @@ public class ServerActivity extends ActionBarActivity {
                 ImageView serverFull = (ImageView) v.findViewById(R.id.serverFull);
                 serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullcolor)));
 
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        dialog.dismiss();
-                    }
-                });
 
-                builder.show();
+                dialog.show();
+
             }
         });
 		// Debug the thread name
@@ -121,11 +103,13 @@ public class ServerActivity extends ActionBarActivity {
     	protected void onPreExecute() {
  			super.onPreExecute();
  			// Create a progressbar
- 			pDialog = new MaterialProgress(ServerActivity.this, "Server Status");
- 			pDialog.setMessage("Loading...");
- 			pDialog.setIndeterminate(false);
- 			pDialog.show();
-
+            pDialog = new MaterialDialog.Builder(ServerActivity.this)
+                    .title("Server Status")
+                    .customView(R.layout.progress_alert)
+                    .positiveText("")
+                    .hideActions()
+                    .build();
+            pDialog.show();
  		}
     	
 		@Override
