@@ -71,6 +71,7 @@ public class EventsActivity extends ActionBarActivity {
             pDialog = new MaterialDialog.Builder(EventsActivity.this)
                     .title("")
                     .customView(R.layout.progress_alert)
+                    .positiveText("OK")
                     .build();
             pDialog.show();
             //MaterialDialog pDialog new MaterialDialog.Builder(this);

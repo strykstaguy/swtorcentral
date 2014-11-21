@@ -187,17 +187,17 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         return exists;
     }
     
-    public ArrayList<String> getClasses(){
-        ArrayList<String> classItem = new ArrayList<String>();
+    public LinkedHashMap<String, Integer> getClasses(){
+        LinkedHashMap<String, Integer> classItem = new LinkedHashMap<String, Integer>();
     	SQLiteDatabase db = this.getReadableDatabase();
         String sqlSelect = "SELECT * FROM classes order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
-        
-        classItem.add("None");
+
+        classItem.put("None", 0);
         
         if (c.moveToFirst()) {
             do {
-            	classItem.add(c.getString(c.getColumnIndex("name")));
+                classItem.put(c.getString(c.getColumnIndex("name")), c.getInt(c.getColumnIndex("_id")));
             } while (c.moveToNext());
         }
         c.close();
@@ -211,7 +211,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         String sqlSelect = "SELECT * FROM advanced_classes where class_id = ? order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(classid)});
         
-        advancedclassItem.put("", 0);
+        advancedclassItem.put("None", 0);
         
         if (c.moveToFirst()) {
             do {

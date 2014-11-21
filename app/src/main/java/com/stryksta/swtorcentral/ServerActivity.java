@@ -72,6 +72,7 @@ public class ServerActivity extends ActionBarActivity {
                 MaterialDialog dialog = new MaterialDialog.Builder(ServerActivity.this)
                         .title("Server Status")
                         .customView(v)
+                        .positiveText("OK")
                         .build();
 
                 ImageView serverLight = (ImageView) v.findViewById(R.id.IMGserverLight);

@@ -12,6 +12,7 @@
  	android:paddingTop="10.0dip"
  	android:divider="@drawable/divider"
  	android:duplicateParentState="false"
+    android:clipToPadding="false"
  	android:cacheColorHint="@android:color/transparent" >
  </ListView>
 

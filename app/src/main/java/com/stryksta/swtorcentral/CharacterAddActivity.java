@@ -43,7 +43,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 	LinkedHashMap<String, Integer> genderItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> raceItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> alignmentItem = new LinkedHashMap<String, Integer>();
-    ArrayList<String> classItem = new ArrayList<String>();
+    LinkedHashMap<String, Integer> classItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> advancedclassItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> crewSkillsclassItem = new LinkedHashMap<String, Integer>();
 
@@ -53,8 +53,8 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 	static EditText characterName;
 	static EditText characterLegacy;
 	static EditText characterDescription;
-	static TextView characterClass;
-	static Spinner characterAdvancedClass;
+	static EditText characterClass;
+	static EditText characterAdvancedClass;
 	static Spinner characterGender;
 	static Spinner characterRace;
 	static Spinner characterAlignment;
@@ -92,8 +92,8 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
         characterLegacy = (EditText) findViewById(R.id.characterLegacy);
         
         characterDescription = (EditText) findViewById(R.id.characterDescription);
-        characterClass = (TextView) findViewById(R.id.characterClass);
-        characterAdvancedClass = (Spinner) findViewById(R.id.characterAdvancedClass);
+        characterClass = (EditText) findViewById(R.id.characterClass);
+        characterAdvancedClass = (EditText) findViewById(R.id.characterAdvancedClass);
         characterGender = (Spinner) findViewById(R.id.characterGender);
         characterRace = (Spinner) findViewById(R.id.characterRace);
         characterAlignment = (Spinner) findViewById(R.id.characterAlignment);
@@ -141,8 +141,8 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
                     cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
                     cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
                     cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
-                    //cClass = classItem.get(characterClass.getSelectedItem().toString());
-                    cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
+                    cClass = classItem.get(characterClass.getText().toString());
+                    cAdvanced = advancedclassItem.get(characterAdvancedClass.getText().toString());
 
                     db.close();
                     new saveCharacter().execute();
@@ -196,22 +196,24 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 	public void addClasses() {
 		CharacterDatabase db = new CharacterDatabase(this);
 		classItem = db.getClasses();
-		final List<String> values = classItem;
+        final List<String> values = new ArrayList<String>(classItem.keySet());
+        final String[] list = classItem.keySet().toArray(new String[0]);
 
         characterClass.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 new MaterialDialog.Builder(CharacterAddActivity.this)
-                        .title("Classes")
-                        .items(values.toArray(new String[values.size()]))
-                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                characterClass.setText(text);
-                            }
-                        })
-                        .positiveText("Choose")
-                        .build()
-                        .show();
+                    .title("Classes")
+                    .items(list)
+                    .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                        public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                            characterClass.setText(text);
+                            addAdvancedClasses(classItem.get(text));
+                        }
+
+                    })
+                    .positiveText("Choose")
+                    .build()
+                    .show();
             }
         });
 
@@ -221,11 +223,27 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 	public void addAdvancedClasses(int classid) {
 		CharacterDatabase db = new CharacterDatabase(this);
 		advancedclassItem = db.getAdvancedClasses(classid);
-		List<String> values = new ArrayList<String>(advancedclassItem.keySet());
-		
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		characterAdvancedClass.setAdapter(dataAdapter);
+		final List<String> values = new ArrayList<String>(advancedclassItem.keySet());
+        final String[] list = advancedclassItem.keySet().toArray(new String[0]);
+
+        characterAdvancedClass.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new MaterialDialog.Builder(CharacterAddActivity.this)
+                        .title("Advanced Classes")
+                        .items(list)
+                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                characterAdvancedClass.setText(text);
+                                addAdvancedClasses(advancedclassItem.get(text));
+                            }
+
+                        })
+                        .positiveText("Choose")
+                        .build()
+                        .show();
+            }
+        });
+
         db.close();
 	}
 	

@@ -91,6 +91,7 @@ public class PlanetTab3 extends Fragment {
                     new MaterialDialog.Builder(getActivity())
                         .title(loreadapter.getItem(position).getCodex())
                         .content(loreadapter.getItem(position).getText())
+                        .positiveText("OK")
                         .build()
                         .show();
 			    }});

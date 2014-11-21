@@ -14,14 +14,46 @@
     android:layout_height="wrap_content"
     android:layout_weight="1"
     android:padding="5.0dip" >
- 
+
     <LinearLayout
         android:id="@+id/CharacterAddLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="5.0dip" >
- 		
+
+        <LinearLayout
+            android:id="@+id/characterdetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@+id/menurow_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|left"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="25dp"
+                android:singleLine="true"
+                android:text="Name \u0026 Legacy"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/swtor_blue"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/menu_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/menurow_title"
+                android:src="@color/backgroundlight" />
+
+        </LinearLayout>
+
         <LinearLayout
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
@@ -103,7 +135,39 @@
                 android:spinnerMode="dropdown" />
             
         </LinearLayout>
-        
+
+        <LinearLayout
+            android:id="@+id/characterdetails2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@+id/menurow_title2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|left"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="25dp"
+                android:singleLine="true"
+                android:text="Class \u0026 Advanced Class"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/swtor_blue"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/menu_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/menurow_title"
+                android:src="@color/backgroundlight" />
+
+        </LinearLayout>
+
         <LinearLayout
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
@@ -118,16 +182,18 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-
-            <TextView
+            <EditText
                 android:id="@+id/characterClass"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="@string/none"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:layout_weight="1"
+                android:gravity="center"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/none" />
             
         </LinearLayout>
         
@@ -144,13 +210,19 @@
                 android:text="@string/character_label_advancedclass"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
-            
-            <Spinner
-        		android:id="@+id/characterAdvancedClass"
-        		android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		android:layout_marginBottom="10dp"
-                android:spinnerMode="dropdown"/>
+
+            <EditText
+                android:id="@+id/characterAdvancedClass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/none" />
             
         </LinearLayout>
         
