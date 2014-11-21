@@ -64,8 +64,6 @@ public class VideoActivity extends ActionBarActivity {
             pDialog = new MaterialDialog.Builder(VideoActivity.this)
                     .title(videoTitle)
                     .customView(R.layout.progress_alert)
-                    .positiveText("")
-                    .hideActions()
                     .build();
             pDialog.show();
 

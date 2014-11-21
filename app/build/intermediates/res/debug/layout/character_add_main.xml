@@ -117,13 +117,17 @@
                 android:text="@string/character_label_class"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
-            
-            <Spinner
-        		android:id="@+id/characterClass"
-        		android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-        		android:layout_marginBottom="10dp"
-                android:spinnerMode="dropdown"/>
+
+
+            <TextView
+                android:id="@+id/characterClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/none"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
             
         </LinearLayout>
         
@@ -277,4 +281,4 @@
     </LinearLayout>
  
 </ScrollView>
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/character_add_main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/character_add_main.xml -->

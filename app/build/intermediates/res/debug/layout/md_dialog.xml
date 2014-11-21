@@ -16,14 +16,29 @@
         android:layout_marginRight="@dimen/md_dialog_frame_margin"
         android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/title"
+        <LinearLayout
+            android:id="@+id/titleFrame"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/md_main_frame_margin"
-            android:textSize="@dimen/md_title_textsize"
-            tools:text="Title"
-            android:lineSpacingMultiplier="1.2" />
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/md_main_frame_margin">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_marginRight="@dimen/md_icon_margin" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/md_title_textsize"
+                tools:text="Title" />
+
+        </LinearLayout>
 
         <com.afollestad.materialdialogs.views.MeasureCallbackScrollView
             android:id="@+id/contentScrollView"
@@ -64,13 +79,29 @@
                 android:layout_marginLeft="@dimen/md_dialog_frame_margin"
                 android:layout_marginRight="@dimen/md_dialog_frame_margin">
 
-                <TextView
-                    android:id="@+id/titleCustomView"
+                <LinearLayout
+                    android:id="@+id/titleFrameCustomView"
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/md_main_frame_margin"
-                    android:textSize="@dimen/md_title_textsize"
-                    tools:text="Title" />
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/md_main_frame_margin">
+
+                    <ImageView
+                        android:id="@+id/iconCustomView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:layout_marginRight="@dimen/md_icon_margin" />
+
+                    <TextView
+                        android:id="@+id/titleCustomView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/md_title_textsize"
+                        tools:text="Title" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -97,10 +128,10 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="@dimen/md_neutral_button_margin" />
 
+        <!-- toLeftOf rule added from invalidateActions() -->
         <TextView
             android:id="@+id/buttonDefaultNegative"
-            style="@style/MD_ActionButton"
-            android:layout_toLeftOf="@+id/buttonDefaultPositive" />
+            style="@style/MD_ActionButton" />
 
         <TextView
             android:id="@+id/buttonDefaultPositive"
@@ -130,4 +161,4 @@
 
     </LinearLayout>
 
-</LinearLayout><!-- From: file:/Users/aidanfollestad/Android%20Projects/MaterialDialogs/library/src/main/res/layout/md_dialog.xml --><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/layout/md_dialog.xml -->
+</LinearLayout><!-- From: file:/Users/aidanfollestad/Android%20Projects/MaterialDialogs/library/src/main/res/layout/md_dialog.xml --><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.2.1/res/layout/md_dialog.xml -->

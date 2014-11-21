@@ -15,7 +15,7 @@
         tools:text="Item"
         android:textSize="@dimen/md_listitem_textsize"
         android:gravity="center_vertical"
-        android:layout_marginLeft="@dimen/md_dialog_frame_margin"
+        android:layout_marginLeft="@dimen/md_listitem_margin_left"
         android:layout_marginRight="@dimen/md_dialog_frame_margin" />
 
-</LinearLayout><!-- From: file:/Users/aidanfollestad/Android%20Projects/MaterialDialogs/library/src/main/res/layout/md_listitem.xml --><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.0.6/res/layout/md_listitem.xml -->
+</LinearLayout><!-- From: file:/Users/aidanfollestad/Android%20Projects/MaterialDialogs/library/src/main/res/layout/md_listitem.xml --><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.2.1/res/layout/md_listitem.xml -->

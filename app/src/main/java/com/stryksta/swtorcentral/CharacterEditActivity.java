@@ -112,7 +112,7 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
         characterName = (EditText) findViewById(R.id.characterName);
         characterLegacy = (EditText) findViewById(R.id.characterLegacy);
         characterDescription = (EditText) findViewById(R.id.characterDescription);
-        characterClass = (Spinner) findViewById(R.id.characterClass);
+        //characterClass = (Spinner) findViewById(R.id.characterClass);
         characterAdvancedClass = (Spinner) findViewById(R.id.characterAdvancedClass);
         characterGender = (Spinner) findViewById(R.id.characterGender);
         characterRace = (Spinner) findViewById(R.id.characterRace);
@@ -240,7 +240,7 @@ public class CharacterEditActivity extends ActionBarActivity implements OnItemSe
 	
 	public void addClasses() {
 		CharacterDatabase db = new CharacterDatabase(this);
-		classItem = db.getClasses();
+		//classItem = db.getClasses();
 		List<String> values = new ArrayList<String>(classItem.keySet());
 		
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);

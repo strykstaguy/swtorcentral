@@ -2,6 +2,7 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.data.ProgressionItem;
 import com.stryksta.swtorcentral.data.TestItem;
 import com.stryksta.swtorcentral.util.TimelineType;
@@ -14,6 +15,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;

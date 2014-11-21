@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.data.AddCharacterItem;
 import com.stryksta.swtorcentral.data.CharacterItem;
 import com.stryksta.swtorcentral.util.CharacterDatabase;
@@ -34,6 +35,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
  
 public class CharacterAddActivity extends ActionBarActivity implements OnItemSelectedListener {
@@ -41,7 +43,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 	LinkedHashMap<String, Integer> genderItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> raceItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> alignmentItem = new LinkedHashMap<String, Integer>();
-	LinkedHashMap<String, Integer> classItem = new LinkedHashMap<String, Integer>();
+    ArrayList<String> classItem = new ArrayList<String>();
 	LinkedHashMap<String, Integer> advancedclassItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> crewSkillsclassItem = new LinkedHashMap<String, Integer>();
 
@@ -51,7 +53,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 	static EditText characterName;
 	static EditText characterLegacy;
 	static EditText characterDescription;
-	static Spinner characterClass;
+	static TextView characterClass;
 	static Spinner characterAdvancedClass;
 	static Spinner characterGender;
 	static Spinner characterRace;
@@ -90,7 +92,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
         characterLegacy = (EditText) findViewById(R.id.characterLegacy);
         
         characterDescription = (EditText) findViewById(R.id.characterDescription);
-        characterClass = (Spinner) findViewById(R.id.characterClass);
+        characterClass = (TextView) findViewById(R.id.characterClass);
         characterAdvancedClass = (Spinner) findViewById(R.id.characterAdvancedClass);
         characterGender = (Spinner) findViewById(R.id.characterGender);
         characterRace = (Spinner) findViewById(R.id.characterRace);
@@ -139,7 +141,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
                     cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
                     cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
                     cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
-                    cClass = classItem.get(characterClass.getSelectedItem().toString());
+                    //cClass = classItem.get(characterClass.getSelectedItem().toString());
                     cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
 
                     db.close();
@@ -153,9 +155,8 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
             	setCharacterLevel(CharacterAddActivity.this);
             }
         });
-        
-        characterClass.setOnItemSelectedListener(this);
-        
+
+
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         
@@ -166,7 +167,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
         // An item was selected. You can retrieve the selected item using
         // parent.getItemAtPosition(pos)
     	//Log.d("SWTORCentral", );
-    	addAdvancedClasses(classItem.get(parent.getItemAtPosition(pos).toString()));
+    	//addAdvancedClasses(classItem.get(parent.getItemAtPosition(pos).toString()));
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
@@ -195,11 +196,25 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 	public void addClasses() {
 		CharacterDatabase db = new CharacterDatabase(this);
 		classItem = db.getClasses();
-		List<String> values = new ArrayList<String>(classItem.keySet());
-		
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		characterClass.setAdapter(dataAdapter);
+		final List<String> values = classItem;
+
+        characterClass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new MaterialDialog.Builder(CharacterAddActivity.this)
+                        .title("Classes")
+                        .items(values.toArray(new String[values.size()]))
+                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                characterClass.setText(text);
+                            }
+                        })
+                        .positiveText("Choose")
+                        .build()
+                        .show();
+            }
+        });
+
         db.close();
 	}
 	

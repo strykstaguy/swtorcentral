@@ -106,8 +106,6 @@ public class ServerActivity extends ActionBarActivity {
             pDialog = new MaterialDialog.Builder(ServerActivity.this)
                     .title("Server Status")
                     .customView(R.layout.progress_alert)
-                    .positiveText("")
-                    .hideActions()
                     .build();
             pDialog.show();
  		}
