@@ -95,19 +95,20 @@ public abstract class TimelineHView extends View {
         middlePaint = new Paint();
         middlePaint.setFlags(Paint.ANTI_ALIAS_FLAG);
         middlePaint.setColor(mColorMiddle);
-        middlePaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        //middlePaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        middlePaint.setStyle(Paint.Style.STROKE);
         middlePaint.setStrokeWidth(mMiddleSize);
 
         firstPaint = new Paint();
         firstPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
         firstPaint.setColor(mFirstColor);
-        firstPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        firstPaint.setStyle(Paint.Style.STROKE);
         firstPaint.setStrokeWidth(mStartSize);
 
         lastPaint = new Paint();
         lastPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
         lastPaint.setColor(mLastColor);
-        lastPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        lastPaint.setStyle(Paint.Style.STROKE);
         lastPaint.setStrokeWidth(mEndSize);
     }
 
@@ -139,16 +140,16 @@ public abstract class TimelineHView extends View {
         centerY = contentWidth / 2;
 
         if (timelineType == TimelineType.START) {
-            canvas.drawRect(centerY, startX, endY, endX, linePaint);
+            canvas.drawRect(centerY + mStartSize, startX, endY, endX, linePaint);
             drawStart(canvas, firstPaint, centerY, centerX, mStartSize);
         } else if (timelineType == TimelineType.MIDDLE) {
             canvas.drawRect(startY, startX, endY, endX, linePaint);
             drawMiddle(canvas, middlePaint, centerY, centerX, mMiddleSize);
         } else if (timelineType == TimelineType.END) {
-            canvas.drawRect(startY, startX, centerY, endX, linePaint);
+            canvas.drawRect(startY, startX, centerY - mStartSize, endX, linePaint);
             drawEnd(canvas, lastPaint, centerY, centerX, mEndSize);
         } else if (timelineType == TimelineType.SINGLE) {
-            canvas.drawRect(startYSingle, startX, endYSingle, endX, linePaint);
+            canvas.drawRect(startYSingle + mStartSize, startX, endYSingle - mStartSize, endX, linePaint);
             drawStart(canvas, firstPaint, startYSingle, centerX, mStartSize);
             drawEnd(canvas, lastPaint, endYSingle, centerX, mEndSize);
         } else {

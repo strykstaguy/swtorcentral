@@ -38,7 +38,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="25dp"
                 android:singleLine="true"
-                android:text="Character Name \u0026 Legacy"
+                android:text="Name \u0026 Legacy"
                 android:layout_gravity="center"
                 android:textAllCaps="true"
                 android:textColor="@color/swtor_blue"
@@ -353,4 +353,4 @@
     </LinearLayout>
  
 </ScrollView>
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/character_add_main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/character_add_main.xml -->

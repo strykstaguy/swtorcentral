@@ -2162,8 +2162,8 @@ containing a value of this type.
         public static final int CharacterAddLayout=0x7f09008b;
         public static final int IMGserverLight=0x7f090105;
         public static final int ServerKeyLayout=0x7f090104;
-        public static final int VideoPreviewPlayButton=0x7f09011f;
-        public static final int VideoView=0x7f090120;
+        public static final int VideoPreviewPlayButton=0x7f090120;
+        public static final int VideoView=0x7f090121;
         public static final int abilitydetails_layout=0x7f09004b;
         public static final int abilitylayout=0x7f09007e;
         public static final int abilitylinearlayout=0x7f09007d;
@@ -2183,7 +2183,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f090039;
         public static final int action_mode_bar_stub=0x7f090038;
         public static final int action_mode_close_button=0x7f09002b;
-        public static final int action_settings=0x7f090126;
+        public static final int action_settings=0x7f090127;
         public static final int activity_chooser_view_content=0x7f09002c;
         public static final int advancedclassabilitylist=0x7f090073;
         public static final int always=0x7f090018;
@@ -2213,10 +2213,10 @@ containing a value of this type.
         public static final int characterRace=0x7f09009e;
         public static final int character_level=0x7f0900a9;
         public static final int character_level_msg=0x7f0900a8;
-        public static final int character_menu_add=0x7f090123;
-        public static final int character_menu_delete=0x7f090125;
-        public static final int character_menu_edit=0x7f090124;
-        public static final int character_menu_save=0x7f090122;
+        public static final int character_menu_add=0x7f090124;
+        public static final int character_menu_delete=0x7f090126;
+        public static final int character_menu_edit=0x7f090125;
+        public static final int character_menu_save=0x7f090123;
         public static final int characterdetails=0x7f09008c;
         public static final int characterdetails2=0x7f090096;
         public static final int checkbox=0x7f090034;
@@ -2340,7 +2340,7 @@ containing a value of this type.
         public static final int serverStatus=0x7f090117;
         public static final int serverTitle=0x7f090116;
         public static final int serverVeryHeavy=0x7f09010b;
-        public static final int server_help=0x7f090127;
+        public static final int server_help=0x7f090128;
         public static final int shortcut=0x7f090035;
         public static final int showCustom=0x7f090008;
         public static final int showHome=0x7f090005;
@@ -2361,10 +2361,10 @@ containing a value of this type.
         public static final int titleCustomView=0x7f0900df;
         public static final int titleFrame=0x7f0900d7;
         public static final int titleFrameCustomView=0x7f0900dd;
-        public static final int toolbar=0x7f09011b;
+        public static final int toolbar=0x7f09011c;
         public static final int top=0x7f09000c;
-        public static final int transparentBackground=0x7f09011c;
-        public static final int tutorial_list=0x7f09011d;
+        public static final int transparentBackground=0x7f09011d;
+        public static final int tutorial_list=0x7f09011e;
         public static final int txtAbilityTitle=0x7f090089;
         public static final int txtActivation=0x7f090083;
         public static final int txtAdvDesc=0x7f09006c;
@@ -2398,6 +2398,7 @@ containing a value of this type.
         public static final int txtFootnote=0x7f090088;
         public static final int txtGameRulesLore=0x7f0900f7;
         public static final int txtHighlight=0x7f090087;
+        public static final int txtInfo=0x7f09011b;
         public static final int txtLabel=0x7f09011a;
         public static final int txtLegacy=0x7f0900ab;
         public static final int txtLevel=0x7f09007f;
@@ -2449,8 +2450,8 @@ containing a value of this type.
         public static final int user_view=0x7f09005c;
         public static final int uslist=0x7f090111;
         public static final int vertical=0x7f090012;
-        public static final int video_surface_view=0x7f090121;
-        public static final int videoframe=0x7f09011e;
+        public static final int video_surface_view=0x7f090122;
+        public static final int videoframe=0x7f09011f;
         public static final int withText=0x7f090019;
         public static final int wrap_content=0x7f09001d;
     }

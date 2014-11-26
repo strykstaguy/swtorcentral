@@ -9,14 +9,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.data.DatacronItem;
+import com.stryksta.swtorcentral.data.ProgressionItem;
 import com.stryksta.swtorcentral.data.TestItem;
 import com.stryksta.swtorcentral.util.PinnedSectionListView;
+import com.stryksta.swtorcentral.util.TimelineHView;
+
 import java.util.ArrayList;
 
-public class TestAdapter extends ArrayAdapter<TestItem> implements PinnedSectionListView.PinnedSectionListAdapter {
-    private final ArrayList<TestItem> progressionItems;
+public class TestAdapter extends ArrayAdapter<ProgressionItem>{
+    private final ArrayList<ProgressionItem> progressionItems;
     Context mContext;
-    public TestAdapter(Context mContext, final ArrayList<TestItem> progressionItems) {
+    public TestAdapter(Context mContext, final ArrayList<ProgressionItem> progressionItems) {
         super(mContext, R.layout.test_row, progressionItems);
         this.progressionItems = progressionItems;
         this.mContext = mContext;
@@ -31,17 +34,14 @@ public class TestAdapter extends ArrayAdapter<TestItem> implements PinnedSection
             LayoutInflater inflater = (LayoutInflater) getContext()
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            int layout = R.layout.test_row;
-            if (getItem(position).type == TestItem.SECTION)
-                layout = R.layout.test_row_header;
-
-            v = inflater.inflate(layout, parent, false);
+            v = inflater.inflate(R.layout.test_row, parent, false);
             holder = new ViewHolder();
 
             holder.imgPlanet = (ImageView) v.findViewById(R.id.imgPlanet);
             holder.txtPlanet = (TextView) v.findViewById(R.id.txtPlanet);
             holder.txtLevel = (TextView) v.findViewById(R.id.txtLevel);
             holder.txtLabel = (TextView) v.findViewById(R.id.txtLabel);
+            holder.timeLineView = (TimelineHView) v.findViewById(R.id.timeline);
 
             v.setTag(holder);
 
@@ -49,39 +49,17 @@ public class TestAdapter extends ArrayAdapter<TestItem> implements PinnedSection
             holder = (ViewHolder) v.getTag();
         }
 
-        TestItem progressionItem = progressionItems.get(position);
+        ProgressionItem progressionItem = progressionItems.get(position);
 
         if (progressionItem != null) {
-
-            if (getItem(position).type == TestItem.ITEM){
-
-                holder.txtLabel.setVisibility(View.GONE);
-                holder.imgPlanet.setImageResource(progressionItem.getImgPlanet());
+                holder.imgPlanet.setImageResource(progressionItem.getimgPlanet());
                 holder.txtPlanet.setText(progressionItem.getPlanet());
                 holder.txtLevel.setText(progressionItem.getLevel());
-
-
-
-            } else {
                 holder.txtLabel.setText(progressionItem.getLabel());
-            }
+                holder.timeLineView.setTimelineType(progressionItem.getType());
         }
 
         return v;
-    }
-
-    @Override
-    public int getViewTypeCount() {
-        return 2;
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return getItem(position).type;
-    }
-
-    public boolean isItemViewTypePinned(int viewType) {
-        return viewType == TestItem.SECTION;
     }
 
     private static class ViewHolder {
@@ -89,5 +67,8 @@ public class TestAdapter extends ArrayAdapter<TestItem> implements PinnedSection
         public TextView txtPlanet;
         public TextView txtLevel;
         public TextView txtLabel;
+        public TimelineHView timeLineView;
+
+
     }
 }

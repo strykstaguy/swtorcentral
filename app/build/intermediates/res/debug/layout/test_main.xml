@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background"
@@ -7,16 +8,25 @@
 
     <include layout="@layout/toolbar"/>
 
-    <com.stryksta.swtorcentral.util.PinnedSectionListView
-        android:id="@+id/testList"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#DCDCDC"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:divider="@drawable/divider"
-        android:scrollbarStyle="outsideInset"
-        android:cacheColorHint="@android:color/transparent" >
-    </com.stryksta.swtorcentral.util.PinnedSectionListView>
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBoxPreference
+            android:title="splash music"
+            android:defaultValue="true"
+            android:key="checkbox"
+            android:summary="Plese remove music "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </PreferenceScreen>
 
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/test_main.xml -->
+    <com.stryksta.swtorcentral.util.HorizontalListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/testList"
+        android:clipToPadding="false"
+        android:scrollbars="horizontal"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/test_main.xml -->
