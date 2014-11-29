@@ -49,7 +49,7 @@
     <attr name="drawerArrowStyle" format="reference" />
     <attr name="height" format="dimension" />
     <attr name="isLightTheme" format="boolean" />
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.3.0/res/values/values.xml -->
     <eat-comment />
 
     <attr name="md_divider" format="color" />
@@ -151,7 +151,7 @@
     <eat-comment />
 
     <color name="material_transparent">#00000000</color>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.3.0/res/values/values.xml -->
     <eat-comment />
 
     <color name="md_divider_black">#10000000</color>
@@ -174,6 +174,7 @@
     <eat-comment />
 
     <color name="regularcolor">#000000</color>
+    <color name="rippelColor">#3F9FE0</color>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
@@ -467,6 +468,20 @@
         </attr>
         <attr name="selectWhileScrolling" format="boolean" />
     </declare-styleable>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/attrs.xml -->
+    <eat-comment />
+
+    <declare-styleable name="MaterialProgress">
+        <attr name="progressIndeterminate" format="boolean" />
+        <attr name="barColor" format="color" />
+        <attr name="rimColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+        <attr name="spinSpeed" format="float" />
+        <attr name="barSpinCycleTime" format="integer" />
+        <attr name="circleRadius" format="dimension" />
+        <attr name="fillRadius" format="boolean" />
+        <attr name="barWidth" format="dimension" />
+    </declare-styleable>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
     <eat-comment />
 
@@ -647,6 +662,28 @@
         <!-- State identifier indicating the popup will be above the anchor. -->
         <attr name="state_above_anchor" format="boolean" />
     </declare-styleable>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/attrs.xml -->
+    <eat-comment />
+
+    <declare-styleable name="RippleView">
+        <attr name="rv_alpha" format="integer" />
+        <attr name="rv_framerate" format="integer" />
+        <attr name="rv_rippleDuration" format="integer" />
+        <attr name="rv_zoomDuration" format="integer" />
+        <attr name="rv_color" format="color" />
+        <attr name="rv_centered" format="boolean" />
+        <attr name="rv_type" format="enum">
+            <enum name="simpleRipple" value="0" />
+            <enum name="doubleRipple" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+        <attr name="rv_ripplePadding" format="dimension" />
+        <attr name="rv_zoom" format="boolean" />
+        <attr name="rv_zoomScale" format="float" />
+    </declare-styleable>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <eat-comment />
+
     <declare-styleable name="SearchView">
 
         <!-- The layout to use for the search view. -->
@@ -1249,7 +1286,7 @@
     <dimen name="image_height">160dp</dimen>
     <dimen name="list_padding">10dp</dimen>
     <dimen name="margin">5dp</dimen>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.3.0/res/values/values.xml -->
     <eat-comment />
 
     <dimen name="md_button_height">48dp</dimen>
@@ -2320,23 +2357,7 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
-    <eat-comment />
-
-    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
-        <item name="android:indeterminateOnly">false</item>
-        <item name="android:progressDrawable">@drawable/custom_progress_bar_horizontal</item>
-        <item name="android:minHeight">10dip</item>
-        <item name="android:maxHeight">20dip</item>
-    </style>
-
-    <style name="CustomProgressBarCircle" parent="android:Widget.ProgressBar.Horizontal">
-        <item name="android:indeterminateOnly">false</item>
-        <item name="android:progressDrawable">@drawable/custom_progress_bar_circle</item>
-        <item name="android:minHeight">10dip</item>
-        <item name="android:maxHeight">20dip</item>
-    </style>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.3.0/res/values/values.xml -->
     <eat-comment />
 
     <style name="MD_ActionButton">
@@ -2683,6 +2704,19 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/themes.xml -->
+    <eat-comment />
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <eat-comment />
 
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat" />
 
@@ -2693,7 +2727,7 @@ m>                <item name="android:textColorLink">@color/link_text_material_d
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light" />
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.2.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.3.0/res/values/values.xml -->
     <eat-comment />
 
     <style name="Theme_Light_Dialog" parent="android:Theme.Light">

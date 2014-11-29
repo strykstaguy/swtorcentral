@@ -8,12 +8,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.stryksta.swtorcentral.adapters.ServerAdapter;
 import com.stryksta.swtorcentral.data.ServerItem;
 import com.stryksta.swtorcentral.util.FloatingActionButton;
 import com.stryksta.swtorcentral.util.NonScrollGridView;
 import com.stryksta.swtorcentral.util.Utility;
 
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;

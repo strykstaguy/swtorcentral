@@ -346,7 +346,7 @@
     </style>
 
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget.Material.Toolbar.Button.Navigation" />
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.2.1/res/values-v21/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.3.0/res/values-v21/values.xml -->
     <eat-comment />
 
     <style name="MD_Dark" parent="android:Theme.Material.Dialog.Alert">

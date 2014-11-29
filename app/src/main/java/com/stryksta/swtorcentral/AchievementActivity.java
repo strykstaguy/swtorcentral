@@ -52,7 +52,7 @@ public class AchievementActivity extends ActionBarActivity {
 	    }
 	    return super.onOptionsItemSelected(item);
 	}
-	
+
 	public void onBackPressed() {
 		if (getFragmentManager().getBackStackEntryCount() > 1) {
 			getFragmentManager().popBackStack();

@@ -2,9 +2,10 @@ package com.stryksta.swtorcentral;
  
 import java.util.ArrayList;
 
+import com.stryksta.swtorcentral.adapters.TutorialAdapter;
 import com.stryksta.swtorcentral.data.TutorialItem;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
-import com.stryksta.swtorcentral.util.TutorialDatabase;
+import com.stryksta.swtorcentral.util.database.TutorialDatabase;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;

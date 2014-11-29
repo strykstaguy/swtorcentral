@@ -1,31 +1,25 @@
 package com.stryksta.swtorcentral;
  
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.data.AddCharacterItem;
-import com.stryksta.swtorcentral.data.CharacterItem;
-import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.database.CharacterDatabase;
 import com.stryksta.swtorcentral.util.FloatingActionButton;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -35,7 +29,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
  
 public class CharacterAddActivity extends ActionBarActivity implements OnItemSelectedListener {

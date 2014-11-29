@@ -2,13 +2,12 @@ package com.stryksta.swtorcentral;
  
 import java.util.ArrayList;
 
+import com.stryksta.swtorcentral.adapters.AbilityDetailAdapter;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
-import com.stryksta.swtorcentral.util.AbilitiesDatabase;
+import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
 import com.stryksta.swtorcentral.util.NonScrollListView;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;

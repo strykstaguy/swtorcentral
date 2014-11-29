@@ -29,7 +29,6 @@
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.SettingsActivity"
-            android:theme="@style/AppTheme.Preference"
             android:label="@string/settings_header" >
         </activity>
         <activity

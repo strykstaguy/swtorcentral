@@ -36,7 +36,7 @@
         android:divider="#FFFFFF"
         android:dividerHeight="0px"
         android:clickable="true"
-        android:background="@drawable/card_background" />
+        android:background="@drawable/card" />
 	
     <TextView
     	android:id="@+id/txtAdvancedClassAbility"
@@ -63,7 +63,7 @@
     	android:layout_weight="1"
         android:divider="#FFFFFF"
         android:dividerHeight="0px"
-        android:background="@drawable/card_background" />
+        android:background="@drawable/card" />
     
     <TextView
     	android:id="@+id/txtSkillAbility1"
@@ -90,7 +90,7 @@
     	android:layout_weight="1"
         android:divider="#FFFFFF"
         android:dividerHeight="0px"
-        android:background="@drawable/card_background" />
+        android:background="@drawable/card" />
     
     <TextView
     	android:id="@+id/txtSkillAbility2"
@@ -117,7 +117,7 @@
     	android:layout_weight="1"
         android:divider="#FFFFFF"
         android:dividerHeight="0px"
-        android:background="@drawable/card_background" />
+        android:background="@drawable/card" />
     
     <TextView
     	android:id="@+id/txtSkillAbility3"
@@ -144,7 +144,7 @@
     	android:layout_weight="1"
         android:divider="#FFFFFF"
         android:dividerHeight="0px"
-        android:background="@drawable/card_background" />
+        android:background="@drawable/card" />
     
 </LinearLayout>
 </ScrollView><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/advanced_class_tab3.xml -->

@@ -4,8 +4,10 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.stryksta.swtorcentral.adapters.AchievementItemsAdapter;
 import com.stryksta.swtorcentral.data.AchievementsItem;
-import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.Fragment;
@@ -16,7 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemLongClickListener;
 
 public class Category4Fragment extends Fragment {

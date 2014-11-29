@@ -2,12 +2,6 @@
 <pre-dex-items>
 
     <item
-        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-260bcd44ce258b7d4213a35d9f337a5dc2c23245.jar"
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="5aa7c5c1bcffbe011b0d46351d6127fa8b6d9450"/>
-    <item
         dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-50b0012abf649412a3b974027d259776671e5155.jar"
         jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
         jumboMode="false"
@@ -25,6 +19,12 @@
         jumboMode="false"
         revision="20.0.0"
         sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+    <item
+        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-34ad2e124c253c71efc5326245b53261bb675762.jar"
+        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="4523a57658d80bf5ad025858f1730d435e5699b4"/>
     <item
         dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\jsoup-1.7.3-ea9bca014096067705d36e987d4937f193a6d228.jar"
         jar="C:\Users\Josh\Desktop\SWTORCentral\app\libs\jsoup-1.7.3.jar"

@@ -2,8 +2,10 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import com.stryksta.swtorcentral.adapters.AbilityAdapter;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
-import com.stryksta.swtorcentral.util.AbilitiesDatabase;
+import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
 import com.stryksta.swtorcentral.util.NonScrollListView;
 import android.support.v4.app.Fragment;
 import android.content.Intent;

@@ -31,8 +31,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.ExpandableListView.OnChildClickListener;
 
+import com.stryksta.swtorcentral.adapters.CharacterDrawerAdapter;
 import com.stryksta.swtorcentral.data.DrawerItem;
-import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.database.CharacterDatabase;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
 

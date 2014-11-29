@@ -4,23 +4,21 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
-import com.stryksta.swtorcentral.data.AchievementsItem;
-import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class Category3Fragment extends Fragment {
@@ -99,4 +97,14 @@ public class Category3Fragment extends Fragment {
 	    super.onDestroyView();
 	    //getActivity().getActionBar().setTitle(Category1);
 	}
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        new MaterialDialog.Builder(getActivity())
+                .title("Category 3")
+                .content("This is Category 3")
+                .positiveText("OK")
+                .show();
+    }
 }

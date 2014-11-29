@@ -6,26 +6,20 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 import com.stryksta.swtorcentral.data.AddCharacterItem;
-import com.stryksta.swtorcentral.data.CharacterItem;
-import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.database.CharacterDatabase;
 import com.stryksta.swtorcentral.util.FloatingActionButton;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;

@@ -1,20 +1,15 @@
 package com.stryksta.swtorcentral;
  
-import com.stryksta.swtorcentral.util.PlanetDatabase;
+import com.stryksta.swtorcentral.adapters.PlanetPagerAdapter;
+import com.stryksta.swtorcentral.util.database.PlanetDatabase;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.PagerTabStrip;
-import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
-import android.widget.TextView;
- 
+
 public class PlanetActivity extends ActionBarActivity {
 	private String planetText;
 	private String factionText;

@@ -36,8 +36,7 @@
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.SettingsActivity"
-            android:label="@string/settings_header"
-            android:theme="@style/AppTheme.Preference" >
+            android:label="@string/settings_header" >
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.ProgressionActivity"

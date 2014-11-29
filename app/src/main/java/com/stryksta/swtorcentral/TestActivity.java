@@ -2,25 +2,19 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
-import com.afollestad.materialdialogs.MaterialDialog;
+import com.stryksta.swtorcentral.adapters.TestAdapter;
 import com.stryksta.swtorcentral.data.ProgressionItem;
-import com.stryksta.swtorcentral.data.TestItem;
 import com.stryksta.swtorcentral.util.HorizontalListView;
 import com.stryksta.swtorcentral.util.TimelineType;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.TextView;
 
 public class TestActivity extends ActionBarActivity {
     private TestAdapter factionAdapter;

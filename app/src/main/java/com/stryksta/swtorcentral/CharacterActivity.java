@@ -3,8 +3,9 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.stryksta.swtorcentral.adapters.CharacterAdapter;
 import com.stryksta.swtorcentral.data.CharacterItem;
-import com.stryksta.swtorcentral.util.CharacterDatabase;
+import com.stryksta.swtorcentral.util.database.CharacterDatabase;
 import com.stryksta.swtorcentral.util.FloatingActionButton;
 import com.stryksta.swtorcentral.util.SessionManager;
 

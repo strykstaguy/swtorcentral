@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.stryksta.swtorcentral.data.DatacronItem;
-import com.stryksta.swtorcentral.util.DatacronDatabase;
+import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 
 public class DatacronActivity extends ListFragment {
 	private ArrayList<DatacronItem> datacrons;

@@ -7,14 +7,14 @@
     <dataSet config="21.0.0" >
         <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\assets" />
     </dataSet>
-    <dataSet config="0.2.1" >
-        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\assets" >
+    <dataSet config="0.3.0" >
+        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\assets" >
             <file
                 name="Roboto-Medium.ttf"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\assets\Roboto-Medium.ttf" />
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\assets\Roboto-Medium.ttf" />
             <file
                 name="Roboto-Regular.ttf"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\assets\Roboto-Regular.ttf" />
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\assets\Roboto-Regular.ttf" />
         </source>
     </dataSet>
     <dataSet config="1.6.9" >

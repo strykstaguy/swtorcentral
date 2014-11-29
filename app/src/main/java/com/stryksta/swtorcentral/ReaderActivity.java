@@ -11,16 +11,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.GridView;
 import android.widget.Toast;
 
+import com.stryksta.swtorcentral.adapters.RssAdapter;
 import com.stryksta.swtorcentral.data.RssItem;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.RssReader;
-import com.stryksta.swtorcentral.util.RssDatabaseHandler;
+import com.stryksta.swtorcentral.util.database.RssDatabaseHandler;
 
 
 public class ReaderActivity extends Fragment {

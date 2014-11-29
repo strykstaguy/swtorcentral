@@ -4,23 +4,15 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.ClassItem;
-import com.stryksta.swtorcentral.data.ClassItem;
-import com.stryksta.swtorcentral.util.ClassesDatabase;
+import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.LinearLayout;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class ClassesActivity extends Fragment{
 	

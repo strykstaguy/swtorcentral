@@ -2,9 +2,10 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
+import com.stryksta.swtorcentral.adapters.CompanionAdapter;
 import com.stryksta.swtorcentral.data.CompanionItem;
-import com.stryksta.swtorcentral.util.CompanionDatabase;
-import com.stryksta.swtorcentral.util.CompanionGiftsDatabase;
+import com.stryksta.swtorcentral.util.database.CompanionDatabase;
+import com.stryksta.swtorcentral.util.database.CompanionGiftsDatabase;
 
 import android.support.v4.app.Fragment;
 import android.database.Cursor;

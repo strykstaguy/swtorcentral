@@ -8,18 +8,6 @@
 
     <include layout="@layout/toolbar"/>
 
-    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <CheckBoxPreference
-            android:title="splash music"
-            android:defaultValue="true"
-            android:key="checkbox"
-            android:summary="Plese remove music "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </PreferenceScreen>
-
     <com.stryksta.swtorcentral.util.HorizontalListView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/testList"

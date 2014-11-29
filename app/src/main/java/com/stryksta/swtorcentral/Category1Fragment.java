@@ -4,8 +4,10 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
-import com.stryksta.swtorcentral.util.AchievementsDatabase;
+import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
@@ -83,9 +85,14 @@ public class Category1Fragment extends Fragment {
 	    super.onDestroyView();
 	    //getActivity().getActionBar().setTitle("Achivements");
 	}
-	
-	public void onResume() {
-		super.onResume();
-		//getActivity().getActionBar().setTitle("Achivements");
-	}
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        new MaterialDialog.Builder(getActivity())
+                .title("Category 1")
+                .content("This is Category 1")
+                .positiveText("OK")
+                .show();
+    }
 }

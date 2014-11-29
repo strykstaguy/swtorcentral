@@ -107,6 +107,7 @@ public class PlanetTab3 extends Fragment {
                     new MaterialDialog.Builder(getActivity())
                         .title(locationadapter.getItem(position).getCodex())
                         .content(locationadapter.getItem(position).getText())
+                        .positiveText("OK")
                         .build()
                         .show();
 			    }});
@@ -122,6 +123,7 @@ public class PlanetTab3 extends Fragment {
                     new MaterialDialog.Builder(getActivity())
                         .title(personsadapter.getItem(position).getCodex())
                         .content(personsadapter.getItem(position).getText())
+                        .positiveText("OK")
                         .build()
                         .show();
 			    }});
@@ -137,6 +139,7 @@ public class PlanetTab3 extends Fragment {
                     new MaterialDialog.Builder(getActivity())
                         .title(titleadapter.getItem(position).getCodex())
                         .content(titleadapter.getItem(position).getText())
+                        .positiveText("OK")
                         .build()
                         .show();
 			    }});
@@ -152,6 +155,7 @@ public class PlanetTab3 extends Fragment {
                     new MaterialDialog.Builder(getActivity())
                         .title(titleadapter.getItem(position).getCodex())
                         .content(titleadapter.getItem(position).getText())
+                        .positiveText("OK")
                         .build()
                         .show();
 			    }});
@@ -170,6 +174,7 @@ public class PlanetTab3 extends Fragment {
                         new MaterialDialog.Builder(getActivity())
                             .title(gamerulesadapter.getItem(position).getCodex())
                             .content(gamerulesadapter.getItem(position).getText())
+                            .positiveText("OK")
                             .build()
                             .show();
 				    }});
@@ -190,6 +195,7 @@ public class PlanetTab3 extends Fragment {
                     new MaterialDialog.Builder(getActivity())
                         .title(organizationsadapter.getItem(position).getCodex())
                         .content(organizationsadapter.getItem(position).getText())
+                        .positiveText("OK")
                         .build()
                         .show();
 

@@ -1,6 +1,6 @@
 package com.stryksta.swtorcentral.util;
 
-import com.stryksta.swtorcentral.AchievementAdapter;
+import com.stryksta.swtorcentral.adapters.AchievementAdapter;
 
 import android.content.Context;
 import android.util.AttributeSet;

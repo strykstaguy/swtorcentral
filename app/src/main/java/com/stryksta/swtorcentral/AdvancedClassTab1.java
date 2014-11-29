@@ -1,6 +1,6 @@
 package com.stryksta.swtorcentral;
 
-import com.stryksta.swtorcentral.util.ClassesDatabase;
+import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 
 import android.support.v4.app.Fragment;
 import android.database.Cursor;

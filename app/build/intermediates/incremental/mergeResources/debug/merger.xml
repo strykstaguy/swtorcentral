@@ -7336,12 +7336,12 @@ true
                     msgid="2550479030709304392" >"Որոնման հարցում"
                 </string>
                 <string
-                    name="abc_action_bar_home_description_format"
-                    msgid="1397052879051804371" >"%1$s, %2$s"
-                </string>
-                <string
                     name="abc_shareactionprovider_share_with"
                     msgid="3421042268587513524" >"Տարածել"
+                </string>
+                <string
+                    name="abc_action_bar_home_description_format"
+                    msgid="1397052879051804371" >"%1$s, %2$s"
                 </string>
                 <string
                     name="abc_searchview_description_clear"
@@ -8810,20 +8810,20 @@ true
                     msgid="7468859129482906941" >"सबै हेर्नुहोस्"
                 </string>
                 <string
-                    name="abc_action_bar_home_description"
-                    msgid="4600421777120114993" >"गृह खोज्नुहोस्"
-                </string>
-                <string
                     name="abc_shareactionprovider_share_with_application"
                     msgid="7165123711973476752" >"%s सँग साझेदारी गर्नुहोस्"
                 </string>
                 <string
-                    name="abc_searchview_description_clear"
-                    msgid="3691816814315814921" >"प्रश्‍न हटाउनुहोस्"
+                    name="abc_action_bar_home_description"
+                    msgid="4600421777120114993" >"गृह खोज्नुहोस्"
                 </string>
                 <string
                     name="abc_searchview_description_voice"
                     msgid="893419373245838918" >"भ्वाइस खोजी"
+                </string>
+                <string
+                    name="abc_searchview_description_clear"
+                    msgid="3691816814315814921" >"प्रश्‍न हटाउनुहोस्"
                 </string>
                 <string
                     name="abc_searchview_description_query"
@@ -8914,24 +8914,24 @@ true
                 path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\res\values-pl\values.xml"
                 qualifiers="pl" >
                 <string
-                    name="abc_activity_chooser_view_see_all"
-                    msgid="7468859129482906941" >"Zobacz wszystkie"
-                </string>
-                <string
                     name="abc_action_menu_overflow_description"
                     msgid="3588849162933574182" >"Więcej opcji"
+                </string>
+                <string
+                    name="abc_activity_chooser_view_see_all"
+                    msgid="7468859129482906941" >"Zobacz wszystkie"
                 </string>
                 <string
                     name="abc_action_bar_home_description_format"
                     msgid="1397052879051804371" >"%1$s, %2$s"
                 </string>
                 <string
-                    name="abc_searchview_description_query"
-                    msgid="2550479030709304392" >"Wyszukiwane hasło"
-                </string>
-                <string
                     name="abc_action_bar_up_description"
                     msgid="1594238315039666878" >"Przejdź wyżej"
+                </string>
+                <string
+                    name="abc_searchview_description_query"
+                    msgid="2550479030709304392" >"Wyszukiwane hasło"
                 </string>
                 <string
                     name="abc_activitychooserview_choose_application"
@@ -8954,12 +8954,12 @@ true
                     msgid="8928215447528550784" >"Wyślij zapytanie"
                 </string>
                 <string
-                    name="abc_searchview_description_clear"
-                    msgid="3691816814315814921" >"Wyczyść zapytanie"
-                </string>
-                <string
                     name="abc_action_bar_home_subtitle_description_format"
                     msgid="6623331958280229229" >"%1$s, %2$s, %3$s"
+                </string>
+                <string
+                    name="abc_searchview_description_clear"
+                    msgid="3691816814315814921" >"Wyczyść zapytanie"
                 </string>
                 <string
                     name="abc_shareactionprovider_share_with"
@@ -12456,55 +12456,55 @@ false
             </file>
         </source>
     </dataSet>
-    <dataSet config="0.2.1" >
-        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res" >
+    <dataSet config="0.3.0" >
+        <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res" >
             <file
                 name="md_item_selected"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\drawable\md_item_selected.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\drawable\md_item_selected.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="md_item_selected_dark"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\drawable\md_item_selected_dark.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\drawable\md_item_selected_dark.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="md_selector"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\drawable\md_selector.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\drawable\md_selector.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="md_selector_dark"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\drawable\md_selector_dark.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\drawable\md_selector_dark.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="md_transparent"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\drawable\md_transparent.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\drawable\md_transparent.xml"
                 qualifiers=""
                 type="drawable" />
             <file
                 name="md_dialog"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\layout\md_dialog.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\layout\md_dialog.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="md_listitem"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\layout\md_listitem.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\layout\md_listitem.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="md_listitem_multichoice"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\layout\md_listitem_multichoice.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\layout\md_listitem_multichoice.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="md_listitem_singlechoice"
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\layout\md_listitem_singlechoice.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\layout\md_listitem_singlechoice.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\values\values.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\values\values.xml"
                 qualifiers="" >
                 <dimen name="md_content_textsize" >18sp
                 </dimen>
@@ -12688,7 +12688,7 @@ true
                 </style>
             </file>
             <file
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\values-v11\values.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\values-v11\values.xml"
                 qualifiers="v11" >
 
                 <style
@@ -12720,7 +12720,7 @@ true
                 </style>
             </file>
             <file
-                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.2.1\res\values-v21\values.xml"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.3.0\res\values-v21\values.xml"
                 qualifiers="v21" >
 
                 <style
@@ -12865,6 +12865,11 @@ true
             <file
                 name="btn_cab_done_swtor"
                 path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\drawable\btn_cab_done_swtor.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="card"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\drawable\card.xml"
                 qualifiers=""
                 type="drawable" />
             <file
@@ -15018,6 +15023,11 @@ true
                 qualifiers=""
                 type="layout" />
             <file
+                name="settings_activity"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\layout\settings_activity.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="test_group"
                 path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\layout\test_group.xml"
                 qualifiers=""
@@ -15035,6 +15045,11 @@ true
             <file
                 name="test_main"
                 path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\layout\test_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="test_progress"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\layout\test_progress.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -15240,6 +15255,77 @@ draweritem11
                         name="textSize"
                         format="dimension" />
                 </declare-styleable>
+                <declare-styleable name="MaterialProgress" >
+                    <attr
+                        name="progressIndeterminate"
+                        format="boolean" />
+                    <attr
+                        name="barColor"
+                        format="color" />
+                    <attr
+                        name="rimColor"
+                        format="color" />
+                    <attr
+                        name="rimWidth"
+                        format="dimension" />
+                    <attr
+                        name="spinSpeed"
+                        format="float" />
+                    <attr
+                        name="barSpinCycleTime"
+                        format="integer" />
+                    <attr
+                        name="circleRadius"
+                        format="dimension" />
+                    <attr
+                        name="fillRadius"
+                        format="boolean" />
+                    <attr
+                        name="barWidth"
+                        format="dimension" />
+                </declare-styleable>
+                <declare-styleable name="RippleView" >
+                    <attr
+                        name="rv_alpha"
+                        format="integer" />
+                    <attr
+                        name="rv_framerate"
+                        format="integer" />
+                    <attr
+                        name="rv_rippleDuration"
+                        format="integer" />
+                    <attr
+                        name="rv_zoomDuration"
+                        format="integer" />
+                    <attr
+                        name="rv_color"
+                        format="color" />
+                    <attr
+                        name="rv_centered"
+                        format="boolean" />
+                    <attr
+                        name="rv_type"
+                        format="enum" >
+                        <enum
+                            name="simpleRipple"
+                            value="0" />
+                        <enum
+                            name="doubleRipple"
+                            value="1" />
+                        <enum
+                            name="rectangle"
+                            value="2" />
+                    </attr>
+                    <attr
+                        name="rv_ripplePadding"
+                        format="dimension" />
+                    <attr
+                        name="rv_zoom"
+                        format="boolean" />
+                    <attr
+                        name="rv_zoomScale"
+                        format="float" />
+                </declare-styleable>
             </file>
             <file
                 path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\values\attrs_timeline_view.xml"
@@ -15328,6 +15414,8 @@ draweritem11
                 <color name="lightcolor" >#0aa421
                 </color>
                 <color name="seperator" >#bdbdbd
+                </color>
+                <color name="rippelColor" >#3F9FE0
                 </color>
                 <color name="gray_46" >#2e2e2e
                 </color>
@@ -15692,19 +15780,25 @@ draweritem11
                 qualifiers="" >
 
                 <style
-                    name="CustomProgressBar"
-                    parent="android:Widget.ProgressBar.Horizontal" >
-                    <item name="android:indeterminateOnly">
+                    name="Theme.Transparent"
+                    parent="android:Theme" >
+                    <item name="android:windowIsTranslucent">
+true
+                    </item>
+                    <item name="android:windowBackground">
+@android:color/transparent
+                    </item>
+                    <item name="android:windowContentOverlay">
+@null
+                    </item>
+                    <item name="android:windowNoTitle">
+true
+                    </item>
+                    <item name="android:windowIsFloating">
+true
+                    </item>
+                    <item name="android:backgroundDimEnabled">
 false
-                    </item>
-                    <item name="android:progressDrawable">
-@drawable/custom_progress_bar_horizontal
-                    </item>
-                    <item name="android:minHeight">
-10dip
-                    </item>
-                    <item name="android:maxHeight">
-20dip
                     </item>
                 </style>
 
@@ -15743,23 +15837,6 @@ true
                     </item>
                     <item name="windowActionBar">
 false
-                    </item>
-                </style>
-
-                <style
-                    name="CustomProgressBarCircle"
-                    parent="android:Widget.ProgressBar.Horizontal" >
-                    <item name="android:indeterminateOnly">
-false
-                    </item>
-                    <item name="android:progressDrawable">
-@drawable/custom_progress_bar_circle
-                    </item>
-                    <item name="android:minHeight">
-10dip
-                    </item>
-                    <item name="android:maxHeight">
-20dip
                     </item>
                 </style>
 
@@ -15819,6 +15896,11 @@ false
                 path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\xml\settings.xml"
                 qualifiers=""
                 type="xml" />
+            <file
+                name="shape_rounded"
+                path="C:\Users\Josh\Desktop\SWTORCentral\app\src\main\res\drawable\shape_rounded.xml"
+                qualifiers=""
+                type="drawable" />
         </source>
         <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\generated\res\rs\debug" />
         <source path="C:\Users\Josh\Desktop\SWTORCentral\app\build\generated\res\generated\debug" />

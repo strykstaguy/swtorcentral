@@ -1,19 +1,17 @@
 package com.stryksta.swtorcentral;
  
+import android.app.Dialog;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.Window;
 import android.widget.GridView;
 import android.widget.Toast;
-
-import com.afollestad.materialdialogs.MaterialDialog;
-import com.afollestad.materialdialogs.Alignment;
-import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.Theme;
 
 import com.stryksta.swtorcentral.data.EventItem;
 import com.stryksta.swtorcentral.util.Utility;
@@ -28,7 +26,7 @@ import java.util.ArrayList;
 public class EventsActivity extends ActionBarActivity {
     GridView eventsGridView;
     ArrayList<EventItem> eventsItems;
-    MaterialDialog pDialog;
+    Dialog pDialog;
     private Toolbar mToolbar;
     String eventTitle;
     String eventStatus;
@@ -66,18 +64,17 @@ public class EventsActivity extends ActionBarActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Create a progressbar
-            //pDialog  = new MaterialDialog.Builder(EventsActivity.this);
-            //MaterialDialog dialog = new MaterialDialog.Builder(EventsActivity.this);
-            pDialog = new MaterialDialog.Builder(EventsActivity.this)
-                    .title("")
-                    .customView(R.layout.progress_alert)
-                    .positiveText("OK")
-                    .build();
-            pDialog.show();
             //MaterialDialog pDialog new MaterialDialog.Builder(this);
             //pDialog.setMessage("Loading...");
             //pDialog.setIndeterminate(false);
             //pDialog.show();
+
+            pDialog = new Dialog(EventsActivity.this);
+            pDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            pDialog.setContentView(R.layout.test_progress);
+            pDialog.setCancelable(false);
+            pDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+            pDialog.show();
 
         }
 
@@ -170,7 +167,7 @@ public class EventsActivity extends ActionBarActivity {
             EventAdapter eventsAdapter = new EventAdapter(EventsActivity.this, R.layout.event_row, eventsItems);
             eventsGridView.setAdapter(eventsAdapter);
 
-            //pDialog.dismiss();
+            pDialog.dismiss();
         }
     }
     @Override

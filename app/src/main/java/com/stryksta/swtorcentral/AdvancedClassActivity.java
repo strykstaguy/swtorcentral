@@ -8,7 +8,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
- 
+
+import com.stryksta.swtorcentral.adapters.AdvancedClassPagerAdapter;
+
 public class AdvancedClassActivity extends ActionBarActivity {
 	public static ArrayList<String> titles = new ArrayList<String>();
 

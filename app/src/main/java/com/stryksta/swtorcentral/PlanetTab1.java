@@ -1,6 +1,6 @@
 package com.stryksta.swtorcentral;
 
-import com.stryksta.swtorcentral.util.PlanetDatabase;
+import com.stryksta.swtorcentral.util.database.PlanetDatabase;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;

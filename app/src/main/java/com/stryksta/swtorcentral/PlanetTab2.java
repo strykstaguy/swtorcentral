@@ -3,7 +3,7 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.data.DatacronItem;
-import com.stryksta.swtorcentral.util.DatacronDatabase;
+import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 import com.stryksta.swtorcentral.util.NonScrollListView;
 
 import android.support.v4.app.Fragment;
@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 
 public class PlanetTab2 extends Fragment {
