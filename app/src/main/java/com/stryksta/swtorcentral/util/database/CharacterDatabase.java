@@ -212,7 +212,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(classid)});
         
         advancedclassItem.put("None", 0);
-        
+
         if (c.moveToFirst()) {
             do {
             	advancedclassItem.put(c.getString(c.getColumnIndex("class")), c.getInt(c.getColumnIndex("_id")));
@@ -229,7 +229,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         String sqlSelect = "SELECT * FROM gender order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
         
-        genderItem.put("", 0);
+        genderItem.put("None", 0);
         
         if (c.moveToFirst()) {
             do {
@@ -246,7 +246,9 @@ public class CharacterDatabase extends SQLiteAssetHelper {
     	SQLiteDatabase db = this.getReadableDatabase();
         String sqlSelect = "SELECT * FROM race order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
-        
+
+        raceItem.put("None", 0);
+
         if (c.moveToFirst()) {
             do {
             	raceItem.put(c.getString(c.getColumnIndex("name")), c.getInt(c.getColumnIndex("_id")));
@@ -263,7 +265,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         String sqlSelect = "SELECT * FROM alignment order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
         
-        alignmentItem.put("", 2);
+        alignmentItem.put("None", 2);
         
         if (c.moveToFirst()) {
             do {
@@ -281,7 +283,7 @@ public class CharacterDatabase extends SQLiteAssetHelper {
         String sqlSelect = "SELECT * FROM crew_skill order by _id asc";
         Cursor c = db.rawQuery(sqlSelect, null);
         
-        crewSkillsItem.put("", 0);
+        crewSkillsItem.put("None", 0);
         
         if (c.moveToFirst()) {
             do {

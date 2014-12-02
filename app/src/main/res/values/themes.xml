@@ -19,6 +19,11 @@
         <item name="windowActionBar">false</item>
     </style>
 
+    <style name="TextAppearance.SWTOR.FloatLabel" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@drawable/float_label</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
     <style name="Theme.Transparent" parent="android:Theme">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>

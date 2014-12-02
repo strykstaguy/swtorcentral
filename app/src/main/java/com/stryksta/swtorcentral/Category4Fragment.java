@@ -4,7 +4,6 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.adapters.AchievementItemsAdapter;
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
@@ -20,7 +19,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.AdapterView.OnItemLongClickListener;
 
-public class Category4Fragment extends Fragment {
+public class Category4Fragment extends Fragment{
 	private AchievementsDatabase db;
 	GridView achievementListView;
 	ArrayList<AchievementsItem> achievements = new ArrayList<AchievementsItem>();
@@ -69,7 +68,7 @@ public class Category4Fragment extends Fragment {
         characterlegacy = user.get(SessionManager.KEY_LEGACY);
 
         getActivity().setTitle(Category3);
-        
+
         db = new AchievementsDatabase(getActivity());
         achievements = db.getAchievements(Category1, Category2, Category3, characterlegacy);
         

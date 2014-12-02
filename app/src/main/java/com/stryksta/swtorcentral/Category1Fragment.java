@@ -4,7 +4,6 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
@@ -20,7 +19,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class Category1Fragment extends Fragment {
+public class Category1Fragment extends Fragment{
 	private AchievementsDatabase db;
 	
 	SessionManager session;
@@ -50,9 +49,9 @@ public class Category1Fragment extends Fragment {
         vw_layout = inflater.inflate(R.layout.achievement_category_main, container, false);
         
         session = new SessionManager(getActivity());
-        
+
         getActivity().setTitle("Achievements");
-        
+
       //get user data from session
         HashMap<String, String> user = session.getUserDetails();
         characterName = user.get(SessionManager.KEY_NAME);
@@ -85,14 +84,4 @@ public class Category1Fragment extends Fragment {
 	    super.onDestroyView();
 	    //getActivity().getActionBar().setTitle("Achivements");
 	}
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        new MaterialDialog.Builder(getActivity())
-                .title("Category 1")
-                .content("This is Category 1")
-                .positiveText("OK")
-                .show();
-    }
 }

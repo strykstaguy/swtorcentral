@@ -72,4 +72,12 @@ public class FragmentUtils {
     public static Fragment getFragmentByTag(Activity act, String tag) {
         return act.getFragmentManager().findFragmentByTag(tag);
     }
+
+    public static Fragment getActiveFragment(Activity act) {
+        if (act.getFragmentManager().getBackStackEntryCount() == 0) {
+            return null;
+        }
+        String tag = act.getFragmentManager().getBackStackEntryAt(act.getFragmentManager().getBackStackEntryCount() - 1).getName();
+        return act.getFragmentManager().findFragmentByTag(tag);
+    }
 }

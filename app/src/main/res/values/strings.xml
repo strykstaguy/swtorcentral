@@ -105,15 +105,20 @@
     <string name="character_legacy_hint">Legacy Name</string>
     <string name="character_description_hint">Description</string>
     <string name="character_level_hint">Level</string>
-    <string name="character_label_gender">Gender: </string>
-    <string name="character_label_class">Class: </string>
-    <string name="character_label_advancedclass">Advanced Class: </string>
-    <string name="character_label_race">Race: </string>
-    <string name="character_label_alignment">Alignment: </string>
-    <string name="character_label_crew1">Crew Skill 1: </string>
-    <string name="character_label_crew2">Crew Skill 2: </string>
-    <string name="character_label_crew3">Crew Skill 3: </string>
-    
+    <string name="character_gender_hint">Gender</string>
+    <string name="character_class_hint">Character Name</string>
+    <string name="character_advancedclass_hint">Advanced Class</string>
+    <string name="character_race_hint">Race</string>
+    <string name="character_alignment_hint">Alignment</string>
+    <string name="character_crew1_hint">Crew Skill 1</string>
+    <string name="character_crew2_hint">Crew Skill 2</string>
+    <string name="character_crew3_hint">Crew Skill 3</string>
+
+    <string name="character_label">Character</string>
+    <string name="character_label_detail">Detail</string>
+    <string name="character_class_label">Class</string>
+    <string name="character_other_label">Other</string>
+
     <string name="server_light">Light</string>
     <string name="server_standard">Standard</string>
     <string name="server_heavy">Heavy</string>

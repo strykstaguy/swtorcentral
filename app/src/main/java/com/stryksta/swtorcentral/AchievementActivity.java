@@ -1,14 +1,16 @@
 package com.stryksta.swtorcentral;
  
 import com.stryksta.swtorcentral.util.FragmentUtils;
+
 import android.os.Bundle;
+import android.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
  
 public class AchievementActivity extends ActionBarActivity {
-
+    String mTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +58,7 @@ public class AchievementActivity extends ActionBarActivity {
 	public void onBackPressed() {
 		if (getFragmentManager().getBackStackEntryCount() > 1) {
 			getFragmentManager().popBackStack();
+            Fragment trestsdg =  FragmentUtils.getActiveFragment(AchievementActivity.this);
 	    } else {
 	        this.finish();
 	    }

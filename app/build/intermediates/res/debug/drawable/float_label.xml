@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The color when activated/focused (usually your app's accent color) -->
+    <item android:color="@color/swtor_blue" android:state_activated="true" />
+
+    <!-- The color when not activated/focused (usually grey) -->
+    <item android:color="@color/subtext" />
+
+</selector><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/drawable/float_label.xml -->

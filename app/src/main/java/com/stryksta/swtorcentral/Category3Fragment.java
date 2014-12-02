@@ -4,7 +4,6 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
@@ -30,7 +29,7 @@ public class Category3Fragment extends Fragment {
 	String characterName;
 	String characterID;
 	String characterlegacy;
-	
+
 	String Category1;
 	String Category2;
 	View vw_layout;
@@ -68,7 +67,7 @@ public class Category3Fragment extends Fragment {
         Log.d("SWTORCentral", Thread.currentThread().getName());
         
         getActivity().setTitle(Category2);
-        
+
         db = new AchievementsDatabase(getActivity());
         achievements = db.getCategory3(characterID, characterlegacy, Category1, Category2);
         
@@ -97,14 +96,4 @@ public class Category3Fragment extends Fragment {
 	    super.onDestroyView();
 	    //getActivity().getActionBar().setTitle(Category1);
 	}
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        new MaterialDialog.Builder(getActivity())
-                .title("Category 3")
-                .content("This is Category 3")
-                .positiveText("OK")
-                .show();
-    }
 }

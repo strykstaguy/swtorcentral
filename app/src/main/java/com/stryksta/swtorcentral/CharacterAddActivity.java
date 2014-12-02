@@ -27,6 +27,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import com.rengwuxian.materialedittext.MaterialEditText;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -48,12 +49,13 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 	static EditText characterDescription;
 	static EditText characterClass;
 	static EditText characterAdvancedClass;
-	static Spinner characterGender;
-	static Spinner characterRace;
-	static Spinner characterAlignment;
-	static Spinner characterCrewSkill1;
-	static Spinner characterCrewSkill2;
-	static Spinner characterCrewSkill3;
+	static EditText characterGender;
+	static EditText characterRace;
+	static EditText characterAlignment;
+	static EditText characterCrewSkill1;
+	static EditText characterCrewSkill2;
+	static EditText characterCrewSkill3;
+
 	int cLevel;
 	String cName;
 	String cLegacy;
@@ -87,13 +89,22 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
         characterDescription = (EditText) findViewById(R.id.characterDescription);
         characterClass = (EditText) findViewById(R.id.characterClass);
         characterAdvancedClass = (EditText) findViewById(R.id.characterAdvancedClass);
-        characterGender = (Spinner) findViewById(R.id.characterGender);
-        characterRace = (Spinner) findViewById(R.id.characterRace);
-        characterAlignment = (Spinner) findViewById(R.id.characterAlignment);
-        characterCrewSkill1 = (Spinner) findViewById(R.id.characterCrewSkill1);
-        characterCrewSkill2 = (Spinner) findViewById(R.id.characterCrewSkill2);
-        characterCrewSkill3 = (Spinner) findViewById(R.id.characterCrewSkill3);
-        
+        characterGender = (EditText) findViewById(R.id.characterGender);
+        characterRace = (EditText) findViewById(R.id.characterRace);
+        characterAlignment = (EditText) findViewById(R.id.characterAlignment);
+        characterCrewSkill1 = (EditText) findViewById(R.id.characterCrewSkill1);
+        characterCrewSkill2 = (EditText) findViewById(R.id.characterCrewSkill2);
+        characterCrewSkill3 = (EditText) findViewById(R.id.characterCrewSkill3);
+
+        cClass = 0;
+        cAdvanced = 0;
+        cRace = 4;
+        cGender = 0;
+        cAlignment = 0;
+        cCrewSkill1 = 0;
+        cCrewSkill2 = 0;
+        cCrewSkill3 = 0;
+
         addGenders();
         addRaces();
         addAlignment();
@@ -128,14 +139,6 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
                     cLegacy = characterLegacy.getText().toString();
                     cLevel = Integer.parseInt(characterLevel.getText().toString());
                     cDescription = characterDescription.getText().toString();
-                    cGender = genderItem.get(characterGender.getSelectedItem().toString());
-                    cRace = raceItem.get(characterRace.getSelectedItem().toString());
-                    cAlignment = alignmentItem.get(characterAlignment.getSelectedItem().toString());
-                    cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
-                    cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
-                    cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
-                    cClass = classItem.get(characterClass.getText().toString());
-                    cAdvanced = advancedclassItem.get(characterAdvancedClass.getText().toString());
 
                     db.close();
                     new saveCharacter().execute();
@@ -200,11 +203,12 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
                     .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
                         public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
                             characterClass.setText(text);
+                            cClass = classItem.get(text);
+
                             addAdvancedClasses(classItem.get(text));
                         }
 
                     })
-                    .positiveText("Choose")
                     .build()
                     .show();
             }
@@ -227,11 +231,11 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
                         .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
                             public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
                                 characterAdvancedClass.setText(text);
+                                cAdvanced = advancedclassItem.get(text);
                                 addAdvancedClasses(advancedclassItem.get(text));
                             }
 
                         })
-                        .positiveText("Choose")
                         .build()
                         .show();
             }
@@ -239,60 +243,146 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 
         db.close();
 	}
-	
-	public void addGenders() {
-		CharacterDatabase db = new CharacterDatabase(this);
-		genderItem = db.getGenders();
-		List<String> values = new ArrayList<String>(genderItem.keySet());
-		
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		characterGender.setAdapter(dataAdapter);
+
+    public void addGenders() {
+        CharacterDatabase db = new CharacterDatabase(this);
+        genderItem = db.getGenders();
+        final List<String> values = new ArrayList<String>(genderItem.keySet());
+        final String[] list = genderItem.keySet().toArray(new String[0]);
+
+        characterRace.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new MaterialDialog.Builder(CharacterAddActivity.this)
+                        .title("Gender")
+                        .items(list)
+                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                characterGender.setText(text);
+                                cGender = genderItem.get(text);
+                                addAdvancedClasses(genderItem.get(text));
+                            }
+
+                        })
+                        .build()
+                        .show();
+            }
+        });
+
         db.close();
-	}
-	
-	public void addRaces() {
-		CharacterDatabase db = new CharacterDatabase(this);
-		raceItem = db.getRaces();
-		List<String> values = new ArrayList<String>(raceItem.keySet());
-		
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		characterRace.setAdapter(dataAdapter);
-		
-		characterRace.setSelection(dataAdapter.getPosition("Human"));
+    }
+
+    public void addRaces() {
+        CharacterDatabase db = new CharacterDatabase(this);
+        raceItem = db.getRaces();
+        final List<String> values = new ArrayList<String>(raceItem.keySet());
+        final String[] list = raceItem.keySet().toArray(new String[0]);
+
+        characterRace.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new MaterialDialog.Builder(CharacterAddActivity.this)
+                        .title("Races")
+                        .items(list)
+                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                characterRace.setText(text);
+                                cRace = raceItem.get(text);
+                                addAdvancedClasses(raceItem.get(text));
+                            }
+
+                        })
+                        .build()
+                        .show();
+            }
+        });
+
         db.close();
-	}
-	
-	public void addAlignment() {
-		CharacterDatabase db = new CharacterDatabase(this);
-		alignmentItem = db.getAlignment();
-		List<String> values = new ArrayList<String>(alignmentItem.keySet());
-		
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		characterAlignment.setAdapter(dataAdapter);
+    }
+
+    public void addAlignment() {
+        CharacterDatabase db = new CharacterDatabase(this);
+        alignmentItem = db.getAlignment();
+        final List<String> values = new ArrayList<String>(alignmentItem.keySet());
+        final String[] list = alignmentItem.keySet().toArray(new String[0]);
+
+        characterAlignment.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new MaterialDialog.Builder(CharacterAddActivity.this)
+                        .title("Alignment")
+                        .items(list)
+                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                characterAlignment.setText(text);
+                                cAlignment = alignmentItem.get(text);
+                            }
+
+                        })
+                        .build()
+                        .show();
+            }
+        });
+
         db.close();
-	}
-	
-	public void addCrewSkills() {
-		CharacterDatabase db = new CharacterDatabase(this);
-		crewSkillsclassItem = db.getCrewSkills();
-		List<String> values = new ArrayList<String>(crewSkillsclassItem.keySet());
-		
-		ArrayAdapter<String> CrewSkill1Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-		CrewSkill1Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		characterCrewSkill1.setAdapter(CrewSkill1Adapter);
-		
-		ArrayAdapter<String> CrewSkill2Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-		CrewSkill2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		characterCrewSkill2.setAdapter(CrewSkill2Adapter);
-		
-		ArrayAdapter<String> CrewSkill3Adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
-		CrewSkill3Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		characterCrewSkill3.setAdapter(CrewSkill3Adapter);
-		db.close();
-	}
+    }
+
+    public void addCrewSkills() {
+        CharacterDatabase db = new CharacterDatabase(this);
+        crewSkillsclassItem = db.getCrewSkills();
+        final List<String> values = new ArrayList<String>(crewSkillsclassItem.keySet());
+        final String[] list = crewSkillsclassItem.keySet().toArray(new String[0]);
+
+        characterCrewSkill1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new MaterialDialog.Builder(CharacterAddActivity.this)
+                        .title("Crew Skill 1")
+                        .items(list)
+                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                characterCrewSkill1.setText(text);
+                                cCrewSkill1 = crewSkillsclassItem.get(text);
+                            }
+
+                        })
+                        .build()
+                        .show();
+            }
+        });
+
+        characterCrewSkill2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new MaterialDialog.Builder(CharacterAddActivity.this)
+                        .title("Crew Skill 2")
+                        .items(list)
+                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                characterCrewSkill2.setText(text);
+                                cCrewSkill2 = crewSkillsclassItem.get(text);
+                            }
+
+                        })
+                        .build()
+                        .show();
+            }
+        });
+
+        characterCrewSkill3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new MaterialDialog.Builder(CharacterAddActivity.this)
+                        .title("Crew Skill 3")
+                        .items(list)
+                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
+                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                characterCrewSkill3.setText(text);
+                                cCrewSkill3 = crewSkillsclassItem.get(text);
+                            }
+
+                        })
+                        .build()
+                        .show();
+            }
+        });
+
+        db.close();
+    }
 	
 	public static void setCharacterLevel(final Context context){
 		AlertDialog.Builder	builder = new AlertDialog.Builder(context);

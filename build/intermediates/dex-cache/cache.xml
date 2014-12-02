@@ -50,6 +50,18 @@
         revision="20.0.0"
         sha1="20f039a3336c18f93cfddfa1a49ce91a55361c40"/>
     <item
+        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\library-2.4.0-f6d0788d7f7e256b83cab7c5ff09027280631448.jar"
+        jar="C:\Users\Josh\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb"/>
+    <item
+        dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-a2fddadaee66054180d7db193d4825757c8d8a0a.jar"
+        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\1.5.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="7d6bd3ea4d3dce622b6be6c953067af64e0a2835"/>
+    <item
         dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-8ad6f6f8645930b4a46bf868ac7dd88f7624f8f5.jar"
         jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\classes.jar"
         jumboMode="false"

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_parent_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,8 +13,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:padding="5.0dip" >
+    android:layout_weight="1" >
 
     <LinearLayout
         android:id="@+id/CharacterAddLayout"
@@ -27,56 +27,74 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:gravity="center"
             android:padding="5.0dip" >
 
             <TextView
-                android:id="@+id/menurow_title"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom|left"
-                android:paddingBottom="3dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="25dp"
-                android:singleLine="true"
-                android:text="Name \u0026 Legacy"
-                android:layout_gravity="center"
-                android:textAllCaps="true"
+                android:id="@+id/txtCharacterDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
                 android:textColor="@color/swtor_blue"
-                android:textAppearance="@android:style/TextAppearance.Small"
-                android:textStyle="bold" />
+                android:text="@string/character_label"
+                android:textSize="20dip" />
 
-            <ImageView
-                android:id="@+id/menu_divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/menurow_title"
-                android:src="@color/backgroundlight" />
+            <TextView
+                android:id="@+id/txtCharacterDetailSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/subtext"
+                android:text="@string/character_label_detail"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textSize="14dip" />
 
         </LinearLayout>
 
         <LinearLayout
-        	android:layout_width="fill_parent"
+        	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
         	android:orientation="horizontal"
-        	android:padding="5.0dip" >
-        
-        <EditText
-            android:id="@+id/characterName"
+        	android:padding="5.0dip"
+            android:layout_weight="1.0">
+
+        <com.stryksta.swtorcentral.util.FloatLabelLayout
             android:layout_height="wrap_content"
             android:layout_width="0dip"
             android:layout_weight="1"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/character_name_hint" />
- 		
+            android:layout_marginTop="16dp"
+            app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
+
+            <EditText
+                android:id="@+id/characterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/character_name_hint"
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+        </com.stryksta.swtorcentral.util.FloatLabelLayout>
+
+        <com.stryksta.swtorcentral.util.FloatLabelLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
+
         <EditText
             android:id="@+id/characterLevel"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:focusable="false"
+            android:layout_weight="1"
             android:hint="@string/character_level_hint"
+            android:singleLine="true"
             android:inputType="number" />
-        
+
+        </com.stryksta.swtorcentral.util.FloatLabelLayout>
         
         </LinearLayout>
         
@@ -94,14 +112,15 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/characterLegacy"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:hint="@string/character_legacy_hint" />
+                <EditText
+                    android:id="@+id/characterLegacy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:inputType="textNoSuggestions"
+                    android:gravity="center"
+                    android:hint="@string/character_legacy_hint" />
 
             <TextView
                 android:id="@+id/labelLegacy2"
@@ -111,60 +130,36 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
-       	
-        <LinearLayout
-        	android:layout_width="fill_parent"
-        	android:layout_height="wrap_content"
-        	android:orientation="horizontal"
-        	android:padding="5.0dip" >
-        	
-            <TextView
-                android:id="@+id/labelGender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/character_label_gender"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-            
-            <Spinner
-        		android:id="@+id/characterGender"
-        		android:layout_width="match_parent"
-        		android:layout_height="wrap_content"
-                android:spinnerStyle="@android:style/Widget.Spinner.DropDown"
-        		android:layout_marginBottom="10dp"
-                android:spinnerMode="dropdown" />
-            
-        </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/characterdetails2"
+            android:id="@+id/classdetails"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:gravity="center"
             android:padding="5.0dip" >
 
             <TextView
-                android:id="@+id/menurow_title2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom|left"
-                android:paddingBottom="3dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="25dp"
-                android:singleLine="true"
-                android:text="Class \u0026 Advanced Class"
-                android:layout_gravity="center"
-                android:textAllCaps="true"
+                android:id="@+id/txtClassDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
                 android:textColor="@color/swtor_blue"
-                android:textAppearance="@android:style/TextAppearance.Small"
-                android:textStyle="bold" />
+                android:text="@string/character_class_label"
+                android:textSize="20dip" />
 
-            <ImageView
-                android:id="@+id/menu_divider2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/menurow_title"
-                android:src="@color/backgroundlight" />
+            <TextView
+                android:id="@+id/txtClassDetailSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/subtext"
+                android:text="@string/character_label_detail"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textSize="14dip" />
 
         </LinearLayout>
 
@@ -173,27 +168,18 @@
         	android:layout_height="wrap_content"
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
-        	
-            <TextView
-                android:id="@+id/labelClass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/character_label_class"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/characterClass"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:gravity="left"
                 android:cursorVisible="false"
-                android:focusable="false"
+                android:inputType="textNoSuggestions"
                 android:focusableInTouchMode="false"
-                android:hint="@string/none" />
+                android:hint="@string/character_class_hint" />
             
         </LinearLayout>
         
@@ -202,27 +188,93 @@
         	android:layout_height="wrap_content"
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
-        	
-            <TextView
-                android:id="@+id/labelAdvancedClass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/character_label_advancedclass"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/characterAdvancedClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:inputType="textNoSuggestions"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/character_advancedclass_hint" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/otherdetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="5.0dip" >
+
+            <TextView
+                android:id="@+id/txtOtherDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/swtor_blue"
+                android:text="@string/character_other_label"
+                android:textSize="20dip" />
+
+            <TextView
+                android:id="@+id/txtOtherDetailSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/subtext"
+                android:text="@string/character_label_detail"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textSize="14dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:inputType="textNoSuggestions"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/character_gender_hint" />
+
+        </LinearLayout>
+
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterRace"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:gravity="center"
+                android:gravity="left"
                 android:cursorVisible="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:hint="@string/none" />
+                android:hint="@string/character_race_hint" />
             
         </LinearLayout>
         
@@ -231,21 +283,18 @@
         	android:layout_height="wrap_content"
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
-        	
-            <TextView
-                android:id="@+id/labelRace"
-                android:layout_width="wrap_content"
+
+            <EditText
+                android:id="@+id/characterAlignment"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:text="@string/character_label_race"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-            
-            <Spinner
-        		android:id="@+id/characterRace"
-        		android:layout_width="match_parent"
-        		android:layout_marginBottom="10dp"
-        		android:layout_height="wrap_content"
-                android:spinnerMode="dropdown"/>
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/character_alignment_hint" />
             
         </LinearLayout>
         
@@ -254,44 +303,18 @@
         	android:layout_height="wrap_content"
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
-        	
-            <TextView
-                android:id="@+id/labelAlignment"
-                android:layout_width="wrap_content"
+
+            <EditText
+                android:id="@+id/characterCrewSkill1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:text="@string/character_label_alignment"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-            
-            <Spinner
-            	android:id="@+id/characterAlignment"
-            	android:layout_width="match_parent"
-            	android:layout_height="wrap_content"
-            	android:layout_marginBottom="10dp"
-                android:spinnerMode="dropdown"/>
-            
-        </LinearLayout>
-        
-        <LinearLayout
-        	android:layout_width="fill_parent"
-        	android:layout_height="wrap_content"
-        	android:orientation="horizontal"
-        	android:padding="5.0dip" >
-        	
-            <TextView
-                android:id="@+id/labelSkill1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/character_label_crew1"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-            
-            <Spinner
-            	android:id="@+id/characterCrewSkill1"
-            	android:layout_width="match_parent"
-            	android:layout_height="wrap_content"
-            	android:layout_marginBottom="10dp"
-                android:spinnerMode="dropdown"/>
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/character_crew1_hint" />
             
         </LinearLayout>
         
@@ -300,21 +323,18 @@
         	android:layout_height="wrap_content"
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
-        	
-            <TextView
-                android:id="@+id/labelSkill2"
-                android:layout_width="wrap_content"
+
+            <EditText
+                android:id="@+id/characterCrewSkill2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/character_label_crew2"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-            
-            <Spinner
-            	android:id="@+id/characterCrewSkill2"
-            	android:layout_width="match_parent"
-            	android:layout_height="wrap_content"
-            	android:layout_marginBottom="10dp"
-                android:spinnerMode="dropdown"/>
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/character_crew2_hint" />
             
         </LinearLayout>
         
@@ -323,21 +343,18 @@
         	android:layout_height="wrap_content"
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
-        	
-            <TextView
-                android:id="@+id/labelSkill3"
-                android:layout_width="wrap_content"
+
+            <EditText
+                android:id="@+id/characterCrewSkill3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/character_label_crew3"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-            
-            <Spinner
-            	android:id="@+id/characterCrewSkill3"
-            	android:layout_width="match_parent"
-            	android:layout_height="wrap_content"
-            	android:layout_marginBottom="10dp"
-                android:spinnerMode="dropdown"/>
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="left"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/character_crew3_hint" />
             
         </LinearLayout>
         
