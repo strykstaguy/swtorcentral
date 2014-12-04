@@ -250,7 +250,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
         final List<String> values = new ArrayList<String>(genderItem.keySet());
         final String[] list = genderItem.keySet().toArray(new String[0]);
 
-        characterRace.setOnClickListener(new View.OnClickListener() {
+        characterGender.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 new MaterialDialog.Builder(CharacterAddActivity.this)
                         .title("Gender")

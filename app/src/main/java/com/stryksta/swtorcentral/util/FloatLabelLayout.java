@@ -74,7 +74,7 @@ public final class FloatLabelLayout extends FrameLayout {
                 a.getResourceId(R.styleable.FloatLabelLayout_floatLabelTextAppearance,
                         android.R.style.TextAppearance_Small));
 
-        addView(mLabel, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        addView(mLabel, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 
         a.recycle();
     }
@@ -91,7 +91,8 @@ public final class FloatLabelLayout extends FrameLayout {
             // margin to show the label
             final LayoutParams lp = new LayoutParams(params);
             lp.gravity = Gravity.BOTTOM;
-            lp.topMargin = (int) mLabel.getTextSize();
+            lp.topMargin = (int) mLabel.getTextSize() + 50;
+
             params = lp;
 
             setEditText((EditText) child);

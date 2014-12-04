@@ -106,7 +106,7 @@
     <string name="character_description_hint">Description</string>
     <string name="character_level_hint">Level</string>
     <string name="character_gender_hint">Gender</string>
-    <string name="character_class_hint">Character Name</string>
+    <string name="character_class_hint">Class</string>
     <string name="character_advancedclass_hint">Advanced Class</string>
     <string name="character_race_hint">Race</string>
     <string name="character_alignment_hint">Alignment</string>
