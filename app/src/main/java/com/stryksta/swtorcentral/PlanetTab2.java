@@ -2,6 +2,7 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
+import com.stryksta.swtorcentral.adapters.PlanetAdapter;
 import com.stryksta.swtorcentral.data.DatacronItem;
 import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 import com.stryksta.swtorcentral.util.NonScrollListView;

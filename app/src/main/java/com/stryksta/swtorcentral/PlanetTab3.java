@@ -2,6 +2,7 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.stryksta.swtorcentral.adapters.LoreAdapter;
 import com.stryksta.swtorcentral.data.LoreItem;
 import com.stryksta.swtorcentral.util.LoreDatabase;
 import com.stryksta.swtorcentral.util.NonScrollListView;

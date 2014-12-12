@@ -1,7 +1,6 @@
 package com.stryksta.swtorcentral;
  
 import android.app.Dialog;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,6 +12,7 @@ import android.view.Window;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.stryksta.swtorcentral.adapters.EventAdapter;
 import com.stryksta.swtorcentral.data.EventItem;
 import com.stryksta.swtorcentral.util.Utility;
 

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/gray_86"
-    android:orientation="vertical" >
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@color/background"
+android:orientation="vertical">
 
-    <include layout="@layout/toolbar"/>
+<include layout="@layout/toolbar"/>
 
-    <ListView
+    <mobi.parchment.widget.adapterview.listview.ListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:parchment="http://schemas.android.com/apk/res/com.stryksta.swtorcentral"
         android:id="@+id/progressionList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/background"
+        parchment:orientation="horizontal"
+        parchment:snapPosition="start"
+        parchment:snapToPosition="true"
         android:clipToPadding="false"
-        android:divider="@null"
-        android:dividerHeight="0dp" />
- 
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/progression_main.xml -->
+        android:scrollbars="horizontal"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/progression_main.xml -->

@@ -6,15 +6,21 @@
     android:background="@color/background"
     android:orientation="vertical">
 
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <include layout="@layout/toolbar"/>
 
-    <com.stryksta.swtorcentral.util.HorizontalListView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/testList"
-        android:clipToPadding="false"
-        android:scrollbars="horizontal"
-        android:scrollbarStyle="outsideOverlay"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_margin="10dp"
+        android:background="@color/background"
+        android:divider="@color/background"
+        android:childDivider="@color/background"
+        android:dividerHeight="0dp" />
+    </FrameLayout>
 </LinearLayout>

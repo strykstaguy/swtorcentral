@@ -43,7 +43,8 @@
         <com.afollestad.materialdialogs.views.MeasureCallbackScrollView
             android:id="@+id/contentScrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:clipToPadding="false">
 
             <TextView
                 android:id="@+id/content"
@@ -67,7 +68,8 @@
         <com.afollestad.materialdialogs.views.MeasureCallbackScrollView
             android:id="@+id/customViewScroll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:clipToPadding="false">
 
             <LinearLayout
                 android:id="@+id/customViewFrame"
@@ -106,6 +108,25 @@
             </LinearLayout>
 
         </com.afollestad.materialdialogs.views.MeasureCallbackScrollView>
+
+        <LinearLayout
+            android:id="@+id/list_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.afollestad.materialdialogs.views.MeasureCallbackListView
+                android:id="@+id/contentListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/md_main_frame_margin"
+                android:scrollbarStyle="outsideOverlay"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -161,4 +182,4 @@
 
     </LinearLayout>
 
-</LinearLayout><!-- From: file:/Users/aidanfollestad/Android%20Projects/MaterialDialogs/library/src/main/res/layout/md_dialog.xml --><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.3.0/res/layout/md_dialog.xml -->
+</LinearLayout><!-- From: file:/Users/aidanfollestad/Android%20Projects/MaterialDialogs/library/src/main/res/layout/md_dialog.xml --><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/layout/md_dialog.xml -->

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.stryksta.swtorcentral.adapters.DatacronAdapter;
 import com.stryksta.swtorcentral.data.DatacronItem;
 import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 

@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
+import com.stryksta.swtorcentral.adapters.ClassesAdapter;
 import com.stryksta.swtorcentral.data.ClassItem;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 
