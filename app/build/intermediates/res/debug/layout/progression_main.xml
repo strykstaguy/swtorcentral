@@ -7,6 +7,15 @@ android:orientation="vertical">
 
 <include layout="@layout/toolbar"/>
 
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@color/swtor_blue" />
+
     <mobi.parchment.widget.adapterview.listview.ListView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:parchment="http://schemas.android.com/apk/res/com.stryksta.swtorcentral"
@@ -20,4 +29,6 @@ android:orientation="vertical">
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/progression_main.xml -->
+
+    </FrameLayout>
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/progression_main.xml -->

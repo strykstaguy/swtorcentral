@@ -252,20 +252,20 @@ public class MainActivity extends ActionBarActivity {
         
    	 switch(position) {
 	    case 0:
-	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new ReaderActivity(), "Reader");
+	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ReaderActivity(), "Reader");
 	        break;
 	    case 1:
 	    	Intent serverIntent = new Intent(this, ServerActivity.class);
 	        startActivity(serverIntent);
 	        break;
 	    case 2:
-	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new DatacronActivity(), "Datacron");
+	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new DatacronActivity(), "Datacron");
 	        break;
 	    case 3:
-	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new ClassesActivity(), "Classes");
+	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ClassesActivity(), "Classes");
 	        break;
 	    case 4:
-	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main, new FactionFragment(), "Faction");
+	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new FactionFragment(), "Faction");
 	        break;
 	    case 5:
 	    	Intent eventIntent = new Intent(this, EventsActivity.class);
@@ -297,22 +297,6 @@ public class MainActivity extends ActionBarActivity {
         //mDrawerList.setItemChecked(position, true);
         //setTitle(mGalaxyTitles[position]);
         mDrawerLayout.closeDrawer(mDrawerView);
-    }
-    
-    public void switchFragment(Fragment newFragment) {
-    	if (newFragment.isAdded()) {
-    		getFragmentManager()
-			.beginTransaction()
-			.show(newFragment)
-			.commit();
-    	} else {
-    		getFragmentManager()
-        	.beginTransaction()
-        	.replace(R.id.main, newFragment)
-        	.addToBackStack(null)
-        	.commit();
-    	}
-    	
     }
     
     @Override
