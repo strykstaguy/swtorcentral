@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/gray_23"
-    android:orientation="horizontal" >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/tython_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_23"
+        android:orientation="horizontal" >
 
     <ImageView
         android:id="@+id/imgClassIcon"
@@ -15,37 +26,38 @@
         android:scaleType="fitCenter"
         android:src="@drawable/ic_action_user" />
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.00"
-        android:paddingTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingBottom="10dp"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/userCharacter"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:layout_weight="1.00"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/userStatus"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/userCharacter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/userStatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgExpandCollapse"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@string/image_placeholder"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_action_indicator_down" />
+
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imgExpandCollapse"
-        android:layout_width="32.0dip"
-        android:layout_height="32.0dip"
-        android:layout_gravity="center"
-        android:contentDescription="@string/image_placeholder"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_action_indicator_down" />
-
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/drawer_character_group.xml -->
+</FrameLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/drawer_character_group.xml -->

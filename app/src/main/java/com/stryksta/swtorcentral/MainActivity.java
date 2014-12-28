@@ -21,9 +21,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
@@ -90,9 +92,7 @@ public class MainActivity extends ActionBarActivity {
 	    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 	    mDrawerList = (ListView) findViewById(R.id.drawer);
 	    mDrawerView = (LinearLayout) this.findViewById(R.id.drawer_view);
-	    mCharacterListView = (ExpandableListView) findViewById(R.id.expandableListView);
-	    
-	    CharacterSelection();
+
 	    
 	 	// set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
@@ -138,6 +138,17 @@ public class MainActivity extends ActionBarActivity {
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+        //Add Header
+        //LayoutInflater inflater = getLayoutInflater();
+        //final ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header,
+               // mDrawerList, false);
+
+        //mDrawerList.addHeaderView(header, null, true); // true = clickable
+
+        mCharacterListView = (ExpandableListView) findViewById(R.id.expandableListView);
+        CharacterSelection();
+
 
         if (savedInstanceState == null) {
             selectItem(0);
