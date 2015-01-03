@@ -20,6 +20,7 @@ import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.Toast;
 
 import com.stryksta.swtorcentral.adapters.ExpandableListAdapter;
+import com.stryksta.swtorcentral.util.BackdropImageView;
 
 public class TestActivity extends ActionBarActivity {
 
@@ -42,6 +43,8 @@ public class TestActivity extends ActionBarActivity {
 
         getSupportActionBar().setTitle("Lore");
 
+        BackdropImageView BackdropImageViewTest = (BackdropImageView) findViewById(R.id.imageview_fanart);
+        BackdropImageViewTest.setBackgroundResource(R.drawable.tython_bg);
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
 
         List<String> locations = new ArrayList<String>();
@@ -51,6 +54,17 @@ public class TestActivity extends ActionBarActivity {
         locations.add("The Forge");
         locations.add("The Chamber of Speech");
         locations.add("The Gnarls");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
+        locations.add("Tythos Ridge");
         locations.add("Tythos Ridge");
 
         expandableListDetail = new HashMap<String, List<String>>();

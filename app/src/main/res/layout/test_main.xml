@@ -4,13 +4,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <com.stryksta.swtorcentral.util.CollapsingTitleLayout
+        android:id="@+id/backdrop_toolbar"
+         android:layout_width="match_parent"
+         android:layout_height="?attr/actionBarSize"
+         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+         app:expandedTextSize="40dp"
+         app:expandedMargin="16dp">
 
-    <include layout="@layout/toolbar"/>
+         <com.stryksta.swtorcentral.util.BackdropImageView
+            android:id="@+id/imageview_fanart"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+             android:src="@color/gray_23"
+            android:scaleType="centerCrop" />
+
+         <include layout="@layout/toolbar"/>
+
+    </com.stryksta.swtorcentral.util.CollapsingTitleLayout>
 
     <ExpandableListView
         android:id="@+id/expandableListView"
@@ -22,5 +36,4 @@
         android:divider="@color/background"
         android:childDivider="@color/background"
         android:dividerHeight="0dp" />
-    </FrameLayout>
 </LinearLayout>

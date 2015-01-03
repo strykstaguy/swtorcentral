@@ -8,25 +8,25 @@ package com.rengwuxian.materialedittext;
 
 public final class R {
 	public static final class attr {
-		public static final int accentTypeface = 0x7f010049;
-		public static final int baseColor = 0x7f010041;
-		public static final int errorColor = 0x7f010044;
-		public static final int floatingLabel = 0x7f010043;
-		public static final int floatingLabelText = 0x7f01004a;
-		public static final int helperText = 0x7f010048;
-		public static final int maxCharacters = 0x7f010045;
-		public static final int minBottomTextLines = 0x7f010047;
-		public static final int primaryColor = 0x7f010042;
-		public static final int singleLineEllipsis = 0x7f010046;
+		public static final int accentTypeface = 0x7f010051;
+		public static final int baseColor = 0x7f010049;
+		public static final int errorColor = 0x7f01004c;
+		public static final int floatingLabel = 0x7f01004b;
+		public static final int floatingLabelText = 0x7f010052;
+		public static final int helperText = 0x7f010050;
+		public static final int maxCharacters = 0x7f01004d;
+		public static final int minBottomTextLines = 0x7f01004f;
+		public static final int primaryColor = 0x7f01004a;
+		public static final int singleLineEllipsis = 0x7f01004e;
 	}
 	public static final class dimen {
-		public static final int bottom_ellipsis_height = 0x7f0a0028;
-		public static final int default_padding_bottom = 0x7f0a002c;
-		public static final int default_padding_top = 0x7f0a002d;
-		public static final int floating_label_text_size = 0x7f0a003c;
-		public static final int inner_components_spacing = 0x7f0a003f;
-		public static final int inner_padding_left = 0x7f0a0040;
-		public static final int inner_padding_right = 0x7f0a0041;
+		public static final int bottom_ellipsis_height = 0x7f0a002d;
+		public static final int default_padding_bottom = 0x7f0a0031;
+		public static final int default_padding_top = 0x7f0a0032;
+		public static final int floating_label_text_size = 0x7f0a0046;
+		public static final int inner_components_spacing = 0x7f0a004a;
+		public static final int inner_padding_left = 0x7f0a004b;
+		public static final int inner_padding_right = 0x7f0a004c;
 	}
 	public static final class id {
 		public static final int highlight = 0x7f090016;
@@ -34,7 +34,7 @@ public final class R {
 		public static final int normal = 0x7f090000;
 	}
 	public static final class styleable {
-		public static final int[] MaterialEditText = { 0x7f010041, 0x7f010042, 0x7f010043, 0x7f010044, 0x7f010045, 0x7f010046, 0x7f010047, 0x7f010048, 0x7f010049, 0x7f01004a };
+		public static final int[] MaterialEditText = { 0x7f010049, 0x7f01004a, 0x7f01004b, 0x7f01004c, 0x7f01004d, 0x7f01004e, 0x7f01004f, 0x7f010050, 0x7f010051, 0x7f010052 };
 		public static final int MaterialEditText_accentTypeface = 8;
 		public static final int MaterialEditText_baseColor = 0;
 		public static final int MaterialEditText_errorColor = 3;
