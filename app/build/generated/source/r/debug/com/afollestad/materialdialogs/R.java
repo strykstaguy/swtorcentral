@@ -58,7 +58,8 @@ public final class R {
 		public static final int buttonBarStyle = 0x7f0100a9;
 		public static final int closeIcon = 0x7f010068;
 		public static final int closeItemLayout = 0x7f010025;
-		public static final int collapseIcon = 0x7f0100e3;
+		public static final int collapseContentDescription = 0x7f0100e3;
+		public static final int collapseIcon = 0x7f0100e2;
 		public static final int color = 0x7f010029;
 		public static final int colorAccent = 0x7f0100ca;
 		public static final int colorButtonNormal = 0x7f0100ce;
@@ -386,17 +387,17 @@ public final class R {
 		public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f020036;
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020037;
 		public static final int abc_textfield_search_material = 0x7f020038;
-		public static final int md_btn_selected = 0x7f0200c9;
-		public static final int md_btn_selected_dark = 0x7f0200ca;
-		public static final int md_btn_selector = 0x7f0200cb;
-		public static final int md_btn_selector_dark = 0x7f0200cc;
-		public static final int md_btn_selector_ripple = 0x7f0200cd;
-		public static final int md_btn_selector_ripple_dark = 0x7f0200ce;
-		public static final int md_item_selected = 0x7f0200cf;
-		public static final int md_item_selected_dark = 0x7f0200d0;
-		public static final int md_selector = 0x7f0200d1;
-		public static final int md_selector_dark = 0x7f0200d2;
-		public static final int md_transparent = 0x7f0200d3;
+		public static final int md_btn_selected = 0x7f0200ca;
+		public static final int md_btn_selected_dark = 0x7f0200cb;
+		public static final int md_btn_selector = 0x7f0200cc;
+		public static final int md_btn_selector_dark = 0x7f0200cd;
+		public static final int md_btn_selector_ripple = 0x7f0200ce;
+		public static final int md_btn_selector_ripple_dark = 0x7f0200cf;
+		public static final int md_item_selected = 0x7f0200d0;
+		public static final int md_item_selected_dark = 0x7f0200d1;
+		public static final int md_selector = 0x7f0200d2;
+		public static final int md_selector_dark = 0x7f0200d3;
+		public static final int md_transparent = 0x7f0200d4;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f090040;
@@ -534,6 +535,7 @@ public final class R {
 		public static final int abc_searchview_description_voice = 0x7f0c000c;
 		public static final int abc_shareactionprovider_share_with = 0x7f0c000d;
 		public static final int abc_shareactionprovider_share_with_application = 0x7f0c000e;
+		public static final int abc_toolbar_collapse_description = 0x7f0c000f;
 	}
 	public static final class style {
 		public static final int Base_TextAppearance_AppCompat = 0x7f0d0003;
@@ -1015,7 +1017,8 @@ public final class R {
 		public static final int[] Toolbar = { 0x010100af, 0x01010140, 0x7f01000c, 0x7f01000f, 0x7f01001f, 0x7f010020, 0x7f010021, 0x7f010022, 0x7f010024, 0x7f0100d9, 0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd, 0x7f0100de, 0x7f0100df, 0x7f0100e0, 0x7f0100e1, 0x7f0100e2, 0x7f0100e3, 0x7f0100e4, 0x7f0100e5 };
 		public static final int Toolbar_android_gravity = 0;
 		public static final int Toolbar_android_minHeight = 1;
-		public static final int Toolbar_collapseIcon = 19;
+		public static final int Toolbar_collapseContentDescription = 19;
+		public static final int Toolbar_collapseIcon = 18;
 		public static final int Toolbar_contentInsetEnd = 5;
 		public static final int Toolbar_contentInsetLeft = 6;
 		public static final int Toolbar_contentInsetRight = 7;

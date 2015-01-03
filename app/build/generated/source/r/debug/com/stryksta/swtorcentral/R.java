@@ -261,17 +261,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int buttonBarStyle=0x7f0100a9;
-        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>top</code></td><td>0x30</td><td></td></tr>
-<tr><td><code>bottom</code></td><td>0x50</td><td></td></tr>
-</table>
-         */
-        public static final int buttonGravity=0x7f0100e2;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -300,10 +289,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int closeItemLayout=0x7f010025;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int collapseContentDescription=0x7f0100e3;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int collapseIcon=0x7f0100e3;
+        public static final int collapseIcon=0x7f0100e2;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -2108,85 +2105,86 @@ containing a value of this type.
         public static final int lifeday=0x7f0200c2;
         public static final int list_focused_swtor=0x7f0200c3;
         public static final int list_pressed_swtor=0x7f0200c4;
-        public static final int lost_island_bg=0x7f0200c5;
-        public static final int maelstrom_prison_bg=0x7f0200c6;
-        public static final int makeb_bg=0x7f0200c7;
-        public static final int mandalorian_raiders_bg=0x7f0200c8;
-        public static final int md_btn_selected=0x7f0200c9;
-        public static final int md_btn_selected_dark=0x7f0200ca;
-        public static final int md_btn_selector=0x7f0200cb;
-        public static final int md_btn_selector_dark=0x7f0200cc;
-        public static final int md_btn_selector_ripple=0x7f0200cd;
-        public static final int md_btn_selector_ripple_dark=0x7f0200ce;
-        public static final int md_item_selected=0x7f0200cf;
-        public static final int md_item_selected_dark=0x7f0200d0;
-        public static final int md_selector=0x7f0200d1;
-        public static final int md_selector_dark=0x7f0200d2;
-        public static final int md_transparent=0x7f0200d3;
-        public static final int menu_dropdown_panel_swtor=0x7f0200d4;
-        public static final int narshadaa_bg=0x7f0200d5;
-        public static final int navigation_down=0x7f0200d6;
-        public static final int navigation_refresh=0x7f0200d7;
-        public static final int navigation_up=0x7f0200d8;
-        public static final int night=0x7f0200d9;
-        public static final int ordmantell_bg=0x7f0200da;
-        public static final int oricon_bg=0x7f0200db;
-        public static final int pl_alderaan=0x7f0200dc;
-        public static final int pl_balmorra=0x7f0200dd;
-        public static final int pl_belsavis=0x7f0200de;
-        public static final int pl_corellia=0x7f0200df;
-        public static final int pl_coruscant=0x7f0200e0;
-        public static final int pl_cz198=0x7f0200e1;
-        public static final int pl_dromundkaas=0x7f0200e2;
-        public static final int pl_hoth=0x7f0200e3;
-        public static final int pl_hutta=0x7f0200e4;
-        public static final int pl_ilum=0x7f0200e5;
-        public static final int pl_korriban=0x7f0200e6;
-        public static final int pl_makeb=0x7f0200e7;
-        public static final int pl_narshaddaa=0x7f0200e8;
-        public static final int pl_ord_mantell=0x7f0200e9;
-        public static final int pl_oricon=0x7f0200ea;
-        public static final int pl_quesh=0x7f0200eb;
-        public static final int pl_taris=0x7f0200ec;
-        public static final int pl_tatooine=0x7f0200ed;
-        public static final int pl_tython=0x7f0200ee;
-        public static final int pl_voss=0x7f0200ef;
-        public static final int placeholder=0x7f0200f0;
-        public static final int progress_bg_swtor=0x7f0200f1;
-        public static final int progress_horizontal_swtor=0x7f0200f2;
-        public static final int progress_primary_swtor=0x7f0200f3;
-        public static final int progress_secondary_swtor=0x7f0200f4;
-        public static final int quesh_bg=0x7f0200f5;
-        public static final int rakghoul=0x7f0200f6;
-        public static final int rectangle=0x7f0200f7;
-        public static final int red_reaper_bg=0x7f0200f8;
-        public static final int relicsofthegree=0x7f0200f9;
-        public static final int republic=0x7f0200fa;
-        public static final int republic_fleet=0x7f0200fb;
-        public static final int selectable_background_swtor=0x7f0200fc;
-        public static final int shape_rounded=0x7f0200fd;
-        public static final int spinner_ab_default_swtor=0x7f0200fe;
-        public static final int spinner_ab_disabled_swtor=0x7f0200ff;
-        public static final int spinner_ab_focused_swtor=0x7f020100;
-        public static final int spinner_ab_pressed_swtor=0x7f020101;
-        public static final int spinner_background_ab_swtor=0x7f020102;
-        public static final int swtor_logo_small=0x7f020103;
-        public static final int tab_indicator_ab_swtor=0x7f020104;
-        public static final int tab_selected_focused_swtor=0x7f020105;
-        public static final int tab_selected_pressed_swtor=0x7f020106;
-        public static final int tab_selected_swtor=0x7f020107;
-        public static final int tab_unselected_focused_swtor=0x7f020108;
-        public static final int tab_unselected_pressed_swtor=0x7f020109;
-        public static final int tab_unselected_swtor=0x7f02010a;
-        public static final int taral_v_bg=0x7f02010b;
-        public static final int taris_bg=0x7f02010c;
-        public static final int tatooine_bg=0x7f02010d;
-        public static final int the_esseles_bg=0x7f02010e;
-        public static final int the_foundry_bg=0x7f02010f;
-        public static final int title_background=0x7f020110;
-        public static final int title_background2=0x7f020111;
-        public static final int tython_bg=0x7f020112;
-        public static final int voss_bg=0x7f020113;
+        public static final int loadingscreen=0x7f0200c5;
+        public static final int lost_island_bg=0x7f0200c6;
+        public static final int maelstrom_prison_bg=0x7f0200c7;
+        public static final int makeb_bg=0x7f0200c8;
+        public static final int mandalorian_raiders_bg=0x7f0200c9;
+        public static final int md_btn_selected=0x7f0200ca;
+        public static final int md_btn_selected_dark=0x7f0200cb;
+        public static final int md_btn_selector=0x7f0200cc;
+        public static final int md_btn_selector_dark=0x7f0200cd;
+        public static final int md_btn_selector_ripple=0x7f0200ce;
+        public static final int md_btn_selector_ripple_dark=0x7f0200cf;
+        public static final int md_item_selected=0x7f0200d0;
+        public static final int md_item_selected_dark=0x7f0200d1;
+        public static final int md_selector=0x7f0200d2;
+        public static final int md_selector_dark=0x7f0200d3;
+        public static final int md_transparent=0x7f0200d4;
+        public static final int menu_dropdown_panel_swtor=0x7f0200d5;
+        public static final int narshadaa_bg=0x7f0200d6;
+        public static final int navigation_down=0x7f0200d7;
+        public static final int navigation_refresh=0x7f0200d8;
+        public static final int navigation_up=0x7f0200d9;
+        public static final int night=0x7f0200da;
+        public static final int ordmantell_bg=0x7f0200db;
+        public static final int oricon_bg=0x7f0200dc;
+        public static final int pl_alderaan=0x7f0200dd;
+        public static final int pl_balmorra=0x7f0200de;
+        public static final int pl_belsavis=0x7f0200df;
+        public static final int pl_corellia=0x7f0200e0;
+        public static final int pl_coruscant=0x7f0200e1;
+        public static final int pl_cz198=0x7f0200e2;
+        public static final int pl_dromundkaas=0x7f0200e3;
+        public static final int pl_hoth=0x7f0200e4;
+        public static final int pl_hutta=0x7f0200e5;
+        public static final int pl_ilum=0x7f0200e6;
+        public static final int pl_korriban=0x7f0200e7;
+        public static final int pl_makeb=0x7f0200e8;
+        public static final int pl_narshaddaa=0x7f0200e9;
+        public static final int pl_ord_mantell=0x7f0200ea;
+        public static final int pl_oricon=0x7f0200eb;
+        public static final int pl_quesh=0x7f0200ec;
+        public static final int pl_taris=0x7f0200ed;
+        public static final int pl_tatooine=0x7f0200ee;
+        public static final int pl_tython=0x7f0200ef;
+        public static final int pl_voss=0x7f0200f0;
+        public static final int placeholder=0x7f0200f1;
+        public static final int progress_bg_swtor=0x7f0200f2;
+        public static final int progress_horizontal_swtor=0x7f0200f3;
+        public static final int progress_primary_swtor=0x7f0200f4;
+        public static final int progress_secondary_swtor=0x7f0200f5;
+        public static final int quesh_bg=0x7f0200f6;
+        public static final int rakghoul=0x7f0200f7;
+        public static final int rectangle=0x7f0200f8;
+        public static final int red_reaper_bg=0x7f0200f9;
+        public static final int relicsofthegree=0x7f0200fa;
+        public static final int republic=0x7f0200fb;
+        public static final int republic_fleet=0x7f0200fc;
+        public static final int selectable_background_swtor=0x7f0200fd;
+        public static final int shape_rounded=0x7f0200fe;
+        public static final int spinner_ab_default_swtor=0x7f0200ff;
+        public static final int spinner_ab_disabled_swtor=0x7f020100;
+        public static final int spinner_ab_focused_swtor=0x7f020101;
+        public static final int spinner_ab_pressed_swtor=0x7f020102;
+        public static final int spinner_background_ab_swtor=0x7f020103;
+        public static final int swtor_logo_small=0x7f020104;
+        public static final int tab_indicator_ab_swtor=0x7f020105;
+        public static final int tab_selected_focused_swtor=0x7f020106;
+        public static final int tab_selected_pressed_swtor=0x7f020107;
+        public static final int tab_selected_swtor=0x7f020108;
+        public static final int tab_unselected_focused_swtor=0x7f020109;
+        public static final int tab_unselected_pressed_swtor=0x7f02010a;
+        public static final int tab_unselected_swtor=0x7f02010b;
+        public static final int taral_v_bg=0x7f02010c;
+        public static final int taris_bg=0x7f02010d;
+        public static final int tatooine_bg=0x7f02010e;
+        public static final int the_esseles_bg=0x7f02010f;
+        public static final int the_foundry_bg=0x7f020110;
+        public static final int title_background=0x7f020111;
+        public static final int title_background2=0x7f020112;
+        public static final int tython_bg=0x7f020113;
+        public static final int voss_bg=0x7f020114;
     }
     public static final class id {
         public static final int AdvClass1=0x7f0900ab;
@@ -2610,118 +2608,119 @@ containing a value of this type.
         public static final int abc_searchview_description_voice=0x7f0c000c;
         public static final int abc_shareactionprovider_share_with=0x7f0c000d;
         public static final int abc_shareactionprovider_share_with_application=0x7f0c000e;
-        public static final int abilities=0x7f0c000f;
-        public static final int ability_detail_main=0x7f0c0010;
-        public static final int achievements_main=0x7f0c0011;
-        public static final int action_settings=0x7f0c0012;
-        public static final int advanced_classes=0x7f0c0013;
-        public static final int advanced_main=0x7f0c0014;
-        public static final int app_name=0x7f0c0015;
-        public static final int beastlore=0x7f0c0016;
-        public static final int button=0x7f0c0017;
-        public static final int character_add_main=0x7f0c0018;
-        public static final int character_advancedclass_hint=0x7f0c0019;
-        public static final int character_alignment_hint=0x7f0c001a;
-        public static final int character_class_hint=0x7f0c001b;
-        public static final int character_class_label=0x7f0c001c;
-        public static final int character_crew1_hint=0x7f0c001d;
-        public static final int character_crew2_hint=0x7f0c001e;
-        public static final int character_crew3_hint=0x7f0c001f;
-        public static final int character_description_hint=0x7f0c0020;
-        public static final int character_edit_main=0x7f0c0021;
-        public static final int character_gender_hint=0x7f0c0022;
-        public static final int character_label=0x7f0c0023;
-        public static final int character_label_detail=0x7f0c0024;
-        public static final int character_legacy_hint=0x7f0c0025;
-        public static final int character_legacy_label1=0x7f0c0026;
-        public static final int character_legacy_label2=0x7f0c0027;
-        public static final int character_level_hint=0x7f0c0028;
-        public static final int character_main=0x7f0c0029;
-        public static final int character_menu_add=0x7f0c002a;
-        public static final int character_menu_delete=0x7f0c002b;
-        public static final int character_menu_edit=0x7f0c002c;
-        public static final int character_menu_save=0x7f0c002d;
-        public static final int character_name_hint=0x7f0c002e;
-        public static final int character_other_label=0x7f0c002f;
-        public static final int character_race_hint=0x7f0c0030;
-        public static final int characters=0x7f0c0031;
-        public static final int class_header=0x7f0c0032;
-        public static final int companion=0x7f0c0033;
-        public static final int companiongifts=0x7f0c0034;
-        public static final int datacron_name=0x7f0c0035;
-        public static final int datacronsub=0x7f0c0036;
-        public static final int drawer_close=0x7f0c0037;
-        public static final int drawer_open=0x7f0c0038;
-        public static final int draweritem1=0x7f0c0039;
-        public static final int draweritem10=0x7f0c003a;
-        public static final int draweritem11=0x7f0c003b;
-        public static final int draweritem2=0x7f0c003c;
-        public static final int draweritem3=0x7f0c003d;
-        public static final int draweritem4=0x7f0c003e;
-        public static final int draweritem5=0x7f0c003f;
-        public static final int draweritem6=0x7f0c0040;
-        public static final int draweritem7=0x7f0c0041;
-        public static final int draweritem8=0x7f0c0042;
-        public static final int draweritem9=0x7f0c0043;
-        public static final int empire=0x7f0c0044;
-        public static final int event_main=0x7f0c0045;
-        public static final int faction=0x7f0c0046;
-        public static final int faction_main=0x7f0c0047;
-        public static final int factionsub=0x7f0c0048;
-        public static final int gameruleslore=0x7f0c0049;
-        public static final int header1=0x7f0c004a;
-        public static final int header2=0x7f0c004b;
-        public static final int hello_world=0x7f0c004c;
-        public static final int image=0x7f0c004d;
-        public static final int image_placeholder=0x7f0c004e;
-        public static final int informationsub=0x7f0c004f;
-        public static final int loading=0x7f0c0050;
-        public static final int locationslore=0x7f0c0051;
-        public static final int lore=0x7f0c0052;
-        public static final int main_header=0x7f0c0053;
-        public static final int menu_refresh=0x7f0c0054;
-        public static final int menu_server=0x7f0c0055;
-        public static final int menu_settings=0x7f0c0056;
-        public static final int none=0x7f0c0057;
-        public static final int organizationslore=0x7f0c0058;
-        public static final int personslore=0x7f0c0059;
-        public static final int planet_main=0x7f0c005a;
-        public static final int pref_send_report=0x7f0c005b;
-        public static final int pref_send_report_summary=0x7f0c005c;
-        public static final int pref_sync_frequency=0x7f0c005d;
-        public static final int pref_sync_frequency_summary=0x7f0c005e;
-        public static final int pref_update_setting=0x7f0c005f;
-        public static final int pref_user_name=0x7f0c0060;
-        public static final int pref_user_name_summary=0x7f0c0061;
-        public static final int pref_user_profile=0x7f0c0062;
-        public static final int progression_main=0x7f0c0063;
-        public static final int progressionsub=0x7f0c0064;
-        public static final int reader_name=0x7f0c0065;
-        public static final int republic=0x7f0c0066;
-        public static final int server1=0x7f0c0067;
-        public static final int server_eu=0x7f0c0068;
-        public static final int server_full=0x7f0c0069;
-        public static final int server_heavy=0x7f0c006a;
-        public static final int server_light=0x7f0c006b;
-        public static final int server_main=0x7f0c006c;
-        public static final int server_menu=0x7f0c006d;
-        public static final int server_name=0x7f0c006e;
-        public static final int server_standard=0x7f0c006f;
-        public static final int server_sub=0x7f0c0070;
-        public static final int server_us=0x7f0c0071;
-        public static final int server_veryheavy=0x7f0c0072;
-        public static final int serverkey_sub=0x7f0c0073;
-        public static final int settings_header=0x7f0c0074;
-        public static final int tab1=0x7f0c0075;
-        public static final int tab2=0x7f0c0076;
-        public static final int test_main=0x7f0c0077;
-        public static final int testcodex=0x7f0c0078;
-        public static final int testcoord=0x7f0c0079;
-        public static final int testreward=0x7f0c007a;
-        public static final int title_activity_main=0x7f0c007b;
-        public static final int titleslore=0x7f0c007c;
-        public static final int tutorials_main=0x7f0c007d;
-        public static final int video_main=0x7f0c007e;
+        public static final int abc_toolbar_collapse_description=0x7f0c000f;
+        public static final int abilities=0x7f0c0010;
+        public static final int ability_detail_main=0x7f0c0011;
+        public static final int achievements_main=0x7f0c0012;
+        public static final int action_settings=0x7f0c0013;
+        public static final int advanced_classes=0x7f0c0014;
+        public static final int advanced_main=0x7f0c0015;
+        public static final int app_name=0x7f0c0016;
+        public static final int beastlore=0x7f0c0017;
+        public static final int button=0x7f0c0018;
+        public static final int character_add_main=0x7f0c0019;
+        public static final int character_advancedclass_hint=0x7f0c001a;
+        public static final int character_alignment_hint=0x7f0c001b;
+        public static final int character_class_hint=0x7f0c001c;
+        public static final int character_class_label=0x7f0c001d;
+        public static final int character_crew1_hint=0x7f0c001e;
+        public static final int character_crew2_hint=0x7f0c001f;
+        public static final int character_crew3_hint=0x7f0c0020;
+        public static final int character_description_hint=0x7f0c0021;
+        public static final int character_edit_main=0x7f0c0022;
+        public static final int character_gender_hint=0x7f0c0023;
+        public static final int character_label=0x7f0c0024;
+        public static final int character_label_detail=0x7f0c0025;
+        public static final int character_legacy_hint=0x7f0c0026;
+        public static final int character_legacy_label1=0x7f0c0027;
+        public static final int character_legacy_label2=0x7f0c0028;
+        public static final int character_level_hint=0x7f0c0029;
+        public static final int character_main=0x7f0c002a;
+        public static final int character_menu_add=0x7f0c002b;
+        public static final int character_menu_delete=0x7f0c002c;
+        public static final int character_menu_edit=0x7f0c002d;
+        public static final int character_menu_save=0x7f0c002e;
+        public static final int character_name_hint=0x7f0c002f;
+        public static final int character_other_label=0x7f0c0030;
+        public static final int character_race_hint=0x7f0c0031;
+        public static final int characters=0x7f0c0032;
+        public static final int class_header=0x7f0c0033;
+        public static final int companion=0x7f0c0034;
+        public static final int companiongifts=0x7f0c0035;
+        public static final int datacron_name=0x7f0c0036;
+        public static final int datacronsub=0x7f0c0037;
+        public static final int drawer_close=0x7f0c0038;
+        public static final int drawer_open=0x7f0c0039;
+        public static final int draweritem1=0x7f0c003a;
+        public static final int draweritem10=0x7f0c003b;
+        public static final int draweritem11=0x7f0c003c;
+        public static final int draweritem2=0x7f0c003d;
+        public static final int draweritem3=0x7f0c003e;
+        public static final int draweritem4=0x7f0c003f;
+        public static final int draweritem5=0x7f0c0040;
+        public static final int draweritem6=0x7f0c0041;
+        public static final int draweritem7=0x7f0c0042;
+        public static final int draweritem8=0x7f0c0043;
+        public static final int draweritem9=0x7f0c0044;
+        public static final int empire=0x7f0c0045;
+        public static final int event_main=0x7f0c0046;
+        public static final int faction=0x7f0c0047;
+        public static final int faction_main=0x7f0c0048;
+        public static final int factionsub=0x7f0c0049;
+        public static final int gameruleslore=0x7f0c004a;
+        public static final int header1=0x7f0c004b;
+        public static final int header2=0x7f0c004c;
+        public static final int hello_world=0x7f0c004d;
+        public static final int image=0x7f0c004e;
+        public static final int image_placeholder=0x7f0c004f;
+        public static final int informationsub=0x7f0c0050;
+        public static final int loading=0x7f0c0051;
+        public static final int locationslore=0x7f0c0052;
+        public static final int lore=0x7f0c0053;
+        public static final int main_header=0x7f0c0054;
+        public static final int menu_refresh=0x7f0c0055;
+        public static final int menu_server=0x7f0c0056;
+        public static final int menu_settings=0x7f0c0057;
+        public static final int none=0x7f0c0058;
+        public static final int organizationslore=0x7f0c0059;
+        public static final int personslore=0x7f0c005a;
+        public static final int planet_main=0x7f0c005b;
+        public static final int pref_send_report=0x7f0c005c;
+        public static final int pref_send_report_summary=0x7f0c005d;
+        public static final int pref_sync_frequency=0x7f0c005e;
+        public static final int pref_sync_frequency_summary=0x7f0c005f;
+        public static final int pref_update_setting=0x7f0c0060;
+        public static final int pref_user_name=0x7f0c0061;
+        public static final int pref_user_name_summary=0x7f0c0062;
+        public static final int pref_user_profile=0x7f0c0063;
+        public static final int progression_main=0x7f0c0064;
+        public static final int progressionsub=0x7f0c0065;
+        public static final int reader_name=0x7f0c0066;
+        public static final int republic=0x7f0c0067;
+        public static final int server1=0x7f0c0068;
+        public static final int server_eu=0x7f0c0069;
+        public static final int server_full=0x7f0c006a;
+        public static final int server_heavy=0x7f0c006b;
+        public static final int server_light=0x7f0c006c;
+        public static final int server_main=0x7f0c006d;
+        public static final int server_menu=0x7f0c006e;
+        public static final int server_name=0x7f0c006f;
+        public static final int server_standard=0x7f0c0070;
+        public static final int server_sub=0x7f0c0071;
+        public static final int server_us=0x7f0c0072;
+        public static final int server_veryheavy=0x7f0c0073;
+        public static final int serverkey_sub=0x7f0c0074;
+        public static final int settings_header=0x7f0c0075;
+        public static final int tab1=0x7f0c0076;
+        public static final int tab2=0x7f0c0077;
+        public static final int test_main=0x7f0c0078;
+        public static final int testcodex=0x7f0c0079;
+        public static final int testcoord=0x7f0c007a;
+        public static final int testreward=0x7f0c007b;
+        public static final int title_activity_main=0x7f0c007c;
+        public static final int titleslore=0x7f0c007d;
+        public static final int tutorials_main=0x7f0c007e;
+        public static final int video_main=0x7f0c007f;
     }
     public static final class style {
         public static final int AppTheme=0x7f0d0000;
@@ -6993,7 +6992,7 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_buttonGravity com.stryksta.swtorcentral:buttonGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription com.stryksta.swtorcentral:collapseContentDescription}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_collapseIcon com.stryksta.swtorcentral:collapseIcon}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_contentInsetEnd com.stryksta.swtorcentral:contentInsetEnd}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_contentInsetLeft com.stryksta.swtorcentral:contentInsetLeft}</code></td><td></td></tr>
@@ -7016,7 +7015,7 @@ containing a value of this type.
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
-           @see #Toolbar_buttonGravity
+           @see #Toolbar_collapseContentDescription
            @see #Toolbar_collapseIcon
            @see #Toolbar_contentInsetEnd
            @see #Toolbar_contentInsetLeft
@@ -7058,22 +7057,19 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#buttonGravity}
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
-          <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>top</code></td><td>0x30</td><td></td></tr>
-<tr><td><code>bottom</code></td><td>0x50</td><td></td></tr>
-</table>
-          @attr name com.stryksta.swtorcentral:buttonGravity
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:collapseContentDescription
         */
-        public static final int Toolbar_buttonGravity = 18;
+        public static final int Toolbar_collapseContentDescription = 19;
         /**
           <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
@@ -7083,7 +7079,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.stryksta.swtorcentral:collapseIcon
         */
-        public static final int Toolbar_collapseIcon = 19;
+        public static final int Toolbar_collapseIcon = 18;
         /**
           <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.

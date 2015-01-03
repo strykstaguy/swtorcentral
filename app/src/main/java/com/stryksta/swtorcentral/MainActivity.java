@@ -96,7 +96,8 @@ public class MainActivity extends ActionBarActivity {
 	    
 	 	// set a custom shadow that overlays the main content when the drawer opens
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-        
+        mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.swtor_blue));
+
         DrawerAdapter mAdapter = new DrawerAdapter(this);// Add First Header
         
         //mAdapter.addHeader(R.string.header1);
