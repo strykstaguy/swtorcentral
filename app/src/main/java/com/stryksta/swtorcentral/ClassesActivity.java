@@ -22,6 +22,7 @@ public class ClassesActivity extends Fragment{
 	ClassesAdapter adapter;
 	public static final String COLUMN_ID = "_id";
 	public static final String COLUMN_NAME = "name";
+    public static final String APC_NAME = "apc";
 	public static final String COLUMN_RESOURCE = "resource";
 	
 	private ClassesDatabase db;
@@ -68,6 +69,7 @@ public class ClassesActivity extends Fragment{
 				Integer id = classesDB.getInt(classesDB.getColumnIndex(COLUMN_ID));
             	String name = classesDB.getString(classesDB.getColumnIndex(COLUMN_NAME));
             	String resource = classesDB.getString(classesDB.getColumnIndex(COLUMN_RESOURCE));
+                String apc = classesDB.getString(classesDB.getColumnIndex(APC_NAME));
             	int classicon = getResources().getIdentifier(classesDB.getString(classesDB.getColumnIndex("class_icon")), "drawable", getActivity().getPackageName());
                 
             	classesArray.add(new ClassItem(name));
@@ -77,15 +79,14 @@ public class ClassesActivity extends Fragment{
 
             	advancedClassesDB.moveToPosition(0);
             		advClassID1 = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex(COLUMN_ID));
-            		//Log.d("SWTORCentral", "Advanced ID: " + advClassID1);
                 	advClasstxt1 = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
                 	advClassimg1 = getResources().getIdentifier(advancedClassesDB.getString(advancedClassesDB.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
-                advancedClassesDB.moveToPosition(1);
+                    advancedClassesDB.moveToPosition(1);
                 	advClassID2 = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex(COLUMN_ID));
                 	advClasstxt2 = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
                 	advClassimg2 = getResources().getIdentifier(advancedClassesDB.getString(advancedClassesDB.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
                 	
-                	classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassimg1, advClasstxt1, advClassID2, advClassimg2, advClasstxt2));
+                	classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassimg1, advClasstxt1, advClassID2, advClassimg2, advClasstxt2, apc));
                 	advancedClassesDB.close();
 			} while (classesDB.moveToNext());
 		}

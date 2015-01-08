@@ -19,6 +19,7 @@
             android:id="@+id/imageview_fanart"
             android:layout_width="match_parent"
             android:layout_height="150dp"
+             android:src="@color/gray_23"
             android:scaleType="centerCrop" />
 
          <include layout="@layout/toolbar"/>

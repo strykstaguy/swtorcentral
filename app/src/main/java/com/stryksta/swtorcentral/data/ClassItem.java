@@ -10,15 +10,16 @@ public class ClassItem {
     private String txtAdvancedClass2;
     private String txtClass;
     private String txtResource;
+    private String apc;
     private int idClass;
     private boolean isGroupHeader = false;
     
     public ClassItem(String title) {
-		this(title, 0, "", 0, 0, "", 0, 0, "");
+		this(title, 0, "", 0, 0, "", 0, 0, "", "");
 		isGroupHeader = true;
 	}
     
-    public ClassItem(String txtClass, int idClass, String txtResource, int idAdvancedClass1, int imgAdvancedClass1, String txtAdvancedClass1, int idAdvancedClass2, int imgAdvancedClass2, String txtAdvancedClass2) {
+    public ClassItem(String txtClass, int idClass, String txtResource, int idAdvancedClass1, int imgAdvancedClass1, String txtAdvancedClass1, int idAdvancedClass2, int imgAdvancedClass2, String txtAdvancedClass2, String apc) {
     	this.txtClass = txtClass;
     	this.idClass = idClass;
     	this.txtResource = txtResource;
@@ -28,6 +29,7 @@ public class ClassItem {
         this.idAdvancedClass2 = idAdvancedClass2;
         this.imgAdvancedClass2 = imgAdvancedClass2;
         this.txtAdvancedClass2 = txtAdvancedClass2;
+        this.apc = apc;
     }
     
     public String gettxtClass() {
@@ -101,7 +103,15 @@ public class ClassItem {
     public void settxtAdvancedClass2(String txtAdvancedClass2) {
     	this.txtAdvancedClass2 = txtAdvancedClass2;
     }
-    
+
+    public String geApc() {
+        return apc;
+    }
+
+    public void setApc(String apc) {
+        this.apc = apc;
+    }
+
     public boolean isGroupHeader() {
 		return isGroupHeader;
 	}

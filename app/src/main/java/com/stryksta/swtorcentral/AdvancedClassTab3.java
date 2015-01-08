@@ -93,22 +93,20 @@ public class AdvancedClassTab3 extends Fragment {
       //Open Database
 		db = new AbilitiesDatabase(getActivity());
 		abilitiesClassItems = db.getClassAbilities(ClassID);
-		abilitiesAdvancedItems = db.getAdvancedClassAbilities(ClassPos);
-		abilityItem = db.getSkills(ClassPos);
+		//abilitiesAdvancedItems = db.getAdvancedClassAbilities(ClassPos);
+		//abilityItem = db.getSkills(ClassPos);
 		
-		skill1AbilityTitle.setText(abilityItem.keySet().toArray()[0].toString());
-        skill2AbilityTitle.setText(abilityItem.keySet().toArray()[1].toString());
-        skill3AbilityTitle.setText(abilityItem.keySet().toArray()[2].toString());
+		//skill1AbilityTitle.setText(abilityItem.keySet().toArray()[0].toString());
+        //skill2AbilityTitle.setText(abilityItem.keySet().toArray()[1].toString());
+        //skill3AbilityTitle.setText(abilityItem.keySet().toArray()[2].toString());
         
-		skillAbilityID1 = Integer.valueOf(abilityItem.values().toArray()[0].toString());
-        skillAbilityID2 = Integer.valueOf(abilityItem.values().toArray()[1].toString());
-        skillAbilityID3 = Integer.valueOf(abilityItem.values().toArray()[2].toString());
-        
-     // Log.d("SWTORCentral", "Second ID: " + abilityItem.values().toArray()[0]);
-        
-		abilitiesSkill1Items = db.getSkillAbilities(skillAbilityID1);
-		abilitiesSkill2Items = db.getSkillAbilities(skillAbilityID2);
-		abilitiesSkill3Items = db.getSkillAbilities(skillAbilityID3);
+		//skillAbilityID1 = Integer.valueOf(abilityItem.values().toArray()[0].toString());
+        //skillAbilityID2 = Integer.valueOf(abilityItem.values().toArray()[1].toString());
+        //skillAbilityID3 = Integer.valueOf(abilityItem.values().toArray()[2].toString());
+
+		//abilitiesSkill1Items = db.getSkillAbilities(skillAbilityID1);
+		//abilitiesSkill2Items = db.getSkillAbilities(skillAbilityID2);
+		//abilitiesSkill3Items = db.getSkillAbilities(skillAbilityID3);
 		/*
 		for (Map.Entry<String,String> entry : map.entrySet()) {
 		    System.out.printf("%s -> %s%n", entry.getKey(), entry.getValue());
@@ -141,7 +139,7 @@ public class AdvancedClassTab3 extends Fragment {
 					intent.putExtras(bundle);
 					getActivity().startActivity(intent);
 			    }});
-		
+		/*
 		advancedAdapter = new AbilityAdapter(getActivity(), abilitiesAdvancedItems);
 		advancedclassabilitylist.setAdapter(advancedAdapter);
 		advancedclassabilitylist.setOnItemClickListener(new OnItemClickListener() {
@@ -219,7 +217,7 @@ public class AdvancedClassTab3 extends Fragment {
 					intent.putExtras(bundle);
 					getActivity().startActivity(intent);
 			    }});
-		
+		*/
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
      		
