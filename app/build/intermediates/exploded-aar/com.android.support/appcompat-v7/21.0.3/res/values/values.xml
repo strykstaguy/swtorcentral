@@ -887,14 +887,11 @@
              view with a theme override will inherit the themed context.
         -->
         <attr name="theme" format="reference" />
-        <attr name="buttonGravity">
 
-            <!-- Push object to the top of its container, not changing its size. -->
-            <flag name="top" value="0x30" />
-            <!-- Push object to the bottom of its container, not changing its size. -->
-            <flag name="bottom" value="0x50" />
-        </attr>
+        <!-- Icon drawable to use for the collapse button. -->
         <attr name="collapseIcon" format="reference" />
+        <!-- Text to set as the content description for the collapse button. -->
+        <attr name="collapseContentDescription" format="string" />
         <!--
              Reference to a theme that should be used to inflate popups
              shown by widgets in the toolbar.
@@ -1015,6 +1012,7 @@
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
 
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>
@@ -1137,8 +1135,6 @@
     <style name="Base.TextAppearance.AppCompat.Subhead.Inverse">
         <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
         <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
-        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
-        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
     </style>
 
     <style name="Base.TextAppearance.AppCompat.Title">
@@ -1149,8 +1145,6 @@
     <style name="Base.TextAppearance.AppCompat.Title.Inverse">
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
         <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
-        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
-        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
     </style>
 
     <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Menu" parent="android:TextAppearance.Small">
@@ -1265,7 +1259,7 @@
         <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
         <item name="android:textColorHintInverse">@color/hint_foreground_material_light</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
-m>        <item name="android:textColorLink">@color/link_text_material_dark</item>
+        <item name="android:textColorLink">@color/link_text_material_dark</item>
 
         <!-- Action Bar styles -->
         <item name="actionBarItemBackground">@drawable/abc_item_background_holo_dark</item>
@@ -1628,8 +1622,6 @@ m>        <item name="android:textColorLink">@color/link_text_material_dark</ite
         <item name="backgroundSplit">@null</item>
         <item name="actionButtonStyle">@style/Widget.AppCompat.ActionButton</item>
         <item name="actionOverflowButtonStyle">@style/Widget.AppCompat.ActionButton.Overflow</item>
-        <item name="progressBarStyle">@style/Widget.AppCompat.ProgressBar.Horizontal</item>
-        <item name="indeterminateProgressStyle">@style/Widget.AppCompat.ProgressBar</item>
         <item name="android:gravity">center_vertical</item>
         <item name="elevation">8dp</item>
         <item name="popupTheme">?attr/actionBarPopupTheme</item>
@@ -1860,8 +1852,8 @@ m>        <item name="android:textColorLink">@color/link_text_material_dark</ite
         <item name="android:minHeight">?attr/actionBarSize</item>
         <item name="titleMargins">4dp</item>
         <item name="maxButtonHeight">56dp</item>
-        <item name="buttonGravity">top</item>
         <item name="collapseIcon">?attr/homeAsUpIndicator</item>
+        <item name="collapseContentDescription">@string/abc_toolbar_collapse_description</item>
         <item name="contentInsetStart">16dp</item>
     </style>
 
@@ -1896,7 +1888,7 @@ m>        <item name="android:textColorLink">@color/link_text_material_dark</ite
         <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
         <item name="android:textColorHintInverse">@color/hint_foreground_material_light</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
-m>        <item name="android:textColorLink">@color/link_text_material_dark</item>
+        <item name="android:textColorLink">@color/link_text_material_dark</item>
 
         <!-- Text styles -->
         <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>
@@ -1938,7 +1930,7 @@ m>        <item name="android:textColorLink">@color/link_text_material_dark</ite
         <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
         <item name="android:textColorHintInverse">@color/hint_foreground_material_light</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
-m>        <item name="android:textColorLink">@color/link_text_material_dark</item>
+        <item name="android:textColorLink">@color/link_text_material_dark</item>
 
         <!-- Text styles -->
         <item name="android:textAppearance">@style/TextAppearance.AppCompat</item>

@@ -29,6 +29,20 @@
         <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
     </style>
 
+    <style name="Base.TextAppearance.AppCompat.Subhead.Inverse">
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+
+    <style name="Base.TextAppearance.AppCompat.Title.Inverse">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+
     <style name="Base.Theme.AppCompat" parent="Base.V11.Theme.AppCompat">
         <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>
         <item name="android:actionModeCopyDrawable">?actionModeCopyDrawable</item>

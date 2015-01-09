@@ -64,25 +64,21 @@ public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
         AbilitiesItem rowItem = results.get(position);
         
         //Hide 0 from ability name
-        if (rowItem.getrank() > 0) {
-        	holder.txtName.setText(rowItem.gettxtName() + " " + String.valueOf(rowItem.getrank()));
-        } else {
-        	holder.txtName.setText(rowItem.gettxtName());
-        }
+        	holder.txtName.setText(rowItem.getablName());
         
         
-        //If level is 0 or less then display as level 1
+        /*If level is 0 or less then display as level 1
         if (rowItem.getlevel() <= 0) {
         	holder.txtLevel.setText("Level 1");
         } else {
         	holder.txtLevel.setText("Level " + String.valueOf(rowItem.getlevel()));
         }
-        
+        */
         //If it is a skill  ability hide level
         if (type.equals("skill")) {
         	holder.txtLevel.setVisibility(View.GONE);
         }
-
+        /*
         if (rowItem.getsummary().equals("Active")) {
         	holder.txtSummary.setVisibility(View.GONE);
         } else {
@@ -134,8 +130,8 @@ public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
         	newFootnote = applyTextStyle(newFootnote, "#", false, true); 
         	holder.txtFootnote.setText(newFootnote);
         }
-        
-        String description = rowItem.getdescription();
+        */
+        String description = rowItem.getablDesc();
         CharSequence newDescription = applyTextStyle(description, "@", true, false);
         newDescription = applyTextStyle(newDescription, "#", false, true);
         holder.txtDescription.setText(newDescription);

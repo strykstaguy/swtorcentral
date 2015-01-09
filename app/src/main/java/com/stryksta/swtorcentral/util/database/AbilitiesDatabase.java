@@ -7,7 +7,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
-import com.stryksta.swtorcentral.data.Abilities2Item;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
 
 public class AbilitiesDatabase extends SQLiteAssetHelper {
@@ -19,12 +18,16 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 
-    public ArrayList<Abilities2Item> getClassAbilities(long id) {
-        ArrayList<Abilities2Item> abilityItem = new ArrayList<Abilities2Item>();
+    public ArrayList<AbilitiesItem> getClassAbilities(String apc) {
+        ArrayList<AbilitiesItem> abilityItem = new ArrayList<AbilitiesItem>();
         SQLiteDatabase db = getReadableDatabase();
 
-        String sqlSelect = "SELECT * FROM ability WHERE class_id = ? AND rank <= 1 order by level asc";
-        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(id)});
+        String sqlSelect = "SELECT abilities._id, abilities.ablClass_ID, abilities.ablAdvanced_Class_ID, abilities.ablID, abilities.ablIsPassive , abilities.ablIconSpec, abilities.ablGlobalCooldownTime, abilities.ablCooldownTime , abilities.ablCastingTime, abilities.ablForceCost, abilities.ablEnergyCost, abilities.ablMinRange, abilities.ablMaxRange, abilities.ablName, abilities.ablDesc, abilities.ablNode, apc.ablLevelAquired\n" +
+                "FROM abilities\n" +
+                "LEFT JOIN apc\n" +
+                "ON abilities.ablNode = apc.Node\n" +
+                "WHERE apc.NodeCat = ?";
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(apc)});
 
         if (c.moveToFirst()) {
             do {
@@ -46,7 +49,7 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
                 String ablDesc = c.getString(c.getColumnIndex("ablDesc"));
                 String ablNode = c.getString(c.getColumnIndex("ablNode"));
 
-                abilityItem.add(new Abilities2Item("", ID, ablClass_ID, ablAdvanced_Class_ID, ablID, ablIsPassive, ablIconSpec, ablGlobalCooldownTime, ablCooldownTime, ablCastingTime, ablForceCost, ablEnergyCost, ablMinRange, ablMaxRange, ablName, ablDesc, ablNode));
+                abilityItem.add(new AbilitiesItem("", ID, ablClass_ID, ablAdvanced_Class_ID, ablID, ablIsPassive, ablIconSpec, ablGlobalCooldownTime, ablCooldownTime, ablCastingTime, ablForceCost, ablEnergyCost, ablMinRange, ablMaxRange, ablName, ablDesc, ablNode));
             } while (c.moveToNext());
         }
 
@@ -85,7 +88,7 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
               	String cooldown = c.getString(c.getColumnIndex("cooldown"));
               	String range = c.getString(c.getColumnIndex("range"));
               	
-              	abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
+              	//abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
               } while (c.moveToNext());
           }
   		
@@ -146,7 +149,7 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
                	String cooldown = c.getString(c.getColumnIndex("cooldown"));
                	String range = c.getString(c.getColumnIndex("range"));
                	
-               	abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
+               	//abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
                } while (c.moveToNext());
            }
    		
@@ -185,7 +188,7 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
                 	String cooldown = c.getString(c.getColumnIndex("cooldown"));
                 	String range = c.getString(c.getColumnIndex("range"));
                 	
-                	abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
+                	//abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
                 } while (c.moveToNext());
             }
     		
@@ -224,7 +227,7 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
              	String cooldown = c.getString(c.getColumnIndex("cooldown"));
              	String range = c.getString(c.getColumnIndex("range"));
              	
-             	abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
+             	//abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
              } while (c.moveToNext());
          }
  		
@@ -263,7 +266,7 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
 	             	String cooldown = c.getString(c.getColumnIndex("cooldown"));
 	             	String range = c.getString(c.getColumnIndex("range"));
 	             	
-	             	abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
+	             	//abilityItem.add(new AbilitiesItem("", abilityID, classID, advancedID, skilltreeID, dependonID, level, credits, txtName, rank, summary, description, footnote, highlight, resource, passive, activation, channeled, cooldown, range));
 	             } while (c.moveToNext());
 	         }
 	 		//c.moveToFirst();

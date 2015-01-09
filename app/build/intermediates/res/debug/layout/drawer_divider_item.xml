@@ -18,4 +18,4 @@
     android:layout_height="@dimen/divider_height"
     android:layout_marginTop="@dimen/divider_margin"
     android:layout_marginBottom="@dimen/divider_margin"
-    android:background="@color/divider" /><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/layout/drawer_divider_item.xml --><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/layout/drawer_divider_item.xml -->
+    android:background="@color/divider" /><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/layout/drawer_divider_item.xml --><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/layout/drawer_divider_item.xml -->

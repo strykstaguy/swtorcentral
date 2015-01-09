@@ -82,6 +82,8 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 		                Bundle bundle = new Bundle();
 		                bundle.putString("class", item.gettxtClass());
 		                bundle.putInt("class_id", item.getIdClass());
+                        bundle.putString("apc", item.geApc());
+
 		                bundle.putString("resource", item.gettxtResource());
 		                bundle.putInt("position", item.getAdvancedClassID1());
 		                bundle.putString("advancedclass", item.gettxtAdvancedClass1());
@@ -104,8 +106,10 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 		                bundle.putInt("class_id", item.getIdClass());
 		                bundle.putString("resource", item.gettxtResource());
 		                bundle.putInt("position", item.getAdvancedClassID2());
+                        bundle.putString("apc", item.geApc());
 		                bundle.putString("advancedclass", item.gettxtAdvancedClass2());
-		                
+
+                        //Log.d("SWTORCentral", String.valueOf(item.getAdvancedClassID2()));
 		                Intent intent = new Intent(context, AdvancedClassActivity.class);
 		                intent.putExtras(bundle);
 		                context.startActivity(intent);

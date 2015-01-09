@@ -23,6 +23,7 @@ import android.widget.AdapterView.OnItemClickListener;
 public class AdvancedClassTab3 extends Fragment {
 	private int ClassPos;
 	private int ClassID;
+    private String apc;
 	private int skillAbilityID1;
 	private int skillAbilityID2;
 	private int skillAbilityID3;
@@ -79,6 +80,7 @@ public class AdvancedClassTab3 extends Fragment {
         	ClassID = bundle.getInt("class_id");
         	ClassResource = bundle.getString("resource");
         	ClassText = bundle.getString("class");
+            apc = bundle.getString("apc");
         	advancedclass = bundle.getString("advancedclass");
         	
         }
@@ -92,7 +94,7 @@ public class AdvancedClassTab3 extends Fragment {
  
       //Open Database
 		db = new AbilitiesDatabase(getActivity());
-		abilitiesClassItems = db.getClassAbilities(ClassID);
+		abilitiesClassItems = db.getClassAbilities(apc);
 		//abilitiesAdvancedItems = db.getAdvancedClassAbilities(ClassPos);
 		//abilityItem = db.getSkills(ClassPos);
 		
@@ -126,6 +128,7 @@ public class AdvancedClassTab3 extends Fragment {
 		classabilitylist.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
+                    /*
 					Bundle bundle = new Bundle();
 					bundle.putString("class", ClassText);
 					bundle.putString("class_resource", ClassResource);
@@ -138,6 +141,7 @@ public class AdvancedClassTab3 extends Fragment {
 					Intent intent = new Intent(getActivity(), AbilityDetailActivity.class);
 					intent.putExtras(bundle);
 					getActivity().startActivity(intent);
+					*/
 			    }});
 		/*
 		advancedAdapter = new AbilityAdapter(getActivity(), abilitiesAdvancedItems);

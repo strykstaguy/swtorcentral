@@ -13,7 +13,7 @@
     <string name="abc_searchview_description_query" msgid="2550479030709304392">"Søgeforespørgsel"</string>
     <string name="abc_searchview_description_search" msgid="8264924765203268293">"Søg"</string>
     <string name="abc_searchview_description_submit" msgid="8928215447528550784">"Indsend forespørgslen"</string>
-    <string name="abc_searchview_description_voice" msgid="893419373245838918">"Stemmesøgning"</string>
+    <string name="abc_searchview_description_voice" msgid="893419373245838918">"Talesøgning"</string>
     <string name="abc_shareactionprovider_share_with" msgid="3421042268587513524">"Del med"</string>
     <string name="abc_shareactionprovider_share_with_application" msgid="7165123711973476752">"Del med %s"</string>
 

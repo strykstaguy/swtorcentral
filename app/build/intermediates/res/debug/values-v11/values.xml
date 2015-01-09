@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v11/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v11/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat.Inverse">
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
@@ -22,6 +22,18 @@
     </style>
     <style name="Base.TextAppearance.AppCompat.Small.Inverse">
         <item name="android:textColor">?android:attr/textColorTertiaryInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Subhead.Inverse">
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+        <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
+        <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Title.Inverse">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
         <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
         <item name="android:textColorHighlight">?android:attr/textColorHighlightInverse</item>
         <item name="android:textColorLink">?android:attr/textColorLinkInverse</item>
@@ -156,7 +168,7 @@
         <item name="android:dropDownSelector">?attr/listChoiceBackgroundIndicator</item>
         <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values-v11/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values-v11/values.xml -->
     <eat-comment/>
     <style name="MD_Dark" parent="android:Theme.Holo.Dialog">
         <item name="md_divider">@color/md_divider_white</item>
@@ -172,7 +184,7 @@
 
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
-    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v11/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-v11/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme.Holo">
         <item name="android:windowNoTitle">true</item>

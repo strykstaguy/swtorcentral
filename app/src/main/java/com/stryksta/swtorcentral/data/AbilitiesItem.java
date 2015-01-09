@@ -1,216 +1,188 @@
 package com.stryksta.swtorcentral.data;
 
 public class AbilitiesItem {
-    public int abilityID;
-    public int classID;
-    public int advancedID;
-    public int skill_tree_id;
-    public int dependonID;
-    public int level;
-    public int credits;
-    public String txtName;
-    public int rank;
-    public String summary;
-    public String description;
-    public String footnote;
-    public String highlight;
-    public int resource;
-    public int passive;
-    public String activation;
-    public String channeled;
-    public String cooldown;
-    public String range;
-    public String txtHeader;
+
+    public int ID;
+    public int ablClass_ID;
+    public int ablAdvanced_Class_ID;
+    public int ablID;
+    public String ablIsPassive;
+    public String ablIconSpec;
+    public int ablGlobalCooldownTime;
+    public int ablCooldownTime;
+    public int ablCastingTime;
+    public int ablForceCost;
+    public int ablEnergyCost;
+    public int ablMinRange;
+    public int ablMaxRange;
+    public String ablName;
+    public String ablDesc;
+    public String ablNode;
+
+    public String ablHeader;
     private boolean isGroupHeader = false;
 
-    public AbilitiesItem(String txtHeader) {
-		this(txtHeader, 0, 0, 0, 0, 0, 0, 0, "", 0, "", "", "", "", 0, 0, "", "", "", "");
+    public AbilitiesItem(String ablHeader) {
+		this(ablHeader,0,0,0,0,"","",0,0,0,0,0,0,0,"","","");
 		isGroupHeader = true;
 	}
-    
-    public AbilitiesItem(String txtHeader, int abilityID, int classID, int advancedID, int skill_tree_id, int dependonID, int level, int credits, String txtName, int rank, String summary, String description, String footnote, String highlight, int resource, int passive, String activation, String channeled, String cooldown, String range) {
-    	this.txtHeader = txtHeader;
-    	this.abilityID = abilityID;
-        this.classID = classID;
-        this.advancedID = advancedID;
-        this.skill_tree_id = skill_tree_id;
-        this.dependonID = dependonID;
-        this.level = level;
-        this.credits = credits;
-        this.txtName = txtName;
-        this.rank = rank;
-        this.summary = summary;
-        this.description = description;
-        this.footnote = footnote;
-        this.highlight = highlight;
-        this.resource = resource;
-        this.passive = passive;
-        this.activation = activation;
-        this.channeled = channeled;
-        this.cooldown = cooldown;
-        this.range = range;
+
+    public AbilitiesItem(String ablHeader, int ID, int ablClass_ID, int ablAdvanced_Class_ID, int ablID, String ablIsPassive, String ablIconSpec, int ablGlobalCooldownTime, int ablCooldownTime, int ablCastingTime, int ablForceCost, int ablEnergyCost, int ablMinRange, int ablMaxRange, String ablName, String ablDesc, String ablNode) {
+    	this.ablHeader = ablHeader;
+        this.ID = ID;
+        this.ablClass_ID = ablClass_ID;
+        this.ablAdvanced_Class_ID = ablAdvanced_Class_ID;
+        this.ablID = ablID;
+        this.ablIsPassive = ablIsPassive;
+        this.ablIconSpec = ablIconSpec;
+        this.ablGlobalCooldownTime = ablGlobalCooldownTime;
+        this.ablCooldownTime = ablCooldownTime;
+        this.ablCastingTime = ablCastingTime;
+        this.ablForceCost = ablForceCost;
+        this.ablEnergyCost = ablEnergyCost;
+        this.ablMinRange = ablMinRange;
+        this.ablMaxRange = ablMaxRange;
+        this.ablName = ablName;
+        this.ablDesc = ablDesc;
+        this.ablNode = ablNode;
     }
     
-    public String gettxtHeader() {
-        return txtHeader;
+    public String getAblHeader() {
+        return ablHeader;
     }
 
-    public void settxtHeader(String txtHeader) {
-        this.txtHeader = txtHeader;
+    public void setAblHeader(String txtHeader) {
+        this.ablHeader = txtHeader;
     }
     
-    public int getabilityID() {
-        return abilityID;
+    public int getID() {
+        return ID;
     }
 
-    public void setabilityID(int abilityID){
-        this.abilityID = abilityID;
-    }
-    
-    public int getSkillTreeID() {
-        return skill_tree_id;
+    public void setID(int ID){
+        this.ID = ID;
     }
 
-    public void setSkillTreeID(int skill_tree_id){
-        this.skill_tree_id = skill_tree_id;
-    }
-    
-    public int getclassID() {
-        return classID;
+    public int getablClassID() {
+        return ablClass_ID;
     }
 
-    public void setclassID(int classID){
-        this.classID = classID;
+    public void setablClassID(int ablClass_ID){
+        this.ablClass_ID = ablClass_ID;
     }
 
-    public int getadvancedID() {
-        return advancedID;
+    public int getablAdvancedClassID() {
+        return ablAdvanced_Class_ID;
     }
 
-    public void setadvancedID(int advancedID){
-        this.advancedID = advancedID;
+    public void setablAdvancedClassID(int ablAdvanced_Class_ID){
+        this.ablAdvanced_Class_ID = ablAdvanced_Class_ID;
     }
 
-    public int getdependonID() {
-        return dependonID;
+    public int getablID() {
+        return ablID;
     }
 
-    public void setdependonID(int dependonID){
-        this.dependonID = dependonID;
+    public void setablID(int ablID){
+        this.ablID = ablID;
     }
 
-    public int getlevel() {
-        return level;
+    public String getablIsPassive() {
+        return ablIsPassive;
     }
 
-    public void setlevel(int level){
-        this.level = level;
+    public void setablIsPassive(String ablIsPassive){
+        this.ablIsPassive = ablIsPassive;
     }
 
-    public int getcredits() {
-        return credits;
+    public String getablIconSpec() {
+        return ablIconSpec;
     }
 
-    public void setcredits(int credits){
-        this.credits = credits;
+    public void setablIconSpece(String ablIconSpec){
+        this.ablIconSpec = ablIconSpec;
     }
 
-    public String gettxtName() {
-        return txtName;
+    public int getablGlobalCooldownTime() {
+        return ablGlobalCooldownTime;
     }
 
-    public void settxtName(String txtName) {
-        this.txtName = txtName;
+    public void setablGlobalCooldownTime(int ablGlobalCooldownTime){
+        this.ablGlobalCooldownTime = ablGlobalCooldownTime;
     }
 
-    public int getrank() {
-        return rank;
+    public int getablCooldownTime() {
+        return ablCooldownTime;
     }
 
-    public void setrank(int rank){
-        this.rank = rank;
+    public void setablCooldownTime(int ablCooldownTime){
+        this.ablGlobalCooldownTime = ablGlobalCooldownTime;
     }
 
-    public String getsummary() {
-        return summary;
+    public int getablCastingTime() {
+        return ablCastingTime;
     }
 
-    public void setsummary(String summary) {
-        this.summary = summary;
+    public void setablCastingTime(int ablCastingTime){
+        this.ablCastingTime = ablCastingTime;
     }
 
-    public String getdescription() {
-        return description;
+    public int getablForceCost() {
+        return ablForceCost;
     }
 
-    public void setdescription(String description) {
-        this.description = description;
+    public void setablForceCost(int ablForceCost){
+        this.ablForceCost = ablForceCost;
     }
 
-    public String getfootnote() {
-        return footnote;
+    public int getablEnergyCost() {
+        return ablEnergyCost;
     }
 
-    public void setfootnote(String footnote) {
-        this.footnote = footnote;
+    public void setablEnergyCost(int ablEnergyCost){
+        this.ablEnergyCost = ablEnergyCost;
     }
 
-    public String gethighlight() {
-        return highlight;
+    public int getablMinRange() {
+        return ablMinRange;
     }
 
-    public void sethighlight(String highlight) {
-        this.highlight = highlight;
+    public void setablMinRange(int ablMinRange){
+        this.ablMinRange = ablMinRange;
     }
 
-    public int getresource() {
-        return resource;
+    public int getablMaxRange() {
+        return ablMaxRange;
     }
 
-    public void setresource(int resource){
-        this.resource = resource;
+    public void setablMaxRange(int ablMaxRange){
+        this.ablMaxRange = ablMaxRange;
     }
 
-    public int getpassive() {
-        return passive;
+    public String getablName() {
+        return ablName;
     }
 
-    public void setpassive(int passive){
-        this.passive = passive;
+    public void setablName(String ablName){
+        this.ablName = ablName;
     }
 
-    public String getactivation() {
-        return activation;
+    public String getablDesc() {
+        return ablDesc;
     }
 
-    public void setactivation(String activation) {
-        this.activation = activation;
+    public void setablDesc(String ablDesc){
+        this.ablName = ablDesc;
     }
 
-    public String getchanneled() {
-        return channeled;
+    public String getablNode() {
+        return ablNode;
     }
 
-    public void setchanneled(String channeled) {
-        this.channeled = channeled;
+    public void setablNode(String ablNode){
+        this.ablNode = ablNode;
     }
 
-    public String getcooldown() {
-        return cooldown;
-    }
-
-    public void setcooldown(String cooldown) {
-        this.cooldown = cooldown;
-    }
-
-    public String getrange() {
-        return range;
-    }
-
-    public void setrange(String range) {
-        this.range = range;
-    }
-    
     public boolean isGroupHeader() {
 		return isGroupHeader;
 	}

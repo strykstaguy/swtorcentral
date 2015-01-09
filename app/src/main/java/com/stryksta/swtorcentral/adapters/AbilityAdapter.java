@@ -40,7 +40,7 @@ public class AbilityAdapter extends ArrayAdapter<AbilitiesItem> {
 				
 				TextView txtHeader = (TextView) rowView.findViewById(R.id.txtAbilityTitle);
 				
-				txtHeader.setText(item.gettxtHeader());
+				txtHeader.setText(item.getAblHeader());
 
 			} else {
 				rowView = inflater.inflate(R.layout.advanced_class_tab3_row, parent, false);
@@ -51,8 +51,8 @@ public class AbilityAdapter extends ArrayAdapter<AbilitiesItem> {
 				TextView txtViewSummary = (TextView) rowView.findViewById(R.id.txtSummary);
 				
 				if (item != null) {
-					txtViewName.setText(item.gettxtName());
-					txtViewSummary.setText(item.getsummary());
+					txtViewName.setText(item.getablName());
+					txtViewSummary.setText(item.getablDesc());
 				}
 				
 				/*abilityLinearLayout.setOnClickListener(new View.OnClickListener() {
