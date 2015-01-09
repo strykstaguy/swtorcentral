@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "20.0.0"
+    buildToolsVersion '21.1.0'
 
     defaultConfig {
         applicationId "com.stryksta.swtorcentral"
@@ -24,12 +24,13 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:21.0.0'
-    compile "com.android.support:appcompat-v7:21.0.0"
+    compile 'com.android.support:appcompat-v7:21.0.+'
     compile 'mobi.parchment:parchment:1.6.9@aar'
     compile 'com.afollestad:material-dialogs:0.4.4'
     compile 'com.squareup.picasso:picasso:2.4.0'
     compile 'com.rengwuxian.materialedittext:library:1.5.0'
     compile 'com.heinrichreimersoftware.materialdrawer:library:1.2'
+    compile 'com.github.ksoichiro:android-observablescrollview:1.4.0'
     compile files('libs/android-sqlite-asset-helper.jar')
     compile files('libs/jsoup-1.7.3.jar')
 }

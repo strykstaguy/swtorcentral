@@ -1,0 +1,15 @@
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\classes\debug
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-cde0fe43c1d155a84c58787d13ed53f1de001e61.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper-b730b8a1e960010d11afbb21a2ef1ccfefdd0e5f.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-9ddeb9c8c876c178f2f963a5cf1d60e457033301.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-53934952c7cedbf40bd56403fe20efb12f565269.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-195d78fca8a9deab02778bf6f8c401080c307704.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-68f0349261a6bd834738d335600c282ffab32cf5.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2905e7f5715eb8a37270f9e81c04a0ee6958ee15.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\library-2.4.0-ba652043c03d0a7aeb0af5df0175316ab9dcba42.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\picasso-2.4.0-dfde26dbe78b9aaa9da5dcc74772ffb16d3a65ba.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-9b9c2ba88f4b797ea465db4282e758cf2a8cf808.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-1ee82da923f01159c7898d8a220c0ec43a1dad23.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\jsoup-1.7.3-c0f243f36831372dcf7758d86e1daa00889663cf.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-cd5666e178265a11e145b4b318511a5424aeb306.jar
+C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-f4d4822db505d690f4aab7a40e65fdb7e483437a.jar

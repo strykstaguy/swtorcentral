@@ -48,7 +48,12 @@
     <dimen name="padding_small">8.0dip</dimen>
     <dimen name="padding_medium">8.0dip</dimen>
     <dimen name="padding_large">16.0dip</dimen>
+    <dimen name="margin_standard">16dp</dimen>
 
     <item name="list_item_grid_view_column_count" format="integer" type="integer">2</item>
 
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="flexible_space_height">72dp</dimen>
+    <dimen name="flexible_space_image_height">240dp</dimen>
 </resources>  

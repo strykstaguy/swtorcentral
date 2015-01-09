@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_parent_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:fitsSystemWindows="true">
 
-    <include layout="@layout/toolbar"/>
+    <com.stryksta.swtorcentral.util.CollapsingTitleLayout
+        android:id="@+id/backdrop_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+        app:expandedTextSize="40dp"
+        app:expandedMargin="16dp">
+
+        <com.stryksta.swtorcentral.util.BackdropImageView
+            android:id="@+id/imageview_fanart"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/tython_bg"
+            android:scaleType="centerCrop"
+            android:background="?attr/colorPrimary" />
+
+        <include layout="@layout/toolbar"/>
+
+    </com.stryksta.swtorcentral.util.CollapsingTitleLayout>
 
     <android.support.v4.view.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -26,4 +45,4 @@
         android:paddingBottom="10dp" />
 
     </android.support.v4.view.ViewPager>
-</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/advanced_class_main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/advanced_class_main.xml -->

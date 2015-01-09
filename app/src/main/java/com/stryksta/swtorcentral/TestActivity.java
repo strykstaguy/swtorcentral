@@ -17,18 +17,37 @@ import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
+import com.github.ksoichiro.android.observablescrollview.ScrollState;
+import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
+import com.nineoldandroids.view.ViewHelper;
+import com.nineoldandroids.view.ViewPropertyAnimator;
 import com.stryksta.swtorcentral.adapters.ExpandableListAdapter;
 import com.stryksta.swtorcentral.util.BackdropImageView;
 
-public class TestActivity extends ActionBarActivity {
+public class TestActivity extends ActionBarActivity implements ObservableScrollViewCallbacks {
 
-    ExpandableListView expandableListView;
-    ExpandableListAdapter expandableListAdapter;
-    List<String> expandableListTitle;
-    HashMap<String, List<String>> expandableListDetail;
+    private static final float MAX_TEXT_SCALE_DELTA = 0.3f;
+    private static final boolean TOOLBAR_IS_STICKY = false;
+
     private Toolbar mToolbar;
+    private View mImageView;
+    private View mOverlayView;
+    private ObservableScrollView mScrollView;
+    private TextView mTitleView;
+    private View mFab;
+    private int mActionBarSize;
+    private int mFlexibleSpaceShowFabOffset;
+    private int mFlexibleSpaceImageHeight;
+    private int mFabMargin;
+    private int mToolbarColor;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,72 +60,37 @@ public class TestActivity extends ActionBarActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        getSupportActionBar().setTitle("Lore");
+        mFlexibleSpaceImageHeight = getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
+        mActionBarSize = getSupportActionBar().getHeight();
+        mToolbarColor = getResources().getColor(R.color.colorPrimary);
 
-        BackdropImageView BackdropImageViewTest = (BackdropImageView) findViewById(R.id.imageview_fanart);
-        BackdropImageViewTest.setBackgroundResource(R.drawable.tython_bg);
-        expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+        if (!TOOLBAR_IS_STICKY) {
+            mToolbar.setBackgroundColor(Color.TRANSPARENT);
+        }
 
-        List<String> locations = new ArrayList<String>();
-        locations.add("Jedi Temple");
-        locations.add("Kalikori Village");
-        locations.add("Ruins of Kaleth");
-        locations.add("The Forge");
-        locations.add("The Chamber of Speech");
-        locations.add("The Gnarls");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
-        locations.add("Tythos Ridge");
+        mImageView = findViewById(R.id.image);
+        mOverlayView = findViewById(R.id.overlay);
+        mScrollView = (ObservableScrollView) findViewById(R.id.scroll);
+        mScrollView.setScrollViewCallbacks(this);
+        mTitleView = (TextView) findViewById(R.id.title);
+        mTitleView.setText(getTitle());
+        setTitle(null);
+        //getSupportActionBar().setTitle("Lore");
 
-        expandableListDetail = new HashMap<String, List<String>>();
-        expandableListDetail.put("Location", locations);
+        ScrollUtils.addOnGlobalLayoutListener(mScrollView, new Runnable() {
+            public void run() {
+                mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
 
-        expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-        expandableListAdapter = new ExpandableListAdapter(this, expandableListTitle, expandableListDetail);
-        expandableListView.setAdapter(expandableListAdapter);
-        expandableListView.expandGroup(0);
-        expandableListView.setOnGroupExpandListener(new OnGroupExpandListener() {
+                // If you'd like to start from scrollY == 0, don't write like this:
+                //mScrollView.scrollTo(0, 0);
+                // The initial scrollY is 0, so it won't invoke onScrollChanged().
+                // To do this, use the following:
+                //onScrollChanged(0, false, false);
 
-            public void onGroupExpand(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
-                        expandableListTitle.get(groupPosition) + " List Expanded.",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        expandableListView.setOnGroupCollapseListener(new OnGroupCollapseListener() {
-
-            public void onGroupCollapse(int groupPosition) {
-                Toast.makeText(getApplicationContext(),
-                        expandableListTitle.get(groupPosition) + " List Collapsed.",
-                        Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        expandableListView.setOnChildClickListener(new OnChildClickListener() {
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                Toast.makeText(
-                        getApplicationContext(),
-                        expandableListTitle.get(groupPosition)
-                                + " -> "
-                                + expandableListDetail.get(
-                                expandableListTitle.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT
-                )
-                        .show();
-
-                return false;
+                // You can also achieve it with the following codes.
+                // This causes scroll change from 1 to 0.
+                //mScrollView.scrollTo(0, 1);
+                //mScrollView.scrollTo(0, 0);
             }
         });
 
@@ -132,5 +116,53 @@ public class TestActivity extends ActionBarActivity {
         } else {
             getFragmentManager().popBackStack();
         }
+    }
+
+    public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+        // Translate overlay and image
+        float flexibleRange = mFlexibleSpaceImageHeight - mActionBarSize;
+        int minOverlayTransitionY = mActionBarSize - mOverlayView.getHeight();
+        ViewHelper.setTranslationY(mOverlayView, ScrollUtils.getFloat(-scrollY, minOverlayTransitionY, 0));
+        ViewHelper.setTranslationY(mImageView, ScrollUtils.getFloat(-scrollY / 2, minOverlayTransitionY, 0));
+
+        // Change alpha of overlay
+        ViewHelper.setAlpha(mOverlayView, ScrollUtils.getFloat((float) scrollY / flexibleRange, 0, 1));
+
+        // Scale title text
+        float scale = 1 + ScrollUtils.getFloat((flexibleRange - scrollY) / flexibleRange, 0, MAX_TEXT_SCALE_DELTA);
+        ViewHelper.setPivotX(mTitleView, 0);
+        ViewHelper.setPivotY(mTitleView, 0);
+        ViewHelper.setScaleX(mTitleView, scale);
+        ViewHelper.setScaleY(mTitleView, scale);
+
+        // Translate title text
+        int maxTitleTranslationY = (int) (mFlexibleSpaceImageHeight - mTitleView.getHeight() * scale);
+        int titleTranslationY = maxTitleTranslationY - scrollY;
+        if (TOOLBAR_IS_STICKY) {
+            titleTranslationY = Math.max(0, titleTranslationY);
+        }
+        ViewHelper.setTranslationY(mTitleView, titleTranslationY);
+
+        if (TOOLBAR_IS_STICKY) {
+            // Change alpha of toolbar background
+            if (-scrollY + mFlexibleSpaceImageHeight <= mActionBarSize) {
+                mToolbar.setBackgroundColor(ScrollUtils.getColorWithAlpha(1, mToolbarColor));
+            } else {
+                mToolbar.setBackgroundColor(ScrollUtils.getColorWithAlpha(0, mToolbarColor));
+            }
+        } else {
+            // Translate Toolbar
+            if (scrollY < mFlexibleSpaceImageHeight) {
+                ViewHelper.setTranslationY(mToolbar, 0);
+            } else {
+                ViewHelper.setTranslationY(mToolbar, -scrollY);
+            }
+        }
+    }
+
+    public void onDownMotionEvent() {
+    }
+
+    public void onUpOrCancelMotionEvent(ScrollState scrollState) {
     }
 }
