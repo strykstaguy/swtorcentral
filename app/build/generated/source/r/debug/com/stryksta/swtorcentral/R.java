@@ -1992,8 +1992,9 @@ containing a value of this type.
         public static final int tex_size_xxsmall=0x7f090089;
         public static final int title=0x7f09008a;
         public static final int title_size=0x7f09008b;
-        public static final int tutorial_image_height=0x7f09008c;
-        public static final int width=0x7f09008d;
+        public static final int toolbar_margin_start=0x7f09008c;
+        public static final int tutorial_image_height=0x7f09008d;
+        public static final int width=0x7f09008e;
     }
     public static final class drawable {
         public static final int ab_background_textured_swtor=0x7f020000;
@@ -2281,8 +2282,8 @@ containing a value of this type.
         public static final int CharacterAddLayout=0x7f0a00a3;
         public static final int IMGserverLight=0x7f0a0112;
         public static final int ServerKeyLayout=0x7f0a0111;
-        public static final int VideoPreviewPlayButton=0x7f0a0131;
-        public static final int VideoView=0x7f0a0132;
+        public static final int VideoPreviewPlayButton=0x7f0a0133;
+        public static final int VideoView=0x7f0a0134;
         public static final int abilitydetails_layout=0x7f0a005d;
         public static final int abilitylayout=0x7f0a0096;
         public static final int abilitylinearlayout=0x7f0a0095;
@@ -2302,12 +2303,13 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a004b;
         public static final int action_mode_bar_stub=0x7f0a004a;
         public static final int action_mode_close_button=0x7f0a003d;
-        public static final int action_settings=0x7f0a0138;
+        public static final int action_settings=0x7f0a013a;
         public static final int activity_chooser_view_content=0x7f0a003e;
         public static final int advancedclassabilitylist=0x7f0a008b;
         public static final int always=0x7f0a002e;
         public static final int backdrop_toolbar=0x7f0a0075;
         public static final int beginning=0x7f0a0025;
+        public static final int body=0x7f0a012c;
         public static final int bottom=0x7f0a0021;
         public static final int buttonDefaultFrame=0x7f0a00ee;
         public static final int buttonDefaultNegative=0x7f0a00f0;
@@ -2333,10 +2335,10 @@ containing a value of this type.
         public static final int characterRace=0x7f0a00aa;
         public static final int character_level=0x7f0a00b1;
         public static final int character_level_msg=0x7f0a00b0;
-        public static final int character_menu_add=0x7f0a0135;
-        public static final int character_menu_delete=0x7f0a0137;
-        public static final int character_menu_edit=0x7f0a0136;
-        public static final int character_menu_save=0x7f0a0134;
+        public static final int character_menu_add=0x7f0a0137;
+        public static final int character_menu_delete=0x7f0a0139;
+        public static final int character_menu_edit=0x7f0a0138;
+        public static final int character_menu_save=0x7f0a0136;
         public static final int checkbox=0x7f0a0046;
         public static final int classabilitylist=0x7f0a0088;
         public static final int collapseActionView=0x7f0a002f;
@@ -2377,6 +2379,7 @@ containing a value of this type.
         public static final int feed_detail_body=0x7f0a0129;
         public static final int feed_detail_date=0x7f0a0128;
         public static final int feed_detail_title=0x7f0a0127;
+        public static final int flexible_space=0x7f0a012d;
         public static final int headerText=0x7f0a00e0;
         public static final int headerbar=0x7f0a006f;
         public static final int highlight=0x7f0a002d;
@@ -2400,7 +2403,7 @@ containing a value of this type.
         public static final int imgThumbnail=0x7f0a0110;
         public static final int layoutEmpire=0x7f0a00dd;
         public static final int layoutRepublic=0x7f0a00da;
-        public static final int layoutRow=0x7f0a012d;
+        public static final int layoutRow=0x7f0a012f;
         public static final int left=0x7f0a0022;
         public static final int line=0x7f0a0039;
         public static final int listBeastLore=0x7f0a0103;
@@ -2443,7 +2446,6 @@ containing a value of this type.
         public static final int normal=0x7f0a0018;
         public static final int ns_menu_row=0x7f0a00ce;
         public static final int onScreen=0x7f0a002b;
-        public static final int overlay=0x7f0a012b;
         public static final int pager=0x7f0a0077;
         public static final int pager_title_strip=0x7f0a0078;
         public static final int planet_pager=0x7f0a00f7;
@@ -2457,7 +2459,7 @@ containing a value of this type.
         public static final int reader_list=0x7f0a010f;
         public static final int rectangle=0x7f0a0034;
         public static final int right=0x7f0a0023;
-        public static final int scroll=0x7f0a012c;
+        public static final int scroll=0x7f0a012b;
         public static final int search_badge=0x7f0a0052;
         public static final int search_bar=0x7f0a0051;
         public static final int search_button=0x7f0a0053;
@@ -2475,7 +2477,7 @@ containing a value of this type.
         public static final int serverStatus=0x7f0a0124;
         public static final int serverTitle=0x7f0a0123;
         public static final int serverVeryHeavy=0x7f0a0118;
-        public static final int server_help=0x7f0a0139;
+        public static final int server_help=0x7f0a013b;
         public static final int shortcut=0x7f0a0047;
         public static final int showCustom=0x7f0a001d;
         public static final int showHome=0x7f0a001e;
@@ -2496,10 +2498,11 @@ containing a value of this type.
         public static final int titleCustomView=0x7f0a00ea;
         public static final int titleFrame=0x7f0a00e2;
         public static final int titleFrameCustomView=0x7f0a00e8;
+        public static final int titletest=0x7f0a012e;
         public static final int toolbar=0x7f0a0125;
         public static final int top=0x7f0a0024;
-        public static final int transparentBackground=0x7f0a012f;
-        public static final int tutorial_list=0x7f0a0130;
+        public static final int transparentBackground=0x7f0a0131;
+        public static final int tutorial_list=0x7f0a0132;
         public static final int txtAbilityTitle=0x7f0a00a1;
         public static final int txtActivation=0x7f0a009b;
         public static final int txtAdvDesc=0x7f0a0084;
@@ -2553,7 +2556,7 @@ containing a value of this type.
         public static final int txtRewards=0x7f0a0063;
         public static final int txtRole=0x7f0a007b;
         public static final int txtRomance=0x7f0a007c;
-        public static final int txtSep=0x7f0a012e;
+        public static final int txtSep=0x7f0a0130;
         public static final int txtServerEU=0x7f0a011f;
         public static final int txtServerEUSub=0x7f0a0120;
         public static final int txtServerUS=0x7f0a011c;
@@ -2586,7 +2589,7 @@ containing a value of this type.
         public static final int user_view=0x7f0a0072;
         public static final int uslist=0x7f0a011e;
         public static final int vertical=0x7f0a0029;
-        public static final int video_surface_view=0x7f0a0133;
+        public static final int video_surface_view=0x7f0a0135;
         public static final int videoframe=0x7f0a006a;
         public static final int withText=0x7f0a0032;
         public static final int wrap_content=0x7f0a0038;
