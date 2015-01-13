@@ -21,16 +21,16 @@ public final class R {
 		public static final int snapToPosition = 0x7f010044;
 	}
 	public static final class id {
-		public static final int bottom = 0x7f0a0021;
-		public static final int center = 0x7f0a002a;
-		public static final int end = 0x7f0a0026;
-		public static final int horizontal = 0x7f0a0028;
-		public static final int left = 0x7f0a0022;
-		public static final int onScreen = 0x7f0a002b;
-		public static final int right = 0x7f0a0023;
-		public static final int start = 0x7f0a002c;
-		public static final int top = 0x7f0a0024;
-		public static final int vertical = 0x7f0a0029;
+		public static final int bottom = 0x7f0a0026;
+		public static final int center = 0x7f0a002f;
+		public static final int end = 0x7f0a002b;
+		public static final int horizontal = 0x7f0a002d;
+		public static final int left = 0x7f0a0027;
+		public static final int onScreen = 0x7f0a0030;
+		public static final int right = 0x7f0a0028;
+		public static final int start = 0x7f0a0031;
+		public static final int top = 0x7f0a0029;
+		public static final int vertical = 0x7f0a002e;
 	}
 	public static final class styleable {
 		public static final int[] GridPatternView = { 0x7f01003a };

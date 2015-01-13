@@ -108,16 +108,13 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/values/values.xml -->
-    <eat-comment/>
-    <color name="divider">#1f000000</color>
-    <color name="drawer_background">#f5f5f5</color>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="fullcolor">#C50000</color>
     <color name="gray">#EEEEEE</color>
     <color name="gray_23">#3b3b3b</color>
     <color name="gray_33">#545454</color>
+    <color name="gray_34">#757575</color>
     <color name="gray_35">#232323</color>
     <color name="gray_46">#2e2e2e</color>
     <color name="gray_86">#DCDCDC</color>
@@ -143,11 +140,29 @@
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="material_transparent">#00000000</color>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.3.2/res/values/values.xml -->
+    <eat-comment/>
+    <color name="md_divider">#1f000000</color>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values/values.xml -->
     <eat-comment/>
     <color name="md_divider_black">#10000000</color>
     <color name="md_divider_white">#10FFFFFF</color>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.3.2/res/values/values.xml -->
+    <eat-comment/>
+    <color name="md_drawer_background">#f5f5f5</color>
+    <color name="md_header">@color/md_secondary</color>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values/values.xml -->
+    <eat-comment/>
     <color name="md_material_blue_500">#5677fc</color>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.3.2/res/values/values.xml -->
+    <eat-comment/>
+    <color name="md_primary">#000</color>
+    <color name="md_scrim_end">#8a000000</color>
+    <color name="md_scrim_start">#0000</color>
+    <color name="md_secondary">#8a000000</color>
+    <color name="md_selected">#14000000</color>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values/values.xml -->
+    <eat-comment/>
     <color name="md_title_dark">#FFFFFF</color>
     <color name="md_title_light">#000000</color>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
@@ -168,13 +183,6 @@
     <eat-comment/>
     <color name="ripple_material_dark">#40ffffff</color>
     <color name="ripple_material_light">#40000000</color>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/values/values.xml -->
-    <eat-comment/>
-    <color name="scrim">#43000000</color>
-    <color name="scrim_end">#8a000000</color>
-    <color name="scrim_start">#0000</color>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
-    <eat-comment/>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
@@ -194,6 +202,8 @@
     <color name="swtor_blue_light">#a5d2f1</color>
     <color name="swtor_green">#99cc00</color>
     <color name="swtor_orange">#FFCB00</color>
+    <color name="swtor_orange2">#FF9800</color>
+    <color name="swtor_red">#F44336</color>
     <color name="text">#333333</color>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment/>
@@ -285,13 +295,6 @@
     <dimen name="advclass_img_height">300dp</dimen>
     <dimen name="advclass_img_width">160dp</dimen>
     <dimen name="advclasspadding">10dp</dimen>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="avatar_size">40dp</dimen>
-    <dimen name="baseline_content">72dp</dimen>
-    <dimen name="baseline_end">16dp</dimen>
-    <dimen name="baseline_start">16dp</dimen>
-    <dimen name="big_avatar_size">64dp</dimen>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.rengwuxian.materialedittext/library/1.5.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="bottom_ellipsis_height">4dp</dimen>
@@ -322,20 +325,9 @@
     <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="divider_height">1dp</dimen>
-    <dimen name="divider_margin">8dp</dimen>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment/>
     <dimen name="divider_size">1dp</dimen>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="drawer_list_margin_vertical">8dp</dimen>
-    <dimen name="drawer_margin_end">56dp</dimen>
-    <dimen name="drawer_max_width">400dp</dimen>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
-    <eat-comment/>
     <dimen name="edittext_border_size">3dp</dimen>
     <dimen name="flexible_space_height">72dp</dimen>
     <dimen name="flexible_space_image_height">240dp</dimen>
@@ -345,30 +337,12 @@
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment/>
     <dimen name="height">50dp</dimen>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="icon_size">24dp</dimen>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
-    <eat-comment/>
     <dimen name="image_height">160dp</dimen>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.rengwuxian.materialedittext/library/1.5.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="inner_components_spacing">8dp</dimen>
     <dimen name="inner_padding_left">0dp</dimen>
     <dimen name="inner_padding_right">0dp</dimen>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/values/values.xml -->
-    <eat-comment/>
-    <dimen name="list_item_height_icon_text">48dp</dimen>
-    <dimen name="list_item_height_icon_text_three_line">88dp</dimen>
-    <dimen name="list_item_height_icon_text_two_line">72dp</dimen>
-    <dimen name="list_item_height_image_text">56dp</dimen>
-    <dimen name="list_item_height_image_text_three_line">88dp</dimen>
-    <dimen name="list_item_height_image_text_two_line">72dp</dimen>
-    <dimen name="list_item_height_text">48dp</dimen>
-    <dimen name="list_item_height_text_three_line">88dp</dimen>
-    <dimen name="list_item_height_text_two_line">72dp</dimen>
-    <dimen name="list_item_margin">16dp</dimen>
-    <dimen name="list_item_text_secondary_margin">0dp</dimen>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment/>
     <dimen name="list_padding">10dp</dimen>
@@ -377,6 +351,15 @@
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values/values.xml -->
     <eat-comment/>
     <dimen name="md_action_corner_radius">2dp</dimen>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.3.2/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="md_avatar_size">40dp</dimen>
+    <dimen name="md_baseline_content">72dp</dimen>
+    <dimen name="md_baseline_end">16dp</dimen>
+    <dimen name="md_baseline_start">16dp</dimen>
+    <dimen name="md_big_avatar_size">64dp</dimen>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="md_button_height">48dp</dimen>
     <dimen name="md_button_inset_horizontal">4dp</dimen>
     <dimen name="md_button_inset_vertical">6dp</dimen>
@@ -389,7 +372,24 @@
     <dimen name="md_button_textsize">14sp</dimen>
     <dimen name="md_content_textsize">18sp</dimen>
     <dimen name="md_dialog_frame_margin">24dp</dimen>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.3.2/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="md_divider_height">1dp</dimen>
+    <dimen name="md_divider_margin">8dp</dimen>
+    <dimen name="md_drawer_list_margin_vertical">8dp</dimen>
+    <dimen name="md_drawer_max_width">400dp</dimen>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="md_icon_margin">16dp</dimen>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.3.2/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="md_icon_size">24dp</dimen>
+    <dimen name="md_list_item_height">48dp</dimen>
+    <dimen name="md_list_item_height_two_line">72dp</dimen>
+    <dimen name="md_list_item_margin">16dp</dimen>
+    <dimen name="md_list_item_text_secondary_margin">0dp</dimen>
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.4.4/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="md_listitem_control_margin">16dp</dimen>
     <dimen name="md_listitem_height">48dp</dimen>
     <dimen name="md_listitem_margin_left">24dp</dimen>
@@ -433,12 +433,16 @@
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
     <item name="home" type="id"/>
-    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.3.2/res/values/values.xml -->
     <eat-comment/>
     <item name="mdAvatarProfile" type="id"/>
     <item name="mdBackgroundProfile" type="id"/>
     <item name="mdDescriptionProfile" type="id"/>
     <item name="mdDivider" type="id"/>
+    <item name="mdDrawer" type="id"/>
+    <item name="mdHeaderRoot" type="id"/>
+    <item name="mdHeaderTitle" type="id"/>
+    <item name="mdHeaderTitleRoot" type="id"/>
     <item name="mdImage" type="id"/>
     <item name="mdLayout" type="id"/>
     <item name="mdLayoutProfile" type="id"/>
@@ -448,6 +452,7 @@
     <item name="mdNameProfile" type="id"/>
     <item name="mdRoot" type="id"/>
     <item name="mdTextPrimary" type="id"/>
+    <item name="mdTextRoot" type="id"/>
     <item name="mdTextSecondary" type="id"/>
     <!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
@@ -586,6 +591,8 @@
     <string name="tab1">US Servers</string>
     <string name="tab2">European Servers</string>
     <string name="test_main">Test</string>
+    <string name="test_profile_desc">This is my test character</string>
+    <string name="test_profile_name">Benner</string>
     <string name="testcodex">Codex: Galactic History 47: Naddist Rebels</string>
     <string name="testcoord">X: 1107, Y: 80</string>
     <string name="testreward">Aim +4</string>

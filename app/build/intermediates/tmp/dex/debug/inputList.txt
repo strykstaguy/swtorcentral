@@ -3,7 +3,7 @@ C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\suppo
 C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper-94bfd0724f84c6b3db8eee951ddc73175b439cc8.jar
 C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-a2fddadaee66054180d7db193d4825757c8d8a0a.jar
 C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2d0f3066276ac2e42490725e88c6b9635f508359.jar
-C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-0335dbff1c91e5ef2c17078378d08ce3a4f6dc78.jar
+C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-94e2f1650494eac508bf2faa399e7357b0b8816e.jar
 C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-8680a9a73433f0cc987692be1734a871f3d6a1f4.jar
 C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-8ad6f6f8645930b4a46bf868ac7dd88f7624f8f5.jar
 C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\library-2.4.0-f6d0788d7f7e256b83cab7c5ff09027280631448.jar

@@ -20,18 +20,18 @@ public final class R {
 		public static final int singleLineEllipsis = 0x7f01004e;
 	}
 	public static final class dimen {
-		public static final int bottom_ellipsis_height = 0x7f09002f;
-		public static final int default_padding_bottom = 0x7f090033;
-		public static final int default_padding_top = 0x7f090034;
-		public static final int floating_label_text_size = 0x7f09004a;
-		public static final int inner_components_spacing = 0x7f09004e;
-		public static final int inner_padding_left = 0x7f09004f;
-		public static final int inner_padding_right = 0x7f090050;
+		public static final int bottom_ellipsis_height = 0x7f09002a;
+		public static final int default_padding_bottom = 0x7f09002e;
+		public static final int default_padding_top = 0x7f09002f;
+		public static final int floating_label_text_size = 0x7f090040;
+		public static final int inner_components_spacing = 0x7f090043;
+		public static final int inner_padding_left = 0x7f090044;
+		public static final int inner_padding_right = 0x7f090045;
 	}
 	public static final class id {
-		public static final int highlight = 0x7f0a002d;
-		public static final int none = 0x7f0a001c;
-		public static final int normal = 0x7f0a0018;
+		public static final int highlight = 0x7f0a0032;
+		public static final int none = 0x7f0a0021;
+		public static final int normal = 0x7f0a001d;
 	}
 	public static final class styleable {
 		public static final int[] MaterialEditText = { 0x7f010049, 0x7f01004a, 0x7f01004b, 0x7f01004c, 0x7f01004d, 0x7f01004e, 0x7f01004f, 0x7f010050, 0x7f010051, 0x7f010052 };

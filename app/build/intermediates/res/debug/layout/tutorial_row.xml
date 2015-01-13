@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.stryksta.swtorcentral.util.GridViewItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-   	android:background="@drawable/card_background"
    	android:orientation="vertical" >
 	
     <FrameLayout
         android:id="@+id/videoframe"
     	android:layout_width="match_parent"
     	android:layout_height="@dimen/image_height"
-    	android:layout_margin="3dp"
     	android:layout_gravity="center_horizontal|center_vertical" >
 
 	<ImageView 
@@ -38,6 +36,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/videoframe"
+        android:background="@color/swtor_blue"
         android:orientation="vertical" >
 		
         <TextView
@@ -48,8 +47,10 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            android:textColor="@color/text"
+            android:textColor="@color/white"
             android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:textSize="16dp" />
         
         <TextView
@@ -61,8 +62,10 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_weight="0.46"
             android:gravity="center"
-            android:textColor="@color/text"
+            android:textColor="@color/white"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:textSize="14dp" />
     </LinearLayout>
 
-</com.stryksta.swtorcentral.util.GridViewItemLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/tutorial_row.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/tutorial_row.xml -->

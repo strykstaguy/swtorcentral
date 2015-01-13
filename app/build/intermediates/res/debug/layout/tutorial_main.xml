@@ -3,11 +3,11 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
-    android:background="@color/background">
+    android:background="@color/white">
 
     <include layout="@layout/toolbar"/>
 
-    <com.stryksta.swtorcentral.util.AutoMeasureGridView
+    <GridView
     	android:id="@+id/tutorial_list"
     	android:numColumns="1"
     	android:gravity="center"
@@ -16,13 +16,13 @@
     	android:scrollbarStyle="outsideInset"
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-    	android:background="@color/background"
+    	android:background="@color/white"
     	android:verticalSpacing="5dp"
     	android:paddingTop="10dp"
     	android:paddingLeft="10dp"
     	android:paddingBottom="10dp"
     	android:horizontalSpacing="5dp"
     	android:clipToPadding="false" >
-	</com.stryksta.swtorcentral.util.AutoMeasureGridView>
+	</GridView>
 	
 </LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/tutorial_main.xml -->

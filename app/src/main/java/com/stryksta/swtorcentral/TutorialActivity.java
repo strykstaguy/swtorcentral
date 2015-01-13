@@ -15,7 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
- 
+import android.widget.GridView;
+
 public class TutorialActivity extends ActionBarActivity {
 	private TutorialDatabase db;
 	private ArrayList<TutorialItem> datacrons;
@@ -38,9 +39,9 @@ public class TutorialActivity extends ActionBarActivity {
         db = new TutorialDatabase(TutorialActivity.this);
 		datacrons = db.getTutorials();
 		db.close();
-		
 
-		AutoMeasureGridView tutorialList = (AutoMeasureGridView) findViewById(R.id.tutorial_list);
+
+        GridView tutorialList = (GridView) findViewById(R.id.tutorial_list);
         tutorialAdapter = new TutorialAdapter(TutorialActivity.this, datacrons);
         tutorialList.setAdapter(tutorialAdapter);
 		

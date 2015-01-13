@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import com.stryksta.swtorcentral.adapters.RssAdapter;
@@ -27,7 +28,7 @@ public class ReaderActivity extends Fragment {
 	// A reference to the local object
 	private RssAdapter adapter;
 	private RssDatabaseHandler db;
-	AutoMeasureGridView gridView;
+	GridView gridView;
 	View vw_layout;
 	ArrayList<RssItem> rssItems;
 	
@@ -108,7 +109,7 @@ public class ReaderActivity extends Fragment {
 					//End Add to Database
 					
 					// Get a ListView from main view
-					gridView = (AutoMeasureGridView) vw_layout.findViewById(R.id.reader_list);
+					gridView = (GridView) vw_layout.findViewById(R.id.reader_list);
 					adapter = new RssAdapter(getActivity(), android.R.layout.simple_list_item_1, rssItems);
 					gridView.setAdapter(adapter);
 					
