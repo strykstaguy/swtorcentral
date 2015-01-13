@@ -41,9 +41,7 @@
 
                     <EditText
                         android:id="@+id/characterName"
-                        android:background="@drawable/card"
                         android:layout_width="fill_parent"
-                        android:padding="@dimen/dim_10"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="@string/character_name_hint"
@@ -68,11 +66,9 @@
                     <EditText
                         android:id="@+id/characterLevel"
                         android:layout_width="match_parent"
-                        android:background="@drawable/card"
                         android:layout_height="wrap_content"
                         android:hint="@string/character_level_hint"
                         android:singleLine="true"
-                        android:padding="@dimen/dim_10"
                         android:cursorVisible="false"
                         android:inputType="number"
                         android:focusable="false" />
@@ -97,12 +93,10 @@
 
                 <EditText
                     android:id="@+id/characterLegacy"
-                    android:background="@drawable/card"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
                     android:gravity="center"
-                    android:padding="@dimen/dim_10"
                     android:inputType="textNoSuggestions"
                     android:hint="@string/character_legacy_hint" />
             </com.stryksta.swtorcentral.util.FloatLabelLayout>
@@ -125,8 +119,6 @@
                 android:id="@+id/characterClass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:padding="@dimen/dim_10"
                 android:cursorVisible="false"
                 android:inputType="textNoSuggestions"
                 android:focusable="false"
@@ -149,11 +141,9 @@
                 <EditText
                     android:id="@+id/characterAdvancedClass"
                     android:layout_width="match_parent"
-                    android:background="@drawable/card"
                     android:layout_height="wrap_content"
                     android:hint="@string/character_advancedclass_hint"
                     android:singleLine="true"
-                    android:padding="@dimen/dim_10"
                     android:cursorVisible="false"
                     android:inputType="textNoSuggestions"
                     android:focusable="false" />
@@ -177,8 +167,6 @@
                     android:id="@+id/characterGender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/card"
-                    android:padding="@dimen/dim_10"
                     android:cursorVisible="false"
                     android:inputType="textNoSuggestions"
                     android:focusable="false"
@@ -202,8 +190,6 @@
                 android:id="@+id/characterRace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:padding="@dimen/dim_10"
                 android:cursorVisible="false"
                 android:inputType="textNoSuggestions"
                 android:focusable="false"
@@ -228,8 +214,6 @@
                     android:id="@+id/characterAlignment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/card"
-                    android:padding="@dimen/dim_10"
                     android:cursorVisible="false"
                     android:inputType="textNoSuggestions"
                     android:focusable="false"
@@ -253,8 +237,6 @@
                     android:id="@+id/characterCrewSkill1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/card"
-                    android:padding="@dimen/dim_10"
                     android:cursorVisible="false"
                     android:inputType="textNoSuggestions"
                     android:focusable="false"
@@ -278,8 +260,6 @@
                     android:id="@+id/characterCrewSkill2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/card"
-                    android:padding="@dimen/dim_10"
                     android:cursorVisible="false"
                     android:inputType="textNoSuggestions"
                     android:focusable="false"
@@ -303,8 +283,6 @@
                     android:id="@+id/characterCrewSkill3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/card"
-                    android:padding="@dimen/dim_10"
                     android:cursorVisible="false"
                     android:inputType="textNoSuggestions"
                     android:focusable="false"
@@ -322,8 +300,6 @@
                 android:id="@+id/characterDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/card"
-                android:padding="@dimen/dim_10"
                 android:inputType="textMultiLine"
                 android:hint="@string/character_description_hint" />
         </com.stryksta.swtorcentral.util.FloatLabelLayout>
@@ -332,4 +308,4 @@
     </LinearLayout>
  
 </ScrollView>
-</LinearLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/character_add_main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/character_add_main.xml -->

@@ -2,102 +2,102 @@
 <items version="2" >
 
     <item
-        jar="C:\sdk1\android-sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-daa43f5e42b39014cddf46be24d71ca85663be9a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\picasso-2.4.0-408e8f4cf73013ef8513a5e7260e809753f1e5b0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\1.5.0\classes.jar"
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\1.5.0\classes.jar"
         jumboMode="false"
         revision="21.1.0"
         sha1="7d6bd3ea4d3dce622b6be6c953067af64e0a2835">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-a2fddadaee66054180d7db193d4825757c8d8a0a.jar" />
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-9ddeb9c8c876c178f2f963a5cf1d60e457033301.jar" />
     </item>
     <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\libs\android-sqlite-asset-helper.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="20f039a3336c18f93cfddfa1a49ce91a55361c40">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper-94bfd0724f84c6b3db8eee951ddc73175b439cc8.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.heinrichreimersoftware.materialdrawer\library\1.3.2\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="78a63d4dae8de03d097c84585e3d2b0bd48ae071">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-94e2f1650494eac508bf2faa399e7357b0b8816e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="f1970eaa78ad078594934eebe7b5de96bfad8d91">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-8ad6f6f8645930b4a46bf868ac7dd88f7624f8f5.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\libs\jsoup-1.7.3.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\jsoup-1.7.3-ea9bca014096067705d36e987d4937f193a6d228.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-41c7ba76f1f6959bf05e5b36db878d6d06ccec70.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-7f03a29be8c024cbdddaebd4bd27f2107f8d3361.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\library-2.4.0-f6d0788d7f7e256b83cab7c5ff09027280631448.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.4.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="76aa2cf605d20c66c30e34c44add6dc6314686fb">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2d0f3066276ac2e42490725e88c6b9635f508359.jar" />
-    </item>
-    <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.0"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-adf5310e9ba641de1c5b93b7d14f323869146c47.jar" />
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-cd5666e178265a11e145b4b318511a5424aeb306.jar" />
     </item>
     <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.0"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-c96a7e07062461fd113959b66e648c998d4fd14e.jar" />
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-1ee82da923f01159c7898d8a220c0ec43a1dad23.jar" />
     </item>
     <item
-        jar="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.4.4\classes.jar"
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\android-sqlite-asset-helper.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="20f039a3336c18f93cfddfa1a49ce91a55361c40">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper-b730b8a1e960010d11afbb21a2ef1ccfefdd0e5f.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\library-2.4.0-ba652043c03d0a7aeb0af5df0175316ab9dcba42.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.4.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="76aa2cf605d20c66c30e34c44add6dc6314686fb">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-53934952c7cedbf40bd56403fe20efb12f565269.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.4.4\classes.jar"
         jumboMode="false"
         revision="21.1.0"
         sha1="1de59758a000321f80cf405fe5becb1d3f27b78d">
-        <dex dex="C:\Users\Josh\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-8680a9a73433f0cc987692be1734a871f3d6a1f4.jar" />
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-68f0349261a6bd834738d335600c282ffab32cf5.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="f1970eaa78ad078594934eebe7b5de96bfad8d91">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2905e7f5715eb8a37270f9e81c04a0ee6958ee15.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-9b9c2ba88f4b797ea465db4282e758cf2a8cf808.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-f4d4822db505d690f4aab7a40e65fdb7e483437a.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\picasso-2.4.0-dfde26dbe78b9aaa9da5dcc74772ffb16d3a65ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.heinrichreimersoftware.materialdrawer\library\1.3.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="78a63d4dae8de03d097c84585e3d2b0bd48ae071">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-d60835704d1693c054bb836c477f723c8224a993.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\jsoup-1.7.3.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\jsoup-1.7.3-c0f243f36831372dcf7758d86e1daa00889663cf.jar" />
+    </item>
+    <item
+        jar="C:\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-cde0fe43c1d155a84c58787d13ed53f1de001e61.jar" />
     </item>
 
 </items>

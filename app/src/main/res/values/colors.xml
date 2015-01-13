@@ -43,4 +43,7 @@
     <color name="black_translucent">#80000000</color>
 
     <color name="rippelColor">#3F9FE0</color>
+
+    <color name="accent">#eeff41</color>
+    <color name="accentLight">#F4FF81</color>
 </resources>
