@@ -71,8 +71,6 @@ public class CompanionAdapter extends ArrayAdapter<CompanionItem> {
         	holder.txtWeapon.setText("Weapons: " + rowItem.getPrimaryWeapon() + ", " + rowItem.getSecondaryWeapon());
         	holder.txtDescription.setText(rowItem.getDescription());
         	holder.txtArmor.setText("Armor: " + rowItem.getArmor());
-            //String s = unescapeString(rowItem.getGifts());
-           ///holder.txtGifts.setText(s);
 
         return v;
     }

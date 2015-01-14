@@ -17,4 +17,4 @@
         android:startColor="@color/md_scrim_start"
         android:endColor="@color/md_scrim_end"
         android:angle="270" />
-</shape><!-- From: file:/C:/Users/Agando/AndroidStudioProjects/libraries/material-drawer/library/src/main/res/drawable/md_scrim.xml --><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.heinrichreimersoftware.materialdrawer/library/1.3.2/res/drawable/md_scrim.xml -->
+</shape><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/drawable/md_scrim.xml -->

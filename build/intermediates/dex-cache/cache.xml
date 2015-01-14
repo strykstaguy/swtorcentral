@@ -79,13 +79,6 @@
         <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\picasso-2.4.0-dfde26dbe78b9aaa9da5dcc74772ffb16d3a65ba.jar" />
     </item>
     <item
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.heinrichreimersoftware.materialdrawer\library\1.3.2\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="78a63d4dae8de03d097c84585e3d2b0bd48ae071">
-        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-d60835704d1693c054bb836c477f723c8224a993.jar" />
-    </item>
-    <item
         jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\jsoup-1.7.3.jar"
         jumboMode="false"
         revision="21.1.0"

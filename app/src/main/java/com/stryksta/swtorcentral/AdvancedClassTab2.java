@@ -49,7 +49,6 @@ public class AdvancedClassTab2 extends Fragment {
         if ( bundle != null ) {
         	ClassPos = bundle.getInt("position");
         	ClassID = bundle.getInt("class_id");
-        	
         }
         
         rowItems = new ArrayList<CompanionItem>();

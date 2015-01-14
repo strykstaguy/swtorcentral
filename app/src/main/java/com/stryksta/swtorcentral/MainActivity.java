@@ -15,7 +15,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -23,7 +22,6 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -31,14 +29,11 @@ import android.widget.Toast;
 import android.widget.ExpandableListView.OnChildClickListener;
 
 import com.stryksta.swtorcentral.adapters.CharacterDrawerAdapter;
-import com.stryksta.swtorcentral.adapters.DrawerAdapter;
+import com.stryksta.swtorcentral.drawer.DrawerItem;
+import com.stryksta.swtorcentral.drawer.DrawerProfile;
 import com.stryksta.swtorcentral.util.database.CharacterDatabase;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
-
-import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
-import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
-import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -51,8 +46,6 @@ public class MainActivity extends ActionBarActivity {
 	
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
-	//private String[] menuItems;
-	//private String[] menuItemsIcon;
 	private String mUserCharacter;
 	private String mUserCharacterLegacy;
 	private CharacterDatabase db;
@@ -87,37 +80,8 @@ public class MainActivity extends ActionBarActivity {
 		 
 		//Start Drawer
 		mTitle = mDrawerTitle = getTitle();
-		//menuItems = getResources().getStringArray(R.array.drawerItems);
-		//menuItemsIcon = getResources().getStringArray(R.array.drawerIcons);
 	    mDrawerLayout = (DrawerFrameLayout) findViewById(R.id.drawer_layout);
-	    //mDrawerList = (ListView) findViewById(R.id.drawer);
-	    //mDrawerView = (LinearLayout) this.findViewById(R.id.drawer_view);
 
-
-	 	// set a custom shadow that overlays the main content when the drawer opens
-        //mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-        //mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.swtor_blue));
-
-        //DrawerAdapter mAdapter = new DrawerAdapter(this);// Add First Header
-
-        /*
-
-        int res = 0;
-		for (String item : menuItems) {
-
-			int id_title = getResources().getIdentifier(item, "string", this.getPackageName());
-			int id_icon = getResources().getIdentifier(menuItemsIcon[res], "drawable", this.getPackageName());
-
-			DrawerItem mItem = new DrawerItem(id_title, id_icon);
-			//if (res==0) mItem.counter=10;
-			mAdapter.addItem(mItem);
-			res++;
-		}
-
-        */
-
-        //mDrawerList.setAdapter(mAdapter);
-        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         // between the sliding drawer and the action bar app icon
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -139,15 +103,6 @@ public class MainActivity extends ActionBarActivity {
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerLayout.closeDrawer();
-        //Add Header
-        //LayoutInflater inflater = getLayoutInflater();
-        //final ViewGroup header = (ViewGroup) inflater.inflate(R.layout.header,
-               // mDrawerList, false);
-
-        //mDrawerList.addHeaderView(header, null, true); // true = clickable
-
-        //mCharacterListView = (ExpandableListView) findViewById(R.id.expandableListView);
-        //CharacterSelection();
 
         mDrawerLayout.addItem(
                 new DrawerItem()
@@ -396,65 +351,7 @@ public class MainActivity extends ActionBarActivity {
 	    }
 	    return true;
 	}
-	/* The click listener for ListView in the navigation drawer */
-    private class DrawerItemClickListener implements ListView.OnItemClickListener {
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
-        }
-    }
 
-    private void selectItem(int position) {
-        // update the main content by replacing fragments
-        
-   	 switch(position) {
-	    case 0:
-	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ReaderActivity(), "Reader");
-	        break;
-	    case 1:
-	    	Intent serverIntent = new Intent(this, ServerActivity.class);
-	        startActivity(serverIntent);
-	        break;
-	    case 2:
-	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new DatacronActivity(), "Datacron");
-	        break;
-	    case 3:
-	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ClassesActivity(), "Classes");
-	        break;
-	    case 4:
-	    	FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new FactionFragment(), "Faction");
-	        break;
-	    case 5:
-	    	Intent eventIntent = new Intent(this, EventsActivity.class);
-	        startActivity(eventIntent);
-	        break;
-	    case 6:
-	    	Intent characterIntent = new Intent(this, CharacterActivity.class);
-	        startActivity(characterIntent);
-	        break;
-	    case 7:
-	    	Intent achievementIntent = new Intent(this, AchievementActivity.class);
-	        startActivity(achievementIntent);
-	        break;
-	    case 8:
-	    	Intent tutorialIntent = new Intent(this, TutorialActivity.class);
-	        startActivity(tutorialIntent);
-	        break;
-	    case 9:
-	    	Intent settingsIntent = new Intent(this, SettingsActivity.class);
-	        startActivity(settingsIntent);
-	        break;
-	    case 10:
-	        Intent testIntent = new Intent(this, TestActivity.class);
-	        startActivity(testIntent);
-	        break;
-	    default:
-	}
-        // update selected item and title, then close the drawer
-        //mDrawerList.setItemChecked(position, true);
-        //setTitle(mGalaxyTitles[position]);
-        mDrawerLayout.closeDrawer(mDrawerView);
-    }
-    
     @Override
     public void setTitle(CharSequence title) {
         mTitle = title;

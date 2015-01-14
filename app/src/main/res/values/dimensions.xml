@@ -58,4 +58,24 @@
     <dimen name="flexible_space_image_height">240dp</dimen>
     <dimen name="toolbar_margin_start">72dp</dimen>
     <dimen name="flexible_space_show_fab_offset">120dp</dimen>
+
+    <dimen name="md_baseline_start">16dp</dimen>
+    <dimen name="md_baseline_content">72dp</dimen>
+    <dimen name="md_baseline_end">16dp</dimen>
+
+    <dimen name="md_drawer_max_width">400dp</dimen>
+
+    <dimen name="md_drawer_list_margin_vertical">8dp</dimen>
+
+    <dimen name="md_icon_size">24dp</dimen>
+    <dimen name="md_avatar_size">40dp</dimen>
+    <dimen name="md_big_avatar_size">64dp</dimen>
+
+    <dimen name="md_divider_height">1dp</dimen>
+    <dimen name="md_divider_margin">8dp</dimen>
+
+    <dimen name="md_list_item_height">48dp</dimen>
+    <dimen name="md_list_item_height_two_line">72dp</dimen>
+    <dimen name="md_list_item_margin">16dp</dimen>
+    <dimen name="md_list_item_text_secondary_margin">0dp</dimen>
 </resources>  

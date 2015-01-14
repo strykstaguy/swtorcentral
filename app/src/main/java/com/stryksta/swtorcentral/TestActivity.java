@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.app.ActionBar;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -29,9 +30,13 @@ import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.github.ksoichiro.android.observablescrollview.ScrollUtils;
 import com.nineoldandroids.view.ViewHelper;
 import com.nineoldandroids.view.ViewPropertyAnimator;
+import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.adapters.ExpandableListAdapter;
+import com.stryksta.swtorcentral.data.CompanionItem;
 import com.stryksta.swtorcentral.util.BackdropImageView;
 import com.stryksta.swtorcentral.util.NonScrollListView;
+import com.stryksta.swtorcentral.util.database.CompanionDatabase;
+import com.stryksta.swtorcentral.util.database.CompanionGiftsDatabase;
 
 public class TestActivity extends ActionBarActivity implements ObservableScrollViewCallbacks {
     private static final float MAX_TEXT_SCALE_DELTA = 0.3f;
@@ -47,12 +52,21 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
     private int mFlexibleSpaceImageHeight;
     private int mToolbarColor;
 
+    //Companion Info from prev
+    private int ClassPos;
+    private int ClassID;
+    private CompanionDatabase db;
+    private Cursor companions;
+    private CompanionGiftsDatabase db2;
+    ArrayList<CompanionItem> companionItems;
+
     int actionBarHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_main);
+
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
@@ -63,6 +77,16 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
         if (!TOOLBAR_IS_STICKY) {
             mToolbar.setBackgroundColor(Color.TRANSPARENT);
         }
+
+        //get bundle info
+        Bundle bundle = getIntent().getExtras();
+
+        if ( bundle != null ) {
+            ClassPos = bundle.getInt("position");
+            ClassID = bundle.getInt("class_id");
+        }
+
+        ClassID = 2;
 
         mFlexibleSpaceImageHeight = getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
 
@@ -85,30 +109,44 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
         setTitle(null);
 
         NonScrollListView companionsListView = (NonScrollListView) findViewById(R.id.companionsListView);
-        ArrayAdapter<String> companionsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        companionsAdapter.add("Qyzen-Fess");
-        companionsAdapter.add("Tharan Cedrax");
-        companionsAdapter.add("Zenith");
-        companionsAdapter.add("Lieutenant Felix Iresso");
-        companionsAdapter.add("Nadia Grell");
-        companionsAdapter.add("C2-N2");
-        companionsAdapter.add("HK-51");
-        companionsAdapter.add("Treek");
 
+        companionItems = new ArrayList<CompanionItem>();
+
+        db = new CompanionDatabase(TestActivity.this);
+        db2 = new CompanionGiftsDatabase(TestActivity.this);
+        companions = db.getCompanions(ClassID);
+        if (companions.moveToFirst())
+        {
+            do
+            {
+                String txtName = companions.getString(companions.getColumnIndex("companion_name"));
+                String txtRole = companions.getString(companions.getColumnIndex("role"));
+                String txtBonus = companions.getString(companions.getColumnIndex("crew_skill_bonus"));
+                String txtRomance = companions.getString(companions.getColumnIndex("romance"));
+                String txtPrimaryStat = companions.getString(companions.getColumnIndex("primarystat"));
+                String txtSecondaryStat = companions.getString(companions.getColumnIndex("secondarystat"));
+                String txtPrimaryWeapon = companions.getString(companions.getColumnIndex("primaryweapon"));
+                String txtSecondaryWeapon = companions.getString(companions.getColumnIndex("secondaryweapon"));
+                String txtGender = companions.getString(companions.getColumnIndex("gender"));
+                String txtRace = companions.getString(companions.getColumnIndex("race"));
+                String txtFound = companions.getString(companions.getColumnIndex("found"));
+                String txtArmor = companions.getString(companions.getColumnIndex("armor"));
+                String txtDescription = companions.getString(companions.getColumnIndex("description"));
+                String txtGifts = db2.getGifts(companions.getString(companions.getColumnIndex("companion_name")));
+
+                CompanionItem item = new CompanionItem(txtName, txtRole, txtBonus, txtRomance, txtPrimaryStat, txtSecondaryStat, txtPrimaryWeapon, txtSecondaryWeapon, txtGifts, txtGender, txtRace, txtFound, txtArmor, txtDescription);
+                companionItems.add(item);
+            } while (companions.moveToNext());
+        }
+
+        CompanionClassAdapter companionsAdapter = new CompanionClassAdapter(TestActivity.this, R.layout.companion_class_row, companionItems);
         companionsListView.setAdapter(companionsAdapter);
 
-        companionsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                NonScrollListView listView = (NonScrollListView) parent;
-                String item = (String)listView.getItemAtPosition(position);
-                Toast.makeText(TestActivity.this, item, Toast.LENGTH_LONG).show();
-            }
-        });
         ScrollUtils.addOnGlobalLayoutListener(mScrollView, new Runnable() {
             public void run() {
-               // mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
-                mScrollView.scrollTo(0, 1);
-                mScrollView.scrollTo(0, 0);
+               mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
+                //mScrollView.scrollTo(0, 1);
+                //mScrollView.scrollTo(0, 0);
             }
         });
 
