@@ -8,17 +8,17 @@ package mobi.parchment;
 
 public final class R {
 	public static final class attr {
-		public static final int cellSpacing = 0x7f01004b;
-		public static final int gravity = 0x7f010045;
-		public static final int isCircularScroll = 0x7f01004c;
-		public static final int isViewPager = 0x7f01004f;
-		public static final int numberOfViewsPerCell = 0x7f010044;
-		public static final int orientation = 0x7f01004a;
-		public static final int ratio = 0x7f010043;
-		public static final int selectOnSnap = 0x7f01004e;
-		public static final int selectWhileScrolling = 0x7f010051;
-		public static final int snapPosition = 0x7f010050;
-		public static final int snapToPosition = 0x7f01004d;
+		public static final int cellSpacing = 0x7f010046;
+		public static final int gravity = 0x7f010040;
+		public static final int isCircularScroll = 0x7f010047;
+		public static final int isViewPager = 0x7f01004a;
+		public static final int numberOfViewsPerCell = 0x7f01003f;
+		public static final int orientation = 0x7f010045;
+		public static final int ratio = 0x7f01003e;
+		public static final int selectOnSnap = 0x7f010049;
+		public static final int selectWhileScrolling = 0x7f01004c;
+		public static final int snapPosition = 0x7f01004b;
+		public static final int snapToPosition = 0x7f010048;
 	}
 	public static final class id {
 		public static final int bottom = 0x7f0a0026;
@@ -33,12 +33,12 @@ public final class R {
 		public static final int vertical = 0x7f0a002e;
 	}
 	public static final class styleable {
-		public static final int[] GridPatternView = { 0x7f010043 };
+		public static final int[] GridPatternView = { 0x7f01003e };
 		public static final int GridPatternView_ratio = 0;
-		public static final int[] GridView = { 0x7f010044, 0x7f010045 };
+		public static final int[] GridView = { 0x7f01003f, 0x7f010040 };
 		public static final int GridView_gravity = 1;
 		public static final int GridView_numberOfViewsPerCell = 0;
-		public static final int[] ListView = { 0x7f01004a, 0x7f01004b, 0x7f01004c, 0x7f01004d, 0x7f01004e, 0x7f01004f, 0x7f010050, 0x7f010051 };
+		public static final int[] ListView = { 0x7f010045, 0x7f010046, 0x7f010047, 0x7f010048, 0x7f010049, 0x7f01004a, 0x7f01004b, 0x7f01004c };
 		public static final int ListView_cellSpacing = 1;
 		public static final int ListView_isCircularScroll = 2;
 		public static final int ListView_isViewPager = 5;

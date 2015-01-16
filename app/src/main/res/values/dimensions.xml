@@ -78,4 +78,7 @@
     <dimen name="md_list_item_height_two_line">72dp</dimen>
     <dimen name="md_list_item_margin">16dp</dimen>
     <dimen name="md_list_item_text_secondary_margin">0dp</dimen>
+
+    <dimen name="swtor_button_corner_radius">4dp</dimen>
+    <dimen name="swtor_button_layer_padding">3dp</dimen>
 </resources>  

@@ -24,6 +24,7 @@
     <color name="gray_86">#DCDCDC</color>
     <color name="swtor_blue">#3F9FE0</color>
     <color name="swtor_blue_light">#a5d2f1</color>
+    <color name="swtor_blue_dark">#1e7dbd</color>
     <color name="swtor_green">#99cc00</color>
     <color name="swtor_orange">#FFCB00</color>
     <color name="swtor_orange2">#FF9800</color>
@@ -60,4 +61,9 @@
     <color name="md_scrim_start">#0000</color>
     <color name="md_scrim_end">#8a000000</color>
 
+    <!-- Flat button-->
+    <color name="swtor_button_blue_pressed">#ff0099cc</color>
+    <color name="swtor_button_blue_normal">#ff33b5e5</color>
+    <color name="swtor_button_gray_pressed">#dcdcdc</color>
+    <color name="swtor_button_gray_normal">#dcdcdc</color>
 </resources>

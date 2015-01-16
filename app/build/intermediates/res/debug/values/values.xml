@@ -116,29 +116,6 @@
     <color name="dim_foreground_material_light">#ff323232</color>
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="fbutton_color_alizarin">#e74c3c</color>
-    <color name="fbutton_color_amethyst">#9b59b6</color>
-    <color name="fbutton_color_asbestos">#7f8c8d</color>
-    <color name="fbutton_color_belize_hole">#2980b9</color>
-    <color name="fbutton_color_carrot">#e67e22</color>
-    <color name="fbutton_color_clouds">#ecf0f1</color>
-    <color name="fbutton_color_concrete">#95a5a6</color>
-    <color name="fbutton_color_emerald">#2ecc71</color>
-    <color name="fbutton_color_green_sea">#16a085</color>
-    <color name="fbutton_color_midnight_blue">#2c3e50</color>
-    <color name="fbutton_color_nephritis">#27ae60</color>
-    <color name="fbutton_color_orange">#f39c12</color>
-    <color name="fbutton_color_peter_river">#3498db</color>
-    <color name="fbutton_color_pomegranate">#c0392b</color>
-    <color name="fbutton_color_pumpkin">#d35400</color>
-    <color name="fbutton_color_silver">#bdc3c7</color>
-    <color name="fbutton_color_sun_flower">#f1c40f</color>
-    <color name="fbutton_color_transparent">@android:color/transparent</color>
-    <color name="fbutton_color_turquoise">#1abc9c</color>
-    <color name="fbutton_color_wet_asphalt">#34495e</color>
-    <color name="fbutton_color_wisteria">#8e44ad</color>
-    <color name="fbutton_default_color">#3eadeb</color>
-    <color name="fbutton_default_shadow_color">#ff3493c8</color>
     <color name="fullcolor">#C50000</color>
     <color name="gray">#EEEEEE</color>
     <color name="gray_23">#3b3b3b</color>
@@ -226,7 +203,12 @@
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="swtor_blue">#3F9FE0</color>
+    <color name="swtor_blue_dark">#1e7dbd</color>
     <color name="swtor_blue_light">#a5d2f1</color>
+    <color name="swtor_button_blue_normal">#ff33b5e5</color>
+    <color name="swtor_button_blue_pressed">#ff0099cc</color>
+    <color name="swtor_button_gray_normal">#dcdcdc</color>
+    <color name="swtor_button_gray_pressed">#dcdcdc</color>
     <color name="swtor_green">#99cc00</color>
     <color name="swtor_orange">#FFCB00</color>
     <color name="swtor_orange2">#FF9800</color>
@@ -251,7 +233,6 @@
     <declare-styleable name="CollapsingTitleLayout"><attr format="reference|dimension" name="expandedMargin"/><attr format="reference|dimension" name="expandedMarginStart"/><attr format="reference|dimension" name="expandedMarginBottom"/><attr format="reference|dimension" name="expandedMarginEnd"/><attr format="reference|dimension" name="expandedTextSize"/><attr format="reference|dimension" name="collapsedTextSize"/><attr name="android:textAppearance"/><attr format="reference" name="textSizeInterpolator"/></declare-styleable>
     <declare-styleable name="CompatTextView"><attr format="reference|boolean" name="textAllCaps"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="topBottomBarArrowSize"/><attr format="dimension" name="middleBarArrowSize"/><attr format="dimension" name="barSize"/><attr format="dimension" name="thickness"/></declare-styleable>
-    <declare-styleable name="FButton"><attr format="boolean" name="shadowEnabled"/><attr format="color" name="buttonColor"/><attr format="color" name="shadowColor"/><attr format="dimension" name="shadowHeight"/><attr format="dimension" name="cornerRadius"/></declare-styleable>
     <declare-styleable name="FloatLabelLayout"><attr format="reference" name="floatLabelTextAppearance"/><attr format="reference|dimension" name="floatLabelPaddingLeft"/><attr format="reference|dimension" name="floatLabelPaddingRight"/><attr format="reference|dimension" name="floatLabelPaddingTop"/><attr format="reference|dimension" name="floatLabelPaddingBottom"/><attr format="reference|string" name="floatLabelHint"/></declare-styleable>
     <declare-styleable name="GridPatternView"><attr format="float" name="ratio"/></declare-styleable>
     <declare-styleable name="GridView"><attr format="integer" name="numberOfViewsPerCell"/><attr name="gravity"><flag name="left" value="0x02"/><flag name="right" value="0x04"/><flag name="top" value="0x08"/><flag name="bottom" value="0x10"/></attr></declare-styleable>
@@ -267,7 +248,7 @@
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
-    <declare-styleable name="RippleView"><attr format="integer" name="rv_alpha"/><attr format="integer" name="rv_framerate"/><attr format="integer" name="rv_rippleDuration"/><attr format="integer" name="rv_zoomDuration"/><attr format="color" name="rv_color"/><attr format="boolean" name="rv_centered"/><attr format="enum" name="rv_type"><enum name="simpleRipple" value="0"/><enum name="doubleRipple" value="1"/><enum name="rectangle" value="2"/></attr><attr format="dimension" name="rv_ripplePadding"/><attr format="boolean" name="rv_zoom"/><attr format="float" name="rv_zoomScale"/></declare-styleable>
+    <declare-styleable name="RippleView"><attr format="color" name="rippleColor"/><attr format="float" name="alphaFactor"/><attr format="boolean" name="hover"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
     <declare-styleable name="Spinner"><attr format="reference" name="prompt"/><attr format="enum" name="spinnerMode"><enum name="dialog" value="0"/><enum name="dropdown" value="1"/></attr><attr name="android:dropDownSelector"/><attr name="android:popupBackground"/><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/><attr name="android:dropDownWidth"/><attr format="reference" name="popupPromptView"/><attr name="android:gravity"/><attr format="boolean" name="disableChildrenWhenDisabled"/><attr name="android:background"/></declare-styleable>
     <declare-styleable name="SwitchCompat"><attr name="android:thumb"/><attr format="reference" name="track"/><attr name="android:textOn"/><attr name="android:textOff"/><attr format="dimension" name="thumbTextPadding"/><attr format="reference" name="switchTextAppearance"/><attr format="dimension" name="switchMinWidth"/><attr format="dimension" name="switchPadding"/><attr format="boolean" name="splitTrack"/><attr format="boolean" name="showText"/></declare-styleable>
@@ -357,12 +338,6 @@
     <eat-comment/>
     <dimen name="divider_size">1dp</dimen>
     <dimen name="edittext_border_size">3dp</dimen>
-    <dimen name="fbutton_default_conner_radius">8dp</dimen>
-    <dimen name="fbutton_default_padding_bottom">5dp</dimen>
-    <dimen name="fbutton_default_padding_left">10dp</dimen>
-    <dimen name="fbutton_default_padding_right">10dp</dimen>
-    <dimen name="fbutton_default_padding_top">5dp</dimen>
-    <dimen name="fbutton_default_shadow_height">4dp</dimen>
     <dimen name="flexible_space_height">72dp</dimen>
     <dimen name="flexible_space_image_height">240dp</dimen>
     <dimen name="flexible_space_show_fab_offset">120dp</dimen>
@@ -448,6 +423,8 @@
     <dimen name="shadow_width">15dp</dimen>
     <dimen name="slidingmenu_offset">60dp</dimen>
     <dimen name="subtitle">14sp</dimen>
+    <dimen name="swtor_button_corner_radius">4dp</dimen>
+    <dimen name="swtor_button_layer_padding">3dp</dimen>
     <dimen name="test_padding">10dp</dimen>
     <dimen name="tex_size_large">16sp</dimen>
     <dimen name="tex_size_normal">14sp</dimen>

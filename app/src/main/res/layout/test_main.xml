@@ -37,6 +37,67 @@
 
             <LinearLayout
                 android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnDisciplines1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/swtor_button_gray_flat"
+                    android:text="Seer"
+                    android:drawableTop="@drawable/ic_action_book"
+                    android:textColor="@color/text"
+                    android:textSize="12sp"/>
+
+                <Button
+                    android:id="@+id/btnDisciplines2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/swtor_button_gray_flat"
+                    android:text="Telekinetics"
+                    android:drawableTop="@drawable/ic_action_database"
+                    android:textColor="@color/text"
+                    android:textSize="12sp"/>
+
+                <Button
+                    android:id="@+id/btnDisciplines3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/swtor_button_gray_flat"
+                    android:text="Balance"
+                    android:drawableTop="@drawable/ic_action_gear"
+                    android:textColor="@color/text"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/background">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/md_divider" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/background">
@@ -57,26 +118,45 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white">
+                android:padding="10dp"
+                android:background="@color/background">
 
-                <TextView
-                    android:id="@+id/txtDetails"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/background"
-                    android:paddingLeft="5dp"
-                    android:paddingBottom="5dp"
-                    android:textColor="@color/text"
-                    android:gravity="left"
-                    android:textStyle="bold"
-                    android:text="Details"
-                    android:textSize="18sp" />
+                    android:layout_height="1dp"
+                    android:background="@color/md_divider" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/text"
+                android:gravity="left"
+                android:text="Details"
+                android:textSize="18sp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/card">
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
                     android:weightSum="1">
 
                     <TextView
@@ -159,8 +239,7 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:weightSum="1">
+                    android:layout_margin="5dp">
 
                     <TextView
                         android:id="@+id/txtAttribute"
@@ -183,6 +262,19 @@
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtCompanions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/text"
+                android:gravity="left"
+                android:text="Companions"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -194,38 +286,11 @@
                     android:id="@+id/companionsListView"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
                     android:divider="@color/gray"
-                    android:background="@color/white"
+                    android:background="@drawable/card"
                     android:dividerHeight="1px"
                     android:clickable="true" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/swtor_blue">
-
-                <TextView
-                    android:id="@+id/txtCompanions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:paddingBottom="5dp"
-                    android:textColor="@color/text"
-                    android:gravity="left"
-                    android:text="Companions"
-                    android:textStyle="bold"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:weightSum="1">
-
             </LinearLayout>
 
         </LinearLayout>

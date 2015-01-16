@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/swtor_button_gray_pressed" />
+
+    <item android:bottom="@dimen/swtor_button_layer_padding">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/swtor_button_corner_radius" />
+            <solid android:color="@color/material_transparent" />
+        </shape>
+    </item>
+</layer-list><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/drawable/swtor_button_gray_normal.xml -->

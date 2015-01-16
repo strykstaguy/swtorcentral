@@ -105,7 +105,7 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
         mScrollView = (ObservableScrollView) findViewById(R.id.scroll);
         mScrollView.setScrollViewCallbacks(this);
         mTitleView = (TextView) findViewById(R.id.title);
-        mTitleView.setText("Jedi Consular");
+        mTitleView.setText("Jedi Sage");
         setTitle(null);
 
         NonScrollListView companionsListView = (NonScrollListView) findViewById(R.id.companionsListView);
@@ -144,9 +144,9 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
 
         ScrollUtils.addOnGlobalLayoutListener(mScrollView, new Runnable() {
             public void run() {
-               mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
-                //mScrollView.scrollTo(0, 1);
-                //mScrollView.scrollTo(0, 0);
+              // mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
+               mScrollView.scrollTo(0, 1);
+               mScrollView.scrollTo(0, 0);
             }
         });
 
