@@ -32,9 +32,13 @@ import com.nineoldandroids.view.ViewHelper;
 import com.nineoldandroids.view.ViewPropertyAnimator;
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.adapters.ExpandableListAdapter;
+import com.stryksta.swtorcentral.data.AdvancedClassItem;
+import com.stryksta.swtorcentral.data.ClassItem;
 import com.stryksta.swtorcentral.data.CompanionItem;
 import com.stryksta.swtorcentral.util.BackdropImageView;
 import com.stryksta.swtorcentral.util.NonScrollListView;
+import com.stryksta.swtorcentral.util.database.AdvancedClassesDatabase;
+import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionGiftsDatabase;
 
@@ -55,10 +59,15 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
     //Companion Info from prev
     private int ClassPos;
     private int ClassID;
-    private CompanionDatabase db;
+    private CompanionDatabase CompDP;
     private Cursor companions;
     private CompanionGiftsDatabase db2;
     ArrayList<CompanionItem> companionItems;
+
+
+    //Advanced Class Information
+    private AdvancedClassesDatabase advDB;
+    ArrayList<AdvancedClassItem> advancedClassItems = new ArrayList<AdvancedClassItem>();
 
     int actionBarHeight;
 
@@ -87,6 +96,7 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
         }
 
         ClassID = 2;
+        ClassPos = 3;
 
         mFlexibleSpaceImageHeight = getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
 
@@ -105,16 +115,14 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
         mScrollView = (ObservableScrollView) findViewById(R.id.scroll);
         mScrollView.setScrollViewCallbacks(this);
         mTitleView = (TextView) findViewById(R.id.title);
-        mTitleView.setText("Jedi Sage");
-        setTitle(null);
 
         NonScrollListView companionsListView = (NonScrollListView) findViewById(R.id.companionsListView);
 
         companionItems = new ArrayList<CompanionItem>();
 
-        db = new CompanionDatabase(TestActivity.this);
+        CompDP = new CompanionDatabase(TestActivity.this);
         db2 = new CompanionGiftsDatabase(TestActivity.this);
-        companions = db.getCompanions(ClassID);
+        companions = CompDP.getCompanions(ClassID);
         if (companions.moveToFirst())
         {
             do
@@ -142,6 +150,17 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
         CompanionClassAdapter companionsAdapter = new CompanionClassAdapter(TestActivity.this, R.layout.companion_class_row, companionItems);
         companionsListView.setAdapter(companionsAdapter);
 
+        //Advanced Classes Info
+        advDB = new AdvancedClassesDatabase(TestActivity.this);
+        advancedClassItems = advDB.getAdvancedClasses(ClassPos);
+        advDB.close();
+
+        //Set Title
+        mTitleView.setText(advancedClassItems.get(0).getAdvClass());
+        setTitle(null);
+
+
+        //Scroll
         ScrollUtils.addOnGlobalLayoutListener(mScrollView, new Runnable() {
             public void run() {
               // mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
