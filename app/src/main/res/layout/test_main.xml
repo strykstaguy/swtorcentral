@@ -5,11 +5,10 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/ADVimage"
         android:layout_width="match_parent"
         android:layout_height="@dimen/flexible_space_image_height"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_sorcerer" />
+        android:scaleType="centerCrop" />
 
     <View
         android:id="@+id/overlay"
@@ -157,7 +156,8 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="1">
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp">
 
                     <TextView
                         android:id="@+id/txtRole"
@@ -184,8 +184,8 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:weightSum="1">
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp">
 
                     <TextView
                         android:id="@+id/txtArmor"
@@ -196,7 +196,8 @@
                         android:layout_gravity="left"
                         android:text="Armor:"
                         android:textSize="14sp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:gravity="left" />
 
                     <TextView
                         android:id="@+id/txtArmorText"
@@ -211,8 +212,8 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:weightSum="1">
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp">
 
                     <TextView
                         android:id="@+id/txtWeapons"
@@ -239,7 +240,8 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp">
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp" >
 
                     <TextView
                         android:id="@+id/txtAttribute"

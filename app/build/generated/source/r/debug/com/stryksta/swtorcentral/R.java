@@ -2271,13 +2271,14 @@ containing a value of this type.
         public static final int voss_bg=0x7f02012b;
     }
     public static final class id {
+        public static final int ADVimage=0x7f0a0128;
         public static final int AdvClass1=0x7f0a00b7;
         public static final int AdvClass2=0x7f0a00ba;
         public static final int CharacterAddLayout=0x7f0a009f;
         public static final int IMGserverLight=0x7f0a010f;
         public static final int ServerKeyLayout=0x7f0a010e;
-        public static final int VideoPreviewPlayButton=0x7f0a0138;
-        public static final int VideoView=0x7f0a0139;
+        public static final int VideoPreviewPlayButton=0x7f0a0139;
+        public static final int VideoView=0x7f0a013a;
         public static final int abilitydetails_layout=0x7f0a005f;
         public static final int abilitylayout=0x7f0a0092;
         public static final int abilitylinearlayout=0x7f0a0091;
@@ -2297,15 +2298,15 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a004d;
         public static final int action_mode_bar_stub=0x7f0a004c;
         public static final int action_mode_close_button=0x7f0a003f;
-        public static final int action_settings=0x7f0a013f;
+        public static final int action_settings=0x7f0a0140;
         public static final int activity_chooser_view_content=0x7f0a0040;
         public static final int advancedclassabilitylist=0x7f0a0087;
         public static final int always=0x7f0a0033;
         public static final int beginning=0x7f0a002a;
         public static final int bottom=0x7f0a0026;
-        public static final int btnDisciplines1=0x7f0a012a;
-        public static final int btnDisciplines2=0x7f0a012b;
-        public static final int btnDisciplines3=0x7f0a012c;
+        public static final int btnDisciplines1=0x7f0a012b;
+        public static final int btnDisciplines2=0x7f0a012c;
+        public static final int btnDisciplines3=0x7f0a012d;
         public static final int buttonDefaultFrame=0x7f0a00eb;
         public static final int buttonDefaultNegative=0x7f0a00ed;
         public static final int buttonDefaultNeutral=0x7f0a00ec;
@@ -2330,15 +2331,15 @@ containing a value of this type.
         public static final int characterRace=0x7f0a00a6;
         public static final int character_level=0x7f0a00ad;
         public static final int character_level_msg=0x7f0a00ac;
-        public static final int character_menu_add=0x7f0a013c;
-        public static final int character_menu_delete=0x7f0a013e;
-        public static final int character_menu_edit=0x7f0a013d;
-        public static final int character_menu_save=0x7f0a013b;
+        public static final int character_menu_add=0x7f0a013d;
+        public static final int character_menu_delete=0x7f0a013f;
+        public static final int character_menu_edit=0x7f0a013e;
+        public static final int character_menu_save=0x7f0a013c;
         public static final int checkbox=0x7f0a0048;
         public static final int classabilitylist=0x7f0a0084;
         public static final int collapseActionView=0x7f0a0034;
         public static final int companionlist=0x7f0a0081;
-        public static final int companionsListView=0x7f0a0133;
+        public static final int companionsListView=0x7f0a0134;
         public static final int content=0x7f0a00e1;
         public static final int contentListView=0x7f0a00e9;
         public static final int contentScrollView=0x7f0a00e0;
@@ -2394,7 +2395,7 @@ containing a value of this type.
         public static final int imgThumbnail=0x7f0a010d;
         public static final int layoutEmpire=0x7f0a00d9;
         public static final int layoutRepublic=0x7f0a00d6;
-        public static final int layoutRow=0x7f0a0134;
+        public static final int layoutRow=0x7f0a0135;
         public static final int left=0x7f0a0027;
         public static final int line=0x7f0a003b;
         public static final int listBeastLore=0x7f0a0100;
@@ -2442,7 +2443,7 @@ containing a value of this type.
         public static final int normal=0x7f0a001d;
         public static final int ns_menu_row=0x7f0a00ca;
         public static final int onScreen=0x7f0a0030;
-        public static final int overlay=0x7f0a0128;
+        public static final int overlay=0x7f0a0129;
         public static final int pager=0x7f0a0073;
         public static final int pager_title_strip=0x7f0a0074;
         public static final int planet_pager=0x7f0a00f4;
@@ -2455,7 +2456,7 @@ containing a value of this type.
         public static final int radio=0x7f0a004a;
         public static final int reader_list=0x7f0a010c;
         public static final int right=0x7f0a0028;
-        public static final int scroll=0x7f0a0129;
+        public static final int scroll=0x7f0a012a;
         public static final int search_badge=0x7f0a0054;
         public static final int search_bar=0x7f0a0053;
         public static final int search_button=0x7f0a0055;
@@ -2473,7 +2474,7 @@ containing a value of this type.
         public static final int serverStatus=0x7f0a0121;
         public static final int serverTitle=0x7f0a0120;
         public static final int serverVeryHeavy=0x7f0a0115;
-        public static final int server_help=0x7f0a0140;
+        public static final int server_help=0x7f0a0141;
         public static final int shortcut=0x7f0a0049;
         public static final int showCustom=0x7f0a0022;
         public static final int showHome=0x7f0a0023;
@@ -2495,8 +2496,8 @@ containing a value of this type.
         public static final int titleFrameCustomView=0x7f0a00e5;
         public static final int toolbar=0x7f0a0122;
         public static final int top=0x7f0a0029;
-        public static final int transparentBackground=0x7f0a0136;
-        public static final int tutorial_list=0x7f0a0137;
+        public static final int transparentBackground=0x7f0a0137;
+        public static final int tutorial_list=0x7f0a0138;
         public static final int txtAbilityTitle=0x7f0a009d;
         public static final int txtActivation=0x7f0a0097;
         public static final int txtAdvDesc=0x7f0a0080;
@@ -2504,9 +2505,9 @@ containing a value of this type.
         public static final int txtAdvancedClassAbilitySub=0x7f0a0086;
         public static final int txtAlignment=0x7f0a00b2;
         public static final int txtArmor=0x7f0a007a;
-        public static final int txtArmorText=0x7f0a012f;
+        public static final int txtArmorText=0x7f0a0130;
         public static final int txtAttribute=0x7f0a007f;
-        public static final int txtAttributeText=0x7f0a0131;
+        public static final int txtAttributeText=0x7f0a0132;
         public static final int txtBeastLore=0x7f0a00ff;
         public static final int txtBonus=0x7f0a007c;
         public static final int txtCategory1=0x7f0a006a;
@@ -2519,7 +2520,7 @@ containing a value of this type.
         public static final int txtClassAbilitySub=0x7f0a0083;
         public static final int txtClassSub=0x7f0a00b6;
         public static final int txtCodex=0x7f0a00c1;
-        public static final int txtCompanions=0x7f0a0132;
+        public static final int txtCompanions=0x7f0a0133;
         public static final int txtCooldown=0x7f0a0099;
         public static final int txtCount=0x7f0a0068;
         public static final int txtCrewSkill1=0x7f0a00b3;
@@ -2527,7 +2528,7 @@ containing a value of this type.
         public static final int txtCrewSkill3=0x7f0a00b5;
         public static final int txtDatacron=0x7f0a00f7;
         public static final int txtDescription=0x7f0a0064;
-        public static final int txtDetails=0x7f0a012d;
+        public static final int txtDetails=0x7f0a012e;
         public static final int txtEmpire=0x7f0a00db;
         public static final int txtFaction=0x7f0a00d4;
         public static final int txtFactionSub=0x7f0a00d5;
@@ -2553,9 +2554,9 @@ containing a value of this type.
         public static final int txtReward=0x7f0a00bf;
         public static final int txtRewards=0x7f0a0065;
         public static final int txtRole=0x7f0a0077;
-        public static final int txtRoleText=0x7f0a012e;
+        public static final int txtRoleText=0x7f0a012f;
         public static final int txtRomance=0x7f0a0078;
-        public static final int txtSep=0x7f0a0135;
+        public static final int txtSep=0x7f0a0136;
         public static final int txtServerEU=0x7f0a011c;
         public static final int txtServerEUSub=0x7f0a011d;
         public static final int txtServerUS=0x7f0a0119;
@@ -2576,7 +2577,7 @@ containing a value of this type.
         public static final int txtTitlesLore=0x7f0a00fd;
         public static final int txtWeapon=0x7f0a007b;
         public static final int txtWeapons=0x7f0a007e;
-        public static final int txtWeaponsText=0x7f0a0130;
+        public static final int txtWeaponsText=0x7f0a0131;
         public static final int txtserverFull=0x7f0a0118;
         public static final int txtserverHeavy=0x7f0a0114;
         public static final int txtserverLight=0x7f0a0110;
@@ -2588,7 +2589,7 @@ containing a value of this type.
         public static final int userStatus=0x7f0a00c4;
         public static final int uslist=0x7f0a011b;
         public static final int vertical=0x7f0a002e;
-        public static final int video_surface_view=0x7f0a013a;
+        public static final int video_surface_view=0x7f0a013b;
         public static final int videoframe=0x7f0a006c;
         public static final int withText=0x7f0a0037;
         public static final int wrap_content=0x7f0a003a;

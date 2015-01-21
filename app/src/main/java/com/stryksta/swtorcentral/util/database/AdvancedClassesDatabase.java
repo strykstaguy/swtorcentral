@@ -29,7 +29,7 @@ public class AdvancedClassesDatabase extends SQLiteAssetHelper {
 
 		qb.setTables(sqlTables);
 		Cursor c = qb.query(db, sqlSelect, "class_id" + " = ?", new String[]{String.valueOf(id)}, null, null, null);
-		
+
 		/*if (c.moveToFirst()) {
             do {
             	String planet = c.getString(c.getColumnIndex("planet"));
@@ -37,12 +37,27 @@ public class AdvancedClassesDatabase extends SQLiteAssetHelper {
             	String coord = c.getString(c.getColumnIndex("coord"));
             } while (c.moveToNext());
         } */
-		
+
 		c.moveToFirst();
 		//c.close();
 		return c;
 	}
 
+    public Cursor getAdvancedClasses (long id) {
+        SQLiteDatabase db = getReadableDatabase();
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+
+        String [] sqlSelect = {"0 _id", "class_id", "class", "description", "role", "armor", "weapons", "priattribute", "advanced_class_icon", "apc", "adv_bg"};
+        String sqlTables = "advanced_classes";
+
+        qb.setTables(sqlTables);
+        Cursor c = qb.query(db, sqlSelect, "_id" + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+
+        c.moveToFirst();
+        return c;
+    }
+
+    /*
     public ArrayList<AdvancedClassItem> getAdvancedClasses(long id) {
         ArrayList<AdvancedClassItem> advancedClassItems = new ArrayList<AdvancedClassItem>();
         SQLiteDatabase db = getReadableDatabase();
@@ -72,7 +87,7 @@ public class AdvancedClassesDatabase extends SQLiteAssetHelper {
         c.close();
         return advancedClassItems;
     }
-
+    */
 	public Cursor getAdvanced(long id) {
 		SQLiteDatabase db = getReadableDatabase();
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();

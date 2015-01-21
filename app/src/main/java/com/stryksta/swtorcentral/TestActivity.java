@@ -17,10 +17,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupCollapseListener;
 import android.widget.ExpandableListView.OnGroupExpandListener;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +43,7 @@ import com.stryksta.swtorcentral.util.database.AdvancedClassesDatabase;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionGiftsDatabase;
+import com.stryksta.swtorcentral.util.database.DisciplinesDatabase;
 
 public class TestActivity extends ActionBarActivity implements ObservableScrollViewCallbacks {
     private static final float MAX_TEXT_SCALE_DELTA = 0.3f;
@@ -62,12 +65,18 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
     private CompanionDatabase CompDP;
     private Cursor companions;
     private CompanionGiftsDatabase db2;
+
     ArrayList<CompanionItem> companionItems;
 
 
     //Advanced Class Information
     private AdvancedClassesDatabase advDB;
     ArrayList<AdvancedClassItem> advancedClassItems = new ArrayList<AdvancedClassItem>();
+    private Cursor advancedClassesDB;
+
+    //Disciplines
+    private DisciplinesDatabase disciplinesDB;
+    private Cursor disciplinesCursor;
 
     int actionBarHeight;
 
@@ -95,8 +104,8 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
             ClassID = bundle.getInt("class_id");
         }
 
-        ClassID = 2;
-        ClassPos = 3;
+        ClassID = 8;
+        ClassPos = 16;
 
         mFlexibleSpaceImageHeight = getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
 
@@ -110,7 +119,7 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
         mActionBarSize = actionBarHeight;
         mToolbarColor = getResources().getColor(R.color.swtor_blue);
 
-        mImageView = findViewById(R.id.image);
+        mImageView = findViewById(R.id.ADVimage);
         mOverlayView = findViewById(R.id.overlay);
         mScrollView = (ObservableScrollView) findViewById(R.id.scroll);
         mScrollView.setScrollViewCallbacks(this);
@@ -119,6 +128,7 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
         NonScrollListView companionsListView = (NonScrollListView) findViewById(R.id.companionsListView);
 
         companionItems = new ArrayList<CompanionItem>();
+
 
         CompDP = new CompanionDatabase(TestActivity.this);
         db2 = new CompanionGiftsDatabase(TestActivity.this);
@@ -152,11 +162,87 @@ public class TestActivity extends ActionBarActivity implements ObservableScrollV
 
         //Advanced Classes Info
         advDB = new AdvancedClassesDatabase(TestActivity.this);
-        advancedClassItems = advDB.getAdvancedClasses(ClassPos);
+        advancedClassesDB = advDB.getAdvancedClasses(ClassPos);
+
+        if (advancedClassesDB.moveToFirst()) {
+
+            do {
+                int ID = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex("_id"));
+                int advClass_ID = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex("class_id"));
+                String advClass = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
+                String advDescription = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("description"));
+                String advRole = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("role"));
+                String advArmor = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("armor"));
+                String advWeapons = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("weapons"));
+                String advPriAttribute = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("priattribute"));
+                String advAdvanced_class_icon = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("advanced_class_icon"));
+                String advApc = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("apc"));
+                String advAdv_bg = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("adv_bg"));
+                int advClassBG = getResources().getIdentifier(advAdv_bg, "drawable", getPackageName());
+
+                //Set Background Image
+                mImageView.setBackgroundResource(advClassBG);
+
+                //Set Title
+                mTitleView.setText(advClass);
+
+                //Set Description
+                TextView txtAdvDesc = (TextView) findViewById(R.id.txtAdvDesc);
+                txtAdvDesc.setText(advDescription);
+
+                //Set Role
+                TextView txtRoleText = (TextView) findViewById(R.id.txtRoleText);
+                txtRoleText.setText(advRole);
+
+                //Set Armor
+                TextView txtArmorText = (TextView) findViewById(R.id.txtArmorText);
+                txtArmorText.setText(advArmor);
+
+                //Set Weapons
+                TextView txtWeaponsText = (TextView) findViewById(R.id.txtWeaponsText);
+                txtWeaponsText.setText(advWeapons);
+
+                //Set Attribute
+                TextView txtAttributeText = (TextView) findViewById(R.id.txtAttributeText);
+                txtAttributeText.setText(advPriAttribute);
+
+            } while (advancedClassesDB.moveToNext());
+        }
+
+        advancedClassesDB.close();
         advDB.close();
 
-        //Set Title
-        mTitleView.setText(advancedClassItems.get(0).getAdvClass());
+        //Disciplines
+        disciplinesDB = new DisciplinesDatabase(TestActivity.this);
+        disciplinesCursor = disciplinesDB.getDisciplines(ClassPos);
+
+        //Set Disciplines 1
+        Button btnDisciplines1 = (Button) findViewById(R.id.btnDisciplines1);
+
+        if (disciplinesCursor.getCount() > 0) {
+            disciplinesCursor.moveToPosition(0);
+            String disciplines = disciplinesCursor.getString(disciplinesCursor.getColumnIndex("name"));
+            btnDisciplines1.setText(disciplines);
+        }
+
+        //Set Disciplines 2
+        Button btnDisciplines2 = (Button) findViewById(R.id.btnDisciplines2);
+
+        if (disciplinesCursor.getCount() > 0) {
+            disciplinesCursor.moveToPosition(1);
+            String disciplines = disciplinesCursor.getString(disciplinesCursor.getColumnIndex("name"));
+            btnDisciplines2.setText(disciplines);
+        }
+
+        //Set Disciplines 3
+        Button btnDisciplines3 = (Button) findViewById(R.id.btnDisciplines3);
+
+        if (disciplinesCursor.getCount() > 0) {
+            disciplinesCursor.moveToPosition(2);
+            String disciplines = disciplinesCursor.getString(disciplinesCursor.getColumnIndex("name"));
+            btnDisciplines3.setText(disciplines);
+        }
+        ////Set Title
         setTitle(null);
 
 
