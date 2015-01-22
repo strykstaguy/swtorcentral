@@ -229,7 +229,7 @@ public class MainActivity extends ActionBarActivity {
                         .setTextPrimary(getString(R.string.draweritem11))
                         .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
                             public void onClick(DrawerItem drawerItem, int id, int position) {
-                                Intent testIntent = new Intent(MainActivity.this, TestActivity.class);
+                                Intent testIntent = new Intent(MainActivity.this, AdvancedClassActivity.class);
                                 startActivity(testIntent);
                             }
                         })

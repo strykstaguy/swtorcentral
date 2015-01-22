@@ -82,10 +82,6 @@
             android:name="com.stryksta.swtorcentral.TutorialActivity"
             android:label="@string/tutorials_main" >
         </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.TestActivity"
-            android:label="@string/test_main" >
-        </activity>
     </application>
 
 </manifest>

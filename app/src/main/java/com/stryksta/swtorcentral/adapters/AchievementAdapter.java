@@ -7,7 +7,6 @@ import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.GridViewItemLayout;
 import com.stryksta.swtorcentral.util.MaterialProgress;
 import com.stryksta.swtorcentral.util.SizeAdjustingTextView;
-import com.stryksta.swtorcentral.util.TextProgressBar;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -43,7 +42,7 @@ public class AchievementAdapter extends ArrayAdapter<AchievementsItem> {
 			final AchievementsItem item = swtorAchievements.get(position);
 			
 			if(item.isGroupHeader()){
-				rowView = inflater.inflate(R.layout.advanced_class_tab3_header, parent, false);
+				rowView = inflater.inflate(R.layout.ability_header, parent, false);
 				TextView txtHeader = (TextView) rowView.findViewById(R.id.txtAbilityTitle);
 				txtHeader.setText(item.getTitle());
 

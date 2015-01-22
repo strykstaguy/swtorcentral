@@ -44,16 +44,16 @@ public class CompanionAdapter extends ArrayAdapter<CompanionItem> {
         if (v == null) {
             LayoutInflater inflater = (LayoutInflater) mContext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = inflater.inflate(R.layout.advanced_class_row, null);
+            //v = inflater.inflate(R.layout.advanced_class_row, null);
             holder = new ViewHolder();
             
             holder.txtName = (TextView) v.findViewById(R.id.txtName);
-            holder.txtNameSub = (TextView) v.findViewById(R.id.txtNameSub);
+            //holder.txtNameSub = (TextView) v.findViewById(R.id.txtNameSub);
             holder.txtRole = (TextView) v.findViewById(R.id.txtRole);
-            holder.txtBonus = (TextView) v.findViewById(R.id.txtBonus);
-            holder.txtRomance = (TextView) v.findViewById(R.id.txtRomance);
-            holder.txtStats = (TextView) v.findViewById(R.id.txtStats);
-            holder.txtWeapon = (TextView) v.findViewById(R.id.txtWeapon);
+            //holder.txtBonus = (TextView) v.findViewById(R.id.txtBonus);
+            //holder.txtRomance = (TextView) v.findViewById(R.id.txtRomance);
+            //holder.txtStats = (TextView) v.findViewById(R.id.txtStats);
+            //holder.txtWeapon = (TextView) v.findViewById(R.id.txtWeapon);
             holder.txtDescription = (TextView) v.findViewById(R.id.txtDescription);
             holder.txtArmor = (TextView) v.findViewById(R.id.txtArmor);
             

@@ -36,14 +36,14 @@ public class AbilityAdapter extends ArrayAdapter<AbilitiesItem> {
 			final AbilitiesItem item = swtorAbilities.get(position);
 			
 			if(item.isGroupHeader()){
-				rowView = inflater.inflate(R.layout.advanced_class_tab3_header, parent, false);
+				rowView = inflater.inflate(R.layout.ability_header, parent, false);
 				
 				TextView txtHeader = (TextView) rowView.findViewById(R.id.txtAbilityTitle);
 				
 				txtHeader.setText(item.getAblHeader());
 
 			} else {
-				rowView = inflater.inflate(R.layout.advanced_class_tab3_row, parent, false);
+				rowView = inflater.inflate(R.layout.ability_row, parent, false);
 				
 				//LinearLayout abilityLinearLayout = (LinearLayout) rowView.findViewById(R.id.abilitylinearlayout);
 				

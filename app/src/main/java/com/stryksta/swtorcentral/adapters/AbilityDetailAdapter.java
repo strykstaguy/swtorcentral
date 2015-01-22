@@ -41,7 +41,7 @@ public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
         if (v == null) {
             LayoutInflater inflater = (LayoutInflater) mContext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = inflater.inflate(R.layout.advanced_class_tab3_dialog_row, null);
+            v = inflater.inflate(R.layout.ability_detail_row, null);
             holder = new ViewHolder();
             
             holder.txtName = (TextView) v.findViewById(R.id.txtName);

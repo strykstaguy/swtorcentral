@@ -18,7 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/imgThumbnail"
-        android:background="@color/gray_34"
+        android:background="@color/swtor_blue"
         android:orientation="vertical" >
 
         <TextView

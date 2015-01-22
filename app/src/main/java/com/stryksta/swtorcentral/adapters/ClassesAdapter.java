@@ -4,13 +4,11 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.AdvancedClassActivity;
 import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.data.ProgressionItem;
 import com.stryksta.swtorcentral.data.ClassItem;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 
