@@ -393,7 +393,7 @@
     <dimen name="md_icon_margin">16dp</dimen>
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/dimensions.xml -->
     <eat-comment/>
-    <dimen name="md_icon_size">24dp</dimen>
+    <dimen name="md_icon_size">32dp</dimen>
     <dimen name="md_list_item_height">48dp</dimen>
     <dimen name="md_list_item_height_two_line">72dp</dimen>
     <dimen name="md_list_item_margin">16dp</dimen>

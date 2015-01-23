@@ -67,7 +67,7 @@
 
     <dimen name="md_drawer_list_margin_vertical">8dp</dimen>
 
-    <dimen name="md_icon_size">24dp</dimen>
+    <dimen name="md_icon_size">32dp</dimen>
     <dimen name="md_avatar_size">40dp</dimen>
     <dimen name="md_big_avatar_size">64dp</dimen>
 
