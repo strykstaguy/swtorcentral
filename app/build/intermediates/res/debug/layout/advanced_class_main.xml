@@ -8,7 +8,7 @@
         android:id="@+id/ADVimage"
         android:layout_width="match_parent"
         android:layout_height="@dimen/flexible_space_image_height"
-        android:scaleType="fitXY" />
+        android:scaleType="centerCrop" />
 
     <View
         android:id="@+id/overlay"
@@ -293,4 +293,4 @@
             android:background="@android:color/transparent" />
     </LinearLayout>
 
-</FrameLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/advanced_class_main.xml -->
+</FrameLayout><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/advanced_class_main.xml -->
