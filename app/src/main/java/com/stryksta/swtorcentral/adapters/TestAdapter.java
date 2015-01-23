@@ -13,7 +13,10 @@ import android.widget.TextView;
 
 import com.stryksta.swtorcentral.AdvancedClassActivity;
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.Test2Fragment;
+import com.stryksta.swtorcentral.TestActivity;
 import com.stryksta.swtorcentral.data.ClassItem;
+import com.stryksta.swtorcentral.util.FragmentUtils;
 
 import java.util.ArrayList;
 
@@ -84,12 +87,13 @@ public class TestAdapter extends ArrayAdapter<ClassItem> {
 		                bundle.putString("resource", item.gettxtResource());
 		                bundle.putInt("position", item.getAdvancedClassID1());
 		                bundle.putString("advancedclass", item.gettxtAdvancedClass1());
-		                
-		                Intent intent = new Intent(context, AdvancedClassActivity.class);
-		                intent.putExtras(bundle);
-		                context.startActivity(intent);
-		    	        
-		            	
+
+                        Test2Fragment category2frag = new Test2Fragment();
+
+                        category2frag.setArguments(bundle);
+
+                        FragmentUtils.addFragmentsInActivity(((TestActivity)context), R.id.testFrame, category2frag, "Category2");
+
 		            	//Log.d("SWTORCentral", String.valueOf(item.getAdvancedClassID1()));
 		            }
 		        });

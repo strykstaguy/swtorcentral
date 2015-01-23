@@ -24,7 +24,7 @@ public class DisciplinesDatabase extends SQLiteAssetHelper {
 		String sqlTables = "disciplines";
 
 		qb.setTables(sqlTables);
-		Cursor c = qb.query(db, sqlSelect, "advanced_class_id" + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+		Cursor c = qb.query(db, sqlSelect, "advanced_class_id" + " = ? AND sortindex <> '4'", new String[]{String.valueOf(id)}, null, null, null);
 
 		c.moveToFirst();
 		//c.close();

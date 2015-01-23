@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
 import com.stryksta.swtorcentral.adapters.ClassesAdapter;
+import com.stryksta.swtorcentral.adapters.TestAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.data.ClassItem;
 import com.stryksta.swtorcentral.util.AutoMeasureGridView;
@@ -26,21 +27,17 @@ import java.util.HashMap;
 
 public class Test1Fragment extends Fragment{
 
-    ListView listView;
+    ListView classesListView;
     ArrayList<ClassItem> classesArray = new ArrayList<ClassItem>();
-    ClassesAdapter adapter;
-    public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_NAME = "name";
-    public static final String APC_NAME = "apc";
-    public static final String COLUMN_RESOURCE = "resource";
+    TestAdapter testAdapter;
 
-    private ClassesDatabase db;
-    private Cursor classesDB;
-    private Cursor advancedClassesDB;
-    String advClasstxt1;
-    String advClasstxt2;
-    int advClassimg1;
-    int advClassimg2;
+    private ClassesDatabase classesDB;
+    private Cursor classesCursor;
+    private Cursor advClassesCursor;
+    String advClassName1;
+    String advClassName2;
+    int advClassIcon1;
+    int advClassIcon2;
     int advClassID1;
     int advClassID2;
 	View vw_layout;
@@ -62,55 +59,63 @@ public class Test1Fragment extends Fragment{
 
         vw_layout = inflater.inflate(R.layout.class_main, container, false);
 
-        listView = (ListView) vw_layout.findViewById(R.id.listView1);
+        classesListView = (ListView) vw_layout.findViewById(R.id.listView1);
 
-        db = new ClassesDatabase(getActivity());
-        classesDB = db.getClasses();
+        classesDB = new ClassesDatabase(getActivity());
+        classesCursor = classesDB.getClasses();
 
 
         classesArray.clear();
 
-        if (classesDB.moveToFirst()) {
+        if (classesCursor.moveToFirst()) {
 
             do {
-                Integer id = classesDB.getInt(classesDB.getColumnIndex(COLUMN_ID));
-                String name = classesDB.getString(classesDB.getColumnIndex(COLUMN_NAME));
-                String resource = classesDB.getString(classesDB.getColumnIndex(COLUMN_RESOURCE));
-                String apc = classesDB.getString(classesDB.getColumnIndex(APC_NAME));
-                int classicon = getResources().getIdentifier(classesDB.getString(classesDB.getColumnIndex("class_icon")), "drawable", getActivity().getPackageName());
+                Integer id = classesCursor.getInt(classesCursor.getColumnIndex("_id"));
+                String name = classesCursor.getString(classesCursor.getColumnIndex("name"));
+                String resource = classesCursor.getString(classesCursor.getColumnIndex("resource"));
+                String apc = classesCursor.getString(classesCursor.getColumnIndex("apc"));
+                //int classicon = getResources().getIdentifier(classesDB.getString(classesDB.getColumnIndex("class_icon")), "drawable", getActivity().getPackageName());
 
                 classesArray.add(new ClassItem(name));
 
-                advancedClassesDB = db.getAdvancedClasses(id);
+                advClassesCursor = classesDB.getAdvancedClasses(id);
 
+                //Get Advanced Class #1
+                advClassesCursor.moveToPosition(0);
+                advClassID1 = advClassesCursor.getInt(advClassesCursor.getColumnIndex("_id"));
+                advClassName1 = advClassesCursor.getString(advClassesCursor.getColumnIndex("class"));
+                advClassIcon1 = getResources().getIdentifier(advClassesCursor.getString(advClassesCursor.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
+                advClassesCursor.moveToPosition(1);
 
-                advancedClassesDB.moveToPosition(0);
-                advClassID1 = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex(COLUMN_ID));
-                advClasstxt1 = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
-                advClassimg1 = getResources().getIdentifier(advancedClassesDB.getString(advancedClassesDB.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
-                advancedClassesDB.moveToPosition(1);
-                advClassID2 = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex(COLUMN_ID));
-                advClasstxt2 = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
-                advClassimg2 = getResources().getIdentifier(advancedClassesDB.getString(advancedClassesDB.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
+                //Get Advanced Class #2
+                advClassID2 = advClassesCursor.getInt(advClassesCursor.getColumnIndex("_id"));
+                advClassName2 = advClassesCursor.getString(advClassesCursor.getColumnIndex("class"));
+                advClassIcon2 = getResources().getIdentifier(advClassesCursor.getString(advClassesCursor.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
 
-                classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassimg1, advClasstxt1, advClassID2, advClassimg2, advClasstxt2, apc));
-                advancedClassesDB.close();
-            } while (classesDB.moveToNext());
+                classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassIcon1, advClassName1, advClassID2, advClassIcon2, advClassName2, apc));
+                advClassesCursor.close();
+            } while (classesCursor.moveToNext());
         }
 
-        classesDB.close();
+        classesCursor.close();
 
 
 
-        adapter = new ClassesAdapter(getActivity(), classesArray);
-        listView.setAdapter(adapter);
+        testAdapter = new TestAdapter(getActivity(), classesArray);
+        classesListView.setAdapter(testAdapter);
+        /*
+        classesListView.setOnItemClickListener(new OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                Category2Fragment category2frag = new Category2Fragment();
 
+                Bundle args = new Bundle();
+                args.putString("category1", testAdapter.getItem(position).gettxtClass());
+                category2frag.setArguments(args);
+
+                FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category2frag, "Category2");
+
+            }});
+        */
      	return vw_layout;
-	}
-	
-	@Override
-	public void onDestroyView() {
-	    super.onDestroyView();
-	    //getActivity().getActionBar().setTitle("Achivements");
 	}
 }
