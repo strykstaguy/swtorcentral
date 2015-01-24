@@ -233,6 +233,7 @@
     <declare-styleable name="CollapsingTitleLayout"><attr format="reference|dimension" name="expandedMargin"/><attr format="reference|dimension" name="expandedMarginStart"/><attr format="reference|dimension" name="expandedMarginBottom"/><attr format="reference|dimension" name="expandedMarginEnd"/><attr format="reference|dimension" name="expandedTextSize"/><attr format="reference|dimension" name="collapsedTextSize"/><attr name="android:textAppearance"/><attr format="reference" name="textSizeInterpolator"/></declare-styleable>
     <declare-styleable name="CompatTextView"><attr format="reference|boolean" name="textAllCaps"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="topBottomBarArrowSize"/><attr format="dimension" name="middleBarArrowSize"/><attr format="dimension" name="barSize"/><attr format="dimension" name="thickness"/></declare-styleable>
+    <declare-styleable name="ExpandableTextView"><attr format="integer" name="maxCollapsedLines"/><attr format="integer" name="animDuration"/><attr format="float" name="animAlphaStart"/><attr format="reference" name="expandDrawable"/><attr format="reference" name="collapseDrawable"/></declare-styleable>
     <declare-styleable name="FloatLabelLayout"><attr format="reference" name="floatLabelTextAppearance"/><attr format="reference|dimension" name="floatLabelPaddingLeft"/><attr format="reference|dimension" name="floatLabelPaddingRight"/><attr format="reference|dimension" name="floatLabelPaddingTop"/><attr format="reference|dimension" name="floatLabelPaddingBottom"/><attr format="reference|string" name="floatLabelHint"/></declare-styleable>
     <declare-styleable name="GridPatternView"><attr format="float" name="ratio"/></declare-styleable>
     <declare-styleable name="GridView"><attr format="integer" name="numberOfViewsPerCell"/><attr name="gravity"><flag name="left" value="0x02"/><flag name="right" value="0x04"/><flag name="top" value="0x08"/><flag name="bottom" value="0x10"/></attr></declare-styleable>
@@ -444,6 +445,12 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="expand_collapse" type="id"/>
+    <item name="expandable_text" type="id"/>
+    <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <item name="home" type="id"/>
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/values/ids.xml -->
     <eat-comment/>

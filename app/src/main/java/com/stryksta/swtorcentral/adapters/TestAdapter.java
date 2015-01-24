@@ -80,19 +80,17 @@ public class TestAdapter extends ArrayAdapter<ClassItem> {
 		             
 		              
 		                Bundle bundle = new Bundle();
-		                bundle.putString("class", item.gettxtClass());
-		                bundle.putInt("class_id", item.getIdClass());
+		                bundle.putString("className", item.gettxtClass());
+		                bundle.putInt("ClassID", item.getIdClass());
                         bundle.putString("apc", item.geApc());
 
-		                bundle.putString("resource", item.gettxtResource());
-		                bundle.putInt("position", item.getAdvancedClassID1());
-		                bundle.putString("advancedclass", item.gettxtAdvancedClass1());
+		                bundle.putInt("advClassID", item.getAdvancedClassID1());
+                        bundle.putString("advClassDesc", item.gettxtAdvancedClass1Desc());
+		                bundle.putString("advClassName", item.gettxtAdvancedClass1());
 
-                        Test2Fragment category2frag = new Test2Fragment();
-
-                        category2frag.setArguments(bundle);
-
-                        FragmentUtils.addFragmentsInActivity(((TestActivity)context), R.id.testFrame, category2frag, "Category2");
+                        Test2Fragment test2frag = new Test2Fragment();
+                        test2frag.setArguments(bundle);
+                        FragmentUtils.addFragmentsInActivity(((TestActivity)context), R.id.testFrame, test2frag, "Test1");
 
 		            	//Log.d("SWTORCentral", String.valueOf(item.getAdvancedClassID1()));
 		            }

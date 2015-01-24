@@ -7,7 +7,9 @@ public class ClassItem {
 	private int idAdvancedClass1;
 	private int idAdvancedClass2;
     private String txtAdvancedClass1;
+    private String txtAdvancedClass1Desc;
     private String txtAdvancedClass2;
+    private String txtAdvancedClass2Desc;
     private String txtClass;
     private String txtResource;
     private String apc;
@@ -15,31 +17,33 @@ public class ClassItem {
     private boolean isGroupHeader = false;
     
     public ClassItem(String title) {
-		this(title, 0, "", 0, 0, "", 0, 0, "", "");
+		this(title, 0, "", 0, 0, "", "", 0, 0, "", "", "");
 		isGroupHeader = true;
 	}
     
-    public ClassItem(String txtClass, int idClass, String txtResource, int idAdvancedClass1, int imgAdvancedClass1, String txtAdvancedClass1, int idAdvancedClass2, int imgAdvancedClass2, String txtAdvancedClass2, String apc) {
+    public ClassItem(String txtClass, int idClass, String txtResource, int idAdvancedClass1, int imgAdvancedClass1, String txtAdvancedClass1, String txtAdvancedClass1Desc, int idAdvancedClass2, int imgAdvancedClass2, String txtAdvancedClass2, String txtAdvancedClass2Desc, String apc) {
     	this.txtClass = txtClass;
     	this.idClass = idClass;
     	this.txtResource = txtResource;
     	this.idAdvancedClass1 = idAdvancedClass1;
         this.imgAdvancedClass1 = imgAdvancedClass1;
         this.txtAdvancedClass1 = txtAdvancedClass1;
+        this.txtAdvancedClass1Desc = txtAdvancedClass1Desc;
         this.idAdvancedClass2 = idAdvancedClass2;
         this.imgAdvancedClass2 = imgAdvancedClass2;
         this.txtAdvancedClass2 = txtAdvancedClass2;
+        this.txtAdvancedClass2Desc = txtAdvancedClass2Desc;
         this.apc = apc;
     }
     
     public String gettxtClass() {
         return txtClass;
     }
-    
+
     public void settxtClass(String txtClass) {
-    	this.txtClass = txtClass;
+        this.txtClass = txtClass;
     }
-    
+
     public int getIdClass() {
         return idClass;
     }
@@ -87,7 +91,23 @@ public class ClassItem {
     public void settxtAdvancedClass1(String txtAdvancedClass1) {
     	this.txtAdvancedClass1 = txtAdvancedClass1;
     }
-    
+
+    public String gettxtAdvancedClass1Desc() {
+        return txtAdvancedClass1Desc;
+    }
+
+    public void settxtAdvancedClass1Desc(String txtAdvancedClass1Desc) {
+        this.txtAdvancedClass1Desc = txtAdvancedClass1Desc;
+    }
+
+    public String gettxtAdvancedClass2Desc() {
+        return txtAdvancedClass1Desc;
+    }
+
+    public void settxtAdvancedClass2Desc(String txtAdvancedClass2Desc) {
+        this.txtAdvancedClass2Desc = txtAdvancedClass2Desc;
+    }
+
     public String gettxtAdvancedClass2() {
         return txtAdvancedClass2;
     }

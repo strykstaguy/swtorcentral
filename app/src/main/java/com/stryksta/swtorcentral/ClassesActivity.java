@@ -27,9 +27,13 @@ public class ClassesActivity extends Fragment{
 	
 	private ClassesDatabase db;
 	private Cursor classesDB;
-	private Cursor advancedClassesDB;
-	String advClasstxt1;
-	String advClasstxt2;
+	private Cursor advClassesCursor;
+	String advClassName1;
+	String advClassName2;
+
+    String advClassDesc1;
+    String advClassDesc2;
+
 	int advClassimg1;
 	int advClassimg2;
 	int advClassID1;
@@ -73,21 +77,24 @@ public class ClassesActivity extends Fragment{
             	int classicon = getResources().getIdentifier(classesDB.getString(classesDB.getColumnIndex("class_icon")), "drawable", getActivity().getPackageName());
                 
             	classesArray.add(new ClassItem(name));
-            	
-            	advancedClassesDB = db.getAdvancedClasses(id);
-            	
 
-            	advancedClassesDB.moveToPosition(0);
-            		advClassID1 = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex(COLUMN_ID));
-                	advClasstxt1 = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
-                	advClassimg1 = getResources().getIdentifier(advancedClassesDB.getString(advancedClassesDB.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
-                    advancedClassesDB.moveToPosition(1);
-                	advClassID2 = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex(COLUMN_ID));
-                	advClasstxt2 = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
-                	advClassimg2 = getResources().getIdentifier(advancedClassesDB.getString(advancedClassesDB.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
+                advClassesCursor = db.getAdvancedClasses(id);
+
+
+                advClassesCursor.moveToPosition(0);
+            		advClassID1 = advClassesCursor.getInt(advClassesCursor.getColumnIndex(COLUMN_ID));
+                    advClassName1 = advClassesCursor.getString(advClassesCursor.getColumnIndex("class"));
+                    advClassDesc1 = advClassesCursor.getString(advClassesCursor.getColumnIndex("description"));
+                	advClassimg1 = getResources().getIdentifier(advClassesCursor.getString(advClassesCursor.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
+
+                advClassesCursor.moveToPosition(1);
+                	advClassID2 = advClassesCursor.getInt(advClassesCursor.getColumnIndex(COLUMN_ID));
+                    advClassName2 = advClassesCursor.getString(advClassesCursor.getColumnIndex("class"));
+                    advClassDesc2 = advClassesCursor.getString(advClassesCursor.getColumnIndex("description"));
+                	advClassimg2 = getResources().getIdentifier(advClassesCursor.getString(advClassesCursor.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
                 	
-                	classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassimg1, advClasstxt1, advClassID2, advClassimg2, advClasstxt2, apc));
-                	advancedClassesDB.close();
+                	classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassimg1, advClassName1, advClassDesc1, advClassID2, advClassimg2, advClassName2, advClassDesc2, apc));
+                    advClassesCursor.close();
 			} while (classesDB.moveToNext());
 		}
 

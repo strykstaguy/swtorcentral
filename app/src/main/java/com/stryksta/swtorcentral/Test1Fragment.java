@@ -36,6 +36,8 @@ public class Test1Fragment extends Fragment{
     private Cursor advClassesCursor;
     String advClassName1;
     String advClassName2;
+    String advClassDesc1;
+    String advClassDesc2;
     int advClassIcon1;
     int advClassIcon2;
     int advClassID1;
@@ -84,21 +86,23 @@ public class Test1Fragment extends Fragment{
                 advClassesCursor.moveToPosition(0);
                 advClassID1 = advClassesCursor.getInt(advClassesCursor.getColumnIndex("_id"));
                 advClassName1 = advClassesCursor.getString(advClassesCursor.getColumnIndex("class"));
+                advClassDesc1 = advClassesCursor.getString(advClassesCursor.getColumnIndex("description"));
                 advClassIcon1 = getResources().getIdentifier(advClassesCursor.getString(advClassesCursor.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
-                advClassesCursor.moveToPosition(1);
 
                 //Get Advanced Class #2
+                advClassesCursor.moveToPosition(1);
                 advClassID2 = advClassesCursor.getInt(advClassesCursor.getColumnIndex("_id"));
                 advClassName2 = advClassesCursor.getString(advClassesCursor.getColumnIndex("class"));
+                advClassDesc2 = advClassesCursor.getString(advClassesCursor.getColumnIndex("description"));
                 advClassIcon2 = getResources().getIdentifier(advClassesCursor.getString(advClassesCursor.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
 
-                classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassIcon1, advClassName1, advClassID2, advClassIcon2, advClassName2, apc));
+                classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassIcon1, advClassName1, advClassDesc1, advClassID2, advClassIcon2, advClassName2, advClassDesc2, apc));
                 advClassesCursor.close();
             } while (classesCursor.moveToNext());
         }
 
         classesCursor.close();
-
+        classesDB.close();
 
 
         testAdapter = new TestAdapter(getActivity(), classesArray);
