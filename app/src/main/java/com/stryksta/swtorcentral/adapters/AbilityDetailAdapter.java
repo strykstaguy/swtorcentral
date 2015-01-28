@@ -18,18 +18,13 @@ import java.util.ArrayList;
 public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
 
 	Context mContext;
-	String classResource;
-	String type;
 	
     private final ArrayList<AbilitiesItem> results;
-    public AbilityDetailAdapter(Context mContext, final int textViewResourceId,
-            final ArrayList<AbilitiesItem> results, final String classResource, final String type) {
+    public AbilityDetailAdapter(Context mContext, final ArrayList<AbilitiesItem> results) {
 
-        super(mContext, textViewResourceId, results);
+        super(mContext, R.layout.ability_detail_row, results);
         this.results = results;
         this.mContext = mContext;
-        this.classResource = classResource;
-        this.type = type;
     }
 
     @Override
@@ -44,17 +39,14 @@ public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
             v = inflater.inflate(R.layout.ability_detail_row, null);
             holder = new ViewHolder();
             
-            holder.txtName = (TextView) v.findViewById(R.id.txtName);
-            holder.txtLevel = (TextView) v.findViewById(R.id.txtLevel);
-            holder.txtDescription = (TextView) v.findViewById(R.id.txtDescription);
-            holder.txtResource = (TextView) v.findViewById(R.id.txtResource);
-            holder.txtActivation = (TextView) v.findViewById(R.id.txtActivation);
-            holder.txtChanneled = (TextView) v.findViewById(R.id.txtChanneled);
-            holder.txtCooldown = (TextView) v.findViewById(R.id.txtCooldown);
-            holder.txtRange = (TextView) v.findViewById(R.id.txtRange);
-            holder.txtFootnote = (TextView) v.findViewById(R.id.txtFootnote);
-            holder.txtSummary = (TextView) v.findViewById(R.id.txtSummary);
-            holder.txtHighlight = (TextView) v.findViewById(R.id.txtHighlight);
+            holder.ablName = (TextView) v.findViewById(R.id.ablName);
+            holder.ablLevel = (TextView) v.findViewById(R.id.ablLevel);
+            holder.ablCastingActivation = (TextView) v.findViewById(R.id.ablCastingActivation);
+            holder.ablResource = (TextView) v.findViewById(R.id.ablResource);
+            holder.ablChanneled = (TextView) v.findViewById(R.id.ablChanneled);
+            holder.ablCooldown = (TextView) v.findViewById(R.id.ablCooldown);
+            holder.ablRange = (TextView) v.findViewById(R.id.ablRange);
+            holder.ablDescription = (TextView) v.findViewById(R.id.ablDescription);
             
             v.setTag(holder);
         } else {
@@ -64,27 +56,24 @@ public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
         AbilitiesItem rowItem = results.get(position);
         
         //Hide 0 from ability name
-        	holder.txtName.setText(rowItem.getablName());
-        
-        
-        /*If level is 0 or less then display as level 1
-        if (rowItem.getlevel() <= 0) {
-        	holder.txtLevel.setText("Level 1");
+        holder.ablName.setText(rowItem.getablName());
+
+
+
+
+        if (rowItem.getablDesc().equals("")) {
+        	holder.ablDescription.setVisibility(View.GONE);
         } else {
-        	holder.txtLevel.setText("Level " + String.valueOf(rowItem.getlevel()));
+        	holder.ablDescription.setText(rowItem.getablDesc());
         }
-        */
-        //If it is a skill  ability hide level
-        if (type.equals("skill")) {
-        	holder.txtLevel.setVisibility(View.GONE);
+
+        if (rowItem.getablCastingTime() == 0) {
+            holder.ablCastingActivation.setVisibility(View.GONE);
+        } else {
+            holder.ablCastingActivation.setText("Activation: " +  rowItem.getablCastingTime());
         }
+
         /*
-        if (rowItem.getsummary().equals("Active")) {
-        	holder.txtSummary.setVisibility(View.GONE);
-        } else {
-        	holder.txtSummary.setText(rowItem.getsummary());
-        }
-        
         //Resource
         if (rowItem.getresource() == 0) {
         	holder.txtResource.setVisibility(View.GONE);
@@ -92,11 +81,7 @@ public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
         	holder.txtResource.setText(classResource + ": " +  String.valueOf(rowItem.getresource()));
         }
 
-        if (rowItem.getactivation() == null) {
-        	holder.txtActivation.setVisibility(View.GONE);
-        } else {
-        	holder.txtActivation.setText("Activation: " +  rowItem.getactivation());
-        }
+
         
         if (rowItem.getchanneled() == null) {
         	holder.txtChanneled.setVisibility(View.GONE);
@@ -109,7 +94,7 @@ public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
         } else {
         	holder.txtCooldown.setText("Cooldown: " +  rowItem.getcooldown());
         }
-        
+
         if (rowItem.getrange() == null) {
         	holder.txtRange.setVisibility(View.GONE);
         } else {
@@ -134,23 +119,20 @@ public class AbilityDetailAdapter extends ArrayAdapter<AbilitiesItem> {
         String description = rowItem.getablDesc();
         CharSequence newDescription = applyTextStyle(description, "@", true, false);
         newDescription = applyTextStyle(newDescription, "#", false, true);
-        holder.txtDescription.setText(newDescription);
+        holder.ablDescription.setText(newDescription);
 
         return v;
     }
 
     private static class ViewHolder {
-        public TextView txtName;
-        public TextView txtLevel;
-        public TextView txtDescription;
-        public TextView txtResource;
-        public TextView txtActivation;
-        public TextView txtChanneled;
-        public TextView txtCooldown;
-        public TextView txtRange;
-        public TextView txtFootnote;
-        public TextView txtSummary;
-        public TextView txtHighlight;
+        public TextView ablName;
+        public TextView ablLevel;
+        public TextView ablCastingActivation;
+        public TextView ablResource;
+        public TextView ablChanneled;
+        public TextView ablCooldown;
+        public TextView ablRange;
+        public TextView ablDescription;
     }
     
     private static CharSequence applyTextStyle(CharSequence text, String token, boolean bold, boolean italic) {

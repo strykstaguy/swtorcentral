@@ -16,11 +16,11 @@
         <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-cd5666e178265a11e145b4b318511a5424aeb306.jar" />
     </item>
     <item
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.0\classes.jar"
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\classes.jar"
         jumboMode="false"
         revision="21.1.0"
-        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
-        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-1ee82da923f01159c7898d8a220c0ec43a1dad23.jar" />
+        sha1="f1970eaa78ad078594934eebe7b5de96bfad8d91">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2905e7f5715eb8a37270f9e81c04a0ee6958ee15.jar" />
     </item>
     <item
         jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\android-sqlite-asset-helper.jar"
@@ -30,6 +30,13 @@
         <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper-b730b8a1e960010d11afbb21a2ef1ccfefdd0e5f.jar" />
     </item>
     <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-c90528ac38f6b4521cad1c2049e68c09a90cf446.jar" />
+    </item>
+    <item
         jar="C:\Users\e9900375\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
         jumboMode="false"
         revision="21.1.0"
@@ -37,32 +44,18 @@
         <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\library-2.4.0-ba652043c03d0a7aeb0af5df0175316ab9dcba42.jar" />
     </item>
     <item
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.4.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="76aa2cf605d20c66c30e34c44add6dc6314686fb">
-        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-53934952c7cedbf40bd56403fe20efb12f565269.jar" />
-    </item>
-    <item
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.4.4\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="1de59758a000321f80cf405fe5becb1d3f27b78d">
-        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-68f0349261a6bd834738d335600c282ffab32cf5.jar" />
-    </item>
-    <item
-        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\mobi.parchment\parchment\1.6.9\classes.jar"
-        jumboMode="false"
-        revision="21.1.0"
-        sha1="f1970eaa78ad078594934eebe7b5de96bfad8d91">
-        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2905e7f5715eb8a37270f9e81c04a0ee6958ee15.jar" />
-    </item>
-    <item
         jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.0"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
         <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-9b9c2ba88f4b797ea465db4282e758cf2a8cf808.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.4.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="76aa2cf605d20c66c30e34c44add6dc6314686fb">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-53934952c7cedbf40bd56403fe20efb12f565269.jar" />
     </item>
     <item
         jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
@@ -77,6 +70,20 @@
         revision="21.1.0"
         sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
         <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\picasso-2.4.0-dfde26dbe78b9aaa9da5dcc74772ffb16d3a65ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-2688cb5957d5b0cfdef92ec8e5ebfab2398bb183.jar" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.4.4\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="1de59758a000321f80cf405fe5becb1d3f27b78d">
+        <dex dex="C:\Users\e9900375\Desktop\SWTORCentral\app\build\intermediates\pre-dexed\debug\classes-68f0349261a6bd834738d335600c282ffab32cf5.jar" />
     </item>
     <item
         jar="C:\Users\e9900375\Desktop\SWTORCentral\app\libs\jsoup-1.7.3.jar"

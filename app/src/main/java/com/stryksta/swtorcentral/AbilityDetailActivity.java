@@ -52,19 +52,10 @@ public class AbilityDetailActivity extends ActionBarActivity {
         getSupportActionBar().setTitle(AbilityName);
 
         db = new AbilitiesDatabase(this);
-        
-        if (type.equals("class")) {
-        	ability = db.getAbilityClass(AbilityName, ClassId);
-        } else if(type.equals("advanced")) {
-        	ability = db.getAbilityAdvanced(AbilityName, AdvancedId);
-        } else if(type.equals("skill")) {
-        	ability = db.getAbilitySkill(AbilityName, SkillId);
-        }
-		
-		
+
 		NonScrollListView abilitylistview = (NonScrollListView) findViewById(R.id.listView1);
 		
-		abilityAdapter = new AbilityDetailAdapter(this, android.R.layout.simple_list_item_1, ability, ClassResource, type);
+		abilityAdapter = new AbilityDetailAdapter(this,ability);
 		abilitylistview.setAdapter(abilityAdapter);
 		
      // Debug the thread name

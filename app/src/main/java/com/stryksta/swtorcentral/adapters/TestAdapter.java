@@ -82,7 +82,7 @@ public class TestAdapter extends ArrayAdapter<ClassItem> {
 		                Bundle bundle = new Bundle();
 		                bundle.putString("className", item.gettxtClass());
 		                bundle.putInt("ClassID", item.getIdClass());
-                        bundle.putString("apc", item.geApc());
+                        bundle.putString("ClassAPC", item.geApc());
 
 		                bundle.putInt("advClassID", item.getAdvancedClassID1());
                         bundle.putString("advClassDesc", item.gettxtAdvancedClass1Desc());
@@ -105,7 +105,7 @@ public class TestAdapter extends ArrayAdapter<ClassItem> {
 		                bundle.putInt("class_id", item.getIdClass());
 		                bundle.putString("resource", item.gettxtResource());
 		                bundle.putInt("position", item.getAdvancedClassID2());
-                        bundle.putString("apc", item.geApc());
+                        bundle.putString("ClassAPC", item.geApc());
 		                bundle.putString("advancedclass", item.gettxtAdvancedClass2());
 
                         //Log.d("SWTORCentral", String.valueOf(item.getAdvancedClassID2()));

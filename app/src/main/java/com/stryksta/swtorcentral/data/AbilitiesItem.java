@@ -172,7 +172,7 @@ public class AbilitiesItem {
     }
 
     public void setablDesc(String ablDesc){
-        this.ablName = ablDesc;
+        this.ablDesc = ablDesc;
     }
 
     public String getablNode() {

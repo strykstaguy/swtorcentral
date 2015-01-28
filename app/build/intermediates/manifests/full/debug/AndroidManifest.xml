@@ -92,6 +92,10 @@
             android:label="@string/test_main" >
         </activity>
         <activity
+            android:name="com.stryksta.swtorcentral.TestRecycleActivity"
+            android:label="@string/test_main" >
+        </activity>
+        <activity
             android:name="android.support.v7.widget.TestActivity"
             android:label="RecyclerViewTestActivity" />
     </application>

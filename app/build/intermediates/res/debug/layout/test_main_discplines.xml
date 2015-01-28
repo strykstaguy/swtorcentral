@@ -17,20 +17,17 @@
         android:layout_gravity="left"
         android:layout_marginTop="@dimen/dim_10"
         android:textColor="@color/text"
-        android:text="Jedi Sage"
         android:gravity="center"
         android:textSize="20sp" />
 
     <TextView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/txtClassDesc"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:paddingLeft="5dp"
         android:textColor="@color/subtext"
         android:gravity="center"
-        android:text="Sages are famed for their wisdom as much as for their powerful healing and defensive skills. In troubled times, a Sage brings together the insight of the past with raw power to change the flow of galactic events."
         android:textSize="14sp" />
 
     <LinearLayout
@@ -59,7 +56,6 @@
                 android:layout_gravity="left"
                 android:paddingLeft="5dp"
                 android:textColor="@color/text"
-                android:text="Seer"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -71,7 +67,6 @@
                 android:layout_weight="0"
                 android:paddingLeft="5dp"
                 android:textColor="@color/text"
-                android:text="DPS"
                 android:paddingBottom="10dp"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -83,7 +78,6 @@
             android:layout_gravity="left"
             android:paddingLeft="5dp"
             android:textColor="@color/text"
-            android:text="There is serenity in balance, and no one knows this better than the Balance Sage. Able to assail multiple targets at once while at the same time absorbing their vitality, the Balance Sage is a formidable presence in long-range engagements."
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -113,7 +107,6 @@
                 android:layout_gravity="left"
                 android:paddingLeft="5dp"
                 android:textColor="@color/text"
-                android:text="Telekinetics"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -125,7 +118,6 @@
                 android:layout_weight="0"
                 android:paddingLeft="5dp"
                 android:textColor="@color/text"
-                android:text="DPS"
                 android:paddingBottom="10dp"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -137,7 +129,6 @@
             android:layout_gravity="left"
             android:paddingLeft="5dp"
             android:textColor="@color/text"
-            android:text="At one with the environment, the Telekinetic Sage manipulates the essence of the surrounding elements with the power of the Force to mount powerful distance attacks. Waves of turbulence and torrential gusts of telekinetic energy make for a potent combination that can pummel even the toughest adversaries into submission."
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -167,7 +158,6 @@
                 android:layout_gravity="left"
                 android:paddingLeft="5dp"
                 android:textColor="@color/text"
-                android:text="Balance"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -179,7 +169,6 @@
                 android:layout_weight="0"
                 android:paddingLeft="5dp"
                 android:textColor="@color/text"
-                android:text="DPS"
                 android:paddingBottom="10dp"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -191,7 +180,6 @@
             android:layout_gravity="left"
             android:paddingLeft="5dp"
             android:textColor="@color/text"
-            android:text="The Seer Sage is the rejuvenation master of Consulars, assisting with an array of Force healing powers that grant allies the strength to continue though even the harshest of encounters. Separated from the heart of the fray, the Seer can be an unfailing warden to those in need."
             android:textSize="14sp" />
     </LinearLayout>
 

@@ -102,7 +102,7 @@ public class Test1Fragment extends Fragment{
         }
 
         classesCursor.close();
-        classesDB.close();
+        //classesDB.close();
 
 
         testAdapter = new TestAdapter(getActivity(), classesArray);
