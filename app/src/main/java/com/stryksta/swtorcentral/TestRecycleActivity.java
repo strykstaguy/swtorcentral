@@ -9,12 +9,19 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.stryksta.swtorcentral.adapters.RecycleAdapter;
+import com.stryksta.swtorcentral.data.AbilitiesItem;
+import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
+
+import java.util.ArrayList;
 
 import static android.support.v7.widget.LinearLayoutManager.*;
 
 public class TestRecycleActivity extends ActionBarActivity {
 
     private Toolbar mToolbar;
+
+    private AbilitiesDatabase abilitiesDB;
+    ArrayList<AbilitiesItem> playerAbilitiesItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,52 +36,27 @@ public class TestRecycleActivity extends ActionBarActivity {
 
         getSupportActionBar().setTitle("Abilities");
 
-        initHorizaontal();
-        initVertical();
+        //Set RecyclerView
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview_vertical);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        //layoutManager.setOrientation(VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+
+
+        //Get Abilities
+        abilitiesDB = new AbilitiesDatabase(TestRecycleActivity.this);
+        playerAbilitiesItems = abilitiesDB.getPlayerAbilities();
+
+        //Set Adapter
+        RecycleAdapter adapter = new RecycleAdapter(playerAbilitiesItems);
+        recyclerView.setAdapter(adapter);
+
+        //Close DB
+        abilitiesDB.close();
 
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         
-    }
-
-    private void initHorizaontal() {
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview_horizontal);
-
-        // 创建一个线性布局管理器
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(HORIZONTAL);
-        // 设置布局管理器
-        recyclerView.setLayoutManager(layoutManager);
-
-        // 创建数据集
-        String[] dataset = new String[100];
-        for (int i = 0; i < dataset.length; i++){
-            dataset[i] = "item" + i;
-        }
-        RecycleAdapter adapter = new RecycleAdapter(dataset);
-        // 设置Adapter
-        recyclerView.setAdapter(adapter);
-    }
-
-    public void initVertical(){
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview_vertical);
-
-        // 创建一个线性布局管理器
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        // 默认是Vertical，可以不写
-        layoutManager.setOrientation(VERTICAL);
-        // 设置布局管理器
-        recyclerView.setLayoutManager(layoutManager);
-
-        // 创建数据集
-        String[] dataset = new String[100];
-        for (int i = 0; i < dataset.length; i++){
-            dataset[i] = "item" + i;
-        }
-        // 创建Adapter，并指定数据集
-        RecycleAdapter adapter = new RecycleAdapter(dataset);
-        // 设置Adapter
-        recyclerView.setAdapter(adapter);
     }
 
     @Override

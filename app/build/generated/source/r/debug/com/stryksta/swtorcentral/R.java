@@ -2612,9 +2612,9 @@ containing a value of this type.
         public static final int progressionList=0x7f0a0101;
         public static final int radio=0x7f0a004c;
         public static final int reader_list=0x7f0a0106;
-        public static final int recyclerview_horizontal=0x7f0a0132;
         public static final int recyclerview_vertical=0x7f0a0133;
         public static final int right=0x7f0a002a;
+        public static final int root=0x7f0a0132;
         public static final int scroll=0x7f0a0087;
         public static final int search_badge=0x7f0a0056;
         public static final int search_bar=0x7f0a0055;

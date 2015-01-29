@@ -1025,9 +1025,9 @@ int id progress_horizontal 0x7f0a001b
 int id progressionList 0x7f0a0101
 int id radio 0x7f0a004c
 int id reader_list 0x7f0a0106
-int id recyclerview_horizontal 0x7f0a0132
 int id recyclerview_vertical 0x7f0a0133
 int id right 0x7f0a002a
+int id root 0x7f0a0132
 int id scroll 0x7f0a0087
 int id search_badge 0x7f0a0056
 int id search_bar 0x7f0a0055
