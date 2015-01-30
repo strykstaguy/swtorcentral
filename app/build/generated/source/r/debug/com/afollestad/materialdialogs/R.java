@@ -517,7 +517,7 @@ public final class R {
 		public static final int md_listitem = 0x7f03003c;
 		public static final int md_listitem_multichoice = 0x7f03003d;
 		public static final int md_listitem_singlechoice = 0x7f03003e;
-		public static final int support_simple_spinner_dropdown_item = 0x7f03004f;
+		public static final int support_simple_spinner_dropdown_item = 0x7f030050;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f0c0000;

@@ -9,10 +9,13 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.stryksta.swtorcentral.adapters.RecycleAdapter;
+import com.stryksta.swtorcentral.adapters.SimpleSectionedRecyclerViewAdapter;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
+import com.stryksta.swtorcentral.util.DividerItemDecoration;
 import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static android.support.v7.widget.LinearLayoutManager.*;
 
@@ -24,7 +27,7 @@ public class TestRecycleActivity extends ActionBarActivity {
 
     private AbilitiesDatabase abilitiesDB;
     ArrayList<AbilitiesItem> playerAbilitiesItems;
-
+    private RecycleAdapter mRecycleAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,19 @@ public class TestRecycleActivity extends ActionBarActivity {
 
         //Set RecyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_vertical);
+        //Add Divider to RecyclerView
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this,LinearLayoutManager.VERTICAL));
+
+        //This is the code to provide a sectioned list
+        List<SimpleSectionedRecyclerViewAdapter.Section> sections =
+                new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
+
+        //Sections
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(0,"General Abilities"));
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(5,"Jedi Consular Abilities"));
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(12,"Section 3"));
+
+
         mLayoutManager = new LinearLayoutManager(this);
         //layoutManager.setOrientation(VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -50,8 +66,15 @@ public class TestRecycleActivity extends ActionBarActivity {
         playerAbilitiesItems = abilitiesDB.getPlayerAbilities();
 
         //Set Adapter
-        RecycleAdapter adapter = new RecycleAdapter(playerAbilitiesItems);
-        mRecyclerView.setAdapter(adapter);
+        mRecycleAdapter = new RecycleAdapter(playerAbilitiesItems);
+
+        //Add your adapter to the sectionAdapter
+        SimpleSectionedRecyclerViewAdapter.Section[] dummy = new SimpleSectionedRecyclerViewAdapter.Section[sections.size()];
+        SimpleSectionedRecyclerViewAdapter mSectionedAdapter = new
+                SimpleSectionedRecyclerViewAdapter(this,R.layout.section,R.id.section_text,mRecycleAdapter);
+        mSectionedAdapter.setSections(sections.toArray(dummy));
+
+        mRecyclerView.setAdapter(mSectionedAdapter);
 
         //Close DB
         abilitiesDB.close();
