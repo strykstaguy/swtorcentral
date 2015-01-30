@@ -1,100 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ablLinearLayout"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    card_view:cardCornerRadius="1dp"
+    card_view:cardUseCompatPadding="true" >
+
+<RelativeLayout
+    android:id="@+id/ablLinearLayout"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:padding="6dip">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/background" >
+    <TextView
+        android:id="@+id/ablName"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text"
+        android:text="Telekinetic Wave"
+        android:textSize="18sp" />
 
-	<LinearLayout
-    	android:id="@+id/ablLayout"
-    	android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:paddingBottom="5.0dip"
-    	android:orientation="horizontal" >
+    <TextView
+        android:id="@+id/ablLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:text="Level Aquired: 10"
+        android:textSize="14sp"
+        android:layout_alignBaseline="@+id/ablName"
+        android:layout_alignBottom="@+id/ablName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-		<TextView
-    		android:id="@+id/ablName"
-    		android:layout_height="wrap_content"
-    		android:layout_width="0dp"
-    		android:layout_weight="1"
-    		android:textColor="@color/text"
-            android:text="Telekinetic Wave"
-    		android:textSize="18sp" />
+    <TextView
+        android:id="@+id/ablCastingActivation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:layout_below="@id/ablLevel"
+        android:text="Activation: 2.5s"
+        android:paddingBottom="5.0dip"
+        android:textSize="12sp" />
 
-		<TextView
-    		android:id="@+id/ablLevel"
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:layout_weight="0"
-    		android:textColor="@color/text"
-            android:text="Level Aquired: 10"
-    		android:textSize="14sp" />
-	</LinearLayout>
-	
-	<LinearLayout
-    	android:id="@+id/ablStatsLayout"
-    	android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:paddingBottom="5.0dip"
-    	android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/ablCastingActivation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text"
-            android:text="Activation: 2.5s"
-            android:paddingBottom="5.0dip"
-            android:textSize="12sp" />
-
-	<TextView
-    	android:id="@+id/ablResource"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/ablResource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ablCastingActivation"
         android:text="Force Cost: 50"
-    	android:textColor="@color/text"
-    	android:textSize="12sp" />
-	
+        android:textColor="@color/text"
+        android:textSize="12sp" />
 
-	
-	<TextView
-    	android:id="@+id/ablChanneled"
-    	android:layout_width="wrap_content"
-   	 	android:layout_height="wrap_content"
-    	android:textColor="@color/text"
+    <TextView
+        android:id="@+id/ablChanneled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ablResource"
+        android:textColor="@color/text"
         android:text="Channeled: 2"
-    	android:textSize="12sp" />
+        android:textSize="12sp" />
 
-	<TextView
-    	android:id="@+id/ablCooldown"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/ablCooldown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ablChanneled"
         android:text="Cooldown: 6s"
-    	android:textSize="12sp" />
-	
-	<TextView
-    	android:id="@+id/ablRange"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ablRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ablCooldown"
         android:text="Range: 30m"
-    	android:textColor="@color/text"
-    	android:textSize="12sp" />
-	
-	</LinearLayout>
-	
-	<TextView
-    	android:id="@+id/ablDescription"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:textColor="@color/text"
-        android:text=""
-    	android:paddingBottom="5.0dip"
-    	android:textSize="12sp" />
-    </LinearLayout>
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/ability_detail_row.xml -->
+        android:textColor="@color/text"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ablDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ablRange"
+        android:textColor="@color/text"
+        android:text="dfasdfsdfsd"
+        android:paddingBottom="5.0dip"
+        android:paddingTop="10.0dip"
+        android:textSize="12sp" />
+
+</RelativeLayout>
+</android.support.v7.widget.CardView><!-- From: file:/C:/Users/Josh/Desktop/SWTORCentral/app/src/main/res/layout/ability_detail_row.xml -->

@@ -19,6 +19,8 @@ import static android.support.v7.widget.LinearLayoutManager.*;
 public class TestRecycleActivity extends ActionBarActivity {
 
     private Toolbar mToolbar;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     private AbilitiesDatabase abilitiesDB;
     ArrayList<AbilitiesItem> playerAbilitiesItems;
@@ -37,10 +39,10 @@ public class TestRecycleActivity extends ActionBarActivity {
         getSupportActionBar().setTitle("Abilities");
 
         //Set RecyclerView
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview_vertical);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_vertical);
+        mLayoutManager = new LinearLayoutManager(this);
         //layoutManager.setOrientation(VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setLayoutManager(mLayoutManager);
 
 
         //Get Abilities
@@ -49,7 +51,7 @@ public class TestRecycleActivity extends ActionBarActivity {
 
         //Set Adapter
         RecycleAdapter adapter = new RecycleAdapter(playerAbilitiesItems);
-        recyclerView.setAdapter(adapter);
+        mRecyclerView.setAdapter(adapter);
 
         //Close DB
         abilitiesDB.close();
