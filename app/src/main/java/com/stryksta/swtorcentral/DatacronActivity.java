@@ -1,21 +1,33 @@
 package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import android.app.Fragment;
 import android.app.ListFragment;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.stryksta.swtorcentral.adapters.DatacronAdapter;
+import com.stryksta.swtorcentral.adapters.RecycleAdapter;
+import com.stryksta.swtorcentral.adapters.SimpleSectionedRecyclerViewAdapter;
 import com.stryksta.swtorcentral.data.DatacronItem;
+import com.stryksta.swtorcentral.util.DividerItemDecoration;
 import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 
-public class DatacronActivity extends ListFragment {
-	private ArrayList<DatacronItem> datacrons;
-	private DatacronDatabase db;
+public class DatacronActivity extends Fragment {
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private DatacronAdapter mRecycleAdapter;
+	private ArrayList<DatacronItem> datacronItems;
+	private DatacronDatabase datacronDB;
+
 	View vw_layout;
 
 	@Override
@@ -34,16 +46,37 @@ public class DatacronActivity extends ListFragment {
 		}
 		
         vw_layout = inflater.inflate(R.layout.datacron_main, container, false);
-        
-        db = new DatacronDatabase(getActivity());
-		datacrons = db.getDatacrons();
-		db.close();
-		
-        ListView itcItems = (ListView) vw_layout.findViewById(android.R.id.list);
-        
-        DatacronAdapter adapter = new DatacronAdapter(getActivity(), android.R.layout.simple_list_item_1, android.R.id.text1, datacrons);
 
-		itcItems.setAdapter(adapter);
+        //Set RecyclerView
+        mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.datacronList);
+
+        //This is the code to provide a sectioned list
+        List<SimpleSectionedRecyclerViewAdapter.Section> sections =
+                new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
+
+        //Sections
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(0,"General Abilities"));
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(5,"Jedi Consular Abilities"));
+        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(12,"Section 3"));
+
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        datacronDB = new DatacronDatabase(getActivity());
+        datacronItems = datacronDB.getDatacrons();
+        datacronDB.close();
+
+
+        //Set Adapter
+        mRecycleAdapter = new DatacronAdapter(datacronItems);
+
+        //Add your adapter to the sectionAdapter
+        SimpleSectionedRecyclerViewAdapter.Section[] dummy = new SimpleSectionedRecyclerViewAdapter.Section[sections.size()];
+        SimpleSectionedRecyclerViewAdapter mSectionedAdapter = new
+                SimpleSectionedRecyclerViewAdapter(getActivity(),R.layout.section,R.id.section_text,mRecycleAdapter);
+        mSectionedAdapter.setSections(sections.toArray(dummy));
+
+        mRecyclerView.setAdapter(mSectionedAdapter);
 		
         return vw_layout;
     }

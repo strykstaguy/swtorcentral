@@ -3,131 +3,94 @@ package com.stryksta.swtorcentral.adapters;
 import android.content.Context;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
-import android.view.LayoutInflater;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.data.RssItem;
 import com.stryksta.swtorcentral.data.ServerItem;
 import com.stryksta.swtorcentral.util.SizeAdjustingTextView;
 
 import java.util.ArrayList;
 
-public class ServerAdapter extends ArrayAdapter<ServerItem> {
+public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder>{
 
-	Context mContext;
-    private final ArrayList<ServerItem> results;
-    public ServerAdapter(Context mContext, final int textViewResourceId,
-            final ArrayList<ServerItem> results) {
+    private Context mContext;
+    private ArrayList<ServerItem> serverItems;
 
-        super(mContext, textViewResourceId, results);
-        this.results = results;
-        this.mContext = mContext;
+    public ServerAdapter(Context context, ArrayList<ServerItem> serverItems) {
+        super();
+        mContext = context;
+        this.serverItems = serverItems;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
+        View view = View.inflate(viewGroup.getContext(), R.layout.server_row, null);
+        ViewHolder holder = new ViewHolder(view);
+        return holder;
+    }
 
-        View v = convertView;
-        ViewHolder holder;
+    @Override
+    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+        ServerItem serverRow = serverItems.get(position);
+        viewHolder.txtServerName.setText(serverRow.getserverName());
+        viewHolder.txtServerStatus.setText(serverRow.getserverStatus());
 
-        if (v == null) {
-            LayoutInflater inflater = (LayoutInflater) mContext
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = inflater.inflate(R.layout.server_row, null);
-            holder = new ViewHolder();
-            
-            holder.txtViewServerIcon = (ImageView) v.findViewById(R.id.serverIcon);
-            holder.txtViewServerName = (SizeAdjustingTextView) v.findViewById(R.id.serverTitle);
-            holder.txtViewServerStatus = (TextView) v.findViewById(R.id.serverStatus);
+        int iColor = mContext.getResources().getColor(R.color.regularcolor);
 
-            v.setTag(holder);
+        if (serverRow.getserverStatus().equalsIgnoreCase("Light")) {
+            iColor = mContext.getResources().getColor(R.color.lightcolor);
+        } else if (serverRow.getserverStatus().equalsIgnoreCase("Standard")) {
+            iColor = mContext.getResources().getColor(R.color.standardcolor);
+        } else if (serverRow.getserverStatus().equalsIgnoreCase("Heavy")) {
+            iColor = mContext.getResources().getColor(R.color.heavycolor);
+        } else if (serverRow.getserverStatus().equalsIgnoreCase("Very Heavy")) {
+            iColor = mContext.getResources().getColor(R.color.veryheavycolor);
+        } else if (serverRow.getserverStatus().equalsIgnoreCase("Full")) {
+            iColor = mContext.getResources().getColor(R.color.fullcolor);
         } else {
-            holder = (ViewHolder) v.getTag();
+            iColor = mContext.getResources().getColor(R.color.regularcolor);
         }
 
-        ServerItem rowItem = results.get(position);
+        viewHolder.txtServerStatus.setVisibility(View.GONE);
 
-        	if (holder.txtViewServerName != null) {
-        		holder.txtViewServerName.setText(rowItem.getserverName());
-            }
-        	
-        	if (holder.txtViewServerStatus != null) {
-        		holder.txtViewServerStatus.setText(rowItem.getserverStatus());
-            }
-        	
-           //holder.txtViewServerStatus.setText(rowItem.getserverStatus());
-           //holder.txtViewServerName.setText(rowItem.getserverName());
-            
-        	int iColor = mContext.getResources().getColor(R.color.regularcolor);
-        	
-            if (rowItem.getserverStatus().equalsIgnoreCase("Light")) {
-                holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.lightcolor));
-                iColor = mContext.getResources().getColor(R.color.lightcolor);
-            } else if (rowItem.getserverStatus().equalsIgnoreCase("Standard")) {
-                holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.standardcolor));
-                iColor = mContext.getResources().getColor(R.color.standardcolor);
-            } else if (rowItem.getserverStatus().equalsIgnoreCase("Heavy")) {
-                holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.heavycolor));
-                iColor = mContext.getResources().getColor(R.color.heavycolor);
-            } else if (rowItem.getserverStatus().equalsIgnoreCase("Very Heavy")) {
-                holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.veryheavycolor));
-                iColor = mContext.getResources().getColor(R.color.veryheavycolor);
-            } else if (rowItem.getserverStatus().equalsIgnoreCase("Full")) {
-                holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.fullcolor));
-                iColor = mContext.getResources().getColor(R.color.fullcolor);
-            } else {
-                holder.txtViewServerStatus.setTextColor(mContext.getResources().getColor(R.color.regularcolor));
-                iColor = mContext.getResources().getColor(R.color.regularcolor);
-            }
-            
-            holder.txtViewServerStatus.setVisibility(View.GONE);
-            
-            holder.txtViewServerIcon.setImageResource(rowItem.getImageId());
-			
-            int red = (iColor & 0xFF0000) / 0xFFFF;
-            int green = (iColor & 0xFF00) / 0xFF;
-            int blue = iColor & 0xFF;
+        viewHolder.txtServerIcon.setImageResource(serverRow.getImageId());
 
-            float[] matrix = { 0, 0, 0, 0, red
-                             , 0, 0, 0, 0, green
-                             , 0, 0, 0, 0, blue
-                             , 0, 0, 0, 1, 0 };
-
-            ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
-
-            holder.txtViewServerIcon.setColorFilter(colorFilter);
-            
-        return v;
-    }
-
-    private static class ViewHolder {
-        public ImageView txtViewServerIcon;
-        public SizeAdjustingTextView txtViewServerName;
-        public TextView txtViewServerStatus;
-    }
-    
-    private void changeColor() {
-    	//int iColor = Color.parseColor(color);
-    	int iColor = mContext.getResources().getColor(R.color.standardcolor);
-    			
         int red = (iColor & 0xFF0000) / 0xFFFF;
         int green = (iColor & 0xFF00) / 0xFF;
         int blue = iColor & 0xFF;
 
         float[] matrix = { 0, 0, 0, 0, red
-                         , 0, 0, 0, 0, green
-                         , 0, 0, 0, 0, blue
-                         , 0, 0, 0, 1, 0 };
+                , 0, 0, 0, 0, green
+                , 0, 0, 0, 0, blue
+                , 0, 0, 0, 1, 0 };
 
         ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
 
-        //drawable.setColorFilter(colorFilter);
-        //holder.txtViewServerIcon.setImageResource(rowItem.getImageId());
+        viewHolder.txtServerIcon.setColorFilter(colorFilter);
     }
-    
-    
+
+    @Override
+    public int getItemCount() {
+        return (null != serverItems ? serverItems.size() : 0);
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+
+        public ImageView txtServerIcon;
+        public SizeAdjustingTextView txtServerName;
+        public TextView txtServerStatus;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            txtServerIcon = (ImageView) itemView.findViewById(R.id.serverIcon);
+            txtServerName = (SizeAdjustingTextView) itemView.findViewById(R.id.serverTitle);
+            txtServerStatus = (TextView) itemView.findViewById(R.id.serverStatus);
+        }
+    }
 }

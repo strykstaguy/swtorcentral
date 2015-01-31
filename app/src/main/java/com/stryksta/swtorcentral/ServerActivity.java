@@ -1,6 +1,7 @@
 package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -8,8 +9,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.stryksta.swtorcentral.adapters.ReaderAdapter;
+import com.stryksta.swtorcentral.adapters.SectionedGridRecyclerViewAdapter;
 import com.stryksta.swtorcentral.adapters.ServerAdapter;
+import com.stryksta.swtorcentral.adapters.SimpleSectionedRecyclerViewAdapter;
 import com.stryksta.swtorcentral.data.ServerItem;
+import com.stryksta.swtorcentral.util.DividerItemDecoration;
 import com.stryksta.swtorcentral.util.FloatingActionButton;
 import com.stryksta.swtorcentral.util.NonScrollGridView;
 import com.stryksta.swtorcentral.util.Utility;
@@ -17,6 +22,9 @@ import com.stryksta.swtorcentral.util.Utility;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -27,12 +35,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ServerActivity extends ActionBarActivity {
-	
-	NonScrollGridView usGridView;
-	NonScrollGridView euGridView;
-	
-	ArrayList<ServerItem> usItems;
-	ArrayList<ServerItem> euItems;
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private ServerAdapter mRecycleAdapter;
+
+    private ArrayList<ServerItem> serverItems;
+    List<SectionedGridRecyclerViewAdapter.Section> mSections;
 
     MaterialDialog pDialog;
 
@@ -48,9 +57,19 @@ public class ServerActivity extends ActionBarActivity {
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        
-        usGridView = (NonScrollGridView) findViewById(R.id.uslist);
-        euGridView = (NonScrollGridView) findViewById(R.id.eulist);
+
+        //Set RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.serverList);
+
+        mLayoutManager = new GridLayoutManager(ServerActivity.this, 2);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        //This is the code to provide a sectioned list
+        mSections = new ArrayList<SectionedGridRecyclerViewAdapter.Section>();
+
+        //Sections
+        mSections.add(new SectionedGridRecyclerViewAdapter.Section(0,"US Servers"));
+        mSections.add(new SectionedGridRecyclerViewAdapter.Section(8,"European Servers"));
 
         if (MainActivity.isNetworkAvailable(ServerActivity.this)) {
        	 new GetServerStatus().execute();
@@ -116,8 +135,7 @@ public class ServerActivity extends ActionBarActivity {
 
 			try {
 				String URL = "http://www.swtor.com/server-status";
-				usItems = new ArrayList<ServerItem>();
-				euItems = new ArrayList<ServerItem>();
+				serverItems = new ArrayList<ServerItem>();
 				
 				Document doc = Jsoup.connect(URL).get();
 				
@@ -127,15 +145,13 @@ public class ServerActivity extends ActionBarActivity {
 					String serverName = USServer.child(1).text();
 					String serverPop = USServer.child(2).text();
 					int serverStatusIMG = R.drawable.ic_action_serverdown;
-					//ServerItem mItem = new ServerItem(R.drawable.navigation_up, serverName, serverPop);
-					//int serverIcon, String serverRegion, String serverName,  String serverStatus
 					
 					if (!serverStatus.equals("DOWN")) {
 						serverStatusIMG = R.drawable.ic_action_serverup;
 		            }
 					
 					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop);
-					usItems.add(item);
+                    serverItems.add(item);
 				}
 				
 				Elements EUServers = doc.select("div#serverListEU div.serverBody:not(.serverMenu)");
@@ -150,9 +166,8 @@ public class ServerActivity extends ActionBarActivity {
 						serverStatusIMG = R.drawable.ic_action_serverup;
 		            }
 
-					//ServerItem mItem = new ServerItem(R.drawable.navigation_up, serverName, serverPop);
 					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop);
-					euItems.add(item);
+                    serverItems.add(item);
 				}
 			} catch (Exception e) {
 				pDialog.dismiss();
@@ -167,25 +182,19 @@ public class ServerActivity extends ActionBarActivity {
 		}
 
 		protected void onPostExecute(ArrayList<ServerItem> result) {
-			ServerAdapter usAdapter = new ServerAdapter(ServerActivity.this, R.layout.server_row, usItems);
-			usGridView.setAdapter(usAdapter);
-			
-			ServerAdapter euAdapter = new ServerAdapter(ServerActivity.this, R.layout.server_row, euItems);
-			euGridView.setAdapter(euAdapter);
-			
+            //Set Adapter
+            mRecycleAdapter = new ServerAdapter(ServerActivity.this, serverItems);
+            //mRecyclerView.setAdapter(mRecycleAdapter);
+
+            //Add your adapter to the sectionAdapter
+            SectionedGridRecyclerViewAdapter.Section[] dummy = new SectionedGridRecyclerViewAdapter.Section[mSections.size()];
+            SectionedGridRecyclerViewAdapter mSectionedAdapter = new
+                    SectionedGridRecyclerViewAdapter(ServerActivity.this,R.layout.section,R.id.section_text,mRecyclerView,mRecycleAdapter);
+            mSectionedAdapter.setSections(mSections.toArray(dummy));
+
+            mRecyclerView.setAdapter(mSectionedAdapter);
+
 			pDialog.dismiss();
-			
-			TextView txtServerUS = (TextView) findViewById(R.id.txtServerUS);
-			txtServerUS.setVisibility(View.VISIBLE);
-			
-			TextView txtServerUSSub = (TextView) findViewById(R.id.txtServerUSSub);
-			txtServerUSSub.setVisibility(View.VISIBLE);
-			
-			TextView txtServerEU = (TextView) findViewById(R.id.txtServerEU);
-			txtServerEU.setVisibility(View.VISIBLE);
-			
-			TextView txtServerEUSub = (TextView) findViewById(R.id.txtServerEUSub);
-			txtServerEUSub.setVisibility(View.VISIBLE);
 		}
 	}
 

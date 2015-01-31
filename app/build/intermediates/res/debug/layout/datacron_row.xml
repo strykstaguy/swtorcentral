@@ -1,47 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="@dimen/datacronpadding"
-   	android:background="@drawable/card_background" >
+    card_view:cardElevation="2dp"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardUseCompatPadding="true">
 
-    <TextView
-        android:id="@+id/txtReward"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-		android:paddingLeft="5dp"
-        android:textColor="@color/regularcolor"
-        android:layout_gravity="left"
-        android:textStyle="bold"
-        android:text="@string/testreward"
-        android:textSize="14sp" />
+        android:orientation="vertical">
 
-     <TextView
-        android:id="@+id/txtPlanet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-		android:paddingLeft="5dp"
-        android:textColor="@color/regularcolor"
-        android:layout_gravity="left"
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtReward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+		    android:paddingLeft="5dp"
+            android:textColor="@color/text"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/txtLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:paddingLeft="5dp"
-        android:text="@string/testcoord"
-        android:textColor="@color/regularcolor"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txtLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text"
+            android:textSize="14sp" />
     
-    <TextView
-        android:id="@+id/txtCodex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:textColor="@color/regularcolor"
-        android:layout_gravity="left"
-        android:textSize="14sp" />
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/datacron_row.xml -->
+        <TextView
+            android:id="@+id/txtCodex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text"
+            android:layout_gravity="left"
+            android:textSize="14sp" />
+    </LinearLayout>
+</android.support.v7.widget.CardView><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/datacron_row.xml -->

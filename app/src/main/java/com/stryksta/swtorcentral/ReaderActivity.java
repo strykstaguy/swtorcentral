@@ -1,39 +1,35 @@
 package com.stryksta.swtorcentral;
 
-import java.util.ArrayList;
-
 import android.app.Fragment;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.GridView;
 import android.widget.Toast;
 
-import com.stryksta.swtorcentral.adapters.RssAdapter;
+import com.stryksta.swtorcentral.adapters.ReaderAdapter;
 import com.stryksta.swtorcentral.data.RssItem;
-import com.stryksta.swtorcentral.util.AutoMeasureGridView;
+import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.RssReader;
 import com.stryksta.swtorcentral.util.database.RssDatabaseHandler;
+
+import java.util.ArrayList;
 
 
 public class ReaderActivity extends Fragment {
 
-	// A reference to the local object
-	private RssAdapter adapter;
-	private RssDatabaseHandler db;
-	GridView gridView;
-	View vw_layout;
-	ArrayList<RssItem> rssItems;
-	
-	
-	// private final ArrayList<RssItem> fetch = new ArrayList<RssItem>();
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
+
+    private ReaderAdapter mRecycleAdapter;
+    private RssDatabaseHandler db;
+    ArrayList<RssItem> rssItems;
+
+    View vw_layout;
 
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,16 +48,18 @@ public class ReaderActivity extends Fragment {
 		
         vw_layout = inflater.inflate(R.layout.reader_main, container, false);
 
-        
-        
-        //if (MainActivity.isNetworkAvailable(getActivity())) {
+        //Set RecyclerView
+        mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.readerList);
+
+        mLayoutManager = new GridLayoutManager(getActivity(), 2);
+        //layoutManager.setOrientation(VERTICAL);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
         	GetRSSDataTask task = new GetRSSDataTask();
+
     		// Start download RSS task
     		task.execute("http://www.swtor.com/feed/news/all");
-        //} else {
-            //Toast.makeText(getActivity(), "Network is unavailable", Toast.LENGTH_LONG).show();
-            
-        //}
+
         
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
@@ -107,20 +105,27 @@ public class ReaderActivity extends Fragment {
 					
 					db.close();
 					//End Add to Database
-					
-					// Get a ListView from main view
-					gridView = (GridView) vw_layout.findViewById(R.id.reader_list);
-					adapter = new RssAdapter(getActivity(), android.R.layout.simple_list_item_1, rssItems);
-					gridView.setAdapter(adapter);
+
+                    //Set Adapter
+                    mRecycleAdapter = new ReaderAdapter(getActivity(), rssItems);
+
+                    mRecyclerView.setAdapter(mRecycleAdapter);
 					
 					if (MainActivity.isNetworkAvailable(getActivity())) {
-						
-						gridView.setOnItemClickListener(new OnItemClickListener() {
-							public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
-							    {
-									Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse( adapter.getItem(position).getLink()));
-									startActivity(intent);
-							    }});
+
+                        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
+                        {
+                            public void onItemClick(View view, int position)
+                            {
+                                //Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse( mRecycleAdapter.getItem(position).getLink()));
+                                //startActivity(intent);
+                            }
+
+                            public void onItemLongClick(View view, int position)
+                            {
+
+                            }
+                        }));
 						
 					} else {
 						Toast.makeText(getActivity(), "Network is unavailable", Toast.LENGTH_LONG).show();

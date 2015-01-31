@@ -3,24 +3,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
-    android:background="@color/white">
-	
-    <GridView
-    	android:id="@+id/reader_list"
-    	android:numColumns="2"
-    	android:gravity="center"
-    	android:columnWidth="192dp"
-    	android:stretchMode="columnWidth"
-    	android:scrollbarStyle="outsideInset"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:background="@color/white"
-    	android:verticalSpacing="5dp"
-    	android:paddingTop="10dp"
-    	android:paddingLeft="10dp"
-    	android:paddingBottom="10dp"
-    	android:horizontalSpacing="5dp"
-    	android:clipToPadding="false" >
-	</GridView>
-	
+    android:background="@color/background">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/readerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
 </LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/reader_main.xml -->

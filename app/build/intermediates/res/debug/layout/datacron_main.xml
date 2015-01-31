@@ -2,19 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
-    
- <com.stryksta.swtorcentral.util.PinnedSectionListView
- 	android:id="@android:id/list"
- 	android:layout_width="fill_parent"
- 	android:layout_height="fill_parent"
- 	android:background="#DCDCDC"
- 	android:paddingTop="10dp"
-    android:paddingLeft="10dp"
-    android:paddingBottom="10dp"
- 	android:divider="@drawable/divider"
- 	android:scrollbarStyle="outsideInset"
- 	android:cacheColorHint="@android:color/transparent" >
- </com.stryksta.swtorcentral.util.PinnedSectionListView>
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/datacronList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
  
 </LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/datacron_main.xml -->
