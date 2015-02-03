@@ -23,7 +23,7 @@ public class TestRecycleActivity extends ActionBarActivity {
 
     private Toolbar mToolbar;
     private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
+    private LinearLayoutManager mLayoutManager;
 
     private AbilitiesDatabase abilitiesDB;
     ArrayList<AbilitiesItem> playerAbilitiesItems;
@@ -57,7 +57,7 @@ public class TestRecycleActivity extends ActionBarActivity {
 
 
         mLayoutManager = new LinearLayoutManager(this);
-        //layoutManager.setOrientation(VERTICAL);
+        mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
 

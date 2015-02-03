@@ -118,8 +118,9 @@ public class ProgressionActivity extends ActionBarActivity {
         planets.add(new ProgressionItem("Czerka Core Meltdown", "Flashpoint", R.drawable.faction_both_black, "Level 55 Content", TimelineType.LINE));
         planets.add(new ProgressionItem("Kuat Drive Yards", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Assault on Tython", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Korriban Incursion", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.END));
-
+        planets.add(new ProgressionItem("Korriban Incursion", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Rishi", "Flashpoint", R.drawable.pl_rishi, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Yavin IV", "Flashpoint", R.drawable.pl_yavin, "", TimelineType.END));
         return planets;
     }
 

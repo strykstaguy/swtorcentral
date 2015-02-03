@@ -44,7 +44,7 @@ public class DatacronDatabase extends SQLiteAssetHelper {
             	}
             		
             	if (prevPlanet == null || !prevPlanet.equals(planet)) {
-            		datacronItem.add(new DatacronItem(DatacronItem.SECTION, planet));
+            		//datacronItem.add(new DatacronItem(DatacronItem.SECTION, planet));
             		datacronItem.add(new DatacronItem(DatacronItem.ITEM, planet, reward, location, codex));
             	} else {
             	    datacronItem.add(new DatacronItem(DatacronItem.ITEM, planet, reward, location, codex));

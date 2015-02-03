@@ -23,7 +23,7 @@ import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 public class DatacronActivity extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
+    private LinearLayoutManager mLayoutManager;
     private DatacronAdapter mRecycleAdapter;
 	private ArrayList<DatacronItem> datacronItems;
 	private DatacronDatabase datacronDB;
@@ -55,11 +55,13 @@ public class DatacronActivity extends Fragment {
                 new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
 
         //Sections
-        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(0,"General Abilities"));
-        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(5,"Jedi Consular Abilities"));
-        sections.add(new SimpleSectionedRecyclerViewAdapter.Section(12,"Section 3"));
+        //sections.add(new SimpleSectionedRecyclerViewAdapter.Section(0,"General Abilities"));
+        //sections.add(new SimpleSectionedRecyclerViewAdapter.Section(5,"Jedi Consular Abilities"));
+        //sections.add(new SimpleSectionedRecyclerViewAdapter.Section(12,"Section 3"));
 
         mLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         datacronDB = new DatacronDatabase(getActivity());

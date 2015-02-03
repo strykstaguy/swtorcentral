@@ -45,21 +45,21 @@ public class ReaderActivity extends Fragment {
 			// the view hierarchy; it would just never be used.
 			return null;
 		}
-		
+
         vw_layout = inflater.inflate(R.layout.reader_main, container, false);
 
         //Set RecyclerView
         mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.readerList);
 
-        mLayoutManager = new GridLayoutManager(getActivity(), 2);
-        //layoutManager.setOrientation(VERTICAL);
-        mRecyclerView.setLayoutManager(mLayoutManager);
+        if (mRecyclerView != null) {
+            mLayoutManager = new GridLayoutManager(getActivity(), 2);
+            mRecyclerView.setLayoutManager(mLayoutManager);
 
         	GetRSSDataTask task = new GetRSSDataTask();
 
     		// Start download RSS task
-    		task.execute("http://www.swtor.com/feed/news/all");
-
+    	    task.execute("http://www.swtor.com/feed/news/all");
+        }
         
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
@@ -110,7 +110,7 @@ public class ReaderActivity extends Fragment {
                     mRecycleAdapter = new ReaderAdapter(getActivity(), rssItems);
 
                     mRecyclerView.setAdapter(mRecycleAdapter);
-					
+
 					if (MainActivity.isNetworkAvailable(getActivity())) {
 
                         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
@@ -126,7 +126,7 @@ public class ReaderActivity extends Fragment {
 
                             }
                         }));
-						
+
 					} else {
 						Toast.makeText(getActivity(), "Network is unavailable", Toast.LENGTH_LONG).show();
 		            
