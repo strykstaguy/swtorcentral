@@ -51,8 +51,7 @@ public class DatacronActivity extends Fragment {
         mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.datacronList);
 
         //This is the code to provide a sectioned list
-        List<SimpleSectionedRecyclerViewAdapter.Section> sections =
-                new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
+        //List<SimpleSectionedRecyclerViewAdapter.Section> sections = new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
 
         //Sections
         //sections.add(new SimpleSectionedRecyclerViewAdapter.Section(0,"General Abilities"));
@@ -66,6 +65,7 @@ public class DatacronActivity extends Fragment {
 
         datacronDB = new DatacronDatabase(getActivity());
         datacronItems = datacronDB.getDatacrons();
+        List<SimpleSectionedRecyclerViewAdapter.Section> sections = datacronDB.getDatacronsSections();
         datacronDB.close();
 
 

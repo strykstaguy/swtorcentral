@@ -1,6 +1,7 @@
 package com.stryksta.swtorcentral.util.database;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -8,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+import com.stryksta.swtorcentral.adapters.SimpleSectionedRecyclerViewAdapter;
 import com.stryksta.swtorcentral.data.DatacronItem;
 
 public class DatacronDatabase extends SQLiteAssetHelper {
@@ -57,7 +59,40 @@ public class DatacronDatabase extends SQLiteAssetHelper {
 		return datacronItem;
 
 	}
-	
+
+    public List<SimpleSectionedRecyclerViewAdapter.Section> getDatacronsSections() {
+        List<SimpleSectionedRecyclerViewAdapter.Section> sections = new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
+        SQLiteDatabase db = getReadableDatabase();
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+
+        String [] sqlSelect = {"0 _id", "faction", "planet", "map", "reward", "location", "reward", "codex"};
+        String sqlTables = "datacrons";
+
+        qb.setTables(sqlTables);
+        Cursor c = qb.query(db, sqlSelect, null, null, null, null, null);
+
+        if (c.moveToFirst()) {
+            do {
+                String planet = c.getString(c.getColumnIndex("planet"));
+                String prevPlanet = null;
+
+                if (c.getPosition() > 0 && c.moveToPrevious()) {
+                    prevPlanet = c.getString(c.getColumnIndex("planet"));
+                    c.moveToNext();
+                }
+
+                if (prevPlanet == null || !prevPlanet.equals(planet)) {
+                    sections.add(new SimpleSectionedRecyclerViewAdapter.Section(c.getPosition(),planet));
+                }
+            } while (c.moveToNext());
+        }
+
+        //c.moveToFirst();
+        c.close();
+        return sections;
+
+    }
+
 	public ArrayList<DatacronItem> getDatacronsPerPlanet(String txtplanet, String txtfaction) {
 		ArrayList<DatacronItem> datacronItem = new ArrayList<DatacronItem>();
 		SQLiteDatabase db = getReadableDatabase();
