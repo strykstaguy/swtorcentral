@@ -8,7 +8,7 @@
         android:id="@+id/ADVimage"
         android:layout_width="match_parent"
         android:layout_height="@dimen/flexible_space_image_height"
-        android:scaleType="centerCrop" />
+        android:scaleType="fitCenter" />
 
     <View
         android:id="@+id/overlay"
@@ -38,7 +38,7 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/background">
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/txtAdvDesc"
@@ -56,43 +56,43 @@
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/background"
+                android:background="@color/white"
                 android:gravity="center">
 
                 <Button
                     android:id="@+id/btnDisciplines1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
+                    android:padding="5dp"
                     android:layout_margin="4dp"
                     android:background="@drawable/swtor_button_gray_flat"
                     android:text="Seer"
-                    android:drawableTop="@drawable/ic_action_gear_white"
-                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/ic_action_database"
+                    android:textColor="@color/text"
                     android:textSize="12sp"/>
 
                 <Button
                     android:id="@+id/btnDisciplines2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
+                    android:padding="5dp"
                     android:layout_margin="4dp"
                     android:background="@drawable/swtor_button_gray_flat"
                     android:text="Telekinetics"
-                    android:drawableTop="@drawable/ic_action_gear_white"
-                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/ic_action_database"
+                    android:textColor="@color/text"
                     android:textSize="12sp"/>
 
                 <Button
                     android:id="@+id/btnDisciplines3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
+                    android:padding="5dp"
                     android:layout_margin="4dp"
                     android:background="@drawable/swtor_button_gray_flat"
                     android:text="Balance"
-                    android:drawableTop="@drawable/ic_action_gear_white"
-                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/ic_action_database"
+                    android:textColor="@color/text"
                     android:textSize="12sp"/>
 
             </LinearLayout>

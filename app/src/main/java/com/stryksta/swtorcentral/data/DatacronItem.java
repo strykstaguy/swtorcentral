@@ -1,27 +1,21 @@
 package com.stryksta.swtorcentral.data;
 
 public class DatacronItem {
-	public static final int ITEM = 0;
-	public static final int SECTION = 1;
-	public int type;
 	public String txtPlanet;
 	public String txtReward;
 	public String txtLocation;
 	public String txtCodex;
+    public String txtDescription;
 	
-	public DatacronItem(int type, String txtPlanet, String txtReward, String txtLocation, String txtCodex) {
+	public DatacronItem(String txtPlanet, String txtReward, String txtLocation, String txtCodex, String txtDescription) {
 		super();
-		this.type = type;
 		this.txtPlanet = txtPlanet;
 		this.txtReward = txtReward;
 		this.txtLocation = txtLocation;
 		this.txtCodex = txtCodex;
+        this.txtDescription = txtDescription;
 	}
-	
-	public DatacronItem(int type, String txtPlanet){
-    	this(type, txtPlanet, "", "", "");
-    }
-	
+
 	public String getPlanet() {
 		return txtPlanet;
 	}
@@ -36,10 +30,10 @@ public class DatacronItem {
 		this.txtReward = txtReward;
 	}
 	
-	public String getLocation() {
+	public String getCodexLocation() {
 		return txtLocation;
 	}
-	public void setLocation(String txtLocation) {
+	public void setCodexLocation(String txtLocation) {
 		this.txtLocation = txtLocation;
 	}
 	
@@ -50,7 +44,15 @@ public class DatacronItem {
 	public void setCodex(String txtCodex) {
 		this.txtCodex = txtCodex;
 	}
-	
+
+    public String getDescription() {
+        return txtDescription;
+    }
+
+    public void setDescription(String txtDescription) {
+        this.txtDescription = txtDescription;
+    }
+
 	@Override
 	public String toString() {
 		return txtPlanet;

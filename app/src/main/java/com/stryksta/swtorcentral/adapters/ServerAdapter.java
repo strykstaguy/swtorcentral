@@ -39,8 +39,8 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         ServerItem serverRow = serverItems.get(position);
         viewHolder.txtServerName.setText(serverRow.getserverName());
-        viewHolder.txtServerStatus.setText(serverRow.getserverStatus());
-
+        viewHolder.txtServerType.setText(serverRow.getserverType());
+        viewHolder.txtServerZone.setText(serverRow.getserverZone());
         int iColor = mContext.getResources().getColor(R.color.regularcolor);
 
         if (serverRow.getserverStatus().equalsIgnoreCase("Light")) {
@@ -56,8 +56,6 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
         } else {
             iColor = mContext.getResources().getColor(R.color.regularcolor);
         }
-
-        viewHolder.txtServerStatus.setVisibility(View.GONE);
 
         viewHolder.txtServerIcon.setImageResource(serverRow.getImageId());
 
@@ -84,13 +82,15 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
 
         public ImageView txtServerIcon;
         public SizeAdjustingTextView txtServerName;
-        public TextView txtServerStatus;
+        public TextView txtServerType;
+        public TextView txtServerZone;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtServerIcon = (ImageView) itemView.findViewById(R.id.serverIcon);
             txtServerName = (SizeAdjustingTextView) itemView.findViewById(R.id.serverTitle);
-            txtServerStatus = (TextView) itemView.findViewById(R.id.serverStatus);
+            txtServerType = (TextView) itemView.findViewById(R.id.serverType);
+            txtServerZone = (TextView) itemView.findViewById(R.id.serverZone);
         }
     }
 }

@@ -26,7 +26,7 @@ public class DatacronDatabase extends SQLiteAssetHelper {
 		SQLiteDatabase db = getReadableDatabase();
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-		String [] sqlSelect = {"0 _id", "faction", "planet", "map", "reward", "location", "reward", "codex"}; 
+		String [] sqlSelect = {"0 _id", "faction", "planet", "map", "reward", "location", "reward", "codex", "desc"};
 		String sqlTables = "datacrons";
 
 		qb.setTables(sqlTables);
@@ -38,19 +38,10 @@ public class DatacronDatabase extends SQLiteAssetHelper {
             	String reward = c.getString(c.getColumnIndex("reward"));
             	String location = c.getString(c.getColumnIndex("location"));
             	String codex = c.getString(c.getColumnIndex("codex"));
-            	String prevPlanet = null;
-            		
-            	if (c.getPosition() > 0 && c.moveToPrevious()) {
-            		prevPlanet = c.getString(c.getColumnIndex("planet"));
-            	    c.moveToNext();
-            	}
-            		
-            	if (prevPlanet == null || !prevPlanet.equals(planet)) {
-            		//datacronItem.add(new DatacronItem(DatacronItem.SECTION, planet));
-            		datacronItem.add(new DatacronItem(DatacronItem.ITEM, planet, reward, location, codex));
-            	} else {
-            	    datacronItem.add(new DatacronItem(DatacronItem.ITEM, planet, reward, location, codex));
-            	}
+                String desc = c.getString(c.getColumnIndex("desc"));
+
+                datacronItem.add(new DatacronItem(planet, reward, location, codex, desc));
+
             } while (c.moveToNext());
         }
 		
@@ -65,7 +56,7 @@ public class DatacronDatabase extends SQLiteAssetHelper {
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-        String [] sqlSelect = {"0 _id", "faction", "planet", "map", "reward", "location", "reward", "codex"};
+        String [] sqlSelect = {"0 _id", "faction", "planet", "map", "reward", "location", "reward", "codex", "desc"};
         String sqlTables = "datacrons";
 
         qb.setTables(sqlTables);
@@ -108,8 +99,9 @@ public class DatacronDatabase extends SQLiteAssetHelper {
             	String reward = c.getString(c.getColumnIndex("reward"));
             	String location = c.getString(c.getColumnIndex("location"));
             	String codex = c.getString(c.getColumnIndex("codex"));
-            		
-            	datacronItem.add(new DatacronItem(DatacronItem.ITEM, planet, reward, location, codex));
+                String desc = c.getString(c.getColumnIndex("desc"));
+
+            	datacronItem.add(new DatacronItem(planet, reward, location, codex, desc));
             	
             } while (c.moveToNext());
         }

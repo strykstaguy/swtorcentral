@@ -9,9 +9,9 @@
     card_view:cardCornerRadius="2dp"
     card_view:cardUseCompatPadding="true">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="75dp"
+        android:layout_height="100dp"
         android:orientation="vertical">
 
         <ImageView
@@ -20,23 +20,43 @@
             android:layout_height="36.0dip"
             android:layout_gravity="center"
             android:contentDescription="@string/image_placeholder"
-            android:scaleType="fitCenter" />
+            android:src="@drawable/ic_action_serverup"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
    		
         <com.stryksta.swtorcentral.util.SizeAdjustingTextView
             android:id="@+id/serverTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/serverIcon"
             android:gravity="center"
             android:maxLines="1"
+            android:text="The Shadowlands"
             android:textAppearance="?android:textAppearanceSmall"
-            android:textColor="@color/regularcolor" />
+            android:textColor="@color/text" />
 
         <TextView
-            android:id="@+id/serverStatus"
+            android:id="@+id/serverType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/serverIcon"
             android:gravity="center"
+            android:text="PvE"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/serverZone"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/serverIcon"
+            android:layout_below="@+id/serverType"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="West"
             android:textColor="@color/text"
             android:textSize="14sp" />
-    </LinearLayout>
+
+    </RelativeLayout>
 </android.support.v7.widget.CardView><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/server_row.xml -->

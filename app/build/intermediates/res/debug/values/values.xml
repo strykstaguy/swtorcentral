@@ -352,7 +352,8 @@
     <dimen name="divider_size">1dp</dimen>
     <dimen name="edittext_border_size">3dp</dimen>
     <dimen name="flexible_space_height">72dp</dimen>
-    <dimen name="flexible_space_image_height">240dp</dimen>
+    <dimen name="flexible_space_image_height">200dp</dimen>
+    <dimen name="flexible_space_image_height_default">240dp</dimen>
     <dimen name="flexible_space_show_fab_offset">120dp</dimen>
     <!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/build/intermediates/exploded-aar/com.rengwuxian.materialedittext/library/1.5.0/res/values/values.xml -->
     <eat-comment/>

@@ -144,13 +144,15 @@ public class ServerActivity extends ActionBarActivity {
 					String serverStatus = USServer.child(0).text();
 					String serverName = USServer.child(1).text();
 					String serverPop = USServer.child(2).text();
+                    String serverType = USServer.child(3).text();
+                    String serverZone = USServer.child(4).text();
 					int serverStatusIMG = R.drawable.ic_action_serverdown;
 					
 					if (!serverStatus.equals("DOWN")) {
 						serverStatusIMG = R.drawable.ic_action_serverup;
 		            }
 					
-					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop);
+					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop, serverType, serverZone);
                     serverItems.add(item);
 				}
 				
@@ -160,13 +162,15 @@ public class ServerActivity extends ActionBarActivity {
 					String serverStatus = EUServer.child(0).text();
 					String serverName = EUServer.child(1).text();
 					String serverPop = EUServer.child(2).text();
+                    String serverType = EUServer.child(3).text();
+                    String serverZone = EUServer.child(4).text();
 					int serverStatusIMG = R.drawable.ic_action_serverdown;
 					
 					if (!serverStatus.equals("DOWN")) {
 						serverStatusIMG = R.drawable.ic_action_serverup;
 		            }
 
-					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop);
+					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop, serverType, serverZone);
                     serverItems.add(item);
 				}
 			} catch (Exception e) {
