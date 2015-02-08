@@ -1,5 +1,4 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -52,48 +51,55 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider" />
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:paddingTop="@dimen/dim_10"
+                android:paddingBottom="@dimen/dim_10"
                 android:gravity="center">
 
                 <Button
                     android:id="@+id/btnDisciplines1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_margin="4dp"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
                     android:background="@drawable/swtor_button_gray_flat"
                     android:text="Seer"
                     android:drawableLeft="@drawable/ic_action_database"
                     android:textColor="@color/text"
-                    android:textSize="12sp"/>
+                    android:textSize="10sp"/>
 
                 <Button
                     android:id="@+id/btnDisciplines2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_margin="4dp"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
                     android:background="@drawable/swtor_button_gray_flat"
                     android:text="Telekinetics"
                     android:drawableLeft="@drawable/ic_action_database"
                     android:textColor="@color/text"
-                    android:textSize="12sp"/>
+                    android:textSize="10sp"/>
 
                 <Button
                     android:id="@+id/btnDisciplines3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_margin="4dp"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
                     android:background="@drawable/swtor_button_gray_flat"
                     android:text="Balance"
                     android:drawableLeft="@drawable/ic_action_database"
                     android:textColor="@color/text"
-                    android:textSize="12sp"/>
+                    android:textSize="10sp"/>
 
             </LinearLayout>
 
@@ -105,7 +111,7 @@
                 android:paddingLeft="16dp"
                 android:singleLine="true"
                 android:textAllCaps="true"
-                android:textColor="@color/swtor_blue"
+                android:textColor="@color/text"
                 android:background="@color/background"
                 android:text="Details"
                 android:textSize="14sp"
@@ -241,14 +247,16 @@
             <TextView
                 android:id="@+id/txtCompanions"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/background"
-                android:paddingLeft="5dp"
-                android:paddingBottom="5dp"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textAllCaps="true"
                 android:textColor="@color/text"
-                android:gravity="left"
+                android:background="@color/background"
                 android:text="Companions"
-                android:textSize="18sp" />
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:orientation="vertical"

@@ -119,6 +119,8 @@ public class ProgressionActivity extends ActionBarActivity {
         planets.add(new ProgressionItem("Kuat Drive Yards", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Assault on Tython", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Korriban Incursion", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Rakatta Prime", "Flashpoint", R.drawable.pl_rakata_prime, "", TimelineType.LINE));
+        planets.add(new ProgressionItem("Manaan", "Flashpoint", R.drawable.pl_manaan, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Rishi", "Flashpoint", R.drawable.pl_rishi, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Yavin IV", "Flashpoint", R.drawable.pl_yavin, "", TimelineType.END));
         return planets;
@@ -130,9 +132,9 @@ public class ProgressionActivity extends ActionBarActivity {
         planets.add(new ProgressionItem("Korriban", "Level 1-10", R.drawable.pl_korriban, "", TimelineType.START));
         planets.add(new ProgressionItem("Hutta", "Level 1-10", R.drawable.pl_hutta, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Empire Fleet", "Level 10+", R.drawable.ic_empire_black, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("The Black Talon", "Flashpoint", R.drawable.ic_flashpoint, "Prologue", TimelineType.LINE));
+        planets.add(new ProgressionItem("The Black Talon", "Flashpoint", R.drawable.ic_bonus, "Prologue", TimelineType.LINE));
         planets.add(new ProgressionItem("Dromund Kaas", "Level 11-16", R.drawable.pl_dromundkaas, "", TimelineType.LINE));
-        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.END));
+        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_operation, "", TimelineType.END));
 
         planets.add(new ProgressionItem("Balmorra", "Level 16-19", R.drawable.pl_balmorra, "", TimelineType.START));
         planets.add(new ProgressionItem("Balmorra", "Bonus Series", R.drawable.faction_both_black, "", TimelineType.LINE));
@@ -179,6 +181,7 @@ public class ProgressionActivity extends ActionBarActivity {
         planets.add(new ProgressionItem("Czerka Core Meltdown", "Flashpoint", R.drawable.faction_both_black, "Level 55 Content", TimelineType.LINE));
         planets.add(new ProgressionItem("Kuat Drive Yards", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
         planets.add(new ProgressionItem("Assault on Tython", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.LINE));
+
         planets.add(new ProgressionItem("Korriban Incursion", "Flashpoint", R.drawable.faction_both_black, "", TimelineType.END));
         return planets;
     }
