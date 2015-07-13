@@ -16,6 +16,7 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -31,7 +32,7 @@ import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.Toast;
  
-public class CharacterEditActivity extends ActionBarActivity implements OnItemSelectedListener {
+public class CharacterEditActivity extends AppCompatActivity implements OnItemSelectedListener {
 	private CharacterDatabase db;
 	LinkedHashMap<String, Integer> genderItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> raceItem = new LinkedHashMap<String, Integer>();

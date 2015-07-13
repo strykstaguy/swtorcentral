@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -11,7 +12,7 @@ import android.widget.LinearLayout;
 
 import com.stryksta.swtorcentral.util.FragmentUtils;
 
-public class TestActivity extends ActionBarActivity {
+public class TestActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
 

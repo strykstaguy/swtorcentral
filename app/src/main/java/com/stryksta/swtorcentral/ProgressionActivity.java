@@ -9,6 +9,7 @@ import com.stryksta.swtorcentral.util.TimelineType;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +18,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import mobi.parchment.widget.adapterview.listview.ListView;
 
-public class ProgressionActivity extends ActionBarActivity {
+public class ProgressionActivity extends AppCompatActivity {
     private ProgressionAdapter factionAdapter;
     String FactionText;
     private Toolbar mToolbar;

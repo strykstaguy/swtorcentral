@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -23,7 +24,7 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 
-public class EventsActivity extends ActionBarActivity {
+public class EventsActivity extends AppCompatActivity {
     GridView eventsGridView;
     ArrayList<EventItem> eventsItems;
     Dialog pDialog;

@@ -1,13 +1,13 @@
 package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.adapters.LoreAdapter;
 import com.stryksta.swtorcentral.data.LoreItem;
 import com.stryksta.swtorcentral.util.LoreDatabase;
 import com.stryksta.swtorcentral.util.NonScrollListView;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,12 +89,7 @@ public class PlanetTab3 extends Fragment {
 		loreItemsList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-                    new MaterialDialog.Builder(getActivity())
-                        .title(loreadapter.getItem(position).getCodex())
-                        .content(loreadapter.getItem(position).getText())
-                        .positiveText("OK")
-                        .build()
-                        .show();
+
 			    }});
 
 		//Locations
@@ -105,12 +100,7 @@ public class PlanetTab3 extends Fragment {
 		loreLocationsItemsList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id)
 			    {
-                    new MaterialDialog.Builder(getActivity())
-                        .title(locationadapter.getItem(position).getCodex())
-                        .content(locationadapter.getItem(position).getText())
-                        .positiveText("OK")
-                        .build()
-                        .show();
+
 			    }});
 
 		//Persons
@@ -121,12 +111,7 @@ public class PlanetTab3 extends Fragment {
 		lorePersonsItemsList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-                    new MaterialDialog.Builder(getActivity())
-                        .title(personsadapter.getItem(position).getCodex())
-                        .content(personsadapter.getItem(position).getText())
-                        .positiveText("OK")
-                        .build()
-                        .show();
+
 			    }});
 		
 		//Titles
@@ -137,12 +122,7 @@ public class PlanetTab3 extends Fragment {
 		loreTitlesItemsList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-                    new MaterialDialog.Builder(getActivity())
-                        .title(titleadapter.getItem(position).getCodex())
-                        .content(titleadapter.getItem(position).getText())
-                        .positiveText("OK")
-                        .build()
-                        .show();
+
 			    }});
 		
 		//Beast
@@ -153,12 +133,7 @@ public class PlanetTab3 extends Fragment {
 		listBeastLore.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) 
 			    {
-                    new MaterialDialog.Builder(getActivity())
-                        .title(titleadapter.getItem(position).getCodex())
-                        .content(titleadapter.getItem(position).getText())
-                        .positiveText("OK")
-                        .build()
-                        .show();
+
 			    }});
 		
 		//Game Rules
@@ -172,12 +147,7 @@ public class PlanetTab3 extends Fragment {
 			listGameRulesLore.setOnItemClickListener(new OnItemClickListener() {
 				public void onItemClick(AdapterView<?> parent, View view,int position, long id)
 				    {
-                        new MaterialDialog.Builder(getActivity())
-                            .title(gamerulesadapter.getItem(position).getCodex())
-                            .content(gamerulesadapter.getItem(position).getText())
-                            .positiveText("OK")
-                            .build()
-                            .show();
+
 				    }});
 		} else {
 			listGameRulesLore.setVisibility(View.GONE);
@@ -193,12 +163,6 @@ public class PlanetTab3 extends Fragment {
 		listOrganizationsLore.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id)
 				{
-                    new MaterialDialog.Builder(getActivity())
-                        .title(organizationsadapter.getItem(position).getCodex())
-                        .content(organizationsadapter.getItem(position).getText())
-                        .positiveText("OK")
-                        .build()
-                        .show();
 
 					}});
 

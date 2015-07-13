@@ -28,12 +28,6 @@
         <attr name="floatLabelHint" format="reference|string" />
     </declare-styleable>
 
-    <declare-styleable name="RippleView">
-        <attr name="rippleColor" format="color" />
-        <attr name="alphaFactor" format="float" />
-        <attr name="hover" format="boolean" />
-    </declare-styleable>
-
     <declare-styleable name="CollapsingTitleLayout">
         <attr name="expandedMargin" format="reference|dimension" />
         <attr name="expandedMarginStart" format="reference|dimension" />

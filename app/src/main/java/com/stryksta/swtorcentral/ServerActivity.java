@@ -8,7 +8,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.adapters.ReaderAdapter;
 import com.stryksta.swtorcentral.adapters.SectionedGridRecyclerViewAdapter;
 import com.stryksta.swtorcentral.adapters.ServerAdapter;
@@ -22,6 +21,7 @@ import com.stryksta.swtorcentral.util.Utility;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -34,7 +34,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ServerActivity extends ActionBarActivity {
+public class ServerActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -43,7 +43,7 @@ public class ServerActivity extends ActionBarActivity {
     private ArrayList<ServerItem> serverItems;
     List<SectionedGridRecyclerViewAdapter.Section> mSections;
 
-    MaterialDialog pDialog;
+    //MaterialDialog pDialog;
 
     private Toolbar mToolbar;
 
@@ -88,6 +88,7 @@ public class ServerActivity extends ActionBarActivity {
             public void onClick(View view) {
                 View v = getLayoutInflater().inflate(R.layout.server_key, null);
 
+                /*
                 MaterialDialog dialog = new MaterialDialog.Builder(ServerActivity.this)
                         .title("Server Status")
                         .customView(v)
@@ -111,6 +112,7 @@ public class ServerActivity extends ActionBarActivity {
 
 
                 dialog.show();
+                */
 
             }
         });
@@ -123,11 +125,6 @@ public class ServerActivity extends ActionBarActivity {
     	protected void onPreExecute() {
  			super.onPreExecute();
  			// Create a progressbar
-            pDialog = new MaterialDialog.Builder(ServerActivity.this)
-                    .title("Server Status")
-                    .customView(R.layout.progress_alert)
-                    .build();
-            pDialog.show();
  		}
     	
 		@Override
@@ -174,7 +171,6 @@ public class ServerActivity extends ActionBarActivity {
                     serverItems.add(item);
 				}
 			} catch (Exception e) {
-				pDialog.dismiss();
 				if(e.getMessage() != null) {
 				    Log.e("SWTORCentral", e.getMessage());
 				}
@@ -198,7 +194,6 @@ public class ServerActivity extends ActionBarActivity {
 
             mRecyclerView.setAdapter(mSectionedAdapter);
 
-			pDialog.dismiss();
 		}
 	}
 

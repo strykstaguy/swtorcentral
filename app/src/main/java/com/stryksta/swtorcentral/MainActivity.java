@@ -13,9 +13,11 @@ import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -29,22 +31,20 @@ import android.widget.Toast;
 import android.widget.ExpandableListView.OnChildClickListener;
 
 import com.stryksta.swtorcentral.adapters.CharacterDrawerAdapter;
-import com.stryksta.swtorcentral.drawer.DrawerItem;
-import com.stryksta.swtorcentral.drawer.DrawerProfile;
 import com.stryksta.swtorcentral.util.database.CharacterDatabase;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
 	// Drawer
-	private DrawerFrameLayout mDrawerLayout;
-	private ListView mDrawerList;
-	
-	private LinearLayout mDrawerView;
 	private ActionBarDrawerToggle mDrawerToggle;
-	
+    private DrawerLayout mDrawerLayout;
+    private Toolbar mToolbar;
+    private NavigationView mNavigationView;
 	private CharSequence mDrawerTitle;
+
+
 	private CharSequence mTitle;
 	private String mUserCharacter;
 	private String mUserCharacterLegacy;
@@ -55,7 +55,7 @@ public class MainActivity extends ActionBarActivity {
 	ArrayList<String> mCharacterArray = new ArrayList<String>();
 	List<String> mCharacterTitles;
     HashMap<String, List<String>> mCharacterDetails;
-    private Toolbar mToolbar;
+
 	SessionManager session;
 	
 	private static final int ADD_PARTICIPANT = 1120;
@@ -80,8 +80,8 @@ public class MainActivity extends ActionBarActivity {
 		 
 		//Start Drawer
 		mTitle = mDrawerTitle = getTitle();
-	    mDrawerLayout = (DrawerFrameLayout) findViewById(R.id.drawer_layout);
-
+	    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mNavigationView = (NavigationView) findViewById(R.id.navigation);
 
         // between the sliding drawer and the action bar app icon
         mDrawerToggle = new ActionBarDrawerToggle(
@@ -90,7 +90,7 @@ public class MainActivity extends ActionBarActivity {
                 mToolbar,  /* toolbar */
                 R.string.drawer_open,  /* "open drawer" description for accessibility */
                 R.string.drawer_close  /* "close drawer" description for accessibility */
-                ) {
+        ) {
             public void onDrawerClosed(View view) {
                 getSupportActionBar().setTitle(mTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
@@ -102,152 +102,74 @@ public class MainActivity extends ActionBarActivity {
             }
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-        mDrawerLayout.closeDrawer();
+        mDrawerToggle.syncState();
 
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_feed))
-                        .setTextPrimary(getString(R.string.draweritem1))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ReaderActivity(), "Reader");
-                                mDrawerLayout.closeDrawer();
-                            }
-                        })
-        );
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_database))
-                        .setTextPrimary(getString(R.string.draweritem2))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                Intent serverIntent = new Intent(MainActivity.this, ServerActivity.class);
-                                startActivity(serverIntent);
-                            }
-                        })
-        );
+        mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                menuItem.setChecked(true);
+                mDrawerLayout.closeDrawers();
 
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_datacron))
-                        .setTextPrimary(getString(R.string.draweritem3))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new DatacronActivity(), "Datacron");
-                                mDrawerLayout.closeDrawer();
-                            }
-                        })
-        );
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_item_1: {
+                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ReaderActivity(), "Reader");
+                        break;
+                    }
+                    case R.id.navigation_item_2: {
+                        Intent serverIntent = new Intent(MainActivity.this, ServerActivity.class);
+                        startActivity(serverIntent);
+                        break;
+                    }
+                    case R.id.navigation_item_3: {
+                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new DatacronActivity(), "Datacron");
+                        break;
+                    }
+                    case R.id.navigation_item_4: {
+                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ClassesActivity(), "Classes");
+                        break;
+                    }
+                    case R.id.navigation_item_5: {
+                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new FactionFragment(), "Faction");
+                        break;
+                    }
 
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_shield))
-                        .setTextPrimary(getString(R.string.draweritem4))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ClassesActivity(), "Classes");
-                                mDrawerLayout.closeDrawer();
-                            }
-                        })
-        );
+                    case R.id.navigation_item_6: {
+                        Intent eventIntent = new Intent(MainActivity.this, EventsActivity.class);
+                        startActivity(eventIntent);
+                        break;
+                    }
+                    case R.id.navigation_item_7: {
+                        Intent characterIntent = new Intent(MainActivity.this, CharacterActivity.class);
+                        startActivity(characterIntent);
+                        break;
+                    }
+                    case R.id.navigation_item_8: {
+                        Intent achievementIntent = new Intent(MainActivity.this, AchievementActivity.class);
+                        startActivity(achievementIntent);
+                        break;
+                    }
+                    case R.id.navigation_item_9: {
+                        Intent tutorialIntent = new Intent(MainActivity.this, TutorialActivity.class);
+                        startActivity(tutorialIntent);
+                        break;
+                    }
 
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_progression))
-                        .setTextPrimary(getString(R.string.draweritem5))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new FactionFragment(), "Faction");
-                                mDrawerLayout.closeDrawer();
-                            }
-                        })
-        );
+                    case R.id.navigation_sub_item_1: {
+                        Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
+                        startActivity(settingsIntent);
+                        break;
+                    }
 
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_calendar_month))
-                        .setTextPrimary(getString(R.string.draweritem6))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                Intent eventIntent = new Intent(MainActivity.this, EventsActivity.class);
-                                startActivity(eventIntent);
-                            }
-                        })
-        );
+                    case R.id.navigation_sub_item_2: {
+                        Intent testIntent = new Intent(MainActivity.this, TestRecycleActivity.class);
+                        startActivity(testIntent);
+                        break;
+                    }
+                }
 
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_users))
-                        .setTextPrimary(getString(R.string.draweritem7))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                Intent characterIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                                startActivity(characterIntent);
-                            }
-                        })
-        );
-
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_achievement))
-                        .setTextPrimary(getString(R.string.draweritem8))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                Intent achievementIntent = new Intent(MainActivity.this, AchievementActivity.class);
-                                startActivity(achievementIntent);
-                            }
-                        })
-        );
-
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_book))
-                        .setTextPrimary(getString(R.string.draweritem9))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                Intent tutorialIntent = new Intent(MainActivity.this, TutorialActivity.class);
-                                startActivity(tutorialIntent);
-                            }
-                        })
-        );
-
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_gear))
-                        .setTextPrimary(getString(R.string.draweritem10))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
-                                startActivity(settingsIntent);
-                            }
-                        })
-        );
-
-        mDrawerLayout.addItem(
-                new DrawerItem()
-                        .setImage(getResources().getDrawable(R.drawable.ic_action_gear))
-                        .setTextPrimary(getString(R.string.draweritem11))
-                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
-                            public void onClick(DrawerItem drawerItem, int id, int position) {
-                                Intent testIntent = new Intent(MainActivity.this, TestRecycleActivity.class);
-                                startActivity(testIntent);
-                            }
-                        })
-        );
-
-        mDrawerLayout.setProfile(
-                new DrawerProfile()
-                        .setAvatar(getResources().getDrawable(R.drawable.ic_action_user))
-                        .setBackground(getResources().getDrawable(R.color.gray_23))
-                        .setName(getString(R.string.test_profile_name))
-                        .setDescription(getString(R.string.test_profile_desc))
-                        .setOnProfileClickListener(new DrawerProfile.OnProfileClickListener() {
-                            public void onClick(DrawerProfile drawerProfile) {
-                                Intent serverIntent = new Intent(MainActivity.this, ServerActivity.class);
-                                startActivity(serverIntent);
-                            }
-                        })
-        );
+                return true;
+            }
+        });
 
         if (savedInstanceState == null) {
             //selectItem(0);
@@ -379,7 +301,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
-        mDrawerToggle.syncState();
+        //mDrawerToggle.syncState();
     }
 
     @Override

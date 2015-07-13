@@ -17,4 +17,9 @@
         <item name="windowActionBar">false</item>
     </style>
 
+    <style name="MyTheme" extends="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
 </resources>

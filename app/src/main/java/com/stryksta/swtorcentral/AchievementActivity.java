@@ -5,11 +5,12 @@ import com.stryksta.swtorcentral.util.FragmentUtils;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
  
-public class AchievementActivity extends ActionBarActivity {
+public class AchievementActivity extends AppCompatActivity {
     String mTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

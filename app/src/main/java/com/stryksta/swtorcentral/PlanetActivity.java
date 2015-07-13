@@ -6,11 +6,12 @@ import com.stryksta.swtorcentral.util.database.PlanetDatabase;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
-public class PlanetActivity extends ActionBarActivity {
+public class PlanetActivity extends AppCompatActivity {
 	private String planetText;
 	private String factionText;
 	private String typeText;

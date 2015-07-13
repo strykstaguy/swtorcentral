@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.data.AddCharacterItem;
 import com.stryksta.swtorcentral.util.database.CharacterDatabase;
 import com.stryksta.swtorcentral.util.FloatingActionButton;
@@ -15,7 +14,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -25,14 +25,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import com.rengwuxian.materialedittext.MaterialEditText;
 import android.widget.NumberPicker;
-import android.widget.Spinner;
 import android.widget.Toast;
  
-public class CharacterAddActivity extends ActionBarActivity implements OnItemSelectedListener {
+public class CharacterAddActivity extends AppCompatActivity implements OnItemSelectedListener {
 	private CharacterDatabase db;
 	LinkedHashMap<String, Integer> genderItem = new LinkedHashMap<String, Integer>();
 	LinkedHashMap<String, Integer> raceItem = new LinkedHashMap<String, Integer>();
@@ -197,26 +194,27 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 
         characterClass.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(CharacterAddActivity.this)
-                    .title("Classes")
-                    .items(list)
-                    .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                        public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                            characterClass.setText(text);
-                            cClass = classItem.get(text);
+                AlertDialog.Builder alertBuilder = new AlertDialog.Builder(CharacterAddActivity.this)
+                        .setTitle("Classes")
+                        .setItems(list, new DialogInterface.OnClickListener() {
 
-                            addAdvancedClasses(classItem.get(text));
-                        }
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(CharacterAddActivity.this, list[which], Toast.LENGTH_SHORT).show();
+                                //characterClass.setText(text);
+                                // = classItem.get(text);
 
-                    })
-                    .build()
-                    .show();
+                                //addAdvancedClasses(classItem.get(text));
+                            }
+                        });
+
+                alertBuilder.create();
+                alertBuilder.show();
             }
         });
-
         db.close();
-	}
-	
+    }
+
 	public void addAdvancedClasses(int classid) {
 		CharacterDatabase db = new CharacterDatabase(this);
 		advancedclassItem = db.getAdvancedClasses(classid);
@@ -225,19 +223,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 
         characterAdvancedClass.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(CharacterAddActivity.this)
-                        .title("Advanced Classes")
-                        .items(list)
-                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                characterAdvancedClass.setText(text);
-                                cAdvanced = advancedclassItem.get(text);
-                                addAdvancedClasses(advancedclassItem.get(text));
-                            }
 
-                        })
-                        .build()
-                        .show();
             }
         });
 
@@ -252,19 +238,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 
         characterGender.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(CharacterAddActivity.this)
-                        .title("Gender")
-                        .items(list)
-                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                characterGender.setText(text);
-                                cGender = genderItem.get(text);
-                                addAdvancedClasses(genderItem.get(text));
-                            }
 
-                        })
-                        .build()
-                        .show();
             }
         });
 
@@ -279,19 +253,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 
         characterRace.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(CharacterAddActivity.this)
-                        .title("Races")
-                        .items(list)
-                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                characterRace.setText(text);
-                                cRace = raceItem.get(text);
-                                addAdvancedClasses(raceItem.get(text));
-                            }
 
-                        })
-                        .build()
-                        .show();
             }
         });
 
@@ -306,18 +268,7 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 
         characterAlignment.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(CharacterAddActivity.this)
-                        .title("Alignment")
-                        .items(list)
-                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                characterAlignment.setText(text);
-                                cAlignment = alignmentItem.get(text);
-                            }
 
-                        })
-                        .build()
-                        .show();
             }
         });
 
@@ -332,52 +283,19 @@ public class CharacterAddActivity extends ActionBarActivity implements OnItemSel
 
         characterCrewSkill1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(CharacterAddActivity.this)
-                        .title("Crew Skill 1")
-                        .items(list)
-                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                characterCrewSkill1.setText(text);
-                                cCrewSkill1 = crewSkillsclassItem.get(text);
-                            }
 
-                        })
-                        .build()
-                        .show();
             }
         });
 
         characterCrewSkill2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(CharacterAddActivity.this)
-                        .title("Crew Skill 2")
-                        .items(list)
-                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                characterCrewSkill2.setText(text);
-                                cCrewSkill2 = crewSkillsclassItem.get(text);
-                            }
 
-                        })
-                        .build()
-                        .show();
             }
         });
 
         characterCrewSkill3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(CharacterAddActivity.this)
-                        .title("Crew Skill 3")
-                        .items(list)
-                        .itemsCallbackSingleChoice(-1, new MaterialDialog.ListCallback() {
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                characterCrewSkill3.setText(text);
-                                cCrewSkill3 = crewSkillsclassItem.get(text);
-                            }
 
-                        })
-                        .build()
-                        .show();
             }
         });
 

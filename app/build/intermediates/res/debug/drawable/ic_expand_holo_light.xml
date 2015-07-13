@@ -14,4 +14,4 @@
     android:exitFadeDuration="@android:integer/config_mediumAnimTime">
     <item
         android:drawable="@drawable/ic_expand_small_holo_light" />
-</selector><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/drawable/ic_expand_holo_light.xml -->
+</selector><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/drawable/ic_expand_holo_light.xml -->

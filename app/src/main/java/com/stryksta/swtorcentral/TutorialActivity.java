@@ -9,6 +9,7 @@ import com.stryksta.swtorcentral.util.database.TutorialDatabase;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -17,7 +18,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
-public class TutorialActivity extends ActionBarActivity {
+public class TutorialActivity extends AppCompatActivity {
 	private TutorialDatabase db;
 	private ArrayList<TutorialItem> datacrons;
 	TutorialAdapter tutorialAdapter;

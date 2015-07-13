@@ -2,11 +2,12 @@ package com.stryksta.swtorcentral;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
  
-public class BlankActivity extends ActionBarActivity {
+public class BlankActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
 

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
@@ -28,7 +29,7 @@ import com.stryksta.swtorcentral.util.database.CompanionDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionGiftsDatabase;
 import com.stryksta.swtorcentral.util.database.DisciplinesDatabase;
 
-public class AdvancedClassActivity extends ActionBarActivity implements ObservableScrollViewCallbacks {
+public class AdvancedClassActivity extends AppCompatActivity implements ObservableScrollViewCallbacks {
     private static final float MAX_TEXT_SCALE_DELTA = 0.3f;
     private static final boolean TOOLBAR_IS_STICKY = true;
 

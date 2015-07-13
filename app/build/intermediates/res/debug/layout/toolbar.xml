@@ -8,4 +8,4 @@
     android:minHeight="?attr/actionBarSize"
     app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    android:background="@color/swtor_blue"/><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/layout/toolbar.xml -->
+    android:background="@color/swtor_blue"/><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/toolbar.xml -->

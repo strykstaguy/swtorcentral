@@ -26,4 +26,4 @@
         android:drawable="@drawable/spinner_ab_focused_swtor" />
     <item android:drawable="@drawable/spinner_ab_default_swtor" />
 </selector>
-<!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/drawable/spinner_background_ab_swtor.xml -->
+<!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/drawable/spinner_background_ab_swtor.xml -->

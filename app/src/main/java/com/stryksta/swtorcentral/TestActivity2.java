@@ -3,13 +3,14 @@ package com.stryksta.swtorcentral;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
 import com.stryksta.swtorcentral.util.FragmentUtils;
 
-public class TestActivity2 extends ActionBarActivity {
+public class TestActivity2 extends AppCompatActivity {
 
     private Toolbar mToolbar;
 

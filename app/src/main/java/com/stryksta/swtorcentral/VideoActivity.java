@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.Window;
@@ -14,10 +15,7 @@ import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-import com.afollestad.materialdialogs.MaterialDialog;
-
-public class VideoActivity extends ActionBarActivity {
-    MaterialDialog pDialog;
+public class VideoActivity extends AppCompatActivity {
 	VideoView videoView;
 
 	private int position = 0;
@@ -61,12 +59,6 @@ public class VideoActivity extends ActionBarActivity {
  		protected void onPreExecute() {
  			super.onPreExecute();
  			// Create a progressbar
-            pDialog = new MaterialDialog.Builder(VideoActivity.this)
-                    .title(videoTitle)
-                    .customView(R.layout.progress_alert)
-                    .build();
-            pDialog.show();
-
  		}
 
  		@Override
@@ -91,7 +83,7 @@ public class VideoActivity extends ActionBarActivity {
  				videoView.setOnPreparedListener(new OnPreparedListener() {
  					// Close the progress bar and play the video
  					public void onPrepared(MediaPlayer mp) {
- 						pDialog.dismiss();
+ 						//pDialog.dismiss();
  						videoView.requestFocus();
  						
  						videoView.seekTo(position);
@@ -105,7 +97,7 @@ public class VideoActivity extends ActionBarActivity {
  				    }
  				});
  			} catch (Exception e) {
- 				pDialog.dismiss();
+ 				//pDialog.dismiss();
  				Log.e("Error", e.getMessage());
  				e.printStackTrace();
  			}

@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -25,7 +26,7 @@ import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ListView;
 import android.widget.Toast;
  
-public class CharacterActivity extends ActionBarActivity {
+public class CharacterActivity extends AppCompatActivity {
 	ArrayList<CharacterItem> characterArray = new ArrayList<CharacterItem>();
 	private static final int ADD_PARTICIPANT = 1121;
     private Toolbar mToolbar;

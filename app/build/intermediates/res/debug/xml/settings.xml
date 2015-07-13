@@ -24,4 +24,4 @@
             android:title="@string/pref_sync_frequency" />
     </PreferenceCategory>
  
-</PreferenceScreen><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/xml/settings.xml -->
+</PreferenceScreen><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/xml/settings.xml -->

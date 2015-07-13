@@ -3,4 +3,4 @@
     android:shape="rectangle">
     <corners android:radius="@dimen/swtor_button_corner_radius" />
     <solid android:color="@color/material_transparent" />
-</shape><!-- From: file:/C:/Users/e9900375/Desktop/SWTORCentral/app/src/main/res/drawable/swtor_button_gray_pressed.xml -->
+</shape><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/drawable/swtor_button_gray_pressed.xml -->

@@ -8,37 +8,37 @@ package mobi.parchment;
 
 public final class R {
 	public static final class attr {
-		public static final int cellSpacing = 0x7f010056;
-		public static final int gravity = 0x7f010050;
-		public static final int isCircularScroll = 0x7f010057;
-		public static final int isViewPager = 0x7f01005a;
-		public static final int numberOfViewsPerCell = 0x7f01004f;
-		public static final int orientation = 0x7f010055;
-		public static final int ratio = 0x7f01004e;
-		public static final int selectOnSnap = 0x7f010059;
-		public static final int selectWhileScrolling = 0x7f01005c;
-		public static final int snapPosition = 0x7f01005b;
-		public static final int snapToPosition = 0x7f010058;
+		public static final int cellSpacing = 0x7f01006a;
+		public static final int gravity = 0x7f010064;
+		public static final int isCircularScroll = 0x7f01006b;
+		public static final int isViewPager = 0x7f01006e;
+		public static final int numberOfViewsPerCell = 0x7f010063;
+		public static final int orientation = 0x7f010069;
+		public static final int ratio = 0x7f010062;
+		public static final int selectOnSnap = 0x7f01006d;
+		public static final int selectWhileScrolling = 0x7f010070;
+		public static final int snapPosition = 0x7f01006f;
+		public static final int snapToPosition = 0x7f01006c;
 	}
 	public static final class id {
-		public static final int bottom = 0x7f0a0028;
-		public static final int center = 0x7f0a0031;
-		public static final int end = 0x7f0a002d;
-		public static final int horizontal = 0x7f0a002f;
-		public static final int left = 0x7f0a0029;
-		public static final int onScreen = 0x7f0a0032;
-		public static final int right = 0x7f0a002a;
-		public static final int start = 0x7f0a0033;
-		public static final int top = 0x7f0a002b;
-		public static final int vertical = 0x7f0a0030;
+		public static final int bottom = 0x7f0a002f;
+		public static final int center = 0x7f0a0030;
+		public static final int end = 0x7f0a0035;
+		public static final int horizontal = 0x7f0a0040;
+		public static final int left = 0x7f0a0039;
+		public static final int onScreen = 0x7f0a0042;
+		public static final int right = 0x7f0a003a;
+		public static final int start = 0x7f0a003b;
+		public static final int top = 0x7f0a003c;
+		public static final int vertical = 0x7f0a0041;
 	}
 	public static final class styleable {
-		public static final int[] GridPatternView = { 0x7f01004e };
+		public static final int[] GridPatternView = { 0x7f010062 };
 		public static final int GridPatternView_ratio = 0;
-		public static final int[] GridView = { 0x7f01004f, 0x7f010050 };
+		public static final int[] GridView = { 0x7f010063, 0x7f010064 };
 		public static final int GridView_gravity = 1;
 		public static final int GridView_numberOfViewsPerCell = 0;
-		public static final int[] ListView = { 0x7f010055, 0x7f010056, 0x7f010057, 0x7f010058, 0x7f010059, 0x7f01005a, 0x7f01005b, 0x7f01005c };
+		public static final int[] ListView = { 0x7f010069, 0x7f01006a, 0x7f01006b, 0x7f01006c, 0x7f01006d, 0x7f01006e, 0x7f01006f, 0x7f010070 };
 		public static final int ListView_cellSpacing = 1;
 		public static final int ListView_isCircularScroll = 2;
 		public static final int ListView_isViewPager = 5;

@@ -2,6 +2,7 @@ package com.stryksta.swtorcentral;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -19,7 +20,7 @@ import java.util.List;
 
 import static android.support.v7.widget.LinearLayoutManager.*;
 
-public class TestRecycleActivity extends ActionBarActivity {
+public class TestRecycleActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
     private RecyclerView mRecyclerView;
