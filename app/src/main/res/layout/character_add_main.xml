@@ -25,7 +25,8 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dim_5">
 
             <LinearLayout
                 android:layout_height="wrap_content"
@@ -34,21 +35,14 @@
                 android:orientation="horizontal"
                 android:padding="5.0dip">
 
-                <com.stryksta.swtorcentral.util.FloatLabelLayout
-                    android:layout_height="wrap_content"
+                <EditText
+                    android:id="@+id/characterName"
                     android:layout_width="fill_parent"
-                    app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-                    <EditText
-                        android:id="@+id/characterName"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="@string/character_name_hint"
-                        android:singleLine="true"
-                        android:inputType="textNoSuggestions" />
-
-                </com.stryksta.swtorcentral.util.FloatLabelLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/character_name_hint"
+                    android:singleLine="true"
+                    android:inputType="textNoSuggestions" />
 
             </LinearLayout>
 
@@ -58,10 +52,10 @@
                 android:orientation="vertical"
                 android:padding="5.0dip" >
 
-                <com.stryksta.swtorcentral.util.FloatLabelLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_characterLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/characterLevel"
@@ -73,7 +67,7 @@
                         android:inputType="number"
                         android:focusable="false" />
 
-                </com.stryksta.swtorcentral.util.FloatLabelLayout>
+                </android.support.design.widget.TextInputLayout>
         
             </LinearLayout>
         </LinearLayout>
@@ -85,11 +79,10 @@
             android:padding="5.0dip"
             android:gravity="center_vertical">
 
-            <com.stryksta.swtorcentral.util.FloatLabelLayout
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_characterLegacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/characterLegacy"
@@ -99,7 +92,8 @@
                     android:gravity="center"
                     android:inputType="textNoSuggestions"
                     android:hint="@string/character_legacy_hint" />
-            </com.stryksta.swtorcentral.util.FloatLabelLayout>
+
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -110,21 +104,14 @@
         android:orientation="horizontal"
         android:padding="5.0dip" >
 
-        <com.stryksta.swtorcentral.util.FloatLabelLayout
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/characterClass"
             android:layout_width="match_parent"
-            app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-            <EditText
-                android:id="@+id/characterClass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:cursorVisible="false"
-                android:inputType="textNoSuggestions"
-                android:focusable="false"
-                android:hint="@string/character_class_hint" />
-
-        </com.stryksta.swtorcentral.util.FloatLabelLayout>
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:inputType="textNoSuggestions"
+            android:focusable="false"
+            android:hint="@string/character_class_hint" />
     </LinearLayout>
 
         <LinearLayout
@@ -133,22 +120,15 @@
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
 
-            <com.stryksta.swtorcentral.util.FloatLabelLayout
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/characterAdvancedClass"
                 android:layout_width="match_parent"
-                app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-                <EditText
-                    android:id="@+id/characterAdvancedClass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/character_advancedclass_hint"
-                    android:singleLine="true"
-                    android:cursorVisible="false"
-                    android:inputType="textNoSuggestions"
-                    android:focusable="false" />
-
-            </com.stryksta.swtorcentral.util.FloatLabelLayout>
+                android:layout_height="wrap_content"
+                android:hint="@string/character_advancedclass_hint"
+                android:singleLine="true"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false" />
 
         </LinearLayout>
 
@@ -158,20 +138,14 @@
             android:orientation="horizontal"
             android:padding="5.0dip" >
 
-            <com.stryksta.swtorcentral.util.FloatLabelLayout
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/characterGender"
                 android:layout_width="match_parent"
-                app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-                <EditText
-                    android:id="@+id/characterGender"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:cursorVisible="false"
-                    android:inputType="textNoSuggestions"
-                    android:focusable="false"
-                    android:hint="@string/character_gender_hint" />
-            </com.stryksta.swtorcentral.util.FloatLabelLayout>
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_gender_hint" />
 
         </LinearLayout>
 
@@ -180,11 +154,6 @@
         	android:layout_height="wrap_content"
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
-
-            <com.stryksta.swtorcentral.util.FloatLabelLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
 
             <EditText
                 android:id="@+id/characterRace"
@@ -195,8 +164,6 @@
                 android:focusable="false"
                 android:hint="@string/character_race_hint" />
 
-            </com.stryksta.swtorcentral.util.FloatLabelLayout>
-
         </LinearLayout>
         
         <LinearLayout
@@ -205,20 +172,14 @@
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
 
-            <com.stryksta.swtorcentral.util.FloatLabelLayout
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/characterAlignment"
                 android:layout_width="match_parent"
-                app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-                <EditText
-                    android:id="@+id/characterAlignment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:cursorVisible="false"
-                    android:inputType="textNoSuggestions"
-                    android:focusable="false"
-                    android:hint="@string/character_alignment_hint" />
-            </com.stryksta.swtorcentral.util.FloatLabelLayout>
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_alignment_hint" />
             
         </LinearLayout>
         
@@ -228,20 +189,14 @@
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
 
-            <com.stryksta.swtorcentral.util.FloatLabelLayout
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/characterCrewSkill1"
                 android:layout_width="match_parent"
-                app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-                <EditText
-                    android:id="@+id/characterCrewSkill1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:cursorVisible="false"
-                    android:inputType="textNoSuggestions"
-                    android:focusable="false"
-                    android:hint="@string/character_crew1_hint" />
-            </com.stryksta.swtorcentral.util.FloatLabelLayout>
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_crew1_hint" />
             
         </LinearLayout>
         
@@ -251,20 +206,14 @@
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
 
-            <com.stryksta.swtorcentral.util.FloatLabelLayout
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/characterCrewSkill2"
                 android:layout_width="match_parent"
-                app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-                <EditText
-                    android:id="@+id/characterCrewSkill2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:cursorVisible="false"
-                    android:inputType="textNoSuggestions"
-                    android:focusable="false"
-                    android:hint="@string/character_crew2_hint" />
-            </com.stryksta.swtorcentral.util.FloatLabelLayout>
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_crew2_hint" />
             
         </LinearLayout>
         
@@ -274,35 +223,23 @@
         	android:orientation="horizontal"
         	android:padding="5.0dip" >
 
-            <com.stryksta.swtorcentral.util.FloatLabelLayout
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/characterCrewSkill3"
                 android:layout_width="match_parent"
-                app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-                <EditText
-                    android:id="@+id/characterCrewSkill3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:cursorVisible="false"
-                    android:inputType="textNoSuggestions"
-                    android:focusable="false"
-                    android:hint="@string/character_crew3_hint" />
-            </com.stryksta.swtorcentral.util.FloatLabelLayout>
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_crew3_hint" />
             
         </LinearLayout>
 
-        <com.stryksta.swtorcentral.util.FloatLabelLayout
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/characterDescription"
             android:layout_width="match_parent"
-            app:floatLabelTextAppearance="@style/TextAppearance.SWTOR.FloatLabel">
-
-            <EditText
-                android:id="@+id/characterDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:hint="@string/character_description_hint" />
-        </com.stryksta.swtorcentral.util.FloatLabelLayout>
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="@string/character_description_hint" />
 
 
     </LinearLayout>

@@ -7,7 +7,7 @@ public class RssItem {
 	private String description;
 	private String image;
 	private String pubDate;
-		
+	private String category;
 		
 	public String getTitle() {
 		return title;
@@ -48,10 +48,18 @@ public class RssItem {
 	public void setPubDate(String pubDate) {
 		this.pubDate = pubDate;
 	}
-	
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	@Override
 	public String toString() {
-		return "Date: " + pubDate;
+		return "Category: " + category;
 	}
 	
 }

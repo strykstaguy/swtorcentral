@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<style name="Theme.SWTORCentral" parent="Base.Theme.SWTORCentral">
+</style>
+
+<style name="Base.Theme.SWTORCentral" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimary</item>
+    <item name="colorAccent">@color/swtor_blue</item>
+    <item name="android:windowBackground">@color/background</item>
+    <item name="android:textColorPrimary">@color/text</item>
+</style>
+
+<style name="Widget.CardContent" parent="android:Widget">
+    <item name="android:paddingLeft">16dp</item>
+    <item name="android:paddingRight">16dp</item>
+    <item name="android:paddingTop">24dp</item>
+    <item name="android:paddingBottom">24dp</item>
+    <item name="android:orientation">vertical</item>
+</style>
+
+</resources>

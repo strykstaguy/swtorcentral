@@ -1,5 +1,7 @@
 package com.stryksta.swtorcentral.util;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -22,6 +24,7 @@ public class RssParseHandler extends DefaultHandler {
 	
 	String LinkType;
 	String LinkRel;
+	String category;
 	
 	public RssParseHandler() {
 		rssItems = new ArrayList<RssItem>();
@@ -49,6 +52,9 @@ public class RssParseHandler extends DefaultHandler {
 	    } else if ("link".equals(qName)) {
 	        LinkType = attributes.getValue("rel");
 	        LinkRel = attributes.getValue("href");
+	    } else if ("category".equals(qName)) {
+			category = attributes.getValue("term");
+            //Log.d("SWTORCentral", category.toString());
 	    }
 	}
 
@@ -71,7 +77,11 @@ public class RssParseHandler extends DefaultHandler {
 			parsingDate = false;
 			if (currentItem != null)
 			currentItem.setPubDate(currentDateSb.toString());
-		}
+        } else if ("category".equals(qName)) {
+            if (currentItem != null)
+            currentItem.setCategory(category.toString());
+            //Log.d("SWTORCentral", category.toString());
+        }
 	}
 
 	@Override
@@ -94,10 +104,7 @@ public class RssParseHandler extends DefaultHandler {
 		    } else if (LinkType.equals("enclosure")){
 		    	currentItem.setImage(LinkRel);
 		    }
-            
          }
-		
-		
 	}
 	
 	

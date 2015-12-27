@@ -1,0 +1,2 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#20000000"
+    android:drawable="@drawable/card_foreground_selector" /><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/drawable-v21/card_foreground.xml -->

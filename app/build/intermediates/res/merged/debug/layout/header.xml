@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="@color/gray_23" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="#85000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dim_10"
+        android:paddingLeft="@dimen/dim_10"
+        android:paddingRight="@dimen/dim_10"
+        android:paddingTop="@dimen/dim_10">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/headerText"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/pl_tython" />
+
+
+        <LinearLayout
+            android:id="@+id/headerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@color/characterlogin"
+                android:groupIndicator="@null"
+                android:divider="#A4C739"
+                android:dividerHeight="0.5dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/header.xml -->

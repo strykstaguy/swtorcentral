@@ -200,11 +200,11 @@ public class CharacterAddActivity extends AppCompatActivity implements OnItemSel
 
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(CharacterAddActivity.this, list[which], Toast.LENGTH_SHORT).show();
-                                //characterClass.setText(text);
+                                //Toast.makeText(CharacterAddActivity.this, list[which], Toast.LENGTH_SHORT).show();
+                                characterClass.setText(list[which]);
                                 // = classItem.get(text);
 
-                                //addAdvancedClasses(classItem.get(text));
+                                addAdvancedClasses(classItem.get(list[which]));
                             }
                         });
 

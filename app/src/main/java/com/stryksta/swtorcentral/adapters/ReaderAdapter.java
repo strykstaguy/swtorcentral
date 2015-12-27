@@ -2,8 +2,10 @@ package com.stryksta.swtorcentral.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,13 +37,18 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         RssItem readerRow = readerItems.get(position);
         viewHolder.txtTitle.setText(readerRow.getTitle());
-        viewHolder.imgBackground.setImageResource(R.drawable.placeholder);
+        viewHolder.txtNewsCategory.setText(readerRow.getCategory());
+        viewHolder.txtDescription.setText(readerRow.getDescription());
 
+        //Log.d("SWTORCentral", readerRow.getCategory());
+        //viewHolder.imgBackground.setImageResource(R.drawable.placeholder);
+        /*
         Picasso.with(mContext)
                 .load(readerRow.getImage())
                 .into(viewHolder.imgBackground);
 
         viewHolder.imgBackground.setTag(readerRow.getImage());
+        */
     }
 
     @Override
@@ -52,12 +59,18 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView txtTitle;
+        public TextView txtNewsCategory;
+        public TextView txtDescription;
+        public Button btnMore;
         public ImageView imgBackground;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
-            imgBackground = (ImageView) itemView.findViewById(R.id.imgBackground);
+            txtNewsCategory = (TextView) itemView.findViewById(R.id.txtNewsCategory);
+            txtDescription = (TextView) itemView.findViewById(R.id.txtDescription);
+            btnMore = (Button) itemView.findViewById(R.id.read_more);
+            //imgBackground = (ImageView) itemView.findViewById(R.id.imgBackground);
         }
     }
 }

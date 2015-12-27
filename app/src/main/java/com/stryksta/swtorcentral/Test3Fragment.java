@@ -2,20 +2,15 @@ package com.stryksta.swtorcentral;
 
 
 import android.app.Fragment;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.stryksta.swtorcentral.adapters.AbilityDetailAdapter;
-import com.stryksta.swtorcentral.adapters.ClassesAdapter;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
-import com.stryksta.swtorcentral.data.EventItem;
 import com.stryksta.swtorcentral.util.NonScrollListView;
 import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
-import com.stryksta.swtorcentral.util.database.DisciplinesDatabase;
 
 import java.util.ArrayList;
 

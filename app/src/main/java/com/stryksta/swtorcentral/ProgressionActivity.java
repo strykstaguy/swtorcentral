@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.adapters.ProgressionAdapter;
 import com.stryksta.swtorcentral.data.ProgressionItem;
-import com.stryksta.swtorcentral.util.TimelineType;
+import com.stryksta.swtorcentral.util.timeline.TimelineType;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;

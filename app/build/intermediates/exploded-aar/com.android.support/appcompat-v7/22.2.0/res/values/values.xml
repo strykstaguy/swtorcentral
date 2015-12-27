@@ -1393,7 +1393,7 @@
     </style>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
     </style>
-    <!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/values/themes.xml -->
+    <!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/values/styles.xml -->
     <eat-comment/>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>

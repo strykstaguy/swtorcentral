@@ -4,12 +4,15 @@ import com.stryksta.swtorcentral.util.FragmentUtils;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
- 
+import android.widget.TextView;
+
 public class AchievementActivity extends AppCompatActivity {
     String mTitle;
     @Override
@@ -22,7 +25,11 @@ public class AchievementActivity extends AppCompatActivity {
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        
+
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsed_toolbar);
+        collapsingToolbarLayout.setTitle("Achievements");
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
+
         //switchFragment(new Category1Fragment());
         
        // if (savedInstanceState == null) {
@@ -56,10 +63,24 @@ public class AchievementActivity extends AppCompatActivity {
 	    return super.onOptionsItemSelected(item);
 	}
 
+    public void setTitleText(String text) {
+        TextView achievementCat = (TextView) findViewById(R.id.achievementCat);
+        achievementCat.setText(text);
+    }
+
+    public void setCompletedText(String text) {
+        TextView achievementProgress = (TextView) findViewById(R.id.achievementProgress);
+        achievementProgress.setText(text);
+    }
+
+    public void setTotalText(String text) {
+        TextView achievementMax = (TextView) findViewById(R.id.achievementMax);
+        achievementMax.setText(text);
+    }
+
 	public void onBackPressed() {
 		if (getFragmentManager().getBackStackEntryCount() > 1) {
 			getFragmentManager().popBackStack();
-            Fragment trestsdg =  FragmentUtils.getActiveFragment(AchievementActivity.this);
 	    } else {
 	        this.finish();
 	    }

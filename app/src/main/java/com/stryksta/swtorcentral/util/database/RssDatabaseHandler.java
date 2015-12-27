@@ -45,6 +45,7 @@ public void insertNewsInfo(RssItem newsInfo) {
     cv.put("title", newsInfo.getTitle());
     cv.put("link", newsInfo.getLink());
     cv.put("description", newsInfo.getDescription());
+    cv.put("category", newsInfo.getCategory());
     cv.put("image", newsInfo.getImage());
     cv.put("published", getDateTime(newsInfo.getPubDate()));
     //cv.put("published", "2014-05-01 14:09:14");
@@ -68,15 +69,16 @@ public ArrayList<RssItem> getNews() {
             " FROM news", null);
    */
 	
-	Cursor cursor = database.rawQuery("select title, link , description, image FROM news order by published desc", null);
+	Cursor cursor = database.rawQuery("select title, link , description, category, image FROM news order by published desc", null);
 	
     cursor.moveToFirst();
     while (!cursor.isAfterLast()) {
     	RssItem newsInfo = new RssItem();
         	newsInfo.setTitle(cursor.getString(0));
-        	newsInfo.setLink(cursor.getString(1));
-        	newsInfo.setDescription(cursor.getString(2));
-        	newsInfo.setImage(cursor.getString(3));
+        newsInfo.setLink(cursor.getString(1));
+        newsInfo.setDescription(cursor.getString(2));
+        newsInfo.setCategory(cursor.getString(3));
+			newsInfo.setImage(cursor.getString(4));
         	NewsInfoList.add(newsInfo);
         cursor.moveToNext();
     }

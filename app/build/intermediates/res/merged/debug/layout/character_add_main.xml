@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/toolbar"/>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1" >
+
+    <LinearLayout
+        android:id="@+id/CharacterAddLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dim_5">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="5.0dip">
+
+                <EditText
+                    android:id="@+id/characterName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/character_name_hint"
+                    android:singleLine="true"
+                    android:inputType="textNoSuggestions" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5.0dip" >
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_characterLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/characterLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/character_level_hint"
+                        android:singleLine="true"
+                        android:cursorVisible="false"
+                        android:inputType="number"
+                        android:focusable="false" />
+
+                </android.support.design.widget.TextInputLayout>
+        
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5.0dip"
+            android:gravity="center_vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_characterLegacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/characterLegacy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:inputType="textNoSuggestions"
+                    android:hint="@string/character_legacy_hint" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5.0dip" >
+
+        <EditText
+            android:id="@+id/characterClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:inputType="textNoSuggestions"
+            android:focusable="false"
+            android:hint="@string/character_class_hint" />
+    </LinearLayout>
+
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterAdvancedClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/character_advancedclass_hint"
+                android:singleLine="true"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_gender_hint" />
+
+        </LinearLayout>
+
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterRace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_race_hint" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterAlignment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_alignment_hint" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterCrewSkill1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_crew1_hint" />
+            
+        </LinearLayout>
+        
+		<LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterCrewSkill2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_crew2_hint" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:padding="5.0dip" >
+
+            <EditText
+                android:id="@+id/characterCrewSkill3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:inputType="textNoSuggestions"
+                android:focusable="false"
+                android:hint="@string/character_crew3_hint" />
+            
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/characterDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="@string/character_description_hint" />
+
+
+    </LinearLayout>
+ 
+</ScrollView>
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/character_add_main.xml -->

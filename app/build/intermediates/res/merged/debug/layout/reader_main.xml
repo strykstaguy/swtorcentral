@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/readerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none" />
+
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/reader_main.xml -->

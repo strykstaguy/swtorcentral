@@ -1,0 +1,6 @@
+<!-- From: file:/C:/Users/Niek/Desktop/SuperToolTips2/lib/src/main/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2014050123" android:versionName="3.0.0" package="com.nhaarman.supertooltips">
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19"/>
+
+    <application android:allowBackup="true"/>
+
+</manifest>

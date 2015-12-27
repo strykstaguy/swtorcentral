@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/background_light"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsed_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="220dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48.0dip"
+            app:expandedTitleMarginEnd="64.0dip"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            >
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:padding="8.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="64.0dip"
+                    android:layout_height="64.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_action_achievement"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:paddingLeft="8.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_image"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:textSize="18.0sp"
+                        android:textColor="@color/white"
+                        android:id="@+id/achievementCat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drawing" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingRight="8.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:textSize="28.0sp"
+                        android:textColor="@color/white"
+                        android:id="@+id/achievementProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="04" />
+                    <TextView
+                        android:textSize="11.0sp"
+                        android:id="@+id/achievementMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SKILLS" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/achievementframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.design.widget.CoordinatorLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/achievement_main.xml -->

@@ -1,0 +1,306 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ADVimage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:scaleType="fitCenter" />
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="?attr/colorPrimary" />
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_image_height"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/txtAdvDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/text"
+                    android:gravity="center"
+                    android:text="Sages are famed for their wisdom as much as for their powerful healing and defensive skills. In troubled times, a Sage brings together the insight of the past with raw power to change the flow of galactic events."
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/dim_10"
+                android:paddingBottom="@dimen/dim_10"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnDisciplines1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/swtor_button_gray_flat"
+                    android:text="Seer"
+                    android:drawableLeft="@drawable/ic_action_database"
+                    android:textColor="@color/text"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btnDisciplines2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/swtor_button_gray_flat"
+                    android:text="Telekinetics"
+                    android:drawableLeft="@drawable/ic_action_database"
+                    android:textColor="@color/text"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:id="@+id/btnDisciplines3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/swtor_button_gray_flat"
+                    android:text="Balance"
+                    android:drawableLeft="@drawable/ic_action_database"
+                    android:textColor="@color/text"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDetails"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textColor="@color/text"
+                android:background="@color/background"
+                android:text="Details"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/card">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:id="@+id/txtRole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:layout_gravity="left"
+                        android:text="Role:"
+                        android:textSize="14sp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txtRoleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:text="Damage, Healer"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:id="@+id/txtArmor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:layout_gravity="left"
+                        android:text="Armor:"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:gravity="left" />
+
+                    <TextView
+                        android:id="@+id/txtArmorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:text="Light"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:id="@+id/txtWeapons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:layout_gravity="left"
+                        android:text="Weapons:"
+                        android:textSize="14sp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txtWeaponsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:text="Lightsaber"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp" >
+
+                    <TextView
+                        android:id="@+id/txtAttribute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:layout_gravity="left"
+                        android:text="Attribute:"
+                        android:textSize="14sp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/txtAttributeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:text="Willpower"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtCompanions"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textColor="@color/text"
+                android:background="@color/background"
+                android:text="Companions"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background">
+
+                <com.stryksta.swtorcentral.util.NonScrollListView
+                    android:id="@+id/companionsListView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:divider="@color/gray"
+                    android:background="@drawable/card"
+                    android:dividerHeight="1px"
+                    android:clickable="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/toolbar_margin_start">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:minHeight="?attr/actionBarSize"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flexible_space_image_height"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+</FrameLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/advanced_class_main.xml -->

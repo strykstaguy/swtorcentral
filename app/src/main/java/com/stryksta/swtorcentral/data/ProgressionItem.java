@@ -1,6 +1,6 @@
 package com.stryksta.swtorcentral.data;
 
-import com.stryksta.swtorcentral.util.TimelineType;
+import com.stryksta.swtorcentral.util.timeline.TimelineType;
 
 public class ProgressionItem {
 	

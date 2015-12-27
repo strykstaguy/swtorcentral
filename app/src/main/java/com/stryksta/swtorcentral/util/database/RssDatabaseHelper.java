@@ -26,6 +26,7 @@ public void onCreate(SQLiteDatabase db) {
     		                "title TEXT," +
     		                "link TEXT," +
     		                "description TEXT," +
+                            "category TEXT," +
     		                "image TEXT," +
     		                "published DATETIME)";
     db.execSQL(CREATE_RSSS_TABLE);

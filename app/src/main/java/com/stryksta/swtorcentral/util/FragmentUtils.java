@@ -12,7 +12,7 @@ public class FragmentUtils {
         FragmentManager fm = act.getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.setTransition(FragmentTransaction.TRANSIT_NONE);
-        ft.add(containerId, fragment, tag);
+        ft.replace(containerId, fragment, tag);
         ft.addToBackStack(tag);
         ft.commit();
     }

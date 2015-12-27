@@ -5,19 +5,25 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
+import com.stryksta.swtorcentral.adapters.ReaderAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
+import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
-import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 
 public class Category1Fragment extends Fragment{
 	private AchievementsDatabase db;
@@ -28,7 +34,9 @@ public class Category1Fragment extends Fragment{
 	String characterlegacy;
 	
 	ArrayList<AchievementCategoryItem> categories = new ArrayList<AchievementCategoryItem>();
-	AchievementCategoryAdapter achievementAdapter;
+	private AchievementCategoryAdapter mRecycleAdapter;
+	private GridLayoutManager mLayoutManager;
+	private RecyclerView mRecyclerView;
 	View vw_layout;
 	
 	@Override
@@ -52,6 +60,9 @@ public class Category1Fragment extends Fragment{
 
         getActivity().setTitle("Achievements");
 
+		//Set title of category
+		((AchievementActivity)getActivity()).setTitleText("Achievements");
+
       //get user data from session
         HashMap<String, String> user = session.getUserDetails();
         characterName = user.get(SessionManager.KEY_NAME);
@@ -61,27 +72,47 @@ public class Category1Fragment extends Fragment{
         db = new AchievementsDatabase(getActivity());
         categories = db.getCategory1(characterID, characterlegacy);
 
-        AutoMeasureGridView achievementListView = (AutoMeasureGridView) vw_layout.findViewById(R.id.achievementgridview);
-        achievementAdapter = new AchievementCategoryAdapter(getActivity(), categories);
-        achievementListView.setAdapter(achievementAdapter);
-        achievementListView.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-				Category2Fragment category2frag = new Category2Fragment();
-				
-				Bundle args = new Bundle();
-		    	 args.putString("category1", achievementAdapter.getItem(position).getCategory());
-		    	 category2frag.setArguments(args);
-				
-		    	 FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category2frag, "Category2");
+		mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.achievementgridview);
 
-			}});
-        
-     	return vw_layout;
+		if (mRecyclerView != null) {
+			mLayoutManager = new GridLayoutManager(getActivity(), 1, GridLayoutManager.VERTICAL, false);
+			mRecyclerView.setLayoutManager(mLayoutManager);
+		}
+
+		//Set Adapter
+		mRecycleAdapter = new AchievementCategoryAdapter(getActivity(), categories);
+		mRecyclerView.setAdapter(mRecycleAdapter);
+
+		mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+			public void onItemClick(View view, int position) {
+				Category2Fragment category2frag = new Category2Fragment();
+
+				Bundle args = new Bundle();
+				args.putString("category1", categories.get(position).getCategory());
+				args.putInt("category1_completed", categories.get(position).getCompleted());
+				args.putInt("category1_total", categories.get(position).getTotal());
+				category2frag.setArguments(args);
+
+				FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category2frag, "Category2");
+			}
+
+			public void onItemLongClick(View view, int position) {
+
+			}
+		}));
+
+		return vw_layout;
 	}
 	
 	@Override
 	public void onDestroyView() {
 	    super.onDestroyView();
 	    //getActivity().getActionBar().setTitle("Achivements");
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		((AchievementActivity)getActivity()).setTitleText("Achievements");
 	}
 }

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:clipToPadding="false"
+        android:paddingRight="10dp" >
+        
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@color/background"
+    android:padding="5dp" > 
+    
+    <com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/lstLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+	
+    <TextView
+        android:id="@+id/txtLocationLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp" 
+        android:gravity="center"
+        android:text="@string/locationslore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/lstLocationsLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
+ 	<TextView
+        android:id="@+id/txtPersonsLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/personslore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/lstPersonsLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
+ 	<TextView
+        android:id="@+id/txtTitlesLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp" 
+        android:gravity="center"
+        android:text="@string/titleslore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/listTitlesLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
+ 	<TextView
+        android:id="@+id/txtBeastLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp" 
+        android:gravity="center"
+        android:text="@string/beastlore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/listBeastLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
+ 	<TextView
+        android:id="@+id/txtGameRulesLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp" 
+        android:gravity="center"
+        android:text="@string/gameruleslore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/listGameRulesLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
+ 	<TextView
+        android:id="@+id/txtOrganizationsLore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp" 
+        android:gravity="center"
+        android:text="@string/organizationslore"
+        android:textColor="@color/text"
+        android:textSize="@dimen/title" />
+   
+ 	<com.stryksta.swtorcentral.util.NonScrollListView
+    	android:id="@+id/listOrganizationsLore"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+		android:padding="5dp" />
+ 	
+</LinearLayout>
+</ScrollView><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/planet_tab3.xml -->

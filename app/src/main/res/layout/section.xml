@@ -10,5 +10,4 @@
           android:textColor="@color/text"
           android:background="@android:color/transparent"
           android:textSize="14sp"
-          android:id="@+id/section_text"
-          android:textStyle="bold" />
+          android:id="@+id/section_text" />

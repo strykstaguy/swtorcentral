@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="#DCDCDC" >
+    
+<TextView
+    android:id="@+id/txtAbilityTitle"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textColor="@color/black"
+    android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/ability_header.xml -->

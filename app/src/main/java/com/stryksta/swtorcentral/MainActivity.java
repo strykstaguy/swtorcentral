@@ -121,48 +121,27 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.navigation_item_3: {
-                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new DatacronActivity(), "Datacron");
-                        break;
-                    }
-                    case R.id.navigation_item_4: {
                         FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ClassesActivity(), "Classes");
                         break;
                     }
-                    case R.id.navigation_item_5: {
+                    case R.id.navigation_item_4: {
                         FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new FactionFragment(), "Faction");
                         break;
                     }
-
-                    case R.id.navigation_item_6: {
-                        Intent eventIntent = new Intent(MainActivity.this, EventsActivity.class);
-                        startActivity(eventIntent);
-                        break;
-                    }
-                    case R.id.navigation_item_7: {
-                        Intent characterIntent = new Intent(MainActivity.this, CharacterActivity.class);
-                        startActivity(characterIntent);
-                        break;
-                    }
-                    case R.id.navigation_item_8: {
+                    case R.id.navigation_item_5: {
                         Intent achievementIntent = new Intent(MainActivity.this, AchievementActivity.class);
                         startActivity(achievementIntent);
                         break;
                     }
-                    case R.id.navigation_item_9: {
-                        Intent tutorialIntent = new Intent(MainActivity.this, TutorialActivity.class);
-                        startActivity(tutorialIntent);
+                    case R.id.navigation_item_6: {
+                        Intent testIntent = new Intent(MainActivity.this, TestRecycleActivity.class);
+                        startActivity(testIntent);
                         break;
                     }
 
                     case R.id.navigation_sub_item_1: {
                         Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
                         startActivity(settingsIntent);
-                        break;
-                    }
-
-                    case R.id.navigation_sub_item_2: {
-                        Intent testIntent = new Intent(MainActivity.this, TestRecycleActivity.class);
-                        startActivity(testIntent);
                         break;
                     }
                 }

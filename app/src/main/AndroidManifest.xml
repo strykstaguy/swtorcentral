@@ -12,7 +12,7 @@
     <application
         tools:replace="android:allowBackup"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" android:theme="@style/AppTheme" android:allowBackup="false" >
+        android:label="@string/app_name" android:theme="@style/Theme.SWTORCentral" android:allowBackup="false" >
         <activity
             android:name="com.stryksta.swtorcentral.MainActivity"
             android:label="@string/app_name" >
@@ -42,10 +42,6 @@
             android:label="@string/settings_header" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.EventsActivity"
-            android:label="@string/event_main" >
-        </activity>
-        <activity
             android:name="com.stryksta.swtorcentral.PlanetActivity"
             android:label="@string/planet_main">
         </activity>
@@ -66,21 +62,8 @@
             android:label="@string/character_edit_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.VideoActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/video_main" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.VideoPlayerActivity"
-            android:label="@string/video_main" >
-        </activity>
-        <activity
             android:name="com.stryksta.swtorcentral.AchievementActivity"
             android:label="@string/achievements_main" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.TutorialActivity"
-            android:label="@string/tutorials_main" >
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.TestActivity"

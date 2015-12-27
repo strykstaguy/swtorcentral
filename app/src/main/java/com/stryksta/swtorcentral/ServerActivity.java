@@ -19,6 +19,7 @@ import com.stryksta.swtorcentral.util.NonScrollGridView;
 import com.stryksta.swtorcentral.util.Utility;
 
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +31,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -56,6 +58,11 @@ public class ServerActivity extends AppCompatActivity {
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
         }
 
         //Set RecyclerView
@@ -188,8 +195,7 @@ public class ServerActivity extends AppCompatActivity {
 
             //Add your adapter to the sectionAdapter
             SectionedGridRecyclerViewAdapter.Section[] dummy = new SectionedGridRecyclerViewAdapter.Section[mSections.size()];
-            SectionedGridRecyclerViewAdapter mSectionedAdapter = new
-                    SectionedGridRecyclerViewAdapter(ServerActivity.this,R.layout.section,R.id.section_text,mRecyclerView,mRecycleAdapter);
+            SectionedGridRecyclerViewAdapter mSectionedAdapter = new SectionedGridRecyclerViewAdapter(ServerActivity.this,R.layout.section,R.id.section_text,mRecyclerView,mRecycleAdapter);
             mSectionedAdapter.setSections(mSections.toArray(dummy));
 
             mRecyclerView.setAdapter(mSectionedAdapter);

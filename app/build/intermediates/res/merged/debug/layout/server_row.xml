@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    card_view:cardElevation="2dp"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dim_10"
+        android:paddingBottom="@dimen/dim_10"
+        android:paddingRight="@dimen/dim_5"
+        android:paddingLeft="@dimen/dim_5"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/serverIcon"
+            android:layout_width="42.0dip"
+            android:layout_height="42.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@string/image_placeholder"
+            android:src="@drawable/ic_action_serverup"
+            android:scaleType="fitCenter"
+            android:layout_alignBottom="@+id/serverZone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+   		
+        <com.stryksta.swtorcentral.util.SizeAdjustingTextView
+            android:id="@+id/serverTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:text="The Shadowlands"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/serverIcon"
+            android:layout_toEndOf="@+id/serverIcon" />
+
+        <TextView
+            android:id="@+id/serverType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/serverIcon"
+            android:layout_below="@+id/serverTitle"
+            android:gravity="center"
+            android:text="PvE"
+            android:textColor="@color/text"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/serverZone"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/serverIcon"
+            android:layout_below="@+id/serverType"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="West"
+            android:textColor="@color/text"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/server_row.xml -->

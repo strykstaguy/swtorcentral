@@ -13,7 +13,9 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_margin="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_20"
         android:elevation="4dp"
+        android:src="@drawable/ac_sage_light"
         tools:src="@drawable/ic_launcher"/>
 
     <TextView
@@ -22,7 +24,8 @@
         android:layout_above="@+id/email"
         android:layout_marginLeft="@dimen/dim_10"
         android:layout_marginStart="@dimen/dim_10"
-        android:text="Username"
+        android:text="Benner"
+        android:textSize="@dimen/tex_size_xlarge"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
     <TextView
         android:id="@+id/email"
@@ -32,7 +35,8 @@
         android:layout_marginLeft="@dimen/dim_10"
         android:layout_marginStart="@dimen/dim_10"
         android:layout_marginBottom="@dimen/dim_10"
-        android:text="username@mymail.com"
+        android:text="Jedi Sage"
+        android:textSize="@dimen/tex_size_small"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
 </RelativeLayout>

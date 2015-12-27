@@ -1,6 +1,8 @@
 package com.stryksta.swtorcentral;
 
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -23,7 +25,7 @@ import java.util.ArrayList;
 public class ReaderActivity extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
+    private GridLayoutManager mLayoutManager;
 
     private ReaderAdapter mRecycleAdapter;
     private RssDatabaseHandler db;
@@ -52,7 +54,15 @@ public class ReaderActivity extends Fragment {
         mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.readerList);
 
         if (mRecyclerView != null) {
-            mLayoutManager = new GridLayoutManager(getActivity(), 2);
+			mLayoutManager = new GridLayoutManager(getActivity(), 1, GridLayoutManager.VERTICAL, false);
+			/*
+			mLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup(){
+				@Override
+				public int getSpanSize(int position) {
+					return (position % 3 == 0 ? 2 : 1);
+				}
+			});
+			*/
             mRecyclerView.setLayoutManager(mLayoutManager);
 
         	GetRSSDataTask task = new GetRSSDataTask();
@@ -98,6 +108,7 @@ public class ReaderActivity extends Fragment {
 			    if(null != result && !result.isEmpty()) { 
 					for(RssItem item : result){
 						db.insertNewsInfo(item);
+                        //Log.d("SWTORCentral", item.getCategory());
 					}
 					
 				}
@@ -117,8 +128,8 @@ public class ReaderActivity extends Fragment {
                         {
                             public void onItemClick(View view, int position)
                             {
-                                //Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse( mRecycleAdapter.getItem(position).getLink()));
-                                //startActivity(intent);
+                                Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(rssItems.get(position).getLink()));
+                                startActivity(intent);
                             }
 
                             public void onItemLongClick(View view, int position)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:textSize="16sp"
+    android:paddingLeft="36dp"
+    android:singleLine="true"
+    android:textColor="@color/white" /><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/user_character_selection.xml -->

@@ -60,7 +60,10 @@ public class Category4Fragment extends Fragment{
         	Category2 = getArguments().getString("category2");
         	Category3 = getArguments().getString("category3");
         }
-        
+
+		//Set title of category
+		((AchievementActivity)getActivity()).setTitleText(Category3);
+
         //get user data from session
         HashMap<String, String> user = session.getUserDetails();
         characterName = user.get(SessionManager.KEY_NAME);

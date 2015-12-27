@@ -6,7 +6,7 @@
     android:background="@color/background"
     android:orientation="vertical">
 
-    <com.stryksta.swtorcentral.util.RoundTimelineHView
+    <com.stryksta.swtorcentral.util.timeline.RoundTimelineHView
         android:id="@+id/timeline"
         android:layout_width="match_parent"
         android:layout_height="30dp"
