@@ -39,7 +39,16 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
         viewHolder.txtTitle.setText(readerRow.getTitle());
         viewHolder.txtNewsCategory.setText(readerRow.getCategory());
         viewHolder.txtDescription.setText(readerRow.getDescription());
+            /*
+        if (readerRow.getTitle().toString() == "Press Release") {
+            viewHolder.txtTitle.setBackgroundColor(mContext.getResources().getColor(R.color.swtor_blue));
+            viewHolder.txtNewsCategory.setBackgroundColor(mContext.getResources().getColor(R.color.swtor_blue));
+            viewHolder.txtDescription.setText(readerRow.getDescription());
+        } if (readerRow.getTitle().toString() == "News Article") {
 
+        }  if (readerRow.getTitle().toString() == "Developer Blog") {
+
+        }*/
         //Log.d("SWTORCentral", readerRow.getCategory());
         //viewHolder.imgBackground.setImageResource(R.drawable.placeholder);
         /*
@@ -69,7 +78,6 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             txtNewsCategory = (TextView) itemView.findViewById(R.id.txtNewsCategory);
             txtDescription = (TextView) itemView.findViewById(R.id.txtDescription);
-            btnMore = (Button) itemView.findViewById(R.id.read_more);
             //imgBackground = (ImageView) itemView.findViewById(R.id.imgBackground);
         }
     }

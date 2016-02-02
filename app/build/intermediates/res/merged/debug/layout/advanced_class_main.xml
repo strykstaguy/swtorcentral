@@ -77,6 +77,22 @@
                     android:textColor="@color/text"
                     android:textSize="10sp"/>
 
+                <ImageButton
+                    android:id="@+id/activity_detail_fab_download"
+                    android:layout_width="@dimen/fab_small"
+                    android:layout_height="@dimen/fab_small"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:background="@drawable/round"
+                    android:elevation="3dp"
+                    android:src="@drawable/ic_book"
+                    android:scaleX="0"
+                    android:scaleY="0"
+                    android:stateListAnimator="@anim/fab_animation"
+                    android:transitionName="fab"
+                    />
+
                 <Button
                     android:id="@+id/btnDisciplines2"
                     android:layout_width="wrap_content"

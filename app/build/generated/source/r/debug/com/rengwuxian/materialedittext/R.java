@@ -23,10 +23,10 @@ public final class R {
 		public static final int bottom_ellipsis_height = 0x7f080050;
 		public static final int default_padding_bottom = 0x7f080057;
 		public static final int default_padding_top = 0x7f080058;
-		public static final int floating_label_text_size = 0x7f08007b;
-		public static final int inner_components_spacing = 0x7f080081;
-		public static final int inner_padding_left = 0x7f080082;
-		public static final int inner_padding_right = 0x7f080083;
+		public static final int floating_label_text_size = 0x7f080084;
+		public static final int inner_components_spacing = 0x7f08008a;
+		public static final int inner_padding_left = 0x7f08008b;
+		public static final int inner_padding_right = 0x7f08008c;
 	}
 	public static final class id {
 		public static final int highlight = 0x7f0d004a;
