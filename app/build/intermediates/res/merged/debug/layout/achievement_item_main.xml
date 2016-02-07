@@ -25,4 +25,4 @@
         android:clipToPadding="false"
     	android:scrollbarStyle="outsideInset" >
 	</GridView>
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/achievement_item_main.xml -->
+</LinearLayout>

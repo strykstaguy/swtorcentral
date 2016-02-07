@@ -125,4 +125,4 @@
  	    	android:textColor="@color/text"
  	    	android:textSize="@dimen/tex_size_xlarge" />
     </LinearLayout>
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/server_key.xml -->
+</LinearLayout>

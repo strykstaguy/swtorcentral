@@ -61,4 +61,4 @@
         android:textColor="@color/subtext"
         android:textSize="@dimen/subtitle" />
 </RelativeLayout>
-</ScrollView><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/test_main_abilities.xml -->
+</ScrollView>

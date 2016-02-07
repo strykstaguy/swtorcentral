@@ -3,4 +3,4 @@
     <item android:id="@+id/character_menu_add"
           android:title="@string/character_menu_add"
           android:showAsAction="always" />
-</menu><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/menu/character_menu.xml -->
+</menu>

@@ -2,4 +2,4 @@
     android:insetLeft="2dp"
     android:insetRight="2dp"
     android:insetTop="4dp"
-    android:insetBottom="4dp"/><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/drawable/card_foreground.xml -->
+    android:insetBottom="4dp"/>

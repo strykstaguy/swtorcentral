@@ -35,4 +35,4 @@
         app:headerLayout="@layout/drawer_header"
         app:menu="@menu/main_navigation"/>
 
-</android.support.v4.widget.DrawerLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/activity_main.xml -->
+</android.support.v4.widget.DrawerLayout>

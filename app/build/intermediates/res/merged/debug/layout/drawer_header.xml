@@ -39,4 +39,4 @@
         android:textSize="@dimen/tex_size_small"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
-</RelativeLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/drawer_header.xml -->
+</RelativeLayout>

@@ -22,4 +22,3 @@
         android:layout_below="@+id/character_level_msg" />
     
 </RelativeLayout>
-<!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/character_level_dialog.xml -->

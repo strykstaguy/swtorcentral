@@ -29,19 +29,10 @@ import com.stryksta.swtorcentral.util.database.CompanionDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionGiftsDatabase;
 import com.stryksta.swtorcentral.util.database.DisciplinesDatabase;
 
-public class AdvancedClassActivity extends AppCompatActivity implements ObservableScrollViewCallbacks {
-    private static final float MAX_TEXT_SCALE_DELTA = 0.3f;
-    private static final boolean TOOLBAR_IS_STICKY = true;
+public class AdvancedClassActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
-
-    private View mImageView;
-    private View mOverlayView;
-    private ObservableScrollView mScrollView;
     private TextView mTitleView;
-    private int mActionBarSize;
-    private int mFlexibleSpaceImageHeight;
-    private int mToolbarColor;
 
     //Companion Info from prev
     private int ClassPos;
@@ -76,10 +67,6 @@ public class AdvancedClassActivity extends AppCompatActivity implements Observab
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        if (!TOOLBAR_IS_STICKY) {
-            mToolbar.setBackgroundColor(Color.TRANSPARENT);
-        }
-
         //get bundle info
         Bundle bundle = getIntent().getExtras();
 
@@ -88,22 +75,6 @@ public class AdvancedClassActivity extends AppCompatActivity implements Observab
             ClassID = bundle.getInt("class_id");
         }
 
-        mFlexibleSpaceImageHeight = getResources().getDimensionPixelSize(R.dimen.flexible_space_image_height);
-
-        //get actionbarheight
-        TypedValue tv = new TypedValue();
-        int attr = android.support.v7.appcompat.R.attr.actionBarSize;
-        if (getTheme().resolveAttribute(attr, tv, true)){
-            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
-        }
-
-        mActionBarSize = actionBarHeight;
-        mToolbarColor = getResources().getColor(R.color.swtor_blue);
-
-        mImageView = findViewById(R.id.ADVimage);
-        mOverlayView = findViewById(R.id.overlay);
-        mScrollView = (ObservableScrollView) findViewById(R.id.scroll);
-        mScrollView.setScrollViewCallbacks(this);
         mTitleView = (TextView) findViewById(R.id.title);
 
         NonScrollListView companionsListView = (NonScrollListView) findViewById(R.id.companionsListView);
@@ -160,9 +131,6 @@ public class AdvancedClassActivity extends AppCompatActivity implements Observab
                 String advApc = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("apc"));
                 String advAdv_bg = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("adv_bg"));
                 int advClassBG = getResources().getIdentifier(advAdv_bg, "drawable", getPackageName());
-
-                //Set Background Image
-                mImageView.setBackgroundResource(advClassBG);
 
                 //Set Title
                 mTitleView.setText(advClass);
@@ -224,18 +192,7 @@ public class AdvancedClassActivity extends AppCompatActivity implements Observab
             btnDisciplines3.setText(disciplines);
         }
         ////Set Title
-        setTitle(null);
-
-
-        //Scroll
-        ScrollUtils.addOnGlobalLayoutListener(mScrollView, new Runnable() {
-            public void run() {
-              // mScrollView.scrollTo(0, mFlexibleSpaceImageHeight - mActionBarSize);
-               mScrollView.scrollTo(0, 1);
-               mScrollView.scrollTo(0, 0);
-            }
-        });
-
+        //setTitle(null);
 
         // Debug the thread name
         Log.d("SWTORCentral", Thread.currentThread().getName());
@@ -259,53 +216,5 @@ public class AdvancedClassActivity extends AppCompatActivity implements Observab
         } else {
             getFragmentManager().popBackStack();
         }
-    }
-
-    public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
-        // Translate overlay and image
-        float flexibleRange = mFlexibleSpaceImageHeight - mActionBarSize;
-        int minOverlayTransitionY = mActionBarSize - mOverlayView.getHeight();
-        ViewHelper.setTranslationY(mOverlayView, ScrollUtils.getFloat(-scrollY, minOverlayTransitionY, 0));
-        ViewHelper.setTranslationY(mImageView, ScrollUtils.getFloat(-scrollY / 2, minOverlayTransitionY, 0));
-
-        // Change alpha of overlay
-        ViewHelper.setAlpha(mOverlayView, ScrollUtils.getFloat((float) scrollY / flexibleRange, 0, 1));
-
-        // Scale title text
-        float scale = 1 + ScrollUtils.getFloat((flexibleRange - scrollY) / flexibleRange, 0, MAX_TEXT_SCALE_DELTA);
-        ViewHelper.setPivotX(mTitleView, 0);
-        ViewHelper.setPivotY(mTitleView, 0);
-        ViewHelper.setScaleX(mTitleView, scale);
-        ViewHelper.setScaleY(mTitleView, scale);
-
-        // Translate title text
-        int maxTitleTranslationY = (int) (mFlexibleSpaceImageHeight - mTitleView.getHeight() * scale);
-        int titleTranslationY = maxTitleTranslationY - scrollY;
-        if (TOOLBAR_IS_STICKY) {
-            titleTranslationY = Math.max(0, titleTranslationY);
-        }
-        ViewHelper.setTranslationY(mTitleView, titleTranslationY);
-
-        if (TOOLBAR_IS_STICKY) {
-            // Change alpha of toolbar background
-            if (-scrollY + mFlexibleSpaceImageHeight <= mActionBarSize) {
-                mToolbar.setBackgroundColor(ScrollUtils.getColorWithAlpha(1, mToolbarColor));
-            } else {
-                mToolbar.setBackgroundColor(ScrollUtils.getColorWithAlpha(0, mToolbarColor));
-            }
-        } else {
-            // Translate Toolbar
-            if (scrollY < mFlexibleSpaceImageHeight) {
-                ViewHelper.setTranslationY(mToolbar, 0);
-            } else {
-                ViewHelper.setTranslationY(mToolbar, -scrollY);
-            }
-        }
-    }
-
-    public void onDownMotionEvent() {
-    }
-
-    public void onUpOrCancelMotionEvent(ScrollState scrollState) {
     }
 }

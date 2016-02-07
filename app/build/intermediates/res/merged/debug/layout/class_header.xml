@@ -24,4 +24,4 @@
         android:text="@string/advanced_classes"
  	    android:textSize="@dimen/subtitle" />
  	
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/class_header.xml -->
+</LinearLayout>

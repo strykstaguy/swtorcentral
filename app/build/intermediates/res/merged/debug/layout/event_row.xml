@@ -57,4 +57,4 @@
         android:paddingTop="@dimen/dim_10"
         android:textSize="14sp" />
 
-</LinearLayout><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/event_row.xml -->
+</LinearLayout>

@@ -8,4 +8,4 @@
     <!-- The color when not activated/focused (usually grey) -->
     <item android:color="@color/gray_23" />
 
-</selector><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/drawable/float_label.xml -->
+</selector>

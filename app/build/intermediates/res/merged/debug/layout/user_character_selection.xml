@@ -6,4 +6,4 @@
     android:textSize="16sp"
     android:paddingLeft="36dp"
     android:singleLine="true"
-    android:textColor="@color/white" /><!-- From: file:/C:/Users/e9900375/Desktop/swtorcentral/app/src/main/res/layout/user_character_selection.xml -->
+    android:textColor="@color/white" />
