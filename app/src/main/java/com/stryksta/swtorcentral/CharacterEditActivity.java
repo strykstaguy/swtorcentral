@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.stryksta.swtorcentral.data.AddCharacterItem;
 import com.stryksta.swtorcentral.util.database.CharacterDatabase;
-import com.stryksta.swtorcentral.util.FloatingActionButton;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -146,54 +145,6 @@ public class CharacterEditActivity extends AppCompatActivity implements OnItemSe
         addAlignment();
         addCrewSkills();
         addClasses();
-
-        FloatingActionButton fabButton = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_save))
-                .withButtonColor(getResources().getColor(R.color.swtor_blue))
-                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
-                .withMargins(0, 0, 16, 16)
-                .create();
-
-        fabButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                if (characterLevel.getText().length() == 0) {
-                    AlertDialog.Builder alert = new AlertDialog.Builder(CharacterEditActivity.this);
-                    alert.setTitle("Level is Required");
-                    alert.setMessage("Please select a level");
-                    alert.setPositiveButton("OK", null);
-                    alert.show();
-                } else if(characterName.getText().length() == 0) {
-                    AlertDialog.Builder alert = new AlertDialog.Builder(CharacterEditActivity.this);
-                    alert.setTitle("Character Name is Required");
-                    alert.setMessage("Please name your character");
-                    alert.setPositiveButton("OK", null);
-                    alert.show();
-                } else {
-                    CharacterDatabase db = new CharacterDatabase(CharacterEditActivity.this);
-
-                    cName = characterName.getText().toString();
-                    cLegacy = characterLegacy.getText().toString();
-                    cLevel = Integer.parseInt(characterLevel.getText().toString());
-                    cDescription = characterDescription.getText().toString();
-                    cGender = genderItem.get(characterGender.getSelectedItem().toString());
-                    cRace = raceItem.get(characterRace.getSelectedItem().toString());
-                    cAlignment = alignmentItem.get(characterAlignment.getSelectedItem().toString());
-                    cCrewSkill1 = crewSkillsclassItem.get(characterCrewSkill1.getSelectedItem().toString());
-                    cCrewSkill2 = crewSkillsclassItem.get(characterCrewSkill2.getSelectedItem().toString());
-                    cCrewSkill3 = crewSkillsclassItem.get(characterCrewSkill3.getSelectedItem().toString());
-                    cClass = classItem.get(characterClass.getSelectedItem().toString());
-                    cAdvanced = advancedclassItem.get(characterAdvancedClass.getSelectedItem().toString());
-
-                    db.close();
-                    new saveCharacter().execute();
-                }
-            }
-        });
-        characterLevel.setOnClickListener(new View.OnClickListener() { 
-            public void onClick(View v) {
-            	setCharacterLevel(CharacterEditActivity.this);
-            }
-        });
         
         characterClass.setOnItemSelectedListener(this);
         

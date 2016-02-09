@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.database.Cursor;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -65,6 +67,11 @@ public class AdvancedClassActivity extends AppCompatActivity {
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
         }
 
         //get bundle info
@@ -131,9 +138,6 @@ public class AdvancedClassActivity extends AppCompatActivity {
                 String advApc = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("apc"));
                 String advAdv_bg = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("adv_bg"));
                 int advClassBG = getResources().getIdentifier(advAdv_bg, "drawable", getPackageName());
-
-                //Set Title
-                mTitleView.setText(advClass);
 
                 //Set Description
                 TextView txtAdvDesc = (TextView) findViewById(R.id.txtAdvDesc);

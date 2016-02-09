@@ -6,7 +6,6 @@ import java.util.HashMap;
 import com.stryksta.swtorcentral.adapters.CharacterAdapter;
 import com.stryksta.swtorcentral.data.CharacterItem;
 import com.stryksta.swtorcentral.util.database.CharacterDatabase;
-import com.stryksta.swtorcentral.util.FloatingActionButton;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.Activity;
@@ -50,20 +49,6 @@ public class CharacterActivity extends AppCompatActivity {
         
         characterList = (ListView) findViewById(R.id.characterListView);
         registerForContextMenu(characterList);
-
-        FloatingActionButton fabButton = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_add))
-                .withButtonColor(getResources().getColor(R.color.swtor_blue))
-                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
-                .withMargins(0, 0, 16, 16)
-                .create();
-
-        fabButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent addCharacterIntent = new Intent(CharacterActivity.this, CharacterAddActivity.class);
-                startActivityForResult(addCharacterIntent, ADD_PARTICIPANT);
-            }
-        });
 
         updateCharacters();
         

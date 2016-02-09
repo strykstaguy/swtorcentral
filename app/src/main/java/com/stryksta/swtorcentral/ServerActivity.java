@@ -1,40 +1,28 @@
 package com.stryksta.swtorcentral;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.WindowManager;
+import android.widget.Toast;
+
+import com.stryksta.swtorcentral.adapters.SectionedGridRecyclerViewAdapter;
+import com.stryksta.swtorcentral.adapters.ServerAdapter;
+import com.stryksta.swtorcentral.data.ServerItem;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.stryksta.swtorcentral.adapters.ReaderAdapter;
-import com.stryksta.swtorcentral.adapters.SectionedGridRecyclerViewAdapter;
-import com.stryksta.swtorcentral.adapters.ServerAdapter;
-import com.stryksta.swtorcentral.adapters.SimpleSectionedRecyclerViewAdapter;
-import com.stryksta.swtorcentral.data.ServerItem;
-import com.stryksta.swtorcentral.util.DividerItemDecoration;
-import com.stryksta.swtorcentral.util.FloatingActionButton;
-import com.stryksta.swtorcentral.util.NonScrollGridView;
-import com.stryksta.swtorcentral.util.Utility;
-
-import android.os.AsyncTask;
-import android.os.Build;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ServerActivity extends AppCompatActivity {
 
@@ -83,46 +71,6 @@ public class ServerActivity extends AppCompatActivity {
        } else {
            Toast.makeText(ServerActivity.this, "Network is unavailable", Toast.LENGTH_LONG).show();
        }
-
-        FloatingActionButton fabButton = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_help_white))
-                .withButtonColor(getResources().getColor(R.color.swtor_blue))
-                .withGravity(Gravity.BOTTOM | Gravity.RIGHT)
-                .withMargins(0, 0, 16, 16)
-                .create();
-
-        fabButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                View v = getLayoutInflater().inflate(R.layout.server_key, null);
-
-                /*
-                MaterialDialog dialog = new MaterialDialog.Builder(ServerActivity.this)
-                        .title("Server Status")
-                        .customView(v)
-                        .positiveText("OK")
-                        .build();
-
-                ImageView serverLight = (ImageView) v.findViewById(R.id.IMGserverLight);
-                serverLight.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.lightcolor)));
-
-                ImageView serverStandard = (ImageView) v.findViewById(R.id.serverStandard);
-                serverStandard.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.standardcolor)));
-
-                ImageView serverHeavy = (ImageView) v.findViewById(R.id.serverHeavy);
-                serverHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.heavycolor)));
-
-                ImageView serverVeryHeavy = (ImageView) v.findViewById(R.id.serverVeryHeavy);
-                serverVeryHeavy.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.veryheavycolor)));
-
-                ImageView serverFull = (ImageView) v.findViewById(R.id.serverFull);
-                serverFull.setColorFilter(Utility.getColoredMatrix(getResources().getColor(R.color.fullcolor)));
-
-
-                dialog.show();
-                */
-
-            }
-        });
 		// Debug the thread name
 		Log.d("SWTORCentral", Thread.currentThread().getName());
 	}
