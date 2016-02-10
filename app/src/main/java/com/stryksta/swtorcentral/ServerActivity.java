@@ -98,10 +98,10 @@ public class ServerActivity extends AppCompatActivity {
 					String serverPop = USServer.child(2).text();
                     String serverType = USServer.child(3).text();
                     String serverZone = USServer.child(4).text();
-					int serverStatusIMG = R.drawable.ic_action_serverdown;
+					int serverStatusIMG = R.drawable.ic_arrow_down_bold_white;
 					
 					if (!serverStatus.equals("DOWN")) {
-						serverStatusIMG = R.drawable.ic_action_serverup;
+						serverStatusIMG = R.drawable.ic_arrow_up_bold_white;
 		            }
 					
 					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop, serverType, serverZone);

@@ -21,29 +21,6 @@
         android:paddingRight="@dimen/dim_5"
         android:paddingLeft="@dimen/dim_5"
         android:orientation="vertical">
-
-        <ImageButton
-            android:id="@+id/activity_detail_fab_download"
-            android:layout_width="@dimen/fab_small"
-            android:layout_height="@dimen/fab_small"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:padding="8dp"
-            android:background="@drawable/round"
-            android:elevation="3dp"
-            android:src="@drawable/ic_action_serverup" />
-
-        <ImageView
-            android:id="@+id/serverIcon"
-            android:layout_width="42.0dip"
-            android:layout_height="42.0dip"
-            android:layout_gravity="center"
-            android:contentDescription="@string/image_placeholder"
-            android:src="@drawable/ic_action_serverup"
-            android:scaleType="fitCenter"
-            android:layout_alignBottom="@+id/serverZone"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
    		
         <com.stryksta.swtorcentral.util.SizeAdjustingTextView
             android:id="@+id/serverTitle"
@@ -56,25 +33,37 @@
             android:textStyle="bold"
             android:textColor="@color/text"
             android:textSize="14sp"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/serverIcon"
-            android:layout_toEndOf="@+id/serverIcon" />
+            android:layout_alignParentTop="true" />
+
+        <ImageButton
+            android:id="@+id/serverStatusIcon"
+            android:layout_width="@dimen/fab_normal"
+            android:layout_height="@dimen/fab_normal"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:padding="8dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/server_regular"
+            android:elevation="3dp"
+            android:src="@drawable/ic_arrow_up_bold_white"
+            android:layout_below="@id/serverTitle"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/serverType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/serverIcon"
-            android:layout_below="@+id/serverTitle"
+            android:layout_below="@+id/serverStatusIcon"
             android:gravity="center"
             android:text="PvE"
             android:textColor="@color/text"
-            android:textSize="12sp"/>
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/serverZone"
             android:layout_width="match_parent"
-            android:layout_toRightOf="@+id/serverIcon"
             android:layout_below="@+id/serverType"
             android:layout_height="wrap_content"
             android:gravity="center"

@@ -3,9 +3,11 @@ package com.stryksta.swtorcentral.adapters;
 import android.content.Context;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,36 +43,20 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
         viewHolder.txtServerName.setText(serverRow.getserverName());
         viewHolder.txtServerType.setText(serverRow.getserverType());
         viewHolder.txtServerZone.setText(serverRow.getserverZone());
-        int iColor = mContext.getResources().getColor(R.color.regularcolor);
 
         if (serverRow.getserverStatus().equalsIgnoreCase("Light")) {
-            iColor = mContext.getResources().getColor(R.color.lightcolor);
+            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_light);
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Standard")) {
-            iColor = mContext.getResources().getColor(R.color.standardcolor);
+            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_standard);
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Heavy")) {
-            iColor = mContext.getResources().getColor(R.color.heavycolor);
+            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_heavy);
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Very Heavy")) {
-            iColor = mContext.getResources().getColor(R.color.veryheavycolor);
+            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_very_heavy);
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Full")) {
-            iColor = mContext.getResources().getColor(R.color.fullcolor);
+            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_full);
         } else {
-            iColor = mContext.getResources().getColor(R.color.regularcolor);
+            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_regular);
         }
-
-        viewHolder.txtServerIcon.setImageResource(serverRow.getImageId());
-
-        int red = (iColor & 0xFF0000) / 0xFFFF;
-        int green = (iColor & 0xFF00) / 0xFF;
-        int blue = iColor & 0xFF;
-
-        float[] matrix = { 0, 0, 0, 0, red
-                , 0, 0, 0, 0, green
-                , 0, 0, 0, 0, blue
-                , 0, 0, 0, 1, 0 };
-
-        ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
-
-        viewHolder.txtServerIcon.setColorFilter(colorFilter);
     }
 
     @Override
@@ -80,17 +66,17 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        public ImageView txtServerIcon;
         public SizeAdjustingTextView txtServerName;
         public TextView txtServerType;
         public TextView txtServerZone;
+        public ImageButton serverStatusIcon;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            txtServerIcon = (ImageView) itemView.findViewById(R.id.serverIcon);
             txtServerName = (SizeAdjustingTextView) itemView.findViewById(R.id.serverTitle);
             txtServerType = (TextView) itemView.findViewById(R.id.serverType);
             txtServerZone = (TextView) itemView.findViewById(R.id.serverZone);
+            serverStatusIcon = (ImageButton) itemView.findViewById(R.id.serverStatusIcon);
         }
     }
 }

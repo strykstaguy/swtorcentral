@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="regularcolor">#000000</color>
-    <color name="lightcolor">#0aa421</color>
-    <color name="standardcolor">#eebe00</color>
-    <color name="heavycolor">#ff8401</color>
-    <color name="veryheavycolor">#ff2c2c</color>
-    <color name="fullcolor">#C50000</color>
+    <color name="lightcolor">#8BC34A</color>
+    <color name="standardcolor">#FFEB3B</color>
+    <color name="heavycolor">#FFC107</color>
+    <color name="veryheavycolor">#F44336</color>
+    <color name="fullcolor">#B71C1C</color>
 
     <color name="white">#FFFFFF</color>
     <color name="gray">#EEEEEE</color>
@@ -18,7 +18,7 @@
     <color name="gray_46">#2e2e2e</color>
     <color name="gray_23">#3b3b3b</color>
     <color name="gray_33">#545454</color>
-    <color name="gray_34">#757575</color>
+    <color name="subheader">#757575</color>
 
     <color name="characterlogin">#555555</color>
     <color name="gray_86">#DCDCDC</color>
