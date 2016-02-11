@@ -43,7 +43,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
         viewHolder.txtServerName.setText(serverRow.getserverName());
         viewHolder.txtServerType.setText(serverRow.getserverType());
         viewHolder.txtServerZone.setText(serverRow.getserverZone());
-
+    /*
         if (serverRow.getserverStatus().equalsIgnoreCase("Light")) {
             viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_light);
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Standard")) {
@@ -54,9 +54,8 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
             viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_very_heavy);
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Full")) {
             viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_full);
-        } else {
-            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_regular);
         }
+        */
     }
 
     @Override

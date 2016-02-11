@@ -170,30 +170,30 @@ public class AdvancedClassActivity extends AppCompatActivity {
         disciplinesCursor = disciplinesDB.getDisciplines(ClassPos);
 
         //Set Disciplines 1
-        Button btnDisciplines1 = (Button) findViewById(R.id.btnDisciplines1);
+        TextView txtDiscipline1 = (TextView) findViewById(R.id.txtDiscipline1);
 
         if (disciplinesCursor.getCount() > 0) {
             disciplinesCursor.moveToPosition(0);
             String disciplines = disciplinesCursor.getString(disciplinesCursor.getColumnIndex("name"));
-            btnDisciplines1.setText(disciplines);
+            txtDiscipline1.setText(disciplines);
         }
 
         //Set Disciplines 2
-        Button btnDisciplines2 = (Button) findViewById(R.id.btnDisciplines2);
+        TextView txtDiscipline2 = (TextView) findViewById(R.id.txtDiscipline2);
 
         if (disciplinesCursor.getCount() > 0) {
             disciplinesCursor.moveToPosition(1);
             String disciplines = disciplinesCursor.getString(disciplinesCursor.getColumnIndex("name"));
-            btnDisciplines2.setText(disciplines);
+            txtDiscipline2.setText(disciplines);
         }
 
         //Set Disciplines 3
-        Button btnDisciplines3 = (Button) findViewById(R.id.btnDisciplines3);
+        TextView txtDiscipline3 = (TextView) findViewById(R.id.txtDiscipline3);
 
         if (disciplinesCursor.getCount() > 0) {
             disciplinesCursor.moveToPosition(2);
             String disciplines = disciplinesCursor.getString(disciplinesCursor.getColumnIndex("name"));
-            btnDisciplines3.setText(disciplines);
+            txtDiscipline3.setText(disciplines);
         }
         ////Set Title
         //setTitle(null);

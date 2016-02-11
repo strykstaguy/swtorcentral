@@ -48,7 +48,7 @@
 
     <color name="rippelColor">#3F9FE0</color>
 
-    <color name="accent">#eeff41</color>
+    <color name="accent">#FFC107</color>
     <color name="accentLight">#F4FF81</color>
 
     <color name="md_drawer_background">#f5f5f5</color>
