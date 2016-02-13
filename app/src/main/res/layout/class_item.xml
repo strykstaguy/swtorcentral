@@ -9,27 +9,29 @@
    android:background="@color/gray_86"
    android:padding="10.0dip"
    android:orientation="horizontal">
- 
+
     <LinearLayout
       android:id="@+id/AdvClass1"
       android:layout_width="wrap_content"
       android:layout_weight="1"
       android:layout_height="fill_parent"
       android:gravity="center"
-      android:padding="10.0dip"
-      android:duplicateParentState="false"
-      android:clickable="true"
+      android:padding="5.0dip"
       android:layout_marginRight="5.0dip"
-      android:background="@drawable/card_background"
       android:orientation="vertical">
-      
-    <ImageView
-       android:id="@+id/imgClass1"
-       android:layout_width="64.0dip"
-       android:layout_height="64.0dip"
-       android:layout_marginTop="15.0dip"
-       android:contentDescription="@string/image_placeholder"
-       android:scaleType="fitCenter" />
+
+      <ImageButton
+        android:id="@+id/imgClass1"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="15dp"
+        android:background="@drawable/advanced_class"
+        android:elevation="3dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ac_sage_light"/>
  
     <TextView
        android:id="@+id/txtClass1"
@@ -41,27 +43,30 @@
        android:textAppearance="?android:textAppearanceMedium"
        android:textColor="@android:color/black" />
  	</LinearLayout>
+
  	<LinearLayout
  	  android:id="@+id/AdvClass2"
       android:layout_width="wrap_content"
       android:layout_weight="1"
       android:layout_height="fill_parent"
       android:gravity="center"
-      android:padding="10.0dip"
-      android:duplicateParentState="false"
-      android:clickable="true"
+      android:padding="5.0dip"
       android:layout_marginLeft="5.0dip"
-      android:background="@drawable/card_background"
       android:orientation="vertical">
-      
-    <ImageView
-       android:id="@+id/imgClass2"
-       android:layout_width="64.0dip"
-       android:layout_height="64.0dip"
-       android:layout_marginTop="15.0dip"
-       android:contentDescription="@string/image_placeholder"
-       android:scaleType="fitCenter" />
- 
+
+       <ImageButton
+            android:id="@+id/imgClass2"
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="15dp"
+            android:background="@drawable/advanced_class"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ac_shadow_light"/>
+
     <TextView
        android:id="@+id/txtClass2"
        android:layout_width="fill_parent"

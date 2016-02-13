@@ -87,6 +87,7 @@
     <dimen name="fab_small">40dp</dimen>
     <dimen name="fab_normal">56dp</dimen>
     <dimen name="fab_progress">72dp</dimen>
+    <dimen name="fab_large">104dp</dimen>
 
     <!-- fab specific margins -->
     <dimen name="fab_small_margin_right">24dp</dimen>

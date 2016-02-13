@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -54,10 +55,10 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 				rowView = inflater.inflate(R.layout.class_item, parent, false);
 				
 				// 3. Get icon,title & counter views from the rowView
-				ImageView imgClass1 = (ImageView) rowView.findViewById(R.id.imgClass1); 
+				ImageButton imgClass1 = (ImageButton) rowView.findViewById(R.id.imgClass1);
 				TextView txtClass1 = (TextView) rowView.findViewById(R.id.txtClass1);
-				
-				ImageView imgClass2 = (ImageView) rowView.findViewById(R.id.imgClass2); 
+
+				ImageButton imgClass2 = (ImageButton) rowView.findViewById(R.id.imgClass2);
 				TextView txtClass2 = (TextView) rowView.findViewById(R.id.txtClass2);
 				
 		    	//imgPlanet.setTag(position);
@@ -68,11 +69,8 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 				
 				imgClass2.setImageResource(item.getimgAdvancedClass2());
 				txtClass2.setText(item.gettxtAdvancedClass2());
-				
-				LinearLayout AdvClass1Layout = (LinearLayout) rowView.findViewById(R.id.AdvClass1);
-				LinearLayout AdvClass2Layout = (LinearLayout) rowView.findViewById(R.id.AdvClass2); 
-				
-				AdvClass1Layout.setOnClickListener(new View.OnClickListener() {
+
+				imgClass1.setOnClickListener(new View.OnClickListener() {
 		            public void onClick(View view) {
 		             
 		              
@@ -88,13 +86,10 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 		                Intent intent = new Intent(context, AdvancedClassActivity.class);
 		                intent.putExtras(bundle);
 		                context.startActivity(intent);
-		    	        
-		            	
-		            	//Log.d("SWTORCentral", String.valueOf(item.getAdvancedClassID1()));
 		            }
 		        });
-				
-				AdvClass2Layout.setOnClickListener(new View.OnClickListener() {
+
+				imgClass2.setOnClickListener(new View.OnClickListener() {
 		            public void onClick(View view) {
 		             
 		              
@@ -110,9 +105,6 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 		                Intent intent = new Intent(context, AdvancedClassActivity.class);
 		                intent.putExtras(bundle);
 		                context.startActivity(intent);
-		    	        
-		            	
-		            	//Log.d("SWTORCentral", String.valueOf(item.getAdvancedClassID2()));
 		            }
 		        });
 			}

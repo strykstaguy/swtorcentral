@@ -3,22 +3,25 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.adapters.ProgressionAdapter;
+import com.stryksta.swtorcentral.adapters.ServerAdapter;
 import com.stryksta.swtorcentral.data.ProgressionItem;
 import com.stryksta.swtorcentral.util.timeline.TimelineType;
 
-import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.view.WindowManager;
 
-import mobi.parchment.widget.adapterview.listview.ListView;
 
 public class ProgressionActivity extends AppCompatActivity {
-    private ProgressionAdapter factionAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private ProgressionAdapter mRecycleAdapter;
+    private RecyclerView mRecyclerView;
     String FactionText;
     private Toolbar mToolbar;
 
@@ -35,17 +38,30 @@ public class ProgressionActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Progression");
 
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+        }
+
         Bundle bundle = getIntent().getExtras();
         if ( bundle != null ) {
             FactionText = bundle.getString("faction");
         }
+        //Set RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.progressionList);
+
+        mLayoutManager = new GridLayoutManager(ProgressionActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
+        mRecyclerView.setLayoutManager(mLayoutManager);
 
         if ( FactionText.equals("Republic")) {
-            factionAdapter = new ProgressionAdapter(ProgressionActivity.this, generateRepublicData());
+            mRecycleAdapter = new ProgressionAdapter(generateRepublicData());
         } else {
-            factionAdapter = new ProgressionAdapter(ProgressionActivity.this, generateEmpireData());
+            mRecycleAdapter = new ProgressionAdapter(generateEmpireData());
         }
 
+        mRecyclerView.setAdapter(mRecycleAdapter);
+
+        /*
         ListView progressionList = (ListView) findViewById(R.id.progressionList);
 
         progressionList.setAdapter(factionAdapter);
@@ -60,6 +76,7 @@ public class ProgressionActivity extends AppCompatActivity {
                 intent.putExtras(bundle);
                 startActivity(intent);
             }});
+        */
     }
 
     private ArrayList<ProgressionItem> generateRepublicData(){

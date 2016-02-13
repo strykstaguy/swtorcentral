@@ -1,72 +1,62 @@
 package com.stryksta.swtorcentral.adapters;
 
-import android.content.Context;
-import android.view.LayoutInflater;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.data.ProgressionItem;
 import com.stryksta.swtorcentral.util.timeline.TimelineHView;
-
 import java.util.ArrayList;
 
-public class ProgressionAdapter extends ArrayAdapter<ProgressionItem>{
-    private final ArrayList<ProgressionItem> progressionItems;
-    Context mContext;
-    public ProgressionAdapter(Context mContext, final ArrayList<ProgressionItem> progressionItems) {
-        super(mContext, R.layout.progression_row, progressionItems);
+public class ProgressionAdapter extends RecyclerView.Adapter<ProgressionAdapter.ViewHolder>{
+
+    private ArrayList<ProgressionItem> progressionItems;
+
+    public ProgressionAdapter(ArrayList<ProgressionItem> progressionItems) {
+        super();
         this.progressionItems = progressionItems;
-        this.mContext = mContext;
     }
+
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-
-        View v = convertView;
-        ViewHolder holder;
-
-        if (v == null) {
-            LayoutInflater inflater = (LayoutInflater) getContext()
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-            v = inflater.inflate(R.layout.progression_row, parent, false);
-            holder = new ViewHolder();
-
-            holder.imgPlanet = (ImageView) v.findViewById(R.id.imgPlanet);
-            holder.txtPlanet = (TextView) v.findViewById(R.id.txtPlanet);
-            holder.txtLevel = (TextView) v.findViewById(R.id.txtLevel);
-            holder.txtLabel = (TextView) v.findViewById(R.id.txtLabel);
-            holder.timeLineView = (TimelineHView) v.findViewById(R.id.timeline);
-
-            v.setTag(holder);
-
-        } else {
-            holder = (ViewHolder) v.getTag();
-        }
-
-        ProgressionItem progressionItem = progressionItems.get(position);
-
-        if (progressionItem != null) {
-            holder.imgPlanet.setImageResource(progressionItem.getimgPlanet());
-            holder.txtPlanet.setText(progressionItem.getPlanet());
-            holder.txtLevel.setText(progressionItem.getLevel());
-            holder.txtLabel.setText(progressionItem.getLabel());
-            holder.timeLineView.setTimelineType(progressionItem.getType());
-        }
-
-        return v;
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
+        View view = View.inflate(viewGroup.getContext(), R.layout.progression_row, null);
+        ViewHolder holder = new ViewHolder(view);
+        return holder;
     }
 
-    private static class ViewHolder {
+    @Override
+    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+        ProgressionItem progressionItem = progressionItems.get(position);
+        viewHolder.imgPlanet.setImageResource(progressionItem.getimgPlanet());
+        viewHolder.txtPlanet.setText(progressionItem.getPlanet());
+        viewHolder.txtLevel.setText(progressionItem.getLevel());
+        viewHolder.txtLabel.setText(progressionItem.getLabel());
+        viewHolder.timeLineView.setTimelineType(progressionItem.getType());
+    }
+
+    @Override
+    public int getItemCount() {
+        return (null != progressionItems ? progressionItems.size() : 0);
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+
         public ImageView imgPlanet;
         public TextView txtPlanet;
         public TextView txtLevel;
         public TextView txtLabel;
         public TimelineHView timeLineView;
 
-
+        public ViewHolder(View itemView) {
+            super(itemView);
+            imgPlanet = (ImageView) itemView.findViewById(R.id.imgPlanet);
+            txtPlanet = (TextView) itemView.findViewById(R.id.txtPlanet);
+            txtLevel = (TextView) itemView.findViewById(R.id.txtLevel);
+            txtLabel = (TextView) itemView.findViewById(R.id.txtLabel);
+            timeLineView = (TimelineHView) itemView.findViewById(R.id.timeline);
+        }
     }
 }

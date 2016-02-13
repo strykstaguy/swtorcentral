@@ -36,9 +36,12 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         RssItem readerRow = readerItems.get(position);
-        viewHolder.txtTitle.setText(readerRow.getTitle());
-        viewHolder.txtNewsCategory.setText(readerRow.getCategory());
-        viewHolder.txtDescription.setText(readerRow.getDescription());
+
+        if (readerRow != null) {
+            viewHolder.txtTitle.setText(readerRow.getTitle());
+            viewHolder.txtNewsCategory.setText(readerRow.getCategory());
+            viewHolder.txtDescription.setText(readerRow.getDescription());
+        }
             /*
         if (readerRow.getTitle().toString() == "Press Release") {
             viewHolder.txtTitle.setBackgroundColor(mContext.getResources().getColor(R.color.swtor_blue));
@@ -70,15 +73,12 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
         public TextView txtTitle;
         public TextView txtNewsCategory;
         public TextView txtDescription;
-        public Button btnMore;
-        public ImageView imgBackground;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             txtNewsCategory = (TextView) itemView.findViewById(R.id.txtNewsCategory);
             txtDescription = (TextView) itemView.findViewById(R.id.txtDescription);
-            //imgBackground = (ImageView) itemView.findViewById(R.id.imgBackground);
         }
     }
 }

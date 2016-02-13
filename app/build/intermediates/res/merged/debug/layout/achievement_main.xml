@@ -20,7 +20,7 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsed_toolbar"
             android:layout_width="fill_parent"
-            android:layout_height="220dp"
+            android:layout_height="192dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="48.0dip"

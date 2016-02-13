@@ -84,8 +84,8 @@
     <string name="beastlore">Beast</string>
     <string name="lore">Lore</string>
     
-    <string name="faction">Faction</string>
-    <string name="factionsub">Please Choose</string>
+    <string name="faction">Choose Your Allegiance</string>
+    <string name="factionsub">Allegiance</string>
     
     <string name="progressionsub">Progression</string>
     

@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.stryksta.swtorcentral.adapters.ReaderAdapter;
 import com.stryksta.swtorcentral.data.RssItem;
+import com.stryksta.swtorcentral.util.DividerItemDecoration;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.RssReader;
 import com.stryksta.swtorcentral.util.database.RssDatabaseHandler;
@@ -119,6 +120,8 @@ public class ReaderActivity extends Fragment {
 
                     //Set Adapter
                     mRecycleAdapter = new ReaderAdapter(getActivity(), rssItems);
+
+					//mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), GridLayoutManager.VERTICAL));
 
                     mRecyclerView.setAdapter(mRecycleAdapter);
 
