@@ -8,7 +8,8 @@ import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.data.ProgressionItem;
-import com.stryksta.swtorcentral.util.timeline.TimelineHView;
+import com.stryksta.swtorcentral.util.VerticalTextView;
+import com.stryksta.swtorcentral.util.timeline.TimelineView;
 import java.util.ArrayList;
 
 public class ProgressionAdapter extends RecyclerView.Adapter<ProgressionAdapter.ViewHolder>{
@@ -47,16 +48,16 @@ public class ProgressionAdapter extends RecyclerView.Adapter<ProgressionAdapter.
         public ImageView imgPlanet;
         public TextView txtPlanet;
         public TextView txtLevel;
-        public TextView txtLabel;
-        public TimelineHView timeLineView;
+        public VerticalTextView txtLabel;
+        public TimelineView timeLineView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imgPlanet = (ImageView) itemView.findViewById(R.id.imgPlanet);
             txtPlanet = (TextView) itemView.findViewById(R.id.txtPlanet);
             txtLevel = (TextView) itemView.findViewById(R.id.txtLevel);
-            txtLabel = (TextView) itemView.findViewById(R.id.txtLabel);
-            timeLineView = (TimelineHView) itemView.findViewById(R.id.timeline);
+            txtLabel = (VerticalTextView) itemView.findViewById(R.id.txtLabel);
+            timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
         }
     }
 }

@@ -82,7 +82,7 @@
                         android:background="@drawable/round"
                         android:elevation="3dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_action_gear_white"/>
+                        android:src="@drawable/ic_healer_white"/>
 
                     <TextView
                         android:id="@+id/txtDiscipline1"
@@ -112,7 +112,7 @@
                         android:background="@drawable/round"
                         android:elevation="3dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_action_gear_white"/>
+                        android:src="@drawable/ic_damage_white"/>
 
                     <TextView
                         android:id="@+id/txtDiscipline2"
@@ -142,7 +142,7 @@
                         android:background="@drawable/round"
                         android:elevation="3dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_action_gear_white"/>
+                        android:src="@drawable/ic_tank_white"/>
 
                     <TextView
                         android:id="@+id/txtDiscipline3"

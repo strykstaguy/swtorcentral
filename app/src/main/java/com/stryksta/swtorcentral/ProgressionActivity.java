@@ -50,7 +50,7 @@ public class ProgressionActivity extends AppCompatActivity {
         //Set RecyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.progressionList);
 
-        mLayoutManager = new GridLayoutManager(ProgressionActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
+        mLayoutManager = new GridLayoutManager(ProgressionActivity.this, 1, GridLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         if ( FactionText.equals("Republic")) {

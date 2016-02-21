@@ -1,37 +1,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:background="@color/background"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <com.stryksta.swtorcentral.util.timeline.RoundTimelineHView
-        android:id="@+id/timeline"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/swtor_blue"
-        app:firstColor="@color/white"
-        app:firstSize="10"
-        app:lastColor="@color/white"
-        app:lastSize="10"
-        app:lineColor="@color/white"
-        app:lineWidth="5dp"
-        app:middleColor="@color/white"
-        app:middleSize="10"
-        app:timeline_type="line" />
-
-    <TextView
+    <com.stryksta.swtorcentral.util.VerticalTextView
         android:id="@+id/txtLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-6dp"
-        android:paddingBottom="6dp"
-        android:background="@color/swtor_blue"
+        android:layout_marginLeft="@dimen/dim_20"
         android:gravity="top|center"
         android:text="@string/test_main"
-        android:textColor="@color/white"
+        android:textColor="@color/text"
         android:textSize="16sp" />
+
+    <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
+        android:id="@+id/timeline"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        app:firstColor="@color/gray_23"
+        app:firstSize="15"
+        app:lastColor="@color/gray_23"
+        app:lastSize="15"
+        app:lineColor="@color/gray_23"
+        app:lineWidth="10dp"
+        app:middleColor="@color/gray_23"
+        app:middleSize="15"
+        app:timeline_type="line" />
 
     <LinearLayout
         android:id="@+id/txtInfo"
@@ -41,31 +38,35 @@
         android:padding="@dimen/dim_5"
         android:gravity="center">
 
+
+
+        <ImageView
+            android:id="@+id/imgPlanet"
+            android:layout_width="150.0dip"
+            android:layout_height="150.0dip"
+            android:layout_marginTop="2.0dip"
+            android:clickable="false"
+            android:padding="5.0dp"
+            android:contentDescription="@string/image_placeholder"
+            android:src="@drawable/pl_tython"
+            android:scaleType="fitCenter" />
+
         <TextView
             android:id="@+id/txtPlanet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/text"
-            android:text="@string/test_main"
+            android:text="Tython"
             android:textSize="24sp" />
-
-        <ImageView
-            android:id="@+id/imgPlanet"
-            android:layout_width="200.0dip"
-            android:layout_height="200.0dip"
-            android:layout_marginTop="2.0dip"
-            android:clickable="false"
-            android:padding="5.0dp"
-            android:contentDescription="@string/image_placeholder"
-            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/txtLevel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@android:color/black"
+            android:textColor="@color/subtext"
+            android:text="Levels 1 - 10"
             android:textSize="18sp" />
     </LinearLayout>
 

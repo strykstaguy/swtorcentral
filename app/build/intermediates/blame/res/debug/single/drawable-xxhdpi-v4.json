@@ -16,6 +16,10 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_serverup.png"
     },
     {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_tank_white.png",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-xxhdpi\\ic_tank_white.png"
+    },
+    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_ic_voice_search_api_mtrl_alpha.png"
     },
@@ -90,6 +94,10 @@
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_datacron.png",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-xxhdpi\\ic_datacron.png"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_damage_white.png",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-xxhdpi\\ic_damage_white.png"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
@@ -214,6 +222,10 @@
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\progress_secondary_swtor.9.png",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-xxhdpi\\progress_secondary_swtor.9.png"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_achievement_white.png",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-xxhdpi\\ic_achievement_white.png"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\btn_cab_done_focused_swtor.9.png",
@@ -358,6 +370,10 @@
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xxhdpi\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_healer_white.png",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-xxhdpi\\ic_healer_white.png"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
