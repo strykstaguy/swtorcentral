@@ -16,7 +16,7 @@ public class CompanionDatabase extends SQLiteAssetHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 
-	public Cursor getCompanions(long id) {
+	public Cursor getOriginalCompanions(long id) {
 		SQLiteDatabase db = getReadableDatabase();
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 

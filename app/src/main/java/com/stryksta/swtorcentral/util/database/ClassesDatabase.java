@@ -31,11 +31,4 @@ public class ClassesDatabase extends SQLiteAssetHelper {
 		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(id)});
 		return c;
 	}
-
-	public Cursor getAdvancedClass(String id) {
-		SQLiteDatabase db = getReadableDatabase();
-		String sqlSelect = "SELECT * FROM advanced_classes WHERE class = ?";
-		Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(id)});
-		return c;
-	}
 }

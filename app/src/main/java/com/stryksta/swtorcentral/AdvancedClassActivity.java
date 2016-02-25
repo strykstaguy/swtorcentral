@@ -86,7 +86,7 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
         CompDP = new CompanionDatabase(AdvancedClassActivity.this);
         db2 = new CompanionGiftsDatabase(AdvancedClassActivity.this);
-        companions = CompDP.getCompanions(ClassID);
+        companions = CompDP.getOriginalCompanions(ClassID);
         if (companions.moveToFirst())
         {
             do

@@ -25,7 +25,7 @@
             app:cardCornerRadius="2dp"
             app:cardPreventCornerOverlap="false"
             android:foreground="@drawable/card_foreground"
-            app:cardBackgroundColor="@color/swtor_accent">
+            app:cardBackgroundColor="@color/white">
 
             <TextView
                 android:id="@+id/txtNewsCategory"
@@ -34,7 +34,7 @@
                 android:elevation="1dp"
                 android:textSize="14sp"
                 android:padding="@dimen/dim_5"
-                android:background="@color/swtor_blue"
+                android:background="@color/swtor_accent"
                 android:textColor="@color/white"
                 android:text="News"/>
 
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text"
                     android:textSize="20sp" />
 
                 <TextView
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/subtext"
                     android:textSize="12sp"
                     android:maxLines="2"
                     android:ellipsize="end"/>

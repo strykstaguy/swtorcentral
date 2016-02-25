@@ -21,57 +21,57 @@
         android:paddingTop="@dimen/dim_10"
         android:paddingBottom="@dimen/dim_10"
         android:paddingRight="@dimen/dim_5"
-        android:paddingLeft="@dimen/dim_5"
-        android:orientation="vertical">
-   		
-        <com.stryksta.swtorcentral.util.SizeAdjustingTextView
-            android:id="@+id/serverTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:maxLines="1"
-            android:text="The Shadowlands"
-            android:textStyle="bold"
-            android:textColor="@color/text"
-            android:textSize="14sp"
-            android:layout_alignParentTop="true" />
+        android:paddingLeft="@dimen/dim_5">
+
 
         <ImageButton
             android:id="@+id/serverStatusIcon"
             android:layout_width="@dimen/fab_normal"
             android:layout_height="@dimen/fab_normal"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentRight="false"
             android:padding="8dp"
-            android:layout_margin="5dp"
             android:background="@drawable/round"
             android:elevation="3dp"
-            android:src="@drawable/ic_arrow_up_bold_white"
-            android:layout_below="@id/serverTitle"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentLeft="false"
-            android:layout_centerHorizontal="true" />
+            android:src="@drawable/ic_arrow_up_bold_white" />
+
+        <com.stryksta.swtorcentral.util.SizeAdjustingTextView
+            android:id="@+id/serverTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toRightOf="@id/serverStatusIcon"
+            android:maxLines="1"
+            android:text="The Shadowlands"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/serverType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/serverStatusIcon"
             android:gravity="center"
             android:text="PvE"
             android:textColor="@color/text"
-            android:textSize="12sp" />
+            android:textSize="14sp"
+            android:layout_below="@+id/serverZone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/serverStatusIcon"
+            android:layout_toEndOf="@+id/serverStatusIcon" />
 
         <TextView
             android:id="@+id/serverZone"
             android:layout_width="match_parent"
-            android:layout_below="@+id/serverType"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="West"
             android:textColor="@color/text"
-            android:textSize="12sp" />
+            android:textSize="14sp"
+            android:layout_below="@+id/serverTitle"
+            android:layout_alignRight="@+id/serverTitle"
+            android:layout_alignEnd="@+id/serverTitle"
+            android:layout_toRightOf="@+id/serverStatusIcon"
+            android:layout_toEndOf="@+id/serverStatusIcon" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

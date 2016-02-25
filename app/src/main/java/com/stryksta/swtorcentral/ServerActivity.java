@@ -56,7 +56,7 @@ public class ServerActivity extends AppCompatActivity {
         //Set RecyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.serverList);
 
-        mLayoutManager = new GridLayoutManager(ServerActivity.this, 2);
+        mLayoutManager = new GridLayoutManager(ServerActivity.this, 1);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         //This is the code to provide a sectioned list
