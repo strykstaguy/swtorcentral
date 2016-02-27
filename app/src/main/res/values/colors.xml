@@ -71,4 +71,9 @@
     <color name="swtor_button_blue_normal">#ff33b5e5</color>
     <color name="swtor_button_gray_pressed">#dcdcdc</color>
     <color name="swtor_button_gray_normal">#dcdcdc</color>
+
+    <color name="translucent_scrim_top">#53000000</color>
+    <color name="translucent_scrim_top_center">#26000000</color>
+    <color name="translucent_scrim_bottom">#2A000000</color>
+    <color name="translucent_scrim_bottom_center">#0D000000</color>
 </resources>

@@ -29,6 +29,7 @@
             android:layout_width="@dimen/fab_normal"
             android:layout_height="@dimen/fab_normal"
             android:padding="8dp"
+            android:layout_marginLeft="@dimen/dim_10"
             android:background="@drawable/round"
             android:elevation="3dp"
             android:src="@drawable/ic_arrow_up_bold_white" />

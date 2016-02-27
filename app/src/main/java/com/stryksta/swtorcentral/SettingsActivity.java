@@ -17,7 +17,7 @@ public class SettingsActivity extends PreferenceActivity {
         setContentView(R.layout.settings_activity);
         addPreferencesFromResource(R.xml.settings);
         Toolbar mActionBar = (Toolbar) findViewById(R.id.toolbar);
-        mActionBar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+        mActionBar.setNavigationIcon(R.drawable.abc_ic_ab_back_material);
         mActionBar.setTitle(getTitle());
         mActionBar.setClickable(true);
 

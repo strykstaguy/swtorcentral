@@ -1,11 +1,14 @@
 package com.stryksta.swtorcentral.adapters;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.stryksta.swtorcentral.PlanetActivity;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.data.ProgressionItem;
 import com.stryksta.swtorcentral.util.VerticalTextView;
@@ -43,7 +46,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<ProgressionAdapter.
         return (null != progressionItems ? progressionItems.size() : 0);
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView imgPlanet;
         public TextView txtPlanet;
@@ -58,6 +61,14 @@ public class ProgressionAdapter extends RecyclerView.Adapter<ProgressionAdapter.
             txtLevel = (TextView) itemView.findViewById(R.id.txtLevel);
             txtLabel = (VerticalTextView) itemView.findViewById(R.id.txtLabel);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
+
+            // Attach a click listener to the entire row view
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 }

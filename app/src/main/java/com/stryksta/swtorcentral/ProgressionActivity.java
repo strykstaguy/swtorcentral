@@ -5,8 +5,11 @@ import java.util.ArrayList;
 import com.stryksta.swtorcentral.adapters.ProgressionAdapter;
 import com.stryksta.swtorcentral.adapters.ServerAdapter;
 import com.stryksta.swtorcentral.data.ProgressionItem;
+import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.timeline.TimelineType;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +18,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 
 
@@ -22,6 +26,7 @@ public class ProgressionActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     private ProgressionAdapter mRecycleAdapter;
     private RecyclerView mRecyclerView;
+    ArrayList<ProgressionItem> progressionItems;
     String FactionText;
     private Toolbar mToolbar;
 
@@ -54,29 +59,32 @@ public class ProgressionActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         if ( FactionText.equals("Republic")) {
-            mRecycleAdapter = new ProgressionAdapter(generateRepublicData());
+            progressionItems = generateRepublicData();
+
         } else {
-            mRecycleAdapter = new ProgressionAdapter(generateEmpireData());
+            progressionItems = generateEmpireData();
         }
 
+        mRecycleAdapter = new ProgressionAdapter(progressionItems);
         mRecyclerView.setAdapter(mRecycleAdapter);
-
-        /*
-        ListView progressionList = (ListView) findViewById(R.id.progressionList);
-
-        progressionList.setAdapter(factionAdapter);
-        progressionList.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view,int position, long id)
+        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(ProgressionActivity.this, mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
+        {
+            public void onItemClick(View view, int position)
             {
                 Bundle bundle = new Bundle();
-                bundle.putString("planet", factionAdapter.getItem(position).getPlanet());
-                bundle.putString("type", factionAdapter.getItem(position).getLevel());
+                bundle.putString("planet", progressionItems.get(position).getPlanet());
+                bundle.putString("type", progressionItems.get(position).getLevel());
                 bundle.putString("faction", FactionText);
                 Intent intent = new Intent(getApplicationContext(), PlanetActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
-            }});
-        */
+            }
+
+            public void onItemLongClick(View view, int position)
+            {
+
+            }
+        }));
     }
 
     private ArrayList<ProgressionItem> generateRepublicData(){

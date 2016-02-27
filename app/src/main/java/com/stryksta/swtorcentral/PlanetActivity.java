@@ -3,13 +3,16 @@ package com.stryksta.swtorcentral;
 import com.stryksta.swtorcentral.adapters.PlanetPagerAdapter;
 import com.stryksta.swtorcentral.util.database.PlanetDatabase;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 public class PlanetActivity extends AppCompatActivity {
 	private String planetText;
@@ -22,16 +25,18 @@ public class PlanetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.planet_main);
-        
-        ViewPager viewPager = (ViewPager) findViewById(R.id.planet_pager);
-        viewPager.setAdapter(new PlanetPagerAdapter(getSupportFragmentManager()));
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        
+
+		if (Build.VERSION.SDK_INT >= 21) {
+			getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+			getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+		}
+
         Bundle bundle = getIntent().getExtras();
 		
         if ( bundle != null ) {
@@ -41,16 +46,32 @@ public class PlanetActivity extends AppCompatActivity {
         }
 
         getSupportActionBar().setTitle(planetText);
-        
-        dbPlanet = new PlanetDatabase(this);
-		String planetBackground = dbPlanet.PlanetBackground(planetText);
-		dbPlanet.close();
+
+		ViewPager viewPager = (ViewPager) findViewById(R.id.planet_pager);
+		if (viewPager != null) {
+			setupViewPager(viewPager);
+		}
+
+		TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+		tabLayout.setupWithViewPager(viewPager);
+
+        //dbPlanet = new PlanetDatabase(this);
+		//String planetBackground = dbPlanet.PlanetBackground(planetText);
+		//dbPlanet.close();
 
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         
     }
-    
+
+	private void setupViewPager(ViewPager viewPager) {
+		PlanetPagerAdapter adapter = new PlanetPagerAdapter(getSupportFragmentManager());
+		adapter.addFragment(new PlanetTab1(), "Information");
+		adapter.addFragment(new PlanetTab2(), "Datacrons");
+		adapter.addFragment(new PlanetTab3(), "Lore");
+		viewPager.setAdapter(adapter);
+	}
+
     @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {

@@ -9,39 +9,37 @@ import com.stryksta.swtorcentral.PlanetTab1;
 import com.stryksta.swtorcentral.PlanetTab2;
 import com.stryksta.swtorcentral.PlanetTab3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PlanetPagerAdapter extends FragmentPagerAdapter {
- 
-    final int PAGE_COUNT = 3;
-    private static final String[] titles = { "Information ", "Datacrons", "Lore"};
+    private final List<Fragment> mFragments = new ArrayList<>();
+    private final List<String> mFragmentTitles = new ArrayList<>();
+    //final int PAGE_COUNT = 3;
+    //private static final String[] titles = { "Information ", "Datacrons", "Lore"};
     Context context;
  
     public PlanetPagerAdapter(FragmentManager fm) {
         super(fm);
     }
- 
-    @Override
-    public int getCount() {
-        return PAGE_COUNT;
+
+    public void addFragment(Fragment fragment, String title) {
+        mFragments.add(fragment);
+        mFragmentTitles.add(title);
     }
- 
+
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-        case 0:
-        	PlanetTab1 fragmenttab1 = new PlanetTab1();
-            return fragmenttab1;
-        case 1:
-        	PlanetTab2 fragmenttab2 = new PlanetTab2();
-            return fragmenttab2;
-        case 2:
-        	PlanetTab3 fragmenttab3 = new PlanetTab3();
-            return fragmenttab3;
-        }
-        return null;
+        return mFragments.get(position);
     }
- 
+
+    @Override
+    public int getCount() {
+        return mFragments.size();
+    }
+
     @Override
     public CharSequence getPageTitle(int position) {
-    	return titles[position];
+        return mFragmentTitles.get(position);
     }
 }
