@@ -17,7 +17,6 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:titleEnabled="false">
 
-
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -27,6 +26,45 @@
                 android:background="@color/swtor_blue"
                 app:layout_collapseMode="pin"/>
 
+            <ImageButton
+                android:id="@+id/imgClass1"
+                android:layout_width="@dimen/fab_large"
+                android:layout_height="@dimen/fab_large"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"
+                android:layout_marginBottom="@dimen/dim_5"
+                android:background="@drawable/advanced_class"
+                android:elevation="3dp"
+                app:layout_behavior="com.stryksta.swtorcentral.util.ImageBehavior"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_gravity="bottom|center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ac_sage_light"/>
+
+            <FrameLayout
+                android:id="@+id/main.framelayout.title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|center_horizontal"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.3"
+                >
+
+                <LinearLayout
+                    android:id="@+id/main.linearlayout.title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                </LinearLayout>
+            </FrameLayout>
+
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -34,11 +72,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/card"
-        android:layout_marginLeft="@dimen/dim_5"
-        android:layout_marginRight="@dimen/dim_5"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_gravity="fill_vertical"
-        app:behavior_overlapTop="64dp">
+        android:layout_gravity="fill_vertical">
 
         <LinearLayout
             android:id="@+id/serverLayout"
@@ -51,11 +86,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
-                android:layout_margin="10dp"
                 android:textColor="@color/text"
                 android:gravity="center"
                 android:text="Sages are famed for their wisdom as much as for their powerful healing and defensive skills. In troubled times, a Sage brings together the insight of the past with raw power to change the flow of galactic events."
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:layout_margin="10dp" />
 
             <LinearLayout
                 android:orientation="horizontal"
