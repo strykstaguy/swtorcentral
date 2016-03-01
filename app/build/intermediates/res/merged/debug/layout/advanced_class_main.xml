@@ -6,8 +6,9 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="192dp"
+        android:layout_height="250dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:background="@color/swtor_blue">
 
@@ -16,15 +17,6 @@
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:titleEnabled="false">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                android:background="@color/swtor_blue"
-                app:layout_collapseMode="pin"/>
 
             <ImageButton
                 android:id="@+id/imgClass1"
@@ -36,35 +28,31 @@
                 android:layout_marginBottom="@dimen/dim_5"
                 android:background="@drawable/advanced_class"
                 android:elevation="3dp"
-                app:layout_behavior="com.stryksta.swtorcentral.util.ImageBehavior"
+                app:layout_collapseMode="none"
                 app:layout_scrollFlags="scroll|enterAlways"
                 android:layout_gravity="bottom|center"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ac_sage_light"/>
 
-            <FrameLayout
-                android:id="@+id/main.framelayout.title"
+            <LinearLayout
+                android:id="@+id/whitestrip"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:layout_gravity="bottom|center_horizontal"
                 app:layout_scrollFlags="scroll|enterAlways"
                 android:background="@color/white"
-                android:orientation="vertical"
-                app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="0.3"
-                >
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/main.linearlayout.title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    >
-
-                </LinearLayout>
-            </FrameLayout>
-
+            </LinearLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:background="@color/swtor_blue"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:layout_collapseMode="pin"/>
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -353,4 +341,18 @@
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/imgClass2"
+        android:layout_width="@dimen/fab_large"
+        android:layout_height="@dimen/fab_large"
+        android:padding="8dp"
+        android:layout_marginTop="-55dp"
+        android:background="@drawable/advanced_class"
+        android:elevation="3dp"
+        android:scaleType="fitCenter"
+        app:layout_anchor="@id/whitestrip"
+        app:layout_anchorGravity="top|center|end"
+        android:src="@drawable/ac_sage_light"/>
+
 </android.support.design.widget.CoordinatorLayout>
