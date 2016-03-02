@@ -46,6 +46,7 @@ public class ServerItem {
     public void setserverZone(String serverZone) {
         this.serverZone = serverZone;
     }
+
     @Override
     public String toString() {
         return serverName + "\n" + serverStatus;

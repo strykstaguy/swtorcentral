@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,19 +44,19 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
         viewHolder.txtServerName.setText(serverRow.getserverName());
         viewHolder.txtServerType.setText(serverRow.getserverType());
         viewHolder.txtServerZone.setText(serverRow.getserverZone());
-    /*
+
+        viewHolder.txtServerPopulation.setText(serverRow.getserverStatus());
         if (serverRow.getserverStatus().equalsIgnoreCase("Light")) {
-            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_light);
+            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.lightcolor));
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Standard")) {
-            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_standard);
+            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.standardcolor));
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Heavy")) {
-            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_heavy);
+            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.heavycolor));
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Very Heavy")) {
-            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_very_heavy);
+            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.veryheavycolor));
         } else if (serverRow.getserverStatus().equalsIgnoreCase("Full")) {
-            viewHolder.serverStatusIcon.setBackgroundResource(R.drawable.server_full);
+            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.fullcolor));
         }
-        */
     }
 
     @Override
@@ -68,6 +69,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
         public SizeAdjustingTextView txtServerName;
         public TextView txtServerType;
         public TextView txtServerZone;
+        public TextView txtServerPopulation;
         public ImageButton serverStatusIcon;
 
         public ViewHolder(View itemView) {
@@ -75,6 +77,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
             txtServerName = (SizeAdjustingTextView) itemView.findViewById(R.id.serverTitle);
             txtServerType = (TextView) itemView.findViewById(R.id.serverType);
             txtServerZone = (TextView) itemView.findViewById(R.id.serverZone);
+            txtServerPopulation = (TextView) itemView.findViewById(R.id.serverPopulation);
             serverStatusIcon = (ImageButton) itemView.findViewById(R.id.serverStatusIcon);
         }
     }

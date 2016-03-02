@@ -28,7 +28,7 @@ public class TestActivity2 extends AppCompatActivity {
         getSupportActionBar().setTitle("Abilities");
 
         if (!FragmentUtils.isFragmentPresent(TestActivity2.this, "Test1")) {
-            FragmentUtils.switchFragmentsInActivity(TestActivity2.this, R.id.testFrame, new Test1Fragment(), "Test1");
+            //FragmentUtils.switchFragmentsInActivity(TestActivity2.this, R.id.testFrame, new Test1Fragment(), "Test1");
         }
 
         //Debug the thread name

@@ -2,146 +2,71 @@ package com.stryksta.swtorcentral.data;
 
 
 public class ClassItem {
-	private int imgAdvancedClass1;
-	private int imgAdvancedClass2;
-	private int idAdvancedClass1;
-	private int idAdvancedClass2;
-    private String txtAdvancedClass1;
-    private String txtAdvancedClass1Desc;
-    private String txtAdvancedClass2;
-    private String txtAdvancedClass2Desc;
     private String txtClass;
     private String txtResource;
-    private String apc;
+    private String txtApc;
+    private String txtDescription;
     private int idClass;
-    private boolean isGroupHeader = false;
-    
-    public ClassItem(String title) {
-		this(title, 0, "", 0, 0, "", "", 0, 0, "", "", "");
-		isGroupHeader = true;
-	}
-    
-    public ClassItem(String txtClass, int idClass, String txtResource, int idAdvancedClass1, int imgAdvancedClass1, String txtAdvancedClass1, String txtAdvancedClass1Desc, int idAdvancedClass2, int imgAdvancedClass2, String txtAdvancedClass2, String txtAdvancedClass2Desc, String apc) {
+    private int imgClass;
+
+    public ClassItem(String txtClass, int imgClass, int idClass, String txtResource, String txtDescription, String txtApc) {
     	this.txtClass = txtClass;
     	this.idClass = idClass;
+        this.imgClass = imgClass;
     	this.txtResource = txtResource;
-    	this.idAdvancedClass1 = idAdvancedClass1;
-        this.imgAdvancedClass1 = imgAdvancedClass1;
-        this.txtAdvancedClass1 = txtAdvancedClass1;
-        this.txtAdvancedClass1Desc = txtAdvancedClass1Desc;
-        this.idAdvancedClass2 = idAdvancedClass2;
-        this.imgAdvancedClass2 = imgAdvancedClass2;
-        this.txtAdvancedClass2 = txtAdvancedClass2;
-        this.txtAdvancedClass2Desc = txtAdvancedClass2Desc;
-        this.apc = apc;
+        this.txtApc = txtApc;
     }
     
-    public String gettxtClass() {
+    public String getClassName() {
         return txtClass;
     }
 
-    public void settxtClass(String txtClass) {
+    public void setClassName(String txtClass) {
         this.txtClass = txtClass;
     }
 
-    public int getIdClass() {
+    public String getClassDescription() {
+        return txtDescription;
+    }
+
+    public void setClassDescription(String txtDescription) {
+        this.txtDescription = txtDescription;
+    }
+
+    public int getClassImage() {
+        return imgClass;
+    }
+
+    public void getClassImage(int imgClass) {
+        this.imgClass = imgClass;
+    }
+
+    public String getClassResource() {
+        return txtResource;
+    }
+
+    public void setResource(String txtResource) {
+        this.txtResource = txtResource;
+    }
+
+    public int getClassID() {
         return idClass;
     }
     
-    public void getIdClass1(int idClass) {
+    public void setClassID(int idClass) {
         this.idClass = idClass;
     }
-    
-    public int getAdvancedClassID1() {
-        return idAdvancedClass1;
-    }
-    
-    public void getAdvancedClassID1(int idAdvancedClass1) {
-        this.idAdvancedClass1 = idAdvancedClass1;
-    }
-    
-    public int getAdvancedClassID2() {
-        return idAdvancedClass2;
-    }
-    
-    public void getAdvancedClassID2(int idAdvancedClass2) {
-        this.idAdvancedClass2 = idAdvancedClass2;
-    }
-    
-    public int getimgAdvancedClass1() {
-        return imgAdvancedClass1;
-    }
-    
-    public void getimgAdvancedClass1(int imgAdvancedClass1) {
-        this.imgAdvancedClass1 = imgAdvancedClass1;
-    }
-    
-    public int getimgAdvancedClass2() {
-        return imgAdvancedClass2;
-    }
-    
-    public void getimgAdvancedClass2(int imgAdvancedClass2) {
-        this.imgAdvancedClass2 = imgAdvancedClass2;
-    }
-    
-    public String gettxtAdvancedClass1() {
-        return txtAdvancedClass1;
-    }
-    
-    public void settxtAdvancedClass1(String txtAdvancedClass1) {
-    	this.txtAdvancedClass1 = txtAdvancedClass1;
+
+    public String geAPC() {
+        return txtApc;
     }
 
-    public String gettxtAdvancedClass1Desc() {
-        return txtAdvancedClass1Desc;
+    public void setAPC(String txtApc) {
+        this.txtApc = txtApc;
     }
-
-    public void settxtAdvancedClass1Desc(String txtAdvancedClass1Desc) {
-        this.txtAdvancedClass1Desc = txtAdvancedClass1Desc;
-    }
-
-    public String gettxtAdvancedClass2Desc() {
-        return txtAdvancedClass1Desc;
-    }
-
-    public void settxtAdvancedClass2Desc(String txtAdvancedClass2Desc) {
-        this.txtAdvancedClass2Desc = txtAdvancedClass2Desc;
-    }
-
-    public String gettxtAdvancedClass2() {
-        return txtAdvancedClass2;
-    }
-    
-    public void settxtResource(String txtResource) {
-    	this.txtResource = txtResource;
-    }
-    
-    public String gettxtResource() {
-        return txtResource;
-    }
-    
-    public void settxtAdvancedClass2(String txtAdvancedClass2) {
-    	this.txtAdvancedClass2 = txtAdvancedClass2;
-    }
-
-    public String geApc() {
-        return apc;
-    }
-
-    public void setApc(String apc) {
-        this.apc = apc;
-    }
-
-    public boolean isGroupHeader() {
-		return isGroupHeader;
-	}
-	
-	public void setGroupHeader(boolean isGroupHeader) {
-		this.isGroupHeader = isGroupHeader;
-	}
 	
 	@Override
 	public String toString() {
-		return "ID!!!: " + idAdvancedClass1;
+		return "Class: " + txtClass;
 	}
 }

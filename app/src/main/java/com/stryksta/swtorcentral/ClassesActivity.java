@@ -4,6 +4,7 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.adapters.ClassesAdapter;
+import com.stryksta.swtorcentral.data.AdvancedClassesItem;
 import com.stryksta.swtorcentral.data.ClassItem;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 
@@ -19,10 +20,12 @@ public class ClassesActivity extends Fragment{
 	
 	ListView listView;
 	ArrayList<ClassItem> classesArray = new ArrayList<ClassItem>();
+    ArrayList<AdvancedClassesItem> AdvancedClassesArray = new ArrayList<AdvancedClassesItem>();
 	ClassesAdapter adapter;
 	public static final String COLUMN_ID = "_id";
 	public static final String COLUMN_NAME = "name";
     public static final String APC_NAME = "apc";
+    public static final String COLUMN_DESC = "description";
 	public static final String COLUMN_RESOURCE = "resource";
 	
 	private ClassesDatabase db;
@@ -66,19 +69,22 @@ public class ClassesActivity extends Fragment{
         
         
         classesArray.clear();
-        
+        AdvancedClassesArray.clear();
+
 		if (classesDB.moveToFirst()) {
 			
 			do {
-				Integer id = classesDB.getInt(classesDB.getColumnIndex(COLUMN_ID));
-            	String name = classesDB.getString(classesDB.getColumnIndex(COLUMN_NAME));
-            	String resource = classesDB.getString(classesDB.getColumnIndex(COLUMN_RESOURCE));
-                String apc = classesDB.getString(classesDB.getColumnIndex(APC_NAME));
-            	int classicon = getResources().getIdentifier(classesDB.getString(classesDB.getColumnIndex("class_icon")), "drawable", getActivity().getPackageName());
-                
-            	classesArray.add(new ClassItem(name));
+				Integer classID = classesDB.getInt(classesDB.getColumnIndex(COLUMN_ID));
+            	String className = classesDB.getString(classesDB.getColumnIndex(COLUMN_NAME));
+                String classDescription = classesDB.getString(classesDB.getColumnIndex(COLUMN_DESC));
+            	String classResource = classesDB.getString(classesDB.getColumnIndex(COLUMN_RESOURCE));
+                String classAPC = classesDB.getString(classesDB.getColumnIndex(APC_NAME));
+            	int classIcon = getResources().getIdentifier(classesDB.getString(classesDB.getColumnIndex("class_icon")), "drawable", getActivity().getPackageName());
 
-                advClassesCursor = db.getAdvancedClasses(id);
+                //
+            	classesArray.add(new ClassItem(className, classIcon, classID, classResource, classDescription, classAPC));
+
+                advClassesCursor = db.getAdvancedClasses(classID);
 
 
                 advClassesCursor.moveToPosition(0);
@@ -92,9 +98,10 @@ public class ClassesActivity extends Fragment{
                     advClassName2 = advClassesCursor.getString(advClassesCursor.getColumnIndex("class"));
                     advClassDesc2 = advClassesCursor.getString(advClassesCursor.getColumnIndex("description"));
                 	advClassimg2 = getResources().getIdentifier(advClassesCursor.getString(advClassesCursor.getColumnIndex("advanced_class_icon")), "drawable", getActivity().getPackageName());
-                	
-                	classesArray.add(new ClassItem(name, id, resource, advClassID1, advClassimg1, advClassName1, advClassDesc1, advClassID2, advClassimg2, advClassName2, advClassDesc2, apc));
+
+                    AdvancedClassesArray.add(new AdvancedClassesItem(advClassID1, advClassimg1, advClassName1, advClassDesc1, advClassID2, advClassimg2, advClassName2, advClassDesc2));
                     advClassesCursor.close();
+
 			} while (classesDB.moveToNext());
 		}
 
@@ -102,7 +109,7 @@ public class ClassesActivity extends Fragment{
 		
         
 		
-		adapter = new ClassesAdapter(getActivity(), classesArray);
+		adapter = new ClassesAdapter(getActivity(), classesArray, AdvancedClassesArray);
 		listView.setAdapter(adapter);
 		
 		return vw_layout;

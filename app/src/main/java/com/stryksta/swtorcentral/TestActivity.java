@@ -30,7 +30,7 @@ public class TestActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Abilities");
 
         if (!FragmentUtils.isFragmentPresent(TestActivity.this, "Test1")) {
-            FragmentUtils.switchFragmentsInActivity(TestActivity.this, R.id.testFrame, new Test1Fragment(), "Test1");
+            //FragmentUtils.switchFragmentsInActivity(TestActivity.this, R.id.testFrame, new Test1Fragment(), "Test1");
         }
 
         //Debug the thread name

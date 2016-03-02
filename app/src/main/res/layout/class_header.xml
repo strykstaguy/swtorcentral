@@ -14,10 +14,20 @@
 		android:paddingLeft="16dp"
 		android:singleLine="true"
 		android:textAllCaps="true"
-		android:textColor="@color/swtor_blue"
-		android:background="@android:color/transparent"
+		android:textColor="@color/text"
 		android:text="@string/test_main"
 		android:textSize="16sp"
 		android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:textColor="@color/text"
+        android:gravity="center"
+        android:text="Sages are famed for their wisdom as much as for their powerful healing and defensive skills. In troubled times, a Sage brings together the insight of the past with raw power to change the flow of galactic events."
+        android:textSize="14sp"
+        android:layout_margin="10dp" />
  	
 </LinearLayout>

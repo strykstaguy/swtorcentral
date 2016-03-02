@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.AdvancedClassActivity;
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.data.AdvancedClassesItem;
 import com.stryksta.swtorcentral.data.ClassItem;
 
 import android.content.Context;
@@ -11,6 +12,7 @@ import android.content.Intent;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,109 +26,100 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
 
 	private final Context context;
 	private final ArrayList<ClassItem> swtorClasses;
+    private final ArrayList<AdvancedClassesItem> swtorAdvancedClasses;
 	int AdvancedPos1;
 	int AdvancedPos2;
 
-	public ClassesAdapter(Context context, ArrayList<ClassItem> swtorClasses) {
-		super(context, R.layout.achievement_row, swtorClasses);
+	public ClassesAdapter(Context context, ArrayList<ClassItem> swtorClasses, ArrayList<AdvancedClassesItem> swtorAdvancedClasses) {
+		super(context, R.layout.class_item, swtorClasses);
 
 		this.context = context;
 		this.swtorClasses = swtorClasses;
+        this.swtorAdvancedClasses = swtorAdvancedClasses;
 	}
 
 	@Override
 	public View getView(int position, View convertView, final ViewGroup parent) {
 
-		// 1. Create inflater
 		LayoutInflater inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-		// 2. Get rowView from inflater
+        View rowView = null;
+        rowView = inflater.inflate(R.layout.class_item, parent, false);
 
-		View rowView = null;
-		final ClassItem item = swtorClasses.get(position);
+		final ClassItem classItem = swtorClasses.get(position);
+        final AdvancedClassesItem advancedClassItem = swtorAdvancedClasses.get(position);
 
-		if(item.isGroupHeader()){
-			rowView = inflater.inflate(R.layout.class_header, parent, false);
+        //Class Information
+        TextView txtHeader = (TextView) rowView.findViewById(R.id.txtClass);
+        txtHeader.setText(classItem.getClassName());
 
-			TextView txtHeader = (TextView) rowView.findViewById(R.id.txtClass);
+        TextView txtDesc = (TextView) rowView.findViewById(R.id.txtDesc);
+        txtDesc.setText(classItem.getClassDescription());
 
-			txtHeader.setText(item.gettxtClass());
+        //Advanced Class Information
+        ImageButton imgClass1 = (ImageButton) rowView.findViewById(R.id.imgClass1);
+        TextView txtClass1 = (TextView) rowView.findViewById(R.id.txtClass1);
 
-		} else {
-			rowView = inflater.inflate(R.layout.class_item, parent, false);
+        ImageButton imgClass2 = (ImageButton) rowView.findViewById(R.id.imgClass2);
+        TextView txtClass2 = (TextView) rowView.findViewById(R.id.txtClass2);
 
-			// 3. Get icon,title & counter views from the rowView
-			ImageButton imgClass1 = (ImageButton) rowView.findViewById(R.id.imgClass1);
-			TextView txtClass1 = (TextView) rowView.findViewById(R.id.txtClass1);
+        /*
+        int iColor = ContextCompat.getColor(context, R.color.white);
 
-			ImageButton imgClass2 = (ImageButton) rowView.findViewById(R.id.imgClass2);
-			TextView txtClass2 = (TextView) rowView.findViewById(R.id.txtClass2);
+        int red = (iColor & 0xFF0000) / 0xFFFF;
+        int green = (iColor & 0xFF00) / 0xFF;
+        int blue = iColor & 0xFF;
 
-			int iColor = context.getResources().getColor(R.color.white);
+        float[] matrix = { 0, 0, 0, 0, red
+                , 0, 0, 0, 0, green
+                , 0, 0, 0, 0, blue
+                , 0, 0, 0, 1, 0 };
 
+        ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
+        */
 
-			int red = (iColor & 0xFF0000) / 0xFFFF;
-			int green = (iColor & 0xFF00) / 0xFF;
-			int blue = iColor & 0xFF;
+        imgClass1.setImageResource(advancedClassItem.getimgAdvancedClass1());
+        txtClass1.setText(advancedClassItem.gettxtAdvancedClass1());
 
-			float[] matrix = { 0, 0, 0, 0, red
-					, 0, 0, 0, 0, green
-					, 0, 0, 0, 0, blue
-					, 0, 0, 0, 1, 0 };
+        imgClass2.setImageResource(advancedClassItem.getimgAdvancedClass2());
+        txtClass2.setText(advancedClassItem.gettxtAdvancedClass2());
 
-			ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
+        //imgClass1.setColorFilter(colorFilter);
+        //imgClass2.setColorFilter(colorFilter);
 
-			// 4. Set the text for textView
-			imgClass1.setImageResource(item.getimgAdvancedClass1());
-			txtClass1.setText(item.gettxtAdvancedClass1());
+        imgClass1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("class", classItem.getClassName());
+                bundle.putInt("class_id", classItem.getClassID());
+                bundle.putString("apc", classItem.geAPC());
+                bundle.putString("resource", classItem.getClassResource());
+                bundle.putInt("position", advancedClassItem.getAdvancedClassID1());
+                bundle.putString("advancedclass", advancedClassItem.gettxtAdvancedClass1());
 
-			imgClass2.setImageResource(item.getimgAdvancedClass2());
-			txtClass2.setText(item.gettxtAdvancedClass2());
+                Intent intent = new Intent(context, AdvancedClassActivity.class);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
 
-			imgClass1.setColorFilter(colorFilter);
-			imgClass2.setColorFilter(colorFilter);
+        imgClass2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("class", classItem.getClassName());
+                bundle.putInt("class_id", classItem.getClassID());
+                bundle.putString("resource", classItem.getClassResource());
+                bundle.putInt("position", advancedClassItem.getAdvancedClassID2());
+                bundle.putString("apc", classItem.geAPC());
+                bundle.putString("advancedclass", advancedClassItem.gettxtAdvancedClass2());
 
-			imgClass1.setOnClickListener(new View.OnClickListener() {
-				public void onClick(View view) {
+                Intent intent = new Intent(context, AdvancedClassActivity.class);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
 
-
-					Bundle bundle = new Bundle();
-					bundle.putString("class", item.gettxtClass());
-					bundle.putInt("class_id", item.getIdClass());
-					bundle.putString("apc", item.geApc());
-
-					bundle.putString("resource", item.gettxtResource());
-					bundle.putInt("position", item.getAdvancedClassID1());
-					bundle.putString("advancedclass", item.gettxtAdvancedClass1());
-
-					Intent intent = new Intent(context, AdvancedClassActivity.class);
-					intent.putExtras(bundle);
-					context.startActivity(intent);
-				}
-			});
-
-			imgClass2.setOnClickListener(new View.OnClickListener() {
-				public void onClick(View view) {
-
-
-					Bundle bundle = new Bundle();
-					bundle.putString("class", item.gettxtClass());
-					bundle.putInt("class_id", item.getIdClass());
-					bundle.putString("resource", item.gettxtResource());
-					bundle.putInt("position", item.getAdvancedClassID2());
-					bundle.putString("apc", item.geApc());
-					bundle.putString("advancedclass", item.gettxtAdvancedClass2());
-
-					//Log.d("SWTORCentral", String.valueOf(item.getAdvancedClassID2()));
-					Intent intent = new Intent(context, AdvancedClassActivity.class);
-					intent.putExtras(bundle);
-					context.startActivity(intent);
-				}
-			});
-		}
-
-		// 5. retrn rowView
 		return rowView;
 	}
 }
