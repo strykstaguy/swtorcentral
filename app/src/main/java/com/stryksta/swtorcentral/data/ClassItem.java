@@ -6,6 +6,10 @@ public class ClassItem {
     private String txtResource;
     private String txtApc;
     private String txtDescription;
+    private String txtCombatRole;
+    private String txtStory;
+    private String txtAbilities;
+    private String txtEquipment;
     private int idClass;
     private int imgClass;
 
@@ -13,7 +17,8 @@ public class ClassItem {
     	this.txtClass = txtClass;
     	this.idClass = idClass;
         this.imgClass = imgClass;
-    	this.txtResource = txtResource;
+    	this.txtDescription = txtDescription;
+        this.txtResource = txtResource;
         this.txtApc = txtApc;
     }
     
@@ -31,6 +36,38 @@ public class ClassItem {
 
     public void setClassDescription(String txtDescription) {
         this.txtDescription = txtDescription;
+    }
+
+    public String getCombatRole() {
+        return txtCombatRole;
+    }
+
+    public void seCombatRole(String txtCombatRole) {
+        this.txtCombatRole = txtCombatRole;
+    }
+
+    public String getStory() {
+        return txtStory;
+    }
+
+    public void seStory(String txtStory) {
+        this.txtStory = txtStory;
+    }
+
+    public String getAbilities() {
+        return txtAbilities;
+    }
+
+    public void seAbilities(String txtAbilities) {
+        this.txtAbilities = txtAbilities;
+    }
+
+    public String getEquipment() {
+        return txtEquipment;
+    }
+
+    public void seEquipment(String txtEquipment) {
+        this.txtEquipment = txtEquipment;
     }
 
     public int getClassImage() {

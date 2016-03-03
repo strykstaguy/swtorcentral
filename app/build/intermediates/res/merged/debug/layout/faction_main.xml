@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:padding="20.0dip"
+    android:padding="@dimen/dim_10"
     android:background="@color/background"
     android:layout_gravity="center" >
 
@@ -16,7 +16,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 
-    <LinearLayout
+    <RelativeLayout
       android:id="@+id/layoutRepublic"
       android:layout_width="fill_parent"
       android:layout_height="0dp"
@@ -26,14 +26,31 @@
       android:orientation="vertical">
 
       <ImageView
-        android:id="@+id/imgRepublic"
+        android:id="@+id/imgRepublicBG"
         android:layout_width="256.0dip"
         android:layout_height="256.0dip"
         android:clickable="false"
         android:layout_gravity="center"
         android:src="@drawable/light_side"
         android:contentDescription="@string/image_placeholder"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+          android:layout_below="@+id/txtRepublic"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:id="@+id/imgRepublic"
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:padding="8dp"
+            android:background="@drawable/round"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_republic"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgRepublicBG"
+            android:layout_toEndOf="@+id/imgRepublicBG" />
 
       <TextView
         android:id="@+id/txtRepublic"
@@ -45,9 +62,9 @@
         android:text="@string/republic"
         android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@color/text" />
-  </LinearLayout>
+  </RelativeLayout>
 
-  <LinearLayout
+  <RelativeLayout
       android:id="@+id/layoutEmpire"
       android:layout_width="fill_parent"
       android:layout_height="0dp"
@@ -57,14 +74,31 @@
       android:orientation="vertical">
 
       <ImageView
-        android:id="@+id/imgEmpire"
+        android:id="@+id/imgEmpireBG"
         android:layout_width="256.0dip"
         android:layout_height="256.0dip"
         android:clickable="false"
         android:src="@drawable/dark_side"
         android:layout_gravity="center"
         android:contentDescription="@string/image_placeholder"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentEnd="true" />
+
+      <ImageButton
+          android:id="@+id/imgEmpire"
+          android:layout_width="@dimen/fab_large"
+          android:layout_height="@dimen/fab_large"
+          android:padding="8dp"
+          android:background="@drawable/round_red"
+          android:elevation="3dp"
+          android:layout_gravity="center"
+          android:scaleType="fitCenter"
+          android:src="@drawable/ic_empire"
+          android:layout_centerVertical="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true" />
 
       <TextView
         android:id="@+id/txtEmpire"
@@ -76,5 +110,5 @@
         android:text="@string/empire"
         android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@color/text" />
-  </LinearLayout>
+  </RelativeLayout>
 </LinearLayout>

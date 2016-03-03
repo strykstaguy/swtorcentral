@@ -79,8 +79,8 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
         mTitleView = (TextView) findViewById(R.id.title);
 
+        /*
         NonScrollListView companionsListView = (NonScrollListView) findViewById(R.id.companionsListView);
-
         companionItems = new ArrayList<CompanionItem>();
 
 
@@ -113,6 +113,8 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
         CompanionClassAdapter companionsAdapter = new CompanionClassAdapter(AdvancedClassActivity.this, R.layout.companion_class_row, companionItems);
         companionsListView.setAdapter(companionsAdapter);
+
+    */
 
         //Advanced Classes Info
         advDB = new AdvancedClassesDatabase(AdvancedClassActivity.this);

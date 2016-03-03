@@ -41,101 +41,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="471c63eb-cf01-4072-922e-2198e40a6e5a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/AdvancedClassesItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/AvatarBehavior.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/round_white.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/layout-v21.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout-v21.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/com/stryksta/swtorcentral/test/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Test1Fragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Test2Fragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Test2Fragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Test2Fragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Test2Fragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Test3Fragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/TestAdapter$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/TestAdapter$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/TestAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/TestPagerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/android-sqlite-asset-helper_4262d524bfbe088ac7b7c42485618d627a060c90.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_4bfc43333f13557f33c90eced68486ccb4e1f2c3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_e2c51393455696f6f1a52e62a7290adcf464ba7d.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.2.0_94cc3593e075ad440c84e2b7b2cc9686270fb060.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_fc278e02efcadbed972060dc4f9736daf7295e7d.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_8ff0629f461d1333496252c2a06f9954676fe28d.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_c413bf5631cd0e58af5241011b9d4b83ed8b1400.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_871481bdc29127fa7cce5666684f8d73a2b7f8bd.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_b7a7a601ffd47ae41e27f7863be02d38559e0c22.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_61be03c6b63c0d9d2cd57c11d6a25b78c3c80933.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jsoup-1.7.3_d559df37cc3e07f02d3042f436f4545179e679ec.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_71ccdcd83cb2db15c333a4a2fff606e5504197eb.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_a6c6cf081221f4b957bcac3ece71f54dbecd6b88.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/Test1Fragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/Test2Fragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/Test3Fragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/TestAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/TestPagerAdapter.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/round_red.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/databases/swtor.zip" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/databases/swtor.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/AbilityDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/AbilityDetailActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/AchievementActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/AchievementActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/AdvancedClassActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/AdvancedClassActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/BlankActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/BlankActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/BlankFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/BlankFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category1Fragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category1Fragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category1Fragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category1Fragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category2Fragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category2Fragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category2Fragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category2Fragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category3Fragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category3Fragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category3Fragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category3Fragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category4Fragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category4Fragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category4Fragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/Category4Fragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$saveCharacter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity$saveCharacter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterAddActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterEditActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterEditActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterEditActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterEditActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterEditActivity$saveCharacter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterEditActivity$saveCharacter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterEditActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/CharacterEditActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ClassesActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ClassesActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/DatacronActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/DatacronActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/FactionFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/FactionFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/FactionFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/FactionFragment$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/FactionFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/FactionFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/PlanetTab3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ProgressionActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ProgressionActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ProgressionActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ProgressionActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R$id.class" />
@@ -147,289 +71,37 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R$xml.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ReaderActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ReaderActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ReaderActivity$GetRSSDataTask$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ReaderActivity$GetRSSDataTask$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ReaderActivity$GetRSSDataTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ReaderActivity$GetRSSDataTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ReaderActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ReaderActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ServerActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ServerActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ServerActivity$GetServerStatus.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ServerActivity$GetServerStatus.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ServerActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/ServerActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/SettingsActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/SettingsActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/SettingsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/SettingsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/SpanningLinearLayoutManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/SpanningLinearLayoutManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestActivity2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestActivity2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestRecycleActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestRecycleActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestTab1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestTab1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestTab2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/TestTab2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AbilityAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AbilityAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AbilityDetailAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AbilityDetailAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AbilityDetailAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AbilityDetailAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AbilityDetailAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AbilityDetailAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AchievementAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AchievementAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AchievementCategoryAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AchievementCategoryAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AchievementCategoryAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AchievementCategoryAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AchievementItemsAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/AchievementItemsAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CharacterAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CharacterAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CharacterAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CharacterAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CharacterAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CharacterAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CharacterDrawerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CharacterDrawerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ClassesAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ClassesAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ClassesAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ClassesAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ClassesAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ClassesAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionClassAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionClassAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionClassAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionClassAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionClassAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/CompanionClassAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/DatacronAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/DatacronAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/DatacronAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/DatacronAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/LoreAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/LoreAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/LoreAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/LoreAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/LoreAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/LoreAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/PlanetAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/PlanetAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/PlanetAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/PlanetAdapter$ViewHolder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/PlanetAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/PlanetAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ProgressionAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ProgressionAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ProgressionAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ProgressionAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ReaderAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ReaderAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ReaderAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ReaderAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/RecycleAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/RecycleAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/RecycleAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/RecycleAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SectionedGridRecyclerViewAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SectionedGridRecyclerViewAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SectionedGridRecyclerViewAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SectionedGridRecyclerViewAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SectionedGridRecyclerViewAdapter$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SectionedGridRecyclerViewAdapter$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SectionedGridRecyclerViewAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SectionedGridRecyclerViewAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ServerAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ServerAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ServerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/ServerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SimpleSectionedRecyclerViewAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SimpleSectionedRecyclerViewAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SimpleSectionedRecyclerViewAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SimpleSectionedRecyclerViewAdapter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SimpleSectionedRecyclerViewAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/adapters/SimpleSectionedRecyclerViewAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/data/ClassItem.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/data/ClassItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/data/ServerItem.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/data/ServerItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/AutoMeasureGridView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/AutoMeasureGridView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ColorUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ColorUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/DividerItemDecoration.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/DividerItemDecoration.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ExpandableTextView$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ExpandableTextView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ExpandableTextView$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ExpandableTextView$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ExpandableTextView$ExpandCollapseAnimation.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ExpandableTextView$ExpandCollapseAnimation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ExpandableTextView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ExpandableTextView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FloatLabelLayout$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FloatLabelLayout$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FloatLabelLayout$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FloatLabelLayout$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FloatLabelLayout$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FloatLabelLayout$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FloatLabelLayout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FloatLabelLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FragmentUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/FragmentUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/HorizontalListView$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/HorizontalListView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/HorizontalListView$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/HorizontalListView$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/HorizontalListView$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/HorizontalListView$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/HorizontalListView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/HorizontalListView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ImageBehavior.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/ImageBehavior.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/LoreDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/LoreDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/MaterialProgress$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/MaterialProgress$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/MaterialProgress$WheelSavedState$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/MaterialProgress$WheelSavedState$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/MaterialProgress$WheelSavedState.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/MaterialProgress$WheelSavedState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/MaterialProgress.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/MaterialProgress.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/NonScrollGridView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/NonScrollGridView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/NonScrollListView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/NonScrollListView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/PinnedSectionListView$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/PinnedSectionListView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/PinnedSectionListView$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/PinnedSectionListView$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/PinnedSectionListView$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/PinnedSectionListView$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/PinnedSectionListView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/PinnedSectionListView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/RecyclerItemClickListener$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/RecyclerItemClickListener$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/RecyclerItemClickListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/RecyclerItemClickListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/SWTORProgressbar.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/SWTORProgressbar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/SessionManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/SessionManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/SizeAdjustingTextView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/SizeAdjustingTextView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/SpanningGridLayoutManager.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/SpanningGridLayoutManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/TextProgressBar.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/TextProgressBar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/Utility.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/Utility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/AbilitiesDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/AbilitiesDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/AchievementsDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/AchievementsDatabase.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/AdvancedClassesDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/AdvancedClassesDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/CharacterDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/CharacterDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/ClassesDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/ClassesDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/CompanionDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/CompanionDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/CompanionGiftsDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/CompanionGiftsDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/DatacronDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/DatacronDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/DisciplinesDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/DisciplinesDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/LoreDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/LoreDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/PlanetDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/PlanetDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/RssDatabaseHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/RssDatabaseHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/TestDatabaseHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/TestDatabaseHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/TutorialDatabase.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/database/TutorialDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/timeline/TimelineHView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/timeline/TimelineHView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/timeline/TimelineType.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/timeline/TimelineType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/timeline/TimelineView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/stryksta/swtorcentral/util/timeline/TimelineView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_845484558dc4152e7f435130be7321e9b9f90336.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_845484558dc4152e7f435130be7321e9b9f90336.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/databases/swtor.zip" afterPath="$PROJECT_DIR$/app/src/main/assets/databases/swtor.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SWTORCentral.iml" afterPath="$PROJECT_DIR$/SWTORCentral.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/stryksta/swtorcentral/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/stryksta/swtorcentral/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-af.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-af.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-am.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-am.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ar.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-az-rAZ.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-az-rAZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-bg.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-bg.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-bn-rBD.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-bn-rBD.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ca.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ca.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-cs.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-cs.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-da.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-da.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-el.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-el.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-en-rAU.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-en-rAU.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-en-rGB.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-en-rGB.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-en-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-en-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-es-rUS.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-es-rUS.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-et-rEE.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-et-rEE.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-eu-rES.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-eu-rES.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fa.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fa.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fr-rCA.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fr-rCA.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-gl-rES.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-gl-rES.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-gu-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-gu-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-h320dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-h320dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-h720dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-h720dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hy-rAM.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hy-rAM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-in.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-in.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-is-rIS.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-is-rIS.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-iw.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-iw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ja.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ja.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ka-rGE.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ka-rGE.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-kk-rKZ.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-kk-rKZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-km-rKH.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-km-rKH.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-kn-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-kn-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ky-rKG.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ky-rKG.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-land.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-land.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-large-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-large-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ldltr-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ldltr-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-lo-rLA.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-lo-rLA.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-lt.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-lt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-lv.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-lv.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-mk-rMK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-mk-rMK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ml-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ml-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-mn-rMN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-mn-rMN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-mr-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-mr-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ms-rMY.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ms-rMY.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-my-rMM.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-my-rMM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-nb.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-nb.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ne-rNP.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ne-rNP.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-night-v8.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-night-v8.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-nl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-nl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pa-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pa-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-port.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-port.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt-rPT.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt-rPT.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ro.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ro.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-si-rLK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-si-rLK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sk.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sq-rAL.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sq-rAL.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sv.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sv.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sw.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sw600dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sw600dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ta-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ta-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-te-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-te-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-th.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-th.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-tl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-tl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-tr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-tr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-uk.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-uk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ur-rPK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ur-rPK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-uz-rUZ.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-uz-rUZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v12.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v12.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v14.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v14.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v18.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v18.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v22.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v22.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v23.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v23.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-vi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-vi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w360dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w360dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w480dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w480dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w500dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w500dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w600dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w600dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w720dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-w720dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-xlarge-land-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-xlarge-land-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-xlarge-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-xlarge-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rHK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rHK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v11.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v23.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v23.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-hdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-hdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-mdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-mdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xhdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xxhdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xxhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xxxhdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-ldrtl-xxxhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-v23.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-v23.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout-sw600dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout-sw600dp-v13.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/xml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/advanced_class_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/advanced_class_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/class_header.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/class_header.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/class_item.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/class_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/server_row.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/server_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/faction_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/faction_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ClassesActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ClassesActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/TestActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/TestActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/TestActivity2.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/TestActivity2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ClassesAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ClassesAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ServerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ServerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/AdvancedClassActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/AdvancedClassActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ClassItem.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ClassItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ServerItem.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ServerItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/ImageBehavior.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/ImageBehavior.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/advanced_class_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/advanced_class_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/class_header.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/class_header.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/AdvancedClassesDatabase.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/AdvancedClassesDatabase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/class_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/class_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/server_row.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/server_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/faction_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/faction_main.xml" />
     </list>
     <ignored path="SWTORCentral.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -472,91 +144,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdvancedClassesItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/AdvancedClassesItem.java">
+      <file leaf-file-name="CompanionItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/CompanionItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="30" />
-              <folding>
-                <element signature="e#1125#1126#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="method#getAdvancedClassID2#1;class#AdvancedClassesItem#0" expanded="false" />
-                <element signature="method#getimgAdvancedClass1#1;class#AdvancedClassesItem#0" expanded="false" />
-                <element signature="method#getimgAdvancedClass2#1;class#AdvancedClassesItem#0" expanded="false" />
-                <element signature="method#settxtAdvancedClass1#0;class#AdvancedClassesItem#0" expanded="false" />
-                <element signature="method#settxtAdvancedClass1Desc#0;class#AdvancedClassesItem#0" expanded="false" />
-                <element signature="method#settxtAdvancedClass2Desc#0;class#AdvancedClassesItem#0" expanded="false" />
-                <element signature="method#settxtAdvancedClass2#0;class#AdvancedClassesItem#0" expanded="false" />
-              </folding>
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassesActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ClassesActivity.java">
+      <file leaf-file-name="CompanionDatabase.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/CompanionDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="86" selection-start-line="111" selection-start-column="86" selection-end-line="111" selection-end-column="86" />
-              <folding>
-                <element signature="e#629#640#0" expanded="true" />
-                <element signature="e#715#736#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ClassItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-              <folding>
-                <element signature="method#ClassItem#0;class#ClassItem#0" expanded="false" />
-                <element signature="e#735#736#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
-                <element signature="e#886#887#0" expanded="true" />
-                <element signature="e#1384#1385#0" expanded="true" />
-                <element signature="e#1413#1414#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassesAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ClassesAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="53" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="53" />
-              <folding>
-                <element signature="e#3308#4072#0" expanded="true" />
-                <element signature="e#4071#4072#0" expanded="true" />
-                <element signature="e#4113#4877#0" expanded="true" />
-                <element signature="e#4876#4877#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class_item.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_item.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46699268">
-              <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
-              <folding>
-                <element signature="e#1054#1073#0" expanded="true" />
-                <element signature="e#2540#2558#0" expanded="true" />
-                <element signature="e#2606#2624#0" expanded="true" />
-                <element signature="e#3371#3390#0" expanded="true" />
-                <element signature="e#3999#4017#0" expanded="true" />
-                <element signature="e#4052#4070#0" expanded="true" />
-                <element signature="e#4574#4593#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.07464325">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2115,11 +1718,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/progression_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ReaderActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/faction_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimensions.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/advanced_class.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ReaderAdapter.java" />
@@ -2130,7 +1730,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/SpanningGridLayoutManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/ClassesDatabase.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/CompanionDatabase.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/AdvancedClassActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/round_accent.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ServerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/SettingsActivity.java" />
@@ -2164,8 +1763,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/TestAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/TestActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/TestActivity2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ClassItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/class_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/round_red.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/faction_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ClassItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/AdvancedClassesDatabase.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/AdvancedClassActivity.java" />
       </list>
     </option>
   </component>
@@ -2200,6 +1803,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2252,7 +1856,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -2386,36 +1989,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SWTORCentral" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="swtorcentral" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2454,7 +2027,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2488,7 +2061,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="adapters" />
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2536,6 +2113,9 @@
     <property name="android.project.structure.proportion" value="0.15" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\e9900375\Desktop\swtorcentral\app\src\main\res\drawable" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.stryksta.swtorcentral.data" />
     </key>
@@ -2830,35 +2410,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19829424" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2707889" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47603834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27582535" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27582535" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258786" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20842217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17252396" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17252396" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2882,62 +2462,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/RecyclerItemClickListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ProgressionItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07464325">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ReaderAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07464325">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ReaderActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="133" column="105" selection-start-line="133" selection-start-column="105" selection-end-line="133" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ProgressionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5225027">
-          <caret line="68" column="50" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/PlanetTab1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09330406">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ProgressionAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5334797">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24259056">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/PlanetPagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2953,47 +2477,47 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/planet_tab3.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5140845">
           <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/planet_tab2.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/planet_tab2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29929578">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="45" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/planet_tab1.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/planet_tab1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47887325">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="45" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/achievement_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/achievement_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13919415">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
@@ -3005,88 +2529,80 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/character_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/character_main_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/achievement_items_row.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/achievement_items_row.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6133177">
           <caret line="63" column="33" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/datacron_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/datacron_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/events_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/planet_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/planet_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7056604">
           <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimensions.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13901868">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="64" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/AvatarBehavior.java">
@@ -3104,14 +2620,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/server_key.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ServerItem.java">
@@ -3119,28 +2635,28 @@
         <state vertical-scroll-proportion="0.26015368">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1010#1011#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1080#1081#0" expanded="true" />
-            <element signature="e#1131#1132#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1245#1246#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1441#1442#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#670#671#0" expanded="false" />
+            <element signature="e#708#709#0" expanded="false" />
+            <element signature="e#743#744#0" expanded="false" />
+            <element signature="e#798#799#0" expanded="false" />
+            <element signature="e#846#847#0" expanded="false" />
+            <element signature="e#882#883#0" expanded="false" />
+            <element signature="e#915#916#0" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1010#1011#0" expanded="false" />
+            <element signature="e#1047#1048#0" expanded="false" />
+            <element signature="e#1080#1081#0" expanded="false" />
+            <element signature="e#1131#1132#0" expanded="false" />
+            <element signature="e#1175#1176#0" expanded="false" />
+            <element signature="e#1212#1213#0" expanded="false" />
+            <element signature="e#1245#1246#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1340#1341#0" expanded="false" />
+            <element signature="e#1386#1387#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3161,21 +2677,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/reader_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41705608">
           <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/PlanetDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07464325">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3183,62 +2698,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29088914">
           <caret line="49" column="110" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="110" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/server_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.88084114">
           <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="37" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/advanced_class_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/advanced_class_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23831776">
           <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="72" selection-end-column="47" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/AdvancedClassActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6311746">
-          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
-          <folding>
-            <element signature="e#1550#1569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/server_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/server_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_header.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_header.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1588785">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="30" selection-end-column="39" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/round.xml">
@@ -3262,8 +2766,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
             <element signature="method#getAdvancedClassID2#1;class#AdvancedClassesItem#0" expanded="false" />
             <element signature="method#getimgAdvancedClass1#1;class#AdvancedClassesItem#0" expanded="false" />
             <element signature="method#getimgAdvancedClass2#1;class#AdvancedClassesItem#0" expanded="false" />
@@ -3299,32 +2801,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ClassesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="86" selection-start-line="111" selection-start-column="86" selection-end-line="111" selection-end-column="86" />
-          <folding>
-            <element signature="e#629#640#0" expanded="true" />
-            <element signature="e#715#736#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/ClassesDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37321624">
           <caret line="28" column="78" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/achievement_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11915888">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimensions.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6926554">
+          <caret line="88" column="29" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/CharacterItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/progression_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/round_red.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05762712">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/faction_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="6" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/ClassesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="109" selection-start-line="84" selection-start-column="93" selection-end-line="84" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ClassesAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.018660812">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3598131">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ClassItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.08232711">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/AdvancedClassesItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.27991217">
           <caret line="15" column="30" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="30" />
           <folding>
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
             <element signature="method#getAdvancedClassID2#1;class#AdvancedClassesItem#0" expanded="false" />
             <element signature="method#getimgAdvancedClass1#1;class#AdvancedClassesItem#0" expanded="false" />
             <element signature="method#getimgAdvancedClass2#1;class#AdvancedClassesItem#0" expanded="false" />
@@ -3336,75 +2932,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/ClassItem.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/AdvancedClassesDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="method#ClassItem#0;class#ClassItem#0" expanded="false" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1413#1414#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/achievement_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/adapters/ClassesAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/AdvancedClassActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="53" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="53" />
-          <folding>
-            <element signature="e#3308#4072#0" expanded="true" />
-            <element signature="e#4071#4072#0" expanded="true" />
-            <element signature="e#4113#4877#0" expanded="true" />
-            <element signature="e#4876#4877#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11915888">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state vertical-scroll-proportion="-0.09330406">
+          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/data/CompanionItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46699268">
-          <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
-          <folding>
-            <element signature="e#1054#1073#0" expanded="true" />
-            <element signature="e#2540#2558#0" expanded="true" />
-            <element signature="e#2606#2624#0" expanded="true" />
-            <element signature="e#3371#3390#0" expanded="true" />
-            <element signature="e#3999#4017#0" expanded="true" />
-            <element signature="e#4052#4070#0" expanded="true" />
-            <element signature="e#4574#4593#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/CompanionGiftsDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07464325">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/stryksta/swtorcentral/util/database/CompanionDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07464325">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

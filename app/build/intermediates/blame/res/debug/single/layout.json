@@ -4,12 +4,12 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\server_row.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_main.xml",
@@ -148,20 +148,20 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\events_main.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\events_main.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\drawer_row_counter.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\drawer_row_counter.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_select_dialog_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\events_main.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\events_main.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_main_discplines.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\test_main_discplines.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
@@ -232,24 +232,24 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\faction_main.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout\\design_layout_snackbar_include.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\character_level_dialog.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\character_level_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_big_media_narrow.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
@@ -264,12 +264,12 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\class_main.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\class_main.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\class_main.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\class_main.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\achievement_main.xml",
@@ -304,12 +304,12 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\datacron_main.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_media.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\planet_tab1.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\planet_tab1.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\datacron_row.xml",
@@ -328,12 +328,12 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\drawer_header.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\drawer_header.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\drawer_header.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\drawer_header.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\settings.xml",
@@ -364,20 +364,20 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\test_main_abilities.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\class_item.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\class_item.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\drawer_character_item.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\drawer_character_item.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lore_row.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\lore_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\drawer_character_item.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\drawer_character_item.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\progression_row.xml",
