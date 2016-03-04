@@ -49,15 +49,7 @@ public class CompanionClassAdapter extends ArrayAdapter<CompanionItem> {
     }
 
     private static class ViewHolder {
-        public TextView txtBonus;
-        public TextView txtNameSub;
-        public TextView txtGifts;
-        public TextView txtArmor;
         public TextView txtName;
-        public TextView txtStats;
-        public TextView txtWeapon;
-        public TextView txtRole;
-        public TextView txtRomance;
         public TextView txtDescription;
     }
 

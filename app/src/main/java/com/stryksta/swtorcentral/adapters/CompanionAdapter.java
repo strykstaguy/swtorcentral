@@ -61,6 +61,7 @@ public class CompanionAdapter extends ArrayAdapter<CompanionItem> {
         } else {
             holder = (ViewHolder) v.getTag();
         }
+       /*
         CompanionItem rowItem = results.get(position);
         	holder.txtName.setText(rowItem.getName());
         	holder.txtNameSub.setText(rowItem.getGender() + " " + rowItem.getRace());
@@ -71,7 +72,7 @@ public class CompanionAdapter extends ArrayAdapter<CompanionItem> {
         	holder.txtWeapon.setText("Weapons: " + rowItem.getPrimaryWeapon() + ", " + rowItem.getSecondaryWeapon());
         	holder.txtDescription.setText(rowItem.getDescription());
         	holder.txtArmor.setText("Armor: " + rowItem.getArmor());
-
+        */
         return v;
     }
 

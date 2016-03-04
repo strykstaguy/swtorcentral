@@ -2,38 +2,37 @@ package com.stryksta.swtorcentral.data;
 
 public class CompanionItem {
     public String txtID;
-    public String txtRole;
-    public String txtBonus;
-    public String txtRomance;
-    public String txtPrimaryStat;
-    public String txtPrimaryWeapon;
-    public String txtSecondaryStat;
-    public String txtSecondaryWeapon;
-    public String txtGifts;
-    public String txtGender;
-    public String txtRace;
-    public String txtFound;
-    public String txtArmor;
+    public String txtName;
+    public String txtCategory;
+    public String txtSubCategory;
     public String txtDescription;
-    
+    public String txtGender;
+    public String txtGiftsUnRomanced;
+    public String txtGiftsRomanced;
+    public String txtRace;
+    public String txtPath;
 
-    public CompanionItem(String txtName, String txtRole, String txtBonus, String txtRomance, String txtPrimaryStat, String txtPrimaryWeapon, String txtSecondaryStat, String txtSecondaryWeapon, String txtGifts, String txtGender, String txtRace, String txtFound, String txtArmor, String txtDescription) {
+    public CompanionItem(String txtID, String txtName, String txtCategory, String txtSubCategory, String txtDescription, String txtGender, String txtGiftsUnRomanced, String txtGiftsRomanced, String txtRace, String txtPath) {
+        this.txtID = txtID;
         this.txtName = txtName;
-        this.txtRole = txtRole;
-        this.txtBonus = txtBonus;
-        this.txtRomance = txtRomance;
-        this.txtPrimaryStat = txtPrimaryStat;
-        this.txtPrimaryWeapon = txtPrimaryWeapon;
-        this.txtSecondaryStat = txtSecondaryStat;
-        this.txtSecondaryWeapon = txtSecondaryWeapon;
-        this.txtGifts = txtGifts;
-        this.txtGender = txtGender;
-        this.txtRace = txtRace;
-        this.txtFound = txtFound;
-        this.txtArmor = txtArmor;
+        this.txtCategory = txtCategory;
+        this.txtSubCategory = txtSubCategory;
         this.txtDescription = txtDescription;
+        this.txtGender = txtGender;
+        this.txtGiftsUnRomanced = txtGiftsUnRomanced;
+        this.txtGiftsRomanced = txtGiftsRomanced;
+        this.txtRace = txtRace;
+        this.txtPath = txtPath;
     }
-    
+
+    public String getID() {
+        return txtID;
+    }
+
+    public void getID(String txtName){
+        this.txtID = txtID;
+    }
+
     public String getName() {
         return txtName;
     }
@@ -42,71 +41,30 @@ public class CompanionItem {
         this.txtName = txtName;
     }
 
-    public String getRole() {
-        return txtRole;
+    public String getCategory() {
+        return txtCategory;
     }
 
-    public void setRole(String txtRole) {
-        this.txtRole = txtRole;
+    public void setCategory(String txtCategory) {
+        this.txtCategory = txtCategory;
     }
 
-    public String getBonus() {
-        return txtBonus;
+    public String getSubCategory() {
+        return txtSubCategory;
     }
 
-    public void setBonus(String txtBonus) {
-        this.txtBonus = txtBonus;
+    public void setSubCategory(String txtSubCategory) {
+        this.txtSubCategory = txtSubCategory;
     }
 
-    public String getRomance() {
-        return txtRomance;
+    public String getDescription() {
+        return txtDescription;
     }
 
-    public void setRomance(String txtRomance) {
-        this.txtRomance = txtRomance;
+    public void setDescription(String txtDescription) {
+        this.txtDescription = txtDescription;
     }
 
-    public String getPrimaryStat() {
-        return txtPrimaryStat;
-    }
-
-    public void setPrimaryStat(String txtPrimaryStat) {
-        this.txtPrimaryStat = txtPrimaryStat;
-    }
-
-    public String getPrimaryWeapon() {
-        return txtPrimaryWeapon;
-    }
-
-    public void setPrimaryWeapon(String txtPrimaryWeapon) {
-        this.txtPrimaryWeapon = txtPrimaryWeapon;
-    }
-
-    public String getSecondaryStat() {
-        return txtSecondaryStat;
-    }
-
-    public void setSecondaryStat(String txtSecondaryStat) {
-        this.txtSecondaryStat = txtSecondaryStat;
-    }
-
-    public String getSecondaryWeapon() {
-        return txtSecondaryWeapon;
-    }
-
-    public void setSecondaryWeapon(String txtSecondaryWeapon) {
-        this.txtSecondaryWeapon = txtSecondaryWeapon;
-    }
-    
-    
-    public String getGifts() {
-        return txtGifts;
-    }
-
-    public void setGifts(String txtGifts) {
-        this.txtGifts = txtGifts;
-    }
-    
     public String getGender() {
         return txtGender;
     }
@@ -114,7 +72,23 @@ public class CompanionItem {
     public void setGender(String txtGender) {
         this.txtGender = txtGender;
     }
-    
+
+    public String getGiftsUnRomanced() {
+        return txtGiftsUnRomanced;
+    }
+
+    public void setGiftsUnRomanced(String txtGiftsUnRomanced) {
+        this.txtGiftsUnRomanced = txtGiftsUnRomanced;
+    }
+
+    public String getGiftsRomanced() {
+        return txtGiftsRomanced;
+    }
+
+    public void setGiftsRomanced(String txtGiftsRomanced) {
+        this.txtGiftsRomanced = txtGiftsRomanced;
+    }
+
     public String getRace() {
         return txtRace;
     }
@@ -122,29 +96,13 @@ public class CompanionItem {
     public void setRace(String txtRace) {
         this.txtRace = txtRace;
     }
-    
-    public String getFound() {
-        return txtFound;
+
+    public String getPath() {
+        return txtPath;
     }
 
-    public void setFound(String txtFound) {
-        this.txtFound = txtFound;
-    }
-
-    public String getArmor() {
-        return txtArmor;
-    }
-
-    public void setArmor(String txtArmor) {
-        this.txtArmor = txtArmor;
-    }
-    
-    public String getDescription() {
-        return txtDescription;
-    }
-
-    public void setDescription(String txtDescription) {
-        this.txtDescription = txtDescription;
+    public void setPath(String txtPath) {
+        this.txtPath = txtPath;
     }
 
     public String toString() {

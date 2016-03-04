@@ -34,10 +34,9 @@ public class AdvancedClassActivity extends AppCompatActivity {
     //Companion Info from prev
     private int ClassPos;
     private int ClassID;
-    private CompanionDatabase CompDP;
-    private Cursor companions;
-    private CompanionGiftsDatabase db2;
+    private String class_node;
 
+    private CompanionDatabase companionDatabase;
     ArrayList<CompanionItem> companionItems;
 
 
@@ -75,46 +74,22 @@ public class AdvancedClassActivity extends AppCompatActivity {
         if ( bundle != null ) {
             ClassPos = bundle.getInt("position");
             ClassID = bundle.getInt("class_id");
+            class_node = bundle.getString("node");
         }
 
         mTitleView = (TextView) findViewById(R.id.title);
 
-        /*
+
         NonScrollListView companionsListView = (NonScrollListView) findViewById(R.id.companionsListView);
         companionItems = new ArrayList<CompanionItem>();
 
 
-        CompDP = new CompanionDatabase(AdvancedClassActivity.this);
-        db2 = new CompanionGiftsDatabase(AdvancedClassActivity.this);
-        companions = CompDP.getOriginalCompanions(ClassID);
-        if (companions.moveToFirst())
-        {
-            do
-            {
-                String txtName = companions.getString(companions.getColumnIndex("companion_name"));
-                String txtRole = companions.getString(companions.getColumnIndex("role"));
-                String txtBonus = companions.getString(companions.getColumnIndex("crew_skill_bonus"));
-                String txtRomance = companions.getString(companions.getColumnIndex("romance"));
-                String txtPrimaryStat = companions.getString(companions.getColumnIndex("primarystat"));
-                String txtSecondaryStat = companions.getString(companions.getColumnIndex("secondarystat"));
-                String txtPrimaryWeapon = companions.getString(companions.getColumnIndex("primaryweapon"));
-                String txtSecondaryWeapon = companions.getString(companions.getColumnIndex("secondaryweapon"));
-                String txtGender = companions.getString(companions.getColumnIndex("gender"));
-                String txtRace = companions.getString(companions.getColumnIndex("race"));
-                String txtFound = companions.getString(companions.getColumnIndex("found"));
-                String txtArmor = companions.getString(companions.getColumnIndex("armor"));
-                String txtDescription = companions.getString(companions.getColumnIndex("description"));
-                String txtGifts = db2.getGifts(companions.getString(companions.getColumnIndex("companion_name")));
-
-                CompanionItem item = new CompanionItem(txtName, txtRole, txtBonus, txtRomance, txtPrimaryStat, txtSecondaryStat, txtPrimaryWeapon, txtSecondaryWeapon, txtGifts, txtGender, txtRace, txtFound, txtArmor, txtDescription);
-                companionItems.add(item);
-            } while (companions.moveToNext());
-        }
+        companionDatabase = new CompanionDatabase(AdvancedClassActivity.this);
+        companionItems = companionDatabase.getOriginalCompanions(class_node);
+        companionDatabase.close();
 
         CompanionClassAdapter companionsAdapter = new CompanionClassAdapter(AdvancedClassActivity.this, R.layout.companion_class_row, companionItems);
         companionsListView.setAdapter(companionsAdapter);
-
-    */
 
         //Advanced Classes Info
         advDB = new AdvancedClassesDatabase(AdvancedClassActivity.this);
