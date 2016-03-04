@@ -9,17 +9,19 @@ public class ClassItem {
     private String txtCombatRole;
     private String txtStory;
     private String txtAbilities;
+    private String txtNode;
     private String txtEquipment;
     private int idClass;
     private int imgClass;
 
-    public ClassItem(String txtClass, int imgClass, int idClass, String txtResource, String txtDescription, String txtApc) {
+    public ClassItem(String txtClass, int imgClass, int idClass, String txtResource, String txtDescription, String txtApc, String txtNode) {
     	this.txtClass = txtClass;
     	this.idClass = idClass;
         this.imgClass = imgClass;
     	this.txtDescription = txtDescription;
         this.txtResource = txtResource;
         this.txtApc = txtApc;
+        this.txtNode = txtNode;
     }
     
     public String getClassName() {
@@ -28,6 +30,14 @@ public class ClassItem {
 
     public void setClassName(String txtClass) {
         this.txtClass = txtClass;
+    }
+
+    public String getNode() {
+        return txtNode;
+    }
+
+    public void setNode(String txtNode) {
+        this.txtNode = txtNode;
     }
 
     public String getClassDescription() {

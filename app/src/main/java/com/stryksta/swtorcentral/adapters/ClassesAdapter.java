@@ -94,6 +94,7 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
                 bundle.putString("class", classItem.getClassName());
                 bundle.putInt("class_id", classItem.getClassID());
                 bundle.putString("apc", classItem.geAPC());
+                bundle.putString("node", classItem.getNode());
                 bundle.putString("resource", classItem.getClassResource());
                 bundle.putInt("position", advancedClassItem.getAdvancedClassID1());
                 bundle.putString("advancedclass", advancedClassItem.gettxtAdvancedClass1());
@@ -112,6 +113,7 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
                 bundle.putString("resource", classItem.getClassResource());
                 bundle.putInt("position", advancedClassItem.getAdvancedClassID2());
                 bundle.putString("apc", classItem.geAPC());
+                bundle.putString("node", classItem.getNode());
                 bundle.putString("advancedclass", advancedClassItem.gettxtAdvancedClass2());
 
                 Intent intent = new Intent(context, AdvancedClassActivity.class);

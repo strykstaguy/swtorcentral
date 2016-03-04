@@ -1,7 +1,7 @@
 package com.stryksta.swtorcentral.data;
 
 public class CompanionItem {
-    public String txtName;
+    public String txtID;
     public String txtRole;
     public String txtBonus;
     public String txtRomance;

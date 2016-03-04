@@ -27,6 +27,7 @@ public class ClassesActivity extends Fragment{
     public static final String APC_NAME = "apc";
     public static final String COLUMN_DESC = "description";
 	public static final String COLUMN_RESOURCE = "resource";
+	public static final String COLUMN_NODE = "node";
 	
 	private ClassesDatabase db;
 	private Cursor classesDB;
@@ -79,10 +80,11 @@ public class ClassesActivity extends Fragment{
                 String classDescription = classesDB.getString(classesDB.getColumnIndex(COLUMN_DESC));
             	String classResource = classesDB.getString(classesDB.getColumnIndex(COLUMN_RESOURCE));
                 String classAPC = classesDB.getString(classesDB.getColumnIndex(APC_NAME));
+				String classNode = classesDB.getString(classesDB.getColumnIndex(COLUMN_NODE));
             	int classIcon = getResources().getIdentifier(classesDB.getString(classesDB.getColumnIndex("class_icon")), "drawable", getActivity().getPackageName());
 
                 //
-            	classesArray.add(new ClassItem(className, classIcon, classID, classResource, classDescription, classAPC));
+            	classesArray.add(new ClassItem(className, classIcon, classID, classResource, classDescription, classAPC, classNode));
 
                 advClassesCursor = db.getAdvancedClasses(classID);
 
