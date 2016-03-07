@@ -10,16 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <com.stryksta.swtorcentral.util.VerticalTextView
-        android:id="@+id/txtLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dim_20"
-        android:gravity="top|center"
-        android:text="@string/test_main"
-        android:textColor="@color/text"
-        android:textSize="16sp" />
-
     <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
         android:id="@+id/timeline"
         android:layout_width="30dp"

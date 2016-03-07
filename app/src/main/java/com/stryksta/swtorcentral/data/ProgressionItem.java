@@ -12,6 +12,8 @@ public class ProgressionItem {
     private TimelineType timelineType;
     public static final int ITEM = 0;
     public static final int SECTION = 1;
+    public static final int HEADER = 2;
+    public static final int FOOTER = 3;
 
     public ProgressionItem(String planet, TimelineType timelineType, int layoutType) {
         this.planet = planet;
@@ -59,12 +61,20 @@ public class ProgressionItem {
     public void setLabel(String label) {
         this.label = label;
     }
-    
-    public TimelineType getType() {
+
+    public int getLayoutType() {
+        return layoutType;
+    }
+
+    public void setLayoutType(int layoutType) {
+        this.layoutType = layoutType;
+    }
+
+    public TimelineType getTimelineTypeType() {
         return timelineType;
     }
 
-    public void setType(TimelineType timelineType) {
+    public void setTimelineTypeType(TimelineType timelineType) {
         this.timelineType = timelineType;
     }
 }

@@ -2,88 +2,25 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\libs\android-sqlite-asset-helper.jar"
+        jar="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_slice.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="20f039a3336c18f93cfddfa1a49ce91a55361c40">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\android-sqlite-asset-helper_f9ac812d13be002470e6f5f0a942674b7ef95335.jar" />
+        sha1="5a6f2dd1f3fc5227dbf17c65099ebe1745e244d4">
+        <dex dex="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_slice_ab030e43a0be8e37031e031b31b7cc97ee2da381\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\design\23.2.0\jars\classes.jar"
+        jar="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.2.0_6b9db184dc5d5a3e4e51de9107ce52ad17f28fc1.jar" />
+        sha1="d6487722783a8154a15b0926be647f105db9c50b">
+        <dex dex="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_5dfb14c83f55d2a102df4d8b26a440af13b438f8\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\jars\classes.jar"
+        jar="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_sliceb.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.2.0_0ca1d020a039d3d83885a0e011dc557ce96548bd.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\libs\internal_impl-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6e239441500605809818997dd63b62a947195f8c">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.0_8deb07d63fe1dfb1b1be4b644a44091d45b91382.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.2.0_394b2b338b62112bac3b92e20409a7fd185ba94f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\libs\jsoup-1.7.3.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\jsoup-1.7.3_27535426e79314aaf21e5082a766f422e6a4d6db.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.0\support-annotations-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.0_02942d0f5a7951e0d617a8f9bd0ab31f5149f708.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="bc599eb9531da9d18bc58ec4eb0b1a1d895f6839">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.2.0_2d07ead46825bd90acfedb83d0dadb1b857c7e47.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.2.0_a2035d21ed7053232738fe05e2407d51c13bc444.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.2.0_b4f80543e6b7a68ab4af66e1f5845161b27a7517.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="292a9fa091757208efa65e77eef63088247e51f3">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.2.0_a66818ebdb770b53d81667324a837ee454b45f1b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Cody\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_fd37db5612e847f2f46862a5b164d8be9153893f.jar" />
+        sha1="6b9b7835e5c9b36fa6f43de802a6047947ff247d">
+        <dex dex="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_sliceb_8e1ce293e2cda29a010cbc753295f4fa53502822\classes.dex" />
     </item>
 
 </items>
