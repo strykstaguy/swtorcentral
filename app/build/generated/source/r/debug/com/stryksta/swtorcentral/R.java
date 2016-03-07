@@ -3169,7 +3169,7 @@ containing a value of this type.
         public static final int buttonPanel=0x7f0d005b;
         public static final int cancel_action=0x7f0d0110;
         public static final int card_view=0x7f0d00e5;
-        public static final int cardview=0x7f0d0138;
+        public static final int cardview=0x7f0d0134;
         public static final int center=0x7f0d0033;
         public static final int center_horizontal=0x7f0d0034;
         public static final int center_vertical=0x7f0d0035;
@@ -3257,7 +3257,7 @@ containing a value of this type.
         public static final int imgEmpire=0x7f0d010b;
         public static final int imgEmpireBG=0x7f0d010a;
         public static final int imgExpandCollapse=0x7f0d00f4;
-        public static final int imgPlanet=0x7f0d0136;
+        public static final int imgPlanet=0x7f0d0137;
         public static final int imgRepublic=0x7f0d0108;
         public static final int imgRepublicBG=0x7f0d0106;
         public static final int info=0x7f0d011a;
@@ -3339,7 +3339,7 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f0d001c;
         public static final int progressionList=0x7f0d0131;
         public static final int radio=0x7f0d006b;
-        public static final int readerList=0x7f0d0137;
+        public static final int readerList=0x7f0d0138;
         public static final int recyclerview_vertical=0x7f0d015f;
         public static final int right=0x7f0d0039;
         public static final int root=0x7f0d015e;
@@ -3445,7 +3445,7 @@ containing a value of this type.
         public static final int txtEmpire=0x7f0d010c;
         public static final int txtFaction=0x7f0d0104;
         public static final int txtGameRulesLore=0x7f0d012a;
-        public static final int txtInfo=0x7f0d0134;
+        public static final int txtInfo=0x7f0d0135;
         public static final int txtLabel=0x7f0d0132;
         public static final int txtLegacy=0x7f0d00d4;
         public static final int txtLevel=0x7f0d00d7;
@@ -3455,7 +3455,7 @@ containing a value of this type.
         public static final int txtNewsCategory=0x7f0d0139;
         public static final int txtOrganizationsLore=0x7f0d012c;
         public static final int txtPersonsLore=0x7f0d0124;
-        public static final int txtPlanet=0x7f0d0135;
+        public static final int txtPlanet=0x7f0d0136;
         public static final int txtPlayer=0x7f0d014c;
         public static final int txtPlayerSub=0x7f0d014d;
         public static final int txtProgressText=0x7f0d00a5;

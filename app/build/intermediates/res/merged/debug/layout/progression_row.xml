@@ -5,6 +5,11 @@
     android:background="@color/background"
     android:orientation="horizontal">
 
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <com.stryksta.swtorcentral.util.VerticalTextView
         android:id="@+id/txtLabel"
         android:layout_width="wrap_content"
@@ -19,6 +24,7 @@
         android:id="@+id/timeline"
         android:layout_width="30dp"
         android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
         app:firstColor="@color/gray_23"
         app:firstSize="15"
         app:lastColor="@color/gray_23"
@@ -28,6 +34,21 @@
         app:middleColor="@color/gray_23"
         app:middleSize="15"
         app:timeline_type="line" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="2dp"
+            app:cardCornerRadius="2dp"
+            app:cardPreventCornerOverlap="false"
+            android:foreground="@drawable/card_foreground"
+            app:cardBackgroundColor="@color/white">
 
     <RelativeLayout
         android:id="@+id/txtInfo"
@@ -68,5 +89,7 @@
             android:text="Levels 1 - 10"
             android:textSize="18sp" />
     </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
 
 </LinearLayout>

@@ -8,22 +8,24 @@ public class ProgressionItem {
     private String planet;
     private String level;
     private String label;
-    private TimelineType type;
+    int layoutType;
+    private TimelineType timelineType;
+    public static final int ITEM = 0;
+    public static final int SECTION = 1;
 
-    public ProgressionItem(String planet, String level, int imgPlanet, String label) {
+    public ProgressionItem(String planet, TimelineType timelineType, int layoutType) {
         this.planet = planet;
-        this.level = level;
-        this.imgPlanet = imgPlanet;
-        this.label = label;
-        this.type = TimelineType.LINE;
+        this.timelineType = TimelineType.LINE;
+        this.layoutType = layoutType;
     }
 
-    public ProgressionItem(String planet, String level, int imgPlanet, String label, TimelineType type) {
+    public ProgressionItem(String planet, String level, int imgPlanet, String label, TimelineType timelineType, int layoutType) {
         this.planet = planet;
         this.level = level;
         this.imgPlanet = imgPlanet;
         this.label = label;
-        this.type = type;
+        this.timelineType = timelineType;
+        this.layoutType = layoutType;
     }
     
     public int getimgPlanet() {
@@ -59,10 +61,10 @@ public class ProgressionItem {
     }
     
     public TimelineType getType() {
-        return type;
+        return timelineType;
     }
 
-    public void setType(TimelineType type) {
-        this.type = type;
+    public void setType(TimelineType timelineType) {
+        this.timelineType = timelineType;
     }
 }

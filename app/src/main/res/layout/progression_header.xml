@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+
+    <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
+        android:id="@+id/timeline"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        app:firstColor="@color/subheader"
+        app:firstSize="15"
+        app:lastColor="@color/subheader"
+        app:lastSize="15"
+        app:lineColor="@color/subheader"
+        app:lineWidth="10dp"
+        app:middleColor="@color/subheader"
+        app:middleSize="15"
+        app:timeline_type="line" />
+
+</LinearLayout>
