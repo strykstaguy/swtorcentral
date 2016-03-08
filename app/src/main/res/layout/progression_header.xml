@@ -18,7 +18,7 @@
     <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
         android:id="@+id/timeline"
         android:layout_width="30dp"
-        android:layout_height="match_parent"
+        android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         app:firstColor="@color/subheader"
         app:firstSize="15"

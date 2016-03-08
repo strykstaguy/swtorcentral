@@ -17,8 +17,14 @@ public class ProgressionItem {
 
     public ProgressionItem(String planet, TimelineType timelineType, int layoutType) {
         this.planet = planet;
-        this.timelineType = TimelineType.LINE;
+        this.timelineType = timelineType;
         this.layoutType = layoutType;
+    }
+
+    public ProgressionItem(String planet, int layoutType) {
+        this.planet = planet;
+        this.layoutType = layoutType;
+        this.timelineType = TimelineType.LINE;
     }
 
     public ProgressionItem(String planet, String level, int imgPlanet, String label, TimelineType timelineType, int layoutType) {

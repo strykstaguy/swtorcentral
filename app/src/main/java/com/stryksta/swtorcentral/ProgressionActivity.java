@@ -90,11 +90,14 @@ public class ProgressionActivity extends AppCompatActivity {
     private ArrayList<ProgressionItem> generateRepublicData(){
         ArrayList<ProgressionItem> planets = new ArrayList<ProgressionItem>();
 
-        planets.add(new ProgressionItem("Tython", TimelineType.START, ProgressionItem.SECTION));
+        planets.add(new ProgressionItem("Starter Planets", TimelineType.END, ProgressionItem.HEADER));
         planets.add(new ProgressionItem("Tython", "Level 1-10", R.drawable.pl_tython, "", TimelineType.LINE, ProgressionItem.ITEM));
         planets.add(new ProgressionItem("Ord Mantell", "Level 1-10", R.drawable.pl_ord_mantell, "", TimelineType.LINE, ProgressionItem.ITEM));
         planets.add(new ProgressionItem("Republic Fleet", "Level 10+", R.drawable.ic_republic_black, "", TimelineType.LINE, ProgressionItem.ITEM));
-        planets.add(new ProgressionItem("The Esseles", "Flashpoint", R.drawable.ic_flashpoint, "Prologue", TimelineType.LINE, ProgressionItem.ITEM));
+        planets.add(new ProgressionItem("The Esseles", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE, ProgressionItem.ITEM));
+
+        planets.add(new ProgressionItem("Prologue", ProgressionItem.SECTION));
+
         planets.add(new ProgressionItem("Coruscant", "Level 11-16", R.drawable.pl_coruscant, "", TimelineType.LINE, ProgressionItem.ITEM));
         planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, "", TimelineType.LINE, ProgressionItem.ITEM));
 

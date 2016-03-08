@@ -13,6 +13,7 @@ import com.stryksta.swtorcentral.PlanetActivity;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.data.ProgressionItem;
 import com.stryksta.swtorcentral.util.VerticalTextView;
+import com.stryksta.swtorcentral.util.timeline.TimelineHView;
 import com.stryksta.swtorcentral.util.timeline.TimelineType;
 import com.stryksta.swtorcentral.util.timeline.TimelineView;
 import java.util.ArrayList;
@@ -44,6 +45,10 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 ViewGroup vGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_header, viewGroup, false );
                 HeaderViewHolder vhGroup = new HeaderViewHolder(vGroup);
                 return vhGroup;
+            case SECTION:
+                ViewGroup vSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_section, viewGroup, false );
+                SectionViewHolder vhSection = new SectionViewHolder(vSection);
+                return vhSection;
             default:
                 ViewGroup vDefault = ( ViewGroup ) mInflater.inflate ( R.layout.progression_row, viewGroup, false );
                 ItemViewHolder vhDefault = new ItemViewHolder(vDefault);
@@ -69,9 +74,16 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             case HEADER:
                 HeaderViewHolder headerViewHolder = (HeaderViewHolder) viewHolder;
                 ProgressionItem headerItem = progressionItems.get(position);
-                headerViewHolder.txtTitle.setText(headerItem.getLabel());
-
+                headerViewHolder.txtTitle.setText(headerItem.getPlanet());
                 headerViewHolder.timeLineView.setTimelineType(TimelineType.START);
+                break;
+
+            case SECTION:
+                SectionViewHolder sectionViewHolder = (SectionViewHolder) viewHolder;
+                ProgressionItem sectionItem = progressionItems.get(position);
+                sectionViewHolder.txtTitle.setText(sectionItem.getPlanet());
+                sectionViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+                sectionViewHolder.timeLineHView.setTimelineType(TimelineType.LINE);
                 break;
 
             case FOOTER:
@@ -129,18 +141,15 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     public class SectionViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        public ImageView imgPlanet;
-        public TextView txtPlanet;
-        public TextView txtLevel;
-        public VerticalTextView txtLabel;
+        public TextView txtTitle;
         public TimelineView timeLineView;
+        public TimelineHView timeLineHView;
 
         public SectionViewHolder(View itemView) {
             super(itemView);
-            imgPlanet = (ImageView) itemView.findViewById(R.id.imgPlanet);
-            txtPlanet = (TextView) itemView.findViewById(R.id.txtPlanet);
-            txtLevel = (TextView) itemView.findViewById(R.id.txtLevel);
+            txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
+            timeLineHView = (TimelineHView) itemView.findViewById(R.id.timelineH);
 
             // Attach a click listener to the entire row view
             itemView.setOnClickListener(this);

@@ -1,26 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_slice.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="5a6f2dd1f3fc5227dbf17c65099ebe1745e244d4">
-        <dex dex="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_slice_ab030e43a0be8e37031e031b31b7cc97ee2da381\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="d6487722783a8154a15b0926be647f105db9c50b">
-        <dex dex="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_5dfb14c83f55d2a102df4d8b26a440af13b438f8\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_sliceb.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6b9b7835e5c9b36fa6f43de802a6047947ff247d">
-        <dex dex="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_sliceb_8e1ce293e2cda29a010cbc753295f4fa53502822\classes.dex" />
-    </item>
-
-</items>

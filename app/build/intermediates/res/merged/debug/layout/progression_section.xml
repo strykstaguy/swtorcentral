@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/text"
+            android:text="Tython"
+            android:layout_marginLeft="-15dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/timeline"
+
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/timelineH"/>
+
+        <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
+            android:id="@+id/timeline"
+            android:layout_width="30dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            app:firstColor="@color/subheader"
+            app:firstSize="15"
+            app:lastColor="@color/subheader"
+            app:lastSize="15"
+            app:lineColor="@color/subheader"
+            app:lineWidth="10dp"
+            app:middleColor="@color/subheader"
+            app:middleSize="15"
+            app:timeline_type="line"
+            android:layout_centerHorizontal="true" />
+
+        <com.stryksta.swtorcentral.util.timeline.RoundTimelineHView
+            android:id="@+id/timelineH"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            app:firstColor="@color/subheader"
+            app:firstSize="10"
+            app:lastColor="@color/subheader"
+            app:lastSize="10"
+            app:lineColor="@color/subheader"
+            app:lineWidth="5dp"
+            app:middleColor="@color/subheader"
+            app:middleSize="10"
+            app:timeline_type="line"
+            android:layout_toRightOf="@+id/timeline"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="-15dp"
+            android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+</LinearLayout>
