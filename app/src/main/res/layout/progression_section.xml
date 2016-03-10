@@ -44,7 +44,7 @@
         <com.stryksta.swtorcentral.util.timeline.DashedLineView
             android:id="@+id/timelineH"
             android:layout_width="30dp"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             app:dashWidth="15dp"
             app:dashGap="2dp"

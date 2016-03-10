@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral.util.timeline;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -15,17 +16,14 @@ import com.stryksta.swtorcentral.R;
 
 public class DashedLineView extends View {
 
-    private static final int DEFAULT_DASH_WIDTH = 5;
-    private static final int DEFAULT_DASH_GAP = 2;
-
     private Paint mPaint;
     private Path mPath;
     protected PathEffect mEffects;
 
-    private int mDashHeight = 1;
-    private int mDashWidth;
-    private int mDashGap;
-    private int mDashColor;
+    private int mDashHeight = 25;
+    private int mDashWidth = 5;
+    private int mDashGap = 2;
+    private int mDashColor = Color.GRAY;
 
     public DashedLineView(Context context) {
         super(context);
@@ -34,26 +32,31 @@ public class DashedLineView extends View {
 
     public DashedLineView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setAttributes(context, attrs);
+        if (!isInEditMode()) {
+            setAttributes(context, attrs);
+        }
         init();
+
     }
 
     public DashedLineView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setAttributes(context, attrs);
+        if (!isInEditMode()) {
+            setAttributes(context, attrs);
+        }
+
         init();
     }
 
     private void setAttributes(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.dashedLineView);
-        mDashWidth = array.getDimensionPixelSize(R.styleable.dashedLineView_dashWidth, DEFAULT_DASH_WIDTH);
-        mDashGap = array.getDimensionPixelSize(R.styleable.dashedLineView_dashGap, DEFAULT_DASH_GAP);
-        mDashColor = array.getColor(R.styleable.dashedLineView_dashColor, ContextCompat.getColor(context, R.color.black));
+        mDashWidth = array.getDimensionPixelSize(R.styleable.dashedLineView_dashWidth, mDashWidth);
+        mDashGap = array.getDimensionPixelSize(R.styleable.dashedLineView_dashGap, mDashGap);
+        mDashColor = array.getColor(R.styleable.dashedLineView_dashColor, mDashColor);
         array.recycle();
     }
 
     private void init() {
-        isInEditMode();
         mPaint = new Paint();
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(1);
@@ -65,8 +68,8 @@ public class DashedLineView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mPaint.setPathEffect(mEffects);
 
+        mPaint.setPathEffect(mEffects);
         int left = getPaddingLeft();
         int right = getWidth() - getPaddingRight();
 
