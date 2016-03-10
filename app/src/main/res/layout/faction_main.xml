@@ -25,19 +25,6 @@
       android:gravity="center"
       android:orientation="vertical">
 
-      <ImageView
-        android:id="@+id/imgRepublicBG"
-        android:layout_width="256.0dip"
-        android:layout_height="256.0dip"
-        android:clickable="false"
-        android:layout_gravity="center"
-        android:src="@drawable/light_side"
-        android:contentDescription="@string/image_placeholder"
-        android:scaleType="fitCenter"
-          android:layout_below="@+id/txtRepublic"
-          android:layout_alignParentLeft="true"
-          android:layout_alignParentStart="true" />
-
         <ImageButton
             android:id="@+id/imgRepublic"
             android:layout_width="@dimen/fab_large"
@@ -49,66 +36,51 @@
             android:scaleType="fitCenter"
             android:src="@drawable/ic_republic"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/imgRepublicBG"
-            android:layout_toEndOf="@+id/imgRepublicBG" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="66dp"
+            android:layout_marginStart="66dp" />
 
       <TextView
         android:id="@+id/txtRepublic"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:clickable="false"
-        android:layout_marginTop="2.0dip"
-        android:gravity="center"
+          android:gravity="center"
         android:text="@string/republic"
         android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@color/text" />
-  </RelativeLayout>
+        android:textColor="@color/text"
+          android:layout_below="@+id/imgRepublic"
+          android:layout_toLeftOf="@+id/imgEmpire"
+          android:layout_toStartOf="@+id/imgEmpire" />
 
-  <RelativeLayout
-      android:id="@+id/layoutEmpire"
-      android:layout_width="fill_parent"
-      android:layout_height="0dp"
-      android:layout_gravity="center"
-      android:layout_weight="1"
-      android:gravity="center"
-      android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/imgEmpire"
+            android:layout_width="@dimen/fab_large"
+            android:layout_height="@dimen/fab_large"
+            android:padding="8dp"
+            android:background="@drawable/round_red"
+            android:elevation="3dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_empire"
+            android:layout_above="@+id/txtEmpire"
+            android:layout_alignRight="@+id/txtEmpire"
+            android:layout_alignEnd="@+id/txtEmpire"
+            android:layout_marginRight="54dp"
+            android:layout_marginEnd="54dp" />
 
-      <ImageView
-        android:id="@+id/imgEmpireBG"
-        android:layout_width="256.0dip"
-        android:layout_height="256.0dip"
-        android:clickable="false"
-        android:src="@drawable/dark_side"
-        android:layout_gravity="center"
-        android:contentDescription="@string/image_placeholder"
-        android:scaleType="fitCenter"
-          android:layout_alignParentTop="true"
-          android:layout_alignParentRight="true"
-          android:layout_alignParentEnd="true" />
-
-      <ImageButton
-          android:id="@+id/imgEmpire"
-          android:layout_width="@dimen/fab_large"
-          android:layout_height="@dimen/fab_large"
-          android:padding="8dp"
-          android:background="@drawable/round_red"
-          android:elevation="3dp"
-          android:layout_gravity="center"
-          android:scaleType="fitCenter"
-          android:src="@drawable/ic_empire"
-          android:layout_centerVertical="true"
-          android:layout_alignParentLeft="true"
-          android:layout_alignParentStart="true" />
-
-      <TextView
-        android:id="@+id/txtEmpire"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:layout_marginTop="2.0dip"
-        android:gravity="center"
-        android:text="@string/empire"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@color/text" />
+        <TextView
+            android:id="@+id/txtEmpire"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="@string/empire"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/text"
+            android:layout_below="@+id/imgRepublic"
+            android:layout_toRightOf="@+id/imgRepublic"
+            android:layout_toEndOf="@+id/imgRepublic" />
   </RelativeLayout>
 </LinearLayout>

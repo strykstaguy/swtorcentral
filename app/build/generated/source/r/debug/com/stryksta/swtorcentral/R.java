@@ -784,6 +784,29 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int customNavigationLayout=0x7f01000f;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dashColor=0x7f01014f;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int dashGap=0x7f01014e;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int dashWidth=0x7f01014d;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -3121,8 +3144,8 @@ containing a value of this type.
         public static final int AdvClass1=0x7f0d00de;
         public static final int AdvClass2=0x7f0d00e1;
         public static final int CharacterAddLayout=0x7f0d00c2;
-        public static final int IMGserverLight=0x7f0d013c;
-        public static final int ServerKeyLayout=0x7f0d013b;
+        public static final int IMGserverLight=0x7f0d0139;
+        public static final int ServerKeyLayout=0x7f0d0138;
         public static final int abilitydetails_layout=0x7f0d008a;
         public static final int abilitylinearlayout=0x7f0d008e;
         public static final int ablCastingActivation=0x7f0d0083;
@@ -3141,7 +3164,7 @@ containing a value of this type.
         public static final int achievementframe=0x7f0d00a0;
         public static final int achievementgridview=0x7f0d0091;
         public static final int achievementlistview=0x7f0d0092;
-        public static final int action0=0x7f0d010f;
+        public static final int action0=0x7f0d010c;
         public static final int action_bar=0x7f0d0071;
         public static final int action_bar_activity_content=0x7f0d0000;
         public static final int action_bar_container=0x7f0d0070;
@@ -3150,26 +3173,26 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0d0052;
         public static final int action_bar_title=0x7f0d0051;
         public static final int action_context_bar=0x7f0d0072;
-        public static final int action_divider=0x7f0d0113;
+        public static final int action_divider=0x7f0d0110;
         public static final int action_menu_divider=0x7f0d0002;
         public static final int action_menu_presenter=0x7f0d0003;
         public static final int action_mode_bar=0x7f0d006e;
         public static final int action_mode_bar_stub=0x7f0d006d;
         public static final int action_mode_close_button=0x7f0d0053;
-        public static final int action_settings=0x7f0d0164;
+        public static final int action_settings=0x7f0d0161;
         public static final int activity_chooser_view_content=0x7f0d0054;
         public static final int alertTitle=0x7f0d0060;
         public static final int always=0x7f0d0048;
         public static final int app_bar=0x7f0d0099;
         public static final int app_bar_layout=0x7f0d00ab;
-        public static final int appbar=0x7f0d011c;
+        public static final int appbar=0x7f0d0119;
         public static final int avatar=0x7f0d00f7;
         public static final int beginning=0x7f0d0046;
         public static final int bottom=0x7f0d0032;
         public static final int buttonPanel=0x7f0d005b;
-        public static final int cancel_action=0x7f0d0110;
+        public static final int cancel_action=0x7f0d010d;
         public static final int card_view=0x7f0d00e5;
-        public static final int cardview=0x7f0d0133;
+        public static final int cardview=0x7f0d0130;
         public static final int center=0x7f0d0033;
         public static final int center_horizontal=0x7f0d0034;
         public static final int center_vertical=0x7f0d0035;
@@ -3188,19 +3211,19 @@ containing a value of this type.
         public static final int characterRace=0x7f0d00cb;
         public static final int character_level=0x7f0d00d2;
         public static final int character_level_msg=0x7f0d00d1;
-        public static final int character_menu_add=0x7f0d0161;
-        public static final int character_menu_delete=0x7f0d0163;
-        public static final int character_menu_edit=0x7f0d0162;
-        public static final int character_menu_save=0x7f0d0160;
+        public static final int character_menu_add=0x7f0d015e;
+        public static final int character_menu_delete=0x7f0d0160;
+        public static final int character_menu_edit=0x7f0d015f;
+        public static final int character_menu_save=0x7f0d015d;
         public static final int checkbox=0x7f0d0069;
-        public static final int chronometer=0x7f0d0116;
+        public static final int chronometer=0x7f0d0113;
         public static final int clip_horizontal=0x7f0d0041;
         public static final int clip_vertical=0x7f0d0042;
         public static final int collapseActionView=0x7f0d0049;
         public static final int collapsed_toolbar=0x7f0d009a;
         public static final int collapsing_toolbar=0x7f0d00ac;
         public static final int companionsListView=0x7f0d00c0;
-        public static final int content=0x7f0d012e;
+        public static final int content=0x7f0d012b;
         public static final int contentPanel=0x7f0d0061;
         public static final int coordinator=0x7f0d00aa;
         public static final int custom=0x7f0d0067;
@@ -3218,7 +3241,7 @@ containing a value of this type.
         public static final int edit_query=0x7f0d0073;
         public static final int email=0x7f0d00f8;
         public static final int end=0x7f0d0036;
-        public static final int end_padder=0x7f0d011b;
+        public static final int end_padder=0x7f0d0118;
         public static final int enterAlways=0x7f0d002a;
         public static final int enterAlwaysCollapsed=0x7f0d002b;
         public static final int eventDescription=0x7f0d0102;
@@ -3231,7 +3254,7 @@ containing a value of this type.
         public static final int exitUntilCollapsed=0x7f0d002c;
         public static final int expand_activities_button=0x7f0d0055;
         public static final int expand_collapse=0x7f0d0004;
-        public static final int expandableListView=0x7f0d010e;
+        public static final int expandableListView=0x7f0d010b;
         public static final int expandable_text=0x7f0d0005;
         public static final int expandedListItem=0x7f0d00f5;
         public static final int expanded_menu=0x7f0d0068;
@@ -3239,7 +3262,7 @@ containing a value of this type.
         public static final int fill_horizontal=0x7f0d0044;
         public static final int fill_vertical=0x7f0d0037;
         public static final int fixed=0x7f0d004d;
-        public static final int headerText=0x7f0d010d;
+        public static final int headerText=0x7f0d010a;
         public static final int home=0x7f0d0006;
         public static final int homeAsUp=0x7f0d0024;
         public static final int icon=0x7f0d0059;
@@ -3254,39 +3277,36 @@ containing a value of this type.
         public static final int imgDisciplines1=0x7f0d00b0;
         public static final int imgDisciplines2=0x7f0d00b2;
         public static final int imgDisciplines3=0x7f0d00b4;
-        public static final int imgEmpire=0x7f0d010b;
-        public static final int imgEmpireBG=0x7f0d010a;
+        public static final int imgEmpire=0x7f0d0108;
         public static final int imgExpandCollapse=0x7f0d00f4;
-        public static final int imgPlanet=0x7f0d0136;
-        public static final int imgRepublic=0x7f0d0108;
-        public static final int imgRepublicBG=0x7f0d0106;
-        public static final int info=0x7f0d011a;
+        public static final int imgPlanet=0x7f0d0133;
+        public static final int imgRepublic=0x7f0d0106;
+        public static final int info=0x7f0d0117;
         public static final int input_layout_characterLegacy=0x7f0d00c6;
         public static final int input_layout_characterLevel=0x7f0d00c4;
         public static final int item_touch_helper_previous_elevation=0x7f0d0007;
         public static final int iv_image=0x7f0d009c;
-        public static final int layoutDisciplineTitle1=0x7f0d0152;
-        public static final int layoutDisciplineTitle2=0x7f0d0156;
-        public static final int layoutDisciplineTitle3=0x7f0d015a;
-        public static final int layoutEmpire=0x7f0d0109;
+        public static final int layoutDisciplineTitle1=0x7f0d014f;
+        public static final int layoutDisciplineTitle2=0x7f0d0153;
+        public static final int layoutDisciplineTitle3=0x7f0d0157;
         public static final int layoutRepublic=0x7f0d0105;
         public static final int left=0x7f0d0038;
         public static final int line=0x7f0d004f;
-        public static final int line1=0x7f0d0114;
-        public static final int line3=0x7f0d0118;
-        public static final int listBeastLore=0x7f0d0129;
-        public static final int listGameRulesLore=0x7f0d012b;
+        public static final int line1=0x7f0d0111;
+        public static final int line3=0x7f0d0115;
+        public static final int listBeastLore=0x7f0d0126;
+        public static final int listGameRulesLore=0x7f0d0128;
         public static final int listMode=0x7f0d0020;
-        public static final int listOrganizationsLore=0x7f0d012d;
-        public static final int listTitlesLore=0x7f0d0127;
+        public static final int listOrganizationsLore=0x7f0d012a;
+        public static final int listTitlesLore=0x7f0d0124;
         public static final int listView1=0x7f0d008b;
         public static final int list_item=0x7f0d0058;
-        public static final int loading=0x7f0d0130;
-        public static final int lstDatacron=0x7f0d011f;
-        public static final int lstLocationsLore=0x7f0d0123;
-        public static final int lstLore=0x7f0d0121;
-        public static final int lstPersonsLore=0x7f0d0125;
-        public static final int lstPlayerAbilities=0x7f0d014e;
+        public static final int loading=0x7f0d012d;
+        public static final int lstDatacron=0x7f0d011c;
+        public static final int lstLocationsLore=0x7f0d0120;
+        public static final int lstLore=0x7f0d011e;
+        public static final int lstPersonsLore=0x7f0d0122;
+        public static final int lstPlayerAbilities=0x7f0d014b;
         public static final int main_content=0x7f0d00a8;
         public static final int main_parent_view=0x7f0d0089;
         public static final int mdAvatarProfile=0x7f0d0008;
@@ -3308,7 +3328,7 @@ containing a value of this type.
         public static final int mdTextPrimary=0x7f0d0018;
         public static final int mdTextRoot=0x7f0d0019;
         public static final int mdTextSecondary=0x7f0d001a;
-        public static final int media_actions=0x7f0d0112;
+        public static final int media_actions=0x7f0d010f;
         public static final int menurow_counter=0x7f0d00fc;
         public static final int menurow_icon=0x7f0d00fa;
         public static final int menurow_title=0x7f0d00fb;
@@ -3317,14 +3337,14 @@ containing a value of this type.
         public static final int multiply=0x7f0d003c;
         public static final int navigation=0x7f0d00a9;
         public static final int navigation_header_container=0x7f0d00ec;
-        public static final int navigation_item_1=0x7f0d0165;
-        public static final int navigation_item_2=0x7f0d0166;
-        public static final int navigation_item_3=0x7f0d0167;
-        public static final int navigation_item_4=0x7f0d0168;
-        public static final int navigation_item_5=0x7f0d0169;
-        public static final int navigation_item_6=0x7f0d016a;
-        public static final int navigation_sub_item_1=0x7f0d016c;
-        public static final int navigation_subheader=0x7f0d016b;
+        public static final int navigation_item_1=0x7f0d0162;
+        public static final int navigation_item_2=0x7f0d0163;
+        public static final int navigation_item_3=0x7f0d0164;
+        public static final int navigation_item_4=0x7f0d0165;
+        public static final int navigation_item_5=0x7f0d0166;
+        public static final int navigation_item_6=0x7f0d0167;
+        public static final int navigation_sub_item_1=0x7f0d0169;
+        public static final int navigation_subheader=0x7f0d0168;
         public static final int never=0x7f0d004b;
         public static final int none=0x7f0d0025;
         public static final int normal=0x7f0d0021;
@@ -3332,17 +3352,17 @@ containing a value of this type.
         public static final int parallax=0x7f0d0030;
         public static final int parentPanel=0x7f0d005d;
         public static final int pin=0x7f0d0031;
-        public static final int planet_pager=0x7f0d011e;
-        public static final int progress=0x7f0d012f;
+        public static final int planet_pager=0x7f0d011b;
+        public static final int progress=0x7f0d012c;
         public static final int progressBar=0x7f0d00a6;
         public static final int progress_circular=0x7f0d001b;
         public static final int progress_horizontal=0x7f0d001c;
-        public static final int progressionList=0x7f0d0132;
+        public static final int progressionList=0x7f0d012f;
         public static final int radio=0x7f0d006b;
-        public static final int readerList=0x7f0d0138;
-        public static final int recyclerview_vertical=0x7f0d015f;
+        public static final int readerList=0x7f0d0135;
+        public static final int recyclerview_vertical=0x7f0d015c;
         public static final int right=0x7f0d0039;
-        public static final int root=0x7f0d015e;
+        public static final int root=0x7f0d015b;
         public static final int screen=0x7f0d003d;
         public static final int scroll=0x7f0d002d;
         public static final int scrollIndicatorDown=0x7f0d0065;
@@ -3359,20 +3379,20 @@ containing a value of this type.
         public static final int search_plate=0x7f0d0079;
         public static final int search_src_text=0x7f0d007a;
         public static final int search_voice_btn=0x7f0d007e;
-        public static final int section_text=0x7f0d013a;
+        public static final int section_text=0x7f0d0137;
         public static final int select_dialog_listview=0x7f0d007f;
-        public static final int serverFull=0x7f0d0144;
-        public static final int serverHeavy=0x7f0d0140;
+        public static final int serverFull=0x7f0d0141;
+        public static final int serverHeavy=0x7f0d013d;
         public static final int serverLayout=0x7f0d00ae;
-        public static final int serverList=0x7f0d0146;
-        public static final int serverPopulation=0x7f0d014a;
-        public static final int serverStandard=0x7f0d013e;
-        public static final int serverStatusIcon=0x7f0d0147;
-        public static final int serverTitle=0x7f0d0148;
-        public static final int serverType=0x7f0d0149;
-        public static final int serverVeryHeavy=0x7f0d0142;
+        public static final int serverList=0x7f0d0143;
+        public static final int serverPopulation=0x7f0d0147;
+        public static final int serverStandard=0x7f0d013b;
+        public static final int serverStatusIcon=0x7f0d0144;
+        public static final int serverTitle=0x7f0d0145;
+        public static final int serverType=0x7f0d0146;
+        public static final int serverVeryHeavy=0x7f0d013f;
         public static final int serverZone=0x7f0d00a2;
-        public static final int server_help=0x7f0d016d;
+        public static final int server_help=0x7f0d016a;
         public static final int shortcut=0x7f0d006a;
         public static final int showCustom=0x7f0d0026;
         public static final int showHome=0x7f0d0027;
@@ -3388,18 +3408,18 @@ containing a value of this type.
         public static final int src_over=0x7f0d0040;
         public static final int start=0x7f0d003a;
         public static final int statslayout=0x7f0d00d5;
-        public static final int status_bar_latest_event_content=0x7f0d0111;
+        public static final int status_bar_latest_event_content=0x7f0d010e;
         public static final int submit_area=0x7f0d007c;
         public static final int tabMode=0x7f0d0022;
-        public static final int tabs=0x7f0d011d;
-        public static final int testFrame=0x7f0d014b;
-        public static final int text=0x7f0d0119;
-        public static final int text2=0x7f0d0117;
+        public static final int tabs=0x7f0d011a;
+        public static final int testFrame=0x7f0d0148;
+        public static final int text=0x7f0d0116;
+        public static final int text2=0x7f0d0114;
         public static final int textSpacerNoButtons=0x7f0d0064;
         public static final int textView=0x7f0d008d;
-        public static final int time=0x7f0d0115;
-        public static final int timeline=0x7f0d0131;
-        public static final int timelineH=0x7f0d0137;
+        public static final int time=0x7f0d0112;
+        public static final int timeline=0x7f0d012e;
+        public static final int timelineH=0x7f0d0134;
         public static final int title=0x7f0d005a;
         public static final int title_template=0x7f0d005f;
         public static final int toolbar=0x7f0d009b;
@@ -3412,52 +3432,52 @@ containing a value of this type.
         public static final int txtArmorText=0x7f0d00ba;
         public static final int txtAttribute=0x7f0d00bd;
         public static final int txtAttributeText=0x7f0d00be;
-        public static final int txtBeastLore=0x7f0d0128;
+        public static final int txtBeastLore=0x7f0d0125;
         public static final int txtCategory1=0x7f0d00a3;
         public static final int txtCharacter=0x7f0d0097;
         public static final int txtClass=0x7f0d00d6;
         public static final int txtClass1=0x7f0d00e0;
         public static final int txtClass2=0x7f0d00e3;
-        public static final int txtClassDesc=0x7f0d0151;
-        public static final int txtClassSub=0x7f0d014f;
-        public static final int txtClassTitle=0x7f0d0150;
+        public static final int txtClassDesc=0x7f0d014e;
+        public static final int txtClassSub=0x7f0d014c;
+        public static final int txtClassTitle=0x7f0d014d;
         public static final int txtCodex=0x7f0d00e8;
         public static final int txtCompanionsSep=0x7f0d00bf;
         public static final int txtCount=0x7f0d0098;
         public static final int txtCrewSkill1=0x7f0d00da;
         public static final int txtCrewSkill2=0x7f0d00db;
         public static final int txtCrewSkill3=0x7f0d00dc;
-        public static final int txtDatacron=0x7f0d0120;
+        public static final int txtDatacron=0x7f0d011d;
         public static final int txtDesc=0x7f0d00dd;
         public static final int txtDescription=0x7f0d0094;
         public static final int txtDetailsSep=0x7f0d00b6;
         public static final int txtDiscipline1=0x7f0d00b1;
-        public static final int txtDiscipline1Description=0x7f0d0155;
-        public static final int txtDiscipline1Title=0x7f0d0153;
-        public static final int txtDiscipline1Type=0x7f0d0154;
+        public static final int txtDiscipline1Description=0x7f0d0152;
+        public static final int txtDiscipline1Title=0x7f0d0150;
+        public static final int txtDiscipline1Type=0x7f0d0151;
         public static final int txtDiscipline2=0x7f0d00b3;
-        public static final int txtDiscipline2Description=0x7f0d0159;
-        public static final int txtDiscipline2Title=0x7f0d0157;
-        public static final int txtDiscipline2Type=0x7f0d0158;
+        public static final int txtDiscipline2Description=0x7f0d0156;
+        public static final int txtDiscipline2Title=0x7f0d0154;
+        public static final int txtDiscipline2Type=0x7f0d0155;
         public static final int txtDiscipline3=0x7f0d00b5;
-        public static final int txtDiscipline3Description=0x7f0d015d;
-        public static final int txtDiscipline3Title=0x7f0d015b;
-        public static final int txtDiscipline3Type=0x7f0d015c;
-        public static final int txtEmpire=0x7f0d010c;
+        public static final int txtDiscipline3Description=0x7f0d015a;
+        public static final int txtDiscipline3Title=0x7f0d0158;
+        public static final int txtDiscipline3Type=0x7f0d0159;
+        public static final int txtEmpire=0x7f0d0109;
         public static final int txtFaction=0x7f0d0104;
-        public static final int txtGameRulesLore=0x7f0d012a;
-        public static final int txtInfo=0x7f0d0134;
+        public static final int txtGameRulesLore=0x7f0d0127;
+        public static final int txtInfo=0x7f0d0131;
         public static final int txtLegacy=0x7f0d00d4;
         public static final int txtLevel=0x7f0d00d7;
         public static final int txtLocation=0x7f0d00e7;
-        public static final int txtLocationLore=0x7f0d0122;
+        public static final int txtLocationLore=0x7f0d011f;
         public static final int txtName=0x7f0d008f;
-        public static final int txtNewsCategory=0x7f0d0139;
-        public static final int txtOrganizationsLore=0x7f0d012c;
-        public static final int txtPersonsLore=0x7f0d0124;
-        public static final int txtPlanet=0x7f0d0135;
-        public static final int txtPlayer=0x7f0d014c;
-        public static final int txtPlayerSub=0x7f0d014d;
+        public static final int txtNewsCategory=0x7f0d0136;
+        public static final int txtOrganizationsLore=0x7f0d0129;
+        public static final int txtPersonsLore=0x7f0d0121;
+        public static final int txtPlanet=0x7f0d0132;
+        public static final int txtPlayer=0x7f0d0149;
+        public static final int txtPlayerSub=0x7f0d014a;
         public static final int txtProgressText=0x7f0d00a5;
         public static final int txtRace=0x7f0d00d8;
         public static final int txtRepublic=0x7f0d0107;
@@ -3469,14 +3489,14 @@ containing a value of this type.
         public static final int txtSubCategory=0x7f0d00a4;
         public static final int txtSummary=0x7f0d0090;
         public static final int txtTitle=0x7f0d0093;
-        public static final int txtTitlesLore=0x7f0d0126;
+        public static final int txtTitlesLore=0x7f0d0123;
         public static final int txtWeapons=0x7f0d00bb;
         public static final int txtWeaponsText=0x7f0d00bc;
-        public static final int txtserverFull=0x7f0d0145;
-        public static final int txtserverHeavy=0x7f0d0141;
-        public static final int txtserverLight=0x7f0d013d;
-        public static final int txtserverStandard=0x7f0d013f;
-        public static final int txtserverVeryHeavy=0x7f0d0143;
+        public static final int txtserverFull=0x7f0d0142;
+        public static final int txtserverHeavy=0x7f0d013e;
+        public static final int txtserverLight=0x7f0d013a;
+        public static final int txtserverStandard=0x7f0d013c;
+        public static final int txtserverVeryHeavy=0x7f0d0140;
         public static final int up=0x7f0d001e;
         public static final int useLogo=0x7f0d0029;
         public static final int userCharacter=0x7f0d00f2;
@@ -10932,5 +10952,63 @@ containing a value of this type.
           @attr name android:layout
         */
         public static final int ViewStubCompat_android_layout = 1;
+        /** Attributes that can be used with a dashedLineView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #dashedLineView_dashColor com.stryksta.swtorcentral:dashColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #dashedLineView_dashGap com.stryksta.swtorcentral:dashGap}</code></td><td></td></tr>
+           <tr><td><code>{@link #dashedLineView_dashWidth com.stryksta.swtorcentral:dashWidth}</code></td><td></td></tr>
+           </table>
+           @see #dashedLineView_dashColor
+           @see #dashedLineView_dashGap
+           @see #dashedLineView_dashWidth
+         */
+        public static final int[] dashedLineView = {
+            0x7f01014d, 0x7f01014e, 0x7f01014f
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#dashColor}
+          attribute's value can be found in the {@link #dashedLineView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.stryksta.swtorcentral:dashColor
+        */
+        public static final int dashedLineView_dashColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#dashGap}
+          attribute's value can be found in the {@link #dashedLineView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name com.stryksta.swtorcentral:dashGap
+        */
+        public static final int dashedLineView_dashGap = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.stryksta.swtorcentral.R.attr#dashWidth}
+          attribute's value can be found in the {@link #dashedLineView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name com.stryksta.swtorcentral:dashWidth
+        */
+        public static final int dashedLineView_dashWidth = 0;
     };
 }

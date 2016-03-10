@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -35,7 +36,7 @@ public class FactionFragment extends Fragment {
 		
 		
 		//Clickable Republic Logo
-        RelativeLayout layoutRepublic = (RelativeLayout) vw_layout.findViewById(R.id.layoutRepublic);
+        ImageButton layoutRepublic = (ImageButton) vw_layout.findViewById(R.id.imgRepublic);
      	layoutRepublic.setOnClickListener(new View.OnClickListener() {      
          public void onClick(View v) {
  	        Bundle bundle = new Bundle();
@@ -48,7 +49,7 @@ public class FactionFragment extends Fragment {
         });
      	
      	//Clickable Empire Logo
-        RelativeLayout layoutEmpire = (RelativeLayout) vw_layout.findViewById(R.id.layoutEmpire);
+        ImageButton layoutEmpire = (ImageButton) vw_layout.findViewById(R.id.imgEmpire);
      	layoutEmpire.setOnClickListener(new View.OnClickListener() {      
          public void onClick(View v) {
         	 Bundle bundle = new Bundle();
