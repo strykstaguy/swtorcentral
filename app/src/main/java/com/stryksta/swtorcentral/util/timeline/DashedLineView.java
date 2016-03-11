@@ -34,14 +34,15 @@ public class DashedLineView extends View {
         super(context, attrs, 0);
         setAttributes(context, attrs);
         init();
-
     }
 
     public DashedLineView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setAttributes(context, attrs);
-
+        if(!isInEditMode()){
+            setAttributes(context, attrs);
+        }
         init();
+
     }
 
     private void setAttributes(Context context, AttributeSet attrs) {
@@ -76,16 +77,30 @@ public class DashedLineView extends View {
         int right = getWidth() - getPaddingRight();
 
         int contentWidth = getWidth() - getPaddingLeft() - getPaddingRight();
-        int contentHeight = getHeight() - getPaddingTop() - getPaddingBottom();
+        int contentHeight = getMeasuredHeight() - getPaddingTop() - getPaddingBottom();
 
         //int startX = contentHeight - mDashHeight / 2;
         //int endX = contentHeight + mDashHeight / 2;
 
-        mPath.moveTo(left, 0);
-        mPath.lineTo(right, 0);
-        canvas.drawPath(mPath, mPaint);
+        //mPath.moveTo(left, contentHeight / 2);
+        //mPath.lineTo(right, contentHeight / 2);
+        //canvas.drawPath(mPath, mPaint);
 
-       //canvas.drawLine(startX, startY, stopX, stopY, mPaint);
+        int height = getMeasuredHeight();
+        int width = getMeasuredWidth();
+        if (height <= width) {
+            // horizontal
+            mPath.moveTo(0, (float) (height / 2.0));
+            mPath.lineTo(width, (float) (height / 2.0));
+            canvas.drawPath(mPath, mPaint);
+        } else {
+            // vertical
+            mPath.moveTo((float) (width / 2.0), 0);
+            mPath.lineTo((float) (width / 2.0), height);
+            canvas.drawPath(mPath, mPaint);
+        }
+
+            //canvas.drawLine(startX, startY, stopX, stopY, mPaint);
         //canvas.drawLine(left, contentHeight / 2, right, contentHeight / 2, mPaint);
     }
 }

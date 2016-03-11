@@ -41,14 +41,14 @@
             android:layout_alignParentStart="false"
             android:layout_alignParentRight="false" />
 
-        -<com.stryksta.swtorcentral.util.timeline.DashedLineView
+        <com.stryksta.swtorcentral.util.timeline.DashedLineView
             android:id="@+id/timelineH"
             android:layout_width="30dp"
             android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             app:dashWidth="20"
             app:dashGap="15"
-            app:dashColor="@color/swtor_red"
+            app:dashColor="@color/subheader"
             android:layout_toRightOf="@+id/timeline"
             android:layout_below="@+id/txtTitle"
             android:layout_marginLeft="-11dp"
@@ -56,5 +56,4 @@
             android:layout_alignParentStart="false"
             android:layout_alignParentRight="false" />
         </RelativeLayout>
-
 </LinearLayout>
