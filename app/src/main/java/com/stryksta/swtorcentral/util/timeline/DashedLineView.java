@@ -20,46 +20,48 @@ public class DashedLineView extends View {
     private Path mPath;
     protected PathEffect mEffects;
 
-    private int mDashHeight = 25;
-    private int mDashWidth = 5;
-    private int mDashGap = 2;
-    private int mDashColor = Color.GRAY;
+    private int mDashHeight = 7;
+    private float mDashWidth = 20;
+    private float mDashGap = 15;
+    private int mDashColor = Color.rgb(117,117,117);
 
     public DashedLineView(Context context) {
-        super(context);
+        super(context, null);
         init();
     }
 
     public DashedLineView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        if (!isInEditMode()) {
-            setAttributes(context, attrs);
-        }
+        super(context, attrs, 0);
+        setAttributes(context, attrs);
         init();
 
     }
 
     public DashedLineView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        if (!isInEditMode()) {
-            setAttributes(context, attrs);
-        }
+        setAttributes(context, attrs);
 
         init();
     }
 
     private void setAttributes(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.dashedLineView);
-        mDashWidth = array.getDimensionPixelSize(R.styleable.dashedLineView_dashWidth, mDashWidth);
-        mDashGap = array.getDimensionPixelSize(R.styleable.dashedLineView_dashGap, mDashGap);
-        mDashColor = array.getColor(R.styleable.dashedLineView_dashColor, mDashColor);
-        array.recycle();
+
+        try {
+            mDashWidth = array.getFloat(R.styleable.dashedLineView_dashWidth, mDashWidth);
+            mDashGap = array.getFloat(R.styleable.dashedLineView_dashGap, mDashGap);
+            mDashColor = array.getColor(R.styleable.dashedLineView_dashColor, mDashColor);
+        } finally {
+            array.recycle();
+        }
+
+
     }
 
     private void init() {
         mPaint = new Paint();
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setStrokeWidth(1);
+        mPaint.setStrokeWidth(mDashHeight);
         mPaint.setColor(mDashColor);
         mPath = new Path();
         mEffects = new DashPathEffect(new float[]{mDashWidth, mDashGap}, 0);
@@ -73,13 +75,17 @@ public class DashedLineView extends View {
         int left = getPaddingLeft();
         int right = getWidth() - getPaddingRight();
 
+        int contentWidth = getWidth() - getPaddingLeft() - getPaddingRight();
+        int contentHeight = getHeight() - getPaddingTop() - getPaddingBottom();
+
+        //int startX = contentHeight - mDashHeight / 2;
+        //int endX = contentHeight + mDashHeight / 2;
+
         mPath.moveTo(left, 0);
         mPath.lineTo(right, 0);
         canvas.drawPath(mPath, mPaint);
-    }
 
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        setMeasuredDimension(widthMeasureSpec, mDashHeight);
+       //canvas.drawLine(startX, startY, stopX, stopY, mPaint);
+        //canvas.drawLine(left, contentHeight / 2, right, contentHeight / 2, mPaint);
     }
 }

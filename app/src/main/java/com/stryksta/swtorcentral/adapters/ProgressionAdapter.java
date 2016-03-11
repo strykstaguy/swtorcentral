@@ -83,7 +83,6 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 ProgressionItem sectionItem = progressionItems.get(position);
                 sectionViewHolder.txtTitle.setText(sectionItem.getPlanet());
                 sectionViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
-                //sectionViewHolder.timeLineHView.setTimelineType(TimelineType.LINE);
                 break;
 
             case FOOTER:
@@ -119,7 +118,6 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public ImageView imgPlanet;
         public TextView txtPlanet;
         public TextView txtLevel;
-        public VerticalTextView txtLabel;
         public TimelineView timeLineView;
 
         public ItemViewHolder(View itemView) {
@@ -143,13 +141,11 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         public TextView txtTitle;
         public TimelineView timeLineView;
-        //public TimelineHView timeLineHView;
 
         public SectionViewHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
-            //timeLineHView = (TimelineHView) itemView.findViewById(R.id.timelineH);
 
             // Attach a click listener to the entire row view
             itemView.setOnClickListener(this);

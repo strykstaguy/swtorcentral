@@ -58,8 +58,8 @@
     </declare-styleable>
 
     <declare-styleable name="dashedLineView">
-        <attr name="dashWidth" format="reference|dimension"/>
-        <attr name="dashGap" format="reference|dimension"/>
+        <attr name="dashWidth" format="float"/>
+        <attr name="dashGap" format="float"/>
         <attr name="dashColor" format="color"/>
     </declare-styleable>
 </resources>
