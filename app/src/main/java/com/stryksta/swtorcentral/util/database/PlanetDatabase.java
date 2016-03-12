@@ -21,40 +21,19 @@ public class PlanetDatabase extends SQLiteAssetHelper {
 		SQLiteDatabase db = getReadableDatabase();
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-		String [] sqlSelect = {"0 _id", "planet", "description"}; 
+		String [] sqlSelect = {"0 _id", "pltName", "pltDescription"};
 		String sqlTables = "planets";
 
 		qb.setTables(sqlTables);
-		Cursor c = qb.query(db, sqlSelect, "planet" + " = ?", new String[]{String.valueOf(txtplanet)}, null, null, null);
+		Cursor c = qb.query(db, sqlSelect, "pltName" + " = ?", new String[]{String.valueOf(txtplanet)}, null, null, null);
 		
 		if (c.moveToFirst()) {
-			txtDescription = c.getString(c.getColumnIndex("description"));
+			txtDescription = c.getString(c.getColumnIndex("pltDescription"));
         }
 		
 		//c.moveToFirst();
 		c.close();
 		return txtDescription;
-
-	}
-	
-	public String PlanetBackground(String txtplanet) {
-		String txtBackground = null;
-		SQLiteDatabase db = getReadableDatabase();
-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-
-		String [] sqlSelect = {"0 _id", "planet", "background"}; 
-		String sqlTables = "planets";
-
-		qb.setTables(sqlTables);
-		Cursor c = qb.query(db, sqlSelect, "planet" + " = ?", new String[]{String.valueOf(txtplanet)}, null, null, null);
-		
-		if (c.moveToFirst()) {
-			txtBackground = c.getString(c.getColumnIndex("background"));
-        }
-		
-		//c.moveToFirst();
-		c.close();
-		return txtBackground;
 
 	}
 }

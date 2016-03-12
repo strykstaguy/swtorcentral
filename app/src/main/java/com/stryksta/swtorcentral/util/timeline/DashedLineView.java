@@ -1,5 +1,6 @@
 package com.stryksta.swtorcentral.util.timeline;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -8,6 +9,7 @@ import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathEffect;
+import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
@@ -32,7 +34,9 @@ public class DashedLineView extends View {
 
     public DashedLineView(Context context, AttributeSet attrs) {
         super(context, attrs, 0);
-        setAttributes(context, attrs);
+        if(!isInEditMode()){
+            setAttributes(context, attrs);
+        }
         init();
     }
 
@@ -82,10 +86,13 @@ public class DashedLineView extends View {
         //int startX = contentHeight - mDashHeight / 2;
         //int endX = contentHeight + mDashHeight / 2;
 
-        //mPath.moveTo(left, contentHeight / 2);
-        //mPath.lineTo(right, contentHeight / 2);
-        //canvas.drawPath(mPath, mPaint);
+        mPath.moveTo(left, 10);
+        mPath.lineTo(right, 10);
+        canvas.drawPath(mPath, mPaint);
 
+
+        //demo
+        /*
         int height = getMeasuredHeight();
         int width = getMeasuredWidth();
         if (height <= width) {
@@ -99,7 +106,7 @@ public class DashedLineView extends View {
             mPath.lineTo((float) (width / 2.0), height);
             canvas.drawPath(mPath, mPaint);
         }
-
+*/
             //canvas.drawLine(startX, startY, stopX, stopY, mPaint);
         //canvas.drawLine(left, contentHeight / 2, right, contentHeight / 2, mPaint);
     }

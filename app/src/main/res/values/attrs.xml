@@ -62,4 +62,15 @@
         <attr name="dashGap" format="float"/>
         <attr name="dashColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="TriangleShape">
+        <attr name="triangleType">
+            <enum name="centerTop" value="0" />
+            <enum name="leftBottom" value="1" />
+            <enum name="rightBottom" value="2" />
+            <enum name="centerBottom" value="3" />
+            <enum name="leftTop" value="4" />
+        </attr>
+        <attr name="triangleColor" format="color" />
+    </declare-styleable>
 </resources>

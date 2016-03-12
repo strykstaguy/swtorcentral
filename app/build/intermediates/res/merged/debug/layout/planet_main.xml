@@ -20,30 +20,58 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:layout_scrollFlags="scroll|enterAlways|snap" />
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="?attr/colorPrimary">
+
         <ImageButton
             android:id="@+id/imgClass1"
             android:layout_width="@dimen/fab_large"
             android:layout_height="@dimen/fab_large"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:padding="8dp"
+            android:padding="2dp"
             android:background="@drawable/advanced_class"
             android:elevation="3dp"
             android:layout_gravity="center"
             android:scaleType="fitCenter"
-            android:src="@drawable/ac_sage_light"/>
+            android:src="@drawable/pl_tython"/>
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/pltName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22.0sp"
+                android:paddingLeft="@dimen/dim_10"
+                android:textColor="@color/white"
+                android:text="Tython"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imgClass1"
+                android:layout_toEndOf="@+id/imgClass1" />
+
+        </RelativeLayout>
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/planet_pager"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:background="@drawable/card"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_gravity="fill_vertical">
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text"
+            android:gravity="center"
+            android:text="Sages are famed for their wisdom as much as for their powerful healing and defensive skills. In troubled times, a Sage brings together the insight of the past with raw power to change the flow of galactic events."
+            android:textSize="14sp"
+            android:layout_margin="10dp" />
+
+
+    </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

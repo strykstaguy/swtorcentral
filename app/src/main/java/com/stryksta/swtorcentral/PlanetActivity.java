@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 public class PlanetActivity extends AppCompatActivity {
 	private String planetText;
@@ -47,30 +48,17 @@ public class PlanetActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(planetText);
 
-		ViewPager viewPager = (ViewPager) findViewById(R.id.planet_pager);
-		if (viewPager != null) {
-			setupViewPager(viewPager);
-		}
+        dbPlanet = new PlanetDatabase(PlanetActivity.this);
+        String Description = dbPlanet.PlanetDescription(planetText);
+        TextView txtDescription = (TextView) findViewById(R.id.txtDescription);
+        dbPlanet.close();
 
-		TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-		tabLayout.setupWithViewPager(viewPager);
-
-        //dbPlanet = new PlanetDatabase(this);
-		//String planetBackground = dbPlanet.PlanetBackground(planetText);
-		//dbPlanet.close();
+        txtDescription.setText(Description);
 
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         
     }
-
-	private void setupViewPager(ViewPager viewPager) {
-		PlanetPagerAdapter adapter = new PlanetPagerAdapter(getSupportFragmentManager());
-		adapter.addFragment(new PlanetTab1(), "Information");
-		adapter.addFragment(new PlanetTab2(), "Datacrons");
-		adapter.addFragment(new PlanetTab3(), "Lore");
-		viewPager.setAdapter(adapter);
-	}
 
     @Override
 	public boolean onOptionsItemSelected(MenuItem item) {
