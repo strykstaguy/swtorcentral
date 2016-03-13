@@ -89,8 +89,8 @@
                         android:layout_height="wrap_content"
                         android:text="SKILLS" />
                 </LinearLayout>
-            </RelativeLayout>
 
+            </RelativeLayout>
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
