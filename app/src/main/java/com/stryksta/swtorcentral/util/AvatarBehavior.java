@@ -11,9 +11,6 @@ import android.widget.ImageView;
 
 import com.stryksta.swtorcentral.R;
 
-/**
- * Created by Serhii Yaremych on 16.11.2015.
- */
 public class AvatarBehavior extends CoordinatorLayout.Behavior<ImageView> {
 
     private final String COLLAPSE_PERCENT = "collapsePercent ";
@@ -33,8 +30,8 @@ public class AvatarBehavior extends CoordinatorLayout.Behavior<ImageView> {
 
     public AvatarBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
-        toolBarHeight = 112;
-        statusBarHeight = 25;
+        toolBarHeight = context.getResources().getDimensionPixelSize(R.dimen.tool_bar_height);
+        statusBarHeight = context.getResources().getDimensionPixelSize(R.dimen.status_bar_height);
     }
 
     @Override

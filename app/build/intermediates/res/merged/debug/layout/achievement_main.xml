@@ -90,20 +90,6 @@
                         android:text="SKILLS" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/whitebar"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingRight="8.0dip"
-                    android:background="@color/white"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true">
-
-                </LinearLayout>
-
-
             </RelativeLayout>
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -114,19 +100,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-    <ImageView
-        android:id="@+id/image_profile"
-        android:layout_width="@dimen/fab_large"
-        android:layout_height="@dimen/fab_large"
-        android:layout_margin="@dimen/dim_5"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_class_consular"
-        android:background="@drawable/advanced_class"
-        android:padding="8dp"
-        android:translationZ="10dp"
-        app:layout_anchor="@id/whitebar"
-        app:layout_anchorGravity="top|center"
-        app:layout_behavior="com.stryksta.swtorcentral.util.ImageBehavior" />
 
 </android.support.design.widget.CoordinatorLayout>

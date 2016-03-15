@@ -96,4 +96,13 @@
     <dimen name="fab_normal_margin_top">-28dp</dimen>
     <dimen name="fab_progress_margin_right">8dp</dimen>
     <dimen name="fab_progress_margin_top">-36dp</dimen>
+
+    <!-- avatar image -->
+    <dimen name="avatar_size_profile">100dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="image_final_width">32dp</dimen>
+    <dimen name="image_final_height">48dp</dimen>
+
+    <dimen name="tool_bar_height">112dp</dimen>
+    <dimen name="status_bar_height">25dp</dimen>
 </resources>  

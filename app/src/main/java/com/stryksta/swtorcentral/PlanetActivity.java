@@ -55,6 +55,9 @@ public class PlanetActivity extends AppCompatActivity {
 
         txtDescription.setText(Description);
 
+		TextView pltName = (TextView) findViewById(R.id.pltName);
+		pltName.setText(planetText);
+
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
         
