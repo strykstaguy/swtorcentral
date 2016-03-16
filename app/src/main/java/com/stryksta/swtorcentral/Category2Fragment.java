@@ -78,7 +78,7 @@ public class Category2Fragment extends Fragment {
         characterlegacy = user.get(SessionManager.KEY_LEGACY);
         
         db = new AchievementsDatabase(getActivity());
-        achievements = db.getCategory2(characterID, characterlegacy, Category1);
+        achievements = db.getCategory2(Category1);
 
 		mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.achievementgridview);
 

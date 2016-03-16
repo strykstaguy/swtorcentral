@@ -85,7 +85,7 @@ public class Category3Fragment extends Fragment {
 		((AchievementActivity) getActivity()).setTotalText(String.valueOf(Category2Total));
 
         db = new AchievementsDatabase(getActivity());
-        achievements = db.getCategory3(characterID, characterlegacy, Category1, Category2);
+        achievements = db.getCategory3(Category1, Category2);
 
 		mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.achievementgridview);
 

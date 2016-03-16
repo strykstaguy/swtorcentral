@@ -62,15 +62,9 @@ public class Category1Fragment extends Fragment{
 
 		//Set title of category
 		((AchievementActivity)getActivity()).setTitleText("Achievements");
-
-      //get user data from session
-        HashMap<String, String> user = session.getUserDetails();
-        characterName = user.get(SessionManager.KEY_NAME);
-        characterID = user.get(SessionManager.KEY_ID);
-        characterlegacy = user.get(SessionManager.KEY_LEGACY);
         
         db = new AchievementsDatabase(getActivity());
-        categories = db.getCategory1(characterID, characterlegacy);
+        categories = db.getCategory1();
 
 		mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.achievementgridview);
 

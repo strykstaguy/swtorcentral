@@ -99,6 +99,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_gravity="fill_vertical">
 
+
         <TextView
             android:id="@+id/txtDescription"
             android:layout_width="wrap_content"
@@ -106,10 +107,9 @@
             android:paddingLeft="5dp"
             android:textColor="@color/text"
             android:gravity="center"
-            android:text="@string/lorum"
+            android:text="@string/test_main"
             android:textSize="14sp"
             android:layout_margin="10dp" />
-
 
     </android.support.v4.widget.NestedScrollView>
 

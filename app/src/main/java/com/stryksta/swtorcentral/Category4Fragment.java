@@ -73,7 +73,7 @@ public class Category4Fragment extends Fragment{
         getActivity().setTitle(Category3);
 
         db = new AchievementsDatabase(getActivity());
-        achievements = db.getAchievements(Category1, Category2, Category3, characterlegacy);
+        achievements = db.getAchievements(Category1, Category2, Category3);
         
         achievementListView = (GridView) vw_layout.findViewById(R.id.achievementlistview);
         
@@ -91,9 +91,9 @@ public class Category4Fragment extends Fragment{
 				//view.setite
 				//Toast.makeText(getActivity(), "Character ID: " + characterID + " Achievement ID: " + achievementAdapter.getItem(position).getAchievementID(), Toast.LENGTH_SHORT).show();
 				if (achievementAdapter.getItem(position).getCompleted() == 0) {
-					db.setCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID(), characterlegacy);
+					db.setCompleted(achievementAdapter.getItem(position).getAchievementID());
 				} else {
-					db.removeCompleted(Integer.parseInt(characterID), achievementAdapter.getItem(position).getAchievementID(), characterlegacy);
+					db.removeCompleted(achievementAdapter.getItem(position).getAchievementID());
 				}
 				
 				updateItems();
@@ -117,7 +117,7 @@ public class Category4Fragment extends Fragment{
 	    
 	    achievementAdapter.setNotifyOnChange(false); 
 	    achievements.clear();
-        achievements = db.getAchievements(Category1, Category2, Category3, characterlegacy);
+        achievements = db.getAchievements(Category1, Category2, Category3);
 	    achievementAdapter.clear();
         achievementAdapter.addAll(achievements);
         
