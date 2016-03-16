@@ -9,11 +9,11 @@ public class AchievementsItem {
     public String achDescription;
     public int achRewardPoints;
     public String achRewardTitle;
-    public int achRewardFleetRequisition;
+    public Integer achRewardFleetRequisition;
     public String achVisibility;
     public int achCompleted;
 
-    public AchievementsItem(int achID, String achCategory1, String achCategory2, String achCategory3, String achTitle, String achDescription, int achRewardPoints, String achRewardTitle, int achRewardFleetRequisition, String achVisibility, int achCompleted) {
+    public AchievementsItem(int achID, String achCategory1, String achCategory2, String achCategory3, String achTitle, String achDescription, int achRewardPoints, String achRewardTitle, Integer achRewardFleetRequisition, String achVisibility, int achCompleted) {
     	this.achID = achID;
         this.achCategory1 = achCategory1;
         this.achCategory2 = achCategory2;
@@ -84,19 +84,19 @@ public class AchievementsItem {
         this.achRewardPoints = achRewardPoints;
     }
     
-    public String getewardTitl() {
+    public String getRewardTitle() {
         return achRewardTitle;
     }
 
-    public void setewardTitl(String achRewardTitle) {
+    public void setRewardTitle(String achRewardTitle) {
         this.achRewardTitle = achRewardTitle;
     }
 
-    public int getRewardFleetRequisition() {
+    public Integer getRewardFleetRequisition() {
         return achRewardFleetRequisition;
     }
 
-    public void setRewardFleetRequisition(int achRewardFleetRequisition){
+    public void setRewardFleetRequisition(Integer achRewardFleetRequisition){
         this.achRewardFleetRequisition = achRewardFleetRequisition;
     }
     

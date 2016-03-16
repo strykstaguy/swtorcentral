@@ -64,12 +64,6 @@ public class Category4Fragment extends Fragment{
 		//Set title of category
 		((AchievementActivity)getActivity()).setTitleText(Category3);
 
-        //get user data from session
-        HashMap<String, String> user = session.getUserDetails();
-        characterName = user.get(SessionManager.KEY_NAME);
-        characterID = user.get(SessionManager.KEY_ID);
-        characterlegacy = user.get(SessionManager.KEY_LEGACY);
-
         getActivity().setTitle(Category3);
 
         db = new AchievementsDatabase(getActivity());

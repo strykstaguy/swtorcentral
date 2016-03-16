@@ -36,52 +36,40 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
             v = inflater.inflate(R.layout.achievement_items_row, null);
             holder = new ViewHolder();
             
-            holder.txtViewTitle = (TextView) v.findViewById(R.id.txtTitle);
-            holder.txtViewDescription = (TextView) v.findViewById(R.id.txtDescription);
-            holder.txtViewCount = (TextView) v.findViewById(R.id.txtCount);
-            holder.txtViewReward = (TextView) v.findViewById(R.id.txtRewards);
-            holder.txtViewStatus = (TextView) v.findViewById(R.id.txtStatus);
-            holder.txtViewCharacter = (TextView) v.findViewById(R.id.txtCharacter);
+            holder.achTitle = (TextView) v.findViewById(R.id.achTitle);
+            holder.achDescription = (TextView) v.findViewById(R.id.achDescription);
+            holder.txtRewardsSep = (TextView) v.findViewById(R.id.txtRewardsSep);
+            holder.achRewardTitle = (TextView) v.findViewById(R.id.achRewardTitle);
+            holder.achRewardFleetRequisition = (TextView) v.findViewById(R.id.achRewardFleetRequisition);
+            holder.txtStatus = (TextView) v.findViewById(R.id.txtStatus);
+            holder.achRewardPoints = (TextView) v.findViewById(R.id.achRewardPoints);
             
             v.setTag(holder);
         } else {
             holder = (ViewHolder) v.getTag();
         }
         
-        AchievementsItem rowItem = swtorAchievements.get(position);
+        AchievementsItem achItem = swtorAchievements.get(position);
         
-        if (rowItem != null) {
-        	holder.txtViewTitle.setText(rowItem.getTitle());
-        	holder.txtViewDescription.setText(insertNewLine(rowItem.getDescription()));
-        	holder.txtViewCount.setText(String.valueOf(rowItem.getPoints()));
+        if (achItem != null) {
+        	holder.achTitle.setText(achItem.getTitle());
+        	holder.achDescription.setText(insertNewLine(achItem.getDescription()));
+        	holder.achRewardPoints.setText(String.valueOf(achItem.getRewardPoints()));
                     
-            if (rowItem.getRewards().equals("")) {
-            	holder.txtViewReward.setVisibility(View.GONE);
+            if (achItem.getRewardFleetRequisition() == null && achItem.getRewardTitle().equals("")) {
+            	holder.txtRewardsSep.setVisibility(View.GONE);
+                holder.achRewardTitle.setVisibility(View.GONE);
+                holder.achRewardFleetRequisition.setVisibility(View.GONE);
             } else {
-            	holder.txtViewReward.setText(insertNewLine(String.valueOf(rowItem.getRewards())));
+                holder.achRewardTitle.setText("Title: " + achItem.getRewardTitle());
+                holder.achRewardFleetRequisition.setText("Fleet Requisition: " + achItem.getRewardFleetRequisition());
             }
             
-            if (rowItem.getCompleted() == 1) {
-            	holder.txtViewStatus.setText(Html.fromHtml("Status: <b>Complete</b>"));
-            	//holder.txtViewTitle.setPaintFlags(holder.txtViewTitle.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            	//holder.txtViewDescription.setPaintFlags(holder.txtViewDescription.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            	//holder.txtViewCount.setPaintFlags(holder.txtViewCount.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            	//v.setBackgroundResource(R.drawable.card_selected_background);
+            if (achItem.getCompleted() == 1) {
+            	holder.txtStatus.setText(Html.fromHtml("Status: <b>Complete</b>"));
             } else {
-            	holder.txtViewStatus.setText(Html.fromHtml("Status: <b>Incomplete</b>"));
-            	//v.setBackgroundResource(R.drawable.card_background);
+            	holder.txtStatus.setText(Html.fromHtml("Status: <b>Incomplete</b>"));
             }
-            
-            //rowItem.getCharacter();
-            
-            
-            if (rowItem.getPlayer() != null) {
-            	holder.txtViewCharacter.setText(Html.fromHtml("Player: <b>"+ rowItem.getPlayer() + "</b>"));
-            } else {
-            	//holder.txtViewCharacter.setVisibility(View.GONE);
-            	holder.txtViewCharacter.setText("");
-            }
-            
         }
         
         
@@ -89,12 +77,13 @@ public class AchievementItemsAdapter extends ArrayAdapter<AchievementsItem> {
     }
 
     public static class ViewHolder {
-        public TextView txtViewTitle;
-        public TextView txtViewDescription;
-        public TextView txtViewCount;
-        public TextView txtViewReward;
-        public TextView txtViewStatus;
-        public TextView txtViewCharacter;
+        public TextView achTitle;
+        public TextView achDescription;
+        public TextView txtRewardsSep;
+        public TextView achRewardTitle;
+        public TextView achRewardFleetRequisition;
+        public TextView txtStatus;
+        public TextView achRewardPoints;
     }
     
     private String insertNewLine(String description) {

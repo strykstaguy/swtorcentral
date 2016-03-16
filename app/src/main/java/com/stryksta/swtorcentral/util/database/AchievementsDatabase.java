@@ -149,14 +149,14 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		if (c.moveToFirst()) {
             do {
             	int achID = c.getInt(c.getColumnIndex("_id"));
-            	String achCategory1 = c.getString(c.getColumnIndex("achCategory1"));
-            	String achCategory2 = c.getString(c.getColumnIndex("achCategory2"));
-            	String achCategory3 = c.getString(c.getColumnIndex("achCategory3"));
+            	String achCategory1 = c.getString(c.getColumnIndex("achCategory"));
+            	String achCategory2 = c.getString(c.getColumnIndex("achSubCategory"));
+            	String achCategory3 = c.getString(c.getColumnIndex("achTertiaryCategory"));
             	String achTitle = c.getString(c.getColumnIndex("achTitle"));
             	String achDescription = c.getString(c.getColumnIndex("achDescription"));
             	int achRewardPoints = c.getInt(c.getColumnIndex("achRewardPoints"));
             	String achRewardTitle = c.getString(c.getColumnIndex("achRewardTitle"));
-            	int achRewardFleetRequisition = c.getInt(c.getColumnIndex("achRewardFleetRequisition"));
+				Integer achRewardFleetRequisition = c.getInt(c.getColumnIndex("achRewardFleetRequisition"));
             	String achVisibility = c.getString(c.getColumnIndex("achVisibility"));
 				int achCompleted = c.getInt(c.getColumnIndex("achCompleted"));
 
