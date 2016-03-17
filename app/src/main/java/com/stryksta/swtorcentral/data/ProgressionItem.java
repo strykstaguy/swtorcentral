@@ -10,10 +10,12 @@ public class ProgressionItem {
     private String label;
     int layoutType;
     private TimelineType timelineType;
-    public static final int ITEM = 0;
-    public static final int SECTION = 1;
-    public static final int HEADER = 2;
-    public static final int FOOTER = 3;
+    public static final int HEADER = 0;
+    public static final int PLANET = 1;
+    public static final int SECTION = 2;
+    public static final int FLASHOP = 3;
+    public static final int BONUS = 4;
+    public static final int FOOTER = 5;
 
     public ProgressionItem(String planet, TimelineType timelineType, int layoutType) {
         this.planet = planet;
@@ -27,11 +29,10 @@ public class ProgressionItem {
         this.timelineType = TimelineType.LINE;
     }
 
-    public ProgressionItem(String planet, String level, int imgPlanet, String label, TimelineType timelineType, int layoutType) {
+    public ProgressionItem(String planet, String level, int imgPlanet, TimelineType timelineType, int layoutType) {
         this.planet = planet;
         this.level = level;
         this.imgPlanet = imgPlanet;
-        this.label = label;
         this.timelineType = timelineType;
         this.layoutType = layoutType;
     }
@@ -58,14 +59,6 @@ public class ProgressionItem {
 
     public void setLevel(String level) {
         this.level = level;
-    }
-    
-    public String getLabel() {
-        return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
     }
 
     public int getLayoutType() {

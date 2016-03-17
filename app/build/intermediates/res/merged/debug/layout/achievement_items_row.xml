@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/card_background"
-    android:orientation="horizontal"
-    android:layout_margin="@dimen/datacronpadding" >
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical" >
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="2dp"
+        android:clickable="true"
+        app:cardCornerRadius="2dp"
+        app:cardPreventCornerOverlap="false"
+        android:foreground="@drawable/card_foreground"
+        app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/dim_5">
 
         <TextView
             android:id="@+id/achTitle"
@@ -18,15 +33,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:paddingLeft="5dp"
+            android:paddingTop="@dimen/dim_5"
+            android:paddingBottom="@dimen/dim_5"
             android:textColor="@color/regularcolor"
             android:textSize="16sp"
             android:text="Title"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/achRewardPoints"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
 
         <TextView
             android:id="@+id/achDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/achTitle"
             android:layout_gravity="left"
             android:paddingLeft="5dp"
             android:textColor="@color/regularcolor"
@@ -35,6 +56,7 @@
 
         <TextView
             android:id="@+id/txtRewardsSep"
+            android:layout_below="@+id/achDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -48,6 +70,7 @@
             android:id="@+id/achRewardTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/txtRewardsSep"
             android:layout_gravity="left"
             android:paddingLeft="5dp"
             android:text="Rewards Title"
@@ -58,30 +81,24 @@
             android:id="@+id/achRewardFleetRequisition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/achRewardTitle"
             android:layout_gravity="left"
             android:paddingLeft="5dp"
             android:text="Fleet Requisition"
             android:textColor="@color/regularcolor"
             android:textSize="12sp" />
-
-        <LinearLayout
-        	android:layout_width="match_parent"
-        	android:layout_height="wrap_content"
-        	android:orientation="horizontal" >
         
         <TextView
             android:id="@+id/txtStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/achRewardFleetRequisition"
             android:layout_gravity="left"
             android:paddingLeft="5dp"
             android:paddingTop="10dp"
             android:textColor="@color/regularcolor"
             android:text="Status"
             android:textSize="14sp" />
-
-		</LinearLayout>
-    </LinearLayout>
 
     <TextView
         android:id="@+id/achRewardPoints"
@@ -91,6 +108,13 @@
         android:textColor="@color/swtor_blue"
         android:textSize="20sp"
         android:text="20"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

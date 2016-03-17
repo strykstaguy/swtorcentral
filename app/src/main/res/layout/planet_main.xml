@@ -10,7 +10,7 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?colorPrimary"
+        android:background="@color/swtor_blue"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         >
@@ -21,10 +21,8 @@
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
             app:titleEnabled="false"
-            app:contentScrim="?colorPrimary"
-            app:layout_behavior="com.stryksta.swtorcentral.util.AvatarImageBehavior"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            >
+            app:contentScrim="@color/swtor_blue"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,7 +36,7 @@
                 >
 
                 <ImageView
-                    android:id="@+id/userAvatar"
+                    android:id="@+id/pltImage"
                     android:layout_width="@dimen/fab_large"
                     android:layout_height="@dimen/fab_large"
                     android:layout_gravity="center_horizontal"
@@ -92,24 +90,67 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/card"
         app:behavior_overlapTop="35dp"
         android:layout_marginLeft="@dimen/dim_10"
         android:layout_marginRight="@dimen/dim_10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_gravity="fill_vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/txtDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:textColor="@color/text"
-            android:gravity="center"
-            android:text="@string/test_main"
-            android:textSize="14sp"
-            android:layout_margin="10dp" />
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                card_view:cardElevation="2dp"
+                card_view:cardCornerRadius="2dp"
+                android:clickable="true"
+                android:foreground="@drawable/card_foreground"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/text"
+                    android:gravity="center"
+                    android:text="@string/test_profile_desc"
+                    android:textSize="14sp"
+                    android:layout_margin="10dp" />
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/txtCodexes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:text="Codexes"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:textSize="18sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/pltDatacrons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/dim_5"
+                android:clipToPadding="false"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
 
     </android.support.v4.widget.NestedScrollView>
 

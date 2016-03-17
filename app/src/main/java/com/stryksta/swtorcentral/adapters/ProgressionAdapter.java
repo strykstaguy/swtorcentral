@@ -21,10 +21,12 @@ import java.util.ArrayList;
 public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     private ArrayList<ProgressionItem> progressionItems;
-    public static final int ITEM = 0;
-    public static final int SECTION = 1;
-    public static final int HEADER = 2;
-    public static final int FOOTER = 3;
+    public static final int HEADER = 0;
+    public static final int PLANET = 1;
+    public static final int SECTION = 2;
+    public static final int FLASHOP = 3;
+    public static final int BONUS = 4;
+    public static final int FOOTER = 5;
 
     public ProgressionAdapter(ArrayList<ProgressionItem> progressionItems) {
         super();
@@ -37,7 +39,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         LayoutInflater mInflater = LayoutInflater.from ( viewGroup.getContext () );
         switch (viewType) {
 
-            case ITEM:
+            case PLANET:
                 ViewGroup vImage = ( ViewGroup ) mInflater.inflate ( R.layout.progression_row, viewGroup, false );
                 ItemViewHolder vhImage = new ItemViewHolder(vImage);
                 return vhImage;
@@ -49,6 +51,14 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 ViewGroup vSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_section, viewGroup, false );
                 SectionViewHolder vhSection = new SectionViewHolder(vSection);
                 return vhSection;
+            case FLASHOP:
+                ViewGroup fSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop, viewGroup, false );
+                FlashopViewHolder fhSection = new FlashopViewHolder(fSection);
+                return fhSection;
+            case BONUS:
+                ViewGroup bSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_section, viewGroup, false );
+                SectionViewHolder bhSection = new SectionViewHolder(bSection);
+                return bhSection;
             default:
                 ViewGroup vDefault = ( ViewGroup ) mInflater.inflate ( R.layout.progression_row, viewGroup, false );
                 ItemViewHolder vhDefault = new ItemViewHolder(vDefault);
@@ -61,7 +71,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         switch (viewHolder.getItemViewType()) {
 
-            case ITEM:
+            case PLANET:
                 ItemViewHolder itemViewHolder = (ItemViewHolder) viewHolder;
 
                 ProgressionItem progressionItem = progressionItems.get(position);
@@ -85,6 +95,20 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 sectionViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
                 break;
 
+            case FLASHOP:
+                FlashopViewHolder flashpointViewHolder = (FlashopViewHolder) viewHolder;
+                ProgressionItem flashpointItem = progressionItems.get(position);
+                flashpointViewHolder.txtTitle.setText(flashpointItem.getPlanet());
+                flashpointViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+                break;
+
+            case BONUS:
+                SectionViewHolder bonusViewHolder = (SectionViewHolder) viewHolder;
+                ProgressionItem bonusItem = progressionItems.get(position);
+                bonusViewHolder.txtTitle.setText(bonusItem.getPlanet());
+                bonusViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+                break;
+
             case FOOTER:
                 FooterViewHolder footerViewHolder = (FooterViewHolder) viewHolder;
                 footerViewHolder.timeLineView.setTimelineType(TimelineType.END);
@@ -102,7 +126,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         if ( progressionItems.get(position) != null ) {
             viewType = progressionItems.get(position).getLayoutType();
         } else {
-            viewType = ITEM;
+            viewType = PLANET;
         }
 
         return viewType;
@@ -143,6 +167,26 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public TimelineView timeLineView;
 
         public SectionViewHolder(View itemView) {
+            super(itemView);
+            txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
+            timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
+
+            // Attach a click listener to the entire row view
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+
+        }
+    }
+
+    public class FlashopViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+        public TextView txtTitle;
+        public TimelineView timeLineView;
+
+        public FlashopViewHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);

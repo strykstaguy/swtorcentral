@@ -2,16 +2,18 @@ package com.stryksta.swtorcentral;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
-
-import com.stryksta.swtorcentral.adapters.AchievementItemsAdapter;
+import com.stryksta.swtorcentral.adapters.AchievementItemAdapter;
 import com.stryksta.swtorcentral.data.AchievementsItem;
+import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
-import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,17 +23,14 @@ import android.widget.AdapterView.OnItemLongClickListener;
 
 public class Category4Fragment extends Fragment{
 	private AchievementsDatabase db;
-	GridView achievementListView;
 	ArrayList<AchievementsItem> achievements = new ArrayList<AchievementsItem>();
-	AchievementItemsAdapter achievementAdapter;
-	SessionManager session;
+	private AchievementItemAdapter mRecycleAdapter;
+	private GridLayoutManager mLayoutManager;
+	private RecyclerView mRecyclerView;
 	Handler handler;
 	String Category1;
 	String Category2;
 	String Category3;
-	String characterName;
-	String characterID;
-	String characterlegacy;
 	View vw_layout;
 	
 	@Override
@@ -51,8 +50,6 @@ public class Category4Fragment extends Fragment{
 		
         vw_layout = inflater.inflate(R.layout.achievement_item_main, container, false);
         
-        session = new SessionManager(getActivity());
-        
         handler = new Handler();
         
         if ( getArguments().getString("category1") != null ) {
@@ -68,62 +65,56 @@ public class Category4Fragment extends Fragment{
 
         db = new AchievementsDatabase(getActivity());
         achievements = db.getAchievements(Category1, Category2, Category3);
-        
-        achievementListView = (GridView) vw_layout.findViewById(R.id.achievementlistview);
-        
-        achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
-        achievementListView.setAdapter(achievementAdapter);
-        
-        achievementListView.setOnItemLongClickListener(new OnItemLongClickListener() {
 
-			public boolean onItemLongClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				// TODO Auto-generated method stub
-				//
-				//view.setBackground(getResources().getDrawable(R.drawable.card_selected_background));
-				//view.setSelected(true);
-				//view.setite
-				//Toast.makeText(getActivity(), "Character ID: " + characterID + " Achievement ID: " + achievementAdapter.getItem(position).getAchievementID(), Toast.LENGTH_SHORT).show();
-				if (achievementAdapter.getItem(position).getCompleted() == 0) {
-					db.setCompleted(achievementAdapter.getItem(position).getAchievementID());
-				} else {
-					db.removeCompleted(achievementAdapter.getItem(position).getAchievementID());
-				}
-				
-				updateItems();
-				
-				return false;
+		mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.achievementItems);
+
+		if (mRecyclerView != null) {
+			mLayoutManager = new GridLayoutManager(getActivity(), 1, GridLayoutManager.VERTICAL, false);
+			mRecyclerView.setLayoutManager(mLayoutManager);
+		}
+		//Set Adapter
+		mRecycleAdapter = new AchievementItemAdapter(achievements);
+		mRecyclerView.setAdapter(mRecycleAdapter);
+
+		/*
+		mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
+		{
+			public void onItemClick(View view, int position)
+			{
 			}
-        }); 
-        
+
+			public void onItemLongClick(View view, int position)
+			{
+				if (achievements.get(position).getCompleted() == 0) {
+					db.setCompleted(achievements.get(position).getAchievementID());
+				} else {
+					db.removeCompleted(achievements.get(position).getAchievementID());
+				}
+
+				updateItems();
+			}
+		}));
+        */
+
      	return vw_layout;
 	}
 	
 	public void updateItems() {
-		
-		/*handler.postDelayed(new Runnable() {
-		       public void run() {
-		    	   
-		       }
-		     }, 500);*/
-		
+
 		db = new AchievementsDatabase(getActivity());
-	    
-	    achievementAdapter.setNotifyOnChange(false); 
+
 	    achievements.clear();
         achievements = db.getAchievements(Category1, Category2, Category3);
-	    achievementAdapter.clear();
-        achievementAdapter.addAll(achievements);
-        
-        //achievementAdapter = new AchievementItemsAdapter(getActivity(), achievements);
-        //achievementListView.setAdapter(achievementAdapter);
-        achievementAdapter.notifyDataSetChanged();
+
+		mRecycleAdapter.updateItems(achievements);
+		mRecycleAdapter.notifyDataSetChanged();
+
+		db.close();
 	}
 	
 	@Override
 	public void onDestroyView() {
 	    super.onDestroyView();
-	    //getActivity().getActionBar().setTitle("Achievements");
-	    db.close();
+
 	}
 }

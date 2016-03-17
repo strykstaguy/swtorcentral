@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PlanetActivity extends AppCompatActivity {
@@ -57,6 +58,10 @@ public class PlanetActivity extends AppCompatActivity {
 
 		TextView pltName = (TextView) findViewById(R.id.pltName);
 		pltName.setText(planetText);
+
+
+		ImageView pltImage = (ImageView) findViewById(R.id.pltImage);
+        //pltImage.setBackgroundResource("");
 
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());
