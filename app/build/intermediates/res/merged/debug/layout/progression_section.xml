@@ -12,20 +12,15 @@
         android:background="@color/background">
 
 
-        <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
+        <com.stryksta.swtorcentral.util.timeline.DashedVLineView
             android:id="@+id/timeline"
             android:layout_width="30dp"
-            android:layout_height="100dp"
+            android:layout_height="125dp"
             android:layout_gravity="center_horizontal"
-            app:firstColor="@color/subheader"
-            app:firstSize="15"
-            app:lastColor="@color/subheader"
-            app:lastSize="15"
-            app:lineColor="@color/subheader"
-            app:lineWidth="10dp"
-            app:middleColor="@color/subheader"
-            app:middleSize="15"
-            app:timeline_type="line"
+            app:dashWidth="25"
+            app:dashGap="20"
+            app:dashColor="@color/subheader"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
         <TextView
@@ -33,27 +28,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_toRightOf="@+id/timeline"
-            android:layout_marginLeft="-15dp"
             android:text="Tython"
+            android:textSize="22dp"
             android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentRight="false" />
-
-        <com.stryksta.swtorcentral.util.timeline.DashedLineView
-            android:id="@+id/timelineH"
-            android:layout_width="30dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center_horizontal"
-            app:dashWidth="20"
-            app:dashGap="15"
-            app:dashColor="@color/subheader"
             android:layout_toRightOf="@+id/timeline"
-            android:layout_below="@+id/txtTitle"
-            android:layout_marginLeft="-11dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentRight="false" />
+            android:layout_toEndOf="@+id/timeline" />
         </RelativeLayout>
 </LinearLayout>

@@ -92,7 +92,6 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 SectionViewHolder sectionViewHolder = (SectionViewHolder) viewHolder;
                 ProgressionItem sectionItem = progressionItems.get(position);
                 sectionViewHolder.txtTitle.setText(sectionItem.getPlanet());
-                sectionViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
                 break;
 
             case FLASHOP:
@@ -106,7 +105,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 SectionViewHolder bonusViewHolder = (SectionViewHolder) viewHolder;
                 ProgressionItem bonusItem = progressionItems.get(position);
                 bonusViewHolder.txtTitle.setText(bonusItem.getPlanet());
-                bonusViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+                //bonusViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
                 break;
 
             case FOOTER:
@@ -164,12 +163,10 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public class SectionViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView txtTitle;
-        public TimelineView timeLineView;
 
         public SectionViewHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
-            timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
 
             // Attach a click listener to the entire row view
             itemView.setOnClickListener(this);
