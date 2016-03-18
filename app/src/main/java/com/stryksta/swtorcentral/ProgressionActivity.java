@@ -90,8 +90,7 @@ public class ProgressionActivity extends AppCompatActivity {
     private ArrayList<ProgressionItem> generateRepublicData(){
         ArrayList<ProgressionItem> planets = new ArrayList<ProgressionItem>();
 
-        planets.add(new ProgressionItem("Starter Planets", TimelineType.END, ProgressionItem.HEADER));
-        planets.add(new ProgressionItem("Prologue", ProgressionItem.SECTION));
+        planets.add(new ProgressionItem("Prologue", TimelineType.END, ProgressionItem.HEADER));
 
         planets.add(new ProgressionItem("Tython", "Level 1-10", R.drawable.pl_tython, TimelineType.LINE, ProgressionItem.PLANET));
         planets.add(new ProgressionItem("Ord Mantell", "Level 1-10", R.drawable.pl_ord_mantell, TimelineType.LINE, ProgressionItem.PLANET));
@@ -100,7 +99,7 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("The Esseles", "Flashpoint", R.drawable.ic_flashpoint, TimelineType.LINE, ProgressionItem.FLASHOPR));
 
         planets.add(new ProgressionItem("Coruscant", "Level 11-16", R.drawable.pl_coruscant, TimelineType.LINE, ProgressionItem.PLANET));
-        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, TimelineType.LINE, ProgressionItem.PLANET));
+        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, TimelineType.LINE, ProgressionItem.FLASHOPL));
 
         planets.add(new ProgressionItem("Chapter 1", ProgressionItem.SECTION));
 

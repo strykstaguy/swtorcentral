@@ -1,0 +1,2 @@
+CHANGED,C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\PlanetActivity.class
+CHANGED,C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ProgressionActivity.class

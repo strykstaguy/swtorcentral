@@ -59,6 +59,8 @@ public class PlanetActivity extends AppCompatActivity {
 		TextView pltName = (TextView) findViewById(R.id.pltName);
 		pltName.setText(planetText);
 
+		TextView pltTitle = (TextView) findViewById(R.id.pltTitle);
+        pltTitle.setText(typeText);
 
 		ImageView pltImage = (ImageView) findViewById(R.id.pltImage);
         //pltImage.setBackgroundResource("");

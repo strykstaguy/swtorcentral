@@ -15,7 +15,7 @@
         <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
             android:id="@+id/timeline"
             android:layout_width="30dp"
-            android:layout_height="100dp"
+            android:layout_height="125dp"
             android:layout_gravity="center_horizontal"
             app:firstColor="@color/subheader"
             app:firstSize="15"
@@ -28,55 +28,74 @@
             app:timeline_type="line"
             android:layout_centerHorizontal="true" />
 
-        <ImageButton
-            android:id="@+id/imgClass1"
-            android:layout_width="@dimen/fab_small"
-            android:layout_height="@dimen/fab_small"
-            android:layout_marginRight="@dimen/dim_10"
-            android:background="@drawable/round_grey"
-            android:elevation="3dp"
-            android:layout_gravity="center"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_flashpoint_white"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"/>
-
-        <TextView
-            android:id="@+id/txtTitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_toRightOf="@+id/timeline"
-            android:layout_marginLeft="-15dp"
-            android:text="Tython"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentRight="false" />
-
-        <com.stryksta.swtorcentral.util.timeline.RoundTimelineHView
-            android:id="@+id/timelineH"
-            android:layout_width="30dp"
-            android:layout_height="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="-11dp"
-            android:layout_gravity="center_horizontal"
-            app:firstColor="@color/subheader"
-            app:firstSize="15"
-            app:lastColor="@color/subheader"
-            app:lastSize="15"
-            app:lineColor="@color/subheader"
-            app:lineWidth="10dp"
-            app:middleColor="@color/subheader"
-            app:middleSize="15"
-            app:timeline_type="line"
+            android:orientation="vertical"
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="-15dp"
+            android:layout_marginRight="@dimen/dim_10"
             android:layout_toRightOf="@+id/timeline"
-            android:layout_toEndOf="@+id/timeline"/>
+            android:layout_toEndOf="@+id/timeline">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/timeline"
+                android:text="Tython"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentRight="false" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <ImageButton
+                    android:id="@+id/imgClass1"
+                    android:layout_width="@dimen/fab_small"
+                    android:layout_height="@dimen/fab_small"
+                    android:background="@drawable/round_grey"
+                    android:elevation="3dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_flashpoint_white"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <com.stryksta.swtorcentral.util.timeline.RoundTimelineHView
+                    android:id="@+id/timelineH"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    app:firstColor="@color/subheader"
+                    app:firstSize="15"
+                    app:lastColor="@color/subheader"
+                    app:lastSize="15"
+                    app:lineColor="@color/subheader"
+                    app:lineWidth="10dp"
+                    app:middleColor="@color/subheader"
+                    app:middleSize="15"
+                    app:timeline_type="line"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
 
         </RelativeLayout>
 </LinearLayout>
