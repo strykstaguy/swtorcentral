@@ -1,7 +1,5 @@
 package com.stryksta.swtorcentral.adapters;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.stryksta.swtorcentral.PlanetActivity;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.data.ProgressionItem;
-import com.stryksta.swtorcentral.util.VerticalTextView;
 import com.stryksta.swtorcentral.util.timeline.TimelineHView;
 import com.stryksta.swtorcentral.util.timeline.TimelineType;
 import com.stryksta.swtorcentral.util.timeline.TimelineView;
@@ -24,9 +20,10 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public static final int HEADER = 0;
     public static final int PLANET = 1;
     public static final int SECTION = 2;
-    public static final int FLASHOP = 3;
-    public static final int BONUS = 4;
-    public static final int FOOTER = 5;
+    public static final int FLASHOPR = 3;
+    public static final int FLASHOPL = 4;
+    public static final int BONUS = 5;
+    public static final int FOOTER = 6;
 
     public ProgressionAdapter(ArrayList<ProgressionItem> progressionItems) {
         super();
@@ -51,10 +48,14 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 ViewGroup vSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_section, viewGroup, false );
                 SectionViewHolder vhSection = new SectionViewHolder(vSection);
                 return vhSection;
-            case FLASHOP:
-                ViewGroup fSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop, viewGroup, false );
+            case FLASHOPR:
+                ViewGroup fSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop_right, viewGroup, false );
                 FlashopViewHolder fhSection = new FlashopViewHolder(fSection);
                 return fhSection;
+            case FLASHOPL:
+                ViewGroup fLSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop_left, viewGroup, false );
+                FlashopViewHolder flSection = new FlashopViewHolder(fLSection);
+                return flSection;
             case BONUS:
                 ViewGroup bSection = ( ViewGroup ) mInflater.inflate ( R.layout.progression_section, viewGroup, false );
                 SectionViewHolder bhSection = new SectionViewHolder(bSection);
@@ -94,11 +95,20 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 sectionViewHolder.txtTitle.setText(sectionItem.getPlanet());
                 break;
 
-            case FLASHOP:
+            case FLASHOPR:
                 FlashopViewHolder flashpointViewHolder = (FlashopViewHolder) viewHolder;
                 ProgressionItem flashpointItem = progressionItems.get(position);
                 flashpointViewHolder.txtTitle.setText(flashpointItem.getPlanet());
                 flashpointViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+                flashpointViewHolder.timeLineHView.setTimelineType(TimelineType.LINE);
+                break;
+
+            case FLASHOPL:
+                FlashopViewHolder flashpointLViewHolder = (FlashopViewHolder) viewHolder;
+                ProgressionItem flashpointLItem = progressionItems.get(position);
+                flashpointLViewHolder.txtTitle.setText(flashpointLItem.getPlanet());
+                flashpointLViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+                flashpointLViewHolder.timeLineHView.setTimelineType(TimelineType.LINE);
                 break;
 
             case BONUS:
@@ -182,11 +192,13 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         public TextView txtTitle;
         public TimelineView timeLineView;
+        public TimelineHView timeLineHView;
 
         public FlashopViewHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
+            timeLineHView = (TimelineHView) itemView.findViewById(R.id.timelineH);
 
             // Attach a click listener to the entire row view
             itemView.setOnClickListener(this);

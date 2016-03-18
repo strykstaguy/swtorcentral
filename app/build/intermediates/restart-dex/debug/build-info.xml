@@ -1,52 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
-    density="400dpi"
+    density="420dpi"
     format="6"
-    timestamp="2504074460227340"
-    verifier="FIELD_REMOVED" >
+    timestamp="32340872063431" >
 
     <task
         name="javac"
-        duration="1197" />
+        duration="4032" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="66" />
+        duration="560" />
     <task
         name="verifier"
-        duration="12" />
+        duration="380" />
 
     <artifact
-        location="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9_a0c468980c30d651b18ff019e78dab543232ee41\classes.dex"
-        type="DEX" />
-    <artifact
-        location="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5_0ad81e53042fb911f171b285cf427477bd65b91b\classes.dex"
-        type="DEX" />
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="2502807714946715" >
+    <build timestamp="32340872063431" >
         <artifact
-            location="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="2504074460227340"
-        verifier="FIELD_REMOVED" >
-        <artifact
-            location="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9_a0c468980c30d651b18ff019e78dab543232ee41\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\JoshCody\Desktop\SWTORCentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5_0ad81e53042fb911f171b285cf427477bd65b91b\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

@@ -19,7 +19,7 @@ public class DashedVLineView extends View {
     private Path mPath;
     protected PathEffect mEffects;
 
-    private int mDashHeight = 25;
+    private int mDashHeight = 26;
     private float mDashWidth = 20;
     private float mDashGap = 15;
     private int mDashColor = Color.rgb(117,117,117);

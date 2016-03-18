@@ -13,9 +13,10 @@ public class ProgressionItem {
     public static final int HEADER = 0;
     public static final int PLANET = 1;
     public static final int SECTION = 2;
-    public static final int FLASHOP = 3;
-    public static final int BONUS = 4;
-    public static final int FOOTER = 5;
+    public static final int FLASHOPR = 3;
+    public static final int FLASHOPL = 4;
+    public static final int BONUS = 5;
+    public static final int FOOTER = 6;
 
     public ProgressionItem(String planet, TimelineType timelineType, int layoutType) {
         this.planet = planet;
