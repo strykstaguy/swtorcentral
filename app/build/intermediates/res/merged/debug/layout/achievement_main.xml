@@ -14,6 +14,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
+        app:contentScrim="@color/swtor_blue"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         >
 
@@ -22,9 +23,8 @@
             android:layout_width="fill_parent"
             android:layout_height="192dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="?attr/colorPrimary"
-            app:titleEnabled="false"
-            >
+            app:contentScrim="@color/swtor_blue"
+            app:expandedTitleTextAppearance="@style/TransparentText">
 
             <android.support.v7.widget.Toolbar
                 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -41,13 +41,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/iv_image"
-                    android:layout_width="64.0dip"
-                    android:layout_height="64.0dip"
-                    android:layout_alignParentLeft="true"
-                    android:src="@drawable/ic_action_achievement"
-                    android:layout_centerVertical="true"/>
+                    android:layout_width="@dimen/fab_progress"
+                    android:layout_height="@dimen/fab_progress"
+                    android:background="@drawable/round_white"
+                    android:elevation="3dp"
+                    android:layout_margin="5dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_achievement_white"/>
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -58,9 +61,9 @@
                     android:layout_centerVertical="true">
 
                     <TextView
-                        android:textSize="18.0sp"
-                        android:textColor="@color/white"
                         android:id="@+id/achievementCat"
+                        android:textSize="22dp"
+                        android:textColor="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Drawing" />

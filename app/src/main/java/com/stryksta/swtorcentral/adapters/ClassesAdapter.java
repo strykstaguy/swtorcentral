@@ -64,7 +64,6 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
         ImageButton imgClass2 = (ImageButton) rowView.findViewById(R.id.imgClass2);
         TextView txtClass2 = (TextView) rowView.findViewById(R.id.txtClass2);
 
-        /*
         int iColor = ContextCompat.getColor(context, R.color.white);
 
         int red = (iColor & 0xFF0000) / 0xFFFF;
@@ -77,7 +76,6 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
                 , 0, 0, 0, 1, 0 };
 
         ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
-        */
 
         imgClass1.setImageResource(advancedClassItem.getimgAdvancedClass1());
         txtClass1.setText(advancedClassItem.gettxtAdvancedClass1());
@@ -85,8 +83,8 @@ public class ClassesAdapter extends ArrayAdapter<ClassItem> {
         imgClass2.setImageResource(advancedClassItem.getimgAdvancedClass2());
         txtClass2.setText(advancedClassItem.gettxtAdvancedClass2());
 
-        //imgClass1.setColorFilter(colorFilter);
-        //imgClass2.setColorFilter(colorFilter);
+        imgClass1.setColorFilter(colorFilter);
+        imgClass2.setColorFilter(colorFilter);
 
         imgClass1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

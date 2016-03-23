@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="4dp"
+    app:cardElevation="2dp"
     app:cardCornerRadius="2dp"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
@@ -27,7 +27,7 @@
             android:textAllCaps="true"
             android:textColor="@color/text"
             android:text="Jedi Consular"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -35,10 +35,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
+            android:layout_marginBottom="@dimen/dim_5"
             android:textColor="@color/text"
             android:gravity="center"
             android:text="A master of the secrets of the Force, the Jedi Consular is both fighter and healer, teacher and student. The Force can be used to cloud the minds of the weak, restore strength to the fallen and hurl both opponents and objects through the air."
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:layout_below="@+id/txtClass" />
 
     <LinearLayout
@@ -48,7 +49,8 @@
         android:baselineAligned="false"
         android:background="@color/white"
         android:layout_below="@+id/txtDesc"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <LinearLayout
             android:id="@+id/AdvClass1"
@@ -56,13 +58,13 @@
             android:layout_weight="1"
             android:layout_height="fill_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imgClass1"
-                android:layout_width="@dimen/fab_progress"
-                android:layout_height="@dimen/fab_progress"
-                android:padding="15dp"
+                android:layout_width="@dimen/fab_normal"
+                android:layout_height="@dimen/fab_normal"
+                android:padding="8dp"
                 android:background="@drawable/round"
                 android:elevation="3dp"
                 android:layout_gravity="center"
@@ -86,13 +88,13 @@
             android:layout_weight="1"
             android:layout_height="fill_parent"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imgClass2"
-                android:layout_width="@dimen/fab_progress"
-                android:layout_height="@dimen/fab_progress"
-                android:padding="15dp"
+                android:layout_width="@dimen/fab_normal"
+                android:layout_height="@dimen/fab_normal"
+                android:padding="8dp"
                 android:background="@drawable/round"
                 android:elevation="3dp"
                 android:layout_gravity="center"

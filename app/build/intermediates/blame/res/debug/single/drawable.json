@@ -1,374 +1,374 @@
 [
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinner_background_ab_swtor.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\spinner_background_ab_swtor.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\card.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\float_label.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\float_label.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_check_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selectable_background_swtor.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\selectable_background_swtor.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_tab_indicator_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_selectall_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_selectall_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_middle.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\background_middle.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selectable_background_swtor.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\selectable_background_swtor.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_horizontal_swtor.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\progress_horizontal_swtor.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_progress_bar_horizontal.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\custom_progress_bar_horizontal.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_bottom.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\background_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_borderless_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_background_end.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\card_background_end.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_foreground_selector.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\card_foreground_selector.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_expand_holo_light.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\ic_expand_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_indicator_ab_swtor.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\tab_indicator_ab_swtor.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_checkbox_unchecked_mtrl.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_checkbox_unchecked_mtrl.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_cut_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_cut_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_track_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\card.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_collapse_holo_light.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\ic_collapse_holo_light.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\swtor_button_gray_normal.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\swtor_button_gray_normal.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_collapse_holo_light.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\ic_collapse_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_ab_back_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circle_shape.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\circle_shape.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_expand_holo_light.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\ic_expand_holo_light.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_light.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\server_light.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\material_background.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\material_background.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_on_mtrl.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_on_mtrl.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_scrim.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\md_scrim.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\advanced_class.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\advanced_class.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_indicator_ab_swtor.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\tab_indicator_ab_swtor.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_top.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\background_top.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\material_card.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\material_card.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\round.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_off_mtrl.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_off_mtrl.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_middle.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\background_middle.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\diagonal.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\diagonal.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\round.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_copy_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_copy_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_background.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\card_background.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_clear_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_full.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\server_full.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\swtor_button_gray_pressed.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\swtor_button_gray_pressed.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_bottom.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\scrim_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_selectall_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_selectall_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_paste_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_paste_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_on_mtrl.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_on_mtrl.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_background_start.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\card_background_start.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_regular.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\server_regular.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinner_background_ab_swtor.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\spinner_background_ab_swtor.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_colored_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\swtor_button_gray_flat.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\swtor_button_gray_flat.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\divider.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\divider.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_pressed.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\background_pressed.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gradient.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\gradient.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_off_mtrl.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_off_mtrl.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_bottom.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\scrim_bottom.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_progress_bar_circle.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\custom_progress_bar_circle.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_edit_text_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_full.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\server_full.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_cut_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_cut_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_horizontal_swtor.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\progress_horizontal_swtor.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_selector.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\custom_selector.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_share_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_share_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_paste_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_paste_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_accent.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\round_accent.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_background_start.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\card_background_start.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_top.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\background_top.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\rectangle.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_white.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\round_white.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_switch_thumb_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\float_label.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\float_label.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_foreground_selector.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\card_foreground_selector.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cab_done_swtor.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\btn_cab_done_swtor.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\swtor_button_gray_normal.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\swtor_button_gray_normal.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_rounded.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\shape_rounded.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_share_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_share_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dialog_bg.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\dialog_bg.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_fab_background.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_cab_background_top_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_white.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\round_white.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_very_heavy.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\server_very_heavy.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_scrim.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\md_scrim.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\advanced_class.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\advanced_class.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_snackbar_background.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\diagonal.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\diagonal.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_top.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\scrim_top.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\circle_shape.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\circle_shape.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_background.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\card_background.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_very_heavy.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\server_very_heavy.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\material_card.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\material_card.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ab_background_textured_swtor.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\ab_background_textured_swtor.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_textfield_search_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_standard.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\server_standard.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_light.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\server_light.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_progress_bar_horizontal.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\custom_progress_bar_horizontal.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\swtor_button_gray_flat.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\swtor_button_gray_flat.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_accent.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\round_accent.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\rectangle.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_selector.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\custom_selector.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_regular.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\server_regular.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_red.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\round_red.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_foreground.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\card_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_fab_background.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\material_background.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\material_background.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_background_middle.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\card_background_middle.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_heavy.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\server_heavy.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_text_cursor_material.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_grey.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\round_grey.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_checkbox_unchecked_mtrl.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_checkbox_unchecked_mtrl.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_bottom.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\background_bottom.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_red.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\round_red.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_snackbar_background.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_background_middle.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\card_background_middle.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_heavy.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\server_heavy.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\background.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_pressed.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\background_pressed.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_progress_bar_circle.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\custom_progress_bar_circle.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_rounded.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\shape_rounded.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_foreground.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\card_foreground.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_top.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\scrim_top.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_copy_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_copy_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\background.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\divider.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\divider.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ab_background_textured_swtor.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\ab_background_textured_swtor.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cab_done_swtor.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\btn_cab_done_swtor.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_background_end.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\card_background_end.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dialog_bg.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\dialog_bg.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_checkbox_checked_mtrl.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_checkbox_checked_mtrl.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_grey.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\round_grey.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_clear_material.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_checkbox_checked_mtrl.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_checkbox_checked_mtrl.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\swtor_button_gray_pressed.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\swtor_button_gray_pressed.xml"
     },
     {
-        "merged": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\server_standard.xml",
-        "source": "C:\\Users\\JoshCody\\Desktop\\SWTORCentral\\app\\src\\main\\res\\drawable\\server_standard.xml"
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gradient.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\gradient.xml"
     }
 ]
