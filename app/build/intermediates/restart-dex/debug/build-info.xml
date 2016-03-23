@@ -4,7 +4,7 @@
     api-level="23"
     density="420dpi"
     format="6"
-    timestamp="34118307840703" >
+    timestamp="30774074608577" >
 
     <task
         name="javac"
@@ -19,34 +19,12 @@
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
-
-    <build timestamp="31619566485949" >
+    <build timestamp="30361741657492" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="32993670301929"
-        verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2_4bccd4904cf0418d1ce0788aab9340a9021c5253\classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="33857192958272" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0_cd84386c7c19d37e922da00fe4eba50c73379c34\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="34029696548138"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\builds\debug\34029696548138\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
+    <build timestamp="30774074608577" />
     <build timestamp="34118307840703" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
