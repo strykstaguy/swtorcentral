@@ -1,11 +1,8 @@
 package com.stryksta.swtorcentral.adapters;
 
-import android.content.Context;
-import android.database.DatabaseUtils;
-import android.view.LayoutInflater;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
@@ -13,53 +10,41 @@ import com.stryksta.swtorcentral.data.CompanionItem;
 
 import java.util.ArrayList;
 
-public class CompanionClassAdapter extends ArrayAdapter<CompanionItem> {
+public class CompanionClassAdapter extends RecyclerView.Adapter<CompanionClassAdapter.ViewHolder>{
 
-	Context mContext;
-    private final ArrayList<CompanionItem> results;
-    public CompanionClassAdapter(Context mContext, final int textViewResourceId,
-                                 final ArrayList<CompanionItem> results) {
+    private ArrayList<CompanionItem> companionItems;
 
-        super(mContext, textViewResourceId, results);
-        this.results = results;
-        this.mContext = mContext;
+    public CompanionClassAdapter(ArrayList<CompanionItem> companionItems) {
+        super();
+        this.companionItems = companionItems;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
+        View view = View.inflate(viewGroup.getContext(), R.layout.companion_class_row, null);
+        ViewHolder holder = new ViewHolder(view);
+        return holder;
+    }
 
-        View v = convertView;
-        ViewHolder holder;
+    @Override
+    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+        CompanionItem companionRow = companionItems.get(position);
+        viewHolder.comName.setText(companionRow.getName());
+    }
 
-        if (v == null) {
-            LayoutInflater inflater = (LayoutInflater) mContext
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = inflater.inflate(R.layout.companion_class_row, null);
-            holder = new ViewHolder();
-            
-            holder.txtName = (TextView) v.findViewById(R.id.txtName);
-            v.setTag(holder);
-        } else {
-            holder = (ViewHolder) v.getTag();
+    @Override
+    public int getItemCount() {
+        return (null != companionItems ? companionItems.size() : 0);
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder{
+
+        public TextView comName;
+        public TextView ablLevel;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            comName = (TextView) itemView.findViewById(R.id.comName);
         }
-        CompanionItem rowItem = results.get(position);
-        	holder.txtName.setText(rowItem.getName());
-
-        return v;
-    }
-
-    private static class ViewHolder {
-        public TextView txtName;
-        public TextView txtDescription;
-    }
-
-    public String unescapeString(String string) {
-        if (string == null)
-            return null;
-
-        string = DatabaseUtils.sqlEscapeString(string);
-        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder sb = new StringBuilder(string);
-
-        return sb.toString().replaceAll("\\\n", "\n");
     }
 }

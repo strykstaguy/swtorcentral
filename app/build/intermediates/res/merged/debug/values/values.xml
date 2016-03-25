@@ -332,6 +332,7 @@
     <dimen name="divider_size">1dp</dimen>
     <dimen name="edittext_border_size">3dp</dimen>
     <dimen name="fab_large">104dp</dimen>
+    <dimen name="fab_medium">88dp</dimen>
     <dimen name="fab_normal">56dp</dimen>
     <dimen name="fab_normal_margin_right">16dp</dimen>
     <dimen name="fab_normal_margin_top">-28dp</dimen>

@@ -4,10 +4,15 @@ import java.util.ArrayList;
 
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.ColorMatrixColorFilter;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
@@ -15,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
@@ -34,11 +40,15 @@ public class AdvancedClassActivity extends AppCompatActivity {
     //Companion Info from prev
     private int ClassPos;
     private int ClassID;
+    private String ClassName;
+    private String AdvancedClassName;
     private String class_node;
 
     private CompanionDatabase companionDatabase;
     ArrayList<CompanionItem> companionItems;
-
+    private RecyclerView mRecyclerView;
+    private GridLayoutManager mLayoutManager;
+    private CompanionClassAdapter mRecycleAdapter;
 
     //Advanced Class Information
     private AdvancedClassesDatabase advDB;
@@ -75,21 +85,36 @@ public class AdvancedClassActivity extends AppCompatActivity {
             ClassPos = bundle.getInt("position");
             ClassID = bundle.getInt("class_id");
             class_node = bundle.getString("node");
+            ClassName = bundle.getString("class");
+            AdvancedClassName = bundle.getString("advancedclass");
         }
 
         mTitleView = (TextView) findViewById(R.id.title);
 
+        //Set Advanced Class
+        TextView advClass = (TextView) findViewById(R.id.advClass);
+        advClass.setText(AdvancedClassName);
 
-        NonScrollListView companionsListView = (NonScrollListView) findViewById(R.id.companionsListView);
+        //Set Advanced Class
+        TextView advMainClass = (TextView) findViewById(R.id.advMainClass);
+        advMainClass.setText(ClassName);
+
         companionItems = new ArrayList<CompanionItem>();
-
-
         companionDatabase = new CompanionDatabase(AdvancedClassActivity.this);
         companionItems = companionDatabase.getOriginalCompanions(class_node);
         companionDatabase.close();
 
-        CompanionClassAdapter companionsAdapter = new CompanionClassAdapter(AdvancedClassActivity.this, R.layout.companion_class_row, companionItems);
-        companionsListView.setAdapter(companionsAdapter);
+        //Set RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.companionsList);
+
+        if (mRecyclerView != null) {
+            mLayoutManager = new GridLayoutManager(AdvancedClassActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
+            mRecyclerView.setLayoutManager(mLayoutManager);
+        }
+
+        //Set Adapter
+        mRecycleAdapter = new CompanionClassAdapter(companionItems);
+        mRecyclerView.setAdapter(mRecycleAdapter);
 
         //Advanced Classes Info
         advDB = new AdvancedClassesDatabase(AdvancedClassActivity.this);
@@ -100,7 +125,7 @@ public class AdvancedClassActivity extends AppCompatActivity {
             do {
                 int ID = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex("_id"));
                 int advClass_ID = advancedClassesDB.getInt(advancedClassesDB.getColumnIndex("class_id"));
-                String advClass = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
+                // advClass = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("class"));
                 String advDescription = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("description"));
                 String advRole = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("role"));
                 String advArmor = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("armor"));
@@ -109,7 +134,26 @@ public class AdvancedClassActivity extends AppCompatActivity {
                 String advAdvanced_class_icon = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("advanced_class_icon"));
                 String advApc = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("apc"));
                 String advAdv_bg = advancedClassesDB.getString(advancedClassesDB.getColumnIndex("adv_bg"));
-                int advClassBG = getResources().getIdentifier(advAdv_bg, "drawable", getPackageName());
+                int advClassBG = getResources().getIdentifier(advAdvanced_class_icon, "drawable", getPackageName());
+
+                int iColor = ContextCompat.getColor(AdvancedClassActivity.this, R.color.white);
+
+                int red = (iColor & 0xFF0000) / 0xFFFF;
+                int green = (iColor & 0xFF00) / 0xFF;
+                int blue = iColor & 0xFF;
+
+                float[] matrix = { 0, 0, 0, 0, red
+                        , 0, 0, 0, 0, green
+                        , 0, 0, 0, 0, blue
+                        , 0, 0, 0, 1, 0 };
+
+                ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
+
+                //Set Image
+                ImageView advImage = (ImageView) findViewById(R.id.advImage);
+                advImage.setImageResource(advClassBG);
+                //advImage.setPadding(padding, padding, padding, padding);
+                advImage.setColorFilter(colorFilter);
 
                 //Set Description
                 TextView txtAdvDesc = (TextView) findViewById(R.id.txtAdvDesc);
