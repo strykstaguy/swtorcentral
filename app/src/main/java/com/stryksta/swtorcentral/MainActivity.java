@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
 
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -133,11 +133,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.navigation_item_6: {
+                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new DatacronFragment(), "Datacron");
+                        break;
+                    }
+                    case R.id.navigation_item_7: {
                         Intent testIntent = new Intent(MainActivity.this, TestRecycleActivity.class);
                         startActivity(testIntent);
                         break;
                     }
-
                     case R.id.navigation_sub_item_1: {
                         Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
                         startActivity(settingsIntent);

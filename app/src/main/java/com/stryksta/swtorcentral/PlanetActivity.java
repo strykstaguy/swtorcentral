@@ -1,14 +1,10 @@
 package com.stryksta.swtorcentral;
  
-import com.stryksta.swtorcentral.adapters.PlanetPagerAdapter;
-import com.stryksta.swtorcentral.util.database.PlanetDatabase;
-
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -16,11 +12,25 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
+import com.stryksta.swtorcentral.adapters.DatacronClassAdapter;
+import com.stryksta.swtorcentral.data.DatacronItem;
+import com.stryksta.swtorcentral.util.database.DatacronDatabase;
+import com.stryksta.swtorcentral.util.database.PlanetDatabase;
+
+import java.util.ArrayList;
+
 public class PlanetActivity extends AppCompatActivity {
 	private String planetText;
 	private String factionText;
 	private String typeText;
 	private PlanetDatabase dbPlanet;
+	private DatacronDatabase dbDatacron;
+    private ArrayList<DatacronItem> datacronItems;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private DatacronClassAdapter mRecycleAdapter;
+
     private Toolbar mToolbar;
 	
     @Override
@@ -64,6 +74,24 @@ public class PlanetActivity extends AppCompatActivity {
 
 		ImageView pltImage = (ImageView) findViewById(R.id.pltImage);
         //pltImage.setBackgroundResource("");
+
+        //Datacrons
+        dbDatacron = new DatacronDatabase(PlanetActivity.this);
+        datacronItems = dbDatacron.getDatacronsPerPlanet(planetText);
+        dbPlanet.close();
+
+        //Set RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.pltDatacrons);
+
+        if (mRecyclerView != null) {
+            mLayoutManager = new GridLayoutManager(PlanetActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
+            mRecyclerView.setLayoutManager(mLayoutManager);
+        }
+
+        //Set Adapter
+        mRecycleAdapter = new DatacronClassAdapter(datacronItems);
+        mRecyclerView.setAdapter(mRecycleAdapter);
+
 
      // Debug the thread name
      	Log.d("SWTORCentral", Thread.currentThread().getName());

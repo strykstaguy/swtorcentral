@@ -22,93 +22,67 @@ public class DatacronDatabase extends SQLiteAssetHelper {
 	}
 
 	public ArrayList<DatacronItem> getDatacrons() {
-		ArrayList<DatacronItem> datacronItem = new ArrayList<DatacronItem>();
+		ArrayList<DatacronItem> datacronItems = new ArrayList<>();
 		SQLiteDatabase db = getReadableDatabase();
-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-		String [] sqlSelect = {"0 _id", "faction", "planet", "map", "reward", "location", "reward", "codex", "desc"};
-		String sqlTables = "datacrons";
+		String sqlSelect = "SELECT codexes._id, codexes.cdxTitle as dtcTitle, datacrons.dtcMap, datacrons.dtcLocation, codexes.cdxFaction as dtcFaction, datacrons.dtcReward, datacrons.dtcCoord, codexes.cdxDescription as dtcCodex , codexes.cdxPath as dtcPath\n" +
+				"FROM datacrons\n" +
+				"LEFT JOIN codexes\n" +
+				"ON datacrons.dtcPath = codexes.cdxPath";
 
-		qb.setTables(sqlTables);
-		Cursor c = qb.query(db, sqlSelect, null, null, null, null, null);
-		
+		Cursor c = db.rawQuery(sqlSelect, null);
+
 		if (c.moveToFirst()) {
-            do {
-            	String planet = c.getString(c.getColumnIndex("planet"));
-            	String reward = c.getString(c.getColumnIndex("reward"));
-            	String location = c.getString(c.getColumnIndex("location"));
-            	String codex = c.getString(c.getColumnIndex("codex"));
-                String desc = c.getString(c.getColumnIndex("desc"));
+			do {
 
-                datacronItem.add(new DatacronItem(planet, reward, location, codex, desc));
+				String dtcTitle = c.getString(c.getColumnIndex("dtcTitle"));
+				String dtcCodex = c.getString(c.getColumnIndex("dtcCodex"));
+				String dtcMap = c.getString(c.getColumnIndex("dtcMap"));
+				String dtcLocation = c.getString(c.getColumnIndex("dtcLocation"));
+				String dtcFaction = c.getString(c.getColumnIndex("dtcFaction"));
+				String dtcReward = c.getString(c.getColumnIndex("dtcReward"));
+				String dtcCoord = c.getString(c.getColumnIndex("dtcCoord"));
+				String dtcPath = c.getString(c.getColumnIndex("dtcPath"));
 
-            } while (c.moveToNext());
-        }
-		
+				datacronItems.add(new DatacronItem(dtcTitle, dtcCodex, dtcMap, dtcLocation, dtcFaction, dtcReward, dtcCoord, dtcPath));
+			} while (c.moveToNext());
+		}
+
 		//c.moveToFirst();
 		c.close();
-		return datacronItem;
-
+		return datacronItems;
 	}
 
-    public List<SimpleSectionedRecyclerViewAdapter.Section> getDatacronsSections() {
-        List<SimpleSectionedRecyclerViewAdapter.Section> sections = new ArrayList<SimpleSectionedRecyclerViewAdapter.Section>();
-        SQLiteDatabase db = getReadableDatabase();
-        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-
-        String [] sqlSelect = {"0 _id", "faction", "planet", "map", "reward", "location", "reward", "codex", "desc"};
-        String sqlTables = "datacrons";
-
-        qb.setTables(sqlTables);
-        Cursor c = qb.query(db, sqlSelect, null, null, null, null, null);
-
-        if (c.moveToFirst()) {
-            do {
-                String planet = c.getString(c.getColumnIndex("planet"));
-                String prevPlanet = null;
-
-                if (c.getPosition() > 0 && c.moveToPrevious()) {
-                    prevPlanet = c.getString(c.getColumnIndex("planet"));
-                    c.moveToNext();
-                }
-
-                if (prevPlanet == null || !prevPlanet.equals(planet)) {
-                    sections.add(new SimpleSectionedRecyclerViewAdapter.Section(c.getPosition(),planet));
-                }
-            } while (c.moveToNext());
-        }
-
-        //c.moveToFirst();
-        c.close();
-        return sections;
-
-    }
-
-	public ArrayList<DatacronItem> getDatacronsPerPlanet(String txtplanet, String txtfaction) {
-		ArrayList<DatacronItem> datacronItem = new ArrayList<DatacronItem>();
+	public ArrayList<DatacronItem> getDatacronsPerPlanet(String txtPlanet) {
+		ArrayList<DatacronItem> datacronItems = new ArrayList<>();
 		SQLiteDatabase db = getReadableDatabase();
-		
-		String sqlSelect = "SELECT * FROM datacrons where planet = ? AND (faction= ? OR faction='Both')";
-		
-		
-	    Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtplanet), String.valueOf(txtfaction)});
-	        
-		if (c.moveToFirst()) {
-            do {
-            	String planet = c.getString(c.getColumnIndex("planet"));
-            	String reward = c.getString(c.getColumnIndex("reward"));
-            	String location = c.getString(c.getColumnIndex("location"));
-            	String codex = c.getString(c.getColumnIndex("codex"));
-                String desc = c.getString(c.getColumnIndex("desc"));
 
-            	datacronItem.add(new DatacronItem(planet, reward, location, codex, desc));
-            	
-            } while (c.moveToNext());
-        }
-		
+		String sqlSelect = "SELECT codexes._id, codexes.cdxTitle as dtcTitle, datacrons.dtcMap, datacrons.dtcLocation, codexes.cdxFaction as dtcFaction, datacrons.dtcReward, datacrons.dtcCoord, codexes.cdxDescription as dtcCodex , codexes.cdxPath as dtcPath\n" +
+				"FROM datacrons\n" +
+				"LEFT JOIN codexes\n" +
+                "ON datacrons.dtcPath = codexes.cdxPath\n" +
+                "WHERE datacrons.dtcLocation = ?";
+
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtPlanet)});
+
+		if (c.moveToFirst()) {
+			do {
+
+				String dtcTitle = c.getString(c.getColumnIndex("dtcTitle"));
+				String dtcCodex = c.getString(c.getColumnIndex("dtcCodex"));
+				String dtcMap = c.getString(c.getColumnIndex("dtcMap"));
+				String dtcLocation = c.getString(c.getColumnIndex("dtcLocation"));
+				String dtcFaction = c.getString(c.getColumnIndex("dtcFaction"));
+				String dtcReward = c.getString(c.getColumnIndex("dtcReward"));
+				String dtcCoord = c.getString(c.getColumnIndex("dtcCoord"));
+				String dtcPath = c.getString(c.getColumnIndex("dtcPath"));
+
+				datacronItems.add(new DatacronItem(dtcTitle, dtcCodex, dtcMap, dtcLocation, dtcFaction, dtcReward, dtcCoord, dtcPath));
+			} while (c.moveToNext());
+		}
+
 		//c.moveToFirst();
 		c.close();
-		return datacronItem;
-
+		return datacronItems;
 	}
 }

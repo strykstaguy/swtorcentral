@@ -342,6 +342,7 @@
     <dimen name="fab_small">40dp</dimen>
     <dimen name="fab_small_margin_right">24dp</dimen>
     <dimen name="fab_small_margin_top">-20dp</dimen>
+    <dimen name="fab_xlarge">120dp</dimen>
     <dimen name="flexible_space_height">72dp</dimen>
     <dimen name="flexible_space_image_height">200dp</dimen>
     <dimen name="flexible_space_image_height_default">240dp</dimen>
@@ -538,8 +539,9 @@
     <string name="navigation_item_3">Classes</string>
     <string name="navigation_item_4">Progression</string>
     <string name="navigation_item_5">Achievements</string>
-    <string name="navigation_item_6">Codex</string>
-    <string name="navigation_item_7">Settings</string>
+    <string name="navigation_item_6">Datacrons</string>
+    <string name="navigation_item_7">Codex</string>
+    <string name="navigation_item_8">Settings</string>
     <string name="none">None</string>
     <string name="organizationslore">Organizations</string>
     <string name="personslore">Persons</string>

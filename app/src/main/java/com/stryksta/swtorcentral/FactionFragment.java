@@ -4,6 +4,7 @@ package com.stryksta.swtorcentral;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,11 +33,9 @@ public class FactionFragment extends Fragment {
         vw_layout = inflater.inflate(R.layout.faction_main, container, false);
         
         getActivity().setTitle("Faction");
-		
-		
-		
+
 		//Clickable Republic Logo
-        ImageButton layoutRepublic = (ImageButton) vw_layout.findViewById(R.id.imgRepublic);
+        CardView layoutRepublic = (CardView) vw_layout.findViewById(R.id.layoutRepublic);
      	layoutRepublic.setOnClickListener(new View.OnClickListener() {      
          public void onClick(View v) {
  	        Bundle bundle = new Bundle();
@@ -49,7 +48,7 @@ public class FactionFragment extends Fragment {
         });
      	
      	//Clickable Empire Logo
-        ImageButton layoutEmpire = (ImageButton) vw_layout.findViewById(R.id.imgEmpire);
+        CardView layoutEmpire = (CardView) vw_layout.findViewById(R.id.layoutEmpire);
      	layoutEmpire.setOnClickListener(new View.OnClickListener() {      
          public void onClick(View v) {
         	 Bundle bundle = new Bundle();

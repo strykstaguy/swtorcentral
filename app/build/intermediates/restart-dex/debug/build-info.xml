@@ -1,37 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
     density="420dpi"
     format="6"
-    timestamp="3116397888220" >
+    timestamp="34166744081694" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="972" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="247" />
     <task
         name="verifier"
-        duration="0" />
+        duration="38" />
 
     <artifact
-        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
         type="RESOURCES" />
+    <artifact
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7_8a3c6bbef4811c2a0858b2c45ae922517e206214\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0_cd84386c7c19d37e922da00fe4eba50c73379c34\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2_4bccd4904cf0418d1ce0788aab9340a9021c5253\classes.dex"
+        type="DEX" />
 
-    <build timestamp="807244423026" >
+    <build timestamp="31756214661291" >
         <artifact
-            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="3116397888220" >
+    <build timestamp="31920928626637" >
         <artifact
-            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3_874bb03186088b7b1f08d2467008d445c816809d\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="34166744081694" >
+        <artifact
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />
+        <artifact
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7_8a3c6bbef4811c2a0858b2c45ae922517e206214\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0_cd84386c7c19d37e922da00fe4eba50c73379c34\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2_4bccd4904cf0418d1ce0788aab9340a9021c5253\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

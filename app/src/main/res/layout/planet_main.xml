@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:layout_gravity="center"
-                android:text="Codexes"
+                android:text="Datacrons"
                 android:textStyle="bold"
                 android:textColor="@color/text"
                 android:textSize="18sp" />

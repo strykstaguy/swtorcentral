@@ -33,12 +33,10 @@ public class DatacronAdapter extends RecyclerView.Adapter<DatacronAdapter.ViewHo
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         DatacronItem datacronRow = datacronItems.get(position);
         viewHolder.txtReward.setText(datacronRow.getReward());
-        viewHolder.txtLocation.setText("Location: " + datacronRow.getCodexLocation());
+        viewHolder.txtTitle.setText(datacronRow.getTitle());
+        viewHolder.txtDescription.setText(datacronRow.getCodex());
 
-       // Log.d("Location: ", datacronRow.getCodexLocation());
-
-        viewHolder.txtCodex.setText(datacronRow.getCodex());
-        viewHolder.txtDesc.setText(datacronRow.getDescription());
+        // Log.d("Location: ", datacronRow.getCodexLocation());
     }
 
     @Override
@@ -49,16 +47,14 @@ public class DatacronAdapter extends RecyclerView.Adapter<DatacronAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView txtReward;
-        public TextView txtLocation;
-        public TextView txtCodex;
-        public ExpandableTextView txtDesc;
+        public TextView txtTitle;
+        public TextView txtDescription;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtReward = (TextView) itemView.findViewById(R.id.txtReward);
-            txtLocation = (TextView) itemView.findViewById(R.id.txtLocation);
-            txtCodex = (TextView) itemView.findViewById(R.id.txtCodex);
-            txtDesc = (ExpandableTextView) itemView.findViewById(R.id.txtDesc);
+            txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
+            txtDescription = (TextView) itemView.findViewById(R.id.txtDescription);
 
         }
     }

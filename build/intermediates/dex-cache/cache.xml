@@ -1,26 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_slice.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="2217bf15b3b8aae46ef14878a8dfe6b33b879e9e">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_slice_281db2cc2e4186d9a3b6a04c9accfd1546d97fef\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_sliceb.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="f5cd0ecdae26771064cff3f67f08190eb9f0eff6">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_sliceb_83131ca2fc8f69ab391786b762a433d73e4ed525\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="3e4b7cfdfcd6fcdd8d82ce0950d3ee4c9d4cd185">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_9546bca6f386f9e88893505276914f8454d265c7\classes.dex" />
-    </item>
-
-</items>

@@ -48,7 +48,7 @@ public class PlanetTab2 extends Fragment {
         }
         
         db = new DatacronDatabase(getActivity());
-		datacrons = db.getDatacronsPerPlanet(planetText, factionText);
+		//datacrons = db.getDatacronsPerPlanet(planetText, factionText);
 		db.close();
 		
 		NonScrollListView itcItems = (NonScrollListView) vw_layout.findViewById(R.id.lstDatacron);

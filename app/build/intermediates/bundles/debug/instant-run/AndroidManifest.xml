@@ -68,15 +68,15 @@
             android:label="@string/character_edit_main" >
         </activity>
         <activity
+            android:name="com.stryksta.swtorcentral.TestRecycleActivity"
+            android:label="@string/test_main" >
+        </activity>
+        <activity
             android:name="com.stryksta.swtorcentral.AchievementActivity"
             android:label="@string/achievements_main" >
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.TestActivity"
-            android:label="@string/test_main" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.TestRecycleActivity"
             android:label="@string/test_main" >
         </activity>
     </application>

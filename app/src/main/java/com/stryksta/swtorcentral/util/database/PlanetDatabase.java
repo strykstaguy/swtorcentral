@@ -16,19 +16,19 @@ public class PlanetDatabase extends SQLiteAssetHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 	
-	public String PlanetDescription(String txtplanet) {
+	public String PlanetDescription(String txtPlanet) {
 		String txtDescription = null;
 		SQLiteDatabase db = getReadableDatabase();
 		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
-		String [] sqlSelect = {"0 _id", "pltName", "pltDescription"};
-		String sqlTables = "planets";
+		String [] sqlSelect = {"0 _id", "locName", "locDescription"};
+		String sqlTables = "locations";
 
 		qb.setTables(sqlTables);
-		Cursor c = qb.query(db, sqlSelect, "pltName" + " = ?", new String[]{String.valueOf(txtplanet)}, null, null, null);
+		Cursor c = qb.query(db, sqlSelect, "locName" + " = ?", new String[]{String.valueOf(txtPlanet)}, null, null, null);
 		
 		if (c.moveToFirst()) {
-			txtDescription = c.getString(c.getColumnIndex("pltDescription"));
+			txtDescription = c.getString(c.getColumnIndex("locDescription"));
         }
 		
 		//c.moveToFirst();

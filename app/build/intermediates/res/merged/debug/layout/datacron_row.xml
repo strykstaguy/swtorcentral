@@ -1,84 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/card_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    card_view:cardElevation="4dp"
-    card_view:cardCornerRadius="2dp"
-    card_view:cardUseCompatPadding="true"
-    android:layout_margin="5dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:padding="10dp">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_gravity="top"
+                 android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/txtReward"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:gravity="center_vertical"
-            android:textColor="@color/text"
-            android:text="Test"
-            android:textStyle="bold"
-            android:textSize="16dp"/>
-
-        <TextView
-            android:id="@+id/txtLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:gravity="center_vertical"
-            android:text="Test"
-            android:textColor="@color/text"
-            android:textSize="14dp"
-            android:layout_below="@+id/txtReward" />
-
-        <TextView
-            android:id="@+id/txtCodex"
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtLocation"
-            android:background="@color/white"
-            android:gravity="center_vertical"
-            android:text="Test"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/text"
-            android:textSize="14dp"/>
+            android:clickable="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:elevation="2dp"
+            app:cardCornerRadius="2dp"
+            app:cardPreventCornerOverlap="false"
+            android:foreground="@drawable/card_foreground"
+            app:cardBackgroundColor="@color/white">
 
-        <com.stryksta.swtorcentral.util.ExpandableTextView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/txtDesc"
-            android:layout_width="match_parent"
-            android:background="@color/white"
-            android:layout_below="@id/txtCodex"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            expandableTextView:maxCollapsedLines="3"
-            expandableTextView:animDuration="200">
             <TextView
-                android:id="@id/expandable_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="14dp"
-                android:textColor="@color/text" />
-            <ImageButton
-                android:id="@id/expand_collapse"
+                android:id="@+id/txtReward"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:layout_gravity="right|bottom"
-                android:background="@android:color/transparent"/>
-        </com.stryksta.swtorcentral.util.ExpandableTextView>
+                android:elevation="1dp"
+                android:textSize="14sp"
+                android:padding="@dimen/dim_5"
+                android:background="@color/swtor_accent"
+                android:textColor="@color/white"
+                android:text="Endurance +2"/>
 
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="10dp">
 
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:text="Galactic History 09: The Force Wars" />
 
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="This datacron holds unheard of power and knowledge collected by an ancient race. You access its power and discover writings which are clearly only one small piece of a massive galactic history: On the planet Tython, an order of philosophers and researchers arose, studying the mysterious energy that permeates all things--an energy known as the Force. However, disagreements developed within the order about how this energy should be used, leading to the Force Wars that eventually engulfed the planet. A faction comprised of those who followed a more peaceful path left Tython and established itself on the planet Ossus; later, this faction called itself the Jedi Order. At their new enclave, the Jedi refined a code that would guide them. They became a monastic warrior people, devoting themselves to the pursuit of peace and knowledge, rather than personal power. In the wake of the Force Wars, the Jedi also had a new understanding of the Force. They saw that the Force, while naturally light, could be used for corrupt ends. Those who did not respect its power risked falling to the dark side."
+                    android:textColor="@color/subtext"
+                    android:textSize="12sp"
+                    android:maxLines="4"
+                    android:ellipsize="end"/>
+            </LinearLayout>
 
-</android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+</LinearLayout>

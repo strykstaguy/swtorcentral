@@ -1,60 +1,85 @@
 package com.stryksta.swtorcentral.data;
 
 public class DatacronItem {
-	public String txtPlanet;
-	public String txtReward;
-	public String txtLocation;
-	public String txtCodex;
-    public String txtDescription;
+	public String dtcTitle;
+	public String dtcCodex;
+	public String dtcMap;
+	public String dtcLocation;
+    public String dtcFaction;
+	public String dtcReward;
+	public String dtcCoord;
+    public String dtcPath;
 	
-	public DatacronItem(String txtPlanet, String txtReward, String txtLocation, String txtCodex, String txtDescription) {
+	public DatacronItem(String dtcTitle, String dtcCodex, String dtcMap, String dtcLocation, String dtcFaction, String dtcReward, String dtcCoord, String dtcPath) {
 		super();
-		this.txtPlanet = txtPlanet;
-		this.txtReward = txtReward;
-		this.txtLocation = txtLocation;
-		this.txtCodex = txtCodex;
-        this.txtDescription = txtDescription;
+		this.dtcTitle = dtcTitle;
+		this.dtcCodex = dtcCodex;
+		this.dtcMap = dtcMap;
+		this.dtcLocation = dtcLocation;
+        this.dtcFaction = dtcFaction;
+        this.dtcReward = dtcReward;
+        this.dtcCoord = dtcCoord;
+        this.dtcPath = dtcPath;
 	}
 
-	public String getPlanet() {
-		return txtPlanet;
-	}
-	public void setPlanet(String txtPlanet) {
-		this.txtPlanet = txtPlanet;
-	}
-	
-	public String getReward() {
-		return txtReward;
-	}
-	public void setReward(String txtReward) {
-		this.txtReward = txtReward;
-	}
-	
-	public String getCodexLocation() {
-		return txtLocation;
-	}
-	public void setCodexLocation(String txtLocation) {
-		this.txtLocation = txtLocation;
-	}
-	
-	public String getCodex() {
-		return txtCodex;
-	}
-	
-	public void setCodex(String txtCodex) {
-		this.txtCodex = txtCodex;
-	}
-
-    public String getDescription() {
-        return txtDescription;
+    public String getTitle() {
+        return dtcTitle;
+    }
+    public void setTitle(String dtcTitle) {
+        this.dtcTitle = dtcTitle;
     }
 
-    public void setDescription(String txtDescription) {
-        this.txtDescription = txtDescription;
+    public String getCodex() {
+        return dtcCodex;
+    }
+    public void setCodex(String dtcCodex) {
+        this.dtcCodex = dtcCodex;
+    }
+
+	public String getMap() {
+		return dtcMap;
+	}
+	public void setMap(String dtcMap) {
+		this.dtcMap = dtcMap;
+	}
+
+    public String getLocation() {
+        return dtcLocation;
+    }
+    public void setLocation(String dtcLocation) {
+        this.dtcLocation = dtcLocation;
+    }
+
+    public String getFaction() {
+        return dtcFaction;
+    }
+    public void setFaction(String dtcFaction) {
+        this.dtcFaction = dtcFaction;
+    }
+
+    public String getReward() {
+        return dtcReward;
+    }
+    public void setReward(String dtcReward) {
+        this.dtcReward = dtcReward;
+    }
+
+    public String getCoord() {
+        return dtcCoord;
+    }
+    public void setCoord(String dtcCoord) {
+        this.dtcCoord = dtcCoord;
+    }
+
+    public String getPath() {
+        return dtcPath;
+    }
+    public void setPath(String dtcPath) {
+        this.dtcPath = dtcPath;
     }
 
 	@Override
 	public String toString() {
-		return txtPlanet;
+		return dtcTitle;
 	}
 }

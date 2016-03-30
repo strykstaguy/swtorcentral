@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -100,7 +101,8 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 ProgressionItem flashpointItem = progressionItems.get(position);
                 flashpointViewHolder.txtTitle.setText(flashpointItem.getPlanet());
                 flashpointViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
-                flashpointViewHolder.timeLineHView.setTimelineType(TimelineType.LINE);
+                //flashpointViewHolder.timeLineHView.setTimelineType(TimelineType.LINE);
+                flashpointViewHolder.imgIcon.setImageResource(flashpointItem.getimgPlanet());
                 break;
 
             case FLASHOPL:
@@ -108,7 +110,8 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 ProgressionItem flashpointLItem = progressionItems.get(position);
                 flashpointLViewHolder.txtTitle.setText(flashpointLItem.getPlanet());
                 flashpointLViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
-                flashpointLViewHolder.timeLineHView.setTimelineType(TimelineType.LINE);
+               // flashpointLViewHolder.timeLineHView.setTimelineType(TimelineType.LINE);
+                flashpointLViewHolder.imgIcon.setImageResource(flashpointLItem.getimgPlanet());
                 break;
 
             case BONUS:
@@ -193,12 +196,14 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public TextView txtTitle;
         public TimelineView timeLineView;
         public TimelineHView timeLineHView;
+        public ImageButton imgIcon;
 
         public FlashopViewHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
-            timeLineHView = (TimelineHView) itemView.findViewById(R.id.timelineH);
+            imgIcon = (ImageButton) itemView.findViewById(R.id.imgIcon);
+            //timeLineHView = (TimelineHView) itemView.findViewById(R.id.timelineH);
 
             // Attach a click listener to the entire row view
             itemView.setOnClickListener(this);
