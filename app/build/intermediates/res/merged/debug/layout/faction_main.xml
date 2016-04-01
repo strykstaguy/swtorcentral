@@ -26,11 +26,12 @@
         android:layout_centerVertical="true">
 
         <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:padding="@dimen/dim_10"
             android:orientation="vertical"
-            android:layout_centerVertical="true">
+            android:layout_centerVertical="true"
+            android:layout_gravity="center">
 
             <ImageButton
                 android:id="@+id/imgRepublic"
@@ -42,8 +43,9 @@
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_republic"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerVertical="true"
+
+                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:id="@+id/txtRepublic"
@@ -54,7 +56,8 @@
                 android:text="@string/republic"
                 android:textSize="32dp"
                 android:textColor="@color/text"
-                android:layout_below="@+id/imgRepublic" />
+                android:layout_below="@+id/imgRepublic"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -74,11 +77,11 @@
         app:cardPreventCornerOverlap="false">
 
         <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:padding="@dimen/dim_10"
             android:layout_centerVertical="true"
-            android:orientation="vertical">
+            android:layout_gravity="center">
 
             <ImageButton
                 android:id="@+id/imgEmpire"
@@ -88,9 +91,10 @@
                 android:background="@drawable/round"
                 android:elevation="3dp"
                 android:layout_gravity="center"
+                android:clickable="false"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_empire"
-                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"/>
 
             <TextView

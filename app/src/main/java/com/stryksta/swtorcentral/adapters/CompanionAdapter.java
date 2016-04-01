@@ -11,11 +11,11 @@ import com.stryksta.swtorcentral.data.CompanionItem;
 
 import java.util.ArrayList;
 
-public class CompanionsAdapter extends RecyclerView.Adapter<CompanionsAdapter.ViewHolder>{
+public class CompanionAdapter extends RecyclerView.Adapter<CompanionAdapter.ViewHolder>{
 
     private ArrayList<CompanionItem> companionItem;
 
-    public CompanionsAdapter(ArrayList<CompanionItem> companionItem) {
+    public CompanionAdapter(ArrayList<CompanionItem> companionItem) {
         super();
         this.companionItem = companionItem;
     }
@@ -31,7 +31,7 @@ public class CompanionsAdapter extends RecyclerView.Adapter<CompanionsAdapter.Vi
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         CompanionItem companionRow = companionItem.get(position);
         viewHolder.comName.setText(companionRow.getName());
-        viewHolder.comTitle.setText(companionRow.get);
+        viewHolder.comTitle.setText(companionRow.getTitle());
     }
 
     @Override

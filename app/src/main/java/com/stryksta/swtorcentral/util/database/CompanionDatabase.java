@@ -40,7 +40,7 @@ public class CompanionDatabase extends SQLiteAssetHelper {
 		ArrayList<CompanionItem> companionItems = new ArrayList<CompanionItem>();
 		SQLiteDatabase db = getReadableDatabase();
 
-		String sqlSelect = "SELECT nco._id, nco.ncoName, nco.ncoCategory, nco.ncoSubCategory, nco.ncoDescription, chrCompanionInfo.chrCompanionGender, chrCompanionInfo.chrCompanionGiftInterestUnRomanced, chrCompanionInfo.chrCompanionGiftInterestRomanced, nco.npcID, nco.ncoPath\n" +
+		String sqlSelect = "SELECT nco._id, nco.ncoName, nco.ncoTitle, nco.ncoCategory, nco.ncoSubCategory, nco.ncoDescription, chrCompanionInfo.chrCompanionGender, chrCompanionInfo.chrCompanionGiftInterestUnRomanced, chrCompanionInfo.chrCompanionGiftInterestRomanced, nco.npcID, nco.ncoPath\n" +
 				"FROM nco\n" +
 				"LEFT JOIN chrCompanionTable\n" +
 				"ON nco.npcID = chrCompanionTable.chrCompanionNode\n" +
@@ -55,6 +55,7 @@ public class CompanionDatabase extends SQLiteAssetHelper {
 
                 String txtID = c.getString(c.getColumnIndex("npcID"));
                 String txtName = c.getString(c.getColumnIndex("ncoName"));
+				String ncoTitle = c.getString(c.getColumnIndex("ncoTitle"));
                 String txtCategory = c.getString(c.getColumnIndex("ncoCategory"));
                 String txtSubCategory = c.getString(c.getColumnIndex("ncoSubCategory"));
                 String txtDescription = c.getString(c.getColumnIndex("ncoDescription"));
@@ -64,7 +65,7 @@ public class CompanionDatabase extends SQLiteAssetHelper {
                 String txtRace = "";
                 String txtPath = c.getString(c.getColumnIndex("ncoPath"));
 
-				companionItems.add(new CompanionItem(txtID, txtName, txtCategory, txtSubCategory, txtDescription, txtGender, txtGiftsUnRomanced, txtGiftsRomanced, txtRace, txtPath));
+				companionItems.add(new CompanionItem(txtID, txtName, ncoTitle, txtCategory, txtSubCategory, txtDescription, txtGender, txtGiftsUnRomanced, txtGiftsRomanced, txtRace, txtPath));
 			} while (c.moveToNext());
 		}
 
@@ -72,4 +73,39 @@ public class CompanionDatabase extends SQLiteAssetHelper {
 		c.close();
 		return companionItems;
 	}
+
+    public ArrayList<CompanionItem> getAllCompanions() {
+        ArrayList<CompanionItem> companionItems = new ArrayList<CompanionItem>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        String sqlSelect = "SELECT nco.ncoName as comName, nco.ncoTitle as comTitle, nco.ncoDescription as comDescription, nco.ncoCategory as comCategory, nco.ncoSubCategory as comSubCategory, nco.ncoInfluenceCap as comInfluenceCap, nco.ncoMaxInfluenceTier as MaxInfluenceTier, nco.npcID, nco.ncoID, nco.ncoPath, chrCompanionInfo.chrCompanionNode, chrCompanionInfo.chrCompanionMinimumAffection as comMinimumAffection, chrCompanionInfo.chrCompanionMaximumAffection as comMaximumAffection, chrCompanionInfo.chrCompanionNumber as comNumber, chrCompanionInfo.chrCompanionGiftInterestUnRomanced as comGiftUnRomanced, chrCompanionInfo.chrCompanionGiftInterestRomanced as comGiftRomanced, chrCompanionInfo.chrCompanionGender as comGender\n" +
+                "FROM nco\n" +
+                "LEFT JOIN chrCompanionInfo\n" +
+                "ON nco.npcID = chrCompanionInfo.chrCompanionNode";
+
+        Cursor c = db.rawQuery(sqlSelect, null);
+
+        if (c.moveToFirst()) {
+            do {
+
+                String txtID = c.getString(c.getColumnIndex("npcID"));
+                String txtName = c.getString(c.getColumnIndex("comName"));
+                String ncoTitle = c.getString(c.getColumnIndex("comTitle"));
+                String txtCategory = c.getString(c.getColumnIndex("comCategory"));
+                String txtSubCategory = c.getString(c.getColumnIndex("comSubCategory"));
+                String txtDescription = c.getString(c.getColumnIndex("comDescription"));
+                String txtGender = c.getString(c.getColumnIndex("chrCompanionGender"));
+                String txtGiftsUnRomanced = c.getString(c.getColumnIndex("chrCompanionGiftInterestUnRomanced"));
+                String txtGiftsRomanced = c.getString(c.getColumnIndex("chrCompanionGiftInterestRomanced"));
+                String txtRace = "";
+                String txtPath = c.getString(c.getColumnIndex("ncoPath"));
+
+                companionItems.add(new CompanionItem(txtID, txtName, ncoTitle, txtCategory, txtSubCategory, txtDescription, txtGender, txtGiftsUnRomanced, txtGiftsRomanced, txtRace, txtPath));
+            } while (c.moveToNext());
+        }
+
+        //c.moveToFirst();
+        c.close();
+        return companionItems;
+    }
 }
