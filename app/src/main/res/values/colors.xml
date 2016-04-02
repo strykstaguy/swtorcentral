@@ -18,6 +18,7 @@
     <color name="gray_46">#2e2e2e</color>
     <color name="gray_23">#3b3b3b</color>
     <color name="gray_33">#545454</color>
+    <color name="dark_gray">#5c5c5c</color>
     <color name="subheader">#757575</color>
 
     <color name="characterlogin">#555555</color>
@@ -38,6 +39,7 @@
     <color name="seperator">#bdbdbd</color>
 
     <color name="material_transparent">#00000000</color>
+    <color name="transparent">#00ff0000 </color>
 
     <color name="colorPrimary">#2186cb</color>
     <color name="colorPrimaryDark">#2186cb</color>

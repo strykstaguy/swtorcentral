@@ -8,6 +8,7 @@ import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
 import com.stryksta.swtorcentral.adapters.ReaderAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
+import com.stryksta.swtorcentral.util.VerticalSpaceItemDecoration;
 import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
@@ -74,6 +75,7 @@ public class Category1Fragment extends Fragment{
 
 		if (mRecyclerView != null) {
 			mLayoutManager = new GridLayoutManager(getActivity(), 1, GridLayoutManager.VERTICAL, false);
+			//mRecyclerView.addItemDecoration(new VerticalSpaceItemDecoration(10));
 			mRecyclerView.setLayoutManager(mLayoutManager);
 		}
 

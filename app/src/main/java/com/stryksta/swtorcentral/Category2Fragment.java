@@ -68,8 +68,7 @@ public class Category2Fragment extends Fragment {
 
 		//Set title/completed/total of category
 		((AchievementActivity)getActivity()).setTitleText(Category1);
-		((AchievementActivity)getActivity()).setCompletedText(String.valueOf(Category1Completed));
-		((AchievementActivity) getActivity()).setTotalText(String.valueOf(Category1Total));
+		((AchievementActivity)getActivity()).setProgress(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
 
       //get user data from session
         HashMap<String, String> user = session.getUserDetails();
@@ -124,7 +123,6 @@ public class Category2Fragment extends Fragment {
 	public void onResume() {
 		super.onResume();
 		((AchievementActivity)getActivity()).setTitleText(Category1);
-		((AchievementActivity)getActivity()).setCompletedText(String.valueOf(Category1Completed));
-		((AchievementActivity) getActivity()).setTotalText(String.valueOf(Category1Total));
+		((AchievementActivity)getActivity()).setProgress(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
 	}
 }

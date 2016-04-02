@@ -30,20 +30,7 @@ public class AchievementActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        ImageButton imgClass = (ImageButton) findViewById(R.id.iv_image);
-        int iColor = ContextCompat.getColor(AchievementActivity.this, R.color.swtor_blue);
 
-        int red = (iColor & 0xFF0000) / 0xFFFF;
-        int green = (iColor & 0xFF00) / 0xFF;
-        int blue = iColor & 0xFF;
-
-        float[] matrix = { 0, 0, 0, 0, red
-                , 0, 0, 0, 0, green
-                , 0, 0, 0, 0, blue
-                , 0, 0, 0, 1, 0 };
-
-        ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
-        imgClass.setColorFilter(colorFilter);
 
         //CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsed_toolbar);
         //collapsingToolbarLayout.setTitle("Achievements");
@@ -87,14 +74,9 @@ public class AchievementActivity extends AppCompatActivity {
         achievementCat.setText(text);
     }
 
-    public void setCompletedText(String text) {
+    public void setProgress(String text) {
         TextView achievementProgress = (TextView) findViewById(R.id.achievementProgress);
         achievementProgress.setText(text);
-    }
-
-    public void setTotalText(String text) {
-        TextView achievementMax = (TextView) findViewById(R.id.achievementMax);
-        achievementMax.setText(text);
     }
 
 	public void onBackPressed() {

@@ -81,8 +81,7 @@ public class Category3Fragment extends Fragment {
 
 		//Set title/completed/total of category
 		((AchievementActivity)getActivity()).setTitleText(Category2);
-		((AchievementActivity)getActivity()).setCompletedText(String.valueOf(Category2Completed));
-		((AchievementActivity) getActivity()).setTotalText(String.valueOf(Category2Total));
+		((AchievementActivity)getActivity()).setProgress(String.valueOf(Category2Completed) + "/" + String.valueOf(Category2Total));
 
         db = new AchievementsDatabase(getActivity());
         achievements = db.getCategory3(Category1, Category2);
@@ -132,7 +131,6 @@ public class Category3Fragment extends Fragment {
 	public void onResume() {
 		super.onResume();
 		((AchievementActivity)getActivity()).setTitleText(Category2);
-		((AchievementActivity)getActivity()).setCompletedText(String.valueOf(Category2Completed));
-		((AchievementActivity) getActivity()).setTotalText(String.valueOf(Category2Total));
+		((AchievementActivity)getActivity()).setProgress(String.valueOf(Category2Completed) + "/" + String.valueOf(Category2Total));
 	}
 }

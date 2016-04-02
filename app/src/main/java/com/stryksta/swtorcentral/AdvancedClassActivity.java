@@ -27,6 +27,7 @@ import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.data.AdvancedClassItem;
 import com.stryksta.swtorcentral.data.CompanionItem;
 import com.stryksta.swtorcentral.util.NonScrollListView;
+import com.stryksta.swtorcentral.util.ProgressProfileView;
 import com.stryksta.swtorcentral.util.database.AdvancedClassesDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionGiftsDatabase;
@@ -75,7 +76,7 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+            getWindow().setStatusBarColor(ContextCompat.getColor(AdvancedClassActivity.this, R.color.colorPrimary));
         }
 
         //get bundle info
@@ -150,7 +151,7 @@ public class AdvancedClassActivity extends AppCompatActivity {
                 ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
 
                 //Set Image
-                ImageView advImage = (ImageView) findViewById(R.id.advImage);
+                ProgressProfileView advImage = (ProgressProfileView) findViewById(R.id.advImage);
                 advImage.setImageResource(advClassBG);
                 //advImage.setPadding(padding, padding, padding, padding);
                 advImage.setColorFilter(colorFilter);
