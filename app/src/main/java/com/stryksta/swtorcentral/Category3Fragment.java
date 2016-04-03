@@ -131,6 +131,6 @@ public class Category3Fragment extends Fragment {
 	public void onResume() {
 		super.onResume();
 		((AchievementActivity)getActivity()).setTitleText(Category2);
-		((AchievementActivity)getActivity()).setProgress(String.valueOf(Category2Completed) + "/" + String.valueOf(Category2Total));
+		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category2Completed) + "/" + String.valueOf(Category2Total));
 	}
 }

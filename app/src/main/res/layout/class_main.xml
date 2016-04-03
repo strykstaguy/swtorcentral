@@ -7,7 +7,7 @@
  <ListView
  	android:id="@+id/listView1"
  	android:layout_width="fill_parent"
- 	android:layout_height="fill_parent"
+ 	android:layout_height="wrap_content"
  	android:background="#DCDCDC"
  	android:paddingTop="10.0dip"
  	android:divider="@drawable/divider"
@@ -15,5 +15,4 @@
     android:clipToPadding="false"
  	android:cacheColorHint="@android:color/transparent" >
  </ListView>
-
 </LinearLayout>

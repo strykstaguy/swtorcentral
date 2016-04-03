@@ -2,12 +2,14 @@ package com.stryksta.swtorcentral;
  
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.adapters.DatacronClassAdapter;
 import com.stryksta.swtorcentral.data.DatacronItem;
+import com.stryksta.swtorcentral.util.CircleView;
 import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 import com.stryksta.swtorcentral.util.database.PlanetDatabase;
 
@@ -46,7 +49,7 @@ public class PlanetActivity extends AppCompatActivity {
 
 		if (Build.VERSION.SDK_INT >= 21) {
 			getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-			getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+			getWindow().setStatusBarColor(ContextCompat.getColor(PlanetActivity.this, R.color.colorPrimary));
 		}
 
         Bundle bundle = getIntent().getExtras();

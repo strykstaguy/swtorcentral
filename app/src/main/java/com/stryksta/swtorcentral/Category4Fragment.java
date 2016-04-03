@@ -76,7 +76,7 @@ public class Category4Fragment extends Fragment{
 		mRecycleAdapter = new AchievementItemAdapter(achievements);
 		mRecyclerView.setAdapter(mRecycleAdapter);
 
-		/*
+
 		mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
 		{
 			public void onItemClick(View view, int position)
@@ -94,7 +94,6 @@ public class Category4Fragment extends Fragment{
 				updateItems();
 			}
 		}));
-        */
 
      	return vw_layout;
 	}

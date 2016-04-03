@@ -1,6 +1,7 @@
 package com.stryksta.swtorcentral;
  
 import com.stryksta.swtorcentral.util.FragmentUtils;
+import com.stryksta.swtorcentral.util.ProgressProfileView;
 
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
@@ -74,9 +75,14 @@ public class AchievementActivity extends AppCompatActivity {
         achievementCat.setText(text);
     }
 
+    public void setPoints(String text) {
+        TextView achievementPoints = (TextView) findViewById(R.id.achievementProgress);
+        achievementPoints.setText(text);
+    }
+
     public void setProgress(String text) {
-        TextView achievementProgress = (TextView) findViewById(R.id.achievementProgress);
-        achievementProgress.setText(text);
+        ProgressProfileView achievementProgress = (ProgressProfileView) findViewById(R.id.advImage);
+        achievementProgress.setProgress(50);
     }
 
 	public void onBackPressed() {

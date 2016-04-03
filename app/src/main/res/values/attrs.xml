@@ -88,4 +88,18 @@
             <enum name="SQUARE" value="2"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="ToggleImageButton">
+        <attr name="tib_drawable_on" format="reference" />
+        <attr name="tib_drawable_off" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="AchievementToggle">
+        <attr name="border" format="boolean"/>
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="shadow" format="boolean"/>
+        <attr name="shadow_color" format="color"/>
+        <attr name="shadow_radius" format="float"/>
+    </declare-styleable>
 </resources>

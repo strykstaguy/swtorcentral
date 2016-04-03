@@ -151,7 +151,7 @@ public class AdvancedClassActivity extends AppCompatActivity {
                 ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
 
                 //Set Image
-                ProgressProfileView advImage = (ProgressProfileView) findViewById(R.id.advImage);
+                ImageView advImage = (ImageView) findViewById(R.id.advImage);
                 advImage.setImageResource(advClassBG);
                 //advImage.setPadding(padding, padding, padding, padding);
                 advImage.setColorFilter(colorFilter);

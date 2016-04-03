@@ -123,6 +123,6 @@ public class Category2Fragment extends Fragment {
 	public void onResume() {
 		super.onResume();
 		((AchievementActivity)getActivity()).setTitleText(Category1);
-		((AchievementActivity)getActivity()).setProgress(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
+		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
 	}
 }

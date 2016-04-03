@@ -157,6 +157,7 @@
     <color name="veryheavycolor">#F44336</color>
     <color name="white">#FFFFFF</color>
     <color name="windowBackgroundColor">#333333</color>
+    <declare-styleable name="AchievementToggle"><attr format="boolean" name="border"/><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/><attr format="boolean" name="shadow"/><attr format="color" name="shadow_color"/><attr format="float" name="shadow_radius"/></declare-styleable>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -210,6 +211,7 @@
     <declare-styleable name="TextInputLayout"><attr format="reference" name="hintTextAppearance"/><attr name="android:hint"/><attr format="boolean" name="hintEnabled"/><attr format="boolean" name="errorEnabled"/><attr format="reference" name="errorTextAppearance"/><attr format="boolean" name="counterEnabled"/><attr format="integer" name="counterMaxLength"/><attr format="reference" name="counterTextAppearance"/><attr format="reference" name="counterOverflowTextAppearance"/><attr name="android:textColorHint"/><attr format="boolean" name="hintAnimationEnabled"/></declare-styleable>
     <declare-styleable name="TextProgressBar"><attr format="string" name="text"/><attr format="color" name="textColor"/><attr format="dimension" name="textSize"/></declare-styleable>
     <declare-styleable name="TimelineView"><attr format="dimension" name="lineWidth"/><attr format="color" name="lineColor"/><attr format="float" name="middleSize"/><attr format="color" name="middleColor"/><attr format="float" name="firstSize"/><attr format="color" name="firstColor"/><attr format="float" name="lastSize"/><attr format="color" name="lastColor"/><attr format="enum" name="timeline_type"><enum name="start" value="-1"/><enum name="middle" value="0"/><enum name="line" value="1"/><enum name="end" value="2"/><enum name="single" value="3"/></attr></declare-styleable>
+    <declare-styleable name="ToggleImageButton"><attr format="reference" name="tib_drawable_on"/><attr format="reference" name="tib_drawable_off"/></declare-styleable>
     <declare-styleable name="Toolbar"><attr format="reference" name="titleTextAppearance"/><attr format="reference" name="subtitleTextAppearance"/><attr name="title"/><attr name="subtitle"/><attr name="android:gravity"/><attr format="dimension" name="titleMargins"/><attr format="dimension" name="titleMarginStart"/><attr format="dimension" name="titleMarginEnd"/><attr format="dimension" name="titleMarginTop"/><attr format="dimension" name="titleMarginBottom"/><attr name="contentInsetStart"/><attr name="contentInsetEnd"/><attr name="contentInsetLeft"/><attr name="contentInsetRight"/><attr format="dimension" name="maxButtonHeight"/><attr format="reference" name="collapseIcon"/><attr format="string" name="collapseContentDescription"/><attr name="popupTheme"/><attr format="reference" name="navigationIcon"/><attr format="string" name="navigationContentDescription"/><attr name="android:minHeight"/><attr name="logo"/><attr format="string" name="logoDescription"/><attr format="color" name="titleTextColor"/><attr format="color" name="subtitleTextColor"/></declare-styleable>
     <declare-styleable name="TriangleShape"><attr name="triangleType"><enum name="centerTop" value="0"/><enum name="leftBottom" value="1"/><enum name="rightBottom" value="2"/><enum name="centerBottom" value="3"/><enum name="leftTop" value="4"/></attr><attr format="color" name="triangleColor"/></declare-styleable>
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
@@ -292,6 +294,8 @@
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
+    <dimen name="circle_view_border">1dp</dimen>
+    <dimen name="circle_view_check">24dp</dimen>
     <dimen name="class_img_height">60dp</dimen>
     <dimen name="class_img_height_land">90dp</dimen>
     <dimen name="datacronpadding">5dp</dimen>
@@ -361,6 +365,7 @@
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="list_padding">10dp</dimen>
+    <dimen name="long_check_mark_bar">100dp</dimen>
     <dimen name="margin">5dp</dimen>
     <dimen name="margin_standard">16dp</dimen>
     <dimen name="md_avatar_size">40dp</dimen>
@@ -391,9 +396,11 @@
     <dimen name="seekbar_handel_width">40dp</dimen>
     <dimen name="seekbar_height">30dp</dimen>
     <dimen name="shadow_width">15dp</dimen>
+    <dimen name="short_check_mark_bar">50dp</dimen>
     <dimen name="slidingmenu_offset">60dp</dimen>
     <dimen name="spacing_normal">16dp</dimen>
     <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="stroke_width">10dp</dimen>
     <dimen name="subtitle">14sp</dimen>
     <dimen name="swtor_button_corner_radius">4dp</dimen>
     <dimen name="swtor_button_layer_padding">3dp</dimen>
