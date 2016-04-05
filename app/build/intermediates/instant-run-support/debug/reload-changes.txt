@@ -1,3 +1,0 @@
-CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\util\AchievementToggle$override.class
-CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\Category4Fragment$override.class
-CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class

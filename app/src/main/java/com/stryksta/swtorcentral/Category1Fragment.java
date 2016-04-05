@@ -91,6 +91,7 @@ public class Category1Fragment extends Fragment{
 				args.putString("category1", categories.get(position).getCategory());
 				args.putInt("category1_completed", categories.get(position).getCompleted());
 				args.putInt("category1_total", categories.get(position).getTotal());
+				args.putFloat("category1_progress", categories.get(position).getTotal());
 				category2frag.setArguments(args);
 
 				FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category2frag, "Category2");

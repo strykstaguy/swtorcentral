@@ -68,7 +68,13 @@ public class Category2Fragment extends Fragment {
 
 		//Set title/completed/total of category
 		((AchievementActivity)getActivity()).setTitleText(Category1);
-		((AchievementActivity)getActivity()).setProgress(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
+		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
+
+        float total_completed = Category1Completed;
+        float total = Category1Total;
+
+        float progressValue = (float)total_completed/(float)total;
+        ((AchievementActivity)getActivity()).setProgress(progressValue);
 
       //get user data from session
         HashMap<String, String> user = session.getUserDetails();
@@ -124,5 +130,11 @@ public class Category2Fragment extends Fragment {
 		super.onResume();
 		((AchievementActivity)getActivity()).setTitleText(Category1);
 		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
+
+		float total_completed = Category1Completed;
+		float total = Category1Total;
+
+		float progressValue = (float)total_completed/(float)total;
+		((AchievementActivity)getActivity()).setProgress(progressValue);
 	}
 }
