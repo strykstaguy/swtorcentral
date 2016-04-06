@@ -4,6 +4,7 @@ package com.stryksta.swtorcentral;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import com.stryksta.swtorcentral.util.ColorItem;
 
 public class FactionFragment extends Fragment {
 	View vw_layout;
@@ -33,6 +36,11 @@ public class FactionFragment extends Fragment {
         vw_layout = inflater.inflate(R.layout.faction_main, container, false);
         
         getActivity().setTitle("Faction");
+
+        //ColorItem layoutCheck = (ColorItem) vw_layout.findViewById(R.id.test_check);
+        //layoutCheck.setActivated(true);
+        //layoutCheck.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.swtor_blue));
+
 
 		//Clickable Republic Logo
         CardView layoutRepublic = (CardView) vw_layout.findViewById(R.id.layoutRepublic);

@@ -1,6 +1,9 @@
 package com.stryksta.swtorcentral.util;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -15,7 +18,7 @@ import android.view.View;
 
 import com.stryksta.swtorcentral.R;
 
-public class CircleTextView extends View {
+public class CircleTextView extends View implements View.OnClickListener {
 
     private TextPaint textPaint;
     private Paint circlePaint;
@@ -25,48 +28,72 @@ public class CircleTextView extends View {
     private int myColor;
 
     private int viewWidth, viewHeight;
-    private String text = "50";
 
     // Views values
     private int circleRadius;
     private int circleX, circleY;
 
-    private float textSize;
+    private boolean mIsSelected = false;
+
+    private String mText = "Text";
+    private float textSize = 20;
+    private int textColor = Color.WHITE;
+    private int backgroundColor = Color.rgb(63,159,224);
+
     private int textX;
     private int textY;
 
     public CircleTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setAttributes(context, attrs);
         initTools();
     }
 
     public CircleTextView(Context context) {
         super(context);
         initTools();
-        //myColor = ContextCompat.getColor(context, R.color.swtor_blue);
     }
 
     private void initTools() {
+
+        setOnClickListener(this);
+
         textPaint = new TextPaint();
         textPaint.setAntiAlias(true);
-        textPaint.setColor(Color.WHITE);
+        textPaint.setColor(textColor);
 
-        float textSize =  TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, getResources().getDimension(R.dimen.tex_size_normal), getResources().getDisplayMetrics());
         textPaint.setTextSize(textSize);
 
         circlePaint = new Paint();
         circlePaint.setAntiAlias(true);
-        circlePaint.setColor(Color.rgb(63,159,224));
+        circlePaint.setColor(backgroundColor);
         circlePaint.setStyle(Paint.Style.FILL);
-
-        circleBitmap = BitmapFactory.decodeResource(getResources(),
-                R.drawable.ic_launcher);
     }
 
-    public void setText(String text) {
-        this.text = text;
+    private void setAttributes(Context context, AttributeSet attrs) {
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CircleTextView);
+
+        try {
+            mText = array.getString(R.styleable.CircleTextView_ctv_text);
+            setText(mText);
+
+            textSize = array.getDimension(R.styleable.CircleTextView_ctv_textSize, textSize);
+            textColor = array.getColor(R.styleable.CircleTextView_ctv_textColor, textColor);
+            backgroundColor = array.getColor(R.styleable.CircleTextView_ctv_backgroundColor, backgroundColor);
+        } finally {
+            array.recycle();
+        }
+
+
+    }
+    public void setText(String mText) {
+        this.mText = mText;
         requestLayout();
         invalidate();
+    }
+
+    @Override
+    public void onClick(View v) {
     }
 
     @Override
@@ -78,11 +105,15 @@ public class CircleTextView extends View {
 
     }
 
+    public void setChecked(boolean checked) {
+        boolean oldChecked = mIsSelected;
+        mIsSelected = checked;
+    }
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawCircle(circleX, circleY, circleRadius, circlePaint);
         //canvas.drawBitmap(circleBitmap, null, bitmapRect, null);
-        canvas.drawText(text, textX, textY, textPaint);
+        canvas.drawText(mText, textX, textY, textPaint);
     }
 
     @Override
@@ -96,10 +127,9 @@ public class CircleTextView extends View {
 
         int halfRadius = circleRadius / 2;
 
-        bitmapRect = new Rect(halfRadius, halfRadius, circleX + halfRadius,
-                circleX);
+        bitmapRect = new Rect(halfRadius, halfRadius, circleX + halfRadius, circleX);
 
-        textSize = textPaint.measureText(text);
+        textSize = textPaint.measureText(mText);
         textX = circleX - (int) textSize / 2;
         textY = circleY + 20;
 

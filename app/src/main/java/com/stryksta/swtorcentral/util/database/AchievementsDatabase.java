@@ -21,7 +21,63 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 	public AchievementsDatabase(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
-	
+
+	public int getCompleted() {
+        int achCompleted = 0;
+		SQLiteDatabase db = getReadableDatabase();
+
+		@SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+		String sqlSelect = builder
+				.append("SELECT ")
+				.append("SUM(CASE WHEN ca.achievements_id is not null then achRewardPoints end) AS achCompleted ")
+				.append("FROM achievements ")
+				.append("LEFT JOIN categories ")
+				.append("ON achievements.achCategory = categories.achCategory ")
+				.append("LEFT JOIN completed_achievements ca ")
+				.append("ON ca.achievements_id = achievements._id ")
+				.append("WHERE achievements.achCategory IS NOT null ")
+				.toString();
+
+		Cursor c = db.rawQuery(sqlSelect, null);
+
+		if (c.moveToFirst()) {
+			do {
+                achCompleted = c.getInt(c.getColumnIndex("achCompleted"));
+			} while (c.moveToNext());
+		}
+		c.close();
+		db.close();
+		return achCompleted;
+	}
+
+    public int geTotal() {
+        int achTotal = 0;
+        SQLiteDatabase db = getReadableDatabase();
+
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT ")
+                .append("SUM(achRewardPoints) achTotal ")
+                .append("FROM achievements ")
+                .append("LEFT JOIN categories ")
+                .append("ON achievements.achCategory = categories.achCategory ")
+                .append("LEFT JOIN completed_achievements ca ")
+                .append("ON ca.achievements_id = achievements._id ")
+                .append("WHERE achievements.achCategory IS NOT null ")
+                .toString();
+
+        Cursor c = db.rawQuery(sqlSelect, null);
+
+        if (c.moveToFirst()) {
+            do {
+                achTotal = c.getInt(c.getColumnIndex("achTotal"));
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return achTotal;
+    }
+
 	public ArrayList<AchievementCategoryItem> getCategory1() {
 		ArrayList<AchievementCategoryItem> categoryItem = new ArrayList<AchievementCategoryItem>();
 		SQLiteDatabase db = getReadableDatabase();

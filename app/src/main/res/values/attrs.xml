@@ -102,4 +102,11 @@
         <attr name="shadow_color" format="color"/>
         <attr name="shadow_radius" format="float"/>
     </declare-styleable>
+
+    <declare-styleable name="CircleTextView">
+        <attr name="ctv_text" format="string"/>
+        <attr name="ctv_textSize" format="dimension"/>
+        <attr name="ctv_textColor" format="color"/>
+        <attr name="ctv_backgroundColor" format="color"/>
+    </declare-styleable>
 </resources>
