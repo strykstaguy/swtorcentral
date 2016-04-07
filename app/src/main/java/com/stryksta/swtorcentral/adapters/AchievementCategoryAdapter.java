@@ -45,9 +45,13 @@ public class AchievementCategoryAdapter extends RecyclerView.Adapter<Achievement
 		viewHolder.txtViewProgress.setMax(total);
 		viewHolder.txtViewProgress.setProgress(total_completed);
 
-		int progressValue = total_completed/total;
-		String str = String.valueOf(Math.round(progressValue * 100.0f));
-		viewHolder.txtProgressText.setText(str + "%");
+		if (total > 0) {
+            int progressValue = total_completed / total;
+            String str = String.valueOf(Math.round(progressValue * 100.0f));
+            viewHolder.txtProgressText.setText(str + "%");
+        } else {
+            viewHolder.txtProgressText.setText("0%");
+        }
 
 	}
 

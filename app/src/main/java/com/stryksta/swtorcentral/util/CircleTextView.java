@@ -8,7 +8,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.Rect;
 import android.support.v4.content.ContextCompat;
 import android.text.TextPaint;
@@ -39,9 +42,13 @@ public class CircleTextView extends View implements View.OnClickListener {
     private float textSize = 20;
     private int textColor = Color.WHITE;
     private int backgroundColor = Color.rgb(63,159,224);
+    private Bitmap mCheck;
+    private Paint paintCheck;
 
     private int textX;
     private int textY;
+
+    private int checkSize;
 
     public CircleTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -61,13 +68,18 @@ public class CircleTextView extends View implements View.OnClickListener {
         textPaint = new TextPaint();
         textPaint.setAntiAlias(true);
         textPaint.setColor(textColor);
-
         textPaint.setTextSize(textSize);
 
         circlePaint = new Paint();
         circlePaint.setAntiAlias(true);
         circlePaint.setColor(backgroundColor);
         circlePaint.setStyle(Paint.Style.FILL);
+
+        paintCheck = new Paint();
+        paintCheck.setAntiAlias(true);
+
+        checkSize = (int) getContext().getResources().getDimension(R.dimen.circle_view_check);
+        mCheck = getResizedBitmap(BitmapFactory.decodeResource(getContext().getResources(),R.drawable.ic_check), checkSize, checkSize);
     }
 
     private void setAttributes(Context context, AttributeSet attrs) {
@@ -80,6 +92,7 @@ public class CircleTextView extends View implements View.OnClickListener {
             textSize = array.getDimension(R.styleable.CircleTextView_ctv_textSize, textSize);
             textColor = array.getColor(R.styleable.CircleTextView_ctv_textColor, textColor);
             backgroundColor = array.getColor(R.styleable.CircleTextView_ctv_backgroundColor, backgroundColor);
+            setChecked(array.getBoolean(R.styleable.CircleTextView_ctv_selected, false));
         } finally {
             array.recycle();
         }
@@ -94,6 +107,11 @@ public class CircleTextView extends View implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        if (mIsSelected == true) {
+            setChecked(false);
+        } else {
+            setChecked(true);
+        }
     }
 
     @Override
@@ -108,12 +126,34 @@ public class CircleTextView extends View implements View.OnClickListener {
     public void setChecked(boolean checked) {
         boolean oldChecked = mIsSelected;
         mIsSelected = checked;
+        requestLayout();
+        invalidate();
     }
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.drawCircle(circleX, circleY, circleRadius, circlePaint);
-        //canvas.drawBitmap(circleBitmap, null, bitmapRect, null);
-        canvas.drawText(mText, textX, textY, textPaint);
+        if (mIsSelected) {
+            canvas.drawCircle(circleX, circleY, circleRadius, circlePaint);
+            canvas.drawBitmap(mCheck, circleX - checkSize, circleY - checkSize, paintCheck);
+        } else if (!mIsSelected) {
+            canvas.drawCircle(circleX, circleY, circleRadius, circlePaint);
+            canvas.drawText(mText, textX, textY, textPaint);
+        }
+
+    }
+
+    public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth)
+    {
+        int width = bm.getWidth();
+        int height = bm.getHeight();
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        // create a matrix for the manipulation
+        Matrix matrix = new Matrix();
+        // resize the bit map
+        matrix.postScale(scaleWidth, scaleHeight);
+        // recreate the new Bitmap
+        Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height, matrix, false);
+        return resizedBitmap;
     }
 
     @Override

@@ -108,5 +108,6 @@
         <attr name="ctv_textSize" format="dimension"/>
         <attr name="ctv_textColor" format="color"/>
         <attr name="ctv_backgroundColor" format="color"/>
+        <attr name="ctv_selected" format="boolean"/>
     </declare-styleable>
 </resources>

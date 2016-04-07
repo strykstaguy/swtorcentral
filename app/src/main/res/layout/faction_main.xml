@@ -15,6 +15,7 @@
         android:layout_height="50dp"
         app:ctv_text="50"
         app:ctv_textSize="20dp"
+        app:ctv_selected="true"
         app:ctv_textColor="@color/white"
         app:ctv_backgroundColor="@color/swtor_blue"
         android:layout_gravity="center" />

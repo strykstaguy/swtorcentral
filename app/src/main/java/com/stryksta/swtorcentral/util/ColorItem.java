@@ -105,6 +105,10 @@ public class ColorItem extends FrameLayout implements View.OnClickListener {
         }
     }
 
+    public boolean isChecked() {
+        return mIsSelected;
+    }
+
     private void updateCheckmarkVisibility() {
         mItemCheckmark.setVisibility(mIsSelected ? View.VISIBLE : View.INVISIBLE);
         setItemCheckmarkAttributes(1.0f);
