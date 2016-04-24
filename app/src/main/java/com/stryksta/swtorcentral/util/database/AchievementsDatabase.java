@@ -22,7 +22,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 
-	public int getCompleted() {
+	public int getOverallCompleted() {
         int achCompleted = 0;
 		SQLiteDatabase db = getReadableDatabase();
 
@@ -50,7 +50,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		return achCompleted;
 	}
 
-    public int geTotal() {
+    public int geOverallTotal() {
         int achTotal = 0;
         SQLiteDatabase db = getReadableDatabase();
 
@@ -247,7 +247,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		String sqlSelect = "achievements_id = ?";
 		
 		try {
-			db.delete("character_achievements", sqlSelect , new String[]{String.valueOf(achievementID)});
+			db.delete("completed_achievements", sqlSelect , new String[]{String.valueOf(achievementID)});
 			Log.d("SWTORCentral", "Removed Successfully");
 		} catch (SQLException ex) {
 		      

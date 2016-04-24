@@ -80,7 +80,7 @@ public class AchievementActivity extends AppCompatActivity {
         achievementPoints.setText(text);
     }
 
-    public void setProgress(Float progressValue) {
+    public void setAchievementProgress(int progressValue) {
         ProgressProfileView achievementProgress = (ProgressProfileView) findViewById(R.id.advImage);
 
 
@@ -88,8 +88,8 @@ public class AchievementActivity extends AppCompatActivity {
         //float total = item.getTotal();
 
         //float progressValue = (float)total_completed/(float)total;
-
-        achievementProgress.setProgress(progressValue);
+        float newFloat = (float) progressValue;
+        achievementProgress.setProgress(newFloat);
     }
 
 	public void onBackPressed() {

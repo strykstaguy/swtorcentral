@@ -57,6 +57,8 @@
     <color name="colorPrimaryDark">#2186cb</color>
     <color name="colorSecondary">#2186cb</color>
     <color name="colorSecondaryDark">#2186cb</color>
+    <color name="completed_card">#f7f7f7</color>
+    <color name="completed_text">#888</color>
     <color name="dark_gray">#5c5c5c</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -81,6 +83,7 @@
     <color name="gray_35">#232323</color>
     <color name="gray_46">#2e2e2e</color>
     <color name="gray_86">#DCDCDC</color>
+    <color name="grayprogress">#6d6d6d</color>
     <color name="heavycolor">#FFC107</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
@@ -126,7 +129,7 @@
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <color name="seperator">#bdbdbd</color>
     <color name="standardcolor">#FFEB3B</color>
-    <color name="subheader">#757575</color>
+    <color name="subheader">#737373</color>
     <color name="subtext">#949494</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
@@ -157,7 +160,7 @@
     <color name="veryheavycolor">#F44336</color>
     <color name="white">#FFFFFF</color>
     <color name="windowBackgroundColor">#333333</color>
-    <declare-styleable name="AchievementToggle"><attr format="boolean" name="border"/><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/><attr format="boolean" name="shadow"/><attr format="color" name="shadow_color"/><attr format="float" name="shadow_radius"/></declare-styleable>
+    <declare-styleable name="AchievementToggle"><attr format="string" name="at_text"/><attr format="dimension" name="at_textSize"/><attr format="color" name="at_textColor"/><attr format="color" name="at_backgroundColor"/><attr format="boolean" name="at_selected"/></declare-styleable>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -173,7 +176,6 @@
     <declare-styleable name="BottomSheetBehavior_Params"><attr format="dimension" name="behavior_peekHeight"/><attr format="boolean" name="behavior_hideable"/></declare-styleable>
     <declare-styleable name="ButtonBarLayout"><attr format="boolean" name="allowStacking"/></declare-styleable>
     <declare-styleable name="CardView"><attr format="color" name="cardBackgroundColor"/><attr format="dimension" name="cardCornerRadius"/><attr format="dimension" name="cardElevation"/><attr format="dimension" name="cardMaxElevation"/><attr format="boolean" name="cardUseCompatPadding"/><attr format="boolean" name="cardPreventCornerOverlap"/><attr format="dimension" name="contentPadding"/><attr format="dimension" name="contentPaddingLeft"/><attr format="dimension" name="contentPaddingRight"/><attr format="dimension" name="contentPaddingTop"/><attr format="dimension" name="contentPaddingBottom"/><attr name="android:minWidth"/><attr name="android:minHeight"/></declare-styleable>
-    <declare-styleable name="CircleTextView"><attr format="string" name="ctv_text"/><attr format="dimension" name="ctv_textSize"/><attr format="color" name="ctv_textColor"/><attr format="color" name="ctv_backgroundColor"/><attr format="boolean" name="ctv_selected"/></declare-styleable>
     <declare-styleable name="CollapsingAppBarLayout_LayoutParams"><attr name="layout_collapseMode"><enum name="none" value="0"/><enum name="pin" value="1"/><enum name="parallax" value="2"/></attr><attr format="float" name="layout_collapseParallaxMultiplier"/></declare-styleable>
     <declare-styleable name="CollapsingTextAppearance"><attr name="android:textSize"/><attr name="android:textColor"/></declare-styleable>
     <declare-styleable name="CollapsingTitleLayout"><attr format="reference|dimension" name="expandedMargin"/><attr format="reference|dimension" name="expandedMarginStart"/><attr format="reference|dimension" name="expandedMarginBottom"/><attr format="reference|dimension" name="expandedMarginEnd"/><attr format="reference|dimension" name="expandedTextSize"/><attr format="reference|dimension" name="collapsedTextSize"/><attr name="android:textAppearance"/><attr format="reference" name="textSizeInterpolator"/></declare-styleable>

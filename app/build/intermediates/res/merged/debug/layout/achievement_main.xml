@@ -42,7 +42,7 @@
                     android:layout_gravity="center_horizontal"
                     app:progress="42"
                     android:elevation="3dp"
-                    app:backgroundRingColor="@color/dark_gray"
+                    app:backgroundRingColor="@color/grayprogress"
                     app:progressRingColor="@color/white"
                     app:progressRingSize="3dp"
                     app:backgroundRingSize="2dp"

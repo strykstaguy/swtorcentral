@@ -70,10 +70,7 @@ public class Category2Fragment extends Fragment {
 		((AchievementActivity)getActivity()).setTitleText(Category1);
 		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
 
-        float total_completed = Category1Completed;
-        float total = Category1Total;
-
-        float progressValue = (float)total_completed/(float)total;
+		int progressValue = (int) Math.ceil(((double)Category1Completed/(double)Category1Total)* 100);
         ((AchievementActivity)getActivity()).setProgress(progressValue);
 
       //get user data from session
@@ -131,10 +128,7 @@ public class Category2Fragment extends Fragment {
 		((AchievementActivity)getActivity()).setTitleText(Category1);
 		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category1Completed) + "/" + String.valueOf(Category1Total));
 
-		float total_completed = Category1Completed;
-		float total = Category1Total;
-
-		float progressValue = (float)total_completed/(float)total;
-		((AchievementActivity)getActivity()).setProgress(progressValue);
+		int progressValue = (int) Math.ceil(((double)Category1Completed/(double)Category1Total)* 100);
+		((AchievementActivity)getActivity()).setAchievementProgress(progressValue);
 	}
 }

@@ -95,19 +95,10 @@
     </declare-styleable>
 
     <declare-styleable name="AchievementToggle">
-        <attr name="border" format="boolean"/>
-        <attr name="border_width" format="dimension"/>
-        <attr name="border_color" format="color"/>
-        <attr name="shadow" format="boolean"/>
-        <attr name="shadow_color" format="color"/>
-        <attr name="shadow_radius" format="float"/>
-    </declare-styleable>
-
-    <declare-styleable name="CircleTextView">
-        <attr name="ctv_text" format="string"/>
-        <attr name="ctv_textSize" format="dimension"/>
-        <attr name="ctv_textColor" format="color"/>
-        <attr name="ctv_backgroundColor" format="color"/>
-        <attr name="ctv_selected" format="boolean"/>
+        <attr name="at_text" format="string"/>
+        <attr name="at_textSize" format="dimension"/>
+        <attr name="at_textColor" format="color"/>
+        <attr name="at_backgroundColor" format="color"/>
+        <attr name="at_selected" format="boolean"/>
     </declare-styleable>
 </resources>

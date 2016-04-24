@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
+import com.stryksta.swtorcentral.util.AchievementToggle;
 import com.stryksta.swtorcentral.util.ColorItem;
 
 public class FactionFragment extends Fragment {
@@ -36,11 +38,24 @@ public class FactionFragment extends Fragment {
         vw_layout = inflater.inflate(R.layout.faction_main, container, false);
         
         getActivity().setTitle("Faction");
+        /*
+        final AchievementToggle layoutCheck = (AchievementToggle) vw_layout.findViewById(R.id.test_check);
+        layoutCheck.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //nothing
+                if (layoutCheck.isChecked()){
+                    layoutCheck.setChecked(false);
+                    Toast.makeText(getActivity(), "Unchecked", Toast.LENGTH_SHORT).show();
+                } else {
+                    layoutCheck.setChecked(true);
+                    Toast.makeText(getActivity(), "Checked", Toast.LENGTH_SHORT).show();
+                }
 
-        //ColorItem layoutCheck = (ColorItem) vw_layout.findViewById(R.id.test_check);
+            }
+        });
         //layoutCheck.setActivated(true);
         //layoutCheck.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.swtor_blue));
-
+        */
 
 		//Clickable Republic Logo
         CardView layoutRepublic = (CardView) vw_layout.findViewById(R.id.layoutRepublic);

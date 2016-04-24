@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 
 public class Category3Fragment extends Fragment {
 	private AchievementsDatabase db;
@@ -83,10 +84,8 @@ public class Category3Fragment extends Fragment {
 		((AchievementActivity)getActivity()).setTitleText(Category2);
 		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category2Completed) + "/" + String.valueOf(Category2Total));
 
-		float total_completed = Category2Completed;
-		float total = Category2Total;
-
-		float progressValue = (float)total_completed/(float)total;
+		int progressValue = (int) Math.ceil(((double)Category2Completed/(double)Category2Total)* 100);
+		//int x = (int) Math.ceil(((double)Category2Completed/(double)Category2Total) * 100);
 		((AchievementActivity)getActivity()).setProgress(progressValue);
 
         db = new AchievementsDatabase(getActivity());
@@ -139,10 +138,7 @@ public class Category3Fragment extends Fragment {
 		((AchievementActivity)getActivity()).setTitleText(Category2);
 		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category2Completed) + "/" + String.valueOf(Category2Total));
 
-		float total_completed = Category2Completed;
-		float total = Category2Total;
-
-		float progressValue = (float)total_completed/(float)total;
-		((AchievementActivity)getActivity()).setProgress(progressValue);
+		int progressValue = (int) Math.ceil(((double)Category2Completed/(double)Category2Total)* 100);
+		((AchievementActivity)getActivity()).setAchievementProgress(progressValue);
 	}
 }

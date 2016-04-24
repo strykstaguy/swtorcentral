@@ -9,17 +9,6 @@
     android:layout_gravity="center"
     android:gravity="center_vertical|center_horizontal">
 
-    <com.stryksta.swtorcentral.util.CircleTextView
-        android:id="@+id/test_check"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:ctv_text="50"
-        app:ctv_textSize="20dp"
-        app:ctv_selected="true"
-        app:ctv_textColor="@color/white"
-        app:ctv_backgroundColor="@color/swtor_blue"
-        android:layout_gravity="center" />
-
     <android.support.v7.widget.CardView
         android:id="@+id/layoutRepublic"
         android:layout_width="fill_parent"
@@ -51,6 +40,7 @@
                 android:padding="8dp"
                 android:background="@drawable/round"
                 android:elevation="3dp"
+                android:clickable="false"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_republic"

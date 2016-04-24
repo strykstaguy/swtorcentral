@@ -31,6 +31,9 @@ public class Category4Fragment extends Fragment{
 	String Category1;
 	String Category2;
 	String Category3;
+
+	Integer Category3Completed;
+	Integer Category3Total;
 	View vw_layout;
 	
 	@Override
@@ -56,12 +59,21 @@ public class Category4Fragment extends Fragment{
         	Category1 = getArguments().getString("category1");
         	Category2 = getArguments().getString("category2");
         	Category3 = getArguments().getString("category3");
+			Category3Completed = getArguments().getInt("category3_completed");
+			Category3Total = getArguments().getInt("category3_total");
         }
 
 		//Set title of category
 		((AchievementActivity)getActivity()).setTitleText(Category3);
 
         getActivity().setTitle(Category3);
+
+		//Set title/completed/total of category
+		((AchievementActivity)getActivity()).setTitleText(Category2);
+		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category3Completed) + "/" + String.valueOf(Category3Total));
+
+		int progressValue = (int) Math.ceil(((double)Category3Completed/(double)Category3Total)* 100);
+		((AchievementActivity)getActivity()).setProgress(progressValue);
 
         db = new AchievementsDatabase(getActivity());
         achievements = db.getAchievements(Category1, Category2, Category3);
