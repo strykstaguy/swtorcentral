@@ -25,8 +25,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.ExpandableListView.OnChildClickListener;
 
@@ -137,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.navigation_item_7: {
-                        Intent testIntent = new Intent(MainActivity.this, TestRecycleActivity.class);
+                        Intent testIntent = new Intent(MainActivity.this, CodexCategoryActivity.class);
                         startActivity(testIntent);
                         break;
                     }

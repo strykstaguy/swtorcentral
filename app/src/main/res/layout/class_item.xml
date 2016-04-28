@@ -1,50 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-<android.support.v7.widget.CardView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    app:cardElevation="2dp"
-    app:cardCornerRadius="2dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
-    app:cardPreventCornerOverlap="false">
+    <ImageButton
+        android:id="@+id/imgClass"
+        android:layout_width="@dimen/fab_medium"
+        android:layout_height="@dimen/fab_medium"
+        android:padding="8dp"
+        android:background="@drawable/round"
+        android:elevation="3dp"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_class_consular"
+        android:layout_centerHorizontal="true" />
 
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="5.0dip">
-
-    <LinearLayout
-        android:id="@+id/layoutClasses"
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:baselineAligned="false"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:padding="5dp">
+        app:cardElevation="2dp"
+        app:cardCornerRadius="2dp"
+        app:cardPreventCornerOverlap="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip">
+
+        <LinearLayout
+            android:id="@+id/layoutClasses"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:baselineAligned="false"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
         <LinearLayout
             android:id="@+id/AdvClass1"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="fill_parent"
+            android:layout_marginRight="100dp"
             android:gravity="bottom"
             android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/imgClass1"
-                android:layout_width="@dimen/fab_normal"
-                android:layout_height="@dimen/fab_normal"
-                android:padding="8dp"
-                android:background="@drawable/round"
+                android:layout_width="@dimen/fab_small"
+                android:layout_height="@dimen/fab_small"
+                android:padding="4dp"
+                android:background="@drawable/round_grey"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
@@ -61,20 +76,6 @@
                 android:textColor="@color/subheader" />
         </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/imgClass"
-            android:layout_width="@dimen/fab_medium"
-            android:layout_height="@dimen/fab_medium"
-            android:padding="8dp"
-            android:background="@drawable/round"
-            android:elevation="3dp"
-            android:layout_marginLeft="@dimen/dim_20"
-            android:layout_marginRight="@dimen/dim_20"
-            android:layout_gravity="center"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_class_consular"
-            android:layout_centerHorizontal="true" />
-
         <LinearLayout
             android:id="@+id/AdvClass2"
             android:layout_width="wrap_content"
@@ -85,10 +86,10 @@
 
             <ImageButton
                 android:id="@+id/imgClass2"
-                android:layout_width="@dimen/fab_normal"
-                android:layout_height="@dimen/fab_normal"
-                android:padding="8dp"
-                android:background="@drawable/round"
+                android:layout_width="@dimen/fab_small"
+                android:layout_height="@dimen/fab_small"
+                android:padding="4dp"
+                android:background="@drawable/round_grey"
                 android:elevation="3dp"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
@@ -133,4 +134,4 @@
 </RelativeLayout>
 </android.support.v7.widget.CardView>
 
-</LinearLayout>
+</FrameLayout>

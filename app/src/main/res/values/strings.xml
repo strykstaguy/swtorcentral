@@ -21,6 +21,7 @@
     <string name="planet_main">Planet</string>
     <string name="character_main">Characters</string>
     <string name="character_add_main">Add Character</string>
+    <string name="codex_main">Codexes</string>
     <string name="character_edit_main">Edit Character</string>
     <string name="ability_detail_main">Ability Details</string>
     <string name="achievements_main">Achievements</string>

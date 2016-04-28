@@ -62,7 +62,7 @@
             android:label="@string/character_edit_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.TestRecycleActivity"
+            android:name=".CodexCategoryActivity"
             android:label="@string/test_main" >
         </activity>
         <activity
@@ -72,6 +72,10 @@
         <activity
             android:name="com.stryksta.swtorcentral.TestActivity"
             android:label="@string/test_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.CodexActivity"
+            android:label="@string/codex_main" >
         </activity>
     </application>
 

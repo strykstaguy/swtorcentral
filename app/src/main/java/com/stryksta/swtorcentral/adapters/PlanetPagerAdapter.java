@@ -5,10 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.stryksta.swtorcentral.PlanetTab1;
-import com.stryksta.swtorcentral.PlanetTab2;
-import com.stryksta.swtorcentral.PlanetTab3;
-
 import java.util.ArrayList;
 import java.util.List;
 
