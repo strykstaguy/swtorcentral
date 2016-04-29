@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.navigation_item_3: {
-                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ClassesActivity(), "Classes");
+                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new ClassesFragment(), "Classes");
                         break;
                     }
                     case R.id.navigation_item_4: {

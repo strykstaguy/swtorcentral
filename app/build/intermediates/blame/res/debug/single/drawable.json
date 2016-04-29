@@ -4,12 +4,12 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\spinner_background_ab_swtor.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\float_label.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\float_label.xml"
-    },
-    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selectable_background_swtor.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\selectable_background_swtor.xml"
+    },
+    {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\float_label.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\float_label.xml"
     },
     {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_selectall_material.xml",

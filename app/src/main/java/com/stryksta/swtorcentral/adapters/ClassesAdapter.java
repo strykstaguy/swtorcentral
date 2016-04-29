@@ -1,125 +1,59 @@
 package com.stryksta.swtorcentral.adapters;
 
-import java.util.ArrayList;
-
-import com.stryksta.swtorcentral.AdvancedClassActivity;
-import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.data.AdvancedClassesItem;
-import com.stryksta.swtorcentral.data.ClassItem;
-
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.ColorFilter;
-import android.graphics.ColorMatrixColorFilter;
-import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.view.LayoutInflater;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class ClassesAdapter extends ArrayAdapter<ClassItem> {
+import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.data.ClassItem;
 
-	private final Context context;
-	private final ArrayList<ClassItem> swtorClasses;
-    private final ArrayList<AdvancedClassesItem> swtorAdvancedClasses;
-	int AdvancedPos1;
-	int AdvancedPos2;
+import java.util.ArrayList;
 
-	public ClassesAdapter(Context context, ArrayList<ClassItem> swtorClasses, ArrayList<AdvancedClassesItem> swtorAdvancedClasses) {
-		super(context, R.layout.class_item, swtorClasses);
+public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.ViewHolder>{
 
-		this.context = context;
-		this.swtorClasses = swtorClasses;
-        this.swtorAdvancedClasses = swtorAdvancedClasses;
-	}
+    private ArrayList<ClassItem> classItems;
 
-	@Override
-	public View getView(int position, View convertView, final ViewGroup parent) {
+    public ClassesAdapter(ArrayList<ClassItem> classItems) {
+        super();
+        this.classItems = classItems;
+    }
 
-		LayoutInflater inflater = (LayoutInflater) context
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
+        View view = View.inflate(viewGroup.getContext(), R.layout.class_fragment_row, null);
+        ViewHolder holder = new ViewHolder(view);
+        return holder;
+    }
 
-        View rowView = null;
-        rowView = inflater.inflate(R.layout.class_item, parent, false);
+    @Override
+    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+        ClassItem classRow = classItems.get(position);
 
-		final ClassItem classItem = swtorClasses.get(position);
-        final AdvancedClassesItem advancedClassItem = swtorAdvancedClasses.get(position);
+        if (classRow != null) {
+            viewHolder.clsName.setText(classRow.getClassName());
+            viewHolder.clsDescription.setText(classRow.getDescription());
+            viewHolder.clsImage.setImageResource(classRow.getIcon());
+        }
+    }
 
-        //Class Information
-        TextView txtHeader = (TextView) rowView.findViewById(R.id.txtClass);
-        txtHeader.setText(classItem.getClassName());
+    @Override
+    public int getItemCount() {
+        return (null != classItems ? classItems.size() : 0);
+    }
 
-        TextView txtDesc = (TextView) rowView.findViewById(R.id.txtDesc);
-        txtDesc.setText(classItem.getClassDescription());
+    public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        //Advanced Class Information
-        ImageButton imgClass1 = (ImageButton) rowView.findViewById(R.id.imgClass1);
-        TextView txtClass1 = (TextView) rowView.findViewById(R.id.txtClass1);
+        public TextView clsName;
+        public TextView clsDescription;
+        public ImageButton clsImage;
 
-        ImageButton imgClass2 = (ImageButton) rowView.findViewById(R.id.imgClass2);
-        TextView txtClass2 = (TextView) rowView.findViewById(R.id.txtClass2);
-
-        int iColor = ContextCompat.getColor(context, R.color.white);
-
-        int red = (iColor & 0xFF0000) / 0xFFFF;
-        int green = (iColor & 0xFF00) / 0xFF;
-        int blue = iColor & 0xFF;
-
-        float[] matrix = { 0, 0, 0, 0, red
-                , 0, 0, 0, 0, green
-                , 0, 0, 0, 0, blue
-                , 0, 0, 0, 1, 0 };
-
-        ColorFilter colorFilter = new ColorMatrixColorFilter(matrix);
-
-        imgClass1.setImageResource(advancedClassItem.getimgAdvancedClass1());
-        txtClass1.setText(advancedClassItem.gettxtAdvancedClass1());
-
-        imgClass2.setImageResource(advancedClassItem.getimgAdvancedClass2());
-        txtClass2.setText(advancedClassItem.gettxtAdvancedClass2());
-
-        imgClass1.setColorFilter(colorFilter);
-        imgClass2.setColorFilter(colorFilter);
-
-        imgClass1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                bundle.putString("class", classItem.getClassName());
-                bundle.putInt("class_id", classItem.getClassID());
-                bundle.putString("apc", classItem.geAPC());
-                bundle.putString("node", classItem.getNode());
-                bundle.putString("resource", classItem.getClassResource());
-                bundle.putInt("position", advancedClassItem.getAdvancedClassID1());
-                bundle.putString("advancedclass", advancedClassItem.gettxtAdvancedClass1());
-
-                Intent intent = new Intent(context, AdvancedClassActivity.class);
-                intent.putExtras(bundle);
-                context.startActivity(intent);
-            }
-        });
-
-        imgClass2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                bundle.putString("class", classItem.getClassName());
-                bundle.putInt("class_id", classItem.getClassID());
-                bundle.putString("resource", classItem.getClassResource());
-                bundle.putInt("position", advancedClassItem.getAdvancedClassID2());
-                bundle.putString("apc", classItem.geAPC());
-                bundle.putString("node", classItem.getNode());
-                bundle.putString("advancedclass", advancedClassItem.gettxtAdvancedClass2());
-
-                Intent intent = new Intent(context, AdvancedClassActivity.class);
-                intent.putExtras(bundle);
-                context.startActivity(intent);
-            }
-        });
-
-		return rowView;
-	}
+        public ViewHolder(View itemView) {
+            super(itemView);
+            clsName = (TextView) itemView.findViewById(R.id.txtClass);
+            clsDescription = (TextView) itemView.findViewById(R.id.txtDesc);
+            clsImage = (ImageButton) itemView.findViewById(R.id.imgClass);
+        }
+    }
 }

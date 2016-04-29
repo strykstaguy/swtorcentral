@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:2:1-82:12
+ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:2:1-86:12
 	xmlns:tools
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:4:5-51
 	xmlns:android
@@ -30,7 +30,7 @@ ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:10:19-73
 application
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:12:5-80:19
+ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:12:5-84:19
 MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\design\23.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
@@ -160,6 +160,12 @@ ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.x
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:78:13-47
 	android:name
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:77:13-67
+activity#com.stryksta.swtorcentral.ClassActivity
+ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:80:9-83:20
+	android:label
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:82:13-49
+	android:name
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:81:13-67
 uses-sdk
 INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43

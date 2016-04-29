@@ -82,6 +82,10 @@
             android:name="com.stryksta.swtorcentral.CodexActivity"
             android:label="@string/codex_main" >
         </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ClassActivity"
+            android:label="@string/class_header" >
+        </activity>
     </application>
 
 </manifest>

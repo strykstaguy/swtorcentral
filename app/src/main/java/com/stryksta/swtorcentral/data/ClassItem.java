@@ -2,34 +2,110 @@ package com.stryksta.swtorcentral.data;
 
 
 public class ClassItem {
-    private String txtClass;
-    private String txtResource;
-    private String txtApc;
+    private String txtClassName;
+    private int clsFaction;
+    private int txtIcon;
     private String txtDescription;
+    private String txtResource;
     private String txtCombatRole;
     private String txtStory;
     private String txtAbilities;
-    private String txtNode;
     private String txtEquipment;
-    private int idClass;
-    private int imgClass;
+    private String txtApc;
+    private String txtNode;
 
-    public ClassItem(String txtClass, int imgClass, int idClass, String txtResource, String txtDescription, String txtApc, String txtNode) {
-    	this.txtClass = txtClass;
-    	this.idClass = idClass;
-        this.imgClass = imgClass;
+    public ClassItem(String txtClassName, int clsFaction, int txtIcon, String txtDescription, String txtResource, String txtCombatRole, String txtStory, String txtAbilities, String txtEquipment, String txtApc, String txtNode) {
+    	this.txtClassName = txtClassName;
+    	this.clsFaction = clsFaction;
+        this.txtIcon = txtIcon;
     	this.txtDescription = txtDescription;
         this.txtResource = txtResource;
+        this.txtCombatRole = txtCombatRole;
+        this.txtStory = txtStory;
+        this.txtAbilities = txtAbilities;
+        this.txtEquipment = txtEquipment;
         this.txtApc = txtApc;
         this.txtNode = txtNode;
     }
     
     public String getClassName() {
-        return txtClass;
+        return txtClassName;
     }
 
-    public void setClassName(String txtClass) {
-        this.txtClass = txtClass;
+    public void setClassName(String txtClassName) {
+        this.txtClassName = txtClassName;
+    }
+
+    public int getFaction() {
+        return clsFaction;
+    }
+
+    public void setFaction(int clsFaction) {
+        this.clsFaction = clsFaction;
+    }
+
+    public int getIcon() {
+        return txtIcon;
+    }
+
+    public void setIcon(int txtIcon) {
+        this.txtIcon = txtIcon;
+    }
+
+    public String getDescription() {
+        return txtDescription;
+    }
+
+    public void setDescription(String txtDescription) {
+        this.txtDescription = txtDescription;
+    }
+
+    public String getResource() {
+        return txtResource;
+    }
+
+    public void setResource(String txtResource) {
+        this.txtResource = txtResource;
+    }
+
+    public String getCombatRole() {
+        return txtCombatRole;
+    }
+
+    public void setCombatRole(String txtCombatRole) {
+        this.txtCombatRole = txtCombatRole;
+    }
+
+    public String getStory() {
+        return txtStory;
+    }
+
+    public void setStory(String txtStory) {
+        this.txtStory = txtStory;
+    }
+
+    public String getAbilities() {
+        return txtAbilities;
+    }
+
+    public void setAbilities(String txtAbilities) {
+        this.txtAbilities = txtAbilities;
+    }
+
+    public String getEquipment() {
+        return txtEquipment;
+    }
+
+    public void setEquipment(String txtEquipment) {
+        this.txtEquipment = txtEquipment;
+    }
+
+    public String getApc() {
+        return txtApc;
+    }
+
+    public void setApc(String txtApc) {
+        this.txtApc = txtApc;
     }
 
     public String getNode() {
@@ -40,80 +116,8 @@ public class ClassItem {
         this.txtNode = txtNode;
     }
 
-    public String getClassDescription() {
-        return txtDescription;
-    }
-
-    public void setClassDescription(String txtDescription) {
-        this.txtDescription = txtDescription;
-    }
-
-    public String getCombatRole() {
-        return txtCombatRole;
-    }
-
-    public void seCombatRole(String txtCombatRole) {
-        this.txtCombatRole = txtCombatRole;
-    }
-
-    public String getStory() {
-        return txtStory;
-    }
-
-    public void seStory(String txtStory) {
-        this.txtStory = txtStory;
-    }
-
-    public String getAbilities() {
-        return txtAbilities;
-    }
-
-    public void seAbilities(String txtAbilities) {
-        this.txtAbilities = txtAbilities;
-    }
-
-    public String getEquipment() {
-        return txtEquipment;
-    }
-
-    public void seEquipment(String txtEquipment) {
-        this.txtEquipment = txtEquipment;
-    }
-
-    public int getClassImage() {
-        return imgClass;
-    }
-
-    public void getClassImage(int imgClass) {
-        this.imgClass = imgClass;
-    }
-
-    public String getClassResource() {
-        return txtResource;
-    }
-
-    public void setResource(String txtResource) {
-        this.txtResource = txtResource;
-    }
-
-    public int getClassID() {
-        return idClass;
-    }
-    
-    public void setClassID(int idClass) {
-        this.idClass = idClass;
-    }
-
-    public String geAPC() {
-        return txtApc;
-    }
-
-    public void setAPC(String txtApc) {
-        this.txtApc = txtApc;
-    }
-	
-	@Override
+    @Override
 	public String toString() {
-		return "Class: " + txtClass;
+		return "Class: " + txtClassName;
 	}
 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:cardPreventCornerOverlap="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="2dp"
+        android:clickable="true"
+        android:foreground="@drawable/card_foreground">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip">
+
+        <ImageButton
+            android:id="@+id/imgClass"
+            android:layout_width="@dimen/fab_medium"
+            android:layout_height="@dimen/fab_medium"
+            android:padding="8dp"
+            android:background="@drawable/round"
+            android:elevation="3dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_class_consular"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/txtClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:textColor="@color/text"
+            android:text="Jedi Consular"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginBottom="@dimen/dim_5"
+            android:textColor="@color/text"
+            android:gravity="center"
+            android:text="A master of the secrets of the Force, the Jedi Consular is both fighter and healer, teacher and student. The Force can be used to cloud the minds of the weak, restore strength to the fallen and hurl both opponents and objects through the air."
+            android:textSize="14sp"
+            android:layout_below="@+id/txtClass"
+            android:layout_toRightOf="@+id/imgClass"
+            android:layout_toEndOf="@+id/imgClass" />
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
