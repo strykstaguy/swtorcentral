@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
@@ -22,7 +23,7 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.ViewHold
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
-        View view = View.inflate(viewGroup.getContext(), R.layout.class_fragment_row, null);
+        View view = View.inflate(viewGroup.getContext(), R.layout.class_main, null);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -32,9 +33,10 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.ViewHold
         ClassItem classRow = classItems.get(position);
 
         if (classRow != null) {
-            viewHolder.clsName.setText(classRow.getClassName());
-            viewHolder.clsDescription.setText(classRow.getDescription());
-            viewHolder.clsImage.setImageResource(classRow.getIcon());
+            viewHolder.txtClass.setText(classRow.getClassName());
+            viewHolder.txtDescription.setText(classRow.getDescription());
+            viewHolder.txtStory.setText(classRow.getStory());
+            viewHolder.imgClass.setImageResource(classRow.getIcon());
         }
     }
 
@@ -45,15 +47,17 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView clsName;
-        public TextView clsDescription;
-        public ImageButton clsImage;
+        public TextView txtClass;
+        public TextView txtStory;
+        public TextView txtDescription;
+        public ImageView imgClass;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            clsName = (TextView) itemView.findViewById(R.id.txtClass);
-            clsDescription = (TextView) itemView.findViewById(R.id.txtDesc);
-            clsImage = (ImageButton) itemView.findViewById(R.id.imgClass);
+            txtClass = (TextView) itemView.findViewById(R.id.txtClass);
+            txtDescription = (TextView) itemView.findViewById(R.id.txtDesc);
+            txtStory = (TextView) itemView.findViewById(R.id.txtStory);
+            imgClass = (ImageButton) itemView.findViewById(R.id.imgClass);
         }
     }
 }

@@ -33,7 +33,8 @@
                 android:layout_marginBottom="@dimen/dim_10"
                 android:background="@drawable/round"
                 android:contentDescription="@string/image_placeholder"
-                android:src="@drawable/ic_achievement_white"
+                android:src="@drawable/ic_achievement"
+                android:tint="@color/white"
                 android:scaleType="fitXY"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true" />

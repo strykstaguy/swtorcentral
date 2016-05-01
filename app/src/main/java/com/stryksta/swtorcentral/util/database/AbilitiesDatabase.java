@@ -1,7 +1,6 @@
 package com.stryksta.swtorcentral.util.database;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import android.content.Context;
 import android.database.Cursor;

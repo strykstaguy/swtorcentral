@@ -7,8 +7,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.stryksta.swtorcentral.R;
-
 public class ImageBehavior extends CoordinatorLayout.Behavior<ImageView> {
         private float startingY;
 

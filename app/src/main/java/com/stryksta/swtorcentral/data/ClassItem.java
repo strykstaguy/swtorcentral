@@ -2,6 +2,8 @@ package com.stryksta.swtorcentral.data;
 
 
 public class ClassItem {
+
+    private int clsID;
     private String txtClassName;
     private int clsFaction;
     private int txtIcon;
@@ -14,8 +16,9 @@ public class ClassItem {
     private String txtApc;
     private String txtNode;
 
-    public ClassItem(String txtClassName, int clsFaction, int txtIcon, String txtDescription, String txtResource, String txtCombatRole, String txtStory, String txtAbilities, String txtEquipment, String txtApc, String txtNode) {
-    	this.txtClassName = txtClassName;
+    public ClassItem(int clsID, String txtClassName, int clsFaction, int txtIcon, String txtDescription, String txtResource, String txtCombatRole, String txtStory, String txtAbilities, String txtEquipment, String txtApc, String txtNode) {
+        this.clsID = clsID;
+        this.txtClassName = txtClassName;
     	this.clsFaction = clsFaction;
         this.txtIcon = txtIcon;
     	this.txtDescription = txtDescription;
@@ -27,7 +30,15 @@ public class ClassItem {
         this.txtApc = txtApc;
         this.txtNode = txtNode;
     }
-    
+
+    public int getClassID() {
+        return clsID;
+    }
+
+    public void setClassID(int clsID) {
+        this.clsID = clsID;
+    }
+
     public String getClassName() {
         return txtClassName;
     }

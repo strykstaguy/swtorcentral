@@ -9,15 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.adapters.DatacronClassAdapter;
 import com.stryksta.swtorcentral.data.DatacronItem;
-import com.stryksta.swtorcentral.util.CircleView;
 import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 import com.stryksta.swtorcentral.util.database.PlanetDatabase;
 

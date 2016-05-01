@@ -15,7 +15,7 @@
         android:layout_margin="@dimen/dim_10"
         android:layout_marginBottom="@dimen/dim_20"
         android:elevation="4dp"
-        android:src="@drawable/ac_sage_light"
+        android:src="@drawable/advanced_class_jedi_sage"
         tools:src="@drawable/ic_launcher"/>
 
     <TextView

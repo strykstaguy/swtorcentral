@@ -1,20 +1,14 @@
 package com.stryksta.swtorcentral.adapters;
 
 import android.content.Context;
-import android.graphics.ColorFilter;
-import android.graphics.ColorMatrixColorFilter;
-import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
 import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.data.RssItem;
 import com.stryksta.swtorcentral.data.ServerItem;
 import com.stryksta.swtorcentral.util.SizeAdjustingTextView;
 

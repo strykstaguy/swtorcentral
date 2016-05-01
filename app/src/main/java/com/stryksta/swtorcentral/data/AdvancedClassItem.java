@@ -9,11 +9,11 @@ public class AdvancedClassItem {
     public String advArmor;
     public String advWeapons;
     public String advPriAttribute;
-    public String advAdvanced_class_icon;
+    public int advAdvanced_class_icon;
     public String advApc;
     public String advAdv_bg;
 
-    public AdvancedClassItem(int advID, int advClass_id, String advClass, String advDescription, String advRole, String advArmor, String advWeapons, String advPriAttribute, String advAdvanced_class_icon, String advApc, String advAdv_bg) {
+    public AdvancedClassItem(int advID, int advClass_id, String advClass, String advDescription, String advRole, String advArmor, String advWeapons, String advPriAttribute, int advAdvanced_class_icon, String advApc, String advAdv_bg) {
         this.advID = advID;
         this.advClass_id = advClass_id;
         this.advClass = advClass;
@@ -91,11 +91,11 @@ public class AdvancedClassItem {
         this.advPriAttribute = advPriAttribute;
     }
 
-    public String getAdvAdvancedClassIcon() {
+    public int getAdvAdvancedClassIcon() {
         return advAdvanced_class_icon;
     }
 
-    public void setAdvAdvancedClassIcon(String advAdvanced_class_icon) {
+    public void setAdvAdvancedClassIcon(int advAdvanced_class_icon) {
         this.advAdvanced_class_icon = advAdvanced_class_icon;
     }
 

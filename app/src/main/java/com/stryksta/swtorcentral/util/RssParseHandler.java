@@ -1,7 +1,5 @@
 package com.stryksta.swtorcentral.util;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

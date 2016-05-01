@@ -32,7 +32,8 @@
                 android:elevation="2dp"
                 android:background="@drawable/round"
                 android:contentDescription="@string/image_placeholder"
-                android:src="@drawable/ic_achievement_white"
+                android:src="@drawable/ic_achievement"
+                android:tint="@color/white"
                 android:scaleType="fitXY"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />

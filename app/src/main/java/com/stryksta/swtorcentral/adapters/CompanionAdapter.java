@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.data.AbilitiesItem;
 import com.stryksta.swtorcentral.data.CompanionItem;
 
 import java.util.ArrayList;

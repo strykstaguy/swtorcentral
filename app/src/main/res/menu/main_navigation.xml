@@ -4,15 +4,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/navigation_item_1"
-            android:icon="@drawable/ic_action_feed"
+            android:icon="@drawable/ic_news"
             android:title="@string/navigation_item_1"/>
         <item
             android:id="@+id/navigation_item_2"
-            android:icon="@drawable/ic_action_database"
+            android:icon="@drawable/ic_server"
             android:title="@string/navigation_item_2"/>
         <item
             android:id="@+id/navigation_item_3"
-            android:icon="@drawable/ic_action_shield"
+            android:icon="@drawable/ic_classes"
             android:title="@string/navigation_item_3"/>
         <item
             android:id="@+id/navigation_item_4"
@@ -20,7 +20,7 @@
             android:title="@string/navigation_item_4"/>
         <item
             android:id="@+id/navigation_item_5"
-            android:icon="@drawable/ic_action_achievement"
+            android:icon="@drawable/ic_achievement"
             android:title="@string/navigation_item_5"/>
         <item
             android:id="@+id/navigation_item_6"
@@ -38,7 +38,7 @@
         <menu>
             <item
                 android:id="@+id/navigation_sub_item_1"
-                android:icon="@drawable/ic_action_gear"
+                android:icon="@drawable/ic_settings"
                 android:title="@string/navigation_item_8"/>
         </menu>
     </item>

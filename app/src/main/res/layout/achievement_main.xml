@@ -37,7 +37,7 @@
                     android:id="@+id/advImage"
                     android:layout_width="@dimen/fab_large"
                     android:layout_height="@dimen/fab_large"
-                    android:src="@drawable/ac_sage_light"
+                    android:src="@drawable/advanced_class_jedi_sage"
                     android:background="@drawable/round_grey"
                     android:layout_gravity="center_horizontal"
                     app:progress="42"

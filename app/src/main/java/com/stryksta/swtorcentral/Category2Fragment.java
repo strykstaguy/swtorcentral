@@ -8,7 +8,6 @@ import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
-import com.stryksta.swtorcentral.util.AutoMeasureGridView;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
 
@@ -19,8 +18,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 
 public class Category2Fragment extends Fragment {
 	private AchievementsDatabase db;

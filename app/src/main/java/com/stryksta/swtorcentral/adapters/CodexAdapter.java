@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.data.CodexCategoryItem;
 import com.stryksta.swtorcentral.data.CodexItem;
 
 import java.util.ArrayList;

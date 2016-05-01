@@ -1,10 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:2:1-86:12
-	xmlns:tools
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:4:5-51
-	xmlns:android
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:2:11-69
+ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:2:1-74:12
 	package
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
@@ -13,10 +9,14 @@ ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.x
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:6:5-30
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:4:5-51
 	android:versionCode
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:5:5-28
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:8:5-66
 	android:name
@@ -30,26 +30,26 @@ ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:10:19-73
 application
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:12:5-84:19
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\design\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.2.0\AndroidManifest.xml:22:5-20
+ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:12:5-72:19
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.2.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:15:9-41
 	android:allowBackup
@@ -118,81 +118,63 @@ ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.x
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:50:13-56
 	android:name
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:49:13-75
-activity#com.stryksta.swtorcentral.CharacterActivity
+activity#com.stryksta.swtorcentral.CodexCategoryActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:52:9-55:20
 	android:label
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:54:13-51
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:54:13-46
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:53:13-71
-activity#com.stryksta.swtorcentral.CharacterAddActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:53:13-50
+activity#com.stryksta.swtorcentral.AchievementActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:56:9-59:20
 	android:label
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:58:13-55
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:58:13-54
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:57:13-74
-activity#com.stryksta.swtorcentral.CharacterEditActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:57:13-73
+activity#com.stryksta.swtorcentral.TestActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:60:9-63:20
 	android:label
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:62:13-56
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:62:13-46
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:61:13-75
-activity#com.stryksta.swtorcentral.CodexCategoryActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:61:13-66
+activity#com.stryksta.swtorcentral.CodexActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:64:9-67:20
 	android:label
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:66:13-46
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:66:13-47
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:65:13-50
-activity#com.stryksta.swtorcentral.AchievementActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:65:13-67
+activity#com.stryksta.swtorcentral.ClassActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:68:9-71:20
 	android:label
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:70:13-54
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:70:13-49
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:69:13-73
-activity#com.stryksta.swtorcentral.TestActivity
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:72:9-75:20
-	android:label
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:74:13-46
-	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:73:13-66
-activity#com.stryksta.swtorcentral.CodexActivity
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:76:9-79:20
-	android:label
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:78:13-47
-	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:77:13-67
-activity#com.stryksta.swtorcentral.ClassActivity
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:80:9-83:20
-	android:label
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:82:13-49
-	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:81:13-67
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:69:13-67
 uses-sdk
 INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\design\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:animated-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.2.1\AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.2.1] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
-	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.2.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\AndroidManifest.xml:23:9-75

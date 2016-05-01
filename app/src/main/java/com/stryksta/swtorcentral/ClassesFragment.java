@@ -3,7 +3,7 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
-import com.stryksta.swtorcentral.adapters.ClassesAdapter;
+import com.stryksta.swtorcentral.adapters.ClassesCategoryAdapter;
 import com.stryksta.swtorcentral.data.ClassItem;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
@@ -24,7 +24,7 @@ public class ClassesFragment extends Fragment{
 
     private ClassesDatabase classDB;
     ArrayList<ClassItem> classItems;
-    private ClassesAdapter mRecycleAdapter;
+    private ClassesCategoryAdapter mRecycleAdapter;
 
 	View vw_layout;
 	
@@ -59,14 +59,25 @@ public class ClassesFragment extends Fragment{
         classItems = classDB.getClasses();
 
         //Set Adapter
-        mRecycleAdapter = new ClassesAdapter(classItems);
+        mRecycleAdapter = new ClassesCategoryAdapter(classItems);
         mRecyclerView.setAdapter(mRecycleAdapter);
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
         {
             public void onItemClick(View view, int position)
             {
                 Bundle bundle = new Bundle();
-                bundle.putString("clsName", classItems.get(position).getClassName());
+                bundle.putString("txtClassName", classItems.get(position).getClassName());
+                bundle.putInt("clsFaction", classItems.get(position).getFaction());
+                bundle.putInt("txtIcon", classItems.get(position).getIcon());
+                bundle.putString("txtDescription", classItems.get(position).getDescription());
+                bundle.putString("txtResource", classItems.get(position).getResource());
+                bundle.putString("txtCombatRole", classItems.get(position).getCombatRole());
+                bundle.putString("txtStory", classItems.get(position).getStory());
+                bundle.putString("txtAbilities", classItems.get(position).getAbilities());
+                bundle.putString("txtEquipment", classItems.get(position).getEquipment());
+                bundle.putString("txtApc", classItems.get(position).getApc());
+                bundle.putString("txtNode", classItems.get(position).getNode());
+
                 Intent intent = new Intent(getActivity(), ClassActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);

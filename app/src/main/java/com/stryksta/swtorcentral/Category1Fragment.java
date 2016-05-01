@@ -2,33 +2,21 @@ package com.stryksta.swtorcentral;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import com.stryksta.swtorcentral.adapters.AchievementCategoryAdapter;
-import com.stryksta.swtorcentral.adapters.ReaderAdapter;
 import com.stryksta.swtorcentral.data.AchievementCategoryItem;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
-import com.stryksta.swtorcentral.util.VerticalSpaceItemDecoration;
 import com.stryksta.swtorcentral.util.database.AchievementsDatabase;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.SessionManager;
 
 import android.app.Fragment;
-import android.content.Intent;
-import android.graphics.ColorFilter;
-import android.graphics.ColorMatrixColorFilter;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class Category1Fragment extends Fragment{
 	private AchievementsDatabase db;

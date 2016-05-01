@@ -3,7 +3,6 @@ package com.stryksta.swtorcentral.util.database;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteQueryBuilder;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import com.stryksta.swtorcentral.data.CompanionItem;

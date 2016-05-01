@@ -1,5 +1,6 @@
 package com.stryksta.swtorcentral.util;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -12,6 +13,10 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.VectorDrawable;
+import android.os.Build;
 import android.support.v4.content.ContextCompat;
 import android.text.TextPaint;
 import android.util.AttributeSet;
@@ -36,6 +41,7 @@ public class AchievementToggle extends View implements View.OnClickListener {
     private TextPaint mTitleTextPaint;
     private Paint mBackgroundPaint;
     private Bitmap mCheck;
+    private Bitmap mCheckResized;
     private Paint mPaintCheck;
     private RectF mInnerRectF;
     private int mViewSize;
@@ -74,7 +80,9 @@ public class AchievementToggle extends View implements View.OnClickListener {
         mCheckSize = (int) getContext().getResources().getDimension(R.dimen.circle_view_check);
         setChecked(a.getBoolean(R.styleable.AchievementToggle_at_selected, DEFAULT_SELECTED));
 
-        mCheck = getResizedBitmap(BitmapFactory.decodeResource(getContext().getResources(),R.drawable.ic_check), mCheckSize, mCheckSize);
+        mCheck = getBitmap(getContext(), R.drawable.ic_check);
+        //Drawable drawFace = ContextCompat.getDrawable(getContext(), R.drawable.ic_check);
+        mCheckResized = getResizedBitmap(mCheck, mCheckSize, mCheckSize);
 
         mTitleSize = a.getDimension(R.styleable.AchievementToggle_at_textSize,DEFAULT_TITLE_SIZE);
         a.recycle();
@@ -158,7 +166,7 @@ public class AchievementToggle extends View implements View.OnClickListener {
 
         if (mIsSelected) {
             canvas.drawOval(mInnerRectF, mBackgroundPaint);
-            canvas.drawBitmap(mCheck, checkXPos, checkYPos, mPaintCheck);
+            canvas.drawBitmap(mCheckResized, checkXPos, checkYPos, mPaintCheck);
         } else if (!mIsSelected) {
             canvas.drawOval(mInnerRectF, mBackgroundPaint);
             canvas.drawText(mTitleText,
@@ -250,6 +258,27 @@ public class AchievementToggle extends View implements View.OnClickListener {
         mIsSelected = checked;
         requestLayout();
         invalidate();
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private static Bitmap getBitmap(VectorDrawable vectorDrawable) {
+        Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(),
+                vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        vectorDrawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        vectorDrawable.draw(canvas);
+        return bitmap;
+    }
+
+    private static Bitmap getBitmap(Context context, int drawableId) {
+        Drawable drawable = ContextCompat.getDrawable(context, drawableId);
+        if (drawable instanceof BitmapDrawable) {
+            return ((BitmapDrawable) drawable).getBitmap();
+        } else if (drawable instanceof VectorDrawable) {
+            return getBitmap((VectorDrawable) drawable);
+        } else {
+            throw new IllegalArgumentException("unsupported drawable type");
+        }
     }
 
     /**

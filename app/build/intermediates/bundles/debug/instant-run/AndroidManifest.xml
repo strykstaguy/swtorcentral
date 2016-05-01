@@ -56,18 +56,6 @@
             android:label="@string/ability_detail_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.CharacterActivity"
-            android:label="@string/character_main" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.CharacterAddActivity"
-            android:label="@string/character_add_main" >
-        </activity>
-        <activity
-            android:name="com.stryksta.swtorcentral.CharacterEditActivity"
-            android:label="@string/character_edit_main" >
-        </activity>
-        <activity
             android:name="com.stryksta.swtorcentral.CodexCategoryActivity"
             android:label="@string/test_main" >
         </activity>

@@ -2,7 +2,6 @@ package com.stryksta.swtorcentral.util;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.util.Log;

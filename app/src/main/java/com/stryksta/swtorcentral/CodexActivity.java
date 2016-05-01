@@ -1,7 +1,5 @@
 package com.stryksta.swtorcentral;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -11,14 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.WindowManager;
 
 import com.stryksta.swtorcentral.adapters.CodexAdapter;
-import com.stryksta.swtorcentral.adapters.CodexCategoryAdapter;
-import com.stryksta.swtorcentral.data.CodexCategoryItem;
 import com.stryksta.swtorcentral.data.CodexItem;
-import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.CodexDatabase;
 
 import java.util.ArrayList;

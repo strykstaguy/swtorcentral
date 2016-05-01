@@ -3,19 +3,11 @@ package com.stryksta.swtorcentral;
 import com.stryksta.swtorcentral.util.FragmentUtils;
 import com.stryksta.swtorcentral.util.ProgressProfileView;
 
-import android.graphics.ColorFilter;
-import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
-import android.app.Fragment;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class AchievementActivity extends AppCompatActivity {

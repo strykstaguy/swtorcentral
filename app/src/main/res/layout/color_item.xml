@@ -10,6 +10,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_action_book" />
+        android:src="@drawable/ic_codex" />
 
 </merge>

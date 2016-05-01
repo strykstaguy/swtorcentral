@@ -36,7 +36,9 @@
             android:elevation="3dp"
             android:layout_centerVertical="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_flashpoint_white"
+            android:padding="3dp"
+            android:src="@drawable/ic_flashpoint"
+            android:tint="@color/white"
             android:layout_centerHorizontal="true"/>
 
         <LinearLayout

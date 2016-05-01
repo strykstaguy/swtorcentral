@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
@@ -55,7 +54,7 @@ public class ColorItem extends FrameLayout implements View.OnClickListener {
 
         LayoutInflater.from(getContext()).inflate(R.layout.color_item, this, true);
         mItemCheckmark = (ImageView) findViewById(R.id.selected_checkmark);
-        mItemCheckmark.setImageResource(isDarkBackground() ? R.drawable.ic_action_book : R.drawable.ic_action_book);
+        mItemCheckmark.setImageResource(isDarkBackground() ? R.drawable.ic_codex : R.drawable.ic_codex);
     }
 
     public void setChecked(boolean checked) {

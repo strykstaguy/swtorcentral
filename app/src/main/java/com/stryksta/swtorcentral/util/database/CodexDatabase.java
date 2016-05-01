@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import com.stryksta.swtorcentral.data.CodexCategoryItem;
 import com.stryksta.swtorcentral.data.CodexItem;
-import com.stryksta.swtorcentral.data.LoreItem;
 
 public class CodexDatabase extends SQLiteAssetHelper {
 

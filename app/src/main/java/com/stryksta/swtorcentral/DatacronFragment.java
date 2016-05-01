@@ -1,23 +1,17 @@
 package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import android.app.Fragment;
-import android.app.ListFragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import com.stryksta.swtorcentral.adapters.DatacronAdapter;
-import com.stryksta.swtorcentral.adapters.RecycleAdapter;
-import com.stryksta.swtorcentral.adapters.SimpleSectionedRecyclerViewAdapter;
 import com.stryksta.swtorcentral.data.DatacronItem;
-import com.stryksta.swtorcentral.util.DividerItemDecoration;
 import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 
 public class DatacronFragment extends Fragment {

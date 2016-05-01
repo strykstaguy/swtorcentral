@@ -3,34 +3,26 @@ package com.stryksta.swtorcentral;
 import java.util.ArrayList;
 
 import android.database.Cursor;
-import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.data.AdvancedClassItem;
 import com.stryksta.swtorcentral.data.CompanionItem;
-import com.stryksta.swtorcentral.util.NonScrollListView;
-import com.stryksta.swtorcentral.util.ProgressProfileView;
 import com.stryksta.swtorcentral.util.database.AdvancedClassesDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionDatabase;
-import com.stryksta.swtorcentral.util.database.CompanionGiftsDatabase;
 import com.stryksta.swtorcentral.util.database.DisciplinesDatabase;
 
 public class AdvancedClassActivity extends AppCompatActivity {

@@ -1,19 +1,10 @@
 package com.stryksta.swtorcentral.util;
 
-import com.stryksta.swtorcentral.R;
-
-import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
-import android.graphics.drawable.Drawable;
 import android.util.TypedValue;
 import android.view.View;
-import android.view.View.MeasureSpec;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.GridView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 
 public class Utility {
     public static String toTitleCase(String string) {

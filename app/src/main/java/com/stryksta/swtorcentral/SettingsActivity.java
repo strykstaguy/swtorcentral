@@ -1,10 +1,8 @@
 package com.stryksta.swtorcentral;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.TypedValue;
 import android.view.View;
 import com.stryksta.swtorcentral.R;
 
@@ -17,7 +15,7 @@ public class SettingsActivity extends PreferenceActivity {
         setContentView(R.layout.settings_activity);
         addPreferencesFromResource(R.xml.settings);
         Toolbar mActionBar = (Toolbar) findViewById(R.id.toolbar);
-        mActionBar.setNavigationIcon(R.drawable.abc_ic_ab_back_material);
+        mActionBar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         mActionBar.setTitle(getTitle());
         mActionBar.setClickable(true);
 

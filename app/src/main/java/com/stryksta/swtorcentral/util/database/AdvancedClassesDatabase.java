@@ -6,10 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
-import com.stryksta.swtorcentral.data.AbilitiesItem;
-import com.stryksta.swtorcentral.data.AdvancedClassItem;
-
-import java.util.ArrayList;
 
 public class AdvancedClassesDatabase extends SQLiteAssetHelper {
 

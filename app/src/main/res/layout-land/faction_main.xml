@@ -43,7 +43,8 @@
                 android:clickable="false"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_republic"
+                android:src="@drawable/republic_logo"
+                android:tint="@color/white"
                 android:layout_centerVertical="true"
 
                 android:layout_centerHorizontal="true" />
@@ -94,7 +95,8 @@
                 android:layout_gravity="center"
                 android:clickable="false"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_empire"
+                android:src="@drawable/empire_logo"
+                android:tint="@color/white"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"/>
 
