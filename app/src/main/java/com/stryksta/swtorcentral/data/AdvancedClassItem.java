@@ -2,8 +2,8 @@ package com.stryksta.swtorcentral.data;
 
 public class AdvancedClassItem {
     public int advID;
-    public int advClass_id;
-    public String advClass;
+    public String advClassName;
+    public String clsName;
     public String advDescription;
     public String advRole;
     public String advArmor;
@@ -11,12 +11,11 @@ public class AdvancedClassItem {
     public String advPriAttribute;
     public int advAdvanced_class_icon;
     public String advApc;
-    public String advAdv_bg;
 
-    public AdvancedClassItem(int advID, int advClass_id, String advClass, String advDescription, String advRole, String advArmor, String advWeapons, String advPriAttribute, int advAdvanced_class_icon, String advApc, String advAdv_bg) {
+    public AdvancedClassItem(int advID, String advClassName, String clsName, String advDescription, String advRole, String advArmor, String advWeapons, String advPriAttribute, int advAdvanced_class_icon, String advApc) {
         this.advID = advID;
-        this.advClass_id = advClass_id;
-        this.advClass = advClass;
+        this.advClassName = advClassName;
+        this.clsName = clsName;
         this.advDescription = advDescription;
         this.advRole = advRole;
         this.advArmor = advArmor;
@@ -24,31 +23,30 @@ public class AdvancedClassItem {
         this.advPriAttribute = advPriAttribute;
         this.advAdvanced_class_icon = advAdvanced_class_icon;
         this.advApc = advApc;
-        this.advAdv_bg = advAdv_bg;
     }
 
-    public int getAdvID() {
+    public int getAdvancedID() {
         return advID;
     }
 
-    public void setAdvID(int advID) {
+    public void setAdvancedID(int advID) {
         this.advID = advID;
     }
 
-    public int getAdvClassID() {
-        return advClass_id;
+    public String getAdvClassName() {
+        return advClassName;
     }
 
-    public void setAdvClassID(int advClass_id) {
-        this.advClass_id = advClass_id;
+    public void setAdvClassName(String advClassName) {
+        this.advClassName = advClassName;
     }
 
-    public String getAdvClass() {
-        return advClass;
+    public String getClassName() {
+        return clsName;
     }
 
-    public void setAdvClass(String advClass) {
-        this.advClass = advClass;
+    public void setClassName(String clsName) {
+        this.clsName = clsName;
     }
 
     public String getAdvDescription() {
@@ -105,13 +103,5 @@ public class AdvancedClassItem {
 
     public void setAdvApc(String advApc) {
         this.advApc = advApc;
-    }
-
-    public String getAdvBg() {
-        return advAdv_bg;
-    }
-
-    public void setAdvBg(String advAdv_bg) {
-        this.advAdv_bg = advAdv_bg;
     }
 }

@@ -156,11 +156,12 @@
                             android:layout_height="@dimen/fab_normal"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
-                            android:padding="8dp"
                             android:background="@drawable/round"
                             android:elevation="3dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_heals"
+                            android:padding="10dp"
+                            android:scaleType="fitXY"
                             android:tint="@color/white"/>
 
                         <TextView
@@ -187,7 +188,8 @@
                             android:layout_height="@dimen/fab_normal"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
-                            android:padding="8dp"
+                            android:padding="10dp"
+                            android:scaleType="fitXY"
                             android:background="@drawable/round"
                             android:elevation="3dp"
                             android:layout_gravity="center"
@@ -218,7 +220,8 @@
                             android:layout_height="@dimen/fab_normal"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
-                            android:padding="8dp"
+                            android:padding="10dp"
+                            android:scaleType="fitXY"
                             android:background="@drawable/round"
                             android:elevation="3dp"
                             android:layout_gravity="center"
@@ -244,7 +247,7 @@
             <TextView
                 android:id="@+id/txtDetailsSep"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="36dp"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:singleLine="true"
@@ -378,7 +381,7 @@
             <TextView
                 android:id="@+id/txtCompanionsSep"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="36dp"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:singleLine="true"

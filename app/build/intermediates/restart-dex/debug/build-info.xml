@@ -4,29 +4,50 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="28954260929446" >
+    timestamp="27303622420328"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="4687" />
+        duration="5773" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="982" />
     <task
         name="instant-run-transform"
-        duration="2071" />
+        duration="84" />
     <task
         name="verifier"
-        duration="793" />
+        duration="3" />
 
     <artifact
-        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
-    <build timestamp="28954260929446" >
+    <build timestamp="19651647276575" >
         <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="26747109861708"
+        verifier="CLASS_ADDED" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="27303622420328"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

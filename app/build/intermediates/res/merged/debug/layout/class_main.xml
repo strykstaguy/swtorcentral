@@ -159,6 +159,8 @@
                                 android:layout_alignParentRight="true"
                                 android:background="@drawable/round"
                                 android:elevation="3dp"
+                                android:padding="4dp"
+                                android:scaleType="fitXY"
                                 android:layout_gravity="center"
                                 android:src="@drawable/advanced_class_powertech"/>
 
@@ -188,6 +190,8 @@
                                 android:layout_alignParentRight="true"
                                 android:background="@drawable/round"
                                 android:elevation="3dp"
+                                android:scaleType="fitXY"
+                                android:padding="4dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/advanced_class_mercenary"/>
 
@@ -209,7 +213,7 @@
             <TextView
                 android:id="@+id/txtStorySep"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="36dp"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:singleLine="true"
@@ -248,7 +252,7 @@
             <TextView
                 android:id="@+id/txtCompanionsSep"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="36dp"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
                 android:singleLine="true"
