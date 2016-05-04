@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.database.Cursor;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -15,19 +16,25 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.data.AdvancedClassItem;
 import com.stryksta.swtorcentral.data.CompanionItem;
+import com.stryksta.swtorcentral.data.DisciplineItem;
 import com.stryksta.swtorcentral.util.database.AdvancedClassesDatabase;
+import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionDatabase;
 import com.stryksta.swtorcentral.util.database.DisciplinesDatabase;
 
 public class AdvancedClassActivity extends AppCompatActivity {
 
     private Toolbar mToolbar;
+
+    private ClassesDatabase classDB;
+    ArrayList<DisciplineItem> disciplineItems;
 
     //Companion Info from prev
     int advID;
@@ -84,6 +91,50 @@ public class AdvancedClassActivity extends AppCompatActivity {
         TextView txtadvDescription = (TextView) findViewById(R.id.txtAdvDesc);
         txtadvDescription.setText(advDescription);
 
+        //********************** Disciplines **********************//
+
+        classDB = new ClassesDatabase(AdvancedClassActivity.this);
+        disciplineItems = classDB.getDisciplines(advID);
+
+        //Set Discipline 1 *******************************************
+        String advDisciplineName1 = disciplineItems.get(0).getDisciplineName();
+        String advDisciplineType1 = disciplineItems.get(0).getType();
+        Drawable advDisciplineIcon1 = getDisciplineIcon(advDisciplineType1);
+
+        //Set Discipline 1 Icon
+        ImageButton imgDiscipline1 = (ImageButton) findViewById(R.id.imgDisciplines1);
+        imgDiscipline1.setImageDrawable(advDisciplineIcon1);
+
+        //Set Discipline 1 Text
+        TextView txtViewDiscipline1 = (TextView) findViewById(R.id.txtDiscipline1);
+        txtViewDiscipline1.setText(advDisciplineName1);
+
+        //Set Discipline 2 *******************************************
+        String advDisciplineName2 = disciplineItems.get(1).getDisciplineName();
+        String advDisciplineType2 = disciplineItems.get(1).getType();
+        Drawable advDisciplineIcon2 = getDisciplineIcon(advDisciplineType2);
+
+        //Set Discipline 2 Icon
+        ImageButton imgDiscipline2 = (ImageButton) findViewById(R.id.imgDisciplines2);
+        imgDiscipline2.setImageDrawable(advDisciplineIcon2);
+
+        //Set Discipline 2 Text
+        TextView txtViewDiscipline2 = (TextView) findViewById(R.id.txtDiscipline2);
+        txtViewDiscipline2.setText(advDisciplineName2);
+
+        //Set Discipline 3 *******************************************
+        String advDisciplineName3 = disciplineItems.get(2).getDisciplineName();
+        String advDisciplineType3 = disciplineItems.get(2).getType();
+        Drawable advDisciplineIcon3 = getDisciplineIcon(advDisciplineType3);
+
+        //Set Discipline 3 Icon
+        ImageButton imgDiscipline3 = (ImageButton) findViewById(R.id.imgDisciplines3);
+        imgDiscipline3.setImageDrawable(advDisciplineIcon3);
+
+        //Set Discipline 3 Text
+        TextView txtViewDiscipline3 = (TextView) findViewById(R.id.txtDiscipline3);
+        txtViewDiscipline3.setText(advDisciplineName3);
+
         // Debug the thread name
         Log.d("SWTORCentral", Thread.currentThread().getName());
 
@@ -106,5 +157,23 @@ public class AdvancedClassActivity extends AppCompatActivity {
         } else {
             getFragmentManager().popBackStack();
         }
+    }
+
+    public Drawable getDisciplineIcon(String disType) {
+        Drawable disciplineIcon;
+        switch(disType) {
+            case "Tank":
+                disciplineIcon = ContextCompat.getDrawable(AdvancedClassActivity.this, R.drawable.ic_tank);
+                break;
+            case "DPS":
+                disciplineIcon = ContextCompat.getDrawable(AdvancedClassActivity.this, R.drawable.ic_damage);
+                break;
+            case "Healer":
+                disciplineIcon = ContextCompat.getDrawable(AdvancedClassActivity.this, R.drawable.ic_heals);
+                break;
+            default:
+                disciplineIcon = ContextCompat.getDrawable(AdvancedClassActivity.this, R.drawable.ic_heals);
+        }
+        return disciplineIcon;
     }
 }

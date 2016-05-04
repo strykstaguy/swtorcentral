@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.MenuItem;
@@ -13,8 +15,11 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.data.AdvancedClassItem;
+import com.stryksta.swtorcentral.data.CompanionItem;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
+import com.stryksta.swtorcentral.util.database.CompanionDatabase;
 
 import java.util.ArrayList;
 
@@ -33,6 +38,13 @@ public class ClassActivity extends AppCompatActivity {
     String txtNode;
     private ClassesDatabase classDB;
     ArrayList<AdvancedClassItem> advClassItems;
+
+    private CompanionDatabase companionDatabase;
+    ArrayList<CompanionItem> companionItems;
+    private RecyclerView mRecyclerView;
+    private GridLayoutManager mLayoutManager;
+    private CompanionClassAdapter mRecycleAdapter;
+
     private Toolbar mToolbar;
 
     @Override
@@ -154,7 +166,25 @@ public class ClassActivity extends AppCompatActivity {
 
         TextView txtViewStory = (TextView) findViewById(R.id.txtStory);
         //txtViewStory.setText(txtStory);
-        txtViewStory.setText(Html.fromHtml(txtStory));
+        //txtViewStory.setText(Html.fromHtml(txtStory));
+
+        //Get Original COmpanions
+        companionItems = new ArrayList<>();
+        companionDatabase = new CompanionDatabase(ClassActivity.this);
+        companionItems = companionDatabase.getOriginalCompanions(txtNode);
+        companionDatabase.close();
+
+        //Set RecyclerView
+        mRecyclerView = (RecyclerView) findViewById(R.id.companionsList);
+
+        if (mRecyclerView != null) {
+            mLayoutManager = new GridLayoutManager(ClassActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
+            mRecyclerView.setLayoutManager(mLayoutManager);
+        }
+
+        //Set Adapter
+        mRecycleAdapter = new CompanionClassAdapter(companionItems);
+        mRecyclerView.setAdapter(mRecycleAdapter);
     }
 
     @Override

@@ -6,6 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+import com.stryksta.swtorcentral.data.DisciplineItem;
+
+import java.util.ArrayList;
 
 public class DisciplinesDatabase extends SQLiteAssetHelper {
 
@@ -16,18 +19,41 @@ public class DisciplinesDatabase extends SQLiteAssetHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 
-	public Cursor getDisciplines(long id) {
-		SQLiteDatabase db = getReadableDatabase();
-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+    public ArrayList<DisciplineItem> getDisciplines(String advancedClassID) {
+        ArrayList<DisciplineItem> disciplineItems = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
 
-		String [] sqlSelect = {"0 _id", "advanced_class_id", "sortindex", "type", "name", "description", "abl", "apc"};
-		String sqlTables = "disciplines";
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT disciplines._id, advanced_classes.advClassName, disciplines.sortindex, disciplines.type, disciplines.name, disciplines.description, disciplines.abl, disciplines.apc ")
+                .append("FROM disciplines ")
+                .append("LEFT JOIN advanced_classes ")
+                .append("ON disciplines.advanced_class_id = advanced_classes._id ")
+                .append("WHERE disciplines.advanced_class_id = ? ")
+                .append("AND disciplines.type IS NOT \"Utility\" ")
+                .append("ORDER BY disciplines.sortindex ASC")
+                .toString();
 
-		qb.setTables(sqlTables);
-		Cursor c = qb.query(db, sqlSelect, "advanced_class_id" + " = ? AND sortindex <> '4'", new String[]{String.valueOf(id)}, null, null, null);
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(advancedClassID)});
 
-		c.moveToFirst();
-		//c.close();
-		return c;
-	}
+        if (c.moveToFirst()) {
+            do {
+
+                int disID = c.getInt(c.getColumnIndex("_id"));
+                String advClassName = c.getString(c.getColumnIndex("advanced_class_id"));
+                int disSortIndex = c.getInt(c.getColumnIndex("sortindex"));
+                String disType = c.getString(c.getColumnIndex("type"));
+                String disName = c.getString(c.getColumnIndex("name"));
+                String disDescription = c.getString(c.getColumnIndex("description"));
+                String disAbl = c.getString(c.getColumnIndex("abl"));
+                String disApc = c.getString(c.getColumnIndex("apc"));
+
+                //int disID, String advClassName, int disSortIndex, String disType, String disName, String disDescription, String disAbl, String disApc
+                disciplineItems.add(new DisciplineItem(disID, advClassName, disSortIndex, disType, disName, disDescription, disAbl, disApc));
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return disciplineItems;
+    }
 }

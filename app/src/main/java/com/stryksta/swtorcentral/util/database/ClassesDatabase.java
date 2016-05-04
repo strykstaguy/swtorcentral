@@ -103,7 +103,7 @@ public class ClassesDatabase extends SQLiteAssetHelper {
         return advancedClassItems;
     }
 
-    public ArrayList<DisciplineItem> getDisciplines(String advancedClassID) {
+    public ArrayList<DisciplineItem> getDisciplines(int advancedClassID) {
         ArrayList<DisciplineItem> disciplineItems = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
@@ -124,7 +124,7 @@ public class ClassesDatabase extends SQLiteAssetHelper {
             do {
 
                 int disID = c.getInt(c.getColumnIndex("_id"));
-                String advClassName = c.getString(c.getColumnIndex("advanced_class_id"));
+                String advClassName = c.getString(c.getColumnIndex("advClassName"));
                 int disSortIndex = c.getInt(c.getColumnIndex("sortindex"));
                 String disType = c.getString(c.getColumnIndex("type"));
                 String disName = c.getString(c.getColumnIndex("name"));
