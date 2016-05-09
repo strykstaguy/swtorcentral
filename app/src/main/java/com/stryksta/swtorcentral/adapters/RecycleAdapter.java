@@ -29,7 +29,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         AbilitiesItem abilityRow = abilitiesItems.get(position);
-        viewHolder.ablName.setText(abilityRow.getablName());
+        viewHolder.ablName.setText(abilityRow.getAbilityName());
     }
 
     @Override

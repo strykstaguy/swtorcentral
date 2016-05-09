@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,9 +14,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.stryksta.swtorcentral.adapters.AbilityAdapter;
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
+import com.stryksta.swtorcentral.data.AbilitiesItem;
 import com.stryksta.swtorcentral.data.AdvancedClassItem;
 import com.stryksta.swtorcentral.data.CompanionItem;
+import com.stryksta.swtorcentral.util.DividerItemDecoration;
+import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 import com.stryksta.swtorcentral.util.database.CompanionDatabase;
 
@@ -39,11 +42,18 @@ public class ClassActivity extends AppCompatActivity {
     private ClassesDatabase classDB;
     ArrayList<AdvancedClassItem> advClassItems;
 
+    //Companions
     private CompanionDatabase companionDatabase;
     ArrayList<CompanionItem> companionItems;
     private RecyclerView mRecyclerView;
     private GridLayoutManager mLayoutManager;
     private CompanionClassAdapter mRecycleAdapter;
+    //Abilities
+    private AbilitiesDatabase abilitiesDatabase;
+    ArrayList<AbilitiesItem> abilitiesItems;
+    private RecyclerView aRecyclerView;
+    private GridLayoutManager aLayoutManager;
+    private AbilityAdapter aRecycleAdapter;
 
     private Toolbar mToolbar;
 
@@ -168,7 +178,7 @@ public class ClassActivity extends AppCompatActivity {
         //txtViewStory.setText(txtStory);
         //txtViewStory.setText(Html.fromHtml(txtStory));
 
-        //Get Original COmpanions
+        //Get Original Companions
         companionItems = new ArrayList<>();
         companionDatabase = new CompanionDatabase(ClassActivity.this);
         companionItems = companionDatabase.getOriginalCompanions(txtNode);
@@ -185,6 +195,27 @@ public class ClassActivity extends AppCompatActivity {
         //Set Adapter
         mRecycleAdapter = new CompanionClassAdapter(companionItems);
         mRecyclerView.setAdapter(mRecycleAdapter);
+        mRecyclerView.setNestedScrollingEnabled(false);
+        //mRecyclerView.setAutoMeasureEnabled(true);
+
+        //Get Original Companions
+        abilitiesItems = new ArrayList<>();
+        abilitiesDatabase = new AbilitiesDatabase(ClassActivity.this);
+        abilitiesItems = abilitiesDatabase.getAbilities(txtApc);
+        abilitiesDatabase.close();
+
+        //Set RecyclerView
+        aRecyclerView = (RecyclerView) findViewById(R.id.abilitiesList);
+
+        if (aRecyclerView != null) {
+            aLayoutManager = new GridLayoutManager(ClassActivity.this, 1, GridLayoutManager.VERTICAL, false);
+            aRecyclerView.setLayoutManager(aLayoutManager);
+        }
+
+        //Set Adapter
+        aRecycleAdapter = new AbilityAdapter(abilitiesItems);
+        aRecyclerView.addItemDecoration(new DividerItemDecoration(ClassActivity.this, GridLayoutManager.VERTICAL));
+        aRecyclerView.setAdapter(aRecycleAdapter);
     }
 
     @Override

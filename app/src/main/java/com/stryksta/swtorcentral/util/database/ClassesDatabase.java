@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral.util.database;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteQueryBuilder;
 import android.os.Build;
 import android.support.v4.content.ContextCompat;
 
@@ -24,6 +25,22 @@ public class ClassesDatabase extends SQLiteAssetHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.mContext = context;
 	}
+
+    public Cursor getClassTitles () {
+        SQLiteDatabase db = getReadableDatabase();
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT _id, clsName, clsApc FROM classes ")
+                .append("ORDER BY _id asc ")
+                .toString();
+
+        Cursor c = db.rawQuery(sqlSelect, null);
+
+        c.moveToFirst();
+        return c;
+    }
 
 	public ArrayList<ClassItem> getClasses() {
 		ArrayList<ClassItem> classItems = new ArrayList<>();

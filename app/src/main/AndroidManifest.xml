@@ -46,7 +46,7 @@
             android:label="@string/planet_main">
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.AbilityDetailActivity"
+            android:name=".AbilitiesActivity"
             android:label="@string/ability_detail_main" >
         </activity>
         <activity

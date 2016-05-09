@@ -4,7 +4,9 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="?android:attr/selectableItemBackground"
     android:padding="10dp">
 
     <TextView
@@ -20,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/text"
-        android:text="Level Aquired: 10"
+        android:text="Level: 10"
         android:textSize="14sp"
         android:layout_alignBaseline="@+id/ablName"
         android:layout_alignBottom="@+id/ablName"
@@ -47,19 +49,11 @@
         android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/ablChanneled"
+        android:id="@+id/ablCooldown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ablResource"
         android:textColor="@color/text"
-        android:text="Channeled: 2"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/ablCooldown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ablChanneled"
         android:text="Cooldown: 6s"
         android:textSize="12sp" />
 
