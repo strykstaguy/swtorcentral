@@ -43,6 +43,12 @@ public class AbilityDetailAdapter extends RecyclerView.Adapter<AbilityDetailAdap
             }
         }
 
+        if (abilitiesRow.getChannelingTime() == 0) {
+            viewHolder.ablChanneled.setVisibility(View.GONE);
+        } else {
+            viewHolder.ablChanneled.setText("Channeled: " +  String.valueOf(abilitiesRow.getCastingTime()) + "s");
+        }
+
         if (abilitiesRow.getCooldownTime() == 0) {
             viewHolder.ablCooldown.setVisibility(View.GONE);
         } else {

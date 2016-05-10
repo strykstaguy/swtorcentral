@@ -6,9 +6,11 @@ public class AbilitiesItem {
     public String ablDesc;
     public String ablIsPassive;
     public String ablIconSpec;
+    public int ablActionPointCost;
     public int ablGlobalCooldownTime;
     public int ablCooldownTime;
     public int ablCastingTime;
+    public int ablChannelingTime;
     public int ablForceCost;
     public int ablEnergyCost;
     public int ablMinRange;
@@ -17,14 +19,16 @@ public class AbilitiesItem {
     public int ablLevelAquired;
     public String clsResource;
 
-    public AbilitiesItem(String ablName, String ablDesc, String ablIsPassive, String ablIconSpec, int ablGlobalCooldownTime, int ablCooldownTime, int ablCastingTime, int ablForceCost, int ablEnergyCost, int ablMinRange, int ablMaxRange, String ablNode, int ablLevelAquired, String clsResource) {
+    public AbilitiesItem(String ablName, String ablDesc, String ablIsPassive, String ablIconSpec, int ablActionPointCost, int ablGlobalCooldownTime, int ablCooldownTime, int ablCastingTime, int ablChannelingTime, int ablForceCost, int ablEnergyCost, int ablMinRange, int ablMaxRange, String ablNode, int ablLevelAquired, String clsResource) {
         this.ablName = ablName;
         this.ablDesc = ablDesc;
         this.ablIsPassive = ablIsPassive;
         this.ablIconSpec = ablIconSpec;
+        this.ablActionPointCost = ablActionPointCost;
         this.ablGlobalCooldownTime = ablGlobalCooldownTime;
         this.ablCooldownTime = ablCooldownTime;
         this.ablCastingTime = ablCastingTime;
+        this.ablChannelingTime = ablChannelingTime;
         this.ablForceCost = ablForceCost;
         this.ablEnergyCost = ablEnergyCost;
         this.ablMinRange = ablMinRange;
@@ -74,6 +78,14 @@ public class AbilitiesItem {
         this.ablGlobalCooldownTime = ablGlobalCooldownTime;
     }
 
+    public int getActionPointCost() {
+        return ablActionPointCost;
+    }
+
+    public void setActionPointCost(int ablActionPointCost){
+        this.ablActionPointCost = ablActionPointCost;
+    }
+
     public int getCooldownTime() {
         return ablCooldownTime;
     }
@@ -88,6 +100,14 @@ public class AbilitiesItem {
 
     public void setCastingTime(int ablCastingTime){
         this.ablCastingTime = ablCastingTime;
+    }
+
+    public int getChannelingTime() {
+        return ablChannelingTime;
+    }
+
+    public void setChannelingTime(int ablChannelingTime){
+        this.ablChannelingTime = ablChannelingTime;
     }
 
     public int getForceCost() {

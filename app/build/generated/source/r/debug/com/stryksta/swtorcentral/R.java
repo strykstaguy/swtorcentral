@@ -3449,14 +3449,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ability_pager=0x7f0d009a;
         public static final int abilitydetails_layout=0x7f0d0092;
         public static final int ablCastingActivation=0x7f0d008b;
-        public static final int ablChanneled=0x7f0d008d;
+        public static final int ablChanneled=0x7f0d008c;
         public static final int ablCooldown=0x7f0d008e;
         public static final int ablDescription=0x7f0d0090;
         public static final int ablLevel=0x7f0d008a;
         public static final int ablLinearLayout=0x7f0d0088;
         public static final int ablName=0x7f0d0089;
         public static final int ablRange=0x7f0d008f;
-        public static final int ablResource=0x7f0d008c;
+        public static final int ablResource=0x7f0d008d;
         public static final int achDescription=0x7f0d00a3;
         public static final int achIcon=0x7f0d00ae;
         public static final int achRewardFleetRequisition=0x7f0d00a6;

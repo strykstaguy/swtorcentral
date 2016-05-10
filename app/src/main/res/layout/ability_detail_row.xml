@@ -40,10 +40,20 @@
         android:textSize="12sp" />
 
     <TextView
+        android:id="@+id/ablChanneled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:layout_below="@id/ablCastingActivation"
+        android:text="Channeled: 3s"
+        android:paddingBottom="5.0dip"
+        android:textSize="12sp" />
+
+    <TextView
         android:id="@+id/ablResource"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ablCastingActivation"
+        android:layout_below="@id/ablChanneled"
         android:text="Force Cost: 50"
         android:textColor="@color/text"
         android:textSize="12sp" />

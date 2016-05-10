@@ -21,7 +21,7 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
         ArrayList<AbilitiesItem> abilityItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
-        String sqlSelect = "SELECT abilities._id, abilities.ablName, abilities.ablDesc, abilities.ablID, abilities.ablIsPassive , abilities.ablIconSpec, abilities.ablGlobalCooldownTime, abilities.ablCooldownTime , abilities.ablCastingTime, abilities.ablForceCost, abilities.ablEnergyCost, abilities.ablMinRange, abilities.ablMaxRange, abilities.ablNode, apc.ablLevelAquired, classes.clsResource\n" +
+        String sqlSelect = "SELECT abilities._id, abilities.ablName, abilities.ablDesc, abilities.ablID, abilities.ablIsPassive, abilities.ablIconSpec, abilities.ablActionPointCost, abilities.ablGlobalCooldownTime, abilities.ablCooldownTime, abilities.ablCastingTime, abilities.ablChannelingTime, abilities.ablForceCost, abilities.ablEnergyCost, abilities.ablMinRange, abilities.ablMaxRange, abilities.ablNode, apc.ablLevelAquired, classes.clsResource\n" +
                 "FROM abilities\n" +
                 "LEFT JOIN apc\n" +
                 "ON abilities.ablNode = apc.Node\n" +
@@ -39,8 +39,10 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
                 String ablIsPassive = c.getString(c.getColumnIndex("ablIsPassive"));
                 String ablIconSpec = c.getString(c.getColumnIndex("ablIconSpec"));
                 int ablGlobalCooldownTime = c.getInt(c.getColumnIndex("ablGlobalCooldownTime"));
+                int ablActionPointCost = c.getInt(c.getColumnIndex("ablActionPointCost"));
                 int ablCooldownTime = c.getInt(c.getColumnIndex("ablCooldownTime"));
                 int ablCastingTime = c.getInt(c.getColumnIndex("ablCastingTime"));
+                int ablChannelingTime = c.getInt(c.getColumnIndex("ablChannelingTime"));
                 int ablForceCost = c.getInt(c.getColumnIndex("ablForceCost"));
                 int ablEnergyCost = c.getInt(c.getColumnIndex("ablEnergyCost"));
                 int ablMinRange = c.getInt(c.getColumnIndex("ablMinRange"));
@@ -49,7 +51,7 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
                 int ablLevelAquired = c.getInt(c.getColumnIndex("ablLevelAquired"));
                 String clsResource = c.getString(c.getColumnIndex("clsResource"));
 
-                abilityItem.add(new AbilitiesItem(ablName, ablDesc, ablIsPassive, ablIconSpec, ablGlobalCooldownTime, ablCooldownTime, ablCastingTime, ablForceCost, ablEnergyCost, ablMinRange, ablMaxRange, ablNode, ablLevelAquired, clsResource));
+                abilityItem.add(new AbilitiesItem(ablName, ablDesc, ablIsPassive, ablIconSpec, ablActionPointCost, ablGlobalCooldownTime, ablCooldownTime, ablCastingTime, ablChannelingTime, ablForceCost, ablEnergyCost, ablMinRange, ablMaxRange, ablNode, ablLevelAquired, clsResource));
             } while (c.moveToNext());
         }
 

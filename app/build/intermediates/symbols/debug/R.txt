@@ -985,14 +985,14 @@ int id abilitiesList 0x7f0d009c
 int id ability_pager 0x7f0d009a
 int id abilitydetails_layout 0x7f0d0092
 int id ablCastingActivation 0x7f0d008b
-int id ablChanneled 0x7f0d008d
+int id ablChanneled 0x7f0d008c
 int id ablCooldown 0x7f0d008e
 int id ablDescription 0x7f0d0090
 int id ablLevel 0x7f0d008a
 int id ablLinearLayout 0x7f0d0088
 int id ablName 0x7f0d0089
 int id ablRange 0x7f0d008f
-int id ablResource 0x7f0d008c
+int id ablResource 0x7f0d008d
 int id achDescription 0x7f0d00a3
 int id achIcon 0x7f0d00ae
 int id achRewardFleetRequisition 0x7f0d00a6
