@@ -39,7 +39,7 @@
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/advanced_class_jedi_sage"
                     android:background="@drawable/advanced_class"
-                    android:padding="8dp" />
+                    android:padding="10dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

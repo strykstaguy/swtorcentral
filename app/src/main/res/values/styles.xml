@@ -27,4 +27,13 @@
         <item name="android:textColor">#666666</item>
     </style>
 
+    <style name="SWTORButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/swtor_blue_dark</item>
+        <item name="colorButtonNormal">@color/swtor_blue</item>
+    </style>
+
+    <style name="SWTORButtonAccent" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/swtor_blue_dark</item>
+        <item name="colorButtonNormal">@color/swtor_accent</item>
+    </style>
 </resources>

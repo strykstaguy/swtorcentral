@@ -94,7 +94,8 @@ public class ClassActivity extends AppCompatActivity {
         txtViewClass.setText(txtClassName);
 
         TextView txtViewDescription = (TextView) findViewById(R.id.txtDescription);
-        txtViewDescription.setText(txtDescription);
+        txtViewDescription.setText(txtStory);
+        txtViewDescription.setText(txtStory);
 
         TextView txtViewFaction = (TextView) findViewById(R.id.txtFaction);
 
@@ -174,10 +175,6 @@ public class ClassActivity extends AppCompatActivity {
             }
         });
 
-        TextView txtViewStory = (TextView) findViewById(R.id.txtStory);
-        //txtViewStory.setText(txtStory);
-        //txtViewStory.setText(Html.fromHtml(txtStory));
-
         //Get Original Companions
         companionItems = new ArrayList<>();
         companionDatabase = new CompanionDatabase(ClassActivity.this);
@@ -195,10 +192,8 @@ public class ClassActivity extends AppCompatActivity {
         //Set Adapter
         mRecycleAdapter = new CompanionClassAdapter(companionItems);
         mRecyclerView.setAdapter(mRecycleAdapter);
-        mRecyclerView.setNestedScrollingEnabled(false);
-        //mRecyclerView.setAutoMeasureEnabled(true);
 
-        //Get Original Companions
+        //Get abilities
         abilitiesItems = new ArrayList<>();
         abilitiesDatabase = new AbilitiesDatabase(ClassActivity.this);
         abilitiesItems = abilitiesDatabase.getAbilities(txtApc);
@@ -208,13 +203,12 @@ public class ClassActivity extends AppCompatActivity {
         aRecyclerView = (RecyclerView) findViewById(R.id.abilitiesList);
 
         if (aRecyclerView != null) {
-            aLayoutManager = new GridLayoutManager(ClassActivity.this, 1, GridLayoutManager.VERTICAL, false);
+            aLayoutManager = new GridLayoutManager(ClassActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
             aRecyclerView.setLayoutManager(aLayoutManager);
         }
 
         //Set Adapter
         aRecycleAdapter = new AbilityAdapter(abilitiesItems);
-        aRecyclerView.addItemDecoration(new DividerItemDecoration(ClassActivity.this, GridLayoutManager.VERTICAL));
         aRecyclerView.setAdapter(aRecycleAdapter);
     }
 

@@ -34,8 +34,7 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.ViewHold
 
         if (classRow != null) {
             viewHolder.txtClass.setText(classRow.getClassName());
-            viewHolder.txtDescription.setText(classRow.getDescription());
-            viewHolder.txtStory.setText(classRow.getStory());
+            viewHolder.txtDescription.setText(classRow.getStory());
             viewHolder.imgClass.setImageResource(classRow.getIcon());
         }
     }
@@ -48,15 +47,13 @@ public class ClassesAdapter extends RecyclerView.Adapter<ClassesAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView txtClass;
-        public TextView txtStory;
         public TextView txtDescription;
         public ImageView imgClass;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtClass = (TextView) itemView.findViewById(R.id.txtClass);
-            txtDescription = (TextView) itemView.findViewById(R.id.txtDesc);
-            txtStory = (TextView) itemView.findViewById(R.id.txtStory);
+            txtDescription = (TextView) itemView.findViewById(R.id.txtDescription);
             imgClass = (ImageButton) itemView.findViewById(R.id.imgClass);
         }
     }

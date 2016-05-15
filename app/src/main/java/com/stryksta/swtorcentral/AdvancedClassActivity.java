@@ -2,6 +2,7 @@ package com.stryksta.swtorcentral;
 
 import java.util.ArrayList;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
@@ -15,11 +16,13 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.data.AdvancedClassItem;
 import com.stryksta.swtorcentral.data.CompanionItem;
@@ -91,10 +94,14 @@ public class AdvancedClassActivity extends AppCompatActivity {
         TextView txtadvDescription = (TextView) findViewById(R.id.txtAdvDesc);
         txtadvDescription.setText(advDescription);
 
+        //Set Discipline 3 Icon
+        ImageView advImage = (ImageView) findViewById(R.id.advImage);
+        advImage.setImageResource(advAdvanced_class_icon);
+
         //********************** Disciplines **********************//
 
         classDB = new ClassesDatabase(AdvancedClassActivity.this);
-        disciplineItems = classDB.getDisciplines(advID);
+        disciplineItems = classDB.getDisciplines(advApc);
 
         //Set Discipline 1 *******************************************
         String advDisciplineName1 = disciplineItems.get(0).getDisciplineName();
@@ -104,6 +111,16 @@ public class AdvancedClassActivity extends AppCompatActivity {
         //Set Discipline 1 Icon
         ImageButton imgDiscipline1 = (ImageButton) findViewById(R.id.imgDisciplines1);
         imgDiscipline1.setImageDrawable(advDisciplineIcon1);
+        imgDiscipline1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new MaterialDialog.Builder(AdvancedClassActivity.this)
+                        .title(R.string.faction_main)
+                        .content(R.string.lorum)
+                        .positiveText("Yes")
+                        .negativeText("No")
+                        .show();
+            }
+        });
 
         //Set Discipline 1 Text
         TextView txtViewDiscipline1 = (TextView) findViewById(R.id.txtDiscipline1);

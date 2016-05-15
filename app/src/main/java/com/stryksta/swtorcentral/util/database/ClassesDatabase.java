@@ -88,7 +88,7 @@ public class ClassesDatabase extends SQLiteAssetHelper {
 
         @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
         String sqlSelect = builder
-                .append("SELECT advanced_classes._id, advanced_classes.advClassName, classes.clsName, advanced_classes.advDescription, advanced_classes.advRole, advanced_classes.advArmor, advanced_classes.advWeapons, advanced_classes.advPrimaryAttribute, advanced_classes.advIcon, advanced_classes.advAPN ")
+                .append("SELECT advanced_classes._id, advanced_classes.advClassName, classes.clsName, advanced_classes.advDescription, advanced_classes.advRole, advanced_classes.advArmor, advanced_classes.advWeapons, advanced_classes.advPrimaryAttribute, advanced_classes.advResource, advanced_classes.advIcon, advanced_classes.advAPN ")
                 .append("FROM advanced_classes ")
                 .append("LEFT JOIN classes ")
                 .append("ON advanced_classes.clsID = classes._id ")
@@ -109,10 +109,11 @@ public class ClassesDatabase extends SQLiteAssetHelper {
                 String advArmor = c.getString(c.getColumnIndex("advArmor"));
                 String advWeapons = c.getString(c.getColumnIndex("advWeapons"));
                 String advPriAttribute = c.getString(c.getColumnIndex("advPrimaryAttribute"));
+                String advResource = c.getString(c.getColumnIndex("advResource"));
                 int advAdvanced_class_icon = mContext.getResources().getIdentifier(c.getString(c.getColumnIndex("advIcon")), "drawable", mContext.getPackageName());
                 String advApc = c.getString(c.getColumnIndex("advAPN"));
 
-                advancedClassItems.add(new AdvancedClassItem(advClass_id, advClassName, clsName, advDescription, advRole, advArmor, advWeapons, advPriAttribute, advAdvanced_class_icon, advApc));
+                advancedClassItems.add(new AdvancedClassItem(advClass_id, advClassName, clsName, advDescription, advRole, advWeapons, advArmor, advPriAttribute, advResource, advAdvanced_class_icon, advApc));
             } while (c.moveToNext());
         }
         c.close();
@@ -120,36 +121,35 @@ public class ClassesDatabase extends SQLiteAssetHelper {
         return advancedClassItems;
     }
 
-    public ArrayList<DisciplineItem> getDisciplines(int advancedClassID) {
+    public ArrayList<DisciplineItem> getDisciplines(String advApc) {
         ArrayList<DisciplineItem> disciplineItems = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
         @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
         String sqlSelect = builder
-                .append("SELECT disciplines._id, advanced_classes.advClassName, disciplines.sortindex, disciplines.type, disciplines.name, disciplines.description, disciplines.abl, disciplines.apc ")
+                .append("SELECT disciplines._id, advanced_classes.advClassName, disciplines.disSortIndex, disciplines.disType, disciplines.disName, disciplines.disDescription, disciplines.disAbl, disciplines.disNode ")
                 .append("FROM disciplines ")
                 .append("LEFT JOIN advanced_classes ")
-                .append("ON disciplines.advanced_class_id = advanced_classes._id ")
-                .append("WHERE disciplines.advanced_class_id = ? ")
-                .append("AND disciplines.type IS NOT \"Utility\" ")
-                .append("ORDER BY disciplines.sortindex ASC")
+                .append("ON disciplines.advClassApc = advanced_classes.advAPN ")
+                .append("WHERE disciplines.advClassApc = ? ")
+                .append("AND disciplines.disType IS NOT \"Utility\" ")
+                .append("ORDER BY disciplines.disSortIndex ASC")
                 .toString();
 
-        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(advancedClassID)});
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(advApc)});
 
         if (c.moveToFirst()) {
             do {
 
                 int disID = c.getInt(c.getColumnIndex("_id"));
                 String advClassName = c.getString(c.getColumnIndex("advClassName"));
-                int disSortIndex = c.getInt(c.getColumnIndex("sortindex"));
-                String disType = c.getString(c.getColumnIndex("type"));
-                String disName = c.getString(c.getColumnIndex("name"));
-                String disDescription = c.getString(c.getColumnIndex("description"));
-                String disAbl = c.getString(c.getColumnIndex("abl"));
-                String disApc = c.getString(c.getColumnIndex("apc"));
+                int disSortIndex = c.getInt(c.getColumnIndex("disSortIndex"));
+                String disType = c.getString(c.getColumnIndex("disType"));
+                String disName = c.getString(c.getColumnIndex("disName"));
+                String disDescription = c.getString(c.getColumnIndex("disDescription"));
+                String disAbl = c.getString(c.getColumnIndex("disAbl"));
+                String disApc = c.getString(c.getColumnIndex("disNode"));
 
-                //int disID, String advClassName, int disSortIndex, String disType, String disName, String disDescription, String disAbl, String disApc
                 disciplineItems.add(new DisciplineItem(disID, advClassName, disSortIndex, disType, disName, disDescription, disAbl, disApc));
             } while (c.moveToNext());
         }
