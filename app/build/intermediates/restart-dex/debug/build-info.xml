@@ -1,40 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="30142668844385"
-    verifier="COMPATIBLE" >
+    timestamp="10697223739458" >
 
     <task
         name="javac"
-        duration="1171" />
+        duration="10164" />
     <task
         name="instant-run-dex"
-        duration="1607" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="65" />
+        duration="5749" />
     <task
         name="verifier"
-        duration="3" />
+        duration="972" />
 
     <artifact
-        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="29664898325538" >
+    <build timestamp="10697223739458" >
         <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="30142668844385"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

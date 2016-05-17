@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -14,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.clans.fab.FloatingActionButton;
 import com.stryksta.swtorcentral.adapters.AbilityAdapter;
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
@@ -41,19 +43,6 @@ public class ClassActivity extends AppCompatActivity {
     String txtNode;
     private ClassesDatabase classDB;
     ArrayList<AdvancedClassItem> advClassItems;
-
-    //Companions
-    private CompanionDatabase companionDatabase;
-    ArrayList<CompanionItem> companionItems;
-    private RecyclerView mRecyclerView;
-    private GridLayoutManager mLayoutManager;
-    private CompanionClassAdapter mRecycleAdapter;
-    //Abilities
-    private AbilitiesDatabase abilitiesDatabase;
-    ArrayList<AbilitiesItem> abilitiesItems;
-    private RecyclerView aRecyclerView;
-    private GridLayoutManager aLayoutManager;
-    private AbilityAdapter aRecycleAdapter;
 
     private Toolbar mToolbar;
 
@@ -94,8 +83,10 @@ public class ClassActivity extends AppCompatActivity {
         txtViewClass.setText(txtClassName);
 
         TextView txtViewDescription = (TextView) findViewById(R.id.txtDescription);
-        txtViewDescription.setText(txtStory);
-        txtViewDescription.setText(txtStory);
+        txtViewDescription.setText(txtDescription);
+
+        TextView txtViewStory = (TextView) findViewById(R.id.txtStory);
+        txtViewStory.setText(Html.fromHtml(txtStory));
 
         TextView txtViewFaction = (TextView) findViewById(R.id.txtFaction);
 
@@ -175,41 +166,22 @@ public class ClassActivity extends AppCompatActivity {
             }
         });
 
-        //Get Original Companions
-        companionItems = new ArrayList<>();
-        companionDatabase = new CompanionDatabase(ClassActivity.this);
-        companionItems = companionDatabase.getOriginalCompanions(txtNode);
-        companionDatabase.close();
 
-        //Set RecyclerView
-        mRecyclerView = (RecyclerView) findViewById(R.id.companionsList);
+        FloatingActionButton fabCompanions = (FloatingActionButton) findViewById(R.id.fabAbilities);
+        fabCompanions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
 
-        if (mRecyclerView != null) {
-            mLayoutManager = new GridLayoutManager(ClassActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
-            mRecyclerView.setLayoutManager(mLayoutManager);
-        }
+                bundle.putString("clsApc", txtApc);
+                bundle.putString("clsName", txtClassName);
+                bundle.putString("clsAbility", txtAbilities);
 
-        //Set Adapter
-        mRecycleAdapter = new CompanionClassAdapter(companionItems);
-        mRecyclerView.setAdapter(mRecycleAdapter);
-
-        //Get abilities
-        abilitiesItems = new ArrayList<>();
-        abilitiesDatabase = new AbilitiesDatabase(ClassActivity.this);
-        abilitiesItems = abilitiesDatabase.getAbilities(txtApc);
-        abilitiesDatabase.close();
-
-        //Set RecyclerView
-        aRecyclerView = (RecyclerView) findViewById(R.id.abilitiesList);
-
-        if (aRecyclerView != null) {
-            aLayoutManager = new GridLayoutManager(ClassActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
-            aRecyclerView.setLayoutManager(aLayoutManager);
-        }
-
-        //Set Adapter
-        aRecycleAdapter = new AbilityAdapter(abilitiesItems);
-        aRecyclerView.setAdapter(aRecycleAdapter);
+                Intent intent = new Intent(ClassActivity.this, AbilitiesActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

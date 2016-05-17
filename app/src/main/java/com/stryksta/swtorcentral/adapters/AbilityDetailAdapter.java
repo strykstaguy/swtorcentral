@@ -21,7 +21,7 @@ public class AbilityDetailAdapter extends RecyclerView.Adapter<AbilityDetailAdap
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
-        View view = View.inflate(viewGroup.getContext(), R.layout.ability_detail_row, null);
+        View view = View.inflate(viewGroup.getContext(), R.layout.ability_row, null);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }

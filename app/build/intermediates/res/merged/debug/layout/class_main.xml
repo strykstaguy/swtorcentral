@@ -107,8 +107,8 @@
                 card_view:cardCornerRadius="2dp"
                 android:clickable="true"
                 android:foreground="@drawable/card_foreground"
-                android:layout_marginLeft="@dimen/dim_10"
                 android:layout_marginRight="@dimen/dim_10"
+                android:layout_marginLeft="@dimen/dim_10"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp">
 
@@ -128,138 +128,90 @@
                         android:textSize="14sp"
                         android:layout_margin="10dp" />
 
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:padding="2dp"
+                        android:layout_marginLeft="@dimen/dim_5"
+                        android:layout_marginRight="@dimen/dim_5"
+                        android:background="#f3f3f3"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingTop="@dimen/dim_10"
+                        android:paddingBottom="@dimen/dim_10"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginRight="@dimen/dim_20">
+
+                            <ImageButton
+                                android:id="@+id/imgAdvancedClass1"
+                                android:layout_width="@dimen/fab_normal"
+                                android:layout_height="@dimen/fab_normal"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/round"
+                                android:elevation="3dp"
+                                android:padding="4dp"
+                                android:scaleType="fitXY"
+                                android:layout_gravity="center"
+                                android:src="@drawable/advanced_class_powertech"/>
+
+                            <TextView
+                                android:id="@+id/txtAdvancedClass1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/subheader"
+                                android:text="Seer"
+                                android:textSize="14sp"
+                                android:layout_gravity="center_horizontal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="@dimen/dim_20">
+
+                            <ImageButton
+                                android:id="@+id/imgAdvancedClass2"
+                                android:layout_width="@dimen/fab_normal"
+                                android:layout_height="@dimen/fab_normal"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/round"
+                                android:elevation="3dp"
+                                android:scaleType="fitXY"
+                                android:padding="4dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/advanced_class_mercenary"/>
+
+                            <TextView
+                                android:id="@+id/txtAdvancedClass2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/subheader"
+                                android:text="Jedi Sage"
+                                android:textSize="14sp"
+                                android:layout_gravity="center_horizontal" />
+
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <TextView
-                android:id="@+id/txtAdvancedClasses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center_vertical"
-                android:singleLine="true"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="@color/text"
-                android:background="@android:color/transparent"
-                android:text="Advanced Classes"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="@dimen/dim_10"
-                android:paddingBottom="@dimen/dim_10"
-                android:layout_marginLeft="@dimen/dim_10"
-                android:layout_marginRight="@dimen/dim_10"
-                android:gravity="center">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginRight="@dimen/dim_40">
-
-                    <ImageButton
-                        android:id="@+id/imgAdvancedClass1"
-                        android:layout_width="@dimen/fab_normal"
-                        android:layout_height="@dimen/fab_normal"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@drawable/round_grey_bordered"
-                        android:elevation="3dp"
-                        android:padding="4dp"
-                        android:scaleType="fitXY"
-                        android:layout_gravity="center"
-                        android:src="@drawable/advanced_class_powertech"/>
-
-                    <TextView
-                        android:id="@+id/txtAdvancedClass1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="@color/subheader"
-                        android:text="Seer"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="@dimen/dim_40">
-
-                    <ImageButton
-                        android:id="@+id/imgAdvancedClass2"
-                        android:layout_width="@dimen/fab_normal"
-                        android:layout_height="@dimen/fab_normal"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@drawable/round_grey_bordered"
-                        android:elevation="3dp"
-                        android:scaleType="fitXY"
-                        android:padding="4dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/advanced_class_mercenary"/>
-
-                    <TextView
-                        android:id="@+id/txtAdvancedClass2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="@color/subheader"
-                        android:text="Jedi Sage"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
-
-                <TextView
-                    android:id="@+id/txtCompanionsSep"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center_vertical"
-                    android:singleLine="true"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="@color/text"
-                    android:background="@android:color/transparent"
-                    android:text="Companions"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnMoreCompanions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text="more"
-                    android:theme="@style/SWTORButton"
-                    android:textColor="@color/white" />
-            </RelativeLayout>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/companionsList"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:scrollbars="none" />
-
-            <TextView
-                android:id="@+id/txtAbilitiesSep"
+                android:id="@+id/txtStorySep"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:gravity="center_vertical"
@@ -268,20 +220,76 @@
                 android:textAllCaps="true"
                 android:textColor="@color/text"
                 android:background="@android:color/transparent"
-                android:text="Base Abilities"
+                android:text="Story"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/abilitiesList"
-                android:layout_width="match_parent"
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/dim_5"
-                android:scrollbars="none" />
+                android:layout_gravity="center_horizontal"
+                card_view:cardElevation="2dp"
+                card_view:cardCornerRadius="2dp"
+                android:clickable="true"
+                android:foreground="@drawable/card_foreground"
+                android:layout_marginRight="@dimen/dim_10"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:id="@+id/txtStory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/text"
+                    android:gravity="center"
+                    android:text="@string/test_profile_desc"
+                    android:textSize="14sp"
+                    android:layout_margin="10dp" />
+            </android.support.v7.widget.CardView>
+
 
         </LinearLayout>
 
 
     </android.support.v4.widget.NestedScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_red"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        app:menu_icon="@drawable/ic_more"
+        android:backgroundTint="@color/white"
+        app:menu_labels_ellipsize="end"
+        app:menu_labels_singleLine="true"
+        app:menu_backgroundColor="@android:color/transparent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabCompanions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_companion"
+            android:tint="@color/white"
+            app:fab_size="mini"
+            app:fab_label="Companions" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabAbilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_abilities"
+            android:tint="@color/white"
+            app:fab_size="mini"
+            app:fab_label="Abilities"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 </android.support.design.widget.CoordinatorLayout>

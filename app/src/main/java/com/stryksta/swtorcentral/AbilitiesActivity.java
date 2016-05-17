@@ -1,29 +1,37 @@
 package com.stryksta.swtorcentral;
 
-import com.stryksta.swtorcentral.adapters.AbilityPagerAdapter;
-import com.stryksta.swtorcentral.adapters.PlanetPagerAdapter;
-import com.stryksta.swtorcentral.data.ClassItem;
-import com.stryksta.swtorcentral.util.database.ClassesDatabase;
-import com.stryksta.swtorcentral.util.database.PlanetDatabase;
-
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.TextView;
+
+import com.stryksta.swtorcentral.adapters.AbilityDetailAdapter;
+import com.stryksta.swtorcentral.data.AbilitiesItem;
+import com.stryksta.swtorcentral.util.DividerItemDecoration;
+import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
 
 import java.util.ArrayList;
 
 public class AbilitiesActivity extends AppCompatActivity {
-    private String planetText;
-    private String factionText;
-    private String typeText;
-    private ClassesDatabase clsDatabase;
-    ArrayList<ClassItem> classItems;
+    //Abilities
+    private AbilitiesDatabase abilitiesDatabase;
+    ArrayList<AbilitiesItem> abilitiesItems;
+    private RecyclerView aRecyclerView;
+    private GridLayoutManager aLayoutManager;
+    private AbilityDetailAdapter aRecycleAdapter;
+
+    private String clsApc;
+    private String clsName;
+    private String clsAbility;
+
     private Toolbar mToolbar;
 
     @Override
@@ -39,50 +47,45 @@ public class AbilitiesActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+            getWindow().setStatusBarColor(ContextCompat.getColor(AbilitiesActivity.this, R.color.colorPrimary));
         }
 
         Bundle bundle = getIntent().getExtras();
 
         if ( bundle != null ) {
-            planetText = bundle.getString("planet");
-            factionText = bundle.getString("faction");
-            typeText = bundle.getString("type");
+            clsApc = bundle.getString("clsApc");
+            clsName = bundle.getString("clsName");
+            clsAbility = bundle.getString("clsAbility");
         }
-        getSupportActionBar().setTitle("Abilities");
+        getSupportActionBar().setTitle(clsName + " Abilities");
 
-        //Get Classes Info
-        clsDatabase = new ClassesDatabase(AbilitiesActivity.this);
-        classItems = clsDatabase.getClasses();
-        clsDatabase.close();
+        TextView txtViewStory = (TextView) findViewById(R.id.ablSubtitle);
+        txtViewStory.setText(clsName);
 
+        TextView txtDescription = (TextView) findViewById(R.id.txtDescription);
+        txtDescription.setText(Html.fromHtml(clsAbility));
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.ability_pager);
-        if (viewPager != null) {
-            setupViewPager(viewPager);
+        //Get Base Abilities
+        abilitiesItems = new ArrayList<>();
+        abilitiesDatabase = new AbilitiesDatabase(AbilitiesActivity.this);
+        abilitiesItems = abilitiesDatabase.getAbilities(clsApc);
+        abilitiesDatabase.close();
+
+        //Set RecyclerView
+        aRecyclerView = (RecyclerView) findViewById(R.id.abilitiesList);
+
+        if (aRecyclerView != null) {
+            aLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);
+            aRecyclerView.setLayoutManager(aLayoutManager);
         }
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+        //Set Adapter
+        aRecycleAdapter = new AbilityDetailAdapter(abilitiesItems);
+        aRecyclerView.setAdapter(aRecycleAdapter);
 
         // Debug the thread name
         Log.d("SWTORCentral", Thread.currentThread().getName());
 
-    }
-
-    private void setupViewPager(ViewPager viewPager) {
-        AbilityPagerAdapter adapter = new AbilityPagerAdapter(getSupportFragmentManager());
-        //adapter.addFragment(new AbilityFragment(), "Information");
-        //adapter.addFragment(new AbilityFragment(), "Datacrons");
-        //adapter.addFragment(new AbilityFragment(), "Lore");
-        int clsTabCount = 0;
-        for (ClassItem listClassName : classItems) {
-            //Log.d("SWTORCentral", "Class Name: " + clsTabCount);
-            adapter.addFragment(AbilityFragment.newInstance(clsTabCount, listClassName.getClassName(), listClassName.getApc()), listClassName.getClassName());
-            clsTabCount++;
-        }
-
-        viewPager.setAdapter(adapter);
     }
 
     @Override
@@ -94,13 +97,5 @@ public class AbilitiesActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() == 0) {
-            this.finish();
-        } else {
-            getFragmentManager().popBackStack();
-        }
     }
 }
