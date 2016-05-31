@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ablLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ablLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:text="Level: 10"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/ablCastingActivation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:text="Activation: 2.5s"
+        android:paddingBottom="5.0dip"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ablChanneled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:text="Channeled: 3s"
+        android:paddingBottom="5.0dip"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ablResource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Force Cost: 50"
+        android:textColor="@color/text"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ablCooldown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:text="Cooldown: 6s"
+        android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ablRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Range: 30m"
+            android:textColor="@color/text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ablDescription"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:text="dfasdfsdfsd"
+            android:paddingBottom="5.0dip"
+            android:paddingTop="10.0dip"
+            android:textSize="12sp" />
+</LinearLayout>

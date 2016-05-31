@@ -1,5 +1,6 @@
 package com.stryksta.swtorcentral;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -10,13 +11,18 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.adapters.AbilityDetailAdapter;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
 import com.stryksta.swtorcentral.util.DividerItemDecoration;
+import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -82,6 +88,51 @@ public class AbilitiesActivity extends AppCompatActivity {
         //Set Adapter
         aRecycleAdapter = new AbilityDetailAdapter(abilitiesItems);
         aRecyclerView.setAdapter(aRecycleAdapter);
+        aRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, aRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
+        {
+            public void onItemClick(View view, int position)
+            {
+                boolean wrapInScrollView = true;
+                MaterialDialog dialog = new MaterialDialog.Builder(AbilitiesActivity.this)
+                        .title(abilitiesItems.get(position).getAbilityName())
+                        .customView(R.layout.ability_dialog, wrapInScrollView)
+                        .positiveText(R.string.positive)
+                        .show();
+
+                View ablView = dialog.getCustomView();
+
+                TextView ablLevel = (TextView) ablView.findViewById(R.id.ablLevel);
+                ablLevel.setText(abilitiesItems.get(position).getLevelAquired());
+                /*
+                TextView ablCastingActivation = (TextView) ablView.findViewById(R.id.ablCastingActivation);
+                if (abilitiesItems.get(position).getAbilityPassive() == "True") {
+                    ablCastingActivation.setText("Passive");
+                } else {
+                    if (abilitiesItems.get(position).getCastingTime() == 0) {
+                        ablCastingActivation.setText("Instant");
+                    } else {
+                        ablCastingActivation.setText("Activation: " +  String.valueOf(abilitiesItems.get(position).getCastingTime()) + "s");
+                    }
+                }
+
+                TextView ablChanneled = (TextView) ablView.findViewById(R.id.ablChanneled);
+                if (abilitiesItems.get(position).getChannelingTime() == 0) {
+                    ablChanneled.setVisibility(View.GONE);
+                } else {
+                    ablChanneled.setText("Channeled: " +  String.valueOf(abilitiesItems.get(position).getCastingTime()) + "s");
+                }
+
+                TextView ablDescription = (TextView) ablView.findViewById(R.id.ablDescription);
+                ablDescription.setText(abilitiesItems.get(position).getAbilityDescription());
+                */
+
+            }
+
+            public void onItemLongClick(View view, int position)
+            {
+
+            }
+        }));
 
         // Debug the thread name
         Log.d("SWTORCentral", Thread.currentThread().getName());

@@ -152,8 +152,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/dim_10"
                 android:layout_marginRight="@dimen/dim_10"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                app:behavior_overlapTop="35dp"
                 android:scrollbars="none"/>
         </LinearLayout>
 

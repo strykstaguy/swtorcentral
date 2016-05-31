@@ -666,6 +666,7 @@
     <string name="organizationslore">Organizations</string>
     <string name="personslore">Persons</string>
     <string name="planet_main">Planet</string>
+    <string name="positive">OK</string>
     <string name="pref_send_report">Send crash reports</string>
     <string name="pref_send_report_summary">Helps to fix bugs</string>
     <string name="pref_sync_frequency">Sync frequency</string>
