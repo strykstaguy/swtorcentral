@@ -102,8 +102,8 @@ public class AbilitiesActivity extends AppCompatActivity {
                 View ablView = dialog.getCustomView();
 
                 TextView ablLevel = (TextView) ablView.findViewById(R.id.ablLevel);
-                ablLevel.setText(abilitiesItems.get(position).getLevelAquired());
-                /*
+                ablLevel.setText(String.valueOf(abilitiesItems.get(position).getLevelAquired()));
+
                 TextView ablCastingActivation = (TextView) ablView.findViewById(R.id.ablCastingActivation);
                 if (abilitiesItems.get(position).getAbilityPassive() == "True") {
                     ablCastingActivation.setText("Passive");
@@ -124,8 +124,6 @@ public class AbilitiesActivity extends AppCompatActivity {
 
                 TextView ablDescription = (TextView) ablView.findViewById(R.id.ablDescription);
                 ablDescription.setText(abilitiesItems.get(position).getAbilityDescription());
-                */
-
             }
 
             public void onItemLongClick(View view, int position)
