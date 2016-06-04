@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 import com.stryksta.swtorcentral.adapters.AbilityAdapter;
 import com.stryksta.swtorcentral.adapters.CompanionClassAdapter;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
@@ -166,6 +167,9 @@ public class ClassActivity extends AppCompatActivity {
             }
         });
 
+
+        FloatingActionMenu fabMenu = (FloatingActionMenu) findViewById(R.id.class_menu_fab);
+        fabMenu.setIconAnimated(false);
 
         FloatingActionButton fabCompanions = (FloatingActionButton) findViewById(R.id.fabAbilities);
         fabCompanions.setOnClickListener(new View.OnClickListener() {

@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.github.clans.fab.FloatingActionMenu;
 import com.stryksta.swtorcentral.adapters.AbilityDetailAdapter;
 import com.stryksta.swtorcentral.data.AbilitiesItem;
 import com.stryksta.swtorcentral.util.DividerItemDecoration;
@@ -29,10 +30,18 @@ import java.util.ArrayList;
 public class AbilitiesActivity extends AppCompatActivity {
     //Abilities
     private AbilitiesDatabase abilitiesDatabase;
-    ArrayList<AbilitiesItem> abilitiesItems;
-    private RecyclerView aRecyclerView;
+    ArrayList<AbilitiesItem> baseAbilities;
+    ArrayList<AbilitiesItem> playerAbilitiesItems;
+
+    private RecyclerView baseRecyclerView;
+    private RecyclerView playerRecyclerView;
+
     private GridLayoutManager aLayoutManager;
-    private AbilityDetailAdapter aRecycleAdapter;
+    private GridLayoutManager aPlayerLayoutManager;
+
+
+    private AbilityDetailAdapter playerRecycleAdapter;
+    private AbilityDetailAdapter baseRecycleAdapter;
 
     private String clsApc;
     private String clsName;
@@ -58,76 +67,117 @@ public class AbilitiesActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-        if ( bundle != null ) {
+        if (bundle != null) {
             clsApc = bundle.getString("clsApc");
             clsName = bundle.getString("clsName");
             clsAbility = bundle.getString("clsAbility");
         }
         getSupportActionBar().setTitle(clsName + " Abilities");
 
-        TextView txtViewStory = (TextView) findViewById(R.id.ablSubtitle);
-        txtViewStory.setText(clsName);
+        TextView ablTitle = (TextView) findViewById(R.id.ablTitle);
+        ablTitle.setText(clsName);
+
+        TextView ablSubtitle = (TextView) findViewById(R.id.ablSubtitle);
+        ablSubtitle.setText("Abilities");
 
         TextView txtDescription = (TextView) findViewById(R.id.txtDescription);
         txtDescription.setText(Html.fromHtml(clsAbility));
 
-        //Get Base Abilities
-        abilitiesItems = new ArrayList<>();
+        //Get Abilities
+        baseAbilities = new ArrayList<>();
+        playerAbilitiesItems = new ArrayList<>();
+
         abilitiesDatabase = new AbilitiesDatabase(AbilitiesActivity.this);
-        abilitiesItems = abilitiesDatabase.getAbilities(clsApc);
+        baseAbilities = abilitiesDatabase.getAbilities(clsApc);
+        playerAbilitiesItems = abilitiesDatabase.getAbilities("apc.pc_default");
+        Log.d("SWTORCentral", "Player Abilities Count: " + playerAbilitiesItems.size());
         abilitiesDatabase.close();
 
-        //Set RecyclerView
-        aRecyclerView = (RecyclerView) findViewById(R.id.abilitiesList);
+        //Set Base RecyclerView
+        baseRecyclerView = (RecyclerView) findViewById(R.id.abilitiesBaseList);
 
-        if (aRecyclerView != null) {
+        if (baseRecyclerView != null) {
             aLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);
-            aRecyclerView.setLayoutManager(aLayoutManager);
+            baseRecyclerView.setLayoutManager(aLayoutManager);
+
+            /*
+            baseRecyclerView.setLayoutManager(new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false){
+                @Override
+                public boolean canScrollHorizontally() {
+                    return false;
+                }
+
+                @Override
+                public boolean canScrollVertically() {
+                    return false;
+                }
+            });
+            */
         }
 
-        //Set Adapter
-        aRecycleAdapter = new AbilityDetailAdapter(abilitiesItems);
-        aRecyclerView.setAdapter(aRecycleAdapter);
-        aRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, aRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
-        {
-            public void onItemClick(View view, int position)
-            {
+        //Set Base Adapter
+        baseRecycleAdapter = new AbilityDetailAdapter(baseAbilities);
+        baseRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
+        baseRecyclerView.setAdapter(baseRecycleAdapter);
+        baseRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, baseRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            public void onItemClick(View view, int position) {
                 boolean wrapInScrollView = true;
                 MaterialDialog dialog = new MaterialDialog.Builder(AbilitiesActivity.this)
-                        .title(abilitiesItems.get(position).getAbilityName())
+                        .title(baseAbilities.get(position).getAbilityName())
                         .customView(R.layout.ability_dialog, wrapInScrollView)
                         .positiveText(R.string.positive)
                         .show();
 
                 View ablView = dialog.getCustomView();
+                showAbilityDetail(ablView, position, baseAbilities);
 
-                TextView ablLevel = (TextView) ablView.findViewById(R.id.ablLevel);
-                ablLevel.setText(String.valueOf(abilitiesItems.get(position).getLevelAquired()));
-
-                TextView ablCastingActivation = (TextView) ablView.findViewById(R.id.ablCastingActivation);
-                if (abilitiesItems.get(position).getAbilityPassive() == "True") {
-                    ablCastingActivation.setText("Passive");
-                } else {
-                    if (abilitiesItems.get(position).getCastingTime() == 0) {
-                        ablCastingActivation.setText("Instant");
-                    } else {
-                        ablCastingActivation.setText("Activation: " +  String.valueOf(abilitiesItems.get(position).getCastingTime()) + "s");
-                    }
-                }
-
-                TextView ablChanneled = (TextView) ablView.findViewById(R.id.ablChanneled);
-                if (abilitiesItems.get(position).getChannelingTime() == 0) {
-                    ablChanneled.setVisibility(View.GONE);
-                } else {
-                    ablChanneled.setText("Channeled: " +  String.valueOf(abilitiesItems.get(position).getCastingTime()) + "s");
-                }
-
-                TextView ablDescription = (TextView) ablView.findViewById(R.id.ablDescription);
-                ablDescription.setText(abilitiesItems.get(position).getAbilityDescription());
             }
 
-            public void onItemLongClick(View view, int position)
-            {
+            public void onItemLongClick(View view, int position) {
+
+            }
+        }));
+
+        //Set Base RecyclerView
+        playerRecyclerView = (RecyclerView) findViewById(R.id.abilitiesPlayerList);
+
+        if (playerRecyclerView != null) {
+            aPlayerLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);
+            playerRecyclerView.setLayoutManager(aPlayerLayoutManager);
+            /*
+            playerRecyclerView.setLayoutManager(new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false){
+                @Override
+                public boolean canScrollHorizontally() {
+                    return false;
+                }
+
+                @Override
+                public boolean canScrollVertically() {
+                    return false;
+                }
+            });
+            */
+        }
+
+        //Set Base Adapter
+        playerRecycleAdapter = new AbilityDetailAdapter(playerAbilitiesItems);
+        playerRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
+        playerRecyclerView.setAdapter(playerRecycleAdapter);
+        playerRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, playerRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            public void onItemClick(View view, int position) {
+                boolean wrapInScrollView = true;
+                MaterialDialog dialog = new MaterialDialog.Builder(AbilitiesActivity.this)
+                        .title(playerAbilitiesItems.get(position).getAbilityName())
+                        .customView(R.layout.ability_dialog, wrapInScrollView)
+                        .positiveText(R.string.positive)
+                        .show();
+
+                View ablView = dialog.getCustomView();
+                showAbilityDetail(ablView, position, playerAbilitiesItems);
+
+            }
+
+            public void onItemLongClick(View view, int position) {
 
             }
         }));
@@ -135,6 +185,59 @@ public class AbilitiesActivity extends AppCompatActivity {
         // Debug the thread name
         Log.d("SWTORCentral", Thread.currentThread().getName());
 
+    }
+
+    public void showAbilityDetail (View ablView, int position, ArrayList<AbilitiesItem> abilities)
+
+    {
+
+        TextView ablLevel = (TextView) ablView.findViewById(R.id.ablLevel);
+        ablLevel.setText("Level Acquired: " + String.valueOf(abilities.get(position).getLevelAquired()));
+
+        TextView ablCastingActivation = (TextView) ablView.findViewById(R.id.ablCastingActivation);
+        if (abilities.get(position).getAbilityPassive() == "True") {
+            ablCastingActivation.setText("Passive");
+        } else {
+            if (abilities.get(position).getCastingTime() == 0) {
+                ablCastingActivation.setText("Instant");
+            } else {
+                ablCastingActivation.setText("Activation: " + String.valueOf(abilities.get(position).getCastingTime()) + "s");
+            }
+        }
+
+        TextView ablChanneled = (TextView) ablView.findViewById(R.id.ablChanneled);
+        if (abilities.get(position).getChannelingTime() == 0) {
+            ablChanneled.setVisibility(View.GONE);
+        } else {
+            ablChanneled.setText("Channeled: " + String.valueOf(abilities.get(position).getCastingTime()) + "s");
+        }
+
+        TextView ablCooldown = (TextView) ablView.findViewById(R.id.ablCooldown);
+        if (abilities.get(position).getCooldownTime() == 0) {
+            ablCooldown.setVisibility(View.GONE);
+        } else {
+            ablCooldown.setText("Cooldown: " + String.valueOf(abilities.get(position).getCooldownTime()) + "s");
+        }
+
+        TextView ablRange = (TextView) ablView.findViewById(R.id.ablRange);
+        if (abilities.get(position).getMaxRange() == 0) {
+            ablRange.setVisibility(View.GONE);
+        } else {
+            int maxRange = abilities.get(position).getCooldownTime() * 10;
+            ablRange.setText("Range: " + String.valueOf(maxRange) + "m");
+        }
+
+        TextView ablResource = (TextView) ablView.findViewById(R.id.ablResource);
+        if (abilities.get(position).getEnergyCost() != 0) {
+            ablResource.setText(abilities.get(position).getClassResource() + " " + String.valueOf(abilities.get(position).getEnergyCost()));
+        } else if (abilities.get(position).getForceCost() != 0) {
+            ablResource.setText(abilities.get(position).getClassResource() + " " + String.valueOf(abilities.get(position).getForceCost()));
+        } else {
+            ablResource.setVisibility(View.GONE);
+        }
+
+        TextView ablDescription = (TextView) ablView.findViewById(R.id.ablDescription);
+        ablDescription.setText(abilities.get(position).getAbilityDescription());
     }
 
     @Override

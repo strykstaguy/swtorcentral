@@ -21,13 +21,15 @@ public class AbilitiesDatabase extends SQLiteAssetHelper {
         ArrayList<AbilitiesItem> abilityItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
-        String sqlSelect = "SELECT abilities._id, abilities.ablName, abilities.ablDesc, abilities.ablID, abilities.ablIsPassive, abilities.ablIconSpec, abilities.ablActionPointCost, abilities.ablGlobalCooldownTime, abilities.ablCooldownTime, abilities.ablCastingTime, abilities.ablChannelingTime, abilities.ablForceCost, abilities.ablEnergyCost, abilities.ablMinRange, abilities.ablMaxRange, abilities.ablNode, apc.ablLevelAquired, classes.clsResource\n" +
+        String sqlSelect = "SELECT abilities._id, abilities.ablName, abilities.ablDesc, abilities.ablID, abilities.ablIsPassive , abilities.ablIconSpec, abilities.ablGlobalCooldownTime, abilities.ablActionPointCost, abilities.ablCooldownTime , abilities.ablCastingTime, abilities.ablChannelingTime, abilities.ablForceCost, abilities.ablEnergyCost, abilities.ablMinRange, abilities.ablMaxRange, abilities.ablNode, apc.ablLevelAquired, classes.clsResource\n" +
                 "FROM abilities\n" +
                 "LEFT JOIN apc\n" +
                 "ON abilities.ablNode = apc.Node\n" +
                 "LEFT JOIN classes\n" +
                 "ON apc.NodeCat = classes.clsApc\n" +
                 "WHERE apc.NodeCat = ?\n" +
+                "AND abilities.ablName GLOB '*[A-Za-z]*'\n" +
+                "AND abilities.ablDesc GLOB '*[A-Za-z]*'\n" +
                 "ORDER BY apc.ablLevelAquired, abilities.ablName";
         Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(apc)});
 

@@ -258,7 +258,7 @@
     </android.support.v4.widget.NestedScrollView>
 
     <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/menu_red"
+        android:id="@+id/class_menu_fab"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
