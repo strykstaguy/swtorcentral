@@ -18,23 +18,6 @@ public class CompanionDatabase extends SQLiteAssetHelper {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
 
-	/*
-	public Cursor getOriginalCompanions(long id) {
-		SQLiteDatabase db = getReadableDatabase();
-		SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
-
-		String [] sqlSelect = {"0 _id", "companion_name", "class_id", "role", "crew_skill_bonus", "romance", "primarystat", "secondarystat", "primaryweapon", "secondaryweapon", "gender", "race", "found", "armor", "description"}; 
-		String sqlTables = "companions";
-
-		qb.setTables(sqlTables);
-		Cursor c = qb.query(db, sqlSelect, "class_id" + " = ?", new String[]{String.valueOf(id)}, null, null, null);
-		
-		c.moveToFirst();
-		//c.close();
-		return c;
-	}
-	*/
-
 	public ArrayList<CompanionItem> getOriginalCompanions(String node) {
 		ArrayList<CompanionItem> companionItems = new ArrayList<CompanionItem>();
 		SQLiteDatabase db = getReadableDatabase();
@@ -80,7 +63,12 @@ public class CompanionDatabase extends SQLiteAssetHelper {
         String sqlSelect = "SELECT nco.ncoName as comName, nco.ncoTitle as comTitle, nco.ncoDescription as comDescription, nco.ncoCategory as comCategory, nco.ncoSubCategory as comSubCategory, nco.ncoInfluenceCap as comInfluenceCap, nco.ncoMaxInfluenceTier as MaxInfluenceTier, nco.npcID, nco.ncoID, nco.ncoPath, chrCompanionInfo.chrCompanionNode, chrCompanionInfo.chrCompanionMinimumAffection as comMinimumAffection, chrCompanionInfo.chrCompanionMaximumAffection as comMaximumAffection, chrCompanionInfo.chrCompanionNumber as comNumber, chrCompanionInfo.chrCompanionGiftInterestUnRomanced as comGiftUnRomanced, chrCompanionInfo.chrCompanionGiftInterestRomanced as comGiftRomanced, chrCompanionInfo.chrCompanionGender as comGender\n" +
                 "FROM nco\n" +
                 "LEFT JOIN chrCompanionInfo\n" +
-                "ON nco.npcID = chrCompanionInfo.chrCompanionNode";
+                "LEFT JOIN chrCompanionInfoON nco.npcID = chrCompanionInfo.chrCompanionNode\n" +
+                "WHERE nco.ncoDescription GLOB '*[A-Za-z]*'\n" +
+                "AND nco.ncoCategory IS NOT \"Unavailable Companions\"\n" +
+                "AND nco.ncoCategory IS NOT \"Creatures\"\n" +
+                "AND nco.ncoCategory IS NOT \"Droids\"\n" +
+                "ORDER BY (nco.ncoCategory = 'Main Characters') DESC, nco.ncoCategory";
 
         Cursor c = db.rawQuery(sqlSelect, null);
 

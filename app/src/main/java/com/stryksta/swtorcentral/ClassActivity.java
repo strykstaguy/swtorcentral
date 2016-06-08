@@ -171,8 +171,8 @@ public class ClassActivity extends AppCompatActivity {
         FloatingActionMenu fabMenu = (FloatingActionMenu) findViewById(R.id.class_menu_fab);
         fabMenu.setIconAnimated(false);
 
-        FloatingActionButton fabCompanions = (FloatingActionButton) findViewById(R.id.fabAbilities);
-        fabCompanions.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fabAbilities = (FloatingActionButton) findViewById(R.id.fabAbilities);
+        fabAbilities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
@@ -182,6 +182,23 @@ public class ClassActivity extends AppCompatActivity {
                 bundle.putString("clsAbility", txtAbilities);
 
                 Intent intent = new Intent(ClassActivity.this, AbilitiesActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        FloatingActionButton fabCompanions = (FloatingActionButton) findViewById(R.id.fabCompanions);
+        fabCompanions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+
+                bundle.putString("clsApc", txtApc);
+                bundle.putString("clsName", txtClassName);
+                bundle.putString("clsAbility", txtAbilities);
+                bundle.putString("txtNode", txtNode);
+
+                Intent intent = new Intent(ClassActivity.this, CompanionsActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

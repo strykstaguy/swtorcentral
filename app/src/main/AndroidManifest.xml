@@ -69,6 +69,10 @@
             android:name="com.stryksta.swtorcentral.ClassActivity"
             android:label="@string/class_header" >
         </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.CompanionsActivity"
+            android:label="@string/companion" >
+        </activity>
     </application>
 
 </manifest>

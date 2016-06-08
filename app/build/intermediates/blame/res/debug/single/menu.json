@@ -1,30 +1,30 @@
 [
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\character_options_menu.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\character_options_menu.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main_navigation.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\main_navigation.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\character_add_menu.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\character_add_menu.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\main.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\server_menu.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\server_menu.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\server_menu.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\server_menu.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\character_edit_menu.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\character_edit_menu.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\character_edit_menu.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\character_edit_menu.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\character_options_menu.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\character_options_menu.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\character_menu.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\character_menu.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\character_add_menu.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\character_add_menu.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main_navigation.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\main_navigation.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\menu\\character_menu.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\menu\\character_menu.xml"
     }
 ]

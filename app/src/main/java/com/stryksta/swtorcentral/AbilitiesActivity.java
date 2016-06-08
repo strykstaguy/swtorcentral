@@ -75,10 +75,10 @@ public class AbilitiesActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(clsName + " Abilities");
 
         TextView ablTitle = (TextView) findViewById(R.id.ablTitle);
-        ablTitle.setText(clsName);
+        ablTitle.setText("Abilities");
 
         TextView ablSubtitle = (TextView) findViewById(R.id.ablSubtitle);
-        ablSubtitle.setText("Abilities");
+        ablSubtitle.setText(clsName);
 
         TextView txtDescription = (TextView) findViewById(R.id.txtDescription);
         txtDescription.setText(Html.fromHtml(clsAbility));

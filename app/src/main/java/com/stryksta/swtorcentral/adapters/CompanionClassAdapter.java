@@ -38,9 +38,7 @@ public class CompanionClassAdapter extends RecyclerView.Adapter<CompanionClassAd
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-
         public TextView comName;
-        public TextView ablLevel;
 
         public ViewHolder(View itemView) {
             super(itemView);

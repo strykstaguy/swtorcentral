@@ -54,6 +54,7 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="positive">OK</string>
+    <string name="companion_desc">Throughout your adventures you will come face-to-face with a wide range of interesting characters. Some will stop at nothing to see you destroyed, while others will offer to aid you on your mission. A select few will even elect to join your cause and stand by your side as you take on the toughest challenges in the galaxy. Your Companions will accompany you for a wide range of reasons, be it adventure, glory, or something more personal, and will swear themselves to helping you save – or conquer – the galaxy.</string>
 
     <string name="pref_send_report">Send crash reports</string>
     <string name="pref_send_report_summary">Helps to fix bugs</string>
