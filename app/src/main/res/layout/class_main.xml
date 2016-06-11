@@ -292,6 +292,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_abilities"
+            app:fab_colorNormal="@color/accent"
+            app:fab_colorPressed="@color/accentLight"
+            app:fab_colorRipple="@color/accentLight"
             android:tint="@color/white"
             app:fab_size="mini"
             app:fab_label="Abilities"/>
