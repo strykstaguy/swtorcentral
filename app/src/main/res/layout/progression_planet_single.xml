@@ -1,0 +1,89 @@
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+     <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
+            android:id="@+id/timeline"
+            android:layout_width="30dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center_horizontal"
+            app:firstColor="@color/subheader"
+            app:firstSize="15"
+            app:lastColor="@color/subheader"
+            app:lastSize="15"
+            app:lineColor="@color/subheader"
+            app:lineWidth="10dp"
+            app:middleColor="@color/subheader"
+            app:middleSize="15"
+            app:timeline_type="line"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/imgPlanetRepublic"
+            android:layout_width="75.0dip"
+            android:layout_height="75.0dip"
+            android:clickable="false"
+            android:contentDescription="@string/image_placeholder"
+            android:layout_centerVertical="true"
+            android:src="@drawable/pl_tython"
+            android:layout_toLeftOf="@+id/timeline"
+            android:layout_toStartOf="@+id/timeline"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_toLeftOf="@+id/imgPlanetRepublic"
+            android:layout_toStartOf="@+id/imgPlanetRepublic"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/txtPlanetRepublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tython"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:textColor="@color/text"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/txtLevelRepublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Levels 1 - 10"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="@dimen/dim_10"
+            android:layout_toRightOf="@+id/timeline"
+            android:layout_toEndOf="@+id/timeline"
+            android:id="@+id/linearLayout2">
+
+            <TextView
+                android:id="@+id/txtPlanetEmpire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Both Factions"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:textColor="@color/text"
+                android:textSize="16sp" />
+        </LinearLayout>
+</RelativeLayout>

@@ -1,16 +1,14 @@
 package com.stryksta.swtorcentral;
 
-import android.app.Fragment;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
-
-import com.stryksta.swtorcentral.util.FragmentUtils;
+import android.view.WindowManager;
 
 public class TestActivity extends AppCompatActivity {
-
     private Toolbar mToolbar;
 
     @Override
@@ -24,40 +22,28 @@ public class TestActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        getSupportActionBar().setTitle("Abilities");
-
-        if (!FragmentUtils.isFragmentPresent(TestActivity.this, "Test1")) {
-            //FragmentUtils.switchFragmentsInActivity(TestActivity.this, R.id.testFrame, new Test1Fragment(), "Test1");
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            getWindow().setStatusBarColor(ContextCompat.getColor(TestActivity.this, R.color.colorPrimary));
         }
 
-        //Debug the thread name
-     	Log.d("SWTORCentral", Thread.currentThread().getName());
-        
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null) {
+        }
+
+        getSupportActionBar().setTitle("Progression");
+
     }
 
     @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        // Always call the superclass so it can save the view hierarchy state
-        super.onSaveInstanceState(savedInstanceState);
-    }
-
-    @Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-	    switch (item.getItemId()) {
-	    // Respond to the action bar's Up/Home button
-	    case android.R.id.home:
-	    	this.finish();
-	        return true;
-	    }
-	    return super.onOptionsItemSelected(item);
-	}
-
-    public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() > 1) {
-            getFragmentManager().popBackStack();
-            Fragment trestsdg =  FragmentUtils.getActiveFragment(TestActivity.this);
-        } else {
-            this.finish();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                this.finish();
+                return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 }

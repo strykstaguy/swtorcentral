@@ -37,6 +37,7 @@
             android:layout_centerVertical="true"
             android:scaleType="fitCenter"
             android:padding="3dp"
+            android:clickable="false"
             android:src="@drawable/ic_flashpoint"
             android:tint="@color/white"
             android:layout_centerHorizontal="true"/>
@@ -44,25 +45,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
             android:layout_marginLeft="@dimen/dim_10"
-            android:layout_toLeftOf="@+id/timeline"
-            android:layout_toStartOf="@+id/timeline"
-            android:id="@+id/linearLayout">
+            android:layout_toLeftOf="@+id/imgIcon"
+            android:layout_toStartOf="@+id/imgIcon"
+            android:id="@+id/linearLayoutEmpire">
 
             <TextView
-                android:id="@+id/txtTitle"
-                android:layout_width="0dp"
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tython"
+                android:text="Vaiken Spacedock"
                 android:gravity="right"
+                android:layout_gravity="right"
+                android:textColor="@color/text"
                 android:textSize="16sp" />
-
-
-
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Imperial Fleet"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:textSize="14sp" />
         </LinearLayout>
 
 

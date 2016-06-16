@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.navigation_item_11: {
-                        Intent abilitiesIntent = new Intent(MainActivity.this, AbilitiesActivity.class);
+                        Intent abilitiesIntent = new Intent(MainActivity.this, TestActivity.class);
                         startActivity(abilitiesIntent);
                         break;
                     }
