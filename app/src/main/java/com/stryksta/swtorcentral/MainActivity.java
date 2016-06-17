@@ -101,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.navigation_item_4: {
-                        FragmentUtils.switchFragmentsInActivity(MainActivity.this, R.id.main_content, new FactionFragment(), "Faction");
+                        Intent progressionIntent = new Intent(MainActivity.this, ProgressionActivity.class);
+                        startActivity(progressionIntent);
                         break;
                     }
                     case R.id.navigation_item_5: {

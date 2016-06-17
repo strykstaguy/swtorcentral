@@ -25,7 +25,6 @@ public class ProgressionActivity extends AppCompatActivity {
     private ProgressionAdapter mRecycleAdapter;
     private RecyclerView mRecyclerView;
     ArrayList<ProgressionItem> progressionItems;
-    String FactionText;
     private Toolbar mToolbar;
 
     @Override
@@ -46,10 +45,6 @@ public class ProgressionActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(ContextCompat.getColor(ProgressionActivity.this, R.color.colorPrimary));
         }
 
-        Bundle bundle = getIntent().getExtras();
-        if ( bundle != null ) {
-            FactionText = bundle.getString("faction");
-        }
         //Set RecyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.progressionList);
 
@@ -73,90 +68,90 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("Carrick Station", "Republic Fleet", "Vaiken Spacedock", "Imperial Fleet", R.drawable.empire_logo, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("The Esseles", "Flashpoint","The Black Talon", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Coruscant", "Level 10-16", R.drawable.pl_coruscant, "Dromund Kaas", "Level 11-16", R.drawable.pl_dromundkaas));
-        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", "Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE));
         //planets.add(new ProgressionItem("Kuat Drive Yards", "Flashpoint", R.drawable.ic_tactical_flashpoint, TimelineType.LINE, ProgressionItem.FLASHOPR));
 
         planets.add(new ProgressionItem("Chapter 1", ProgressionItem.CHAPTER));
 
         planets.add(new ProgressionItem("Taris", "Level 16-19", R.drawable.pl_taris, "Balmorra", "Level 16-19", R.drawable.pl_balmorra));
-        planets.add(new ProgressionItem("Taris", "Bonus Series", R.drawable.ic_bonus, "Balmorra", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Athiss", "Flashpoint", R.drawable.ic_flashpoint, "Athiss", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Nar Shaddaa", "Level 21-24", R.drawable.pl_narshaddaa, "Nar Shaddaa", "Level 21-24", R.drawable.pl_narshaddaa));
-        planets.add(new ProgressionItem("Mandalorian Raiders", "Flashpoint", R.drawable.ic_flashpoint, "Mandalorian Raiders", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Tatooine", "Level 25-28", R.drawable.pl_tatooine, "Tatooine", "Level 25-28", R.drawable.pl_tatooine));
-        planets.add(new ProgressionItem("Tatooine", "Bonus Series", R.drawable.ic_bonus, "Tatooine", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Cademimu", "Flashpoint", R.drawable.ic_flashpoint, "Cademimu", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Alderaan", "Level 29-32", R.drawable.pl_alderaan, "Alderaan", "Level 29-32", R.drawable.pl_alderaan));
-        planets.add(new ProgressionItem("Nar Shaddaa", "Bonus Series", R.drawable.ic_bonus, "Nar Shaddaa", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Taris", "Bonus Series", "Balmorra", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Athiss", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE));
+        planets.add(new ProgressionItem("Nar Shaddaa", "Level 21-24", R.drawable.pl_narshaddaa));
+        planets.add(new ProgressionItem("Mandalorian Raiders", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE));
+        planets.add(new ProgressionItem("Tatooine", "Level 25-28", R.drawable.pl_tatooine));
+        planets.add(new ProgressionItem("Tatooine", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE));
+        planets.add(new ProgressionItem("Cademimu", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE));
+        planets.add(new ProgressionItem("Alderaan", "Level 29-32", R.drawable.pl_alderaan));
+        planets.add(new ProgressionItem("Nar Shaddaa", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE));
 
         planets.add(new ProgressionItem("Chapter 2", ProgressionItem.CHAPTER));
 
         planets.add(new ProgressionItem("Balmorra", "Level 32-36", R.drawable.pl_balmorra, "Taris", "Level 21-24", R.drawable.pl_taris));
-        planets.add(new ProgressionItem("Taral V", "Flashpoint", R.drawable.ic_flashpoint, "Boarding Party", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Maelstrom Prison", "Flashpoint", R.drawable.ic_flashpoint, "The Foundry", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Balmorra", "Bonus Series", R.drawable.ic_bonus, "Taris", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Taral V", "Flashpoint","Boarding Party", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Maelstrom Prison", "Flashpoint", "The Foundry", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Balmorra", "Bonus Series", "Taris", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Quesh", "Level 36-37", R.drawable.pl_quesh, "Quesh", "Level 36-37", R.drawable.pl_quesh));
         planets.add(new ProgressionItem("Hoth", "Level 37-41", R.drawable.pl_hoth, "Hoth", "Level 37-41", R.drawable.pl_hoth));
-        planets.add(new ProgressionItem("Alderaan", "Bonus Series", R.drawable.ic_bonus, "Alderaan", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Colicoid War", "Flashpoint", R.drawable.ic_flashpoint, "Colicoid War", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Alderaan", "Bonus Series", "Alderaan", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Colicoid War", "Flashpoint", "Colicoid War", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
 
         planets.add(new ProgressionItem("Chapter 3", ProgressionItem.CHAPTER));
 
         planets.add(new ProgressionItem("Belsavis", "Level 41-44", R.drawable.pl_belsavis, "Belsavis", "Level 41-44", R.drawable.pl_belsavis));
-        planets.add(new ProgressionItem("The Red Reaper", "Flashpoint", R.drawable.ic_flashpoint, "The Red Reaper", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("The Red Reaper", "Flashpoint", "The Red Reaper", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Voss", "Level 44-47", R.drawable.pl_voss, "Voss", "Level 44-47", R.drawable.pl_voss));
 
-        planets.add(new ProgressionItem("Voss", "Bonus Series", R.drawable.ic_bonus, "Voss", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Hoth", "Bonus Series", R.drawable.ic_bonus, "Hoth", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Directive 7", "Flashpoint", R.drawable.ic_flashpoint, "Directive 7", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Voss", "Bonus Series", "Voss", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Hoth", "Bonus Series", "Hoth", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Directive 7", "Flashpoint", "Directive 7", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Corellia", "Level 47-50", R.drawable.pl_corellia, "Corellia", "Level 47-50", R.drawable.pl_corellia));
 
         planets.add(new ProgressionItem("Interlude 1", ProgressionItem.CHAPTER));
 
-        planets.add(new ProgressionItem("Belsavis", "Bonus Series", R.drawable.ic_bonus, "Belsavis", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Black Hole", "Daily", R.drawable.ic_bonus, "Black Hole", "Daily", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Section X", "Daily", R.drawable.ic_bonus, "Section X", "Daily", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Belsavis", "Bonus Series", "Belsavis", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Black Hole", "Daily", "Black Hole", "Daily", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Section X", "Daily", "Section X", "Daily", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Ilum", "Level 50-52", R.drawable.pl_ilum, "Corellia", "Level 47-50", R.drawable.pl_corellia));
-        planets.add(new ProgressionItem("Battle of Ilum", "Flashpoint", R.drawable.ic_flashpoint, "Battle of Ilum", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("False Emperor", "Flashpoint", R.drawable.ic_flashpoint, "False Emperor", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Kaon Under Seige", "Flashpoint", R.drawable.ic_flashpoint, "Kaon Under Seige", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Lost Island", "Flashpoint", R.drawable.ic_flashpoint, "Lost Island", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Battle of Ilum", "Flashpoint", "Battle of Ilum", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("False Emperor", "Flashpoint", "False Emperor", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Kaon Under Seige", "Flashpoint", "Kaon Under Seige", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Lost Island", "Flashpoint", "Lost Island", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
 
-        planets.add(new ProgressionItem("The Eternity Vault", "Operation", R.drawable.ic_operation, "The Eternity Vault", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Karagga's Palace", "Operation", R.drawable.ic_operation, "Karagga's Palace", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Explosive Conflict", "Operation", R.drawable.ic_operation, "Explosive Conflict", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("The Eternity Vault", "Operation", "The Eternity Vault", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Karagga's Palace", "Operation", "Karagga's Palace", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Explosive Conflict", "Operation", "Explosive Conflict", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
 
         planets.add(new ProgressionItem("Chapter 4: Rise of the Hutt Cartel", ProgressionItem.CHAPTER));
 
         planets.add(new ProgressionItem("Makeb", "Level 51-54", R.drawable.pl_makeb, "Makeb", "Level 51-54", R.drawable.pl_makeb));
-        planets.add(new ProgressionItem("Toborro's Courtyard", "Flashpoint", R.drawable.ic_operation, "Toborro's Courtyard", "Flashpoint", R.drawable.ic_operation, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Toborro's Courtyard", "Flashpoint","Toborro's Courtyard", "Flashpoint", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
 
         planets.add(new ProgressionItem("Interlude 2", ProgressionItem.CHAPTER));
 
-        planets.add(new ProgressionItem("CZ-198", "Daily", R.drawable.ic_bonus, "CZ-198", "Daily", R.drawable.ic_bonus, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Czerka Corporate Labs", "Flashpoint", R.drawable.ic_flashpoint, "Czerka Corporate Labs", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Czerka Core Meltdown", "Flashpoint", R.drawable.ic_flashpoint, "Czerka Core Meltdown", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Scum and Villainy", "Operation", R.drawable.ic_operation, "Scum and Villainy", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Terror From Beyond", "Operation", R.drawable.ic_operation, "Terror From Beyond", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("CZ-198", "Daily", "CZ-198", "Daily", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Czerka Corporate Labs", "Flashpoint", "Czerka Corporate Labs", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Czerka Core Meltdown", "Flashpoint", "Czerka Core Meltdown", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Scum and Villainy", "Operation", "Scum and Villainy", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Terror From Beyond", "Operation", "Terror From Beyond", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Oricon", "Daily", R.drawable.pl_makeb, "Oricon", "Daily", R.drawable.pl_makeb));
-        planets.add(new ProgressionItem("Dread Fortress", "Operation", R.drawable.ic_operation, "Dread Fortress", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Dread Palace", "Operation", R.drawable.ic_operation, "Dread Palace", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Dread Fortress", "Operation", "Dread Fortress", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Dread Palace", "Operation", "Dread Palace", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
 
         planets.add(new ProgressionItem("Forged Alliances", ProgressionItem.CHAPTER));
 
-        planets.add(new ProgressionItem("Incursion on Korriban", "Flashpoint", R.drawable.ic_tactical_flashpoint, "Attack on Tython", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Attack on Tython", "Flashpoint", R.drawable.ic_tactical_flashpoint, "Incursion on Korriban", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Depths of Manaan", "Flashpoint", R.drawable.ic_tactical_flashpoint, "Depths of Manaan", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Legacy of the Rakata", "Flashpoint", R.drawable.ic_tactical_flashpoint, "Legacy of the Rakata", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Incursion on Korriban", "Flashpoint", "Attack on Tython", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Attack on Tython", "Flashpoint", "Incursion on Korriban", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Depths of Manaan", "Flashpoint", "Depths of Manaan", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Legacy of the Rakata", "Flashpoint", "Legacy of the Rakata", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
 
         planets.add(new ProgressionItem("Chapter 5: Shadow of Revan", ProgressionItem.CHAPTER));
 
         planets.add(new ProgressionItem("Rishi", "Level 55-58", R.drawable.pl_rishi, "Rishi", "Level 55-58", R.drawable.pl_rishi));
-        planets.add(new ProgressionItem("Blood Hunt", "Flashpoint", R.drawable.ic_tactical_flashpoint, "Blood Hunt", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Battle of Rishi", "Flashpoint", R.drawable.ic_tactical_flashpoint, "Battle of Rishi", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("Blood Hunt", "Flashpoint", "Blood Hunt", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Battle of Rishi", "Flashpoint", "Battle of Rishi", "Flashpoint", R.drawable.ic_tactical_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Yavin IV", "Level 58-60", R.drawable.pl_yavin, "Yavin IV", "Level 58-60", R.drawable.pl_yavin));
-        planets.add(new ProgressionItem("The Ravagers", "Operation", R.drawable.ic_operation, "Both", "Factions", R.drawable.ic_operation, ProgressionItem.FLASHOP));
-        planets.add(new ProgressionItem("Temple of Sacrifice", "Operation", R.drawable.ic_operation, "Both", "Factions", R.drawable.ic_operation, ProgressionItem.FLASHOP));
+        planets.add(new ProgressionItem("The Ravagers", "Operation", "Both", "Factions", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Temple of Sacrifice", "Operation", "Both", "Factions", R.drawable.ic_operation, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Ziost", "Level 60", R.drawable.pl_rishi, "Ziost", "Level 60", R.drawable.pl_rishi));
 
         planets.add(new ProgressionItem("Knights of the Fallen Empire", ProgressionItem.CHAPTER));

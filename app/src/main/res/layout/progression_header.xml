@@ -20,13 +20,13 @@
         android:layout_width="30dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
-        app:firstColor="@color/subheader"
+        app:firstColor="@color/md_grey_700"
         app:firstSize="15"
-        app:lastColor="@color/subheader"
+        app:lastColor="@color/md_grey_700"
         app:lastSize="15"
-        app:lineColor="@color/subheader"
+        app:lineColor="@color/md_grey_700"
         app:lineWidth="10dp"
-        app:middleColor="@color/subheader"
+        app:middleColor="@color/md_grey_700"
         app:middleSize="15"
         app:timeline_type="line" />
 

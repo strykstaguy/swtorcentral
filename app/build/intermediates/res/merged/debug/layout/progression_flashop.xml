@@ -94,6 +94,7 @@
                 android:layout_gravity="left"
                 android:textColor="@color/text"
                 android:textSize="16sp" />
+
             <TextView
                 android:id="@+id/txtFlashEmpireTitle"
                 android:layout_width="wrap_content"

@@ -170,11 +170,10 @@
             android:layout_height="75.0dip"
             android:clickable="false"
             android:contentDescription="@string/image_placeholder"
-            android:layout_centerVertical="true"
             android:src="@drawable/pl_ord_mantell"
-            android:layout_toLeftOf="@+id/timeline2"
-            android:layout_toStartOf="@+id/timeline2"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -205,50 +204,6 @@
                 android:text="Levels 1 - 10"
                 android:gravity="right"
                 android:layout_gravity="right"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imgPlanet4"
-            android:layout_width="75.0dip"
-            android:layout_height="75.0dip"
-            android:clickable="false"
-            android:contentDescription="@string/image_placeholder"
-            android:layout_centerVertical="true"
-            android:src="@drawable/pl_hutta"
-            android:layout_toRightOf="@+id/timeline2"
-            android:layout_toEndOf="@+id/timeline2"
-            android:scaleType="fitCenter" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="@dimen/dim_10"
-            android:layout_toRightOf="@+id/imgPlanet4"
-            android:layout_toEndOf="@+id/imgPlanet4"
-            android:id="@+id/linearLayout4">
-
-            <TextView
-                android:id="@+id/txtPlanet4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Hutta"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:textColor="@color/text"
-                android:textSize="16sp" />
-            <TextView
-                android:id="@+id/txtLevel4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Levels 1 - 10"
-                android:gravity="left"
-                android:layout_gravity="left"
                 android:textSize="14sp" />
         </LinearLayout>
 

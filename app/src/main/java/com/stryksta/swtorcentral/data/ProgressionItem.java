@@ -41,9 +41,9 @@ public class ProgressionItem {
     }
 
     //Flashpoint/Operation Single
-    public ProgressionItem(String flashpointRepublic, String flashpointEmpire, int imgIcon, int layoutType) {
+    public ProgressionItem(String flashpointRepublic, String levelRepublic, int imgIcon, int layoutType) {
         this.flashpointRepublic = flashpointRepublic;
-        this.flashpointEmpire = flashpointEmpire;
+        this.levelRepublic = levelRepublic;
         this.imgIcon = imgIcon;
         this.layoutType = layoutType;
         this.timelineType = TimelineType.LINE;
@@ -53,6 +53,8 @@ public class ProgressionItem {
     public ProgressionItem(String flashpointRepublic, String levelRepublic, String flashpointEmpire, String levelEmpire, int imgIcon, int layoutType) {
         this.flashpointRepublic = flashpointRepublic;
         this.flashpointEmpire = flashpointEmpire;
+        this.levelRepublic = levelRepublic;
+        this.levelEmpire = levelEmpire;
         this.imgIcon = imgIcon;
         this.layoutType = layoutType;
         this.timelineType = TimelineType.LINE;

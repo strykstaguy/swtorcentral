@@ -49,7 +49,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 SectionViewHolder chapterViewHolder = new SectionViewHolder(chapterViewGroup);
                 return chapterViewHolder;
             case PLANET_SINGLE:
-                ViewGroup planetSingleViewGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_planet, viewGroup, false );
+                ViewGroup planetSingleViewGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_planet_single, viewGroup, false );
                 PlanetSingleViewHolder planetSingleViewHolder = new PlanetSingleViewHolder(planetSingleViewGroup);
                 return planetSingleViewHolder;
             case PLANET_DOUBLE:
@@ -57,12 +57,12 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 PlanetDoubleViewHolder planetViewHolder = new PlanetDoubleViewHolder(planetDoubleViewGroup);
                 return planetViewHolder;
             case FLASHOP_SINGLE:
-                ViewGroup flashSingleViewGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop, viewGroup, false );
+                ViewGroup flashSingleViewGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop_single, viewGroup, false );
                 FlashopSingleViewHolder flashSingleViewHolder = new FlashopSingleViewHolder(flashSingleViewGroup);
                 return flashSingleViewHolder;
             case FLASHOP_DOUBLE:
-                ViewGroup flashDoubleViewGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop_right, viewGroup, false );
-                FlashopSingleViewHolder flashDoubleViewHolder = new FlashopSingleViewHolder(flashDoubleViewGroup);
+                ViewGroup flashDoubleViewGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop, viewGroup, false );
+                FlashopDoubleViewHolder flashDoubleViewHolder = new FlashopDoubleViewHolder(flashDoubleViewGroup);
                 return flashDoubleViewHolder;
             default:
                 ViewGroup vDefault = ( ViewGroup ) mInflater.inflate ( R.layout.progression_planet, viewGroup, false );
@@ -76,19 +76,29 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         switch (viewHolder.getItemViewType()) {
 
+            case PLANET_DOUBLE:
+                PlanetDoubleViewHolder planetDoubleViewHolder = (PlanetDoubleViewHolder) viewHolder;
+                ProgressionItem progressionDoubleItem = progressionItems.get(position);
+
+                planetDoubleViewHolder.imgPlanetRepublic.setImageResource(progressionDoubleItem.getRepublicPlanetImage());
+                planetDoubleViewHolder.txtPlanetRepublic.setText(progressionDoubleItem.getRepublicPlanet());
+                planetDoubleViewHolder.txtLevelRepublic.setText(progressionDoubleItem.getRepublicLevel());
+
+                planetDoubleViewHolder.imgPlanetEmpire.setImageResource(progressionDoubleItem.getEmpirePlanetImage());
+                planetDoubleViewHolder.txtPlanetEmpire.setText(progressionDoubleItem.getEmpirePlanet());
+                planetDoubleViewHolder.txtLevelEmpire.setText(progressionDoubleItem.getEmpireLevel());
+
+                planetDoubleViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+                break;
+
             case PLANET_SINGLE:
                 PlanetSingleViewHolder planetViewHolder = (PlanetSingleViewHolder) viewHolder;
                 ProgressionItem progressionItem = progressionItems.get(position);
 
-                planetViewHolder.imgPlanetRepublic.setImageResource(progressionItem.getRepublicPlanetImage());
-                planetViewHolder.txtPlanetRepublic.setText(progressionItem.getRepublicPlanet());
-                planetViewHolder.txtLevelRepublic.setText(progressionItem.getRepublicLevel());
+                planetViewHolder.imgPlanet.setImageResource(progressionItem.getRepublicPlanetImage());
+                planetViewHolder.txtPlanet.setText(progressionItem.getRepublicPlanet());
 
-                planetViewHolder.imgPlanetEmpire.setImageResource(progressionItem.getEmpirePlanetImage());
-                planetViewHolder.txtPlanetEmpire.setText(progressionItem.getEmpirePlanet());
-                planetViewHolder.txtLevelEmpire.setText(progressionItem.getEmpireLevel());
-
-                planetViewHolder.timeLineView.setTimelineType(progressionItem.getTimelineTypeType());
+                planetViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
                 break;
 
             case HEADER:
@@ -107,24 +117,22 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             case FLASHOP_SINGLE:
                 FlashopSingleViewHolder flashpointViewHolder = (FlashopSingleViewHolder) viewHolder;
                 ProgressionItem flashpointItem = progressionItems.get(position);
-                flashpointViewHolder.txtFlashRepublicName.setText(flashpointItem.getRepublicPlanet());
-                flashpointViewHolder.txtFlashRepublicTitle.setText(flashpointItem.getRepublicLevel());
-                flashpointViewHolder.txtFlashEmpireName.setText(flashpointItem.getEmpirePlanet());
-                flashpointViewHolder.txtFlashEmpireTitle.setText(flashpointItem.getEmpireLevel());
+                flashpointViewHolder.flashpointName.setText(flashpointItem.getRepublicFlashpoint());
+                flashpointViewHolder.flashpointTitle.setText(flashpointItem.getRepublicLevel());
 
-                flashpointViewHolder.imgIcon.setImageResource(flashpointItem.getRepublicPlanetImage());
+                flashpointViewHolder.imgIcon.setImageResource(flashpointItem.getIcon());
                 flashpointViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
                 break;
 
             case FLASHOP_DOUBLE:
-                FlashopSingleViewHolder flashpointDoubleViewHolder = (FlashopSingleViewHolder) viewHolder;
+                FlashopDoubleViewHolder flashpointDoubleViewHolder = (FlashopDoubleViewHolder) viewHolder;
                 ProgressionItem flashpointDoubleItem = progressionItems.get(position);
-                flashpointDoubleViewHolder.txtFlashRepublicName.setText(flashpointDoubleItem.getRepublicPlanet());
+                flashpointDoubleViewHolder.txtFlashRepublicName.setText(flashpointDoubleItem.getRepublicFlashpoint());
                 flashpointDoubleViewHolder.txtFlashRepublicTitle.setText(flashpointDoubleItem.getRepublicLevel());
-                flashpointDoubleViewHolder.txtFlashEmpireName.setText(flashpointDoubleItem.getEmpirePlanet());
+                flashpointDoubleViewHolder.txtFlashEmpireName.setText(flashpointDoubleItem.getEmpireFlashpoint());
                 flashpointDoubleViewHolder.txtFlashEmpireTitle.setText(flashpointDoubleItem.getEmpireLevel());
 
-                flashpointDoubleViewHolder.imgIcon.setImageResource(flashpointDoubleItem.getRepublicPlanetImage());
+                flashpointDoubleViewHolder.imgIcon.setImageResource(flashpointDoubleItem.getIcon());
                 flashpointDoubleViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
                 break;
         }
@@ -192,25 +200,15 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     public class PlanetSingleViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        public ImageView imgPlanetRepublic;
-        public TextView txtPlanetRepublic;
-        public TextView txtLevelRepublic;
-
-        public ImageView imgPlanetEmpire;
-        public TextView txtPlanetEmpire;
-        public TextView txtLevelEmpire;
+        public ImageView imgPlanet;
+        public TextView txtPlanet;
 
         public TimelineView timeLineView;
 
         public PlanetSingleViewHolder(View itemView) {
             super(itemView);
-            imgPlanetRepublic = (ImageView) itemView.findViewById(R.id.imgPlanetRepublic);
-            txtPlanetRepublic = (TextView) itemView.findViewById(R.id.txtPlanetRepublic);
-            txtLevelRepublic = (TextView) itemView.findViewById(R.id.txtLevelRepublic);
-
-            imgPlanetEmpire = (ImageView) itemView.findViewById(R.id.imgPlanetEmpire);
-            txtPlanetEmpire = (TextView) itemView.findViewById(R.id.txtPlanetEmpire);
-            txtLevelEmpire = (TextView) itemView.findViewById(R.id.txtLevelEmpire);
+            imgPlanet = (ImageView) itemView.findViewById(R.id.imgPlanet);
+            txtPlanet = (TextView) itemView.findViewById(R.id.txtPlanet);
 
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
 
@@ -282,24 +280,20 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     public class FlashopSingleViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        public TextView txtFlashRepublicName;
-        public TextView txtFlashRepublicTitle;
-        public TextView txtFlashEmpireName;
-        public TextView txtFlashEmpireTitle;
+        public TextView flashpointName;
+        public TextView flashpointTitle;
+
         public ImageButton imgIcon;
 
         public TimelineView timeLineView;
 
         public FlashopSingleViewHolder(View itemView) {
             super(itemView);
-            txtFlashRepublicName = (TextView) itemView.findViewById(R.id.txtFlashRepublicName);
-            txtFlashRepublicTitle = (TextView) itemView.findViewById(R.id.txtFlashRepublicTitle);
-            txtFlashEmpireName = (TextView) itemView.findViewById(R.id.txtFlashEmpireName);
-            txtFlashEmpireTitle = (TextView) itemView.findViewById(R.id.txtFlashEmpireTitle);
+            flashpointName = (TextView) itemView.findViewById(R.id.flashpointName);
+            flashpointTitle = (TextView) itemView.findViewById(R.id.flashpointTitle);
 
             imgIcon = (ImageButton) itemView.findViewById(R.id.imgIcon);
-            timeLineView = (TimelineView) itemView.findViewById(R.id.timelineFlashPoint);
-
+            timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
 
             // Attach a click listener to the entire row view
             itemView.setOnClickListener(this);
@@ -307,7 +301,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(), "FlashPoint!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), "FlashPoint Single", Toast.LENGTH_SHORT).show();
         }
     }
 
