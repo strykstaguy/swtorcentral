@@ -26,7 +26,7 @@ public class Triangle extends View {
 
     private void init(Context context, AttributeSet attrs) {
         TypedArray attr = context.obtainStyledAttributes(attrs, R.styleable.TriangleShape, 0, 0);
-        type = attr.getInt(R.styleable.TriangleShape_triangleType, Type.CENTER_TOP);
+        //type = attr.getInt(R.styleable.TriangleShape_triangleType, Type.CENTER_TOP);
         fillColor = attr.getColor(R.styleable.TriangleShape_triangleColor, Color.WHITE);
         path = new Path();
         shapePaint = new Paint();
@@ -60,13 +60,5 @@ public class Triangle extends View {
 
     public void setFillColor(@ColorRes int fillColor) {
         this.fillColor = fillColor;
-    }
-
-    static class Type {
-        public static final int CENTER_TOP = 0;
-        public static final int LEFT_BOTTOM = 1;
-        public static final int RIGHT_BOTTOM = 2;
-        public static final int CENTER_BOTTOM = 3;
-        public static final int LEFT_TOP = 4;
     }
 }

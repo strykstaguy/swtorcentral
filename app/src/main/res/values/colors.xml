@@ -36,7 +36,9 @@
     <color name="swtor_orange">#FFCB00</color>
     <color name="swtor_purple">#B39DDB</color>
     <color name="swtor_orange2">#FF9800</color>
-    <color name="swtor_red">#F44336</color>
+    <color name="swtor_red">#E74C3C</color>
+    <color name="swtor_time_red">#E74C3C</color>
+    <color name="swtor_time_blue">#2980B9</color>
 
     <color name="seperator">#bdbdbd</color>
 
