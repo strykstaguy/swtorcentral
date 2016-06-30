@@ -83,13 +83,13 @@ public class CompanionsActivity extends AppCompatActivity {
 		baseRecyclerView = (RecyclerView) findViewById(R.id.companionsList);
 
 		if (baseRecyclerView != null) {
-			baseLayoutManager = new GridLayoutManager(CompanionsActivity.this, 1, GridLayoutManager.VERTICAL, false);
+			baseLayoutManager = new GridLayoutManager(CompanionsActivity.this, 3, GridLayoutManager.VERTICAL, false);
 			baseRecyclerView.setLayoutManager(baseLayoutManager);
 		}
 
 		//Set Base Adapter
 		baseRecycleAdapter = new CompanionClassAdapter(baseCompanions);
-		baseRecyclerView.addItemDecoration(new DividerItemDecoration(CompanionsActivity.this, GridLayoutManager.VERTICAL));
+		//baseRecyclerView.addItemDecoration(new DividerItemDecoration(CompanionsActivity.this, GridLayoutManager.VERTICAL));
 		baseRecyclerView.setAdapter(baseRecycleAdapter);
 		baseRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(CompanionsActivity.this, baseRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
 			public void onItemClick(View view, int position) {

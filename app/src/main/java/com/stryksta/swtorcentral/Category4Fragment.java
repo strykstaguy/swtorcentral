@@ -2,6 +2,12 @@ package com.stryksta.swtorcentral;
 
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
 import com.stryksta.swtorcentral.adapters.AchievementItemAdapter;
 import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
@@ -12,6 +18,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,9 +33,10 @@ public class Category4Fragment extends Fragment{
 	String Category1;
 	String Category2;
 	String Category3;
+    HashMap<Integer,Integer> achCompletedandTotal;
 
-	Integer Category3Completed;
-	Integer Category3Total;
+	int Category4Completed;
+    int Category4Total;
 	View vw_layout;
 	
 	@Override
@@ -54,8 +62,8 @@ public class Category4Fragment extends Fragment{
         	Category1 = getArguments().getString("category1");
         	Category2 = getArguments().getString("category2");
         	Category3 = getArguments().getString("category3");
-			Category3Completed = getArguments().getInt("category3_completed");
-			Category3Total = getArguments().getInt("category3_total");
+			Category4Completed = getArguments().getInt("category4_completed");
+			Category4Total = getArguments().getInt("category4_total");
         }
 
 		//Set title of category
@@ -65,10 +73,12 @@ public class Category4Fragment extends Fragment{
 
 		//Set title/completed/total of category
 		((AchievementActivity)getActivity()).setTitleText(Category2);
-		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category3Completed) + "/" + String.valueOf(Category3Total));
+		((AchievementActivity)getActivity()).setPoints(String.valueOf(Category4Completed) + "/" + String.valueOf(Category4Total));
 
-		int progressValue = (int) Math.ceil(((double)Category3Completed/(double)Category3Total)* 100);
-		((AchievementActivity)getActivity()).setProgress(progressValue);
+		int progressValue = (int) Math.ceil((Category4Completed/Category4Total)* 100);
+        //Log.d("Progress: ", String.valueOf(progressValue));
+        //Log.d("Progress: ", String.valueOf(Category4Completed) + "/" + String.valueOf(Category4Total));
+        ((AchievementActivity)getActivity()).setAchievementProgress(progressValue);
 
         db = new AchievementsDatabase(getActivity());
         achievements = db.getAchievements(Category1, Category2, Category3);
@@ -109,11 +119,23 @@ public class Category4Fragment extends Fragment{
 
 		db = new AchievementsDatabase(getActivity());
 
+        //Update List to reflect new completed/incomplete items
 	    achievements.clear();
         achievements = db.getAchievements(Category1, Category2, Category3);
-
 		mRecycleAdapter.updateItems(achievements);
 		mRecycleAdapter.notifyDataSetChanged();
+
+        //Get new total and reflect
+        achCompletedandTotal = db.getCompletedandTotal(Category1, Category2, Category3);
+
+        int achCompleted;
+        int achTotal;
+
+        Map.Entry<Integer,Integer> entry = achCompletedandTotal.entrySet().iterator().next();
+        achCompleted = entry.getKey();
+        achTotal = entry.getValue();
+
+        Log.d("New Progress: ", String.valueOf(achCompleted) + "/" + String.valueOf(achTotal));
 
 		db.close();
 	}

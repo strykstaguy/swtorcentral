@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
+<com.stryksta.swtorcentral.util.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         app:cardElevation="2dp"
         app:cardCornerRadius="2dp"
         android:clickable="true"
@@ -20,61 +20,45 @@
         app:cardPreventCornerOverlap="false">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:paddingTop="@dimen/dim_10"
             android:paddingBottom="@dimen/dim_10"
             android:paddingRight="@dimen/dim_5"
             android:paddingLeft="@dimen/dim_5"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/comIcon"
                 android:layout_width="@dimen/fab_normal"
                 android:layout_height="@dimen/fab_normal"
-                android:padding="8dp"
-                android:layout_marginLeft="@dimen/dim_10"
+                android:padding="3dp"
                 android:background="@drawable/round"
                 android:elevation="3dp"
-                android:src="@drawable/ic_arrow_up" />
+                android:src="@drawable/ic_companion"
+                android:tintMode="@color/white"
+                android:layout_gravity="center_horizontal"/>
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:gravity="center">
 
             <TextView
                 android:id="@+id/comName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/dim_20"
                 android:layout_centerVertical="true"
-                android:gravity="left"
                 android:layout_toRightOf="@id/comIcon"
-                android:maxLines="1"
+                android:maxLines="2"
+                android:singleLine="false"
                 android:text="Theron Shan"
-                android:textStyle="bold"
                 android:textColor="@color/text"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/comTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:paddingLeft="@dimen/dim_20"
-                android:text="The Secret Agent"
-                android:textColor="@color/subheader"
-                android:textSize="14sp"
-                android:layout_below="@+id/comName"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/comIcon"
-                android:layout_toEndOf="@+id/comIcon" />
+                android:textSize="16sp"
+                android:gravity="center_horizontal"/>
         </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
-</LinearLayout>
+</com.stryksta.swtorcentral.util.SquareRelativeLayout>

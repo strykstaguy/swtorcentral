@@ -1,6 +1,7 @@
 package com.stryksta.swtorcentral.util.database;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -76,6 +77,40 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
         c.close();
         db.close();
         return achTotal;
+    }
+
+    public HashMap<Integer, Integer> getCompletedandTotal(String achCategory1, String achCategory2, String achCategory3) {
+        HashMap<Integer,Integer> achCompletedandTotal = new HashMap<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT achievements.achTertiaryCategory as achCategory4, ")
+                .append("SUM(CASE WHEN ca.achievements_id is not null then achRewardPoints end) AS achCompleted, ")
+                .append("SUM(achRewardPoints) achTotal ")
+                .append("FROM achievements ")
+                .append("LEFT JOIN categories ")
+                .append("ON achievements.achCategory = categories.achCategory ")
+                .append("LEFT JOIN completed_achievements ca ")
+                .append("ON ca.achievements_id = achievements._id ")
+                .append("WHERE achievements.achCategory = ? AND achievements.achSubCategory = ? AND achievements.achTertiaryCategory = ? ")
+                .append("GROUP BY achievements.achTertiaryCategory ")
+                .append("ORDER BY achCategory4 ASC ")
+                .toString();
+
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(achCategory1), String.valueOf(achCategory2), String.valueOf(achCategory3)});
+
+        if (c.moveToFirst()) {
+            do {
+                int achCompleted = c.getInt(c.getColumnIndex("achCompleted"));
+                int achTotal = c.getInt(c.getColumnIndex("achTotal"));
+
+                achCompletedandTotal.put(achCompleted, achTotal);
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return achCompletedandTotal;
     }
 
 	public ArrayList<AchievementCategoryItem> getCategory1() {
@@ -182,7 +217,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		db.close();
 		return categoryItem;
 	}
-	
+
 	public ArrayList<AchievementsItem> getAchievements(String Category1, String Category2, String Category3) {
 		ArrayList<AchievementsItem> achievementItem = new ArrayList<AchievementsItem>();
 		SQLiteDatabase db = getReadableDatabase();
@@ -223,7 +258,7 @@ public class AchievementsDatabase extends SQLiteAssetHelper {
 		db.close();
 		return achievementItem;
 	}
-	
+
 	public void setCompleted (int achievementID) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		

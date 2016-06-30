@@ -7,7 +7,7 @@
      <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
             android:id="@+id/timeline"
             android:layout_width="30dp"
-            android:layout_height="135dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             app:firstColor="@color/md_grey_700"
             app:firstSize="15"
@@ -32,6 +32,8 @@
                 android:id="@+id/imgPlanet"
                 android:layout_width="75.0dip"
                 android:layout_height="75.0dip"
+                android:paddingBottom="@dimen/dim_5"
+                android:background="@color/background"
                 android:clickable="false"
                 android:contentDescription="@string/image_placeholder"
                 android:src="@drawable/pl_tython"
@@ -40,27 +42,45 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"/>
 
-            <TextView
-                android:id="@+id/txtPlanet"
+            <com.stryksta.swtorcentral.util.bubbleview.BubbleLinearLayout
+                android:orientation="vertical"
+                app:arrowWidth="0dp"
+                app:angle="0dp"
+                app:arrowHeight="0dp"
+                app:bubbleColor="@color/swtor_blue"
+                android:id="@+id/bubble_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/background"
-                android:layout_weight="1"
-                android:text="Tython"
-                android:gravity="right"
-                android:textColor="@color/text"
-                android:textSize="16sp"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:id="@+id/txtLevelRepublic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/background"
-                android:layout_weight="1"
-                android:text="Levels 1 - 10"
-                android:gravity="right"
-                android:textSize="14sp"
-                android:layout_marginBottom="@dimen/dim_5"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txtPlanet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:paddingRight="@dimen/dim_5"
+                    android:text="Tython"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/txtLevelRepublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:paddingRight="@dimen/dim_5"
+                    android:layout_marginBottom="@dimen/dim_5"
+                    android:text="Levels 1 - 10"
+                    android:textColor="@color/white"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </com.stryksta.swtorcentral.util.bubbleview.BubbleLinearLayout>
+
+
         </LinearLayout>
 </RelativeLayout>

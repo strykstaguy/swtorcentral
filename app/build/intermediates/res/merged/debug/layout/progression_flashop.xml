@@ -31,7 +31,7 @@
             android:id="@+id/imgIcon"
             android:layout_width="@dimen/fab_small"
             android:layout_height="@dimen/fab_small"
-            android:background="@drawable/round"
+            android:background="@drawable/round_grey"
             android:elevation="3dp"
             android:layout_centerVertical="true"
             android:scaleType="fitCenter"

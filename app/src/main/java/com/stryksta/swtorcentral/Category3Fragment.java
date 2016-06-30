@@ -82,7 +82,7 @@ public class Category3Fragment extends Fragment {
 
 		int progressValue = (int) Math.ceil(((double)Category2Completed/(double)Category2Total)* 100);
 		//int x = (int) Math.ceil(((double)Category2Completed/(double)Category2Total) * 100);
-		((AchievementActivity)getActivity()).setProgress(progressValue);
+		getActivity().setProgress(progressValue);
 
         db = new AchievementsDatabase(getActivity());
         achievements = db.getCategory3(Category1, Category2);
@@ -107,8 +107,8 @@ public class Category3Fragment extends Fragment {
 				args.putString("category1", Category1);
 				args.putString("category2", Category2);
 				args.putString("category3", achievements.get(position).getCategory());
-				args.putInt("category3_completed", achievements.get(position).getCompleted());
-				args.putInt("category3_total", achievements.get(position).getTotal());
+				args.putInt("category4_completed", achievements.get(position).getCompleted());
+				args.putInt("category4_total", achievements.get(position).getTotal());
 				category4frag.setArguments(args);
 
 				FragmentUtils.addFragmentsInActivity(getActivity(), R.id.achievementframe, category4frag, "Category4");

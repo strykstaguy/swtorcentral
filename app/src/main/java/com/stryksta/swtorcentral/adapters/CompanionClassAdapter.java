@@ -21,7 +21,7 @@ public class CompanionClassAdapter extends RecyclerView.Adapter<CompanionClassAd
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
-        View view = View.inflate(viewGroup.getContext(), R.layout.companion_class_row, null);
+        View view = View.inflate(viewGroup.getContext(), R.layout.companion_row, null);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }

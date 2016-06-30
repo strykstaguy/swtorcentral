@@ -82,6 +82,7 @@ public class AchievementActivity extends AppCompatActivity {
         //float progressValue = (float)total_completed/(float)total;
         float newFloat = (float) progressValue;
         achievementProgress.setProgress(newFloat);
+        Log.d("Progress: ", String.valueOf(newFloat));
     }
 
 	public void onBackPressed() {

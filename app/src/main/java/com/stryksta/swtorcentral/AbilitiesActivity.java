@@ -95,6 +95,7 @@ public class AbilitiesActivity extends AppCompatActivity {
 
         //Set Base RecyclerView
         baseRecyclerView = (RecyclerView) findViewById(R.id.abilitiesBaseList);
+        baseRecyclerView.setNestedScrollingEnabled(false);
 
         if (baseRecyclerView != null) {
             aLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);
@@ -140,6 +141,7 @@ public class AbilitiesActivity extends AppCompatActivity {
 
         //Set Base RecyclerView
         playerRecyclerView = (RecyclerView) findViewById(R.id.abilitiesPlayerList);
+        playerRecyclerView.setNestedScrollingEnabled(false);
 
         if (playerRecyclerView != null) {
             aPlayerLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);

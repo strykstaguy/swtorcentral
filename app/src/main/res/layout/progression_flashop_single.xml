@@ -15,7 +15,7 @@
         <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
             android:id="@+id/timeline"
             android:layout_width="30dp"
-            android:layout_height="125dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             app:firstColor="@color/md_grey_700"
             app:firstSize="15"
@@ -41,7 +41,8 @@
                 android:id="@+id/imgIcon"
                 android:layout_width="@dimen/fab_small"
                 android:layout_height="@dimen/fab_small"
-                android:background="@drawable/round"
+                android:background="@drawable/round_grey"
+                android:paddingBottom="@dimen/dim_5"
                 android:elevation="3dp"
                 android:scaleType="fitCenter"
                 android:padding="3dp"
@@ -51,27 +52,45 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"/>
 
-            <TextView
-                android:id="@+id/flashpointName"
+            <com.stryksta.swtorcentral.util.bubbleview.BubbleLinearLayout
+                android:orientation="vertical"
+                app:arrowWidth="0dp"
+                app:angle="0dp"
+                app:arrowHeight="0dp"
+                app:bubbleColor="@color/swtor_blue"
+                android:id="@+id/bubble_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/dim_5"
-                android:background="@color/background"
-                android:text="Vaiken Spacedock"
-                android:gravity="right"
-                android:textColor="@color/text"
-                android:textSize="16sp"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:id="@+id/flashpointTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/background"
-                android:text="Imperial Fleet"
-                android:gravity="right"
-                android:textSize="14sp"
-                android:paddingBottom="@dimen/dim_5"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/flashpointName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:paddingRight="@dimen/dim_5"
+                    android:text="Vaiken Spacedock"
+                    android:gravity="right"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/flashpointTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:paddingRight="@dimen/dim_5"
+                    android:layout_marginBottom="@dimen/dim_5"
+                    android:text="Imperial Fleet"
+                    android:textColor="@color/white"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </com.stryksta.swtorcentral.util.bubbleview.BubbleLinearLayout>
+
         </LinearLayout>
 
 
