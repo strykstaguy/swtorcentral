@@ -58,7 +58,7 @@ public class CodexCategoryActivity extends AppCompatActivity {
 
         //Get Codex Categories
         codexDB = new CodexDatabase(CodexCategoryActivity.this);
-        cdxCategoryItems = codexDB.getCategories();
+        //cdxCategoryItems = codexDB.getCategories();
 
         //Set Adapter
         mRecycleAdapter = new CodexCategoryAdapter(cdxCategoryItems);

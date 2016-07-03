@@ -81,14 +81,19 @@
     <color name="accentLight">#F4FF81</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="b_c_fafafa">#fafafa</color>
     <color name="background">#dcdcdc</color>
+    <color name="background_dcdcdc">#dcdcdc</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="backgroundlight">#E5E5E5</color>
     <color name="black">#000000</color>
+    <color name="black_5a626d">#5a626d</color>
+    <color name="black_p50">#7f000000</color>
     <color name="black_translucent">#80000000</color>
+    <color name="blue_4285f4">#4285f4</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -132,6 +137,7 @@
     <color name="gray_35">#232323</color>
     <color name="gray_46">#2e2e2e</color>
     <color name="gray_86">#DCDCDC</color>
+    <color name="gray_e7e7e7">#e7e7e7</color>
     <color name="grayprogress">#6d6d6d</color>
     <color name="heavycolor">#FFC107</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
@@ -794,8 +800,10 @@
     <item name="expand_collapse" type="id"/>
     <item name="expandable_text" type="id"/>
     <item name="fab_label" type="id"/>
+    <item name="fixedTabIndicator" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
+    <item name="mFilterContentView" type="id"/>
     <item name="mdAvatarProfile" type="id"/>
     <item name="mdBackgroundProfile" type="id"/>
     <item name="mdDescriptionProfile" type="id"/>

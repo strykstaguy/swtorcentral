@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.data.AchievementsItem;
 import com.stryksta.swtorcentral.data.CodexItem;
 
 import java.util.ArrayList;
@@ -18,6 +19,10 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
 		super();
 		this.cdxItems = cdxItems;
 	}
+
+    public void updateItems(ArrayList<CodexItem> cdxItems) {
+        this.cdxItems = cdxItems;
+    }
 
 	@Override
 	public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {

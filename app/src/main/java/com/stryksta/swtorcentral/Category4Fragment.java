@@ -136,7 +136,8 @@ public class Category4Fragment extends Fragment{
         achTotal = entry.getValue();
 
         Log.d("New Progress: ", String.valueOf(achCompleted) + "/" + String.valueOf(achTotal));
-
+        int progressValue = (int)(((double)achCompleted/(double)achTotal) * 100);
+        ((AchievementActivity)getActivity()).setAchievementProgress(progressValue);
 		db.close();
 	}
 	

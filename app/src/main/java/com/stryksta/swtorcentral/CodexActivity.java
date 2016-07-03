@@ -63,11 +63,10 @@ public class CodexActivity extends AppCompatActivity {
 
         //Get Codex Categories
         codexDB = new CodexDatabase(CodexActivity.this);
-        cdxItems = codexDB.getCodexes(cdxCategory);
+        cdxItems = codexDB.getCodexes(cdxCategory, "Republic");
 
         //Set Adapter
         mRecycleAdapter = new CodexAdapter(cdxItems);
-
         mRecyclerView.setAdapter(mRecycleAdapter);
 
         //Close DB
