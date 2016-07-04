@@ -80,7 +80,7 @@ public class DropDownMenu extends RelativeLayout implements View.OnClickListener
          * 3.添加展开页面,装载筛选器list
          */
         frameLayoutContainer = new FrameLayout(getContext());
-        frameLayoutContainer.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.background_dcdcdc));
+        frameLayoutContainer.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.drop_transparent));
         addView(frameLayoutContainer, params);
 
         frameLayoutContainer.setVisibility(GONE);

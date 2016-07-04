@@ -57,20 +57,12 @@
             android:label="@string/ability_detail_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.CodexCategoryActivity"
-            android:label="@string/test_main" >
-        </activity>
-        <activity
             android:name="com.stryksta.swtorcentral.AchievementActivity"
             android:label="@string/achievements_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.TestActivity"
-            android:label="@string/test_main" >
-        </activity>
-        <activity
             android:name="com.stryksta.swtorcentral.CodexActivity"
-            android:label="@string/codex_main" >
+            android:label="@string/test_main" >
         </activity>
         <activity
             android:name="com.stryksta.swtorcentral.ClassActivity"

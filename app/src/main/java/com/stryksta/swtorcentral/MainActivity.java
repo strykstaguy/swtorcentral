@@ -115,12 +115,12 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.navigation_item_7: {
-                        Intent codexIntent = new Intent(MainActivity.this, CodexCategoryActivity.class);
+                        Intent codexIntent = new Intent(MainActivity.this, CodexActivity.class);
                         startActivity(codexIntent);
                         break;
                     }
                     case R.id.navigation_item_11: {
-                        Intent abilitiesIntent = new Intent(MainActivity.this, TestActivity.class);
+                        Intent abilitiesIntent = new Intent(MainActivity.this, CodexActivity.class);
                         startActivity(abilitiesIntent);
                         break;
                     }

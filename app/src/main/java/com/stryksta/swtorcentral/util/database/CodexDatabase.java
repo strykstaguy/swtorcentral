@@ -102,7 +102,15 @@ public class CodexDatabase extends SQLiteAssetHelper {
             }
         }
 
-        queryBuilder.append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ");
+        //If both are all set to and not where
+        if (category == "All" && faction == "All") {
+            queryBuilder.append("WHERE codexes.cdxTitle GLOB '*[A-Za-z]*' ");
+        } else {
+            queryBuilder.append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ");
+        }
+
+
+
         queryBuilder.append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC");
         String sqlSelect = queryBuilder.toString();
         /*

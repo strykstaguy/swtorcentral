@@ -7,4 +7,6 @@
     <color name="blue_4285f4">#4285f4</color>
     <color name="black_5a626d">#5a626d</color>
     <color name="background_dcdcdc">#dcdcdc</color>
+    <color name="drop_transparent">#00000000</color>
+
 </resources>
