@@ -12,14 +12,26 @@
     android:paddingRight="@dimen/dim_10"
     android:weightSum="1">
 
+    <ImageButton
+        android:id="@+id/comImage"
+        android:layout_width="@dimen/fab_small"
+        android:layout_height="@dimen/fab_small"
+        android:padding="8dp"
+        android:background="@drawable/round"
+        android:elevation="3dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_companion"/>
+
     <TextView
         android:id="@+id/ablName"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/dim_10"
         android:textColor="@color/text"
         android:text="Telekinetic Wave"
         android:textSize="14sp"
-        android:layout_weight="1.00"/>
+        android:layout_weight="1.00"
+        android:layout_gravity="center_vertical"/>
 
     <TextView
         android:id="@+id/ablLevel"
@@ -27,5 +39,6 @@
         android:layout_width="wrap_content"
         android:textColor="@color/text"
         android:text="Level: 10"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_gravity="center_vertical"/>
 </LinearLayout>

@@ -20,6 +20,7 @@
         app:cardPreventCornerOverlap="false">
 
         <RelativeLayout
+            android:id="@+id/serverBackground"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/dim_10"
@@ -48,8 +49,7 @@
                 android:layout_toRightOf="@id/serverStatusIcon"
                 android:maxLines="1"
                 android:text="The Shadowlands"
-                android:textStyle="bold"
-                android:textColor="@color/text"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -59,7 +59,7 @@
                 android:gravity="left"
                 android:paddingLeft="@dimen/dim_20"
                 android:text="PvE"
-                android:textColor="@color/text"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:layout_below="@+id/serverTitle"
                 android:layout_alignParentRight="true"
@@ -74,7 +74,7 @@
                 android:gravity="left"
                 android:paddingLeft="@dimen/dim_20"
                 android:text="West"
-                android:textColor="@color/subtext"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:layout_below="@+id/serverStatusIcon"
                 android:layout_alignLeft="@+id/serverPopulation"
@@ -89,7 +89,7 @@
                 android:gravity="right"
                 android:layout_marginRight="@dimen/dim_10"
                 android:text="Light"
-                android:textColor="@color/fullcolor"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:layout_below="@+id/serverStatusIcon"
                 android:layout_toRightOf="@+id/serverStatusIcon"

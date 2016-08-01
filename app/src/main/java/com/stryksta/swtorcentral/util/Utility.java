@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral.util;
 import android.content.res.Resources;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
+import android.support.annotation.Nullable;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -143,5 +144,16 @@ public class Utility {
             return myView.getLeft();
         else
             return myView.getLeft() + getRelativeLeft((View) myView.getParent());
+    }
+
+    public static boolean isEmptyString(String text) {
+        return (text == null || text.trim().equals("null") || text.trim()
+                .length() <= 0);
+    }
+
+    public static boolean isEmptyTest(@Nullable CharSequence text) {
+        if (text == null || text.length() == 0) return true;
+
+        return text.toString().isEmpty();
     }
 }

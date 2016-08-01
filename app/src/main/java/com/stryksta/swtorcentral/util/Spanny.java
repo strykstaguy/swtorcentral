@@ -27,6 +27,8 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
 
+import com.stryksta.swtorcentral.R;
+
 /**
  * Spannable wrapper for simple creation of Spannable strings.
  */
@@ -86,10 +88,20 @@ public class Spanny extends SpannableStringBuilder {
     }
 
     /**
+     * Append New Line.
+     * @return this {@code Spanny}.
+     */
+    public Spanny newLine() {
+        super.append("\n");
+        return this;
+    }
+
+    /**
      * Append plain text.
      * @return this {@code Spanny}.
      */
-    @Override public Spanny append(CharSequence text) {
+    @Override
+    public Spanny append(CharSequence text) {
         super.append(text);
         return this;
     }

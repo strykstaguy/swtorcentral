@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/background">
 
-        <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
+        <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
             android:id="@+id/timelineFlashPoint"
             android:layout_width="30dp"
             android:layout_height="125dp"

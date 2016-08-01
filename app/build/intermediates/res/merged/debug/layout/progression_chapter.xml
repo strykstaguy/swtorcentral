@@ -12,7 +12,7 @@
         android:background="@color/background">
 
 
-        <com.stryksta.swtorcentral.util.timeline.DashedVLineView
+        <com.stryksta.swtorcentral.ui.views.timeline.DashedVLineView
             android:id="@+id/timeline"
             android:layout_width="30dp"
             android:layout_height="192dp"

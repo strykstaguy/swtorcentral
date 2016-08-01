@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SWTORCentral" >
         <activity
-            android:name="com.stryksta.swtorcentral.MainActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,48 +28,52 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.ServerActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.ServerActivity"
             android:label="@string/server_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.AdvancedClassActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.AdvancedClassActivity"
             android:label="@string/advanced_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.SettingsActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.SettingsActivity"
             android:label="@string/settings_header" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.ProgressionActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.ProgressionActivity"
             android:label="@string/progression_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.BlankActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.BlankActivity"
             android:label="@string/settings_header" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.PlanetActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.PlanetActivity"
             android:label="@string/planet_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.AbilitiesActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.AbilitiesActivity"
             android:label="@string/ability_detail_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.AchievementActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.AchievementActivity"
             android:label="@string/achievements_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.CodexActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.CodexActivity"
             android:label="@string/test_main" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.ClassActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.ClassActivity"
             android:label="@string/class_header" >
         </activity>
         <activity
-            android:name="com.stryksta.swtorcentral.CompanionsActivity"
+            android:name="com.stryksta.swtorcentral.ui.activities.CompanionsActivity"
             android:label="@string/companion" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.TestActivity"
+            android:label="@string/test_main" >
         </activity>
     </application>
 

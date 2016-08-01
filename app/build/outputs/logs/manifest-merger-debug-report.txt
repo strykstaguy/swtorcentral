@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:2:1-70:12
+ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:2:1-74:12
 	package
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml
@@ -30,7 +30,7 @@ ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:10:19-73
 application
-ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:12:5-68:19
+ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:12:5-72:19
 MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.3.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
@@ -99,12 +99,12 @@ MERGED from [com.android.support:support-v4:23.3.0] C:\Users\e9900375\Desktop\sw
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:15:42-83
 	tools:replace
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:13:9-44
-activity#com.stryksta.swtorcentral.MainActivity
+activity#com.stryksta.swtorcentral.ui.activities.MainActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:16:9-23:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:18:13-45
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:17:13-66
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:17:13-55
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:19:13-22:29
 action#android.intent.action.MAIN
@@ -115,72 +115,78 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:21:27-74
-activity#com.stryksta.swtorcentral.ServerActivity
+activity#com.stryksta.swtorcentral.ui.activities.ServerActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:24:9-27:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:26:13-48
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:25:13-68
-activity#com.stryksta.swtorcentral.AdvancedClassActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:25:13-57
+activity#com.stryksta.swtorcentral.ui.activities.AdvancedClassActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:28:9-31:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:30:13-50
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:29:13-75
-activity#com.stryksta.swtorcentral.SettingsActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:29:13-64
+activity#com.stryksta.swtorcentral.ui.activities.SettingsActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:32:9-35:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:34:13-52
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:33:13-70
-activity#com.stryksta.swtorcentral.ProgressionActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:33:13-59
+activity#com.stryksta.swtorcentral.ui.activities.ProgressionActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:36:9-39:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:38:13-53
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:37:13-73
-activity#com.stryksta.swtorcentral.BlankActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:37:13-62
+activity#com.stryksta.swtorcentral.ui.activities.BlankActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:40:9-43:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:42:13-52
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:41:13-67
-activity#com.stryksta.swtorcentral.PlanetActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:41:13-56
+activity#com.stryksta.swtorcentral.ui.activities.PlanetActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:44:9-47:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:46:13-48
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:45:13-68
-activity#com.stryksta.swtorcentral.AbilitiesActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:45:13-57
+activity#com.stryksta.swtorcentral.ui.activities.AbilitiesActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:48:9-51:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:50:13-56
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:49:13-46
-activity#com.stryksta.swtorcentral.AchievementActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:49:13-60
+activity#com.stryksta.swtorcentral.ui.activities.AchievementActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:52:9-55:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:54:13-54
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:53:13-73
-activity#com.stryksta.swtorcentral.CodexActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:53:13-62
+activity#com.stryksta.swtorcentral.ui.activities.CodexActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:56:9-59:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:58:13-46
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:57:13-42
-activity#com.stryksta.swtorcentral.ClassActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:57:13-56
+activity#com.stryksta.swtorcentral.ui.activities.ClassActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:60:9-63:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:62:13-49
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:61:13-67
-activity#com.stryksta.swtorcentral.CompanionsActivity
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:61:13-56
+activity#com.stryksta.swtorcentral.ui.activities.CompanionsActivity
 ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:64:9-67:20
 	android:label
 		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:66:13-46
 	android:name
-		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:65:13-72
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:65:13-61
+activity#com.stryksta.swtorcentral.ui.activities.TestActivity
+ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:68:9-71:20
+	android:label
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:70:13-46
+	android:name
+		ADDED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml:69:13-55
 uses-sdk
 INJECTED from C:\Users\e9900375\Desktop\swtorcentral\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78

@@ -2,7 +2,7 @@ package com.stryksta.swtorcentral.util.database;
 
 import java.util.ArrayList;
 
-import com.stryksta.swtorcentral.data.RssItem;
+import com.stryksta.swtorcentral.models.RssItem;
 
 import android.content.ContentValues;
 import android.content.Context;

@@ -30,21 +30,12 @@
         android:textColor="@color/subtext"
         android:textSize="@dimen/subtitle" />
 
-    <com.stryksta.swtorcentral.util.NonScrollListView
-        android:id="@+id/lstPlayerAbilities"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/txtPlayerSub"
-        android:divider="@color/background"
-        android:dividerHeight="10dip" >
-    </com.stryksta.swtorcentral.util.NonScrollListView>
-
     <TextView
         android:id="@+id/txtClass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/lstPlayerAbilities"
+        android:layout_below="@id/txtPlayerSub"
         android:gravity="center"
         android:text="Jedi Consular"
         android:textColor="@color/text"

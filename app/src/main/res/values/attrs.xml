@@ -18,16 +18,6 @@
         <attr name="barWidth" format="dimension" />
     </declare-styleable>
 
-    <declare-styleable name="FloatLabelLayout">
-        <attr name="floatLabelTextAppearance" format="reference" />
-        <attr name="floatLabelPaddingLeft" format="reference|dimension" />
-        <attr name="floatLabelPaddingRight" format="reference|dimension" />
-        <attr name="floatLabelPaddingTop" format="reference|dimension" />
-        <attr name="floatLabelPaddingBottom" format="reference|dimension" />
-        <!-- The hint to display in the floating label -->
-        <attr name="floatLabelHint" format="reference|string" />
-    </declare-styleable>
-
     <declare-styleable name="CollapsingTitleLayout">
         <attr name="expandedMargin" format="reference|dimension" />
         <attr name="expandedMarginStart" format="reference|dimension" />
@@ -47,14 +37,6 @@
     <declare-styleable name="LinearListView">
         <attr name="android:entries" />
         <attr name="dividerThickness" format="dimension" />
-    </declare-styleable>
-
-    <declare-styleable name="ExpandableTextView">
-        <attr name="maxCollapsedLines" format="integer"/>
-        <attr name="animDuration" format="integer"/>
-        <attr name="animAlphaStart" format="float"/>
-        <attr name="expandDrawable" format="reference"/>
-        <attr name="collapseDrawable" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="dashedLineView">
@@ -87,11 +69,6 @@
             <enum name="ROUND" value="1"/>
             <enum name="SQUARE" value="2"/>
         </attr>
-    </declare-styleable>
-
-    <declare-styleable name="ToggleImageButton">
-        <attr name="tib_drawable_on" format="reference" />
-        <attr name="tib_drawable_off" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="AchievementToggle">

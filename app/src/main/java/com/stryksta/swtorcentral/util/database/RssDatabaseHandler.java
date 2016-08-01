@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import com.stryksta.swtorcentral.data.RssItem;
+import com.stryksta.swtorcentral.models.RssItem;
 
 import android.content.ContentValues;
 import android.content.Context;

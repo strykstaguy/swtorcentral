@@ -15,7 +15,7 @@
         android:text="Tython"
         android:textSize="24sp" />
 
-    <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
+    <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
         android:id="@+id/timeline"
         android:layout_width="30dp"
         android:layout_height="60dp"

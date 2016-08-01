@@ -6,7 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.stryksta.swtorcentral.data.TutorialItem;
+import com.stryksta.swtorcentral.models.TutorialItem;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 public class TutorialDatabase extends SQLiteAssetHelper {

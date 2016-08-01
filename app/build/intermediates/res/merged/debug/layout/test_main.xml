@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+
+    <include layout="@layout/toolbar"/>
+
+    <com.stryksta.swtorcentral.util.CircleCheckBox
+        android:id="@+id/chbx"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:borderThickness="2dp"
+        android:background="@color/white"
+        app:circleBorderColor="@color/swtor_blue"
+        app:innerCircleColor="@color/swtor_blue"
+        app:innerCircleRadius="20dp"
+        app:outerCircleColor="@color/swtor_blue_light"
+        app:outerCircleRadius="5dp"
+        app:showOuterCircle="true"
+        app:cc_textColor="@color/swtor_blue"
+        app:cc_textSize="20dp"
+        app:tickColor="@android:color/white"
+        app:tickThickness="1dp"
+        app:cc_text="50" />
+
+    <com.stryksta.swtorcentral.util.AchievementToggle
+        android:id="@+id/achRewardPoints"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:at_text="50"
+        app:at_textSize="20dp"
+        app:at_textColor="@color/swtor_blue"
+        app:at_backgroundColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</LinearLayout>

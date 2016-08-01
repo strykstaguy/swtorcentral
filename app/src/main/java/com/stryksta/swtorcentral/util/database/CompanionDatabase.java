@@ -5,7 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
-import com.stryksta.swtorcentral.data.CompanionItem;
+import com.stryksta.swtorcentral.models.CompanionItem;
 
 import java.util.ArrayList;
 

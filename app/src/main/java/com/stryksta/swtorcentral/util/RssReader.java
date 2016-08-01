@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import com.stryksta.swtorcentral.data.RssItem;
+import com.stryksta.swtorcentral.models.RssItem;
 
 /**
  * Class reads RSS data.

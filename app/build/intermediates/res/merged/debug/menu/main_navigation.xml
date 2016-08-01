@@ -34,6 +34,10 @@
             android:id="@+id/navigation_item_11"
             android:icon="@drawable/ic_settings"
             android:title="@string/navigation_item_11"/>
+        <item
+            android:id="@+id/navigation_item_12"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/navigation_item_10"/>
     </group>
 
     <item

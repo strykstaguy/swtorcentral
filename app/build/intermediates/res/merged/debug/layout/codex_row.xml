@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/text"
                     android:layout_below="@id/cdxDescription"
-                    android:text="Level: 10"
+                    android:text=""
                     android:textSize="12sp" />
 
                 <TextView
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/cdxLevel"
                     android:textColor="@color/text"
-                    android:text="Planets: "
+                    android:text=""
                     android:textSize="12sp" />
             </RelativeLayout>
     </android.support.v7.widget.CardView>

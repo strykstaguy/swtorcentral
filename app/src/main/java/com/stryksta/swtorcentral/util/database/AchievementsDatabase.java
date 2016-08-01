@@ -11,8 +11,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
-import com.stryksta.swtorcentral.data.AchievementCategoryItem;
-import com.stryksta.swtorcentral.data.AchievementsItem;
+import com.stryksta.swtorcentral.models.AchievementCategoryItem;
+import com.stryksta.swtorcentral.models.AchievementsItem;
 
 public class AchievementsDatabase extends SQLiteAssetHelper {
 

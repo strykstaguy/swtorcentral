@@ -96,6 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            android:descendantFocusability="blocksDescendants"
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
@@ -113,16 +114,22 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp">
 
-                <TextView
-                    android:id="@+id/txtDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:textColor="@color/text"
-                    android:gravity="center"
-                    android:text="@string/test_profile_desc"
-                    android:textSize="14sp"
-                    android:layout_margin="10dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:gravity="center"
+                        android:text="@string/test_profile_desc"
+                        android:textSize="14sp"
+                        android:layout_margin="10dp" />
+                </LinearLayout>
 
             </android.support.v7.widget.CardView>
 

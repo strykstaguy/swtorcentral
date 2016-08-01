@@ -4,7 +4,7 @@
         android:layout_height="wrap_content"
         android:background="@color/background">
 
-     <com.stryksta.swtorcentral.util.timeline.RoundTimelineView
+     <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
             android:id="@+id/timeline"
             android:layout_width="30dp"
             android:layout_height="150dp"
@@ -42,7 +42,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"/>
 
-            <com.stryksta.swtorcentral.util.bubbleview.BubbleLinearLayout
+            <com.stryksta.swtorcentral.ui.views.bubbleview.BubbleLinearLayout
                 android:orientation="vertical"
                 app:arrowWidth="0dp"
                 app:angle="0dp"
@@ -79,7 +79,7 @@
                     android:textSize="14sp"
                     android:layout_gravity="center_horizontal"/>
 
-            </com.stryksta.swtorcentral.util.bubbleview.BubbleLinearLayout>
+            </com.stryksta.swtorcentral.ui.views.bubbleview.BubbleLinearLayout>
 
 
         </LinearLayout>

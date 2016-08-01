@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.stryksta.swtorcentral.util.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        app:cardElevation="2dp"
-        app:cardCornerRadius="2dp"
-        android:clickable="true"
-        android:foreground="@drawable/card_foreground"
+        app:cardPreventCornerOverlap="false"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        app:cardPreventCornerOverlap="false">
+        android:elevation="2dp"
+        app:cardCornerRadius="2dp"
+        android:clickable="true"
+        android:foreground="@drawable/card_foreground">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="@dimen/dim_10"
-            android:paddingBottom="@dimen/dim_10"
-            android:paddingRight="@dimen/dim_5"
-            android:paddingLeft="@dimen/dim_5"
-            android:orientation="vertical">
+            android:padding="5.0dip">
 
             <ImageButton
-                android:id="@+id/comIcon"
-                android:layout_width="@dimen/fab_normal"
-                android:layout_height="@dimen/fab_normal"
-                android:padding="3dp"
+                android:id="@+id/comImage"
+                android:layout_width="@dimen/fab_progress"
+                android:layout_height="@dimen/fab_progress"
+                android:padding="8dp"
                 android:background="@drawable/round"
                 android:elevation="3dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
                 android:src="@drawable/ic_companion"
-                android:tintMode="@color/white"
-                android:layout_gravity="center_horizontal"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center">
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@+id/comName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textColor="@color/text"
+                android:text="Jedi Consular"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            c<TextView
+                android:id="@+id/comDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/comIcon"
-                android:maxLines="2"
-                android:singleLine="false"
-                android:text="Theron Shan"
+                android:padding="5dp"
+                android:layout_marginBottom="@dimen/dim_5"
                 android:textColor="@color/text"
-                android:textSize="16sp"
-                android:gravity="center_horizontal"/>
-        </LinearLayout>
-        </LinearLayout>
+                android:gravity="center"
+                android:text="A master of the secrets of the Force, the Jedi Consular is both fighter and healer, teacher and student. The Force can be used to cloud the minds of the weak, restore strength to the fallen and hurl both opponents and objects through the air."
+                android:textSize="14sp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:layout_below="@+id/comName"
+                android:layout_toRightOf="@+id/comImage"
+                android:layout_toEndOf="@+id/comImage" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
-</com.stryksta.swtorcentral.util.SquareRelativeLayout>
+</LinearLayout>

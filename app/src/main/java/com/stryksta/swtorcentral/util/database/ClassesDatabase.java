@@ -4,14 +4,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
-import android.os.Build;
-import android.support.v4.content.ContextCompat;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
-import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.data.AdvancedClassItem;
-import com.stryksta.swtorcentral.data.ClassItem;
-import com.stryksta.swtorcentral.data.DisciplineItem;
+import com.stryksta.swtorcentral.models.AdvancedClassItem;
+import com.stryksta.swtorcentral.models.ClassItem;
+import com.stryksta.swtorcentral.models.DisciplineItem;
 
 import java.util.ArrayList;
 

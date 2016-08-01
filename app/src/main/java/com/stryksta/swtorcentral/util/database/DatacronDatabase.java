@@ -7,7 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
-import com.stryksta.swtorcentral.data.DatacronItem;
+import com.stryksta.swtorcentral.models.DatacronItem;
 
 public class DatacronDatabase extends SQLiteAssetHelper {
 

@@ -5,7 +5,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.stryksta.swtorcentral.data.RssItem;
+import com.stryksta.swtorcentral.models.RssItem;
 
 public class RssParseHandler extends DefaultHandler {
 
