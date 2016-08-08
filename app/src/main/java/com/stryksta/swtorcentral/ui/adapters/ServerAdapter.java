@@ -39,40 +39,49 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        ServerItem serverRow = serverItems.get(position);
-        viewHolder.txtServerName.setText(serverRow.getserverName());
-        viewHolder.txtServerType.setText(serverRow.getserverType());
-        viewHolder.txtServerZone.setText(serverRow.getserverZone());
 
-        Drawable background = viewHolder.serverStatusIcon.getBackground();
-        if (background instanceof ShapeDrawable) {
-            ((ShapeDrawable)background).getPaint().setColor(ContextCompat.getColor(mContext, R.color.md_grey_700));
-        } else if (background instanceof GradientDrawable) {
-            ((GradientDrawable)background).setColor(ContextCompat.getColor(mContext, R.color.md_grey_700));
-        } else if (background instanceof ColorDrawable) {
-            ((ColorDrawable)background).setColor(ContextCompat.getColor(mContext, R.color.md_grey_700));
-        }
+        //if the page is down?
+        if (serverItems != null) {
 
-        viewHolder.txtServerPopulation.setText(serverRow.getserverStatus());
-        if (serverRow.getserverStatus().equalsIgnoreCase("Light")) {
-            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_green_500));
-            viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_green_500));
+            ServerItem serverRow = serverItems.get(position);
+            viewHolder.txtServerName.setText(serverRow.getserverName());
+            viewHolder.txtServerType.setText(serverRow.getserverType());
+            viewHolder.txtServerZone.setText(serverRow.getserverZone());
 
-        } else if (serverRow.getserverStatus().equalsIgnoreCase("Standard")) {
-            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_amber_600));
-            viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_amber_600));
+            //GradientDrawable background = (GradientDrawable) viewHolder.serverStatusIcon.getBackground();
+            //background.setColor(ContextCompat.getColor(mContext, R.color.md_grey_700));
 
-        } else if (serverRow.getserverStatus().equalsIgnoreCase("Heavy")) {
-            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_500));
-            viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_orange_500));
+            //viewHolder.serverStatusIcon.setBackgroundResource(serverRow.getImageId());
+            viewHolder.serverStatusIcon.setImageDrawable(ContextCompat.getDrawable(mContext, serverRow.getImageId()));
 
-        } else if (serverRow.getserverStatus().equalsIgnoreCase("Very Heavy")) {
-            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_red_500));
-            viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_red_500));
+            viewHolder.txtServerPopulation.setText(serverRow.getserverStatus());
+            if (serverRow.getserverStatus().equalsIgnoreCase("Light")) {
+                viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_green_500));
+                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_green_500));
 
-        } else if (serverRow.getserverStatus().equalsIgnoreCase("Full")) {
-            viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_red_900));
-            viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_red_900));
+            } else if (serverRow.getserverStatus().equalsIgnoreCase("Standard")) {
+                viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_amber_600));
+                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_amber_600));
+
+            } else if (serverRow.getserverStatus().equalsIgnoreCase("Heavy")) {
+                viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_500));
+                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_orange_500));
+
+            } else if (serverRow.getserverStatus().equalsIgnoreCase("Very Heavy")) {
+                viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_red_500));
+                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_red_500));
+
+            } else if (serverRow.getserverStatus().equalsIgnoreCase("Full")) {
+                viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_red_900));
+                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_red_900));
+
+            } else if (serverRow.getserverStatus().equalsIgnoreCase("Offline")) {
+                viewHolder.txtServerName.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
+                viewHolder.txtServerType.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
+                viewHolder.txtServerZone.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
+                viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
+                //viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
+            }
         }
     }
 

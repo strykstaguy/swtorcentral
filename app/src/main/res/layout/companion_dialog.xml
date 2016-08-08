@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/text"
         android:text="Companion Gifts"
-        android:textSize="12sp"/>
+        android:textSize="14sp"/>
 
     <TextView
         android:id="@+id/comGiftsSep"
@@ -22,7 +22,7 @@
         android:textStyle="bold"
         android:layout_marginTop="@dimen/dim_10"
         android:paddingBottom="5.0dip"
-        android:textSize="12sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/comGifts"
@@ -31,6 +31,6 @@
         android:textColor="@color/text"
         android:text="Compfsdfasdfasdfasdfasdf"
         android:paddingBottom="5.0dip"
-        android:textSize="12sp" />
+        android:textSize="14sp" />
 
 </LinearLayout>

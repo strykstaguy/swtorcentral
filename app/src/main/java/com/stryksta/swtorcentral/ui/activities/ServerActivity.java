@@ -99,12 +99,12 @@ public class ServerActivity extends AppCompatActivity {
 					String serverPop = USServer.child(2).text();
                     String serverType = USServer.child(3).text();
                     String serverZone = USServer.child(4).text();
-					int serverStatusIMG = R.drawable.ic_arrow_down;
+					int serverStatusIMG = R.drawable.ic_arrow_up;
 					
-					if (!serverStatus.equals("DOWN")) {
-						serverStatusIMG = R.drawable.ic_arrow_up;
+					if (serverStatus.equals("DOWN")) {
+						serverStatusIMG = R.drawable.ic_arrow_down;
 		            }
-					
+
 					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop, serverType, serverZone);
                     serverItems.add(item);
 				}
@@ -117,10 +117,10 @@ public class ServerActivity extends AppCompatActivity {
 					String serverPop = EUServer.child(2).text();
                     String serverType = EUServer.child(3).text();
                     String serverZone = EUServer.child(4).text();
-					int serverStatusIMG = R.drawable.ic_arrow_down;
+					int serverStatusIMG = R.drawable.ic_arrow_up;
 					
-					if (!serverStatus.equals("DOWN")) {
-						serverStatusIMG = R.drawable.ic_arrow_up;
+					if (serverStatus.equals("DOWN")) {
+						serverStatusIMG = R.drawable.ic_arrow_down;
 		            }
 
 					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop, serverType, serverZone);

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/text"
         android:text="Level: 10"
-        android:textSize="14sp"/>
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/ablCastingActivation"
@@ -20,7 +20,7 @@
         android:textColor="@color/text"
         android:text="Activation: 2.5s"
         android:paddingBottom="5.0dip"
-        android:textSize="12sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/ablChanneled"
@@ -29,7 +29,7 @@
         android:textColor="@color/text"
         android:text="Channeled: 3s"
         android:paddingBottom="5.0dip"
-        android:textSize="12sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/ablResource"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="Force Cost: 50"
         android:textColor="@color/text"
-        android:textSize="12sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/ablCooldown"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/text"
         android:text="Cooldown: 6s"
-        android:textSize="12sp" />
+        android:textSize="14sp" />
 
         <TextView
             android:id="@+id/ablRange"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:text="Range: 30m"
             android:textColor="@color/text"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/ablDescription"
@@ -63,5 +63,5 @@
             android:text="dfasdfsdfsd"
             android:paddingBottom="5.0dip"
             android:paddingTop="10.0dip"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 </LinearLayout>

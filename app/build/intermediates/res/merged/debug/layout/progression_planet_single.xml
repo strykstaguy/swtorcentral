@@ -47,7 +47,7 @@
                 app:arrowWidth="0dp"
                 app:angle="0dp"
                 app:arrowHeight="0dp"
-                app:bubbleColor="@color/swtor_blue"
+                app:bubbleColor="@color/background"
                 android:id="@+id/bubble_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                     android:paddingRight="@dimen/dim_5"
                     android:text="Tython"
                     android:gravity="right"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text"
                     android:textSize="16sp"
                     android:layout_gravity="center_horizontal"/>
 
@@ -74,7 +74,7 @@
                     android:paddingRight="@dimen/dim_5"
                     android:layout_marginBottom="@dimen/dim_5"
                     android:text="Levels 1 - 10"
-                    android:textColor="@color/white"
+                    android:textColor="@color/subheader"
                     android:gravity="right"
                     android:textSize="14sp"
                     android:layout_gravity="center_horizontal"/>

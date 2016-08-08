@@ -26,8 +26,8 @@
 
             <ImageButton
                 android:id="@+id/comImage"
-                android:layout_width="@dimen/fab_progress"
-                android:layout_height="@dimen/fab_progress"
+                android:layout_width="@dimen/fab_normal"
+                android:layout_height="@dimen/fab_normal"
                 android:padding="8dp"
                 android:background="@drawable/round"
                 android:elevation="3dp"
@@ -60,7 +60,7 @@
                 android:gravity="center"
                 android:text="A master of the secrets of the Force, the Jedi Consular is both fighter and healer, teacher and student. The Force can be used to cloud the minds of the weak, restore strength to the fallen and hurl both opponents and objects through the air."
                 android:textSize="14sp"
-                android:maxLines="4"
+                android:maxLines="3"
                 android:ellipsize="end"
                 android:layout_below="@+id/comName"
                 android:layout_toRightOf="@+id/comImage"

@@ -1,8 +1,10 @@
 package com.stryksta.swtorcentral.ui.adapters;
 
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
@@ -31,6 +33,8 @@ public class CompanionClassAdapter extends RecyclerView.Adapter<CompanionClassAd
         CompanionItem companionRow = companionItems.get(position);
         viewHolder.comName.setText(companionRow.getName());
         viewHolder.comDesc.setText(companionRow.getDescription());
+
+        //viewHolder.comImage.setBackground(ContextCompat.getDrawable(viewHolder.comImage.getContext(), R.drawable.round));
     }
 
     @Override
@@ -41,11 +45,13 @@ public class CompanionClassAdapter extends RecyclerView.Adapter<CompanionClassAd
     public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView comName;
         public TextView comDesc;
+        public ImageButton comImage;
 
         public ViewHolder(View itemView) {
             super(itemView);
             comName = (TextView) itemView.findViewById(R.id.comName);
             comDesc = (TextView) itemView.findViewById(R.id.comDesc);
+            comImage = (ImageButton) itemView.findViewById(R.id.imgClass);
         }
     }
 }
