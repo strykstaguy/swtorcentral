@@ -18,115 +18,105 @@
         android:foreground="@drawable/card_foreground"
         app:cardBackgroundColor="@color/white">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:padding="@dimen/dim_5">
-
-        <LinearLayout
-            android:id="@+id/layoutTitle"
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingBottom="@dimen/dim_5"
-            android:orientation="horizontal">
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/dim_5">
+
+            <LinearLayout
+                android:id="@+id/layoutTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dim_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/achTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="left"
+                    android:paddingTop="@dimen/dim_5"
+                    android:paddingBottom="@dimen/dim_5"
+                    android:paddingLeft="@dimen/dim_5"
+                    android:textColor="@color/regularcolor"
+                    android:textSize="18sp"
+                    android:text="Title"
+                    android:textStyle="bold"
+                    android:layout_toLeftOf="@+id/achRewardPoints"/>
+
+                <com.stryksta.swtorcentral.util.AchievementToggle
+                    android:id="@+id/achRewardPoints"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:at_text="50"
+                    app:at_textSize="20dp"
+                    app:at_textColor="@color/swtor_blue"
+                    app:at_backgroundColor="@color/white"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/achTitle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
+                android:id="@+id/achDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutTitle"
                 android:layout_gravity="left"
-                android:paddingTop="@dimen/dim_5"
-                android:paddingBottom="@dimen/dim_5"
-                android:paddingLeft="@dimen/dim_5"
+                android:paddingLeft="5dp"
                 android:textColor="@color/regularcolor"
-                android:textSize="18sp"
-                android:text="Title"
-                android:textStyle="bold"
-                android:layout_toLeftOf="@+id/achRewardPoints"/>
+                android:text="This is a test description for an achievement, so its jsut for show not for play play"
+                android:textSize="14sp" />
 
+            <TextView
+                android:id="@+id/txtRewardsSep"
+                android:layout_below="@+id/achDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/dim_10"
+                android:paddingLeft="5dp"
+                android:text="Rewards:"
+                android:textColor="@color/regularcolor"
+                android:textSize="12sp" />
 
-            <com.stryksta.swtorcentral.util.CircleCheckBox
-                android:id="@+id/achRewardPoints"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                app:borderThickness="2dp"
-                android:background="@color/white"
-                app:circleBorderColor="@color/swtor_blue"
-                app:innerCircleColor="@color/swtor_blue"
-                app:innerCircleRadius="20dp"
-                app:outerCircleColor="@color/swtor_blue_light"
-                app:outerCircleRadius="5dp"
-                app:showOuterCircle="true"
-                app:cc_textColor="@color/swtor_blue"
-                app:cc_textSize="20dp"
-                app:tickColor="@android:color/white"
-                app:tickThickness="1dp"
-                app:cc_text="50" />
-        </LinearLayout>
+            <TextView
+                android:id="@+id/achRewardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtRewardsSep"
+                android:layout_gravity="left"
+                android:paddingLeft="5dp"
+                android:text="Rewards Title"
+                android:textColor="@color/regularcolor"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/achDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/layoutTitle"
-            android:layout_gravity="left"
-            android:paddingLeft="5dp"
-            android:textColor="@color/regularcolor"
-            android:text="This is a test description for an achievement, so its jsut for show not for play play"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/achRewardFleetRequisition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/achRewardTitle"
+                android:layout_gravity="left"
+                android:paddingLeft="5dp"
+                android:text="Fleet Requisition"
+                android:textColor="@color/regularcolor"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/txtRewardsSep"
-            android:layout_below="@+id/achDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="@dimen/dim_10"
-            android:paddingLeft="5dp"
-            android:text="Rewards:"
-            android:textColor="@color/regularcolor"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/achRewardTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtRewardsSep"
-            android:layout_gravity="left"
-            android:paddingLeft="5dp"
-            android:text="Rewards Title"
-            android:textColor="@color/regularcolor"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/achRewardFleetRequisition"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/achRewardTitle"
-            android:layout_gravity="left"
-            android:paddingLeft="5dp"
-            android:text="Fleet Requisition"
-            android:textColor="@color/regularcolor"
-            android:textSize="12sp" />
-        
-        <TextView
-            android:id="@+id/txtStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/achRewardFleetRequisition"
-            android:layout_gravity="left"
-            android:paddingLeft="5dp"
-            android:paddingTop="10dp"
-            android:textColor="@color/regularcolor"
-            android:text="Status"
-            android:textSize="14sp" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/achRewardFleetRequisition"
+                android:layout_gravity="left"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/regularcolor"
+                android:text="Status"
+                android:textSize="14sp" />
+        </RelativeLayout>
 
     </android.support.v7.widget.CardView>
 

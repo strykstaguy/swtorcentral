@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\achievement_item_main.xml"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\settings.xml",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\settings.xml"
-    },
-    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\codex_main.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\codex_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\settings.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\settings.xml"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\class_fragment_main.xml",
@@ -340,12 +340,12 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\preference-v7\\23.3.0\\res\\layout\\preference_recyclerview.xml"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\color_item.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\layout\\color_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",

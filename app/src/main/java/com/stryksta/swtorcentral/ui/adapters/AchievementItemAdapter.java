@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.models.AchievementsItem;
+import com.stryksta.swtorcentral.util.AchievementToggle;
 import com.stryksta.swtorcentral.util.CircleCheckBox;
 
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
         if (achItem != null) {
             viewHolder.achTitle.setText(achItem.getTitle());
             viewHolder.achDescription.setText(insertNewLine(achItem.getDescription()));
-            viewHolder.achRewardPoints.setText(String.valueOf(achItem.getRewardPoints()));
+            viewHolder.achRewardPoints.setTitleText(String.valueOf(achItem.getRewardPoints()));
 
             if (achItem.getRewardFleetRequisition() == null) {
                 viewHolder.achRewardFleetRequisition.setVisibility(View.GONE);
@@ -73,6 +74,7 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
                 viewHolder.txtStatus.setText(Html.fromHtml("Status: <b>Incomplete</b>"));
                 viewHolder.achRewardPoints.setChecked(false);
 
+                viewHolder.achRewardPoints.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
                 viewHolder.achCard.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
                 viewHolder.achTitle.setTextColor(ContextCompat.getColor(mContext, R.color.black));
                 viewHolder.achDescription.setTextColor(ContextCompat.getColor(mContext, R.color.black));
@@ -98,7 +100,7 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
         public TextView achRewardTitle;
         public TextView achRewardFleetRequisition;
         public TextView txtStatus;
-        public CircleCheckBox achRewardPoints;
+        public AchievementToggle achRewardPoints;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -109,7 +111,7 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
             achRewardTitle = (TextView) itemView.findViewById(R.id.achRewardTitle);
             achRewardFleetRequisition = (TextView) itemView.findViewById(R.id.achRewardFleetRequisition);
             txtStatus = (TextView) itemView.findViewById(R.id.txtStatus);
-            achRewardPoints = (CircleCheckBox) itemView.findViewById(R.id.achRewardPoints);
+            achRewardPoints = (AchievementToggle) itemView.findViewById(R.id.achRewardPoints);
         }
     }
 

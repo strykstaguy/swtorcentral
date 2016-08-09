@@ -8,33 +8,235 @@
 
     <include layout="@layout/toolbar"/>
 
-    <com.stryksta.swtorcentral.util.CircleCheckBox
-        android:id="@+id/chbx"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:borderThickness="2dp"
-        android:background="@color/white"
-        app:circleBorderColor="@color/swtor_blue"
-        app:innerCircleColor="@color/swtor_blue"
-        app:innerCircleRadius="20dp"
-        app:outerCircleColor="@color/swtor_blue_light"
-        app:outerCircleRadius="5dp"
-        app:showOuterCircle="true"
-        app:cc_textColor="@color/swtor_blue"
-        app:cc_textSize="20dp"
-        app:tickColor="@android:color/white"
-        app:tickThickness="1dp"
-        app:cc_text="50" />
+    <TextView
+        android:id="@+id/txtPrologue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text"
+        android:text="Prologue"
+        android:textSize="24sp" />
 
-    <com.stryksta.swtorcentral.util.AchievementToggle
-        android:id="@+id/achRewardPoints"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:at_text="50"
-        app:at_textSize="20dp"
-        app:at_textColor="@color/swtor_blue"
-        app:at_backgroundColor="@color/white"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/background" >
 
+        <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
+            android:id="@+id/tmlPrologue1"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            app:firstColor="@color/md_grey_700"
+            app:firstSize="7"
+            app:lineColor="@color/md_grey_700"
+            app:lineWidth="5dp"
+            app:timeline_type="start" />
+
+        <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
+            android:id="@+id/tmlPrologue2"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            app:firstColor="@color/md_grey_700"
+            app:firstSize="7"
+            app:lineColor="@color/md_grey_700"
+            app:lineWidth="5dp"
+            app:timeline_type="start" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:id="@+id/doubleLinearLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/background" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout2"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/timelineRepublic"
+                android:layout_toEndOf="@+id/timelineRepublic">
+
+                <ImageView
+                    android:id="@+id/imgPlanet2"
+                    android:layout_width="75.0dip"
+                    android:layout_height="75.0dip"
+                    android:clickable="false"
+                    android:contentDescription="@string/image_placeholder"
+                    android:src="@drawable/pl_korriban"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/txtPlanet2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Korriban"
+                    android:gravity="left"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/txtLevel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Levels 1 - 10"
+                    android:gravity="left"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
+                android:id="@+id/timeline"
+                android:layout_width="30dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                app:firstColor="@color/md_grey_700"
+                app:firstSize="7"
+                app:lastColor="@color/md_grey_700"
+                app:lastSize="7"
+                app:lineColor="@color/md_grey_700"
+                app:lineWidth="5dp"
+                app:middleColor="@color/md_grey_700"
+                app:middleSize="7"
+                app:timeline_type="middle"
+                android:layout_centerHorizontal="true" />
+
+            <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
+                android:id="@+id/timelineRepublic"
+                android:layout_width="30dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@+id/timeline"
+                app:firstColor="@color/md_grey_700"
+                app:firstSize="7"
+                app:lastColor="@color/md_grey_700"
+                app:lastSize="7"
+                app:lineColor="@color/md_grey_700"
+                app:lineWidth="5dp"
+                app:middleColor="@color/md_grey_700"
+                app:middleSize="7"
+                app:timeline_type="middle"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout"
+                android:layout_alignRight="@+id/doubleLinearLayout"
+                android:layout_alignEnd="@+id/doubleLinearLayout">
+
+                <ImageView
+                    android:id="@+id/imgPlanet"
+                    android:layout_width="75.0dip"
+                    android:layout_height="75.0dip"
+                    android:clickable="false"
+                    android:contentDescription="@string/image_placeholder"
+                    android:src="@drawable/pl_tython"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/txtPlanet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tython"
+                    android:gravity="right"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/txtLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Levels 1 - 10"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.stryksta.swtorcentral.ui.views.timeline.TimeLineConnector
+        android:id="@+id/test"
+        android:layout_width="35dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="-0.9dp"
+        android:layout_marginTop="-1dp"
+        app:timeline_orientation="horizontal"
+        app:timeline_lineColor="@color/md_grey_700"
+        app:timeline_lineSize="5dp"/>
+
+    <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
+        android:id="@+id/timelineRepublicsdfasdf"
+        android:layout_width="35dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center_horizontal"
+        app:firstColor="@color/md_grey_700"
+        app:firstSize="7"
+        app:lastColor="@color/md_grey_700"
+        app:lastSize="7"
+        app:lineColor="@color/md_grey_700"
+        app:lineWidth="5dp"
+        app:middleColor="@color/md_grey_700"
+        app:middleSize="7"
+        app:timeline_type="middle"
+        android:layout_centerHorizontal="true" />
+
+    <com.stryksta.swtorcentral.ui.views.bubbleview.BubbleLinearLayout
+        android:orientation="vertical"
+        app:arrowWidth="8dp"
+        app:angle="0dp"
+        app:arrowHeight="10dp"
+        app:arrowPosition="10dp"
+        app:arrowLocation="left"
+        app:bubbleColor="@color/swtor_blue"
+        android:id="@+id/bubble_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtPlanetfgsdfg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Korriban"
+            android:gravity="right"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/dim_5"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/txtLevelsdfgsdfgd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Levels 1 - 10"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:paddingLeft="@dimen/dim_5"
+            android:paddingRight="@dimen/dim_5"
+            android:gravity="left"
+            android:textSize="10sp"
+            android:layout_gravity="right"/>
+    </com.stryksta.swtorcentral.ui.views.bubbleview.BubbleLinearLayout>
 </LinearLayout>
