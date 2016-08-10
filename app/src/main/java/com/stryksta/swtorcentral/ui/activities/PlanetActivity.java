@@ -25,6 +25,7 @@ public class PlanetActivity extends AppCompatActivity {
 	private String planetText;
 	private String factionText;
 	private String typeText;
+    private int planetImage;
 	private PlanetDatabase dbPlanet;
 	private DatacronDatabase dbDatacron;
     private ArrayList<DatacronItem> datacronItems;
@@ -56,6 +57,7 @@ public class PlanetActivity extends AppCompatActivity {
         	planetText = bundle.getString("planet");
         	factionText = bundle.getString("faction");
         	typeText = bundle.getString("type");
+            planetImage = bundle.getInt("image");
         }
 
         getSupportActionBar().setTitle(planetText);
@@ -74,7 +76,7 @@ public class PlanetActivity extends AppCompatActivity {
         pltTitle.setText(typeText);
 
 		ImageView pltImage = (ImageView) findViewById(R.id.pltImage);
-        //pltImage.setBackgroundResource("");
+        pltImage.setImageResource(planetImage);
 
         //Datacrons
         dbDatacron = new DatacronDatabase(PlanetActivity.this);

@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.ui.views.timeline.TimelineType;
+import com.stryksta.swtorcentral.ui.views.timeline.TimelineView;
 
 public class TestActivity extends AppCompatActivity {
     private Toolbar mToolbar;
@@ -35,6 +37,15 @@ public class TestActivity extends AppCompatActivity {
         }
 
         getSupportActionBar().setTitle("Blank");
+
+        TimelineView timeLineView = (TimelineView) findViewById(R.id.timeline);
+        timeLineView.setTimelineType(TimelineType.LINE);
+
+        TimelineView timelineRepublic = (TimelineView) findViewById(R.id.timelineRepublic);
+        timelineRepublic.setTimelineType(TimelineType.LINE);
+
+        TimelineView timelineRepublicsdfasdf = (TimelineView) findViewById(R.id.timelineRepublicsdfasdf);
+        timelineRepublicsdfasdf.setTimelineType(TimelineType.LINE);
 
     }
 

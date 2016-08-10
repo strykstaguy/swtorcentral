@@ -83,8 +83,8 @@
         <attr name="timeline_lineSize" format="dimension"/>
         <attr name="timeline_lineColor" format="color"/>
         <attr name="timeline_orientation">
-            <enum name="horizontal" value="0"/>
-            <enum name="vertical" value="1"/>
+            <enum name="up" value="0"/>
+            <enum name="down" value="1"/>
         </attr>
     </declare-styleable>
 

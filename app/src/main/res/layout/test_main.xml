@@ -183,7 +183,7 @@
         android:layout_gravity="center"
         android:layout_marginLeft="-0.9dp"
         android:layout_marginTop="-1dp"
-        app:timeline_orientation="horizontal"
+        app:timeline_orientation="up"
         app:timeline_lineColor="@color/md_grey_700"
         app:timeline_lineSize="5dp"/>
 

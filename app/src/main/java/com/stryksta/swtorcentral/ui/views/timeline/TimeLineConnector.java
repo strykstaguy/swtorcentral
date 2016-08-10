@@ -105,30 +105,61 @@ public class TimeLineConnector extends View implements View.OnClickListener {
         int contentWidth = getWidth() - getPaddingLeft() - getPaddingRight();
         int contentHeight = getHeight() - getPaddingTop() - getPaddingBottom();
 
-        //Right Line
-        rightStartX = getWidth() - getPaddingRight() - ((int) mLineWidth / 2) - 1;
-        rightStartY = getPaddingTop();
-        rightStopX = getWidth() - getPaddingRight() - ((int) mLineWidth / 2) - 1;
-        rightStopY = contentHeight;
+        if (mOrientation == 0) {
+            //Direction Up
+            //Right Line
+            rightStartX = getWidth() - getPaddingRight() - ((int) mLineWidth / 2) - 1;
+            rightStartY = getPaddingTop();
+            rightStopX = getWidth() - getPaddingRight() - ((int) mLineWidth / 2) - 1;
+            rightStopY = contentHeight;
 
-        canvas.drawLine(rightStartX, rightStartY, rightStopX, rightStopY, mPaint);
+            canvas.drawLine(rightStartX, rightStartY, rightStopX, rightStopY, mPaint);
 
-        //Left Line
-        leftStartX = (Math.round(mLineWidth) / 2) + getPaddingLeft();
-        leftStartY = getPaddingTop();
-        leftStopX = leftStartX;
-        leftStopY = contentHeight;
+            //Left Line
+            leftStartX = (Math.round(mLineWidth) / 2) + getPaddingLeft();
+            leftStartY = getPaddingTop();
+            leftStopX = leftStartX;
+            leftStopY = contentHeight;
 
-        //Bottom Line
-        canvas.drawLine(leftStartX, leftStartY, leftStopX, leftStopY, mPaint);
+            //Bottom Line
+            canvas.drawLine(leftStartX, leftStartY, leftStopX, leftStopY, mPaint);
 
-        bottomStartX = getPaddingLeft() - 1;
-        bottomStartY = contentHeight - ((int) mLineWidth / 2);
-        bottomStopX =  rightStopX;
-        bottomStopY = bottomStartY;
+            bottomStartX = getPaddingLeft() - 1;
+            bottomStartY = contentHeight - ((int) mLineWidth / 2);
+            bottomStopX = rightStopX;
+            bottomStopY = bottomStartY;
 
 
-        canvas.drawLine(bottomStartX, bottomStartY, bottomStopX, bottomStopY, mPaint);
+            canvas.drawLine(bottomStartX, bottomStartY, bottomStopX, bottomStopY, mPaint);
+
+        } else {
+            //Direction Down
+            //Right Line
+            rightStartX = getWidth() - getPaddingRight() - ((int) mLineWidth / 2) - 1;
+            rightStartY = getHeight() - getPaddingBottom();
+            rightStopX = getWidth() - getPaddingRight() - ((int) mLineWidth / 2) - 1;
+            rightStopY = contentHeight;
+
+            canvas.drawLine(rightStartX, rightStartY, rightStopX, rightStopY, mPaint);
+
+            //Left Line
+            leftStartX = (Math.round(mLineWidth) / 2) + getPaddingLeft();
+            leftStartY = getPaddingTop();
+            leftStopX = leftStartX;
+            leftStopY = contentHeight;
+
+            //Bottom Line
+            canvas.drawLine(leftStartX, leftStartY, leftStopX, leftStopY, mPaint);
+
+            bottomStartX = getPaddingLeft() - 1;
+            bottomStartY = contentHeight - ((int) mLineWidth / 2);
+            bottomStopX = rightStopX;
+            bottomStopY = bottomStartY;
+
+
+            canvas.drawLine(bottomStartX, bottomStartY, bottomStopX, bottomStopY, mPaint);
+
+        }
     }
     /**
      * Sets the view's onclick.

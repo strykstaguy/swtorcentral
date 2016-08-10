@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -166,6 +167,9 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public TextView txtPlanetEmpire;
         public TextView txtLevelEmpire;
 
+        public LinearLayout linearLayoutRepublic;
+        public LinearLayout linearLayoutEmpire;
+
         public TimelineView timeLineView;
 
         public PlanetDoubleViewHolder(View itemView) {
@@ -173,27 +177,50 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             imgPlanetRepublic = (ImageView) itemView.findViewById(R.id.imgPlanetRepublic);
             txtPlanetRepublic = (TextView) itemView.findViewById(R.id.txtPlanetRepublic);
             txtLevelRepublic = (TextView) itemView.findViewById(R.id.txtLevelRepublic);
+            imgPlanetRepublic.setTag("Right");
 
             imgPlanetEmpire = (ImageView) itemView.findViewById(R.id.imgPlanetEmpire);
             txtPlanetEmpire = (TextView) itemView.findViewById(R.id.txtPlanetEmpire);
             txtLevelEmpire = (TextView) itemView.findViewById(R.id.txtLevelEmpire);
 
+            linearLayoutRepublic = (LinearLayout) itemView.findViewById(R.id.linearLayoutRepublic);
+            linearLayoutEmpire = (LinearLayout) itemView.findViewById(R.id.linearLayoutEmpire);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
 
             // Attach a click listener to the entire row view
-            itemView.setOnClickListener(this);
+            linearLayoutRepublic.setOnClickListener(this);
+            linearLayoutEmpire.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(), "Boom!", Toast.LENGTH_SHORT).show();
-            Bundle bundle = new Bundle();
-            //bundle.putString("planet", progressionItems.get(getAdapterPosition()).getPlanet());
-            //bundle.putString("type", progressionItems.get(getAdapterPosition()).getLevel());
-            //bundle.putString("faction", "Republic");
-            Intent intent = new Intent(v.getContext(), PlanetActivity.class);
-            intent.putExtras(bundle);
-            v.getContext().startActivity(intent);
+            //Toast.makeText(v.getContext(),  String.valueOf(v.getId()), Toast.LENGTH_SHORT).show();
+
+            if (v.getId() == linearLayoutRepublic.getId()){
+
+                Bundle bundle = new Bundle();
+                bundle.putString("planet", progressionItems.get(getAdapterPosition()).getRepublicPlanet());
+                bundle.putString("type", progressionItems.get(getAdapterPosition()).getRepublicLevel());
+                bundle.putInt("image", progressionItems.get(getAdapterPosition()).getRepublicPlanetImage());
+                bundle.putString("faction", "Republic");
+                Intent intent = new Intent(v.getContext(), PlanetActivity.class);
+                intent.putExtras(bundle);
+                v.getContext().startActivity(intent);
+
+            } else if (v.getId() == linearLayoutEmpire.getId()){
+
+                Bundle bundle = new Bundle();
+                bundle.putString("planet", progressionItems.get(getAdapterPosition()).getEmpirePlanet());
+                bundle.putString("type", progressionItems.get(getAdapterPosition()).getEmpireLevel());
+                bundle.putInt("image", progressionItems.get(getAdapterPosition()).getEmpirePlanetImage());
+                bundle.putString("faction", "Empire");
+                Intent intent = new Intent(v.getContext(), PlanetActivity.class);
+                intent.putExtras(bundle);
+                v.getContext().startActivity(intent);
+
+            }
+
+
         }
     }
 

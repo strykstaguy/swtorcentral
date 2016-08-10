@@ -6,7 +6,9 @@ import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.ui.adapters.ProgressionAdapter;
 import com.stryksta.swtorcentral.models.ProgressionItem;
 import com.stryksta.swtorcentral.ui.views.timeline.TimelineType;
+import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -15,6 +17,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 
 
@@ -53,6 +56,25 @@ public class ProgressionActivity extends AppCompatActivity {
 
         mRecycleAdapter = new ProgressionAdapter(progressionItems);
         mRecyclerView.setAdapter(mRecycleAdapter);
+        /*
+        mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(ProgressionActivity.this, mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
+        {
+            public void onItemClick(View view, int position)
+            {
+                Bundle bundle = new Bundle();
+                bundle.putString("planet", progressionItems.get(position).getRepublicFlashpoint());
+                bundle.putString("type", progressionItems.get(position).getEmpireLevel());
+                Intent intent = new Intent(getApplicationContext(), PlanetActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+
+            public void onItemLongClick(View view, int position)
+            {
+
+            }
+        }));
+*/
     }
 
     private ArrayList<ProgressionItem> generateData(){
