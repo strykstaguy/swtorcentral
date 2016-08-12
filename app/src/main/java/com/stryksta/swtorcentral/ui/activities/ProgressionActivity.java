@@ -88,21 +88,21 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("Carrick Station", "Republic Fleet", "Vaiken Spacedock", "Imperial Fleet", R.drawable.empire_logo, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("The Esseles", "Flashpoint","The Black Talon", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Coruscant", "Level 10-16", R.drawable.pl_coruscant, "Dromund Kaas", "Level 11-16", R.drawable.pl_dromundkaas));
-        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE));
+        planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
         //planets.add(new ProgressionItem("Kuat Drive Yards", "Flashpoint", R.drawable.ic_tactical_flashpoint, TimelineType.LINE, ProgressionItem.FLASHOPR));
 
         planets.add(new ProgressionItem("Chapter 1", ProgressionItem.CHAPTER));
 
         planets.add(new ProgressionItem("Taris", "Level 16-19", R.drawable.pl_taris, "Balmorra", "Level 16-19", R.drawable.pl_balmorra));
         planets.add(new ProgressionItem("Taris", "Bonus Series", "Balmorra", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
-        planets.add(new ProgressionItem("Athiss", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE));
-        planets.add(new ProgressionItem("Nar Shaddaa", "Level 21-24", R.drawable.pl_narshaddaa));
-        planets.add(new ProgressionItem("Mandalorian Raiders", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE));
-        planets.add(new ProgressionItem("Tatooine", "Level 25-28", R.drawable.pl_tatooine));
-        planets.add(new ProgressionItem("Tatooine", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE));
-        planets.add(new ProgressionItem("Cademimu", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE));
-        planets.add(new ProgressionItem("Alderaan", "Level 29-32", R.drawable.pl_alderaan));
-        planets.add(new ProgressionItem("Nar Shaddaa", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE));
+        planets.add(new ProgressionItem("Athiss", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem("Nar Shaddaa", "Level 21-24", R.drawable.pl_narshaddaa, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem("Mandalorian Raiders", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem("Tatooine", "Level 25-28", R.drawable.pl_tatooine, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem("Tatooine", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem("Cademimu", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem("Alderaan", "Level 29-32", R.drawable.pl_alderaan, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem("Nar Shaddaa", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
 
         planets.add(new ProgressionItem("Chapter 2", ProgressionItem.CHAPTER));
 
@@ -110,21 +110,21 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("Taral V", "Flashpoint","Boarding Party", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Maelstrom Prison", "Flashpoint", "The Foundry", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Balmorra", "Bonus Series", "Taris", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
-        planets.add(new ProgressionItem("Quesh", "Level 36-37", R.drawable.pl_quesh, "Quesh", "Level 36-37", R.drawable.pl_quesh));
-        planets.add(new ProgressionItem("Hoth", "Level 37-41", R.drawable.pl_hoth, "Hoth", "Level 37-41", R.drawable.pl_hoth));
-        planets.add(new ProgressionItem("Alderaan", "Bonus Series", "Alderaan", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
-        planets.add(new ProgressionItem("Colicoid War", "Flashpoint", "Colicoid War", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
+        planets.add(new ProgressionItem("Quesh", "Level 36-37", R.drawable.pl_quesh, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem("Hoth", "Level 37-41", R.drawable.pl_hoth, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem("Alderaan", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem("Colicoid War", "Flashpoint", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
 
         planets.add(new ProgressionItem("Chapter 3", ProgressionItem.CHAPTER));
 
-        planets.add(new ProgressionItem("Belsavis", "Level 41-44", R.drawable.pl_belsavis, "Belsavis", "Level 41-44", R.drawable.pl_belsavis));
-        planets.add(new ProgressionItem("The Red Reaper", "Flashpoint", "The Red Reaper", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
-        planets.add(new ProgressionItem("Voss", "Level 44-47", R.drawable.pl_voss, "Voss", "Level 44-47", R.drawable.pl_voss));
+        planets.add(new ProgressionItem("Belsavis", "Level 41-44", R.drawable.pl_belsavis, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem("The Red Reaper", "Flashpoint", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem("Voss", "Level 44-47", R.drawable.pl_voss, ProgressionItem.DIR_LEFT));
 
-        planets.add(new ProgressionItem("Voss", "Bonus Series", "Voss", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
-        planets.add(new ProgressionItem("Hoth", "Bonus Series", "Hoth", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_DOUBLE));
-        planets.add(new ProgressionItem("Directive 7", "Flashpoint", "Directive 7", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
-        planets.add(new ProgressionItem("Corellia", "Level 47-50", R.drawable.pl_corellia, "Corellia", "Level 47-50", R.drawable.pl_corellia));
+        planets.add(new ProgressionItem("Voss", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem("Hoth", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem("Directive 7", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem("Corellia", "Level 47-50", R.drawable.pl_belsavis, ProgressionItem.DIR_LEFT));
 
         planets.add(new ProgressionItem("Interlude 1", ProgressionItem.CHAPTER));
 

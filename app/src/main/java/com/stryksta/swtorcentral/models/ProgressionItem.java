@@ -17,6 +17,7 @@ public class ProgressionItem {
     private String levelEmpire;
 
     int layoutType;
+    int layoutDirection;
     private TimelineType timelineType;
 
     public static final int HEADER = 0;
@@ -25,6 +26,8 @@ public class ProgressionItem {
     public static final int PLANET_DOUBLE = 3;
     public static final int FLASHOP_SINGLE = 4;
     public static final int FLASHOP_DOUBLE = 5;
+    public static final int DIR_RIGHT = 0;
+    public static final int DIR_LEFT = 1;
 
     //Header
     public ProgressionItem(String planetRepublic, TimelineType timelineType, int layoutType) {
@@ -41,12 +44,13 @@ public class ProgressionItem {
     }
 
     //Flashpoint/Operation Single
-    public ProgressionItem(String flashpointRepublic, String levelRepublic, int imgIcon, int layoutType) {
+    public ProgressionItem(String flashpointRepublic, String levelRepublic, int imgIcon, int layoutType, int layoutDirection) {
         this.flashpointRepublic = flashpointRepublic;
         this.levelRepublic = levelRepublic;
         this.imgIcon = imgIcon;
         this.layoutType = layoutType;
         this.timelineType = TimelineType.LINE;
+        this.layoutDirection = layoutDirection;
     }
 
     //Flashpoint/Operation Double
@@ -61,12 +65,13 @@ public class ProgressionItem {
     }
 
     //Planet Single
-    public ProgressionItem(String planetRepublic, String levelRepublic, int imgPlanetRepublic) {
+    public ProgressionItem(String planetRepublic, String levelRepublic, int imgPlanetRepublic, int layoutDirection) {
         this.planetRepublic = planetRepublic;
         this.levelRepublic = levelRepublic;
         this.imgPlanetRepublic = imgPlanetRepublic;
         this.timelineType = TimelineType.LINE;
         this.layoutType = PLANET_SINGLE;
+        this.layoutDirection = layoutDirection;
     }
 
     //Planet Double
@@ -166,5 +171,13 @@ public class ProgressionItem {
 
     public void setTimelineTypeType(TimelineType timelineType) {
         this.timelineType = timelineType;
+    }
+
+    public int getLayoutDirection() {
+        return layoutDirection;
+    }
+
+    public void setLayoutDirection(int layoutDirection) {
+        this.layoutDirection = layoutDirection;
     }
 }

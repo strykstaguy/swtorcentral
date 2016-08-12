@@ -1,14 +1,19 @@
 package com.stryksta.swtorcentral.ui.adapters;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +33,8 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public static final int PLANET_DOUBLE = 3;
     public static final int FLASHOP_SINGLE = 4;
     public static final int FLASHOP_DOUBLE = 5;
+    public static final int DIR_RIGHT = 0;
+    public static final int DIR_LEFT = 1;
 
     public ProgressionAdapter(ArrayList<ProgressionItem> progressionItems) {
         super();
@@ -97,8 +104,46 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
                 planetViewHolder.imgPlanet.setImageResource(progressionItem.getRepublicPlanetImage());
                 planetViewHolder.txtPlanet.setText(progressionItem.getRepublicPlanet());
+                planetViewHolder.txtLevel.setText(progressionItem.getRepublicLevel());
 
                 planetViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+
+                if (progressionItems.get(position).getLayoutDirection() == DIR_RIGHT) {
+
+                    LinearLayout.LayoutParams layoutPlanetParams = (LinearLayout.LayoutParams) planetViewHolder.txtPlanet.getLayoutParams();
+                    layoutPlanetParams.gravity = Gravity.LEFT;
+
+                    LinearLayout.LayoutParams layoutLevelParams = (LinearLayout.LayoutParams) planetViewHolder.txtLevel.getLayoutParams();
+                    layoutLevelParams.gravity = Gravity.LEFT;
+                    planetViewHolder.txtLevel.setLayoutParams(layoutLevelParams);
+
+                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+                    layoutParams.addRule(RelativeLayout.RIGHT_OF, planetViewHolder.imgPlanet.getId());
+                    layoutParams.addRule(RelativeLayout.END_OF, planetViewHolder.imgPlanet.getId());
+                    layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+
+                    layoutParams.setMargins(dpToPx(15), 0, 0, 0);
+                    planetViewHolder.linearLayout.setLayoutParams(layoutParams);
+                } else if (progressionItems.get(position).getLayoutDirection() == DIR_LEFT) {
+
+                    LinearLayout.LayoutParams layoutPlanetParams = (LinearLayout.LayoutParams) planetViewHolder.txtPlanet.getLayoutParams();
+                    layoutPlanetParams.gravity = Gravity.RIGHT;
+
+                    LinearLayout.LayoutParams layoutLevelParams = (LinearLayout.LayoutParams) planetViewHolder.txtLevel.getLayoutParams();
+                    layoutLevelParams.gravity = Gravity.RIGHT;
+                    planetViewHolder.txtLevel.setLayoutParams(layoutLevelParams);
+
+                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+                    layoutParams.addRule(RelativeLayout.LEFT_OF, planetViewHolder.imgPlanet.getId());
+                    layoutParams.addRule(RelativeLayout.START_OF, planetViewHolder.imgPlanet.getId());
+                    layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+
+                    layoutParams.setMargins(0, 0, dpToPx(15), 0); //left, top, right, bottom
+                    planetViewHolder.linearLayout.setLayoutParams(layoutParams);
+
+                }
+
+
                 break;
 
             case HEADER:
@@ -122,6 +167,36 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
                 flashpointViewHolder.imgIcon.setImageResource(flashpointItem.getIcon());
                 flashpointViewHolder.timeLineView.setTimelineType(TimelineType.LINE);
+
+                if (progressionItems.get(position).getLayoutDirection() == DIR_RIGHT) {
+
+                    LinearLayout.LayoutParams layoutLevelParams = (LinearLayout.LayoutParams) flashpointViewHolder.flashpointTitle.getLayoutParams();
+                    layoutLevelParams.gravity = Gravity.LEFT;
+                    flashpointViewHolder.flashpointTitle.setLayoutParams(layoutLevelParams);
+
+                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+                    layoutParams.addRule(RelativeLayout.RIGHT_OF, flashpointViewHolder.imgIcon.getId());
+                    layoutParams.addRule(RelativeLayout.END_OF, flashpointViewHolder.imgIcon.getId());
+                    layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+
+                    layoutParams.setMargins(dpToPx(15), 0, 0, 0);
+                    flashpointViewHolder.linearLayout.setLayoutParams(layoutParams);
+                } else if (progressionItems.get(position).getLayoutDirection() == DIR_LEFT) {
+
+                    LinearLayout.LayoutParams layoutLevelParams = (LinearLayout.LayoutParams) flashpointViewHolder.flashpointTitle.getLayoutParams();
+                    layoutLevelParams.gravity = Gravity.RIGHT;
+                    flashpointViewHolder.flashpointTitle.setLayoutParams(layoutLevelParams);
+
+                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+                    layoutParams.addRule(RelativeLayout.LEFT_OF, flashpointViewHolder.imgIcon.getId());
+                    layoutParams.addRule(RelativeLayout.START_OF, flashpointViewHolder.imgIcon.getId());
+                    layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+
+                    layoutParams.setMargins(0, 0, dpToPx(15), 0); //left, top, right, bottom
+                    flashpointViewHolder.linearLayout.setLayoutParams(layoutParams);
+
+                }
+
                 break;
 
             case FLASHOP_DOUBLE:
@@ -228,15 +303,19 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         public ImageView imgPlanet;
         public TextView txtPlanet;
+        public TextView txtLevel;
 
         public TimelineView timeLineView;
+        public LinearLayout linearLayout;
 
         public PlanetSingleViewHolder(View itemView) {
             super(itemView);
             imgPlanet = (ImageView) itemView.findViewById(R.id.imgPlanet);
             txtPlanet = (TextView) itemView.findViewById(R.id.txtPlanet);
+            txtLevel = (TextView) itemView.findViewById(R.id.txtLevel);
 
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.linearLayout);
 
             // Attach a click listener to the entire row view
             itemView.setOnClickListener(this);
@@ -311,12 +390,14 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         public ImageButton imgIcon;
 
+        public LinearLayout linearLayout;
         public TimelineView timeLineView;
 
         public FlashopSingleViewHolder(View itemView) {
             super(itemView);
             flashpointName = (TextView) itemView.findViewById(R.id.flashpointName);
             flashpointTitle = (TextView) itemView.findViewById(R.id.flashpointTitle);
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.linearLayout);
 
             imgIcon = (ImageButton) itemView.findViewById(R.id.imgIcon);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
@@ -341,5 +422,9 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
         }
+    }
+
+    public static int dpToPx(int dp) {
+        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
 }

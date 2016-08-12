@@ -1,61 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="33603211512355"
-    token="-448831534808878596"
-    verifier="COMPATIBLE" >
+    timestamp="121343580032614"
+    token="-448831534808878596" >
 
     <task
         name="javac"
-        duration="807" />
+        duration="4890" />
     <task
         name="instant-run-dex"
-        duration="517" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="24" />
+        duration="4921" />
     <task
         name="verifier"
-        duration="3" />
+        duration="1114" />
 
     <artifact
-        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="26384955137666" >
+    <build timestamp="121343580032614" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="31860133568550"
-        verifier="FIELD_ADDED" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="33392015118852"
-        verifier="FIELD_ADDED" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="33603211512355"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
