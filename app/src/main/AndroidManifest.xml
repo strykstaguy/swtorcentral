@@ -69,6 +69,10 @@
             android:name=".ui.activities.TestActivity"
             android:label="@string/test_main" >
         </activity>
+        <activity
+            android:name=".ui.activities.DisciplineActivity"
+            android:label="@string/discipline_main" >
+        </activity>
     </application>
 
 </manifest>

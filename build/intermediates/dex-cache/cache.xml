@@ -19,7 +19,7 @@
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="a7e3419f49ec420ba8278e13686b0e0fb6d85cd4">
+        sha1="4b26a77a7e63590a257901480aa40baf9a7dd7fa">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_829e3bc3836d7070112dba4caa272c9d5d83d2cd\classes.dex" />
     </item>
     <item
@@ -47,7 +47,7 @@
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="019d8e238e017dc5abc9372bb3691d75479e0d2c">
+        sha1="6c9c9f18f5c2de51a24c1d128d1e32c15dd77129">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4b3eb8b4bacebd2e4ee265922edcf9cc9f65a0db\classes.dex" />
     </item>
     <item

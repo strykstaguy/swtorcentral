@@ -97,20 +97,28 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
         //Set Discipline 1 *******************************************
         final String advDisciplineName1 = disciplineItems.get(0).getDisciplineName();
-        String advDisciplineType1 = disciplineItems.get(0).getType();
+        final String advDisciplineType1 = disciplineItems.get(0).getType();
+        final String advDisciplineAPC1 = disciplineItems.get(0).getAPC();
         final String advDisciplineDescription1 = disciplineItems.get(0).getDisciplineDescription();
-        Drawable advDisciplineIcon1 = getDisciplineIcon(advDisciplineType1);
+        final Drawable advDisciplineIcon1 = getDisciplineIcon(advDisciplineType1);
 
         //Set Discipline 1 Icon
         ImageButton imgDiscipline1 = (ImageButton) findViewById(R.id.imgDisciplines1);
         imgDiscipline1.setImageDrawable(advDisciplineIcon1);
         imgDiscipline1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(AdvancedClassActivity.this)
-                        .title(advDisciplineName1)
-                        .content(advDisciplineDescription1)
-                        .positiveText(R.string.positive)
-                        .show();
+
+                Bundle bundle = new Bundle();
+
+                bundle.putString("advClassName", advClassName);
+                bundle.putString("disName", advDisciplineName1);
+                bundle.putString("disDescription", advDisciplineDescription1);
+                bundle.putString("disIcon", advDisciplineType1);
+                bundle.putString("disAPC", advDisciplineAPC1);
+
+                Intent intent = new Intent(AdvancedClassActivity.this, DisciplineActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
@@ -180,26 +188,6 @@ public class AdvancedClassActivity extends AppCompatActivity {
         TextView txtAttributeText = (TextView) findViewById(R.id.txtAttributeText);
         txtAttributeText.setText(advPriAttribute);
 
-        FloatingActionMenu fabMenu = (FloatingActionMenu) findViewById(R.id.class_menu_fab);
-        fabMenu.setIconAnimated(false);
-
-        FloatingActionButton fabAbilities = (FloatingActionButton) findViewById(R.id.fabAbilities);
-        fabAbilities.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*
-                Bundle bundle = new Bundle();
-
-                bundle.putString("clsApc", txtApc);
-                bundle.putString("clsName", txtClassName);
-                bundle.putString("clsAbility", txtAbilities);
-
-                Intent intent = new Intent(ClassActivity.this, AbilitiesActivity.class);
-                intent.putExtras(bundle);
-                startActivity(intent);
-                */
-            }
-        });
         // Debug the thread name
         Log.d("SWTORCentral", Thread.currentThread().getName());
 

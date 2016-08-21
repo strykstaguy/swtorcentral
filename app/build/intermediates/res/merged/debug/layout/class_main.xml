@@ -173,9 +173,9 @@
                         android:layout_height="@dimen/fab_progress"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:background="@drawable/round_bordered"
+                        android:background="@drawable/round"
                         android:elevation="3dp"
-                        android:padding="4dp"
+                        android:padding="10dp"
                         android:scaleType="fitXY"
                         android:layout_gravity="center"
                         android:src="@drawable/advanced_class_powertech"/>
@@ -204,10 +204,10 @@
                         android:layout_height="@dimen/fab_progress"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:background="@drawable/round_bordered"
+                        android:background="@drawable/round"
                         android:elevation="3dp"
                         android:scaleType="fitXY"
-                        android:padding="5dp"
+                        android:padding="10dp"
                         android:layout_gravity="center"
                         android:src="@drawable/advanced_class_mercenary"/>
 

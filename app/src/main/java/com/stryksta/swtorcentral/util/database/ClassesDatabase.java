@@ -6,9 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+import com.stryksta.swtorcentral.models.AbilitiesItem;
 import com.stryksta.swtorcentral.models.AdvancedClassItem;
 import com.stryksta.swtorcentral.models.ClassItem;
 import com.stryksta.swtorcentral.models.DisciplineItem;
+import com.stryksta.swtorcentral.models.SkillItem;
 
 import java.util.ArrayList;
 
@@ -153,5 +155,95 @@ public class ClassesDatabase extends SQLiteAssetHelper {
         c.close();
         db.close();
         return disciplineItems;
+    }
+
+    public ArrayList<SkillItem> getSkills(String advApc) {
+        ArrayList<SkillItem> skillItems = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT abilities._id as _id, abilities.ablName as ablName, abilities.ablDesc as ablDesc, abilities.ablNode as ablNode, apc.ablUtilityPos as ablUtilityPos, apc.ablUtilityLevel as ablUtilityLevel ")
+                .append("FROM abilities ")
+                .append("LEFT JOIN apc ")
+                .append("ON abilities.ablNode = apc.Node ")
+                .append("LEFT JOIN disciplines ")
+                .append("ON apc.NodeCat = disciplines.disNode " )
+                .append("WHERE apc.NodeCat = ? ")
+                .append("UNION ")
+                .append("SELECT talents._id as _id, talents.talName, talents.talDesc, talents.talNode, apc.talUtilityPos, apc.talUtilityCat ")
+                .append("FROM talents ")
+                .append("LEFT JOIN apc ")
+                .append("ON talents.talNode = apc.Node ")
+                .append("LEFT JOIN disciplines ")
+                .append("ON apc.NodeCat = disciplines.disNode ")
+                .append("WHERE apc.NodeCat = ? ")
+                .append("ORDER BY apc.talUtilityCat, apc.talUtilityPos")
+                .toString();
+
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(advApc), String.valueOf(advApc)});
+
+        if (c.moveToFirst()) {
+            do {
+
+                int skillID = c.getInt(c.getColumnIndex("_id"));
+                String skillName = c.getString(c.getColumnIndex("ablName"));
+                String skillDescription = c.getString(c.getColumnIndex("ablDesc"));
+                String skillNode = c.getString(c.getColumnIndex("ablNode"));
+                int skillPOS = c.getInt(c.getColumnIndex("ablUtilityPos"));
+                int skillLevel = c.getInt(c.getColumnIndex("ablUtilityLevel"));
+
+                skillItems.add(new SkillItem(skillID, skillName, skillDescription, skillNode, skillPOS, skillLevel));
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return skillItems;
+    }
+
+    public ArrayList<AbilitiesItem> getDisciplineAbilities(String advApc) {
+        ArrayList<AbilitiesItem> abilityItems = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT abilities._id, abilities.ablName, abilities.ablDesc, abilities.ablID, abilities.ablIsPassive , abilities.ablIconSpec, abilities.ablActionPointCost, abilities.ablGlobalCooldownTime, abilities.ablCooldownTime , abilities.ablCastingTime, abilities.ablChannelingTime, abilities.ablForceCost, abilities.ablEnergyCost, abilities.ablMinRange, abilities.ablMaxRange, abilities.ablNode, apc.ablLevelAquired ")
+                .append("FROM abilities ")
+                .append("LEFT JOIN apc ")
+                .append("ON abilities.ablNode = apc.Node ")
+                .append("LEFT JOIN disciplines ")
+                .append("ON apc.NodeCat = disciplines.disNode ")
+                .append("WHERE apc.NodeCat = ? ")
+                .append("ORDER BY apc.ablLevelAquired, abilities.ablName")
+                .toString();
+
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(advApc)});
+
+        if (c.moveToFirst()) {
+            do {
+
+                String ablName = c.getString(c.getColumnIndex("ablName"));
+                String ablDesc = c.getString(c.getColumnIndex("ablDesc"));
+                String ablIsPassive = c.getString(c.getColumnIndex("ablIsPassive"));
+                String ablIconSpec = c.getString(c.getColumnIndex("ablIconSpec"));
+                int ablGlobalCooldownTime = c.getInt(c.getColumnIndex("ablGlobalCooldownTime"));
+                int ablActionPointCost = c.getInt(c.getColumnIndex("ablActionPointCost"));
+                int ablCooldownTime = c.getInt(c.getColumnIndex("ablCooldownTime"));
+                int ablCastingTime = c.getInt(c.getColumnIndex("ablCastingTime"));
+                int ablChannelingTime = c.getInt(c.getColumnIndex("ablChannelingTime"));
+                int ablForceCost = c.getInt(c.getColumnIndex("ablForceCost"));
+                int ablEnergyCost = c.getInt(c.getColumnIndex("ablEnergyCost"));
+                int ablMinRange = c.getInt(c.getColumnIndex("ablMinRange"));
+                int ablMaxRange = c.getInt(c.getColumnIndex("ablMaxRange"));
+                String ablNode = c.getString(c.getColumnIndex("ablNode"));
+                int ablLevelAquired = c.getInt(c.getColumnIndex("ablLevelAquired"));
+                String clsResource = c.getString(c.getColumnIndex("clsResource"));
+
+                abilityItems.add(new AbilitiesItem(ablName, ablDesc, ablIsPassive, ablIconSpec, ablActionPointCost, ablGlobalCooldownTime, ablCooldownTime, ablCastingTime, ablChannelingTime, ablForceCost, ablEnergyCost, ablMinRange, ablMaxRange, ablNode, ablLevelAquired, clsResource));
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return abilityItems;
     }
 }

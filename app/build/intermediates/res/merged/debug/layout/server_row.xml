@@ -29,16 +29,15 @@
             android:paddingLeft="@dimen/dim_5">
 
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/serverStatusIcon"
                 android:layout_width="@dimen/fab_normal"
                 android:layout_height="@dimen/fab_normal"
                 android:layout_marginLeft="@dimen/dim_10"
-                android:background="@drawable/round"
-                android:elevation="3dp"
                 android:src="@drawable/ic_arrow_up"
                 android:scaleType="fitXY"
-                android:tint="@color/white"/>
+                android:tint="@color/white"
+                android:layout_centerVertical="true"/>
 
             <com.stryksta.swtorcentral.util.SizeAdjustingTextView
                 android:id="@+id/serverTitle"

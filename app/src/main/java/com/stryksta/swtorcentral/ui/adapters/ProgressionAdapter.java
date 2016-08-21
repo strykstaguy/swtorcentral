@@ -323,11 +323,11 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(), "Boom!", Toast.LENGTH_SHORT).show();
             Bundle bundle = new Bundle();
-                //bundle.putString("planet", progressionItems.get(getAdapterPosition()).getPlanet());
-                //bundle.putString("type", progressionItems.get(getAdapterPosition()).getLevel());
-                //bundle.putString("faction", "Republic");
+            bundle.putString("planet", progressionItems.get(getAdapterPosition()).getRepublicPlanet());
+            bundle.putString("type", progressionItems.get(getAdapterPosition()).getRepublicLevel());
+            bundle.putInt("image", progressionItems.get(getAdapterPosition()).getRepublicPlanetImage());
+            bundle.putString("faction", "Test");
             Intent intent = new Intent(v.getContext(), PlanetActivity.class);
             intent.putExtras(bundle);
             v.getContext().startActivity(intent);

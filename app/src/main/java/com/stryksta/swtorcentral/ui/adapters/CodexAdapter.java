@@ -46,8 +46,6 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
 
             if (codexRow.getLevel() != null && !codexRow.getLevel().equals("null")) {
                 viewHolder.cdxLevel.setText("Level: " + codexRow.getLevel());
-            } else {
-                //viewHolder.cdxLevel.setVisibility(View.GONE);
             }
 
 			if (codexRow.getPlanets() != null && !codexRow.getPlanets().equals("null")) {
@@ -55,13 +53,18 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
                 //viewHolder.cdxPlants.setText("Planet(s): " + codexRow.getPlanets());
                 String planetNames = getPlanet(codexRow.getPlanets());
                 viewHolder.cdxPlants.setText("Planet(s): " + planetNames);
-            } else {
-                //viewHolder.cdxPlants.setVisibility(View.GONE);
-                //viewHolder.cdxPlants.setText("Planet(s): " + codexRow.getPlanets());
-                //viewHolder.cdxPlants.setText("");
             }
-            if(!TextUtils.isEmpty(codexRow.getPlanets())){
-                viewHolder.cdxPlants.setBackgroundColor(Color.parseColor("#FF0000"));
+
+            if(TextUtils.isEmpty(codexRow.getPlanets())){
+                //viewHolder.cdxPlants.setBackgroundColor(Color.parseColor("#FF0000"));
+                //viewHolder.cdxPlants.setText("Empty");
+                //viewHolder.cdxPlants.setVisibility(View.GONE);
+            }
+
+            if(TextUtils.isEmpty(codexRow.getLevel())){
+                //viewHolder.cdxPlants.setText("Empty");
+                //viewHolder.cdxPlants.setBackgroundColor(Color.parseColor("#FF0000"));
+                //viewHolder.cdxLevel.setVisibility(View.GONE);
             }
 		}
 	}

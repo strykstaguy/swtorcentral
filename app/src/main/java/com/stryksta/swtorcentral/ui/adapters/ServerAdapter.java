@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -96,7 +97,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
         public TextView txtServerType;
         public TextView txtServerZone;
         public TextView txtServerPopulation;
-        public ImageButton serverStatusIcon;
+        public ImageView serverStatusIcon;
         public RelativeLayout serverBackground;
 
         public ViewHolder(View itemView) {
@@ -105,7 +106,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
             txtServerType = (TextView) itemView.findViewById(R.id.serverType);
             txtServerZone = (TextView) itemView.findViewById(R.id.serverZone);
             txtServerPopulation = (TextView) itemView.findViewById(R.id.serverPopulation);
-            serverStatusIcon = (ImageButton) itemView.findViewById(R.id.serverStatusIcon);
+            serverStatusIcon = (ImageView) itemView.findViewById(R.id.serverStatusIcon);
             serverBackground = (RelativeLayout) itemView.findViewById(R.id.serverBackground);
         }
     }
