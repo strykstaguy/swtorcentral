@@ -467,14 +467,14 @@ public final class R {
 		public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f020048;
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020049;
 		public static final int abc_textfield_search_material = 0x7f02004a;
-		public static final int common_filter_arrow_down = 0x7f020084;
-		public static final int common_filter_arrow_up = 0x7f020085;
-		public static final int layer_filter_checked = 0x7f0200ac;
-		public static final int layer_filter_unchecked = 0x7f0200ad;
-		public static final int level_filter = 0x7f0200ae;
-		public static final int notification_template_icon_bg = 0x7f0200f3;
-		public static final int selector_filter_left = 0x7f0200e6;
-		public static final int selector_tv_filter = 0x7f0200e7;
+		public static final int common_filter_arrow_down = 0x7f020085;
+		public static final int common_filter_arrow_up = 0x7f020086;
+		public static final int layer_filter_checked = 0x7f0200ad;
+		public static final int layer_filter_unchecked = 0x7f0200ae;
+		public static final int level_filter = 0x7f0200af;
+		public static final int notification_template_icon_bg = 0x7f0200f4;
+		public static final int selector_filter_left = 0x7f0200e7;
+		public static final int selector_tv_filter = 0x7f0200e8;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f0d0131;

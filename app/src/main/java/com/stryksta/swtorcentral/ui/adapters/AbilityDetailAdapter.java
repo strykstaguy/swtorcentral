@@ -24,7 +24,7 @@ public class AbilityDetailAdapter extends RecyclerView.Adapter<AbilityDetailAdap
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
-        View view = View.inflate(viewGroup.getContext(), R.layout.ability_row, null);
+        View view = View.inflate(viewGroup.getContext(), R.layout.ability_row2, null);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -34,8 +34,8 @@ public class AbilityDetailAdapter extends RecyclerView.Adapter<AbilityDetailAdap
         AbilitiesItem abilitiesRow = abilitiesItems.get(position);
         viewHolder.ablName.setText(abilitiesRow.getAbilityName());
 
-        Spanny levelSpanny = new Spanny("Level: ").append(String.valueOf(abilitiesRow.getLevelAquired()), new StyleSpan(Typeface.BOLD));
-        viewHolder.ablLevel.setText(levelSpanny);
+        //Spanny levelSpanny = new Spanny("Level: ").append(String.valueOf(abilitiesRow.getLevelAquired()), new StyleSpan(Typeface.BOLD));
+        viewHolder.ablLevel.setText("Lvl \n" + String.valueOf(abilitiesRow.getLevelAquired()));
     }
 
     @Override

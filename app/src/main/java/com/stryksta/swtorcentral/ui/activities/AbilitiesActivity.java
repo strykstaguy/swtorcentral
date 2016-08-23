@@ -95,7 +95,7 @@ public class AbilitiesActivity extends AppCompatActivity {
         baseRecyclerView.setNestedScrollingEnabled(false);
 
         if (baseRecyclerView != null) {
-            aLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);
+            aLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 2, GridLayoutManager.HORIZONTAL, false);
             baseRecyclerView.setLayoutManager(aLayoutManager);
 
             /*
@@ -115,7 +115,8 @@ public class AbilitiesActivity extends AppCompatActivity {
 
         //Set Base Adapter
         baseRecycleAdapter = new AbilityDetailAdapter(baseAbilities);
-        baseRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
+        baseRecyclerView.setHasFixedSize(true);
+        //baseRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
         baseRecyclerView.setAdapter(baseRecycleAdapter);
         baseRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, baseRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             public void onItemClick(View view, int position) {
@@ -141,7 +142,7 @@ public class AbilitiesActivity extends AppCompatActivity {
         playerRecyclerView.setNestedScrollingEnabled(false);
 
         if (playerRecyclerView != null) {
-            aPlayerLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);
+            aPlayerLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 3, GridLayoutManager.VERTICAL, false);
             playerRecyclerView.setLayoutManager(aPlayerLayoutManager);
             /*
             playerRecyclerView.setLayoutManager(new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false){
@@ -160,7 +161,8 @@ public class AbilitiesActivity extends AppCompatActivity {
 
         //Set Base Adapter
         playerRecycleAdapter = new AbilityDetailAdapter(playerAbilitiesItems);
-        playerRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
+        //playerRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
+        playerRecyclerView.setHasFixedSize(true);
         playerRecyclerView.setAdapter(playerRecycleAdapter);
         playerRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, playerRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             public void onItemClick(View view, int position) {
