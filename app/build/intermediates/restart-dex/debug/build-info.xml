@@ -4,30 +4,50 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="30076781617317"
-    token="-448831534808878596" >
+    timestamp="92451118450846"
+    token="-5267623122052274636"
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="24050" />
+        duration="5515" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2300" />
+        duration="310" />
     <task
         name="verifier"
-        duration="1012" />
+        duration="352" />
 
     <artifact
-        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+        type="DEX" />
 
-    <build timestamp="30076781617317" >
+    <build timestamp="91775558690000" >
         <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="92451118450846"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

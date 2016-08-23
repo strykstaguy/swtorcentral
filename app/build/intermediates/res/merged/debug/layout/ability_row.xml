@@ -6,21 +6,11 @@
     android:orientation="horizontal"
     android:clickable="true"
     android:background="?attr/selectableItemBackground"
-    android:paddingTop="@dimen/dim_5"
-    android:paddingBottom="@dimen/dim_5"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
     android:paddingLeft="@dimen/dim_10"
     android:paddingRight="@dimen/dim_10"
     android:weightSum="1">
-
-    <ImageButton
-        android:id="@+id/comImage"
-        android:layout_width="@dimen/fab_small"
-        android:layout_height="@dimen/fab_small"
-        android:padding="8dp"
-        android:background="@drawable/round"
-        android:elevation="3dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_abilities"/>
 
     <TextView
         android:id="@+id/ablName"

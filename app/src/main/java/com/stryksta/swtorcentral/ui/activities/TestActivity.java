@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.github.chaossss.widget.view.CircleBadgedView;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.ui.views.timeline.TimelineType;
 import com.stryksta.swtorcentral.ui.views.timeline.TimelineView;
@@ -18,7 +19,7 @@ public class TestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_main);
+        setContentView(R.layout.test_main2);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
@@ -36,16 +37,10 @@ public class TestActivity extends AppCompatActivity {
         if (bundle != null) {
         }
 
-        getSupportActionBar().setTitle("Blank");
+        //getSupportActionBar().setTitle("Blank");
+        CircleBadgedView regularView = (CircleBadgedView) findViewById(R.id.badge_circle_view);
+        regularView.showBadge(true);
 
-        TimelineView timeLineView = (TimelineView) findViewById(R.id.timeline);
-        timeLineView.setTimelineType(TimelineType.LINE);
-
-        TimelineView timelineRepublic = (TimelineView) findViewById(R.id.timelineRepublic);
-        timelineRepublic.setTimelineType(TimelineType.LINE);
-
-        TimelineView timelineRepublicsdfasdf = (TimelineView) findViewById(R.id.timelineRepublicsdfasdf);
-        timelineRepublicsdfasdf.setTimelineType(TimelineType.LINE);
 
     }
 

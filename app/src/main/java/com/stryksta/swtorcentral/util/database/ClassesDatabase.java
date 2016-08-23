@@ -207,17 +207,25 @@ public class ClassesDatabase extends SQLiteAssetHelper {
 
         @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
         String sqlSelect = builder
-                .append("SELECT abilities._id, abilities.ablName, abilities.ablDesc, abilities.ablID, abilities.ablIsPassive , abilities.ablIconSpec, abilities.ablActionPointCost, abilities.ablGlobalCooldownTime, abilities.ablCooldownTime , abilities.ablCastingTime, abilities.ablChannelingTime, abilities.ablForceCost, abilities.ablEnergyCost, abilities.ablMinRange, abilities.ablMaxRange, abilities.ablNode, apc.ablLevelAquired ")
+                .append("SELECT abilities._id, abilities.ablName as ablName, abilities.ablDesc as ablDesc, abilities.ablNode as ablNode, abilities.ablID as ablID, abilities.ablIsPassive as ablIsPassive , abilities.ablIconSpec as ablIconSpec, abilities.ablActionPointCost as ablActionPointCost, abilities.ablGlobalCooldownTime as ablGlobalCooldownTime, abilities.ablCooldownTime as ablCooldownTime , abilities.ablCastingTime as ablCastingTime, abilities.ablChannelingTime as ablChannelingTime, abilities.ablForceCost as ablForceCost, abilities.ablEnergyCost as ablEnergyCost, abilities.ablMinRange as ablMinRange, abilities.ablMaxRange as ablMaxRange, apc.ablLevelAquired as ablLevelAquired ")
                 .append("FROM abilities ")
                 .append("LEFT JOIN apc ")
                 .append("ON abilities.ablNode = apc.Node ")
                 .append("LEFT JOIN disciplines ")
                 .append("ON apc.NodeCat = disciplines.disNode ")
                 .append("WHERE apc.NodeCat = ? ")
-                .append("ORDER BY apc.ablLevelAquired, abilities.ablName")
+                .append("UNION ")
+                .append("SELECT talents._id, talents.talName, talents.talDesc, talents.talNode, null as ablID, null as ablIsPassive, null as ablIconSpec, null as ablActionPointCost, null as ablGlobalCooldownTime, null as ablCooldownTime , null as ablCastingTime, null as ablChannelingTime, null as ablForceCost, null as ablEnergyCost, null as ablMinRange, null as ablMaxRange, apc.ablLevelAquired ")
+                .append("FROM talents ")
+                .append("LEFT JOIN apc ")
+                .append("ON talents.talNode = apc.Node ")
+                .append("LEFT JOIN disciplines ")
+                .append("ON apc.NodeCat = disciplines.disNode ")
+                .append("WHERE apc.NodeCat = ? ")
+                .append("ORDER BY apc.ablLevelAquired ")
                 .toString();
 
-        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(advApc)});
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(advApc), String.valueOf(advApc)});
 
         if (c.moveToFirst()) {
             do {
@@ -237,9 +245,10 @@ public class ClassesDatabase extends SQLiteAssetHelper {
                 int ablMaxRange = c.getInt(c.getColumnIndex("ablMaxRange"));
                 String ablNode = c.getString(c.getColumnIndex("ablNode"));
                 int ablLevelAquired = c.getInt(c.getColumnIndex("ablLevelAquired"));
-                String clsResource = c.getString(c.getColumnIndex("clsResource"));
+                ////String clsResource = c.getString(c.getColumnIndex("clsResource"));
+                String clsResource = "";
 
-                abilityItems.add(new AbilitiesItem(ablName, ablDesc, ablIsPassive, ablIconSpec, ablActionPointCost, ablGlobalCooldownTime, ablCooldownTime, ablCastingTime, ablChannelingTime, ablForceCost, ablEnergyCost, ablMinRange, ablMaxRange, ablNode, ablLevelAquired, clsResource));
+                        abilityItems.add(new AbilitiesItem(ablName, ablDesc, ablIsPassive, ablIconSpec, ablActionPointCost, ablGlobalCooldownTime, ablCooldownTime, ablCastingTime, ablChannelingTime, ablForceCost, ablEnergyCost, ablMinRange, ablMaxRange, ablNode, ablLevelAquired, clsResource));
             } while (c.moveToNext());
         }
         c.close();

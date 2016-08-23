@@ -1,0 +1,12 @@
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$string$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\ui\activities\MainActivity$2$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\ui\activities\MainActivity$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$id$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$xml$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$menu$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$integer$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$layout$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$styleable$override.class
+CHANGED,C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\stryksta\swtorcentral\R$style$override.class

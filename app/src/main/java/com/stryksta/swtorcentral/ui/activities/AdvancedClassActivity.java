@@ -128,20 +128,27 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
         //Set Discipline 2 *******************************************
         final String advDisciplineName2 = disciplineItems.get(1).getDisciplineName();
-        String advDisciplineType2 = disciplineItems.get(1).getType();
+        final String advDisciplineType2 = disciplineItems.get(1).getType();
+        final String advDisciplineAPC2 = disciplineItems.get(1).getAPC();
         final String advDisciplineDescription2 = disciplineItems.get(1).getDisciplineDescription();
-        Drawable advDisciplineIcon2 = getDisciplineIcon(advDisciplineType2);
+        final Drawable advDisciplineIcon2 = getDisciplineIcon(advDisciplineType2);
 
         //Set Discipline 2 Icon
         ImageButton imgDiscipline2 = (ImageButton) findViewById(R.id.imgDisciplines2);
         imgDiscipline2.setImageDrawable(advDisciplineIcon2);
         imgDiscipline2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(AdvancedClassActivity.this)
-                        .title(advDisciplineName2)
-                        .content(advDisciplineDescription2)
-                        .positiveText(R.string.positive)
-                        .show();
+                Bundle bundle = new Bundle();
+
+                bundle.putString("advClassName", advClassName);
+                bundle.putString("disName", advDisciplineName2);
+                bundle.putString("disDescription", advDisciplineDescription2);
+                bundle.putString("disIcon", advDisciplineType2);
+                bundle.putString("disAPC", advDisciplineAPC2);
+
+                Intent intent = new Intent(AdvancedClassActivity.this, DisciplineActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
@@ -151,20 +158,27 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
         //Set Discipline 3 *******************************************
         final String advDisciplineName3 = disciplineItems.get(2).getDisciplineName();
-        String advDisciplineType3 = disciplineItems.get(2).getType();
+        final String advDisciplineType3 = disciplineItems.get(2).getType();
+        final String advDisciplineAPC3 = disciplineItems.get(2).getAPC();
         final String advDisciplineDescription3 = disciplineItems.get(2).getDisciplineDescription();
-        Drawable advDisciplineIcon3 = getDisciplineIcon(advDisciplineType3);
+        final Drawable advDisciplineIcon3 = getDisciplineIcon(advDisciplineType3);
 
         //Set Discipline 3 Icon
         ImageButton imgDiscipline3 = (ImageButton) findViewById(R.id.imgDisciplines3);
         imgDiscipline3.setImageDrawable(advDisciplineIcon3);
         imgDiscipline3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                new MaterialDialog.Builder(AdvancedClassActivity.this)
-                        .title(advDisciplineName3)
-                        .content(advDisciplineDescription3)
-                        .positiveText(R.string.positive)
-                        .show();
+                Bundle bundle = new Bundle();
+
+                bundle.putString("advClassName", advClassName);
+                bundle.putString("disName", advDisciplineName3);
+                bundle.putString("disDescription", advDisciplineDescription3);
+                bundle.putString("disIcon", advDisciplineType3);
+                bundle.putString("disAPC", advDisciplineAPC3);
+
+                Intent intent = new Intent(AdvancedClassActivity.this, DisciplineActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 

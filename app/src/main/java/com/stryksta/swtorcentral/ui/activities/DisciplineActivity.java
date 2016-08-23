@@ -5,6 +5,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -19,6 +21,8 @@ import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.models.AbilitiesItem;
 import com.stryksta.swtorcentral.models.DisciplineItem;
 import com.stryksta.swtorcentral.models.SkillItem;
+import com.stryksta.swtorcentral.ui.adapters.AbilityDetailAdapter;
+import com.stryksta.swtorcentral.util.DividerItemDecoration;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 
 import java.util.ArrayList;
@@ -30,6 +34,10 @@ public class DisciplineActivity extends AppCompatActivity {
     private ClassesDatabase classDB;
     ArrayList<SkillItem> skillItems;
     ArrayList<AbilitiesItem> abilityItems;
+
+    private RecyclerView skillsRecyclerView;
+    private GridLayoutManager skillsLayoutManager;
+    private AbilityDetailAdapter skillsRecycleAdapter;
 
     String disIcon;
     String advClassName;
@@ -85,6 +93,20 @@ public class DisciplineActivity extends AppCompatActivity {
 
         classDB = new ClassesDatabase(DisciplineActivity.this);
         abilityItems = classDB.getDisciplineAbilities(disAPC);
+
+        //Set Base RecyclerView
+        skillsRecyclerView = (RecyclerView) findViewById(R.id.disciplineAbilities);
+        skillsRecyclerView.setNestedScrollingEnabled(false);
+
+        if (skillsRecyclerView != null) {
+            skillsLayoutManager = new GridLayoutManager(DisciplineActivity.this, 1, GridLayoutManager.VERTICAL, false);
+            skillsRecyclerView.setLayoutManager(skillsLayoutManager);
+        }
+
+        //Set Base Adapter
+        skillsRecycleAdapter = new AbilityDetailAdapter(abilityItems);
+        skillsRecyclerView.addItemDecoration(new DividerItemDecoration(DisciplineActivity.this, GridLayoutManager.VERTICAL));
+        skillsRecyclerView.setAdapter(skillsRecycleAdapter);
 
         // Debug the thread name
         Log.d("SWTORCentral", Thread.currentThread().getName());

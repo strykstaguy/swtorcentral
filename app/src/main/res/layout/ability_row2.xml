@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ablLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="?attr/selectableItemBackground"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:paddingLeft="@dimen/dim_10"
+    android:paddingRight="@dimen/dim_10"
+    android:weightSum="1">
+
+    <com.github.chaossss.widget.view.CircleBadgedView
+        android:id="@+id/badge_regular_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:foreground="?selectableItemBackground"
+        app:badgeTextColor="@color/white"
+        app:badgeColor="@color/swtor_red"
+        app:badgeText="50" >
+
+        <ImageButton
+            android:id="@+id/comImage2"
+            android:layout_width="@dimen/fab_normal"
+            android:layout_height="@dimen/fab_normal"
+            android:padding="8dp"
+            android:background="@drawable/round"
+            android:elevation="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_abilities" />
+
+    </com.github.chaossss.widget.view.CircleBadgedView>
+
+    <ImageButton
+        android:id="@+id/comImage"
+        android:layout_width="@dimen/fab_normal"
+        android:layout_height="@dimen/fab_normal"
+        android:padding="8dp"
+        android:background="@drawable/round"
+        android:elevation="3dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_abilities"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/ablName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dim_10"
+        android:textColor="@color/text"
+        android:text="Telekinetic Wave"
+        android:textSize="14sp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/ablLevel"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColor="@color/text"
+        android:text="Level: 10"
+        android:textSize="14sp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal" />
+</LinearLayout>
