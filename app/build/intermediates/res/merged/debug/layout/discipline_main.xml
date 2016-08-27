@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/coordinator"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:id="@+id/coordinator"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -37,7 +37,7 @@
                     android:layout_width="@dimen/fab_large"
                     android:layout_height="@dimen/fab_large"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_damage"
+                    android:src="@drawable/ic_abilities"
                     android:tint="@color/white"
                     android:background="@drawable/advanced_class"
                     android:padding="25dp" />
@@ -56,7 +56,7 @@
                         android:gravity="center_horizontal"
                         android:maxLines="1"
                         android:textSize="36sp"
-                        android:text="Header"
+                        android:text="Jedi Consular"
                         android:textColor="@color/white"/>
 
                     <TextView
@@ -66,7 +66,7 @@
                         android:gravity="center_horizontal"
                         android:maxLines="1"
                         android:textSize="16sp"
-                        android:text="Subheader"
+                        android:text="Republic"
                         android:textColor="@color/white"/>
                 </LinearLayout>
             </LinearLayout>
@@ -87,17 +87,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:behavior_overlapTop="35dp"
-        android:layout_marginLeft="@dimen/dim_10"
-        android:layout_marginRight="@dimen/dim_10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:fillViewport="true"
-        android:layout_marginBottom="?attr/actionBarSize"
-        android:layout_gravity="fill_vertical">
+        android:layout_gravity="fill_vertical"
+        android:layout_marginBottom="?attr/actionBarSize">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            android:descendantFocusability="blocksDescendants"
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
@@ -110,6 +109,8 @@
                 card_view:cardCornerRadius="2dp"
                 android:clickable="true"
                 android:foreground="@drawable/card_foreground"
+                android:layout_marginRight="@dimen/dim_10"
+                android:layout_marginLeft="@dimen/dim_10"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp">
 
@@ -118,42 +119,19 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/txtDisDesc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:textColor="@color/text"
-                    android:gravity="center"
-                    android:text="@string/test_profile_desc"
-                    android:textSize="14sp"
-                    android:layout_margin="10dp" />
-
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:padding="2dp"
-                        android:layout_marginLeft="@dimen/dim_5"
-                        android:layout_marginRight="@dimen/dim_5"
-                        android:background="#f3f3f3"/>
-
+                    <TextView
+                        android:id="@+id/txtDisDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/text"
+                        android:gravity="center"
+                        android:text="@string/test_profile_desc"
+                        android:textSize="14sp"
+                        android:layout_margin="10dp" />
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
-
-            <TextView
-                android:id="@+id/txtDetailsSep"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:gravity="center_vertical"
-                android:paddingLeft="16dp"
-                android:singleLine="true"
-                android:textAllCaps="true"
-                android:textColor="@color/text"
-                android:background="@android:color/transparent"
-                android:text="Details"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
 
             <android.support.v7.widget.CardView
                 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -163,24 +141,46 @@
                 android:layout_gravity="center_horizontal"
                 card_view:cardElevation="2dp"
                 card_view:cardCornerRadius="2dp"
+                android:clickable="true"
+                android:foreground="@drawable/card_foreground"
                 android:layout_marginRight="@dimen/dim_10"
                 android:layout_marginLeft="@dimen/dim_10"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp">
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/disciplineAbilities"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dim_10"
-                    android:layout_marginRight="@dimen/dim_10"
-                    android:scrollbars="none"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
 
+                    <TextView
+                        android:id="@+id/txtDetailsSep"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/swtor_blue"
+                        android:background="@android:color/transparent"
+                        android:text="Abilities"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/disciplineAbilities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginRight="@dimen/dim_10"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:scrollbars="none"/>
+
+
+
+                </LinearLayout>
             </android.support.v7.widget.CardView>
-
         </LinearLayout>
 
-
     </android.support.v4.widget.NestedScrollView>
-
 </android.support.design.widget.CoordinatorLayout>

@@ -131,7 +131,7 @@ public class ClassesDatabase extends SQLiteAssetHelper {
                 .append("LEFT JOIN advanced_classes ")
                 .append("ON disciplines.advClassApc = advanced_classes.advAPN ")
                 .append("WHERE disciplines.advClassApc = ? ")
-                .append("AND disciplines.disType IS NOT \"Utility\" ")
+                .append("AND disciplines.disType IS NOT \"Utils\" ")
                 .append("ORDER BY disciplines.disSortIndex ASC")
                 .toString();
 

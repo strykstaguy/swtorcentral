@@ -13,6 +13,7 @@ import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.models.AchievementsItem;
 import com.stryksta.swtorcentral.util.AchievementToggle;
 import com.stryksta.swtorcentral.util.CircleCheckBox;
+import com.stryksta.swtorcentral.util.SmoothCheckBox;
 
 import java.util.ArrayList;
 

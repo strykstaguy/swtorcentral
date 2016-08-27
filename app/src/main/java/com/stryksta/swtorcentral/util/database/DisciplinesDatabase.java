@@ -29,7 +29,7 @@ public class DisciplinesDatabase extends SQLiteAssetHelper {
                 .append("LEFT JOIN advanced_classes ")
                 .append("ON disciplines.advanced_class_id = advanced_classes._id ")
                 .append("WHERE disciplines.advanced_class_id = ? ")
-                .append("AND disciplines.type IS NOT \"Utility\" ")
+                .append("AND disciplines.type IS NOT \"Utils\" ")
                 .append("ORDER BY disciplines.sortindex ASC")
                 .toString();
 

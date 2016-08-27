@@ -18,6 +18,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.ui.adapters.AbilityDetailAdapter;
 import com.stryksta.swtorcentral.models.AbilitiesItem;
+import com.stryksta.swtorcentral.util.CoreDividerItemDecoration;
 import com.stryksta.swtorcentral.util.DividerItemDecoration;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
@@ -95,7 +96,7 @@ public class AbilitiesActivity extends AppCompatActivity {
         baseRecyclerView.setNestedScrollingEnabled(false);
 
         if (baseRecyclerView != null) {
-            aLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 2, GridLayoutManager.HORIZONTAL, false);
+            aLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);
             baseRecyclerView.setLayoutManager(aLayoutManager);
 
             /*
@@ -117,6 +118,7 @@ public class AbilitiesActivity extends AppCompatActivity {
         baseRecycleAdapter = new AbilityDetailAdapter(baseAbilities);
         baseRecyclerView.setHasFixedSize(true);
         //baseRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
+        baseRecyclerView.addItemDecoration(new CoreDividerItemDecoration(this, CoreDividerItemDecoration.VERTICAL_LIST));
         baseRecyclerView.setAdapter(baseRecycleAdapter);
         baseRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, baseRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             public void onItemClick(View view, int position) {
@@ -142,7 +144,7 @@ public class AbilitiesActivity extends AppCompatActivity {
         playerRecyclerView.setNestedScrollingEnabled(false);
 
         if (playerRecyclerView != null) {
-            aPlayerLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 3, GridLayoutManager.VERTICAL, false);
+            aPlayerLayoutManager = new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false);
             playerRecyclerView.setLayoutManager(aPlayerLayoutManager);
             /*
             playerRecyclerView.setLayoutManager(new GridLayoutManager(AbilitiesActivity.this, 1, GridLayoutManager.VERTICAL, false){
@@ -162,6 +164,7 @@ public class AbilitiesActivity extends AppCompatActivity {
         //Set Base Adapter
         playerRecycleAdapter = new AbilityDetailAdapter(playerAbilitiesItems);
         //playerRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
+        playerRecyclerView.addItemDecoration(new CoreDividerItemDecoration(this, CoreDividerItemDecoration.VERTICAL_LIST));
         playerRecyclerView.setHasFixedSize(true);
         playerRecyclerView.setAdapter(playerRecycleAdapter);
         playerRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, playerRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {

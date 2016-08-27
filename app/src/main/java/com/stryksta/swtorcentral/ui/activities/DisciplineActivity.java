@@ -105,6 +105,7 @@ public class DisciplineActivity extends AppCompatActivity {
 
         //Set Base Adapter
         skillsRecycleAdapter = new AbilityDetailAdapter(abilityItems);
+        skillsRecyclerView.setNestedScrollingEnabled(false);
         skillsRecyclerView.addItemDecoration(new DividerItemDecoration(DisciplineActivity.this, GridLayoutManager.VERTICAL));
         skillsRecyclerView.setAdapter(skillsRecycleAdapter);
 

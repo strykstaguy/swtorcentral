@@ -4,27 +4,27 @@
     api-level="24"
     density="420dpi"
     format="7"
-    timestamp="251547427932270"
+    timestamp="29276261056160"
     token="-448831534808878596" >
 
     <task
         name="javac"
-        duration="9619" />
+        duration="4837" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="4148" />
+        duration="1946" />
     <task
         name="verifier"
-        duration="1271" />
+        duration="908" />
 
     <artifact
         location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="251547427932270" >
+    <build timestamp="29276261056160" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
