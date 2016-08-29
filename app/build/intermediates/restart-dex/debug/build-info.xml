@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="24"
+    abi="x86"
+    api-level="23"
     density="420dpi"
     format="7"
-    timestamp="29276261056160"
-    token="-448831534808878596" >
+    timestamp="694498599573714"
+    token="-5267623122052274636" >
 
     <task
         name="javac"
-        duration="4837" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1946" />
+        duration="0" />
     <task
         name="verifier"
-        duration="908" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="29276261056160" >
+    <build timestamp="683001989136124" >
         <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="694498599573714" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>
