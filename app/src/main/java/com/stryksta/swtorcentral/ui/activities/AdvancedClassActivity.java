@@ -8,6 +8,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
@@ -21,7 +23,12 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.models.AbilitiesItem;
 import com.stryksta.swtorcentral.models.DisciplineItem;
+import com.stryksta.swtorcentral.ui.adapters.AbilityDetailAdapter;
+import com.stryksta.swtorcentral.util.CoreDividerItemDecoration;
+import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
+import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 
 public class AdvancedClassActivity extends AppCompatActivity {
@@ -30,6 +37,12 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
     private ClassesDatabase classDB;
     ArrayList<DisciplineItem> disciplineItems;
+
+    private AbilitiesDatabase abilitiesDatabase;
+    ArrayList<AbilitiesItem> baseAbilities;
+    private AbilityDetailAdapter baseRecycleAdapter;
+    private RecyclerView baseRecyclerView;
+    private GridLayoutManager baseLayoutManager;
 
     //Companion Info from prev
     int advID;
@@ -75,6 +88,46 @@ public class AdvancedClassActivity extends AppCompatActivity {
             advAdvanced_class_icon = bundle.getInt("advAdvanced_class_icon");
             advApc = bundle.getString("advApc");
         }
+
+        //get abilities
+        baseAbilities = new ArrayList<>();
+        abilitiesDatabase = new AbilitiesDatabase(AdvancedClassActivity.this);
+        baseAbilities = abilitiesDatabase.getAbilities(advApc);
+        Log.d("SWTORCentral", "Advanced Class APC: " + advApc);
+        abilitiesDatabase.close();
+
+        //Set Base RecyclerView
+        baseRecyclerView = (RecyclerView) findViewById(R.id.abilitiesACList);
+        baseRecyclerView.setNestedScrollingEnabled(false);
+
+        if (baseRecyclerView != null) {
+            baseLayoutManager = new GridLayoutManager(AdvancedClassActivity.this, 1, GridLayoutManager.VERTICAL, false);
+            baseRecyclerView.setLayoutManager(baseLayoutManager);
+        }
+
+        //Set Base Adapter
+        baseRecycleAdapter = new AbilityDetailAdapter(baseAbilities);
+        baseRecyclerView.setHasFixedSize(true);
+        baseRecyclerView.addItemDecoration(new CoreDividerItemDecoration(this, CoreDividerItemDecoration.VERTICAL_LIST));
+        baseRecyclerView.setAdapter(baseRecycleAdapter);
+        baseRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AdvancedClassActivity.this, baseRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            public void onItemClick(View view, int position) {
+                boolean wrapInScrollView = true;
+                MaterialDialog dialog = new MaterialDialog.Builder(AdvancedClassActivity.this)
+                        .title(baseAbilities.get(position).getAbilityName())
+                        .customView(R.layout.ability_dialog, wrapInScrollView)
+                        .positiveText(R.string.positive)
+                        .show();
+
+                View ablView = dialog.getCustomView();
+                showAbilityDetail(ablView, position, baseAbilities);
+
+            }
+
+            public void onItemLongClick(View view, int position) {
+
+            }
+        }));
 
         //Set Advanced Class
         TextView advClass = (TextView) findViewById(R.id.advClass);
@@ -224,6 +277,59 @@ public class AdvancedClassActivity extends AppCompatActivity {
         } else {
             getFragmentManager().popBackStack();
         }
+    }
+
+    public void showAbilityDetail (View ablView, int position, ArrayList<AbilitiesItem> abilities)
+
+    {
+
+        TextView ablLevel = (TextView) ablView.findViewById(R.id.ablLevel);
+        ablLevel.setText("Level Acquired: " + String.valueOf(abilities.get(position).getLevelAquired()));
+
+        TextView ablCastingActivation = (TextView) ablView.findViewById(R.id.ablCastingActivation);
+        if (abilities.get(position).getAbilityPassive() == "True") {
+            ablCastingActivation.setText("Passive");
+        } else {
+            if (abilities.get(position).getCastingTime() == 0) {
+                ablCastingActivation.setText("Instant");
+            } else {
+                ablCastingActivation.setText("Activation: " + String.valueOf(abilities.get(position).getCastingTime()) + "s");
+            }
+        }
+
+        TextView ablChanneled = (TextView) ablView.findViewById(R.id.ablChanneled);
+        if (abilities.get(position).getChannelingTime() == 0) {
+            ablChanneled.setVisibility(View.GONE);
+        } else {
+            ablChanneled.setText("Channeled: " + String.valueOf(abilities.get(position).getCastingTime()) + "s");
+        }
+
+        TextView ablCooldown = (TextView) ablView.findViewById(R.id.ablCooldown);
+        if (abilities.get(position).getCooldownTime() == 0) {
+            ablCooldown.setVisibility(View.GONE);
+        } else {
+            ablCooldown.setText("Cooldown: " + String.valueOf(abilities.get(position).getCooldownTime()) + "s");
+        }
+
+        TextView ablRange = (TextView) ablView.findViewById(R.id.ablRange);
+        if (abilities.get(position).getMaxRange() == 0) {
+            ablRange.setVisibility(View.GONE);
+        } else {
+            int maxRange = abilities.get(position).getCooldownTime() * 10;
+            ablRange.setText("Range: " + String.valueOf(maxRange) + "m");
+        }
+
+        TextView ablResource = (TextView) ablView.findViewById(R.id.ablResource);
+        if (abilities.get(position).getEnergyCost() != 0) {
+            ablResource.setText(abilities.get(position).getClassResource() + " " + String.valueOf(abilities.get(position).getEnergyCost()));
+        } else if (abilities.get(position).getForceCost() != 0) {
+            ablResource.setText(abilities.get(position).getClassResource() + " " + String.valueOf(abilities.get(position).getForceCost()));
+        } else {
+            ablResource.setVisibility(View.GONE);
+        }
+
+        TextView ablDescription = (TextView) ablView.findViewById(R.id.ablDescription);
+        ablDescription.setText(abilities.get(position).getAbilityDescription());
     }
 
     public Drawable getDisciplineIcon(String disType) {
