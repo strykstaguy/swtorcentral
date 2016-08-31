@@ -87,7 +87,7 @@ public class ClassesDatabase extends SQLiteAssetHelper {
 
         @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
         String sqlSelect = builder
-                .append("SELECT advanced_classes._id, advanced_classes.advClassName, classes.clsName, advanced_classes.advDescription, advanced_classes.advRole, advanced_classes.advArmor, advanced_classes.advWeapons, advanced_classes.advPrimaryAttribute, advanced_classes.advResource, advanced_classes.advIcon, advanced_classes.advAPN ")
+                .append("SELECT advanced_classes._id, advanced_classes.advClassName, classes.clsName, advanced_classes.advDescription, advanced_classes.advRole, advanced_classes.advArmor, advanced_classes.advWeapons, advanced_classes.advPrimaryAttribute, advanced_classes.advResource, advanced_classes.advIcon, advanced_classes.advAPN, advanced_classes.advAPC ")
                 .append("FROM advanced_classes ")
                 .append("LEFT JOIN classes ")
                 .append("ON advanced_classes.clsID = classes._id ")
@@ -110,9 +110,10 @@ public class ClassesDatabase extends SQLiteAssetHelper {
                 String advPriAttribute = c.getString(c.getColumnIndex("advPrimaryAttribute"));
                 String advResource = c.getString(c.getColumnIndex("advResource"));
                 int advAdvanced_class_icon = mContext.getResources().getIdentifier(c.getString(c.getColumnIndex("advIcon")), "drawable", mContext.getPackageName());
-                String advApc = c.getString(c.getColumnIndex("advAPN"));
+                String advAPN = c.getString(c.getColumnIndex("advAPN"));
+                String advAPC = c.getString(c.getColumnIndex("advAPC"));
 
-                advancedClassItems.add(new AdvancedClassItem(advClass_id, advClassName, clsName, advDescription, advRole, advWeapons, advArmor, advPriAttribute, advResource, advAdvanced_class_icon, advApc));
+                advancedClassItems.add(new AdvancedClassItem(advClass_id, advClassName, clsName, advDescription, advRole, advWeapons, advArmor, advPriAttribute, advResource, advAdvanced_class_icon, advAPN, advAPC));
             } while (c.moveToNext());
         }
         c.close();

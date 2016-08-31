@@ -119,7 +119,8 @@ public class ClassActivity extends AppCompatActivity {
                 bundle.putString("advWeapons", advClassItems.get(0).advWeapons);
                 bundle.putString("advPriAttribute", advClassItems.get(0).getAdvPriAttribute());
                 bundle.putInt("advAdvanced_class_icon", advClassItems.get(0).getAdvAdvancedClassIcon());
-                bundle.putString("advApc", advClassItems.get(0).getAdvApc());
+                bundle.putString("advAPN", advClassItems.get(0).getAdvAPN());
+                bundle.putString("advAPC", advClassItems.get(0).getAdvAPC());
 
                 Intent intent = new Intent(ClassActivity.this, AdvancedClassActivity.class);
                 intent.putExtras(bundle);
@@ -151,7 +152,8 @@ public class ClassActivity extends AppCompatActivity {
                 bundle.putString("advWeapons", advClassItems.get(1).advWeapons);
                 bundle.putString("advPriAttribute", advClassItems.get(1).getAdvPriAttribute());
                 bundle.putInt("advAdvanced_class_icon", advClassItems.get(1).getAdvAdvancedClassIcon());
-                bundle.putString("advApc", advClassItems.get(1).getAdvApc());
+                bundle.putString("advAPN", advClassItems.get(1).getAdvAPN());
+                bundle.putString("advAPC", advClassItems.get(1).getAdvAPC());
 
                 Intent intent = new Intent(ClassActivity.this, AdvancedClassActivity.class);
                 intent.putExtras(bundle);

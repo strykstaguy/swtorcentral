@@ -252,7 +252,6 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             imgPlanetRepublic = (ImageView) itemView.findViewById(R.id.imgPlanetRepublic);
             txtPlanetRepublic = (TextView) itemView.findViewById(R.id.txtPlanetRepublic);
             txtLevelRepublic = (TextView) itemView.findViewById(R.id.txtLevelRepublic);
-            imgPlanetRepublic.setTag("Right");
 
             imgPlanetEmpire = (ImageView) itemView.findViewById(R.id.imgPlanetEmpire);
             txtPlanetEmpire = (TextView) itemView.findViewById(R.id.txtPlanetEmpire);
@@ -359,27 +358,57 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public TextView txtFlashEmpireName;
         public TextView txtFlashEmpireTitle;
         public ImageButton imgIcon;
+        public LinearLayout linearLayoutEmpire;
+        public LinearLayout linearLayoutRepublic;
 
         public TimelineView timeLineView;
 
         public FlashopDoubleViewHolder(View itemView) {
             super(itemView);
+
             txtFlashRepublicName = (TextView) itemView.findViewById(R.id.txtFlashRepublicName);
             txtFlashRepublicTitle = (TextView) itemView.findViewById(R.id.txtFlashRepublicTitle);
+
+
             txtFlashEmpireName = (TextView) itemView.findViewById(R.id.txtFlashEmpireName);
             txtFlashEmpireTitle = (TextView) itemView.findViewById(R.id.txtFlashEmpireTitle);
 
+            linearLayoutRepublic = (LinearLayout) itemView.findViewById(R.id.linearLayoutRepublic);
+            linearLayoutEmpire = (LinearLayout) itemView.findViewById(R.id.linearLayoutEmpire);
             imgIcon = (ImageButton) itemView.findViewById(R.id.imgIcon);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timelineFlashPoint);
 
 
             // Attach a click listener to the entire row view
-            itemView.setOnClickListener(this);
+            linearLayoutRepublic.setOnClickListener(this);
+            linearLayoutEmpire.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(), "FlashPoint!", Toast.LENGTH_SHORT).show();
+            if (v.getId() == linearLayoutRepublic.getId()){
+
+                Bundle bundle = new Bundle();
+                bundle.putString("planet", progressionItems.get(getAdapterPosition()).getRepublicFlashpoint());
+                bundle.putString("type", progressionItems.get(getAdapterPosition()).getRepublicLevel());
+                bundle.putInt("image", progressionItems.get(getAdapterPosition()).getRepublicPlanetImage());
+                bundle.putString("faction", "Republic");
+                Intent intent = new Intent(v.getContext(), PlanetActivity.class);
+                intent.putExtras(bundle);
+                v.getContext().startActivity(intent);
+
+            } else if (v.getId() == linearLayoutEmpire.getId()){
+
+                Bundle bundle = new Bundle();
+                bundle.putString("planet", progressionItems.get(getAdapterPosition()).getEmpireFlashpoint());
+                bundle.putString("type", progressionItems.get(getAdapterPosition()).getEmpireLevel());
+                bundle.putInt("image", progressionItems.get(getAdapterPosition()).getEmpirePlanetImage());
+                bundle.putString("faction", "Empire");
+                Intent intent = new Intent(v.getContext(), PlanetActivity.class);
+                intent.putExtras(bundle);
+                v.getContext().startActivity(intent);
+
+            }
         }
     }
 
@@ -408,7 +437,14 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(), "FlashPoint Single", Toast.LENGTH_SHORT).show();
+            Bundle bundle = new Bundle();
+            bundle.putString("planet", progressionItems.get(getAdapterPosition()).getRepublicFlashpoint());
+            bundle.putString("type", progressionItems.get(getAdapterPosition()).getRepublicLevel());
+            bundle.putInt("image", progressionItems.get(getAdapterPosition()).getRepublicPlanetImage());
+            bundle.putString("faction", "Test");
+            Intent intent = new Intent(v.getContext(), PlanetActivity.class);
+            intent.putExtras(bundle);
+            v.getContext().startActivity(intent);
         }
     }
 

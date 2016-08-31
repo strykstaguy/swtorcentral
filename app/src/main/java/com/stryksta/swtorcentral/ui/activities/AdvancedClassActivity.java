@@ -54,7 +54,9 @@ public class AdvancedClassActivity extends AppCompatActivity {
     String advWeapons;
     String advPriAttribute;
     int advAdvanced_class_icon;
-    String advApc;
+    String advAPN;
+    String advAPC;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,14 +88,15 @@ public class AdvancedClassActivity extends AppCompatActivity {
             advWeapons = bundle.getString("advWeapons");
             advPriAttribute = bundle.getString("advPriAttribute");
             advAdvanced_class_icon = bundle.getInt("advAdvanced_class_icon");
-            advApc = bundle.getString("advApc");
+            advAPN = bundle.getString("advAPN");
+            advAPC = bundle.getString("advAPC");
         }
 
         //get abilities
         baseAbilities = new ArrayList<>();
         abilitiesDatabase = new AbilitiesDatabase(AdvancedClassActivity.this);
-        baseAbilities = abilitiesDatabase.getAbilities(advApc);
-        Log.d("SWTORCentral", "Advanced Class APC: " + advApc);
+        baseAbilities = abilitiesDatabase.getAbilities(advAPC);
+        //Log.d("SWTORCentral", "Advanced Class APC: " + advAPC);
         abilitiesDatabase.close();
 
         //Set Base RecyclerView
@@ -146,7 +149,7 @@ public class AdvancedClassActivity extends AppCompatActivity {
         //********************** Disciplines **********************//
 
         classDB = new ClassesDatabase(AdvancedClassActivity.this);
-        disciplineItems = classDB.getDisciplines(advApc);
+        disciplineItems = classDB.getDisciplines(advAPN);
 
         //Set Discipline 1 *******************************************
         final String advDisciplineName1 = disciplineItems.get(0).getDisciplineName();

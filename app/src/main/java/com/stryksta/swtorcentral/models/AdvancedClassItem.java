@@ -11,9 +11,10 @@ public class AdvancedClassItem {
     public String advPriAttribute;
     public String advResource;
     public int advAdvanced_class_icon;
-    public String advApc;
+    public String advAPN;
+    public String advAPC;
 
-    public AdvancedClassItem(int advID, String advClassName, String clsName, String advDescription, String advRole, String advWeapons, String advArmor, String advPriAttribute, String advResource, int advAdvanced_class_icon, String advApc) {
+    public AdvancedClassItem(int advID, String advClassName, String clsName, String advDescription, String advRole, String advWeapons, String advArmor, String advPriAttribute, String advResource, int advAdvanced_class_icon, String advAPN, String advAPC) {
         this.advID = advID;
         this.advClassName = advClassName;
         this.clsName = clsName;
@@ -24,7 +25,8 @@ public class AdvancedClassItem {
         this.advPriAttribute = advPriAttribute;
         this.advResource = advResource;
         this.advAdvanced_class_icon = advAdvanced_class_icon;
-        this.advApc = advApc;
+        this.advAPN = advAPN;
+        this.advAPC = advAPC;
     }
 
     public int getAdvancedID() {
@@ -107,11 +109,19 @@ public class AdvancedClassItem {
         this.advAdvanced_class_icon = advAdvanced_class_icon;
     }
 
-    public String getAdvApc() {
-        return advApc;
+    public String getAdvAPC() {
+        return advAPC;
     }
 
-    public void setAdvApc(String advApc) {
-        this.advApc = advApc;
+    public void setAdvAPC(String advAPC) {
+        this.advAPC = advAPC;
+    }
+
+    public String getAdvAPN() {
+        return advAPN;
+    }
+
+    public void setAdvAPN(String advAPN) {
+        this.advAPN = advAPN;
     }
 }

@@ -1,5 +1,4 @@
-CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\activities\AdvancedClassActivity$3.class
-CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\activities\AdvancedClassActivity.class
-CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\activities\AdvancedClassActivity$1.class
-CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\activities\AdvancedClassActivity$4.class
-CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\activities\AdvancedClassActivity$2.class
+CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\adapters\ProgressionAdapter.class
+CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\adapters\ProgressionAdapter$HeaderViewHolder.class
+CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\adapters\ProgressionAdapter$FlashopSingleViewHolder.class
+CHANGED,C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\stryksta\swtorcentral\ui\adapters\ProgressionAdapter$FlashopDoubleViewHolder.class
