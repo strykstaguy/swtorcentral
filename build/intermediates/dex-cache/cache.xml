@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\preference-v7\23.3.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="0ba60f3bba23144a2f54a77ae29d6375c5eaec10">
-        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-preference-v7-23.3.0_efd4297b9bc77f78f35e38b05f18b142acf59d9a\classes.dex" />
-    </item>
-    <item
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
         jumboMode="true"
         revision="23.0.3"
@@ -19,7 +12,7 @@
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="34104a79a45e2c0e301784917eb18f64723c2495">
+        sha1="ebdfb23b51e4c871fe2f2b3d43455e44c5f08531">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_829e3bc3836d7070112dba4caa272c9d5d83d2cd\classes.dex" />
     </item>
     <item
@@ -28,13 +21,6 @@
         revision="23.0.3"
         sha1="4a9f97c742d058ca55948643c06f447895a9af76">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\me.zhanghai.android.materialprogressbar-library-1.1.5_fc307d6e159b3713e3c26fd087b64eb721f574c8\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.github.nekocode\Badge\1.3\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="adb6f82f0a183428c081098652d5ba2efd0363b3">
-        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.nekocode-Badge-1.3_41d24da4474f42435dfbeefac62861bcab46018d\classes.dex" />
     </item>
     <item
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.3.0\jars\classes.jar"
@@ -51,13 +37,6 @@
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_a56cd1e2a10f0baa287f6f935c5d37cb0ea90e4e\classes.dex" />
     </item>
     <item
-        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="8a570a3b431051e1dd7f0e85e65cecbf49222d64">
-        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4b3eb8b4bacebd2e4ee265922edcf9cc9f65a0db\classes.dex" />
-    </item>
-    <item
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
         jumboMode="true"
         revision="23.0.3"
@@ -72,18 +51,53 @@
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_55bf383b7d1dbee7e1e3f192ff74cd08566d893b\classes.dex" />
     </item>
     <item
-        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_29457b760b18198e8a51098ab9dcbaac8fc1b110\classes.dex" />
-    </item>
-    <item
         jar="C:\Users\e9900375\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.9.1\3dc0a3bea4f876c54846cd050e688f1bfc78fc96\jsoup-1.9.1.jar"
         jumboMode="true"
         revision="23.0.3"
         sha1="3dc0a3bea4f876c54846cd050e688f1bfc78fc96">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsoup-1.9.1_c1a943c8ad5ff5cdfe1862482f4a4f38b1f72ee5\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.github.afollestad.material-dialogs\core\0.8.5.8\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4f7e1ce5942093c77105c86ef11b782f75aff0c3">
+        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.afollestad.material-dialogs-core-0.8.5.8_fcecbc1b4b8a203c62e36a812bc1a28558063a14\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.github.chaossss\BadgedView\1.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="cf43d8c53ff9ed5d17ed7b31600763929942b6a8">
+        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.chaossss-BadgedView-1.1.1_20cc8c5d12d30c8cd8128167535465d516cbf2fc\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\preference-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0ba60f3bba23144a2f54a77ae29d6375c5eaec10">
+        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-preference-v7-23.3.0_efd4297b9bc77f78f35e38b05f18b142acf59d9a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.github.nekocode\Badge\1.3\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="adb6f82f0a183428c081098652d5ba2efd0363b3">
+        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.nekocode-Badge-1.3_41d24da4474f42435dfbeefac62861bcab46018d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="13ed4b587df51b7e2161bc0ee98eb3aef18e4e51">
+        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4b3eb8b4bacebd2e4ee265922edcf9cc9f65a0db\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.4.0_29457b760b18198e8a51098ab9dcbaac8fc1b110\classes.dex" />
     </item>
     <item
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
@@ -119,20 +133,6 @@
         revision="23.0.3"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_4b89a8d73a99f1bc6e6ed817eee14c8f3393c0ec\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.github.afollestad.material-dialogs\core\0.8.5.8\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="4f7e1ce5942093c77105c86ef11b782f75aff0c3">
-        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.afollestad.material-dialogs-core-0.8.5.8_fcecbc1b4b8a203c62e36a812bc1a28558063a14\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.github.chaossss\BadgedView\1.1.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="cf43d8c53ff9ed5d17ed7b31600763929942b6a8">
-        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.chaossss-BadgedView-1.1.1_20cc8c5d12d30c8cd8128167535465d516cbf2fc\classes.dex" />
     </item>
     <item
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.github.clans\fab\1.6.3\jars\classes.jar"

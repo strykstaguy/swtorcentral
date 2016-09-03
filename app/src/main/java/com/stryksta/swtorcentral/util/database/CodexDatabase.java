@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import com.stryksta.swtorcentral.models.CodexItem;
+import com.stryksta.swtorcentral.models.PlanetCodexItem;
 
 public class CodexDatabase extends SQLiteAssetHelper {
 
@@ -179,5 +180,33 @@ public class CodexDatabase extends SQLiteAssetHelper {
         c.close();
         db.close();
         return categoryItem;
+    }
+
+    public ArrayList<PlanetCodexItem> getCodexCounts() {
+        ArrayList<PlanetCodexItem> codexCountItem = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT codexes.cdxCategory, COUNT(*) as cdxCount ")
+                .append("FROM codexes ")
+                .append("WHERE codexes.cdxPlanets LIKE '% ? %' ")
+                .append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ")
+                .append("GROUP BY codexes.cdxCategory")
+                .toString();
+
+        Cursor c = db.rawQuery(sqlSelect, null);
+
+        if (c.moveToFirst()) {
+            do {
+                String cdxCategory = c.getString(c.getColumnIndex("cdxCategory"));
+                String cdxCount = c.getString(c.getColumnIndex("cdxCount"));
+
+                codexCountItem.add(new PlanetCodexItem(cdxCategory, cdxCount));
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return codexCountItem;
     }
 }

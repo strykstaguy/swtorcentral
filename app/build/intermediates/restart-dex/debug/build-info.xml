@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="24"
+    abi="x86"
+    api-level="23"
     density="420dpi"
     format="7"
-    timestamp="29823921094672"
+    timestamp="15619366760340"
     token="-448831534808878596" >
 
     <task
         name="javac"
-        duration="13191" />
+        duration="69643" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2995" />
+        duration="23896" />
     <task
         name="verifier"
-        duration="899" />
+        duration="2371" />
 
     <artifact
         location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="29823921094672" >
+    <build timestamp="15619366760340" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
