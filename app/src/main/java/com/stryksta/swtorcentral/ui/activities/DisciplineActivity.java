@@ -23,6 +23,7 @@ import com.stryksta.swtorcentral.models.DisciplineItem;
 import com.stryksta.swtorcentral.models.SkillItem;
 import com.stryksta.swtorcentral.ui.adapters.AbilityDetailAdapter;
 import com.stryksta.swtorcentral.util.DividerItemDecoration;
+import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
 
 import java.util.ArrayList;
@@ -108,6 +109,24 @@ public class DisciplineActivity extends AppCompatActivity {
         skillsRecyclerView.setNestedScrollingEnabled(false);
         skillsRecyclerView.addItemDecoration(new DividerItemDecoration(DisciplineActivity.this, GridLayoutManager.VERTICAL));
         skillsRecyclerView.setAdapter(skillsRecycleAdapter);
+        skillsRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(DisciplineActivity.this, skillsRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            public void onItemClick(View view, int position) {
+                boolean wrapInScrollView = true;
+                MaterialDialog dialog = new MaterialDialog.Builder(DisciplineActivity.this)
+                        .title(abilityItems.get(position).getAbilityName())
+                        .customView(R.layout.ability_dialog, wrapInScrollView)
+                        .positiveText(R.string.positive)
+                        .show();
+
+                View ablView = dialog.getCustomView();
+                showAbilityDetail(ablView, position, abilityItems);
+
+            }
+
+            public void onItemLongClick(View view, int position) {
+
+            }
+        }));
 
         // Debug the thread name
         Log.d("SWTORCentral", Thread.currentThread().getName());
@@ -131,6 +150,59 @@ public class DisciplineActivity extends AppCompatActivity {
         } else {
             getFragmentManager().popBackStack();
         }
+    }
+
+    public void showAbilityDetail (View ablView, int position, ArrayList<AbilitiesItem> abilities)
+
+    {
+
+        TextView ablLevel = (TextView) ablView.findViewById(R.id.ablLevel);
+        ablLevel.setText("Level Acquired: " + String.valueOf(abilities.get(position).getLevelAquired()));
+
+        TextView ablCastingActivation = (TextView) ablView.findViewById(R.id.ablCastingActivation);
+        if (abilities.get(position).getAbilityPassive() == "True") {
+            ablCastingActivation.setText("Passive");
+        } else {
+            if (abilities.get(position).getCastingTime() == 0) {
+                ablCastingActivation.setText("Instant");
+            } else {
+                ablCastingActivation.setText("Activation: " + String.valueOf(abilities.get(position).getCastingTime()) + "s");
+            }
+        }
+
+        TextView ablChanneled = (TextView) ablView.findViewById(R.id.ablChanneled);
+        if (abilities.get(position).getChannelingTime() == 0) {
+            ablChanneled.setVisibility(View.GONE);
+        } else {
+            ablChanneled.setText("Channeled: " + String.valueOf(abilities.get(position).getCastingTime()) + "s");
+        }
+
+        TextView ablCooldown = (TextView) ablView.findViewById(R.id.ablCooldown);
+        if (abilities.get(position).getCooldownTime() == 0) {
+            ablCooldown.setVisibility(View.GONE);
+        } else {
+            ablCooldown.setText("Cooldown: " + String.valueOf(abilities.get(position).getCooldownTime()) + "s");
+        }
+
+        TextView ablRange = (TextView) ablView.findViewById(R.id.ablRange);
+        if (abilities.get(position).getMaxRange() == 0) {
+            ablRange.setVisibility(View.GONE);
+        } else {
+            int maxRange = abilities.get(position).getCooldownTime() * 10;
+            ablRange.setText("Range: " + String.valueOf(maxRange) + "m");
+        }
+
+        TextView ablResource = (TextView) ablView.findViewById(R.id.ablResource);
+        if (abilities.get(position).getEnergyCost() != 0) {
+            ablResource.setText(abilities.get(position).getClassResource() + " " + String.valueOf(abilities.get(position).getEnergyCost()));
+        } else if (abilities.get(position).getForceCost() != 0) {
+            ablResource.setText(abilities.get(position).getClassResource() + " " + String.valueOf(abilities.get(position).getForceCost()));
+        } else {
+            ablResource.setVisibility(View.GONE);
+        }
+
+        TextView ablDescription = (TextView) ablView.findViewById(R.id.ablDescription);
+        ablDescription.setText(abilities.get(position).getAbilityDescription());
     }
 
     public Drawable getDisciplineIcon(String disType) {

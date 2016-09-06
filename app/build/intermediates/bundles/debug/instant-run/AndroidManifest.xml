@@ -80,6 +80,10 @@
             android:name="com.stryksta.swtorcentral.ui.activities.DisciplineActivity"
             android:label="@string/discipline_main" >
         </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.CodexDetailActivity"
+            android:label="@string/codex_detail_main" >
+        </activity>
     </application>
 
 </manifest>

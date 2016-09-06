@@ -87,7 +87,7 @@ public class PlanetActivity extends AppCompatActivity {
         //Codexes
         dbCodex = new CodexDatabase(PlanetActivity.this);
         String pltID = dbCodex.getPlanetID(planetText);
-        planetCodexItems = dbCodex.getCodexCounts(pltID);
+        planetCodexItems = dbCodex.getCodexCounts(pltID, planetText);
         dbCodex.close();
 
         //Set RecyclerView
@@ -100,6 +100,7 @@ public class PlanetActivity extends AppCompatActivity {
 
         //Set Adapter
         mRecycleAdapter = new PlanetCodexAdapter(PlanetActivity.this, planetCodexItems);
+        mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setAdapter(mRecycleAdapter);
 
 

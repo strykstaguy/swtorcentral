@@ -182,7 +182,7 @@ public class CodexDatabase extends SQLiteAssetHelper {
         return categoryItem;
     }
 
-    public ArrayList<PlanetCodexItem> getCodexCounts(String txtPlanet) {
+    public ArrayList<PlanetCodexItem> getCodexCounts(String txtPlanetID, String txtPlanetName) {
         ArrayList<PlanetCodexItem> codexCountItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
@@ -195,14 +195,14 @@ public class CodexDatabase extends SQLiteAssetHelper {
                 .append("GROUP BY codexes.cdxCategory")
                 .toString();
 
-        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtPlanet)});
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtPlanetID)});
 
         if (c.moveToFirst()) {
             do {
                 String cdxCategory = c.getString(c.getColumnIndex("cdxCategory"));
                 String cdxCount = c.getString(c.getColumnIndex("cdxCount"));
 
-                codexCountItem.add(new PlanetCodexItem(cdxCategory, cdxCount));
+                codexCountItem.add(new PlanetCodexItem(cdxCategory, cdxCount, txtPlanetID, txtPlanetName));
             } while (c.moveToNext());
         }
         c.close();
@@ -233,5 +233,41 @@ public class CodexDatabase extends SQLiteAssetHelper {
         c.close();
         db.close();
         return planetID;
+    }
+
+    public ArrayList<CodexItem> getCodexesByCategory(String txtCategory, String txtPlanetID) {
+        ArrayList<CodexItem> categoryItem = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT * ")
+                .append("FROM codexes ")
+                .append("WHERE codexes.cdxPlanets LIKE ? ")
+                .append("AND codexes.cdxCategory = ? ")
+                .append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ")
+                .append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC")
+                .toString();
+
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtPlanetID), String.valueOf(txtCategory)});
+
+        if (c.moveToFirst()) {
+            do {
+                int cdxID = c.getInt(c.getColumnIndex("_id"));
+                String cdxTitle = c.getString(c.getColumnIndex("cdxTitle"));
+                String cdxDescription = c.getString(c.getColumnIndex("cdxDescription"));
+                String cdxCategory = c.getString(c.getColumnIndex("cdxCategory"));
+                String cdxLevel = c.getString(c.getColumnIndex("cdxLevel"));
+                String cdxImage = c.getString(c.getColumnIndex("cdxImage"));
+                String cdxFaction = c.getString(c.getColumnIndex("cdxFaction"));
+                String cdxIsPlanetCodex = c.getString(c.getColumnIndex("cdxIsPlanetCodex"));
+                String cdxPlants = c.getString(c.getColumnIndex("cdxPlanets"));
+
+                categoryItem.add(new CodexItem(cdxID, cdxTitle, cdxDescription, cdxCategory, cdxLevel, cdxImage, cdxFaction, cdxIsPlanetCodex, cdxPlants));
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return categoryItem;
     }
 }

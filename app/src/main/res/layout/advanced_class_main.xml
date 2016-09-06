@@ -90,7 +90,7 @@
         android:layout_marginRight="@dimen/dim_10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:fillViewport="true"
-        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_marginBottom="?actionBarSize"
         android:layout_gravity="fill_vertical">
 
         <LinearLayout
@@ -139,125 +139,156 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <TextView
-                android:id="@+id/txtDisSep"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:gravity="center_vertical"
-                android:paddingLeft="16dp"
-                android:singleLine="true"
-                android:textAllCaps="true"
-                android:textColor="@color/text"
-                android:background="@android:color/transparent"
-                android:text="Disciplines"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            card_view:cardElevation="2dp"
+            card_view:cardCornerRadius="2dp"
+            android:clickable="true"
+            android:foreground="@drawable/card_foreground"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="@dimen/dim_10"
-                android:paddingBottom="@dimen/dim_10"
-                android:gravity="center">
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtDisSep"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/swtor_blue"
+                    android:background="@android:color/transparent"
+                    android:text="Disciplines"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:paddingTop="@dimen/dim_10"
+                    android:paddingBottom="@dimen/dim_10"
+                    android:gravity="center">
 
-                    <ImageButton
-                        android:id="@+id/imgDisciplines1"
-                        android:layout_width="@dimen/fab_progress"
-                        android:layout_height="@dimen/fab_progress"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@drawable/round"
-                        android:elevation="3dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_heals"
-                        android:padding="15dp"
-                        android:scaleType="fitXY"
-                        android:tint="@color/white"/>
-
-                    <TextView
-                        android:id="@+id/txtDiscipline1"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="@color/text"
-                        android:text="Seer"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal" />
+                        android:orientation="vertical"
+                        android:layout_weight="1">
 
-                </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/imgDisciplines1"
+                            android:layout_width="@dimen/fab_progress"
+                            android:layout_height="@dimen/fab_progress"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/round"
+                            android:elevation="3dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_heals"
+                            android:padding="15dp"
+                            android:scaleType="fitXY"
+                            android:tint="@color/white"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/txtDiscipline1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/text"
+                            android:text="Seer"
+                            android:textSize="14sp"
+                            android:layout_gravity="center_horizontal" />
 
-                    <ImageButton
-                        android:id="@+id/imgDisciplines2"
-                        android:layout_width="@dimen/fab_progress"
-                        android:layout_height="@dimen/fab_progress"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:padding="15dp"
-                        android:scaleType="fitXY"
-                        android:background="@drawable/round"
-                        android:elevation="3dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_damage"
-                        android:tint="@color/white"/>
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/txtDiscipline2"
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundlight"/>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="@color/text"
-                        android:text="Telekinetics"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal" />
+                        android:orientation="vertical"
+                        android:layout_weight="1">
 
-                </LinearLayout>
+                        <ImageButton
+                            android:id="@+id/imgDisciplines2"
+                            android:layout_width="@dimen/fab_progress"
+                            android:layout_height="@dimen/fab_progress"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:padding="15dp"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/round"
+                            android:elevation="3dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_damage"
+                            android:tint="@color/white"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/txtDiscipline2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/text"
+                            android:text="Telekinetics"
+                            android:textSize="14sp"
+                            android:layout_gravity="center_horizontal" />
 
-                    <ImageButton
-                        android:id="@+id/imgDisciplines3"
-                        android:layout_width="@dimen/fab_progress"
-                        android:layout_height="@dimen/fab_progress"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:padding="15dp"
-                        android:scaleType="fitXY"
-                        android:background="@drawable/round"
-                        android:elevation="3dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_tank"
-                        android:tint="@color/white"/>
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/txtDiscipline3"
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundlight"/>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="@color/text"
-                        android:text="Balance"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal" />
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imgDisciplines3"
+                            android:layout_width="@dimen/fab_progress"
+                            android:layout_height="@dimen/fab_progress"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:padding="15dp"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/round"
+                            android:elevation="3dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_tank"
+                            android:tint="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/txtDiscipline3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/text"
+                            android:text="Balance"
+                            android:textSize="14sp"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
+        </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 xmlns:android="http://schemas.android.com/apk/res/android"
@@ -266,10 +297,8 @@
                 android:layout_gravity="center_horizontal"
                 app:cardElevation="2dp"
                 app:cardCornerRadius="2dp"
-                android:clickable="true"
+                android:clickable="false"
                 android:foreground="@drawable/card_foreground"
-                android:layout_marginRight="@dimen/dim_10"
-                android:layout_marginLeft="@dimen/dim_10"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp">
 
@@ -447,8 +476,6 @@
                 app:cardCornerRadius="2dp"
                 android:clickable="true"
                 android:foreground="@drawable/card_foreground"
-                android:layout_marginRight="@dimen/dim_10"
-                android:layout_marginLeft="@dimen/dim_10"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp">
 

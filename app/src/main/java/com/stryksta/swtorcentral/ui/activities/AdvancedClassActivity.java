@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -101,7 +102,7 @@ public class AdvancedClassActivity extends AppCompatActivity {
 
         //Set Base RecyclerView
         baseRecyclerView = (RecyclerView) findViewById(R.id.abilitiesACList);
-        baseRecyclerView.setNestedScrollingEnabled(false);
+        ViewCompat.setNestedScrollingEnabled(baseRecyclerView, false);
 
         if (baseRecyclerView != null) {
             baseLayoutManager = new GridLayoutManager(AdvancedClassActivity.this, 1, GridLayoutManager.VERTICAL, false);
