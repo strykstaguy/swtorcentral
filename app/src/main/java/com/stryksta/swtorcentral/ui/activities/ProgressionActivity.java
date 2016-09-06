@@ -93,7 +93,7 @@ public class ProgressionActivity extends AppCompatActivity {
 
         planets.add(new ProgressionItem("Chapter 1", ProgressionItem.CHAPTER));
 
-        planets.add(new ProgressionItem("Taris", "Level 16-19", R.drawable.pl_taris, "Balmorra", "Level 16-19", R.drawable.pl_balmorra));
+        planets.add(new ProgressionItem("Taris (Republic)", "Level 16-19", R.drawable.pl_taris, "Balmorra (Empire)", "Level 16-19", R.drawable.pl_balmorra));
         planets.add(new ProgressionItem("Athiss", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
         planets.add(new ProgressionItem("Nar Shaddaa", "Level 21-24", R.drawable.pl_narshaddaa, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Mandalorian Raiders", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
@@ -104,7 +104,7 @@ public class ProgressionActivity extends AppCompatActivity {
 
         planets.add(new ProgressionItem("Chapter 2", ProgressionItem.CHAPTER));
 
-        planets.add(new ProgressionItem("Balmorra", "Level 32-36", R.drawable.pl_balmorra, "Taris", "Level 21-24", R.drawable.pl_taris));
+        planets.add(new ProgressionItem("Balmorra (Republic)", "Level 32-36", R.drawable.pl_balmorra, "Taris (Empire)", "Level 21-24", R.drawable.pl_taris));
         planets.add(new ProgressionItem("Taral V", "Flashpoint","Boarding Party", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Maelstrom Prison", "Flashpoint", "The Foundry", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("Quesh", "Level 36-37", R.drawable.pl_quesh, ProgressionItem.DIR_LEFT));

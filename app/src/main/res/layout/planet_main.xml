@@ -89,6 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:behavior_overlapTop="35dp"
+        android:layout_marginBottom="?actionBarSize"
         android:layout_marginLeft="@dimen/dim_10"
         android:layout_marginRight="@dimen/dim_10"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -127,24 +128,51 @@
 
             </android.support.v7.widget.CardView>
 
-            <TextView
-                android:id="@+id/txtCodexes"
-                android:layout_width="match_parent"
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="left"
-                android:layout_gravity="center"
-                android:text="Datacrons"
-                android:textStyle="bold"
-                android:textColor="@color/text"
-                android:textSize="18sp" />
+                android:layout_gravity="center_horizontal"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="2dp"
+                android:clickable="true"
+                android:foreground="@drawable/card_foreground"
+                android:layout_marginRight="@dimen/dim_10"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/pltDatacrons"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="@dimen/dim_5"
-                android:clipToPadding="false"
-                android:scrollbars="none" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtCodexes"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/swtor_blue"
+                        android:background="@android:color/transparent"
+                        android:text="Codex Entries"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/pltCodexes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginRight="@dimen/dim_10"
+                        android:layout_marginBottom="@dimen/dim_10"
+                        android:clipToPadding="false"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
 

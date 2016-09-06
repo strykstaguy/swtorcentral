@@ -182,7 +182,7 @@ public class CodexDatabase extends SQLiteAssetHelper {
         return categoryItem;
     }
 
-    public ArrayList<PlanetCodexItem> getCodexCounts() {
+    public ArrayList<PlanetCodexItem> getCodexCounts(String txtPlanet) {
         ArrayList<PlanetCodexItem> codexCountItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
@@ -190,12 +190,12 @@ public class CodexDatabase extends SQLiteAssetHelper {
         String sqlSelect = builder
                 .append("SELECT codexes.cdxCategory, COUNT(*) as cdxCount ")
                 .append("FROM codexes ")
-                .append("WHERE codexes.cdxPlanets LIKE '% ? %' ")
+                .append("WHERE codexes.cdxPlanets LIKE ? ")
                 .append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ")
                 .append("GROUP BY codexes.cdxCategory")
                 .toString();
 
-        Cursor c = db.rawQuery(sqlSelect, null);
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtPlanet)});
 
         if (c.moveToFirst()) {
             do {
@@ -208,5 +208,30 @@ public class CodexDatabase extends SQLiteAssetHelper {
         c.close();
         db.close();
         return codexCountItem;
+    }
+
+    public String getPlanetID(String txtPlanet) {
+        String planetID = "";
+        SQLiteDatabase db = getReadableDatabase();
+
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT locations.locPlanetID ")
+                .append("FROM locations ")
+                .append("WHERE locations.locName = ? ")
+                .append("LIMIT 1")
+                .toString();
+
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(txtPlanet)});
+
+        if (c.moveToFirst()) {
+            do {
+                planetID = c.getString(c.getColumnIndex("locPlanetID"));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return planetID;
     }
 }

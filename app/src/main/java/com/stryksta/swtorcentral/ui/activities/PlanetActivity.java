@@ -14,8 +14,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.models.PlanetCodexItem;
 import com.stryksta.swtorcentral.ui.adapters.DatacronClassAdapter;
 import com.stryksta.swtorcentral.models.DatacronItem;
+import com.stryksta.swtorcentral.ui.adapters.PlanetCodexAdapter;
+import com.stryksta.swtorcentral.util.database.CodexDatabase;
 import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 import com.stryksta.swtorcentral.util.database.PlanetDatabase;
 
@@ -26,12 +29,15 @@ public class PlanetActivity extends AppCompatActivity {
 	private String factionText;
 	private String typeText;
     private int planetImage;
-	private PlanetDatabase dbPlanet;
-	private DatacronDatabase dbDatacron;
-    private ArrayList<DatacronItem> datacronItems;
+    private PlanetDatabase dbPlanet;
+
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
-    private DatacronClassAdapter mRecycleAdapter;
+
+
+    private CodexDatabase dbCodex;
+    private ArrayList<PlanetCodexItem> planetCodexItems;
+    private PlanetCodexAdapter mRecycleAdapter;
 
     private Toolbar mToolbar;
 	
@@ -78,21 +84,22 @@ public class PlanetActivity extends AppCompatActivity {
 		ImageView pltImage = (ImageView) findViewById(R.id.pltImage);
         pltImage.setImageResource(planetImage);
 
-        //Datacrons
-        dbDatacron = new DatacronDatabase(PlanetActivity.this);
-        datacronItems = dbDatacron.getDatacronsPerPlanet(planetText);
-        dbPlanet.close();
+        //Codexes
+        dbCodex = new CodexDatabase(PlanetActivity.this);
+        String pltID = dbCodex.getPlanetID(planetText);
+        planetCodexItems = dbCodex.getCodexCounts(pltID);
+        dbCodex.close();
 
         //Set RecyclerView
-        mRecyclerView = (RecyclerView) findViewById(R.id.pltDatacrons);
+        mRecyclerView = (RecyclerView) findViewById(R.id.pltCodexes);
 
         if (mRecyclerView != null) {
-            mLayoutManager = new GridLayoutManager(PlanetActivity.this, 1, GridLayoutManager.HORIZONTAL, false);
+            mLayoutManager = new GridLayoutManager(PlanetActivity.this, 3, GridLayoutManager.VERTICAL, false);
             mRecyclerView.setLayoutManager(mLayoutManager);
         }
 
         //Set Adapter
-        mRecycleAdapter = new DatacronClassAdapter(datacronItems);
+        mRecycleAdapter = new PlanetCodexAdapter(PlanetActivity.this, planetCodexItems);
         mRecyclerView.setAdapter(mRecycleAdapter);
 
 
