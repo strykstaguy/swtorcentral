@@ -3,8 +3,9 @@ package com.stryksta.swtorcentral.ui.activities;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -13,9 +14,9 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.ui.adapters.SectionedGridRecyclerViewAdapter;
-import com.stryksta.swtorcentral.ui.adapters.ServerAdapter;
 import com.stryksta.swtorcentral.models.ServerItem;
+import com.stryksta.swtorcentral.ui.adapters.ServerAdapter;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -23,18 +24,20 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ServerActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private ServerAdapter mRecycleAdapter;
+    private RecyclerView mRecyclerViewUS;
+    private ServerAdapter mRecycleAdapterUS;
 
-    private ArrayList<ServerItem> serverItems;
-    List<SectionedGridRecyclerViewAdapter.Section> mSections;
+    private RecyclerView mRecyclerViewEU;
+    private ServerAdapter mRecycleAdapterEU;
 
-    //MaterialDialog pDialog;
+    private LinearLayoutManager mLayoutManagerUS;
+    private LinearLayoutManager mLayoutManagerEU;
+
+    private ArrayList<ServerItem> serverItemsUS;
+    private ArrayList<ServerItem> serverItemsEU;
 
     private Toolbar mToolbar;
 
@@ -51,47 +54,79 @@ public class ServerActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+            getWindow().setStatusBarColor(ContextCompat.getColor(ServerActivity.this, R.color.colorPrimary));
         }
 
         //Set RecyclerView
-        mRecyclerView = (RecyclerView) findViewById(R.id.serverList);
+        mRecyclerViewUS = (RecyclerView) findViewById(R.id.serverListUS);
+        mRecyclerViewEU = (RecyclerView) findViewById(R.id.serverListEU);
 
-        mLayoutManager = new GridLayoutManager(ServerActivity.this, 1);
-        mRecyclerView.setLayoutManager(mLayoutManager);
+        mLayoutManagerUS = new LinearLayoutManager(ServerActivity.this, LinearLayoutManager.VERTICAL, false);
+        mLayoutManagerEU = new LinearLayoutManager(ServerActivity.this, LinearLayoutManager.VERTICAL, false);
 
-        //This is the code to provide a sectioned list
-        mSections = new ArrayList<SectionedGridRecyclerViewAdapter.Section>();
+        mRecyclerViewUS.setLayoutManager(mLayoutManagerUS);
+        mRecyclerViewEU.setLayoutManager(mLayoutManagerEU);
 
-        //Sections
-        mSections.add(new SectionedGridRecyclerViewAdapter.Section(0,"US Servers"));
-        mSections.add(new SectionedGridRecyclerViewAdapter.Section(8,"European Servers"));
+        mRecyclerViewUS.setNestedScrollingEnabled(false);
+        mRecyclerViewEU.setNestedScrollingEnabled(false);
+
+        mRecyclerViewUS.setHasFixedSize(true);
+        mRecyclerViewEU.setHasFixedSize(true);
+
+        mRecyclerViewUS.addItemDecoration(
+                new HorizontalDividerItemDecoration.Builder(ServerActivity.this)
+                        .color(ContextCompat.getColor(ServerActivity.this, R.color.backgroundlight))
+                        .sizeResId(R.dimen.divider)
+                        .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
+                        .build());
+
+        mRecyclerViewEU.addItemDecoration(
+                new HorizontalDividerItemDecoration.Builder(ServerActivity.this)
+                        .color(ContextCompat.getColor(ServerActivity.this, R.color.backgroundlight))
+                        .sizeResId(R.dimen.divider)
+                        .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
+                        .build());
+
+        //Initial Data
+        serverItemsUS = loadUSData();
+        serverItemsEU = loadEUData();
+
+        //Set Adapter
+        mRecycleAdapterUS = new ServerAdapter(ServerActivity.this, serverItemsUS);
+        mRecycleAdapterEU = new ServerAdapter(ServerActivity.this, serverItemsEU);
+
+        mRecyclerViewUS.setAdapter(mRecycleAdapterUS);
+        mRecyclerViewEU.setAdapter(mRecycleAdapterEU);
 
         if (MainActivity.isNetworkAvailable(ServerActivity.this)) {
-       	 new GetServerStatus().execute();
-       } else {
+       	    new GetServerStatus().execute();
+        } else {
            Toast.makeText(ServerActivity.this, "Network is unavailable", Toast.LENGTH_LONG).show();
-       }
+        }
+
 		// Debug the thread name
-		Log.d("SWTORCentral", Thread.currentThread().getName());
+		//Log.d("SWTORCentral", Thread.currentThread().getName());
 	}
-	
+
     private class GetServerStatus extends AsyncTask<String, Void, ArrayList<ServerItem>> {
-    	
+
     	protected void onPreExecute() {
  			super.onPreExecute();
- 			// Create a progressbar
+
+            serverItemsUS.clear();
+            serverItemsEU.clear();
  		}
-    	
+
 		@Override
 		protected ArrayList<ServerItem> doInBackground(String... urls) {
 
 			try {
 				String URL = "http://www.swtor.com/server-status";
-				serverItems = new ArrayList<ServerItem>();
-				
+                serverItemsUS = new ArrayList<>();
+                serverItemsEU = new ArrayList<>();
+
 				Document doc = Jsoup.connect(URL).get();
-				
+
 				Elements USServers = doc.select("div#serverListUS div.serverBody:not(.serverMenu)");
 				for(Element USServer: USServers) {
 					String serverStatus = USServer.child(0).text();
@@ -100,57 +135,91 @@ public class ServerActivity extends AppCompatActivity {
                     String serverType = USServer.child(3).text();
                     String serverZone = USServer.child(4).text();
 					int serverStatusIMG = R.drawable.ic_arrow_up;
-					
+
 					if (serverStatus.equals("DOWN")) {
 						serverStatusIMG = R.drawable.ic_arrow_down;
 		            }
 
 					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop, serverType, serverZone);
-                    serverItems.add(item);
+
+                    //Log.d("SWTORCentral", "US Server: " + serverName);
+
+                    serverItemsUS.add(item);
 				}
-				
+
 				Elements EUServers = doc.select("div#serverListEU div.serverBody:not(.serverMenu)");
 				for(Element EUServer: EUServers) {
-					
+
 					String serverStatus = EUServer.child(0).text();
 					String serverName = EUServer.child(1).text();
 					String serverPop = EUServer.child(2).text();
                     String serverType = EUServer.child(3).text();
                     String serverZone = EUServer.child(4).text();
 					int serverStatusIMG = R.drawable.ic_arrow_up;
-					
+
 					if (serverStatus.equals("DOWN")) {
 						serverStatusIMG = R.drawable.ic_arrow_down;
 		            }
 
 					ServerItem item = new ServerItem(serverStatusIMG, serverName, serverPop, serverType, serverZone);
-                    serverItems.add(item);
+                    serverItemsEU.add(item);
 				}
 			} catch (Exception e) {
 				if(e.getMessage() != null) {
 				    Log.e("SWTORCentral", e.getMessage());
 				}
 			}
-			
+
 			// Debug the task thread name
-			Log.d("SWTORCentral", Thread.currentThread().getName());
+			//Log.d("SWTORCentral", Thread.currentThread().getName());
 			return null;
 		}
 
 		protected void onPostExecute(ArrayList<ServerItem> result) {
             //Set Adapter
-            mRecycleAdapter = new ServerAdapter(ServerActivity.this, serverItems);
-            //mRecyclerView.setAdapter(mRecycleAdapter);
+            //mRecycleAdapterUS = new ServerAdapter(ServerActivity.this, serverItemsUS);
+            //mRecycleAdapterEU = new ServerAdapter(ServerActivity.this, serverItemsEU);
 
-            //Add your adapter to the sectionAdapter
-            SectionedGridRecyclerViewAdapter.Section[] dummy = new SectionedGridRecyclerViewAdapter.Section[mSections.size()];
-            SectionedGridRecyclerViewAdapter mSectionedAdapter = new SectionedGridRecyclerViewAdapter(ServerActivity.this,R.layout.section,R.id.section_text,mRecyclerView,mRecycleAdapter);
-            mSectionedAdapter.setSections(mSections.toArray(dummy));
+            //mRecyclerViewUS.setAdapter(mRecycleAdapterUS);
+            //mRecyclerViewEU.setAdapter(mRecycleAdapterEU);
 
-            mRecyclerView.setAdapter(mSectionedAdapter);
+            mRecycleAdapterUS.updateItems(serverItemsUS);
+            mRecycleAdapterEU.updateItems(serverItemsUS);
 
+            mRecycleAdapterUS.notifyDataSetChanged();
+            mRecycleAdapterEU.notifyDataSetChanged();
 		}
 	}
+
+    private ArrayList<ServerItem> loadUSData(){
+        ArrayList<ServerItem> usServers = new ArrayList<>();
+        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Bastion", "Light", "PvE", "West"));
+        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "Begeren Colony", "Light", "PvE", "West"));
+        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Harbinger", "Light", "PvE", "West"));
+        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Shadowlands", "Light", "PvE", "West"));
+        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "Jung Ma", "Light", "PvE", "West"));
+        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Ebon Hawk", "Light", "PvE", "West"));
+        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "Prophecy of the Five", "Light", "PvE", "West"));
+        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "Jedi Covenant", "Light", "PvE", "West"));
+
+       return usServers;
+    }
+
+    private ArrayList<ServerItem> loadEUData(){
+
+        ArrayList<ServerItem> euServers = new ArrayList<ServerItem>();
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "T3-M4", "Light", "PvE", "West"));
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Darth Nihilus", "Light", "PvE", "West"));
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Tomb of Freedon Nadd", "Light", "PvE", "West"));
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Jar'Kai Sword", "Light", "PvE", "West"));
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Progenitor", "Light", "PvE", "West"));
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Vanjervalis Chain", "Light", "PvE", "West"));
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Battle Meditation", "Light", "PvE", "West"));
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Mantle of the Force", "Light", "PvE", "West"));
+        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Red Eclipse", "Light", "PvE", "West"));
+
+        return euServers;
+    }
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -162,7 +231,7 @@ public class ServerActivity extends AppCompatActivity {
 	    }
 	    return super.onOptionsItemSelected(item);
 	}
-	
+
 	public void onBackPressed() {
 		if (getFragmentManager().getBackStackEntryCount() == 0) {
 	        this.finish();
@@ -170,5 +239,5 @@ public class ServerActivity extends AppCompatActivity {
 	        getFragmentManager().popBackStack();
 	    }
     }
-	
+
 }

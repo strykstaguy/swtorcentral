@@ -31,11 +31,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="1dp"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:padding="@dimen/dim_5"
                 android:background="@color/swtor_accent"
                 android:textColor="@color/white"
-                android:text="News"/>
+                android:text="News"
+                android:fontFamily="sans-serif-light"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,17 +51,22 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:textColor="@color/text"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="sans-serif"
+                    android:text="dsfasdfasdfasdf"/>
 
                 <TextView
                     android:id="@+id/txtDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:textColor="@color/subtext"
-                    android:textSize="14sp"
+                    android:textColor="@color/subtext_dark"
+                    android:textSize="16sp"
                     android:maxLines="4"
-                    android:ellipsize="end"/>
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:text="sdaflpwejropqwijruf;alsfjaso;dfjiaso;ifuapsofjasopdfjasopdfjiaso;dlfjasodfjasopdfjiaops45344v52354fg52364455fgv5456v45642v35456423456243562442523465v5423654236552365nrqwel;rj"/>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

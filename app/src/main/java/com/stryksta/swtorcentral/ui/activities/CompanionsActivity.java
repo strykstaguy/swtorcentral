@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral.ui.activities;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -25,6 +26,7 @@ import com.stryksta.swtorcentral.models.CompanionItem;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.Spanny;
 import com.stryksta.swtorcentral.util.database.CompanionDatabase;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -96,7 +98,14 @@ public class CompanionsActivity extends AppCompatActivity {
 
         //Set Base Adapter
         baseRecycleAdapter = new CompanionClassAdapter(baseCompanions);
-        //baseRecyclerView.addItemDecoration(new DividerItemDecoration(CompanionsActivity.this, GridLayoutManager.VERTICAL));
+        baseRecyclerView.setNestedScrollingEnabled(false);
+        baseRecyclerView.addItemDecoration(
+                new HorizontalDividerItemDecoration.Builder(CompanionsActivity.this)
+                        .color(ContextCompat.getColor(CompanionsActivity.this, R.color.backgroundlight))
+                        .sizeResId(R.dimen.divider)
+                        .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
+                        .build());
+
         baseRecyclerView.setAdapter(baseRecycleAdapter);
         baseRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(CompanionsActivity.this, baseRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             public void onItemClick(View view, int position) {

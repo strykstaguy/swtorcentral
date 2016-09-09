@@ -56,7 +56,8 @@
                         android:maxLines="1"
                         android:textSize="36sp"
                         android:text="Jedi Consular"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif"/>
 
                     <TextView
                         android:id="@+id/txtFaction"
@@ -66,7 +67,8 @@
                         android:maxLines="1"
                         android:textSize="16sp"
                         android:text="Republic"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-light"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -125,8 +127,9 @@
                         android:textColor="@color/text"
                         android:gravity="center"
                         android:text="@string/test_profile_desc"
-                        android:textSize="14sp"
-                        android:layout_margin="10dp" />
+                        android:textSize="16sp"
+                        android:layout_margin="10dp"
+                        android:fontFamily="sans-serif-light"/>
 
                     <View
                         android:layout_width="fill_parent"
@@ -171,7 +174,8 @@
                 android:background="@android:color/transparent"
                 android:text="Advanced Classes"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"/>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -204,11 +208,13 @@
                         android:id="@+id/txtAdvancedClass1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
                         android:paddingLeft="5dp"
                         android:textColor="@color/text"
                         android:text="Seer"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal" />
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="sans-serif-light"/>
 
                 </LinearLayout>
 
@@ -240,11 +246,13 @@
                         android:id="@+id/txtAdvancedClass2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_5"
                         android:paddingLeft="5dp"
                         android:textColor="@color/text"
                         android:text="Jedi Sage"
-                        android:textSize="14sp"
-                        android:layout_gravity="center_horizontal" />
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="sans-serif-light"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -283,7 +291,8 @@
                     android:background="@android:color/transparent"
                     android:text="Story"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"/>
 
                 <TextView
                     android:id="@+id/txtStory"
@@ -296,7 +305,8 @@
                     android:layout_marginLeft="@dimen/dim_10"
                     android:layout_marginRight="@dimen/dim_10"
                     android:layout_marginBottom="@dimen/dim_10"
-                    android:textSize="14sp" />
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-light"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>

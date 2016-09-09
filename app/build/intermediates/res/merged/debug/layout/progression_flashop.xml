@@ -61,7 +61,8 @@
                 android:gravity="right"
                 android:layout_gravity="right"
                 android:textColor="@color/text"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"/>
             <TextView
                 android:id="@+id/txtFlashRepublicTitle"
                 android:layout_width="wrap_content"
@@ -70,7 +71,8 @@
                 android:text="Republic Fleet"
                 android:gravity="right"
                 android:layout_gravity="right"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
         </LinearLayout>
 
         <LinearLayout
@@ -93,7 +95,8 @@
                 android:gravity="left"
                 android:layout_gravity="left"
                 android:textColor="@color/text"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"/>
 
             <TextView
                 android:id="@+id/txtFlashEmpireTitle"
@@ -103,7 +106,8 @@
                 android:text="Imperial Fleet"
                 android:gravity="left"
                 android:layout_gravity="left"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
         </LinearLayout>
 
     </RelativeLayout>

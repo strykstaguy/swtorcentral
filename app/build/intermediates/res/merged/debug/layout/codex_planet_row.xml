@@ -22,7 +22,8 @@
         android:elevation="2dp"
         android:textColor="#FFF"
         android:textSize="26sp"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-light"/>
 
     <TextView
         android:id="@+id/cdxCategory"
@@ -34,8 +35,9 @@
         android:singleLine="false"
         android:maxLines="2"
         android:ellipsize="end"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:layout_gravity="center"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:fontFamily="sans-serif-light"/>
 
 </LinearLayout>

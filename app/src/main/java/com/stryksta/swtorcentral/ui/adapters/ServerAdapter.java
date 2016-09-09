@@ -5,7 +5,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.VectorDrawable;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.models.AchievementsItem;
 import com.stryksta.swtorcentral.models.ServerItem;
 import com.stryksta.swtorcentral.util.SizeAdjustingTextView;
 
@@ -29,6 +32,10 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
         super();
         mContext = context;
         this.serverItems = serverItems;
+    }
+
+    public void updateItems(ArrayList<ServerItem> serversUpdated) {
+        this.serverItems = serversUpdated;
     }
 
     @Override
@@ -49,39 +56,42 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
             viewHolder.txtServerType.setText(serverRow.getserverType());
             viewHolder.txtServerZone.setText(serverRow.getserverZone());
 
-            //GradientDrawable background = (GradientDrawable) viewHolder.serverStatusIcon.getBackground();
-            //background.setColor(ContextCompat.getColor(mContext, R.color.md_grey_700));
-
-            //viewHolder.serverStatusIcon.setBackgroundResource(serverRow.getImageId());
-            viewHolder.serverStatusIcon.setImageDrawable(ContextCompat.getDrawable(mContext, serverRow.getImageId()));
+            Drawable background = DrawableCompat.wrap(ContextCompat.getDrawable(mContext, serverRow.getImageId()));
+            viewHolder.serverStatusIcon.setImageDrawable(background);
 
             viewHolder.txtServerPopulation.setText(serverRow.getserverStatus());
             if (serverRow.getserverStatus().equalsIgnoreCase("Light")) {
                 viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_green_500));
-                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_green_500));
+
+                DrawableCompat.setTint(background, ContextCompat.getColor(mContext, R.color.md_green_500));
 
             } else if (serverRow.getserverStatus().equalsIgnoreCase("Standard")) {
                 viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_amber_600));
-                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_amber_600));
+
+                DrawableCompat.setTint(background, ContextCompat.getColor(mContext, R.color.md_amber_600));
 
             } else if (serverRow.getserverStatus().equalsIgnoreCase("Heavy")) {
                 viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_500));
-                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_orange_500));
+
+                DrawableCompat.setTint(background, ContextCompat.getColor(mContext, R.color.md_orange_500));
 
             } else if (serverRow.getserverStatus().equalsIgnoreCase("Very Heavy")) {
                 viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_red_500));
-                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_red_500));
+
+                DrawableCompat.setTint(background, ContextCompat.getColor(mContext, R.color.md_red_500));
 
             } else if (serverRow.getserverStatus().equalsIgnoreCase("Full")) {
                 viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_red_900));
-                viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_red_900));
+
+                DrawableCompat.setTint(background, ContextCompat.getColor(mContext, R.color.md_red_900));
 
             } else if (serverRow.getserverStatus().equalsIgnoreCase("Offline")) {
                 viewHolder.txtServerName.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
                 viewHolder.txtServerType.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
                 viewHolder.txtServerZone.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
                 viewHolder.txtServerPopulation.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
-                //viewHolder.serverBackground.setBackgroundColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
+
+                DrawableCompat.setTint(background, ContextCompat.getColor(mContext, R.color.md_black_1000));
             }
         }
     }

@@ -51,7 +51,8 @@
              android:gravity="right"
              android:layout_gravity="right"
              android:textColor="@color/text"
-             android:textSize="16sp" />
+             android:textSize="16sp"
+             android:fontFamily="sans-serif"/>
 
          <TextView
              android:id="@+id/txtLevel"
@@ -61,7 +62,8 @@
              android:text="Levels 1 - 10"
              android:gravity="right"
              android:layout_gravity="right"
-             android:textSize="14sp" />
+             android:textSize="14sp"
+             android:fontFamily="sans-serif-light"/>
      </LinearLayout>
 
  </RelativeLayout>

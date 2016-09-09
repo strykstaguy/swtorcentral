@@ -78,7 +78,7 @@ public class ProgressionActivity extends AppCompatActivity {
     }
 
     private ArrayList<ProgressionItem> generateData(){
-        ArrayList<ProgressionItem> planets = new ArrayList<ProgressionItem>();
+        ArrayList<ProgressionItem> planets = new ArrayList<>();
 
         planets.add(new ProgressionItem("Prologue", TimelineType.END, ProgressionItem.HEADER));
 

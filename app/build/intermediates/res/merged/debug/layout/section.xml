@@ -8,8 +8,9 @@
     android:paddingLeft="16dp"
     android:singleLine="true"
     android:textAllCaps="true"
-    android:textColor="@color/text"
+    android:textColor="@color/swtor_blue"
     android:background="@android:color/transparent"
-    android:text="Details"
+    android:text="Section Text"
     android:textSize="16sp"
-    android:textStyle="bold" />
+    android:textStyle="bold"
+    android:fontFamily="sans-serif-light"/>

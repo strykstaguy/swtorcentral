@@ -11,12 +11,9 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.github.chaossss.widget.view.CircleBadgedView;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.ui.views.timeline.TimelineType;
 import com.stryksta.swtorcentral.ui.views.timeline.TimelineView;
-
-import cn.nekocode.badge.BadgeDrawable;
 
 public class TestActivity extends AppCompatActivity {
     private Toolbar mToolbar;

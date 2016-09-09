@@ -56,7 +56,8 @@
                         android:maxLines="1"
                         android:textSize="36sp"
                         android:text="Header"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif"/>
 
                     <TextView
                         android:id="@+id/advMainClass"
@@ -66,7 +67,8 @@
                         android:maxLines="1"
                         android:textSize="16sp"
                         android:text="Subheader"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-light"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -125,8 +127,9 @@
                     android:textColor="@color/text"
                     android:gravity="center"
                     android:text="@string/test_profile_desc"
-                    android:textSize="14sp"
-                    android:layout_margin="10dp" />
+                    android:textSize="16sp"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif-light"/>
 
                     <View
                         android:layout_width="fill_parent"
@@ -169,7 +172,8 @@
                     android:background="@android:color/transparent"
                     android:text="Disciplines"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    />
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -203,10 +207,12 @@
                             android:id="@+id/txtDiscipline1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_5"
                             android:paddingLeft="5dp"
                             android:textColor="@color/text"
                             android:text="Seer"
-                            android:textSize="14sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="16sp"
                             android:layout_gravity="center_horizontal" />
 
                     </LinearLayout>
@@ -240,10 +246,12 @@
                             android:id="@+id/txtDiscipline2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_5"
                             android:paddingLeft="5dp"
                             android:textColor="@color/text"
                             android:text="Telekinetics"
-                            android:textSize="14sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="16sp"
                             android:layout_gravity="center_horizontal" />
 
                     </LinearLayout>
@@ -277,10 +285,12 @@
                             android:id="@+id/txtDiscipline3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_5"
                             android:paddingLeft="5dp"
                             android:textColor="@color/text"
+                            android:fontFamily="sans-serif-light"
                             android:text="Balance"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
                             android:layout_gravity="center_horizontal" />
 
                     </LinearLayout>
@@ -344,6 +354,7 @@
                                 android:textColor="@color/text"
                                 android:layout_gravity="left"
                                 android:text="Role:"
+                                android:fontFamily="sans-serif-light"
                                 android:textSize="14sp"
                                 android:layout_weight="1" />
 
@@ -354,6 +365,7 @@
                                 android:paddingLeft="5dp"
                                 android:textColor="@color/text"
                                 android:text="Damage, Healer"
+                                android:fontFamily="sans-serif-light"
                                 android:textSize="14sp" />
                         </LinearLayout>
 
@@ -379,6 +391,7 @@
                                 android:textColor="@color/text"
                                 android:layout_gravity="left"
                                 android:text="Armor:"
+                                android:fontFamily="sans-serif-light"
                                 android:textSize="14sp"
                                 android:layout_weight="1"
                                 android:gravity="left" />
@@ -390,6 +403,7 @@
                                 android:paddingLeft="5dp"
                                 android:textColor="@color/text"
                                 android:text="Light"
+                                android:fontFamily="sans-serif-light"
                                 android:textSize="14sp" />
                         </LinearLayout>
 
@@ -415,6 +429,7 @@
                                 android:textColor="@color/text"
                                 android:layout_gravity="left"
                                 android:text="Weapons:"
+                                android:fontFamily="sans-serif-light"
                                 android:textSize="14sp"
                                 android:layout_weight="1" />
 
@@ -425,6 +440,7 @@
                                 android:paddingLeft="5dp"
                                 android:textColor="@color/text"
                                 android:text="Lightsaber"
+                                android:fontFamily="sans-serif-light"
                                 android:textSize="14sp" />
                         </LinearLayout>
 
@@ -450,6 +466,7 @@
                                 android:textColor="@color/text"
                                 android:layout_gravity="left"
                                 android:text="Attribute:"
+                                android:fontFamily="sans-serif-light"
                                 android:textSize="14sp"
                                 android:layout_weight="1" />
 
@@ -460,6 +477,7 @@
                                 android:paddingLeft="5dp"
                                 android:textColor="@color/text"
                                 android:text="Willpower"
+                                android:fontFamily="sans-serif-light"
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </LinearLayout>

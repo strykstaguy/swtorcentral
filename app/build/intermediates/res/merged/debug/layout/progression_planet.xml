@@ -48,7 +48,8 @@
                  android:gravity="right"
                  android:layout_gravity="right"
                  android:textColor="@color/text"
-                 android:textSize="16sp" />
+                 android:textSize="16sp"
+                 android:fontFamily="sans-serif"/>
 
              <TextView
                  android:id="@+id/txtLevelRepublic"
@@ -58,7 +59,8 @@
                  android:text="Levels 1 - 10"
                  android:gravity="right"
                  android:layout_gravity="right"
-                 android:textSize="14sp" />
+                 android:textSize="14sp"
+                 android:fontFamily="sans-serif-light"/>
          </LinearLayout>
 
         <ImageView
@@ -110,7 +112,8 @@
                  android:gravity="left"
                  android:layout_gravity="left"
                  android:textColor="@color/text"
-                 android:textSize="16sp" />
+                 android:textSize="16sp"
+                 android:fontFamily="sans-serif"/>
 
              <TextView
                  android:id="@+id/txtLevelEmpire"
@@ -120,7 +123,8 @@
                  android:text="Levels 1 - 10"
                  android:gravity="left"
                  android:layout_gravity="left"
-                 android:textSize="14sp" />
+                 android:textSize="14sp"
+                 android:fontFamily="sans-serif-light"/>
          </LinearLayout>
 
      </LinearLayout>

@@ -13,7 +13,8 @@
         android:gravity="center"
         android:textColor="@color/text"
         android:text="Tython"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"/>
 
     <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
         android:id="@+id/timeline"
