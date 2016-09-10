@@ -33,6 +33,7 @@
             android:elevation="1dp"
             android:textSize="16sp"
             android:padding="@dimen/dim_5"
+            android:fontFamily="sans-serif-light"
             android:background="@color/swtor_accent"
             android:textColor="@color/white"
             android:text="Republic"/>
@@ -52,6 +53,7 @@
                     android:layout_marginTop="16dp"
                     android:textColor="@color/black"
                     android:text="Tython"
+                    android:fontFamily="sans-serif"
                     android:textSize="22sp" />
 
                 <TextView
@@ -61,9 +63,10 @@
                     android:textColor="@color/text"
                     android:layout_below="@id/cdxTitle"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-light"
                     android:text="The mysterious Deep Core world of Tython is the birthplace of the Jedi Order. Millennia ago, Tythonian warriors and scholars developed a unique mystic and martial philosophy while studying the Force. Today, their Jedi descendants excavate ancient Tythonian ruins and relearn what was lost. After the recent destruction of the Jedi Temple on Coruscant, the Jedi made their new home on Tython. The mountainous planet remains mostly unexplored, and the violent natives pose a constant threat. The order remains committed to rebuilding here, however, and is now training a new generation of Padawans."
                     android:paddingBottom="5.0dip"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/cdxLevel"

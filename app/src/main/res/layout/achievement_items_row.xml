@@ -43,10 +43,11 @@
                     android:paddingBottom="@dimen/dim_5"
                     android:paddingLeft="@dimen/dim_5"
                     android:textColor="@color/regularcolor"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:text="Title"
                     android:textStyle="bold"
-                    android:layout_toLeftOf="@+id/achRewardPoints"/>
+                    android:layout_toLeftOf="@+id/achRewardPoints"
+                    android:fontFamily="sans-serif-light"/>
 
                 <com.stryksta.swtorcentral.util.AchievementToggle
                     android:id="@+id/achRewardPoints"
@@ -69,7 +70,8 @@
                 android:paddingLeft="5dp"
                 android:textColor="@color/regularcolor"
                 android:text="This is a test description for an achievement, so its jsut for show not for play play"
-                android:textSize="14sp" />
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-light"/>
 
             <TextView
                 android:id="@+id/txtRewardsSep"
@@ -81,7 +83,8 @@
                 android:paddingLeft="5dp"
                 android:text="Rewards:"
                 android:textColor="@color/regularcolor"
-                android:textSize="12sp" />
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
 
             <TextView
                 android:id="@+id/achRewardTitle"
@@ -92,7 +95,8 @@
                 android:paddingLeft="5dp"
                 android:text="Rewards Title"
                 android:textColor="@color/regularcolor"
-                android:textSize="12sp" />
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
 
             <TextView
                 android:id="@+id/achRewardFleetRequisition"
@@ -103,7 +107,8 @@
                 android:paddingLeft="5dp"
                 android:text="Fleet Requisition"
                 android:textColor="@color/regularcolor"
-                android:textSize="12sp" />
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
 
             <TextView
                 android:id="@+id/txtStatus"
@@ -115,7 +120,8 @@
                 android:paddingTop="10dp"
                 android:textColor="@color/regularcolor"
                 android:text="Status"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"/>
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

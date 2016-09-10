@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/text"
         android:text="Level: 10"
+        android:fontFamily="sans-serif-light"
         android:textSize="16sp"/>
 
     <TextView
@@ -19,41 +20,46 @@
         android:layout_height="wrap_content"
         android:textColor="@color/text"
         android:text="Activation: 2.5s"
+        android:fontFamily="sans-serif-light"
         android:paddingBottom="5.0dip"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/ablChanneled"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/text"
+        android:fontFamily="sans-serif-light"
         android:text="Channeled: 3s"
         android:paddingBottom="5.0dip"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/ablResource"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
         android:text="Force Cost: 50"
         android:textColor="@color/text"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/ablCooldown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/text"
+        android:fontFamily="sans-serif-light"
         android:text="Cooldown: 6s"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
         <TextView
             android:id="@+id/ablRange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Range: 30m"
+            android:fontFamily="sans-serif-light"
             android:textColor="@color/text"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/ablDescription"
@@ -61,7 +67,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/text"
             android:text="dfasdfsdfsd"
+            android:fontFamily="sans-serif-light"
             android:paddingBottom="5.0dip"
             android:paddingTop="10.0dip"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 </LinearLayout>

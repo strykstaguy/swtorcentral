@@ -64,7 +64,9 @@
                         android:maxLines="1"
                         android:textSize="36sp"
                         android:text="Header"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif"
+                        />
 
                     <TextView
                         android:id="@+id/achievementProgress"
@@ -74,7 +76,8 @@
                         android:maxLines="1"
                         android:textSize="16sp"
                         android:text="Subheader"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-light"/>
 
                 </LinearLayout>
             </LinearLayout>

@@ -59,7 +59,8 @@
             android:textSize="18sp"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/achIcon"
-            android:layout_toEndOf="@+id/achIcon" />
+            android:layout_toEndOf="@+id/achIcon"
+            android:fontFamily="sans-serif-light"/>
 
         <TextView
             android:id="@+id/txtSubCategory"
@@ -71,7 +72,8 @@
             android:layout_marginLeft="@dimen/dim_5"
             android:text="300 / 1000"
             android:textColor="@color/text"
-            android:textSize="12sp"/>
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"/>
 
         <TextView
             android:id="@+id/txtProgressText"
@@ -83,7 +85,8 @@
             android:gravity="left"
             android:text="West"
             android:textColor="@color/text"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"/>
 
         <ProgressBar
             android:id="@+id/progressBar"

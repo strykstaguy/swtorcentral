@@ -22,6 +22,7 @@ import com.stryksta.swtorcentral.util.CoreDividerItemDecoration;
 import com.stryksta.swtorcentral.util.DividerItemDecoration;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.AbilitiesDatabase;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 
@@ -117,8 +118,12 @@ public class AbilitiesActivity extends AppCompatActivity {
         //Set Base Adapter
         baseRecycleAdapter = new AbilityDetailAdapter(baseAbilities);
         baseRecyclerView.setHasFixedSize(true);
-        //baseRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
-        baseRecyclerView.addItemDecoration(new CoreDividerItemDecoration(this, CoreDividerItemDecoration.VERTICAL_LIST));
+        baseRecyclerView.addItemDecoration(
+                new HorizontalDividerItemDecoration.Builder(AbilitiesActivity.this)
+                        .color(ContextCompat.getColor(AbilitiesActivity.this, R.color.backgroundlight))
+                        .sizeResId(R.dimen.divider)
+                        .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
+                        .build());
         baseRecyclerView.setAdapter(baseRecycleAdapter);
         baseRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, baseRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             public void onItemClick(View view, int position) {
@@ -163,8 +168,12 @@ public class AbilitiesActivity extends AppCompatActivity {
 
         //Set Base Adapter
         playerRecycleAdapter = new AbilityDetailAdapter(playerAbilitiesItems);
-        //playerRecyclerView.addItemDecoration(new DividerItemDecoration(AbilitiesActivity.this, GridLayoutManager.VERTICAL));
-        playerRecyclerView.addItemDecoration(new CoreDividerItemDecoration(this, CoreDividerItemDecoration.VERTICAL_LIST));
+        playerRecyclerView.addItemDecoration(
+                new HorizontalDividerItemDecoration.Builder(AbilitiesActivity.this)
+                        .color(ContextCompat.getColor(AbilitiesActivity.this, R.color.backgroundlight))
+                        .sizeResId(R.dimen.divider)
+                        .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
+                        .build());
         playerRecyclerView.setHasFixedSize(true);
         playerRecyclerView.setAdapter(playerRecycleAdapter);
         playerRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(AbilitiesActivity.this, playerRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
