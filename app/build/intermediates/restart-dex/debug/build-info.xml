@@ -4,7 +4,7 @@
     api-level="24"
     density="420dpi"
     format="7"
-    timestamp="7533113987925"
+    timestamp="11743451794347"
     token="-448831534808878596" >
 
     <task
@@ -24,17 +24,12 @@
         location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
         type="RESOURCES" />
 
-    <build timestamp="4359836942147" >
+    <build timestamp="11314439019903" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="7395879883169" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="7533113987925" >
+    <build timestamp="11743451794347" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />

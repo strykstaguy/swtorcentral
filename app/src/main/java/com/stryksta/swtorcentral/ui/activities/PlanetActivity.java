@@ -21,6 +21,7 @@ import com.stryksta.swtorcentral.ui.adapters.PlanetCodexAdapter;
 import com.stryksta.swtorcentral.util.database.CodexDatabase;
 import com.stryksta.swtorcentral.util.database.DatacronDatabase;
 import com.stryksta.swtorcentral.util.database.PlanetDatabase;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 
@@ -94,13 +95,20 @@ public class PlanetActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.pltCodexes);
 
         if (mRecyclerView != null) {
-            mLayoutManager = new GridLayoutManager(PlanetActivity.this, 3, GridLayoutManager.VERTICAL, false);
+            mLayoutManager = new GridLayoutManager(PlanetActivity.this, 1, GridLayoutManager.VERTICAL, false);
             mRecyclerView.setLayoutManager(mLayoutManager);
         }
 
         //Set Adapter
         mRecycleAdapter = new PlanetCodexAdapter(PlanetActivity.this, planetCodexItems);
         mRecyclerView.setNestedScrollingEnabled(false);
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.addItemDecoration(
+                new HorizontalDividerItemDecoration.Builder(PlanetActivity.this)
+                        .color(ContextCompat.getColor(PlanetActivity.this, R.color.backgroundlight))
+                        .sizeResId(R.dimen.divider)
+                        .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
+                        .build());
         mRecyclerView.setAdapter(mRecycleAdapter);
 
 
