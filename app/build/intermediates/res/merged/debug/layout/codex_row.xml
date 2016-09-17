@@ -60,7 +60,7 @@
                     android:id="@+id/cdxDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/text"
+                    android:textColor="@color/subtext_dark"
                     android:layout_below="@id/cdxTitle"
                     android:layout_marginTop="4dp"
                     android:fontFamily="sans-serif-light"

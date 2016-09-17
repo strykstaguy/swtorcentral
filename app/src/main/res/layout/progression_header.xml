@@ -2,33 +2,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/background"
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/txtTitle"
-        android:layout_width="match_parent"
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/text"
-        android:text="Tython"
-        android:textSize="24sp"
-        android:fontFamily="sans-serif"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="0dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:clickable="false"
+        android:foreground="@drawable/card_foreground">
 
-    <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
-        android:id="@+id/timeline"
-        android:layout_width="30dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center_horizontal"
-        app:firstColor="@color/md_grey_700"
-        app:firstSize="15"
-        app:lastColor="@color/md_grey_700"
-        app:lastSize="15"
-        app:lineColor="@color/md_grey_700"
-        app:lineWidth="10dp"
-        app:middleColor="@color/md_grey_700"
-        app:middleSize="15"
-        app:timeline_type="line" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textColor="@color/swtor_blue"
+                android:background="@android:color/transparent"
+                android:text="Prologue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

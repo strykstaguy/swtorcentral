@@ -38,4 +38,9 @@ public class PlanetPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         return mFragmentTitles.get(position);
     }
+
+    @Override
+    public float getPageWidth (int position) {
+        return 0.93f;
+    }
 }

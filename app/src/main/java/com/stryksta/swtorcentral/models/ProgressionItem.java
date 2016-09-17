@@ -26,6 +26,7 @@ public class ProgressionItem {
     public static final int PLANET_DOUBLE = 3;
     public static final int FLASHOP_SINGLE = 4;
     public static final int FLASHOP_DOUBLE = 5;
+    public static final int FOOTER = 6;
     public static final int DIR_RIGHT = 0;
     public static final int DIR_LEFT = 1;
 
@@ -33,6 +34,12 @@ public class ProgressionItem {
     public ProgressionItem(String planetRepublic, TimelineType timelineType, int layoutType) {
         this.planetRepublic = planetRepublic;
         this.timelineType = timelineType;
+        this.layoutType = layoutType;
+    }
+
+    //Footer
+    public ProgressionItem(int layoutType) {
+        this.timelineType = TimelineType.LINE;
         this.layoutType = layoutType;
     }
 

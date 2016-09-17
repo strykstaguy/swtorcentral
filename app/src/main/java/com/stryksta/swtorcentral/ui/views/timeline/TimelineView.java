@@ -149,7 +149,8 @@ public abstract class TimelineView extends View {
             canvas.drawRect(startX, startYSingle, endX, endYSingle, linePaint);
             drawStart(canvas, lastPaint, centerX, startYSingle, mEndSize);
             drawEnd(canvas, lastPaint, centerX, endYSingle, mEndSize);
-            
+        } else if (timelineType == TimelineType.LINE) {
+            canvas.drawRect(startX, startY, endX, endY, linePaint);
         } else {
             canvas.drawRect(startX, startY, endX, endY, linePaint);
         }

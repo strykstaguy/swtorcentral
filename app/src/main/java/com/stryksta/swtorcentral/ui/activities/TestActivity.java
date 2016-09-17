@@ -1,6 +1,5 @@
 package com.stryksta.swtorcentral.ui.activities;
 
-import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -8,12 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.WindowManager;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 
 import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.ui.views.timeline.TimelineType;
-import com.stryksta.swtorcentral.ui.views.timeline.TimelineView;
 
 public class TestActivity extends AppCompatActivity {
     private Toolbar mToolbar;
@@ -21,7 +16,7 @@ public class TestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_main2);
+        setContentView(R.layout.test_main);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
@@ -39,12 +34,8 @@ public class TestActivity extends AppCompatActivity {
         if (bundle != null) {
         }
 
+        getSupportActionBar().setTitle("Progression");
 
-    }
-
-    public static int sp2px(Context context, float spValue) {
-        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
-        return (int) (spValue * fontScale + 0.5f);
     }
 
     @Override

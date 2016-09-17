@@ -46,15 +46,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginRight="@dimen/dim_5"
+            android:layout_marginLeft="@dimen/dim_5"
             android:layout_toLeftOf="@+id/imgIcon"
             android:layout_toStartOf="@+id/imgIcon"
             android:id="@+id/linearLayoutRepublic">
 
             <TextView
                 android:id="@+id/txtFlashRepublicName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Carrick Station"
@@ -80,15 +80,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="@dimen/dim_10"
+            android:layout_marginLeft="@dimen/dim_5"
+            android:layout_marginRight="@dimen/dim_5"
             android:layout_toRightOf="@+id/imgIcon"
             android:layout_toEndOf="@+id/imgIcon"
             android:id="@+id/linearLayoutEmpire">
 
             <TextView
                 android:id="@+id/txtFlashEmpireName"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Vaiken Spacedock"

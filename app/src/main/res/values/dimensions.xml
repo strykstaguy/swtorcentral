@@ -121,4 +121,6 @@
     <dimen name="divider">1dp</dimen>
     <dimen name="divider_leftmargin">10dp</dimen>
     <dimen name="divider_rightmargin">10dp</dimen>
+
+    <dimen name="large_navigator_height">65dp</dimen>
 </resources>  

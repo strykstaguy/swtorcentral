@@ -172,8 +172,7 @@
                     android:background="@android:color/transparent"
                     android:text="Disciplines"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -335,7 +334,7 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginLeft="@dimen/dim_20"
                         android:layout_marginRight="@dimen/dim_10"
                         android:layout_marginBottom="@dimen/dim_10">
 
@@ -343,6 +342,8 @@
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginRight="@dimen/dim_10"
                             android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp">
 
@@ -355,7 +356,7 @@
                                 android:layout_gravity="left"
                                 android:text="Role:"
                                 android:fontFamily="sans-serif-light"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 android:layout_weight="1" />
 
                             <TextView
@@ -366,7 +367,7 @@
                                 android:textColor="@color/text"
                                 android:text="Damage, Healer"
                                 android:fontFamily="sans-serif-light"
-                                android:textSize="14sp" />
+                                android:textSize="16sp" />
                         </LinearLayout>
 
                         <View
@@ -380,6 +381,8 @@
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginRight="@dimen/dim_10"
                             android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp">
 
@@ -392,7 +395,7 @@
                                 android:layout_gravity="left"
                                 android:text="Armor:"
                                 android:fontFamily="sans-serif-light"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 android:layout_weight="1"
                                 android:gravity="left" />
 
@@ -404,7 +407,7 @@
                                 android:textColor="@color/text"
                                 android:text="Light"
                                 android:fontFamily="sans-serif-light"
-                                android:textSize="14sp" />
+                                android:textSize="16sp" />
                         </LinearLayout>
 
                         <View
@@ -418,6 +421,8 @@
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginRight="@dimen/dim_10"
                             android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp">
 
@@ -430,7 +435,7 @@
                                 android:layout_gravity="left"
                                 android:text="Weapons:"
                                 android:fontFamily="sans-serif-light"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 android:layout_weight="1" />
 
                             <TextView
@@ -441,7 +446,7 @@
                                 android:textColor="@color/text"
                                 android:text="Lightsaber"
                                 android:fontFamily="sans-serif-light"
-                                android:textSize="14sp" />
+                                android:textSize="16sp" />
                         </LinearLayout>
 
                         <View
@@ -455,6 +460,8 @@
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_10"
+                            android:layout_marginRight="@dimen/dim_10"
                             android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp" >
 
@@ -467,7 +474,7 @@
                                 android:layout_gravity="left"
                                 android:text="Attribute:"
                                 android:fontFamily="sans-serif-light"
-                                android:textSize="14sp"
+                                android:textSize="16sp"
                                 android:layout_weight="1" />
 
                             <TextView
@@ -478,7 +485,7 @@
                                 android:textColor="@color/text"
                                 android:text="Willpower"
                                 android:fontFamily="sans-serif-light"
-                                android:textSize="14sp" />
+                                android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
 

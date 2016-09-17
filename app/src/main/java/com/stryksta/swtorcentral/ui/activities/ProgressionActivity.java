@@ -87,9 +87,10 @@ public class ProgressionActivity extends AppCompatActivity {
 
         planets.add(new ProgressionItem("Carrick Station", "Republic Fleet", "Vaiken Spacedock", "Imperial Fleet", R.drawable.empire_logo, ProgressionItem.FLASHOP_DOUBLE));
         planets.add(new ProgressionItem("The Esseles", "Flashpoint","The Black Talon", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_DOUBLE));
-        planets.add(new ProgressionItem("Coruscant", "Level 10-16", R.drawable.pl_coruscant, "Dromund Kaas", "Level 11-16", R.drawable.pl_dromundkaas));
+        planets.add(new ProgressionItem("Coruscant", "Level 10-16", R.drawable.pl_coruscant, "Dromund Kaas", "Level 10-16", R.drawable.pl_dromundkaas));
         planets.add(new ProgressionItem("Hammer Station", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Kuat Drive Yards", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Chapter 1", ProgressionItem.CHAPTER));
 

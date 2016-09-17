@@ -14,9 +14,9 @@ public enum TimelineType {
             case 0:
                 return TimelineType.MIDDLE;
             case 1:
-                return TimelineType.END;
-            case 2:
                 return TimelineType.LINE;
+            case 2:
+                return TimelineType.END;
             case 3:
                 return TimelineType.SINGLE;
             default:

@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="This datacron holds unheard of power and knowledge collected by an ancient race. You access its power and discover writings which are clearly only one small piece of a massive galactic history: On the planet Tython, an order of philosophers and researchers arose, studying the mysterious energy that permeates all things--an energy known as the Force. However, disagreements developed within the order about how this energy should be used, leading to the Force Wars that eventually engulfed the planet. A faction comprised of those who followed a more peaceful path left Tython and established itself on the planet Ossus; later, this faction called itself the Jedi Order. At their new enclave, the Jedi refined a code that would guide them. They became a monastic warrior people, devoting themselves to the pursuit of peace and knowledge, rather than personal power. In the wake of the Force Wars, the Jedi also had a new understanding of the Force. They saw that the Force, while naturally light, could be used for corrupt ends. Those who did not respect its power risked falling to the dark side."
-                    android:textColor="@color/subtext"
+                    android:textColor="@color/subtext_dark"
                     android:fontFamily="sans-serif-light"
                     android:textSize="16sp"
                     android:maxLines="4"

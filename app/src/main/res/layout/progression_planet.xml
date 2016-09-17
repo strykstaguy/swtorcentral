@@ -1,126 +1,146 @@
- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/background">
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="0dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:clickable="false"
+        android:foreground="@drawable/card_foreground">
 
-     <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
-            android:id="@+id/timeline"
-            android:layout_width="30dp"
-            android:layout_height="125dp"
-            android:layout_gravity="center_horizontal"
-            app:firstColor="@color/md_grey_700"
-            app:firstSize="15"
-            app:lastColor="@color/md_grey_700"
-            app:lastSize="15"
-            app:lineColor="@color/md_grey_700"
-            app:lineWidth="10dp"
-            app:middleColor="@color/md_grey_700"
-            app:middleSize="15"
-            app:timeline_type="line"
-            android:layout_centerHorizontal="true" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-     <LinearLayout
-         android:id="@+id/linearLayoutRepublic"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:orientation="horizontal"
-         android:gravity="right"
-         android:layout_centerVertical="true"
-         android:layout_toLeftOf="@+id/timeline"
-         android:layout_alignParentLeft="true"
-         android:layout_alignParentStart="true">
+            <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
+                android:id="@+id/timeline"
+                android:layout_width="30dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                app:firstColor="@color/md_grey_700"
+                app:firstSize="15"
+                app:lastColor="@color/md_grey_700"
+                app:lastSize="15"
+                app:lineColor="@color/md_grey_700"
+                app:lineWidth="10dp"
+                app:middleColor="@color/md_grey_700"
+                app:middleSize="0"
+                app:timeline_type="middle"
+                android:layout_centerHorizontal="true" />
 
-         <LinearLayout
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center_vertical"
-             android:layout_marginRight="10dp"
-             android:orientation="vertical"
-             android:id="@+id/linearLayout">
+            <LinearLayout
+                android:id="@+id/linearLayoutRepublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/timeline"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
 
-             <TextView
-                 android:id="@+id/txtPlanetRepublic"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Tython"
-                 android:gravity="right"
-                 android:textColor="@color/text"
-                 android:textSize="16sp"
-                 android:fontFamily="sans-serif"/>
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="vertical">
 
-             <TextView
-                 android:id="@+id/txtLevelRepublic"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Levels 1 - 10"
-                 android:gravity="right"
-                 android:textSize="14sp"
-                 android:fontFamily="sans-serif-light"/>
-         </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtPlanetRepublic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Balmorra (Republic)"
+                        android:gravity="right"
+                        android:textColor="@color/text"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"/>
 
-        <ImageView
-            android:id="@+id/imgPlanetRepublic"
-            android:layout_width="75.0dip"
-            android:layout_height="75.0dip"
-            android:clickable="false"
-            android:layout_gravity="right"
-            android:contentDescription="@string/image_placeholder"
-            android:src="@drawable/pl_tython"
-            android:scaleType="fitCenter" />
+                    <TextView
+                        android:id="@+id/txtLevelRepublic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Levels 1 - 10"
+                        android:layout_gravity="right"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"/>
+                </LinearLayout>
 
-     </LinearLayout>
+                <ImageView
+                    android:id="@+id/imgPlanetRepublic"
+                    android:layout_width="75.0dip"
+                    android:layout_height="75.0dip"
+                    android:clickable="false"
+                    android:layout_gravity="right"
+                    android:contentDescription="@string/image_placeholder"
+                    android:src="@drawable/pl_tython"
+                    android:scaleType="fitCenter" />
 
-     <LinearLayout
-         android:id="@+id/linearLayoutEmpire"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:orientation="horizontal"
-         android:gravity="left"
-         android:layout_centerVertical="true"
-         android:layout_toRightOf="@+id/timeline"
-         android:layout_alignParentRight="true"
-         android:layout_alignParentEnd="true">
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayoutEmpire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/timeline"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
 
-         <ImageView
-             android:id="@+id/imgPlanetEmpire"
-             android:layout_width="75.0dip"
-             android:layout_height="75.0dip"
-             android:clickable="false"
-             android:contentDescription="@string/image_placeholder"
-             android:layout_gravity="left"
-             android:src="@drawable/pl_korriban"
-             android:scaleType="fitCenter" />
+                <ImageView
+                    android:id="@+id/imgPlanetEmpire"
+                    android:layout_width="75.0dip"
+                    android:layout_height="75.0dip"
+                    android:clickable="false"
+                    android:contentDescription="@string/image_placeholder"
+                    android:layout_gravity="left"
+                    android:src="@drawable/pl_korriban"
+                    android:scaleType="fitCenter" />
 
-         <LinearLayout
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center_vertical"
-             android:layout_marginLeft="10dp"
-             android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
 
-             <TextView
-                 android:id="@+id/txtPlanetEmpire"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_weight="1"
-                 android:text="Korriban"
-                 android:gravity="left"
-                 android:textColor="@color/text"
-                 android:textSize="16sp"
-                 android:fontFamily="sans-serif"/>
+                    <TextView
+                        android:id="@+id/txtPlanetEmpire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Balmorra (Republic)"
+                        android:gravity="left"
+                        android:textColor="@color/text"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"/>
 
-             <TextView
-                 android:id="@+id/txtLevelEmpire"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_weight="1"
-                 android:text="Levels 1 - 10"
-                 android:gravity="left"
-                 android:textSize="14sp"
-                 android:fontFamily="sans-serif-light"/>
-         </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtLevelEmpire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Levels 1 - 10"
+                        android:gravity="left"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"/>
+                 </LinearLayout>
+             </LinearLayout>
+        </RelativeLayout>
 
-     </LinearLayout>
-
-</RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

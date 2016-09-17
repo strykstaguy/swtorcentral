@@ -33,6 +33,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public static final int PLANET_DOUBLE = 3;
     public static final int FLASHOP_SINGLE = 4;
     public static final int FLASHOP_DOUBLE = 5;
+    public static final int FOOTER = 6;
     public static final int DIR_RIGHT = 0;
     public static final int DIR_LEFT = 1;
 
@@ -71,6 +72,10 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 ViewGroup flashDoubleViewGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_flashop, viewGroup, false );
                 FlashopDoubleViewHolder flashDoubleViewHolder = new FlashopDoubleViewHolder(flashDoubleViewGroup);
                 return flashDoubleViewHolder;
+            case FOOTER:
+                ViewGroup footerViewGroup = ( ViewGroup ) mInflater.inflate ( R.layout.progression_footer, viewGroup, false );
+                FooterViewHolder footerViewHolder = new FooterViewHolder(footerViewGroup);
+                return footerViewHolder;
             default:
                 ViewGroup vDefault = ( ViewGroup ) mInflater.inflate ( R.layout.progression_planet, viewGroup, false );
                 PlanetSingleViewHolder vhDefault = new PlanetSingleViewHolder(vDefault);
@@ -122,7 +127,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                     layoutParams.addRule(RelativeLayout.END_OF, planetViewHolder.imgPlanet.getId());
                     layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
 
-                    layoutParams.setMargins(dpToPx(15), 0, 0, 0);
+                    layoutParams.setMargins(dpToPx(5), 0, 0, 0);
                     planetViewHolder.linearLayout.setLayoutParams(layoutParams);
                 } else if (progressionItems.get(position).getLayoutDirection() == DIR_LEFT) {
 
@@ -138,7 +143,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                     layoutParams.addRule(RelativeLayout.START_OF, planetViewHolder.imgPlanet.getId());
                     layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
 
-                    layoutParams.setMargins(0, 0, dpToPx(15), 0); //left, top, right, bottom
+                    layoutParams.setMargins(0, 0, dpToPx(5), 0); //left, top, right, bottom
                     planetViewHolder.linearLayout.setLayoutParams(layoutParams);
 
                 }
@@ -150,7 +155,15 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 HeaderViewHolder headerViewHolder = (HeaderViewHolder) viewHolder;
                 ProgressionItem headerItem = progressionItems.get(position);
                 headerViewHolder.txtTitle.setText(headerItem.getRepublicPlanet());
-                headerViewHolder.timeLineView.setTimelineType(TimelineType.START);
+                //headerViewHolder.timeLineView.setTimelineType(TimelineType.START);
+                break;
+
+            case FOOTER:
+                FooterViewHolder footerViewHolder = (FooterViewHolder) viewHolder;
+                //ProgressionItem footerItem = progressionItems.get(position);
+                footerViewHolder.timeLineView1.setTimelineType(TimelineType.LINE);
+                footerViewHolder.timeLineView2.setTimelineType(TimelineType.LINE);
+
                 break;
 
             case CHAPTER:
@@ -172,27 +185,29 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
                     LinearLayout.LayoutParams layoutLevelParams = (LinearLayout.LayoutParams) flashpointViewHolder.flashpointTitle.getLayoutParams();
                     layoutLevelParams.gravity = Gravity.LEFT;
+                    flashpointViewHolder.flashpointName.setLayoutParams(layoutLevelParams);
                     flashpointViewHolder.flashpointTitle.setLayoutParams(layoutLevelParams);
 
-                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
                     layoutParams.addRule(RelativeLayout.RIGHT_OF, flashpointViewHolder.imgIcon.getId());
                     layoutParams.addRule(RelativeLayout.END_OF, flashpointViewHolder.imgIcon.getId());
-                    layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+                    //layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
 
-                    layoutParams.setMargins(dpToPx(15), 0, 0, 0);
+                    layoutParams.setMargins(dpToPx(5), 0, 0, 0);
                     flashpointViewHolder.linearLayout.setLayoutParams(layoutParams);
                 } else if (progressionItems.get(position).getLayoutDirection() == DIR_LEFT) {
 
                     LinearLayout.LayoutParams layoutLevelParams = (LinearLayout.LayoutParams) flashpointViewHolder.flashpointTitle.getLayoutParams();
                     layoutLevelParams.gravity = Gravity.RIGHT;
+                    flashpointViewHolder.flashpointName.setLayoutParams(layoutLevelParams);
                     flashpointViewHolder.flashpointTitle.setLayoutParams(layoutLevelParams);
 
-                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
                     layoutParams.addRule(RelativeLayout.LEFT_OF, flashpointViewHolder.imgIcon.getId());
                     layoutParams.addRule(RelativeLayout.START_OF, flashpointViewHolder.imgIcon.getId());
-                    layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+                    //clayoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
 
-                    layoutParams.setMargins(0, 0, dpToPx(15), 0); //left, top, right, bottom
+                    layoutParams.setMargins(0, 0, dpToPx(5), 0); //left, top, right, bottom
                     flashpointViewHolder.linearLayout.setLayoutParams(layoutParams);
 
                 }
@@ -457,6 +472,18 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
             timeLineView = (TimelineView) itemView.findViewById(R.id.timeline);
+        }
+    }
+
+    public class FooterViewHolder extends RecyclerView.ViewHolder {
+
+        public TimelineView timeLineView1;
+        public TimelineView timeLineView2;
+
+        public FooterViewHolder(View itemView) {
+            super(itemView);
+            timeLineView1 = (TimelineView) itemView.findViewById(R.id.timeline);
+            timeLineView2 = (TimelineView) itemView.findViewById(R.id.timeline2);
         }
     }
 

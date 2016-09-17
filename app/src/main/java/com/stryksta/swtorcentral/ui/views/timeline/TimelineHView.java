@@ -152,6 +152,8 @@ public abstract class TimelineHView extends View {
             canvas.drawRect(startYSingle + mStartSize, startX, endYSingle - mStartSize, endX, linePaint);
             drawStart(canvas, firstPaint, startYSingle, centerX, mStartSize);
             drawEnd(canvas, lastPaint, endYSingle, centerX, mEndSize);
+        } else if (timelineType == TimelineType.LINE) {
+            canvas.drawRect(startYSingle + mStartSize, startX, endYSingle - mStartSize, endX, linePaint);
         } else {
             canvas.drawRect(startY, startX, endY, endX, linePaint);
         }
