@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stryksta.swtorcentral"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SWTORCentral" >
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.ServerActivity"
+            android:label="@string/server_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.AdvancedClassActivity"
+            android:label="@string/advanced_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.SettingsActivity"
+            android:label="@string/settings_header" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.ProgressionActivity"
+            android:label="@string/progression_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.BlankActivity"
+            android:label="@string/settings_header" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.PlanetActivity"
+            android:label="@string/planet_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.AbilitiesActivity"
+            android:label="@string/ability_detail_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.AchievementActivity"
+            android:label="@string/achievements_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.CodexActivity"
+            android:label="@string/test_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.ClassActivity"
+            android:label="@string/class_header" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.CompanionsActivity"
+            android:label="@string/companion" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.TestActivity"
+            android:label="@string/test_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.DisciplineActivity"
+            android:label="@string/discipline_main" >
+        </activity>
+        <activity
+            android:name="com.stryksta.swtorcentral.ui.activities.CodexDetailActivity"
+            android:label="@string/codex_detail_main" >
+        </activity>
+    </application>
+
+</manifest>

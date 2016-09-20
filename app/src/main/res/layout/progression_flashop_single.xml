@@ -6,16 +6,28 @@
               android:orientation="vertical"
               android:gravity="center_horizontal">
 
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:clickable="false"
+        android:foreground="@drawable/card_foreground">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/background">
+        android:layout_height="wrap_content">
 
 
         <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
             android:id="@+id/timeline"
             android:layout_width="30dp"
-            android:layout_height="150dp"
+            android:layout_height="125dp"
             android:layout_gravity="center_horizontal"
             app:firstColor="@color/md_grey_700"
             app:firstSize="15"
@@ -87,4 +99,6 @@
 
 
     </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
 </LinearLayout>

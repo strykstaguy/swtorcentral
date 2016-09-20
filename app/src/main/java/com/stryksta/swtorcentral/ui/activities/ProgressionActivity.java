@@ -102,6 +102,7 @@ public class ProgressionActivity extends AppCompatActivity {
 
         planets.add(new ProgressionItem("Cademimu", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Alderaan", "Level 29-32", R.drawable.pl_alderaan, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Chapter 2", ProgressionItem.CHAPTER));
 
@@ -111,6 +112,7 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("Quesh", "Level 36-37", R.drawable.pl_quesh, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Hoth", "Level 37-41", R.drawable.pl_hoth, ProgressionItem.DIR_RIGHT));
         planets.add(new ProgressionItem("Colicoid War", "Flashpoint", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Chapter 3", ProgressionItem.CHAPTER));
 
@@ -119,6 +121,7 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("Voss", "Level 44-47", R.drawable.pl_voss, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Directive 7", "Flashpoint", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
         planets.add(new ProgressionItem("Corellia", "Level 47-50", R.drawable.pl_corellia, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Interlude 1", ProgressionItem.CHAPTER));
 
@@ -136,11 +139,13 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("The Eternity Vault", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
         planets.add(new ProgressionItem("Karagga's Palace", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Explosive Conflict", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Chapter 4: Rise of the Hutt Cartel", ProgressionItem.CHAPTER));
 
         planets.add(new ProgressionItem("Makeb", "Level 51-54", R.drawable.pl_makeb, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Toborro's Courtyard", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Interlude 2", ProgressionItem.CHAPTER));
 
@@ -155,6 +160,7 @@ public class ProgressionActivity extends AppCompatActivity {
 
         planets.add(new ProgressionItem("Dread Fortress", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Dread Palace", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Forged Alliances", ProgressionItem.CHAPTER));
 
@@ -163,6 +169,7 @@ public class ProgressionActivity extends AppCompatActivity {
 
         planets.add(new ProgressionItem("Depths of Manaan", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Legacy of the Rakata", "Flashpoint", R.drawable.ic_flashpoint, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Chapter 5: Shadow of Revan", ProgressionItem.CHAPTER));
 
@@ -176,6 +183,7 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("Temple of Sacrifice", "Operation", R.drawable.ic_operation, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
 
         planets.add(new ProgressionItem("Ziost", "Level 60", R.drawable.pl_ziost, ProgressionItem.DIR_LEFT));
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Bonus Series", ProgressionItem.CHAPTER));
 
@@ -187,7 +195,7 @@ public class ProgressionActivity extends AppCompatActivity {
         planets.add(new ProgressionItem("Hoth", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
         planets.add(new ProgressionItem("Belsavis", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_RIGHT));
         planets.add(new ProgressionItem("Voss", "Bonus Series", R.drawable.ic_bonus, ProgressionItem.FLASHOP_SINGLE, ProgressionItem.DIR_LEFT));
-
+        planets.add(new ProgressionItem(ProgressionItem.FOOTER));
 
         planets.add(new ProgressionItem("Knights of the Fallen Empire", ProgressionItem.CHAPTER));
 

@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="24"
     density="420dpi"
-    format="7"
-    timestamp="31745181266140"
-    token="-448831534808878596" >
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="102521493763339"
+    token="-5267623122052274636"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="3878" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="4570" />
+        duration="0" />
     <task
         name="verifier"
-        duration="1135" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="31745181266140" >
+    <build
+        timestamp="102255644294583"
+        verifier="BINARY_MANIFEST_FILE_CHANGE" >
         <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="102521493763339"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

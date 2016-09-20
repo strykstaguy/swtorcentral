@@ -5,17 +5,22 @@
               android:orientation="vertical"
               android:gravity="center_horizontal">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:background="@drawable/card_bottom_shadow"
+        android:layout_height="wrap_content">
+
     <android.support.v7.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         app:cardCornerRadius="0dp"
         app:cardElevation="0dp"
-        android:clickable="false"
-        android:foreground="@drawable/card_foreground">
+        android:clickable="false">
 
         <LinearLayout
             android:orientation="vertical"
@@ -25,7 +30,7 @@
             <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
                 android:id="@+id/timeline"
                 android:layout_width="30dp"
-                android:layout_height="15dp"
+                android:layout_height="5dp"
                 android:layout_gravity="center_horizontal"
                 app:firstColor="@color/md_grey_700"
                 app:firstSize="15"
@@ -40,11 +45,12 @@
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
+    </LinearLayout>
 
     <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
         android:id="@+id/timeline2"
         android:layout_width="30dp"
-        android:layout_height="15dp"
+        android:layout_height="20dp"
         android:layout_gravity="center_horizontal"
         app:firstColor="@color/md_grey_600"
         app:firstSize="15"
