@@ -87,16 +87,6 @@ public class ServerActivity extends AppCompatActivity {
                         .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
                         .build());
 
-        //Initial Data
-        serverItemsUS = loadUSData();
-        serverItemsEU = loadEUData();
-
-        //Set Adapter
-        mRecycleAdapterUS = new ServerAdapter(ServerActivity.this, serverItemsUS);
-        mRecycleAdapterEU = new ServerAdapter(ServerActivity.this, serverItemsEU);
-
-        mRecyclerViewUS.setAdapter(mRecycleAdapterUS);
-        mRecyclerViewEU.setAdapter(mRecycleAdapterEU);
 
         if (MainActivity.isNetworkAvailable(ServerActivity.this)) {
        	    new GetServerStatus().execute();
@@ -112,9 +102,8 @@ public class ServerActivity extends AppCompatActivity {
 
     	protected void onPreExecute() {
  			super.onPreExecute();
-
-            serverItemsUS.clear();
-            serverItemsEU.clear();
+            serverItemsUS = new ArrayList<>();
+            serverItemsEU = new ArrayList<>();
  		}
 
 		@Override
@@ -122,8 +111,7 @@ public class ServerActivity extends AppCompatActivity {
 
 			try {
 				String URL = "http://www.swtor.com/server-status";
-                serverItemsUS = new ArrayList<>();
-                serverItemsEU = new ArrayList<>();
+
 
 				Document doc = Jsoup.connect(URL).get();
 
@@ -177,49 +165,13 @@ public class ServerActivity extends AppCompatActivity {
 
 		protected void onPostExecute(ArrayList<ServerItem> result) {
             //Set Adapter
-            //mRecycleAdapterUS = new ServerAdapter(ServerActivity.this, serverItemsUS);
-            //mRecycleAdapterEU = new ServerAdapter(ServerActivity.this, serverItemsEU);
+            mRecycleAdapterUS = new ServerAdapter(ServerActivity.this, serverItemsUS);
+            mRecycleAdapterEU = new ServerAdapter(ServerActivity.this, serverItemsEU);
 
-            //mRecyclerViewUS.setAdapter(mRecycleAdapterUS);
-            //mRecyclerViewEU.setAdapter(mRecycleAdapterEU);
-
-            mRecycleAdapterUS.updateItems(serverItemsUS);
-            mRecycleAdapterEU.updateItems(serverItemsUS);
-
-            mRecycleAdapterUS.notifyDataSetChanged();
-            mRecycleAdapterEU.notifyDataSetChanged();
+            mRecyclerViewUS.setAdapter(mRecycleAdapterUS);
+            mRecyclerViewEU.setAdapter(mRecycleAdapterEU);
 		}
 	}
-
-    private ArrayList<ServerItem> loadUSData(){
-        ArrayList<ServerItem> usServers = new ArrayList<>();
-        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Bastion", "Light", "PvE", "West"));
-        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "Begeren Colony", "Light", "PvE", "West"));
-        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Harbinger", "Light", "PvE", "West"));
-        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Shadowlands", "Light", "PvE", "West"));
-        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "Jung Ma", "Light", "PvE", "West"));
-        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Ebon Hawk", "Light", "PvE", "West"));
-        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "Prophecy of the Five", "Light", "PvE", "West"));
-        usServers.add(new ServerItem(R.drawable.ic_arrow_down, "Jedi Covenant", "Light", "PvE", "West"));
-
-       return usServers;
-    }
-
-    private ArrayList<ServerItem> loadEUData(){
-
-        ArrayList<ServerItem> euServers = new ArrayList<ServerItem>();
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "T3-M4", "Light", "PvE", "West"));
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Darth Nihilus", "Light", "PvE", "West"));
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Tomb of Freedon Nadd", "Light", "PvE", "West"));
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Jar'Kai Sword", "Light", "PvE", "West"));
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Progenitor", "Light", "PvE", "West"));
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Vanjervalis Chain", "Light", "PvE", "West"));
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Battle Meditation", "Light", "PvE", "West"));
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "Mantle of the Force", "Light", "PvE", "West"));
-        euServers.add(new ServerItem(R.drawable.ic_arrow_down, "The Red Eclipse", "Light", "PvE", "West"));
-
-        return euServers;
-    }
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

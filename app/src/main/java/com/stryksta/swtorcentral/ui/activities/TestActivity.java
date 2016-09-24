@@ -16,7 +16,7 @@ public class TestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_main);
+        setContentView(R.layout.test_main2);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
@@ -34,7 +34,7 @@ public class TestActivity extends AppCompatActivity {
         if (bundle != null) {
         }
 
-        getSupportActionBar().setTitle("Progression");
+        //getSupportActionBar().setTitle("Progression");
 
     }
 

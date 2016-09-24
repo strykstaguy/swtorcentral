@@ -4,8 +4,8 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="102521493763339"
-    token="-5267623122052274636"
+    timestamp="18360727507065"
+    token="-448831534808878596"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
@@ -22,21 +22,21 @@
         duration="0" />
 
     <artifact
-        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
         type="RESOURCES" />
 
     <build
-        timestamp="102255644294583"
-        verifier="BINARY_MANIFEST_FILE_CHANGE" >
+        timestamp="16257629076629"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="102521493763339"
+        timestamp="18360727507065"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
             type="RESOURCES" />
     </build>
 
