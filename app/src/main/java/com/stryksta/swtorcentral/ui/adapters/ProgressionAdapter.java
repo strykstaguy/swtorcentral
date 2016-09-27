@@ -191,7 +191,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                     RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
                     layoutParams.addRule(RelativeLayout.RIGHT_OF, flashpointViewHolder.imgIcon.getId());
                     layoutParams.addRule(RelativeLayout.END_OF, flashpointViewHolder.imgIcon.getId());
-                    //layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+                    layoutParams.addRule(RelativeLayout.CENTER_VERTICAL);
 
                     layoutParams.setMargins(dpToPx(5), 0, 0, 0);
                     flashpointViewHolder.linearLayout.setLayoutParams(layoutParams);
@@ -205,7 +205,7 @@ public class ProgressionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                     RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
                     layoutParams.addRule(RelativeLayout.LEFT_OF, flashpointViewHolder.imgIcon.getId());
                     layoutParams.addRule(RelativeLayout.START_OF, flashpointViewHolder.imgIcon.getId());
-                    //clayoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
+                    layoutParams.addRule(RelativeLayout.CENTER_VERTICAL);
 
                     layoutParams.setMargins(0, 0, dpToPx(5), 0); //left, top, right, bottom
                     flashpointViewHolder.linearLayout.setLayoutParams(layoutParams);

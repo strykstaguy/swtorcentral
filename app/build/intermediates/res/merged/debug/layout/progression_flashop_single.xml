@@ -6,6 +6,15 @@
               android:orientation="vertical"
               android:gravity="center_horizontal">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_background_center">
+
     <android.support.v7.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -71,7 +80,6 @@
                 android:id="@+id/flashpointName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_5"
                 android:paddingLeft="@dimen/dim_5"
                 android:paddingRight="@dimen/dim_5"
                 android:text="Vaiken Spacedock"
@@ -87,12 +95,10 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/dim_5"
                 android:paddingRight="@dimen/dim_5"
-                android:layout_marginBottom="@dimen/dim_5"
                 android:text="Imperial Fleet"
                 android:textColor="@color/subheader"
                 android:gravity="left"
                 android:textSize="14sp"
-                android:layout_gravity="right"
                 android:fontFamily="sans-serif-light"/>
 
         </LinearLayout>
@@ -101,4 +107,5 @@
     </RelativeLayout>
 
     </android.support.v7.widget.CardView>
+        </LinearLayout>
 </LinearLayout>

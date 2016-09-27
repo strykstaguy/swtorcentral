@@ -6,6 +6,31 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
+    <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
+        android:id="@+id/timelineStart"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        app:firstColor="@color/md_grey_600"
+        app:firstSize="15"
+        app:lastColor="@color/md_grey_600"
+        app:lastSize="15"
+        app:lineColor="@color/md_grey_600"
+        app:lineWidth="10dp"
+        app:middleColor="@color/md_grey_600"
+        app:middleSize="0"
+        app:timeline_type="line"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_background_top">
+
     <android.support.v7.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -15,9 +40,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="0dp"
         app:cardCornerRadius="0dp"
-        app:cardElevation="0dp"
-        android:clickable="false"
-        android:foreground="@drawable/card_foreground">
+        app:cardElevation="0dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -54,4 +77,6 @@
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
+
+        </LinearLayout>
 </LinearLayout>

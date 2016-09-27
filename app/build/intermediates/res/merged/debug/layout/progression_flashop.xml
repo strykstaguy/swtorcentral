@@ -5,124 +5,126 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <android.support.v7.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_marginTop="0dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="0dp"
-        app:cardCornerRadius="0dp"
-        app:cardElevation="0dp"
-        android:clickable="false"
-        android:foreground="@drawable/card_foreground">
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_background_center">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
 
-            <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
-                android:id="@+id/timelineFlashPoint"
-                android:layout_width="30dp"
-                android:layout_height="125dp"
-                android:layout_gravity="center_horizontal"
-                app:firstColor="@color/md_grey_700"
-                app:firstSize="15"
-                app:lastColor="@color/md_grey_700"
-                app:lastSize="15"
-                app:lineColor="@color/md_grey_700"
-                app:lineWidth="10dp"
-                app:middleColor="@color/md_grey_700"
-                app:middleSize="15"
-                app:timeline_type="middle"
-                android:layout_centerHorizontal="true" />
-
-            <ImageButton
-                android:id="@+id/imgIcon"
-                android:layout_width="@dimen/fab_small"
-                android:layout_height="@dimen/fab_small"
-                android:background="@drawable/round_grey"
-                android:elevation="3dp"
-                android:layout_centerVertical="true"
-                android:scaleType="fitCenter"
-                android:padding="5dp"
-                android:clickable="false"
-                android:src="@drawable/republic_logo"
-                android:tint="@color/white"
-                android:layout_centerHorizontal="true"/>
-
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/dim_5"
-                android:layout_marginLeft="@dimen/dim_5"
-                android:layout_toLeftOf="@+id/imgIcon"
-                android:layout_toStartOf="@+id/imgIcon"
-                android:id="@+id/linearLayoutRepublic">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/txtFlashRepublicName"
+                <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
+                    android:id="@+id/timelineFlashPoint"
+                    android:layout_width="30dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center_horizontal"
+                    app:firstColor="@color/md_grey_700"
+                    app:firstSize="15"
+                    app:lastColor="@color/md_grey_700"
+                    app:lastSize="15"
+                    app:lineColor="@color/md_grey_700"
+                    app:lineWidth="10dp"
+                    app:middleColor="@color/md_grey_700"
+                    app:middleSize="15"
+                    app:timeline_type="middle"
+                    android:layout_centerHorizontal="true" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Carrick Station"
-                    android:gravity="right"
-                    android:layout_gravity="right"
-                    android:textColor="@color/text"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif"/>
-                <TextView
-                    android:id="@+id/txtFlashRepublicTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Republic Fleet"
-                    android:gravity="right"
-                    android:layout_gravity="right"
-                    android:textSize="14sp"
-                    android:fontFamily="sans-serif-light"/>
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dim_5"
+                    android:layout_marginLeft="@dimen/dim_5"
+                    android:layout_toLeftOf="@+id/imgIcon"
+                    android:layout_toStartOf="@+id/imgIcon"
+                    android:id="@+id/linearLayoutRepublic">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/dim_5"
-                android:layout_marginRight="@dimen/dim_5"
-                android:layout_toRightOf="@+id/imgIcon"
-                android:layout_toEndOf="@+id/imgIcon"
-                android:id="@+id/linearLayoutEmpire">
+                    <TextView
+                        android:id="@+id/txtFlashRepublicName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Carrick Station"
+                        android:gravity="right"
+                        android:layout_gravity="right"
+                        android:textColor="@color/text"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"/>
+                    <TextView
+                        android:id="@+id/txtFlashRepublicTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Republic Fleet"
+                        android:gravity="right"
+                        android:layout_gravity="right"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"/>
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txtFlashEmpireName"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Vaiken Spacedock"
-                    android:gravity="left"
-                    android:layout_gravity="left"
-                    android:textColor="@color/text"
-                    android:textSize="16sp"
-                    android:fontFamily="sans-serif"/>
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dim_5"
+                    android:layout_marginRight="@dimen/dim_5"
+                    android:layout_toRightOf="@+id/imgIcon"
+                    android:layout_toEndOf="@+id/imgIcon"
+                    android:id="@+id/linearLayoutEmpire">
 
-                <TextView
-                    android:id="@+id/txtFlashEmpireTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Imperial Fleet"
-                    android:gravity="left"
-                    android:layout_gravity="left"
-                    android:textSize="14sp"
-                    android:fontFamily="sans-serif-light"/>
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtFlashEmpireName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Vaiken Spacedock"
+                        android:gravity="left"
+                        android:layout_gravity="left"
+                        android:textColor="@color/text"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"/>
 
-        </RelativeLayout>
+                    <TextView
+                        android:id="@+id/txtFlashEmpireTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Imperial Fleet"
+                        android:gravity="left"
+                        android:layout_gravity="left"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-light"/>
+                </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+                <ImageButton
+                    android:id="@+id/imgIcon"
+                    android:layout_width="@dimen/fab_small"
+                    android:layout_height="@dimen/fab_small"
+                    android:background="@drawable/round_grey"
+                    android:elevation="3dp"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/republic_logo"
+                    android:tint="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
 
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 </LinearLayout>
