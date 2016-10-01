@@ -4,33 +4,40 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="702985319728725"
-    token="-5267623122052274636"
-    verifier="FULL_BUILD_REQUESTED" >
+    timestamp="31688449017898"
+    token="-448831534808878596"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="14692" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="7724" />
+        duration="0" />
     <task
         name="verifier"
-        duration="3700" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
-        timestamp="702985319728725"
+        timestamp="31385002869445"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="31688449017898"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

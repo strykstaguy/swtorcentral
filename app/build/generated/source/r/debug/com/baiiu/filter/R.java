@@ -454,12 +454,12 @@ public final class R {
 		public static final int abc_textfield_search_material = 0x7f020051;
 		public static final int common_filter_arrow_down = 0x7f020095;
 		public static final int common_filter_arrow_up = 0x7f020096;
-		public static final int layer_filter_checked = 0x7f0200bf;
-		public static final int layer_filter_unchecked = 0x7f0200c0;
-		public static final int level_filter = 0x7f0200c1;
-		public static final int notification_template_icon_bg = 0x7f02010a;
-		public static final int selector_filter_left = 0x7f0200fc;
-		public static final int selector_tv_filter = 0x7f0200fd;
+		public static final int layer_filter_checked = 0x7f0200c1;
+		public static final int layer_filter_unchecked = 0x7f0200c2;
+		public static final int level_filter = 0x7f0200c3;
+		public static final int notification_template_icon_bg = 0x7f02010c;
+		public static final int selector_filter_left = 0x7f0200fe;
+		public static final int selector_tv_filter = 0x7f0200ff;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f0d0137;

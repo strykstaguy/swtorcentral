@@ -30,7 +30,7 @@
                 android:elevation="3dp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_companion"
+                app:srcCompat="@drawable/ic_companion"
                 android:layout_marginLeft="@dimen/dim_5"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
@@ -41,12 +41,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingLeft="16dp"
-                android:singleLine="true"
-                android:textColor="@color/text"
+                android:textColor="@color/black"
                 android:text="Jedi Consular"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textSize="16sp"
                 android:fontFamily="sans-serif"/>
 
             <TextView
