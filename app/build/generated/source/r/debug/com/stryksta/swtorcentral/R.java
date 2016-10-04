@@ -4901,12 +4901,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tex_size_xsmall=0x7f0700f2;
         public static final int tex_size_xxlarge=0x7f0700f3;
         public static final int tex_size_xxsmall=0x7f0700f4;
-        public static final int title=0x7f0700f5;
-        public static final int title_size=0x7f0700f6;
-        public static final int tool_bar_height=0x7f0700f7;
-        public static final int toolbar_margin_start=0x7f0700f8;
-        public static final int tutorial_image_height=0x7f0700f9;
-        public static final int width=0x7f0700fa;
+        public static final int text_body=0x7f0700f5;
+        public static final int text_title=0x7f0700f6;
+        public static final int title=0x7f0700f7;
+        public static final int title_size=0x7f0700f8;
+        public static final int tool_bar_height=0x7f0700f9;
+        public static final int toolbar_margin_start=0x7f0700fa;
+        public static final int tutorial_image_height=0x7f0700fb;
+        public static final int width=0x7f0700fc;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_mtrl_alpha=0x7f020000;

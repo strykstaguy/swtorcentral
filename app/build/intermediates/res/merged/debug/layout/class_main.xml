@@ -37,7 +37,7 @@
                     android:layout_width="@dimen/fab_large"
                     android:layout_height="@dimen/fab_large"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/class_jedi_consular"
+                    app:srcCompat="@drawable/class_jedi_consular"
                     android:background="@drawable/advanced_class"
                     android:padding="8dp" />
 
@@ -168,14 +168,14 @@
                 android:layout_height="36dp"
                 android:gravity="center_vertical"
                 android:paddingLeft="16dp"
-                android:singleLine="true"
                 android:textAllCaps="true"
                 android:textColor="@color/swtor_blue"
                 android:background="@android:color/transparent"
                 android:text="Advanced Classes"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:fontFamily="sans-serif-light"/>
+                android:fontFamily="sans-serif-light"
+                android:maxLines="1"/>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -202,7 +202,7 @@
                         android:padding="10dp"
                         android:scaleType="fitXY"
                         android:layout_gravity="center"
-                        android:src="@drawable/advanced_class_powertech"/>
+                        app:srcCompat="@drawable/advanced_class_powertech"/>
 
                     <TextView
                         android:id="@+id/txtAdvancedClass1"
@@ -240,7 +240,7 @@
                         android:scaleType="fitXY"
                         android:padding="10dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/advanced_class_mercenary"/>
+                        app:srcCompat="@drawable/advanced_class_mercenary"/>
 
                     <TextView
                         android:id="@+id/txtAdvancedClass2"
@@ -285,7 +285,7 @@
                     android:layout_height="36dp"
                     android:gravity="center_vertical"
                     android:paddingLeft="16dp"
-                    android:singleLine="true"
+                    android:maxLines="1"
                     android:textAllCaps="true"
                     android:textColor="@color/swtor_blue"
                     android:background="@android:color/transparent"
@@ -339,7 +339,7 @@
             android:id="@+id/fabCompanions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_companion"
+            app:srcCompat="@drawable/ic_companion"
             app:fab_colorNormal="@color/swtor_accent"
             app:fab_colorPressed="@color/md_amber_500"
             app:fab_colorRipple="@color/md_amber_500"
@@ -351,7 +351,7 @@
             android:id="@+id/fabAbilities"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_abilities"
+            app:srcCompat="@drawable/ic_abilities"
             app:fab_colorNormal="@color/swtor_accent"
             app:fab_colorPressed="@color/md_amber_500"
             app:fab_colorRipple="@color/md_amber_500"

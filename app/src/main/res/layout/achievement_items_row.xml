@@ -22,14 +22,13 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="horizontal"
-            android:padding="@dimen/dim_5">
+            android:layout_margin="@dimen/dim_5">
 
             <LinearLayout
                 android:id="@+id/layoutTitle"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="@dimen/dim_5"
                 android:orientation="horizontal">
 
                 <TextView
@@ -39,15 +38,12 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:layout_gravity="left"
-                    android:paddingTop="@dimen/dim_5"
-                    android:paddingBottom="@dimen/dim_5"
-                    android:paddingLeft="@dimen/dim_5"
-                    android:textColor="@color/regularcolor"
-                    android:textSize="20sp"
+                    android:maxLines="2"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_title"
                     android:text="Title"
-                    android:textStyle="bold"
                     android:layout_toLeftOf="@+id/achRewardPoints"
-                    android:fontFamily="sans-serif-light"/>
+                    android:fontFamily="sans-serif"/>
 
                 <com.stryksta.swtorcentral.util.AchievementToggle
                     android:id="@+id/achRewardPoints"
@@ -68,9 +64,9 @@
                 android:layout_below="@+id/layoutTitle"
                 android:layout_gravity="left"
                 android:paddingLeft="5dp"
-                android:textColor="@color/regularcolor"
+                android:textColor="@color/subtext_dark"
                 android:text="This is a test description for an achievement, so its jsut for show not for play play"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_body"
                 android:fontFamily="sans-serif-light"/>
 
             <TextView
