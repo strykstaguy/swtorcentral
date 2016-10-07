@@ -110,7 +110,7 @@ public class ServerActivity extends AppCompatActivity {
 		protected ArrayList<ServerItem> doInBackground(String... urls) {
 
 			try {
-				String URL = "http://www.swtor.com/server-status3";
+				String URL = "http://www.swtor.com/server-status";
 
 
 				Document doc = Jsoup.connect(URL).get();
