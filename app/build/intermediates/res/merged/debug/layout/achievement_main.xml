@@ -99,8 +99,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:behavior_overlapTop="35dp"
-        android:layout_marginLeft="@dimen/dim_10"
-        android:layout_marginRight="@dimen/dim_10"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:fillViewport="true"
         android:layout_gravity="fill_vertical" />

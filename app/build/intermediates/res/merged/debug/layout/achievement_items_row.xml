@@ -14,7 +14,7 @@
         android:layout_marginBottom="8dp"
         android:elevation="2dp"
         app:cardCornerRadius="2dp"
-        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
         android:foreground="@drawable/card_foreground"
         app:cardBackgroundColor="@color/white">
 

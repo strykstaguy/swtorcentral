@@ -1,36 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    api-level="23"
+    abi="x86"
+    api-level="24"
     density="420dpi"
     format="8"
-    plugin-version="2.2.0"
-    timestamp="116460385862672"
-    token="-448831534808878596"
-    verifier="FULL_BUILD_REQUESTED" >
+    plugin-version="2.2.1"
+    timestamp="94692322946968"
+    token="-5267623122052274636"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="12638" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="12849" />
+        duration="0" />
     <task
         name="verifier"
-        duration="8301" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
-        timestamp="116460385862672"
+        timestamp="92533087533137"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="94692322946968"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>
