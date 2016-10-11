@@ -1,6 +1,7 @@
 package com.stryksta.swtorcentral.ui.adapters;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -59,30 +60,28 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
                 viewHolder.achRewardTitle.setText("Title: " + achItem.getRewardTitle());
             }
 
-            if (achItem.getCompleted() == 1) {
-                viewHolder.txtStatus.setText(Html.fromHtml("Status: <b>Complete</b>"));
                 viewHolder.achRewardPoints.setChecked(true);
+                if (achItem.getCompleted() == 1) {
 
                 viewHolder.achRewardPoints.setBackgroundColor(ContextCompat.getColor(mContext, R.color.completed_card));
-                viewHolder.achCard.setBackgroundColor(ContextCompat.getColor(mContext, R.color.completed_card));
+                //viewHolder.achCard.setBackgroundColor(ContextCompat.getColor(mContext, R.color.completed_card));
+                //viewHolder.achCard.setRadius(dpToPx(5));
                 viewHolder.achTitle.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
                 viewHolder.achDescription.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
                 viewHolder.txtRewardsSep.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
                 viewHolder.achRewardTitle.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
                 viewHolder.achRewardFleetRequisition.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
-                viewHolder.txtStatus.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
             } else {
-                viewHolder.txtStatus.setText(Html.fromHtml("Status: <b>Incomplete</b>"));
                 viewHolder.achRewardPoints.setChecked(false);
 
                 viewHolder.achRewardPoints.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
-                viewHolder.achCard.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
+                //viewHolder.achCard.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
+                //viewHolder.achCard.setRadius(dpToPx(5));
                 viewHolder.achTitle.setTextColor(ContextCompat.getColor(mContext, R.color.black));
                 viewHolder.achDescription.setTextColor(ContextCompat.getColor(mContext, R.color.black));
                 viewHolder.txtRewardsSep.setTextColor(ContextCompat.getColor(mContext, R.color.black));
                 viewHolder.achRewardTitle.setTextColor(ContextCompat.getColor(mContext, R.color.black));
                 viewHolder.achRewardFleetRequisition.setTextColor(ContextCompat.getColor(mContext, R.color.black));
-                viewHolder.txtStatus.setTextColor(ContextCompat.getColor(mContext, R.color.black));
             }
         }
     }
@@ -100,7 +99,6 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
         public TextView txtRewardsSep;
         public TextView achRewardTitle;
         public TextView achRewardFleetRequisition;
-        public TextView txtStatus;
         public AchievementToggle achRewardPoints;
 
         public ViewHolder(View itemView) {
@@ -111,7 +109,6 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
             txtRewardsSep = (TextView) itemView.findViewById(R.id.txtRewardsSep);
             achRewardTitle = (TextView) itemView.findViewById(R.id.achRewardTitle);
             achRewardFleetRequisition = (TextView) itemView.findViewById(R.id.achRewardFleetRequisition);
-            txtStatus = (TextView) itemView.findViewById(R.id.txtStatus);
             achRewardPoints = (AchievementToggle) itemView.findViewById(R.id.achRewardPoints);
         }
     }
@@ -120,5 +117,9 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
         /* "\\\t"  - tab*/
         return description.replaceAll("~", "\\\n" + "\\\t");
 
+    }
+
+    public static int dpToPx(int dp) {
+        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
     }
 }

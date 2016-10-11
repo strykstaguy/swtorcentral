@@ -24,7 +24,7 @@ import android.view.ViewGroup;
 
 public class Category3Fragment extends Fragment {
 	private AchievementsDatabase db;
-	ArrayList<AchievementCategoryItem> achievements = new ArrayList<AchievementCategoryItem>();
+	ArrayList<AchievementCategoryItem> achievements = new ArrayList<>();
 
 	private AchievementCategoryAdapter mRecycleAdapter;
 	private GridLayoutManager mLayoutManager;

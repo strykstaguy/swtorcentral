@@ -37,7 +37,7 @@
                     android:id="@+id/advImage"
                     android:layout_width="@dimen/fab_large"
                     android:layout_height="@dimen/fab_large"
-                    android:src="@drawable/advanced_class_jedi_sage"
+                    app:srcCompat="@drawable/advanced_class_jedi_sage"
                     android:background="@drawable/round_grey"
                     android:layout_gravity="center_horizontal"
                     app:progress="42"
@@ -65,8 +65,7 @@
                         android:textSize="36sp"
                         android:text="Header"
                         android:textColor="@color/white"
-                        android:fontFamily="sans-serif"
-                        />
+                        android:fontFamily="sans-serif"/>
 
                     <TextView
                         android:id="@+id/achievementProgress"
@@ -94,16 +93,20 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <FrameLayout
-        android:id="@+id/achievementframe"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:behavior_overlapTop="35dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:fillViewport="true"
-        android:layout_gravity="fill_vertical" />
+        android:layout_marginBottom="?actionBarSize">
+
+        <FrameLayout
+            android:id="@+id/achievementframe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.NestedScrollView>
+
 
 </android.support.design.widget.CoordinatorLayout>
