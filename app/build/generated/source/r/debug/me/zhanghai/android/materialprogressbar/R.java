@@ -415,9 +415,9 @@ public final class R {
 		public static final int highlight_alpha_material_colored = 0x7f07009a;
 		public static final int highlight_alpha_material_dark = 0x7f07009b;
 		public static final int highlight_alpha_material_light = 0x7f07009c;
-		public static final int notification_large_icon_height = 0x7f0700d7;
-		public static final int notification_large_icon_width = 0x7f0700d8;
-		public static final int notification_subtext_size = 0x7f0700d9;
+		public static final int notification_large_icon_height = 0x7f0700d9;
+		public static final int notification_large_icon_width = 0x7f0700da;
+		public static final int notification_subtext_size = 0x7f0700db;
 	}
 	public static final class drawable {
 		public static final int abc_ab_share_pack_mtrl_alpha = 0x7f020000;

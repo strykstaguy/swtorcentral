@@ -71,6 +71,7 @@ public class Category1Fragment extends Fragment{
 
 		//Set Adapter
 		mRecycleAdapter = new AchievementCategoryAdapter(getActivity(), categories);
+        mRecyclerView.setNestedScrollingEnabled(false);
 		mRecyclerView.setAdapter(mRecycleAdapter);
 
 		mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {

@@ -64,6 +64,10 @@
     <dimen name="toolbar_margin_start">72dp</dimen>
     <dimen name="flexible_space_show_fab_offset">120dp</dimen>
 
+
+    <dimen name="md_text_title">18dp</dimen>
+    <dimen name="md_text_body">16dp</dimen>
+
     <dimen name="md_baseline_start">16dp</dimen>
     <dimen name="md_baseline_content">72dp</dimen>
     <dimen name="md_baseline_end">16dp</dimen>

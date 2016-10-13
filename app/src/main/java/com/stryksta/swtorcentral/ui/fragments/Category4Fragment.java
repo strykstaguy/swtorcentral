@@ -90,6 +90,7 @@ public class Category4Fragment extends Fragment{
 		}
 		//Set Adapter
 		mRecycleAdapter = new AchievementItemAdapter(achievements);
+        mRecyclerView.setNestedScrollingEnabled(false);
 		mRecyclerView.setAdapter(mRecycleAdapter);
 
 

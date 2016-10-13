@@ -37,7 +37,8 @@
                     android:id="@+id/advImage"
                     android:layout_width="@dimen/fab_large"
                     android:layout_height="@dimen/fab_large"
-                    app:srcCompat="@drawable/advanced_class_jedi_sage"
+                    android:src="@drawable/ic_achievement"
+                    android:tint="@color/white"
                     android:background="@drawable/round_grey"
                     android:layout_gravity="center_horizontal"
                     app:progress="42"
@@ -97,13 +98,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:behavior_overlapTop="35dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:fillViewport="true"
-        android:layout_marginBottom="?actionBarSize">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <FrameLayout
             android:id="@+id/achievementframe"
             android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_height="match_parent" />
 
     </android.support.v4.widget.NestedScrollView>

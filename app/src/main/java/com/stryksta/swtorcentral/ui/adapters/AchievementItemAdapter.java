@@ -61,11 +61,13 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
             }
 
                 viewHolder.achRewardPoints.setChecked(true);
-                if (achItem.getCompleted() == 1) {
 
+            float achCardRadius = viewHolder.achCard.getRadius();
+
+            if (achItem.getCompleted() == 1) {
                 viewHolder.achRewardPoints.setBackgroundColor(ContextCompat.getColor(mContext, R.color.completed_card));
-                //viewHolder.achCard.setBackgroundColor(ContextCompat.getColor(mContext, R.color.completed_card));
-                //viewHolder.achCard.setRadius(dpToPx(5));
+                viewHolder.achCard.setCardBackgroundColor(ContextCompat.getColor(mContext, R.color.completed_card));
+                viewHolder.achCard.setRadius(achCardRadius);
                 viewHolder.achTitle.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
                 viewHolder.achDescription.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
                 viewHolder.txtRewardsSep.setTextColor(ContextCompat.getColor(mContext, R.color.completed_text));
@@ -75,13 +77,13 @@ public class AchievementItemAdapter extends RecyclerView.Adapter<AchievementItem
                 viewHolder.achRewardPoints.setChecked(false);
 
                 viewHolder.achRewardPoints.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
-                //viewHolder.achCard.setBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
-                //viewHolder.achCard.setRadius(dpToPx(5));
-                viewHolder.achTitle.setTextColor(ContextCompat.getColor(mContext, R.color.black));
-                viewHolder.achDescription.setTextColor(ContextCompat.getColor(mContext, R.color.black));
-                viewHolder.txtRewardsSep.setTextColor(ContextCompat.getColor(mContext, R.color.black));
-                viewHolder.achRewardTitle.setTextColor(ContextCompat.getColor(mContext, R.color.black));
-                viewHolder.achRewardFleetRequisition.setTextColor(ContextCompat.getColor(mContext, R.color.black));
+                viewHolder.achCard.setCardBackgroundColor(ContextCompat.getColor(mContext, R.color.white));
+                viewHolder.achCard.setRadius(achCardRadius);
+                viewHolder.achTitle.setTextColor(ContextCompat.getColor(mContext, R.color.md_black_1000));
+                viewHolder.achDescription.setTextColor(ContextCompat.getColor(mContext, R.color.subtext_dark));
+                viewHolder.txtRewardsSep.setTextColor(ContextCompat.getColor(mContext, R.color.subtext_dark));
+                viewHolder.achRewardTitle.setTextColor(ContextCompat.getColor(mContext, R.color.subtext_dark));
+                viewHolder.achRewardFleetRequisition.setTextColor(ContextCompat.getColor(mContext, R.color.subtext_dark));
             }
         }
     }

@@ -57,13 +57,12 @@
                 android:layout_marginLeft="@dimen/dim_5"
                 android:maxLines="1"
                 android:text="Alderaan"
-                android:textStyle="bold"
-                android:textColor="@color/text"
-                android:textSize="18sp"
+                android:textColor="@color/md_black_1000"
+                android:textSize="@dimen/md_text_title"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/achIcon"
                 android:layout_toEndOf="@+id/achIcon"
-                android:fontFamily="sans-serif-light"/>
+                android:fontFamily="sans-serif"/>
 
             <TextView
                 android:id="@+id/txtSubCategory"
@@ -74,8 +73,8 @@
                 android:gravity="left"
                 android:layout_marginLeft="@dimen/dim_5"
                 android:text="300 / 1000"
-                android:textColor="@color/text"
-                android:textSize="12sp"
+                android:textColor="@color/subtext_dark"
+                android:textSize="@dimen/md_text_body"
                 android:fontFamily="sans-serif-light"/>
 
             <TextView
@@ -87,8 +86,8 @@
                 android:layout_marginLeft="@dimen/dim_5"
                 android:gravity="left"
                 android:text="West"
-                android:textColor="@color/text"
-                android:textSize="12sp"
+                android:textColor="@color/subtext_dark"
+                android:textSize="@dimen/md_text_body"
                 android:fontFamily="sans-serif-light"/>
 
             <ProgressBar

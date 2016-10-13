@@ -4,15 +4,18 @@ package com.stryksta.swtorcentral.ui.fragments;
 import java.util.ArrayList;
 
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.ui.activities.CompanionsActivity;
 import com.stryksta.swtorcentral.ui.adapters.ClassesCategoryAdapter;
 import com.stryksta.swtorcentral.models.ClassItem;
 import com.stryksta.swtorcentral.ui.activities.ClassActivity;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.database.ClassesDatabase;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -62,6 +65,12 @@ public class ClassesFragment extends Fragment{
 
         //Set Adapter
         mRecycleAdapter = new ClassesCategoryAdapter(classItems);
+        mRecyclerView.addItemDecoration(
+                new HorizontalDividerItemDecoration.Builder(getActivity())
+                        .color(ContextCompat.getColor(getActivity(), R.color.backgroundlight))
+                        .sizeResId(R.dimen.divider)
+                        .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
+                        .build());
         mRecyclerView.setAdapter(mRecycleAdapter);
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
         {
