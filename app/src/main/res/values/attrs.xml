@@ -109,4 +109,19 @@
         <attr name="pageIndicatorColor" format="color" />
         <attr name="currentPageIndicatorColor" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="ElevationShadowView">
+        <attr name="shadowElevation" format="dimension"/>
+        <attr name="shadowOrientation" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+            <enum name="top_left" value="4"/>
+            <enum name="top_right" value="5"/>
+            <enum name="bottom_left" value="6"/>
+            <enum name="bottom_right" value="7"/>
+        </attr>
+        <attr name="emulateParallelLight" format="boolean"/>
+    </declare-styleable>
 </resources>

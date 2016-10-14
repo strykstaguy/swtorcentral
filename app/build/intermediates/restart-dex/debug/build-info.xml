@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="24"
+    abi="x86"
+    api-level="23"
     density="420dpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="29901980217909"
+    timestamp="24700733503707"
     token="-448831534808878596"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
@@ -27,25 +27,32 @@
         type="RESOURCES" />
 
     <build
-        timestamp="29837779762842"
+        timestamp="18632983886713"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="29901980217909"
+        timestamp="18959117132491"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="19629778629515"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\builds\debug\19629778629515\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="24700733503707"
+        verifier="COMPATIBLE" >
         <artifact
             location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
             type="RESOURCES" />
-    </build>
-    <build
-        timestamp="31957060773840"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

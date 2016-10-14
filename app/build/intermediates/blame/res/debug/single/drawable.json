@@ -704,6 +704,10 @@
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
+        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cardview_bottom_test.xml",
+        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\cardview_bottom_test.xml"
+    },
+    {
         "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_progress_bar_circle.xml",
         "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\custom_progress_bar_circle.xml"
     },

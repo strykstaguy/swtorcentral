@@ -95,7 +95,7 @@
     <string name="factionsub">Allegiance</string>
     
     <string name="progressionsub">Progression</string>
-    
+    <string name="device_type">phone</string>
     <string name="characters">Characters</string>
     <string name="character_menu_add">Add Character</string>
     <string name="character_menu_save">Save</string>

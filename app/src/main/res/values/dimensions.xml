@@ -131,4 +131,6 @@
     <dimen name="divider_rightmargin">10dp</dimen>
 
     <dimen name="large_navigator_height">65dp</dimen>
+
+    <dimen name="elevation_shadow_view_shadow_elevation_default_value">4dp</dimen>
 </resources>  
