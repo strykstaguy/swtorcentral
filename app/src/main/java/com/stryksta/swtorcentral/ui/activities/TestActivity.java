@@ -1,17 +1,23 @@
 package com.stryksta.swtorcentral.ui.activities;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.stryksta.swtorcentral.R;
 
+import com.stryksta.swtorcentral.ui.views.TextViewLabel;
+
 public class TestActivity extends AppCompatActivity {
     private Toolbar mToolbar;
+    private TextViewLabel txtLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +39,14 @@ public class TestActivity extends AppCompatActivity {
 
         if (bundle != null) {
         }
-
-        //getSupportActionBar().setTitle("Progression");
-
+        /*
+        txtLabel = (TextViewLabel) findViewById(R.id.txtLabel);
+        txtLabel.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Button Press!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        */
     }
 
     @Override

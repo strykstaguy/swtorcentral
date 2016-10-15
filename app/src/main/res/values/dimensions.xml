@@ -92,6 +92,7 @@
     <dimen name="swtor_button_layer_padding">3dp</dimen>
 
     <!-- fab sizes -->
+    <dimen name="fab_mini">25dp</dimen>
     <dimen name="fab_small">40dp</dimen>
     <dimen name="fab_normal">56dp</dimen>
     <dimen name="fab_progress">72dp</dimen>
