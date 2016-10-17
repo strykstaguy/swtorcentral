@@ -9,11 +9,14 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.baiiu.filter.DropDownMenu;
 import com.baiiu.filter.interfaces.OnFilterDoneListener;
 import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.models.FilterItem;
 import com.stryksta.swtorcentral.ui.adapters.CodexAdapter;
+import com.stryksta.swtorcentral.ui.adapters.CodexFilterAdapter;
 import com.stryksta.swtorcentral.ui.adapters.DropMenuAdapter;
 import com.stryksta.swtorcentral.models.CodexItem;
 import com.stryksta.swtorcentral.util.database.CodexDatabase;
@@ -23,16 +26,22 @@ import java.util.List;
 
 public class CodexActivity extends AppCompatActivity implements OnFilterDoneListener{
     private Toolbar mToolbar;
+
+    private RecyclerView mFilterRecyclerView;
     private RecyclerView mRecyclerView;
+
     private LinearLayoutManager mLayoutManager;
-    private DropDownMenu dropDownMenu;
+    private LinearLayoutManager mFilterLayoutManager;
+
     private CodexDatabase codexDB;
-    List<String> cdxCategoryItems;
+    ArrayList<FilterItem> cdxCategoryItems;
     ArrayList<CodexItem> cdxItems;
-    String drpCategory;
+
+    String filterCategory;
     String drpFaction;
 
     private CodexAdapter mRecycleAdapter;
+    private CodexFilterAdapter mFilterRecycleAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +67,11 @@ public class CodexActivity extends AppCompatActivity implements OnFilterDoneList
         getSupportActionBar().setTitle("Codexes");
 
         //Default Filters
-        drpCategory = "All";
         drpFaction = "All";
 
-        //Set RecyclerView an Dropdown
-        dropDownMenu = (DropDownMenu) findViewById(R.id.dropDownMenu);
-        mRecyclerView = (RecyclerView) findViewById(R.id.mFilterContentView);
+        //Set RecyclerViews
+        mFilterRecyclerView = (RecyclerView) findViewById(R.id.listFilter);
+        mRecyclerView = (RecyclerView) findViewById(R.id.listCodexes);
 
         //Get Codex Categories
         codexDB = new CodexDatabase(CodexActivity.this);
@@ -72,34 +80,32 @@ public class CodexActivity extends AppCompatActivity implements OnFilterDoneList
         //Close DB
         codexDB.close();
 
+        //Set Codex Adapter
         if (mRecyclerView != null) {
             mLayoutManager = new LinearLayoutManager(CodexActivity.this, LinearLayoutManager.VERTICAL, false);
             mRecyclerView.setLayoutManager(mLayoutManager);
         }
 
-        //Set Dropdown
-        String[] titleList = new String[]{"Category", "Faction"};
-        dropDownMenu.setMenuAdapter(new DropMenuAdapter(CodexActivity.this, titleList, CodexActivity.this, cdxCategoryItems));
+        //Set Filter Adapter
+        if (mFilterRecyclerView != null) {
+            mFilterLayoutManager = new LinearLayoutManager(CodexActivity.this, LinearLayoutManager.HORIZONTAL, false);
+            mFilterRecyclerView.setLayoutManager(mFilterLayoutManager);
+        }
 
-        //Set Adapter
+        //Set Codex Adapter
         mRecycleAdapter = new CodexAdapter(cdxItems);
         mRecyclerView.setAdapter(mRecycleAdapter);
 
+        //Set Filter Adapter
+        mFilterRecycleAdapter = new CodexFilterAdapter(cdxCategoryItems, CodexActivity.this);
+        mFilterRecyclerView.setAdapter(mFilterRecycleAdapter);
     }
 
     @Override
     public void onFilterDone(int position, String positionTitle, String urlValue) {
-        dropDownMenu.setPositionIndicatorText(position, positionTitle);
 
-        if (position == 0) {
-            drpCategory = positionTitle;
-        } else if (position == 1) {
-            drpFaction = positionTitle;
-        }
-
-        updateItems(drpCategory, drpFaction);
-        dropDownMenu.close();
-        //mFilterContentView.setText(FilterUrl.instance().toString());
+        Toast.makeText(getApplicationContext(), "Postion: " + position + ", Title: " + positionTitle, Toast.LENGTH_SHORT).show();
+        //updateItems(drpCategory, drpFaction);
     }
 
     public void updateItems(String cdxCategory, String cdxFaction) {
