@@ -100,12 +100,16 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\round.xml"
+    },
+    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_selector.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\drawable\\md_selector.xml"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round.xml",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\round.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chip.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\chip.xml"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_check.xml",
@@ -386,6 +390,10 @@
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\layer_filter_checked.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\swtorcentral\\filter-lib\\unspecified\\res\\drawable\\layer_filter_checked.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chip_selected.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\chip_selected.xml"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_bottom.xml",

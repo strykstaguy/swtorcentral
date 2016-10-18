@@ -193,6 +193,17 @@
             </LinearLayout>
 
 
+            <com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud
+                xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/chip_cloud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                chipcloud:deselectedColor="@color/swtor_blue"
+                chipcloud:deselectedFontColor="@color/white"
+                chipcloud:selectedColor="@color/swtor_blue_dark"
+                chipcloud:selectedFontColor="@color/white"
+                chipcloud:selectMode="required"/>
+
             <LinearLayout
                 android:layout_height="13dp"
                 android:layout_width="150dp"

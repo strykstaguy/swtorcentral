@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.stryksta.swtorcentral.R;
 
 import com.stryksta.swtorcentral.ui.views.TextViewLabel;
+import com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud;
 
 public class TestActivity extends AppCompatActivity {
     private Toolbar mToolbar;
@@ -39,6 +40,10 @@ public class TestActivity extends AppCompatActivity {
 
         if (bundle != null) {
         }
+
+        ChipCloud chipCloud = (ChipCloud) findViewById(R.id.chip_cloud);
+        chipCloud.addChip("Foo");
+        chipCloud.addChip("Bar");
         /*
         txtLabel = (TextViewLabel) findViewById(R.id.txtLabel);
         txtLabel.setOnClickListener(new View.OnClickListener() {

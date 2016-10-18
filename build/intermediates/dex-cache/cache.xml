@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="13d9c2bf2f102949086b3e17c01cc8dbef8fe775">
+        sha1="22e2fef7fa3f16752e9ac47ea2b9d6af86ea14dc">
         <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2593976f1ab07c12be821e2c7901836240e8c076\classes.dex" />
     </item>
     <item
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="6bcbcbc792754686ee14b6f4f8a620ee764a8b9e">
+        sha1="b62f51c9f72c98f09c44eb9e39b3d93eb5f5cceb">
         <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c606d91890e0c7d19f868dc5c42127e08f43c9a8\classes.dex" />
     </item>
     <item
@@ -138,21 +138,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_2108760e6e6955b4f8cbdc4a5fb6303a1bca74f2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Cody\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
         <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_b6ae5a47be33ab3f0f37d04cd4fe3d6ef08cd250\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_2108760e6e6955b4f8cbdc4a5fb6303a1bca74f2\classes.dex" />
     </item>
     <item
         is-multidex="true"
