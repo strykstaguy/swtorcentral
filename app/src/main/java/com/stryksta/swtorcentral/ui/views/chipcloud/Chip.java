@@ -1,80 +1,93 @@
 package com.stryksta.swtorcentral.ui.views.chipcloud;
 
 import android.content.Context;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
+import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-import com.stryksta.swtorcentral.R;
 
-public class Chip extends TextView implements View.OnClickListener {
+import com.stryksta.swtorcentral.R;
+import com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud;
+import com.stryksta.swtorcentral.ui.views.chipcloud.ChipListener;
+
+public class Chip extends TextView implements View.OnClickListener{
+    private float cornerRadius = Integer.MIN_VALUE;
+    private RectF labelBounds = new RectF();
+    private Paint labelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+    //Defaults
+    private static int DEFAULT_LABEL_COLOR = Color.GRAY;
+    private static int DEFAULT_LABEL_SELECTED_COLOR = Color.BLACK;
+    private static int DEFAULT_FONT_COLOR = Color.WHITE;
+    private static int DEFAULT_FONT_SELECTED_COLOR = Color.WHITE;
+
+    private int mLabelColor = DEFAULT_LABEL_COLOR;
+    private int mLabelColorSelected = DEFAULT_LABEL_SELECTED_COLOR;
+
+    private int mFontColor = DEFAULT_FONT_COLOR;
+    private int mFontColorSelected = DEFAULT_FONT_SELECTED_COLOR;
 
     private int index = -1;
-    private boolean selected = false;
-    private com.stryksta.swtorcentral.ui.views.chipcloud.ChipListener listener = null;
-    private int selectedFontColor = -1;
-    private int unselectedFontColor = -1;
+    private boolean mIsSelected = false;
+    private ChipListener listener = null;
     private boolean isLocked = false;
     private ChipCloud.Mode mode;
+
+    public Chip(Context context) {
+        super(context);
+        init(context, null);
+    }
+
+    public Chip(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context, attrs);
+    }
+
+    public Chip(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context, attrs);
+    }
 
     public void setChipListener(ChipListener listener) {
         this.listener = listener;
     }
 
-    public Chip(Context context) {
-        super(context);
-        init();
+    private void init(Context context, AttributeSet attrs) {
+        DisplayMetrics dm = getResources().getDisplayMetrics();
+
+        mLabelColor = ContextCompat.getColor(context, R.color.swtor_blue);
+        mLabelColorSelected = ContextCompat.getColor(context, R.color.swtor_blue_dark);
+
+        // Default padding
+        if (getPaddingLeft() == 0
+                || getPaddingRight() == 0
+                || getPaddingBottom() == 0
+                || getPaddingTop() == 0) {
+            int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, dm);
+            setPadding(padding, padding, padding, padding);
+        }
+
+        setOnClickListener(this);
     }
 
-    public Chip(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
-    }
-
-    public Chip(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init();
-    }
-
-    public void initChip(Context context, int index, String label, int selectedColor, int selectedFontColor, int unselectedColor, int unselectedFontColor, ChipCloud.Mode mode) {
+    public void initChip(Context context, int index, String label, int mLabelColorSelected, int mFontColorSelected, int mLabelColor, int mFontColor, ChipCloud.Mode mode) {
 
         this.index = index;
-        this.selectedFontColor = selectedFontColor;
-        this.unselectedFontColor = unselectedFontColor;
+        this.mFontColor = mFontColor;
+        this.mFontColorSelected = mFontColorSelected;
+        this.mLabelColor = mLabelColor;
+        this.mLabelColorSelected = mLabelColorSelected;
         this.mode = mode;
-
-        Drawable selectedDrawable = ContextCompat.getDrawable(context, R.drawable.chip_selected);
-
-        if (selectedColor == -1) {
-            selectedDrawable.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(context, R.color.swtor_blue_dark), PorterDuff.Mode.MULTIPLY));
-        } else {
-            selectedDrawable.setColorFilter(new PorterDuffColorFilter(selectedColor, PorterDuff.Mode.MULTIPLY));
-        }
-
-        if (selectedFontColor == -1) {
-            this.selectedFontColor = ContextCompat.getColor(context, R.color.white);
-        }
-
-        Drawable unselectedDrawable = ContextCompat.getDrawable(context, R.drawable.chip_selected);
-        if (unselectedColor == -1) {
-            unselectedDrawable.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(context, R.color.swtor_blue), PorterDuff.Mode.MULTIPLY));
-        } else {
-            unselectedDrawable.setColorFilter(new PorterDuffColorFilter(unselectedColor, PorterDuff.Mode.MULTIPLY));
-        }
-
-        if (unselectedFontColor == -1) {
-            this.unselectedFontColor = ContextCompat.getColor(context, R.color.white);
-        }
-
-        Drawable backgrounds[] = new Drawable[2];
-        backgrounds[0] = unselectedDrawable;
-        backgrounds[1] = selectedDrawable;
-
-        //crossfader = new TransitionDrawable(backgrounds);
 
         //Bug reported on KitKat where padding was removed, so we read the padding values then set again after setting background
         int leftPad = getPaddingLeft();
@@ -82,67 +95,100 @@ public class Chip extends TextView implements View.OnClickListener {
         int rightPad = getPaddingRight();
         int bottomPad = getPaddingBottom();
 
-        //setBackgroundCompat(crossfader);
-
         setPadding(leftPad, topPad, rightPad, bottomPad);
 
         setText(label);
-        unselect();
+        setTextColor(mFontColor);
+        setSelected(false);
+    }
+
+    /**
+     * Sets the label color.
+     * @param color The color of the label
+     */
+    public void setLabelColor(int color) {
+        labelPaint.setColor(color);
+    }
+
+    /**
+     * Sets the corner radius on the label. By default the corner radius is 1/20th of the
+     * labels width.
+     * @param cornerRadius The radius of each corner
+     */
+    public void setCornerRadius(float cornerRadius) {
+        this.cornerRadius = cornerRadius;
+    }
+
+    /**
+     * Sets if its selected or not
+     */
+    public void setSelected(boolean checked) {
+        mIsSelected = checked;
+        if (mIsSelected) {
+            setLabelColor(mLabelColorSelected);
+        } else if (!mIsSelected) {
+            setLabelColor(mLabelColor);
+        }
+
+        requestLayout();
+        invalidate();
+    }
+    /**
+     * gets if its selected or not
+     */
+    public boolean getSelected() {
+        return mIsSelected;
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        labelBounds.left = 0;
+        labelBounds.right = getMeasuredWidth();
+        labelBounds.top = 0;
+        labelBounds.bottom = getMeasuredHeight();
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        if (cornerRadius == Integer.MIN_VALUE) {
+            drawLabel(canvas, getWidth()/20);
+        } else {
+            drawLabel(canvas, cornerRadius);
+        }
+        super.onDraw(canvas);
+    }
+
+    private void drawLabel(Canvas canvas, float cornerRadius) {
+        canvas.drawRoundRect(labelBounds, cornerRadius, cornerRadius, labelPaint);
     }
 
     public void setLocked(boolean isLocked) {
         this.isLocked = isLocked;
     }
 
-    private void init() {
-        setOnClickListener(this);
-    }
-
+    /**
+     * Sets the view's onclick.
+     */
     @Override
     public void onClick(View v) {
         if (mode != ChipCloud.Mode.NONE)
-            if (selected && !isLocked) {
+            if (mIsSelected && !isLocked) {
                 //set as unselected
-                unselect();
+                setSelected(false);
                 if (listener != null) {
                     listener.chipDeselected(index);
                 }
-            } else if (!selected) {
+            } else if (!mIsSelected) {
                 //set as selected
 
-                setTextColor(selectedFontColor);
+                setSelected(true);
                 if (listener != null) {
                     listener.chipSelected(index);
                 }
             }
 
-        selected = !selected;
-    }
-
-    public void select() {
-        selected = true;
-        setTextColor(selectedFontColor);
-        if (listener != null) {
-            listener.chipSelected(index);
-        }
-    }
-
-    private void unselect() {
-        setTextColor(unselectedFontColor);
-    }
-
-    @SuppressWarnings("deprecation")
-    private void setBackgroundCompat(Drawable background) {
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-            setBackgroundDrawable(background);
-        } else {
-            setBackground(background);
-        }
-    }
-
-    public void deselect() {
-        unselect();
-        selected = false;
+        mIsSelected = !mIsSelected;
     }
 
     public static class ChipBuilder {
@@ -211,4 +257,3 @@ public class Chip extends TextView implements View.OnClickListener {
         }
     }
 }
-

@@ -137,7 +137,6 @@
                 android:layout_marginRight="@dimen/dim_10"
                 android:layout_marginLeft="@dimen/dim_10"
                 android:padding="@dimen/dim_5"
-                android:background="@color/white"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -145,64 +144,31 @@
                     android:layout_width="@dimen/fab_mini"
                     android:layout_height="@dimen/fab_mini"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_filter"
-                    android:tint="@color/swtor_blue" />
+                    android:src="@drawable/ic_filter" />
 
                 <TextView
                     android:id="@+id/serverPopulation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/dim_10"
+                    android:layout_gravity="center"
                     android:text="Filter By"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:fontFamily="sans-serif"/>
 
-                <com.stryksta.swtorcentral.ui.views.TextViewLabel
-                    android:id="@+id/txtLabel"
-                    android:layout_width="wrap_content"
+                <com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud
+                    xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/chip_cloud"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/dim_5"
-                    android:text="Planet"
-                    android:textSize="14sp"
-                    android:textColor="#FFF"
-                    app:labelColor="@color/swtor_blue"
-                    app:labelColorSelected="@color/swtor_blue_dark"/>
-
-                <com.stryksta.swtorcentral.ui.views.TextViewLabel
-                    android:id="@+id/txtLabel2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/dim_5"
-                    android:text="Locations"
-                    android:textSize="14sp"
-                    android:textColor="#FFF"
-                    app:labelColor="@color/swtor_blue"
-                    app:labelColorSelected="@color/swtor_blue_dark"/>
-
-                <com.stryksta.swtorcentral.ui.views.TextViewLabel
-                    android:id="@+id/txtLabel3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lore"
-                    android:textSize="14sp"
-                    android:textColor="#FFF"
-                    app:labelColor="@color/swtor_blue"
-                    app:labelColorSelected="@color/swtor_blue_dark"/>
+                    chipcloud:deselectedColor="@color/swtor_blue"
+                    chipcloud:deselectedFontColor="@color/white"
+                    chipcloud:selectedColor="@color/swtor_blue_dark"
+                    chipcloud:selectedFontColor="@color/white"
+                    chipcloud:selectMode="required"/>
 
             </LinearLayout>
-
-
-            <com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud
-                xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/chip_cloud"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                chipcloud:deselectedColor="@color/swtor_blue"
-                chipcloud:deselectedFontColor="@color/white"
-                chipcloud:selectedColor="@color/swtor_blue_dark"
-                chipcloud:selectedFontColor="@color/white"
-                chipcloud:selectMode="required"/>
 
             <LinearLayout
                 android:layout_height="13dp"

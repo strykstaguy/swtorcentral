@@ -42,8 +42,14 @@ public class TestActivity extends AppCompatActivity {
         }
 
         ChipCloud chipCloud = (ChipCloud) findViewById(R.id.chip_cloud);
-        chipCloud.addChip("Foo");
-        chipCloud.addChip("Bar");
+        chipCloud.addChip("Planets");
+        chipCloud.addChip("Lore");
+        chipCloud.addChip("Datacrons");
+        chipCloud.addChip("Epic Enemies");
+        chipCloud.addChip("Titles");
+        chipCloud.addChip("Bestiary");
+        chipCloud.addChip("Lost Knowledge");
+        chipCloud.addChip("Persons of Note");
         /*
         txtLabel = (TextViewLabel) findViewById(R.id.txtLabel);
         txtLabel.setOnClickListener(new View.OnClickListener() {

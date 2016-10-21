@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="24"
     density="420dpi"
     format="8"
-    plugin-version="2.2.1"
-    timestamp="675503769705343"
-    token="-5267623122052274636"
-    verifier="FIELD_REMOVED" >
+    plugin-version="2.2.2"
+    timestamp="8972384515908"
+    token="-448831534808878596"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="29458" />
+        duration="5082" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="125" />
+        duration="2752" />
     <task
         name="verifier"
-        duration="56" />
+        duration="1916" />
 
     <artifact
-        location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
-        type="DEX" />
+        location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="672737016757215"
+        timestamp="8972384515908"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\e9900375\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="675503769705343"
-        verifier="FIELD_REMOVED" >
-        <artifact
-            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

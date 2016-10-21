@@ -93,7 +93,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
     this.mode = mode;
     for (int i = 0; i < getChildCount(); i++) {
       Chip chip = (Chip) getChildAt(i);
-      chip.deselect();
+      chip.setSelected(false);
       chip.setLocked(false);
     }
   }
@@ -125,7 +125,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
 
   public void setSelectedChip(int index) {
     Chip chip = (Chip) getChildAt(index);
-    chip.select();
+      chip.setSelected(true);
     if(mode == Mode.REQUIRED){
       for (int i = 0; i < getChildCount(); i++) {
         Chip chipp = (Chip) getChildAt(i);
@@ -148,7 +148,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
           if (i == index) {
             if(mode == Mode.REQUIRED) chip.setLocked(true);
           }else{
-            chip.deselect();
+              chip.setSelected(false);
             chip.setLocked(false);
           }
         }
