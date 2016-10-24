@@ -135,6 +135,7 @@
         <attr name="deselectedFontColor" format="color" />
         <attr name="selectedColor" format="color" />
         <attr name="selectedFontColor" format="color" />
+        <attr name="cornerRadius" format="dimension"/>
         <attr name="selectMode">
             <enum name="single" value="0" />
             <enum name="multi" value="1" />

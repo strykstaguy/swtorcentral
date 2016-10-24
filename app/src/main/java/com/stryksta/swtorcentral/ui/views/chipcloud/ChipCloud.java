@@ -17,6 +17,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
   private int selectedFontColor = -1;
   private int unselectedColor = -1;
   private int unselectedFontColor = -1;
+  private float cornerRadius = 0;
   private Mode mode = Mode.SINGLE;
 
   private ChipListener chipListener;
@@ -38,6 +39,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
       selectedFontColor = a.getColor(R.styleable.ChipCloud_selectedFontColor, -1);
       unselectedColor = a.getColor(R.styleable.ChipCloud_deselectedColor, -1);
       unselectedFontColor = a.getColor(R.styleable.ChipCloud_deselectedFontColor, -1);
+      cornerRadius = a.getDimension(R.styleable.ChipCloud_cornerRadius, 0);
       int selectMode = a.getInt(R.styleable.ChipCloud_selectMode, 1);
       switch(selectMode){
         case 0:
@@ -81,6 +83,10 @@ public class ChipCloud extends FlowLayout implements ChipListener {
     this.selectedFontColor = selectedFontColor;
   }
 
+    public void setCornerRadius(float cornerRadius) {
+        this.cornerRadius = cornerRadius;
+    }
+
   public void setUnselectedColor(int unselectedColor) {
     this.unselectedColor = unselectedColor;
   }
@@ -115,6 +121,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
         .selectedFontColor(selectedFontColor)
         .unselectedColor(unselectedColor)
         .unselectedFontColor(unselectedFontColor)
+        .cornerRadius(cornerRadius)
         .chipHeight(chipHeight)
         .chipListener(this)
         .mode(mode)
@@ -138,7 +145,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
     }
   }
 
-  @Override public void chipSelected(int index) {
+  @Override public void chipSelected(int index, String text) {
 
     switch(mode){
       case SINGLE:
@@ -158,7 +165,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
     }
 
     if (chipListener != null) {
-      chipListener.chipSelected(index);
+      chipListener.chipSelected(index, text);
     }
   }
 
@@ -183,6 +190,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
     private int selectedFontColor = -1;
     private int deselectedColor = -1;
     private int deselectedFontColor = -1;
+    private float chipCornerRadius = 0;
     private Mode mode = null;
     private String[] labels = null;
     private ChipListener chipListener;
@@ -196,6 +204,11 @@ public class ChipCloud extends FlowLayout implements ChipListener {
       this.mode = mode;
       return this;
     }
+
+    public Configure cornerRadius(float chipCornerRadius) {
+        this.chipCornerRadius = chipCornerRadius;
+        return this;
+      }
 
     public Configure selectedColor(int selectedColor) {
       this.selectedColor = selectedColor;
@@ -233,6 +246,7 @@ public class ChipCloud extends FlowLayout implements ChipListener {
       if(selectedFontColor != -1) chipCloud.setSelectedFontColor(selectedFontColor);
       if(deselectedColor != -1) chipCloud.setUnselectedColor(deselectedColor);
       if(deselectedFontColor != -1) chipCloud.setUnselectedFontColor(deselectedFontColor);
+      chipCloud.setCornerRadius(chipCornerRadius);
       chipCloud.setChipListener(chipListener);
       chipCloud.addChips(labels);
     }

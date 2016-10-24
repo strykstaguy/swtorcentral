@@ -166,6 +166,7 @@
                     chipcloud:deselectedFontColor="@color/white"
                     chipcloud:selectedColor="@color/swtor_blue_dark"
                     chipcloud:selectedFontColor="@color/white"
+                    chipcloud:cornerRadius="2dp"
                     chipcloud:selectMode="required"/>
 
             </LinearLayout>

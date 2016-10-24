@@ -37,6 +37,8 @@ public class Chip extends TextView implements View.OnClickListener{
     private int mFontColor = DEFAULT_FONT_COLOR;
     private int mFontColorSelected = DEFAULT_FONT_SELECTED_COLOR;
 
+    private String mText;
+
     private int index = -1;
     private boolean mIsSelected = false;
     private ChipListener listener = null;
@@ -80,7 +82,7 @@ public class Chip extends TextView implements View.OnClickListener{
         setOnClickListener(this);
     }
 
-    public void initChip(Context context, int index, String label, int mLabelColorSelected, int mFontColorSelected, int mLabelColor, int mFontColor, ChipCloud.Mode mode) {
+    public void initChip(Context context, int index, String mText, int mLabelColorSelected, int mFontColorSelected, int mLabelColor, int mFontColor, ChipCloud.Mode mode) {
 
         this.index = index;
         this.mFontColor = mFontColor;
@@ -88,16 +90,20 @@ public class Chip extends TextView implements View.OnClickListener{
         this.mLabelColor = mLabelColor;
         this.mLabelColorSelected = mLabelColorSelected;
         this.mode = mode;
+        this.mText = mText;
 
-        //Bug reported on KitKat where padding was removed, so we read the padding values then set again after setting background
-        int leftPad = getPaddingLeft();
-        int topPad = getPaddingTop();
-        int rightPad = getPaddingRight();
-        int bottomPad = getPaddingBottom();
+        DisplayMetrics dm = getResources().getDisplayMetrics();
 
-        setPadding(leftPad, topPad, rightPad, bottomPad);
+        // Default padding
+        if (getPaddingLeft() == 0
+                || getPaddingRight() == 0
+                || getPaddingBottom() == 0
+                || getPaddingTop() == 0) {
+            int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, dm);
+            setPadding(padding, padding, padding, padding);
+        }
 
-        setText(label);
+        setText(mText);
         setTextColor(mFontColor);
         setSelected(false);
     }
@@ -138,6 +144,13 @@ public class Chip extends TextView implements View.OnClickListener{
      */
     public boolean getSelected() {
         return mIsSelected;
+    }
+
+    /**
+     * Return Text
+     */
+    public String getText() {
+         return mText;
     }
 
     @Override
@@ -184,7 +197,7 @@ public class Chip extends TextView implements View.OnClickListener{
 
                 setSelected(true);
                 if (listener != null) {
-                    listener.chipSelected(index);
+                    listener.chipSelected(index, mText);
                 }
             }
 
@@ -193,18 +206,24 @@ public class Chip extends TextView implements View.OnClickListener{
 
     public static class ChipBuilder {
         private int index;
-        private String label;
+        private String mText;
         private int selectedColor;
         private int selectedFontColor;
         private int unselectedColor;
         private int unselectedFontColor;
         private int chipHeight;
+        private float chipCornerRadius;
 
         private ChipListener chipListener;
         private ChipCloud.Mode mode;
 
         public ChipBuilder index(int index) {
             this.index = index;
+            return this;
+        }
+
+        public ChipBuilder cornerRadius(float chipCornerRadius) {
+            this.chipCornerRadius = chipCornerRadius;
             return this;
         }
 
@@ -228,8 +247,8 @@ public class Chip extends TextView implements View.OnClickListener{
             return this;
         }
 
-        public ChipBuilder label(String label) {
-            this.label = label;
+        public ChipBuilder label(String mText) {
+            this.mText = mText;
             return this;
         }
 
@@ -249,8 +268,10 @@ public class Chip extends TextView implements View.OnClickListener{
         }
 
         public Chip build(Context context) {
-            Chip chip = (Chip) LayoutInflater.from(context).inflate(R.layout.chip, null);
-            chip.initChip(context, index, label, selectedColor, selectedFontColor, unselectedColor, unselectedFontColor, mode);
+            //Chip chip = (Chip) LayoutInflater.from(context).inflate(R.layout.chip, null);
+            Chip chip = new Chip(context);
+            chip.initChip(context, index, mText, selectedColor, selectedFontColor, unselectedColor, unselectedFontColor, mode);
+            chip.setCornerRadius(chipCornerRadius);
             chip.setChipListener(chipListener);
             chip.setHeight(chipHeight);
             return chip;

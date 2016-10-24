@@ -15,6 +15,7 @@ import com.stryksta.swtorcentral.R;
 
 import com.stryksta.swtorcentral.ui.views.TextViewLabel;
 import com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud;
+import com.stryksta.swtorcentral.ui.views.chipcloud.ChipListener;
 
 public class TestActivity extends AppCompatActivity {
     private Toolbar mToolbar;
@@ -50,6 +51,18 @@ public class TestActivity extends AppCompatActivity {
         chipCloud.addChip("Bestiary");
         chipCloud.addChip("Lost Knowledge");
         chipCloud.addChip("Persons of Note");
+        chipCloud.setChipListener(new ChipListener() {
+            @Override
+            public void chipSelected(int index, String text) {
+                Toast.makeText(getApplicationContext(), "Button Press!" + text, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void chipDeselected(int index) {
+
+            }
+        });
+
         /*
         txtLabel = (TextViewLabel) findViewById(R.id.txtLabel);
         txtLabel.setOnClickListener(new View.OnClickListener() {
