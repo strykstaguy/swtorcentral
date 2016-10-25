@@ -54,7 +54,7 @@ public class TestActivity extends AppCompatActivity {
         chipCloud.setChipListener(new ChipListener() {
             @Override
             public void chipSelected(int index, String text) {
-                Toast.makeText(getApplicationContext(), "Button Press!" + text, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
             }
 
             @Override

@@ -132,8 +132,10 @@ public class Chip extends TextView implements View.OnClickListener{
         mIsSelected = checked;
         if (mIsSelected) {
             setLabelColor(mLabelColorSelected);
+            setTextColor(mFontColorSelected);
         } else if (!mIsSelected) {
             setLabelColor(mLabelColor);
+            setTextColor(mFontColor);
         }
 
         requestLayout();

@@ -49,8 +49,8 @@ public class CodexDatabase extends SQLiteAssetHelper {
     }
 */
 
-    public  ArrayList<FilterItem> getCategories() {
-        ArrayList<FilterItem> categoryItem = new ArrayList<>();
+    public  ArrayList<String> getCategories() {
+        ArrayList<String> categoryItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
         @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
@@ -64,12 +64,12 @@ public class CodexDatabase extends SQLiteAssetHelper {
                 .toString();
         Cursor c = db.rawQuery(sqlSelect, null);
 
-        categoryItem.add(new FilterItem("All"));
+        categoryItem.add("All");
 
         if (c.moveToFirst()) {
             do {
                 String cdxCategory = c.getString(c.getColumnIndex("cdxCategory"));
-                categoryItem.add(new FilterItem(cdxCategory));
+                categoryItem.add(cdxCategory);
             } while (c.moveToNext());
         }
         c.close();
@@ -77,7 +77,7 @@ public class CodexDatabase extends SQLiteAssetHelper {
         return categoryItem;
     }
 
-    public ArrayList<CodexItem> getCodexes(String category, String faction) {
+    public ArrayList<CodexItem> getCodexes(String category) {
         ArrayList<CodexItem> categoryItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
@@ -92,25 +92,6 @@ public class CodexDatabase extends SQLiteAssetHelper {
         if (category != "All") {
             queryBuilder.append("WHERE codexes.cdxCategory = '" + category + "' ");
         }
-
-        //If Faction isn't all, include in query
-        if (faction != "All") {
-            //If Category isn't all then it should be a WHERE, or else it's AND
-            if (category != "All") {
-                queryBuilder.append("AND codexes.cdxFaction = '" + faction + "' ");
-            } else {
-                queryBuilder.append("WHERE codexes.cdxFaction = '" + faction + "' ");
-            }
-        }
-
-        //If both are all set to and not where
-        if (category == "All" && faction == "All") {
-            queryBuilder.append("WHERE codexes.cdxTitle GLOB '*[A-Za-z]*' ");
-        } else {
-            queryBuilder.append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ");
-        }
-
-
 
         queryBuilder.append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC");
         String sqlSelect = queryBuilder.toString();

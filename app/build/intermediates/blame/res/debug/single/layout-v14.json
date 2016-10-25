@@ -1,14 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\layout-v14\\md_stub_progress.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress_indeterminate.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\layout-v14\\md_stub_progress_indeterminate.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress_indeterminate.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\layout-v14\\md_stub_progress_indeterminate.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\layout-v14\\md_stub_progress.xml"
     },
     {
-        "merged": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress_indeterminate_horizontal.xml",
-        "source": "C:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\layout-v14\\md_stub_progress_indeterminate_horizontal.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\md_stub_progress_indeterminate_horizontal.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\layout-v14\\md_stub_progress_indeterminate_horizontal.xml"
     }
 ]
