@@ -1,118 +1,173 @@
 package com.stryksta.swtorcentral.ui.views.chipcloud;
 
 import android.content.Context;
-import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * @author RAW
- */
+@SuppressWarnings({"UnnecessaryInterfaceModifier", "unused"})
 public class FlowLayout extends ViewGroup {
 
-  private int line_height;
 
-  public static class LayoutParams extends ViewGroup.LayoutParams {
+    protected int mHorizontalGap;
+    protected int mVerticalGap;
 
-    public final int horizontal_spacing;
-    public final int vertical_spacing;
+    protected int mMaxLines = -1;
+    protected int mMeasuredLines;
 
-    /**
-     * @param horizontal_spacing Pixels between items, horizontally
-     * @param vertical_spacing Pixels between items, vertically
-     */
-    public LayoutParams(int horizontal_spacing, int vertical_spacing) {
-      super(0, 0);
-      this.horizontal_spacing = horizontal_spacing;
-      this.vertical_spacing = vertical_spacing;
-    }
-  }
-
-  public FlowLayout(Context context) {
-    super(context);
-  }
-
-  public FlowLayout(Context context, AttributeSet attrs) {
-    super(context, attrs);
-  }
-
-  @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-    assert (MeasureSpec.getMode(widthMeasureSpec) != MeasureSpec.UNSPECIFIED);
-
-    final int width = MeasureSpec.getSize(widthMeasureSpec) - getPaddingLeft() - getPaddingRight();
-    int height = MeasureSpec.getSize(heightMeasureSpec) - getPaddingTop() - getPaddingBottom();
-    final int count = getChildCount();
-    int line_height = 0;
-
-    int xpos = getPaddingLeft();
-    int ypos = getPaddingTop();
-
-    int childHeightMeasureSpec;
-    if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.AT_MOST) {
-      childHeightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.AT_MOST);
-    } else {
-      childHeightMeasureSpec = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
+    public FlowLayout(Context context) {
+        super(context);
+        init(context, null);
     }
 
-    for (int i = 0; i < count; i++) {
-      final View child = getChildAt(i);
-      if (child.getVisibility() != GONE) {
-        final LayoutParams lp = (LayoutParams) child.getLayoutParams();
-        child.measure(MeasureSpec.makeMeasureSpec(width, MeasureSpec.AT_MOST),
-            childHeightMeasureSpec);
-        final int childw = child.getMeasuredWidth();
-        line_height = Math.max(line_height, child.getMeasuredHeight() + lp.vertical_spacing);
+    public FlowLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context, attrs);
+    }
 
-        if (xpos + childw > width) {
-          xpos = getPaddingLeft();
-          ypos += line_height;
+    public FlowLayout(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        init(context, attrs);
+    }
+
+    protected void init(Context context, AttributeSet attrs) {
+        if (attrs != null) {
+            mHorizontalGap = 10;
+            mVerticalGap = 10;
+            mMaxLines = -1;
+        }
+    }
+
+    public int getMaxLines() {
+        return mMaxLines;
+    }
+
+    public void setMaxLines(int maxLines) {
+        if (mMaxLines == maxLines) {
+            return;
+        }
+        mMaxLines = maxLines;
+        this.requestLayout();
+        this.invalidate();
+    }
+
+    public int getMeasuredLines() {
+        return mMeasuredLines;
+    }
+
+    public void setMeasuredLines(int measuredLines) {
+        mMeasuredLines = measuredLines;
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int w = MeasureSpec.getSize(widthMeasureSpec) - getPaddingLeft() - getPaddingRight();
+        int h = MeasureSpec.getSize(heightMeasureSpec) - getPaddingTop() - getPaddingBottom();
+        int childHeightMeasureSpec;
+        if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.AT_MOST) {
+            childHeightMeasureSpec = MeasureSpec.makeMeasureSpec(h, MeasureSpec.AT_MOST);
+        } else {
+            childHeightMeasureSpec = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
+        }
+        int x = getPaddingLeft();
+        int y = getPaddingTop();
+        int rowHeight = 0;
+        int maxHeight = 0;
+        int lines = 1;
+        boolean linesInvalidate = false;
+        for (int i = 0, size = this.getChildCount(); i < size; i++) {
+            View child = getChildAt(i);
+            if (child.getVisibility() == View.GONE) {
+                continue;
+            }
+            if (linesInvalidate) {
+                linesInvalidate = false;
+                rowHeight = 0;
+            }
+            child.measure(MeasureSpec.makeMeasureSpec(w, MeasureSpec.AT_MOST), childHeightMeasureSpec);
+            rowHeight = Math.max(rowHeight, child.getMeasuredHeight() + mVerticalGap);
+            if (x + child.getMeasuredWidth() > w) {
+                if (x > getPaddingLeft()) {
+                    x = getPaddingLeft();
+                    y += rowHeight;
+                    if (lines == mMaxLines) {
+                        maxHeight = y;
+                    }
+                    lines++;
+                    linesInvalidate = true;
+                }
+            }
+            LayoutParams lp = (LayoutParams) child.getLayoutParams();
+            lp.mX = x;
+            lp.mY = y;
+            x += child.getMeasuredWidth() + mHorizontalGap;
+        }
+        if (maxHeight != 0) {// 固定高度
+            h = maxHeight;
+        } else {
+            if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.UNSPECIFIED) {
+                h = y + rowHeight;
+            } else if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.AT_MOST) {
+                if (y + rowHeight < h) {
+                    h = y + rowHeight;
+                }
+            }
+        }
+        setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), h + getPaddingBottom());
+        if (mMeasuredLines != lines) {
+            mMeasuredLines = lines;
+        }
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        for (int i = this.getChildCount() - 1; i >= 0; i--) {
+            View child = this.getChildAt(i);
+            if (child.getVisibility() == View.GONE) {
+                continue;
+            }
+            LayoutParams lp = (LayoutParams) child.getLayoutParams();
+            child.layout(lp.mX, lp.mY, lp.mX + child.getMeasuredWidth(), lp.mY + child.getMeasuredHeight());
+        }
+    }
+
+    @Override
+    protected boolean checkLayoutParams(android.view.ViewGroup.LayoutParams p) {
+        return p != null && (p instanceof LayoutParams);
+    }
+
+    @Override
+    protected LayoutParams generateDefaultLayoutParams() {
+        return new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+    }
+
+    @Override
+    public LayoutParams generateLayoutParams(AttributeSet attrs) {
+        return new LayoutParams(getContext(), attrs);
+    }
+
+    @Override
+    protected LayoutParams generateLayoutParams(android.view.ViewGroup.LayoutParams p) {
+        return new LayoutParams(p.width, p.height);
+    }
+
+    public static class LayoutParams extends ViewGroup.LayoutParams {
+
+        protected int mX;
+        protected int mY;
+
+        public LayoutParams(Context c, AttributeSet attrs) {
+            super(c, attrs);
         }
 
-        xpos += childw + lp.horizontal_spacing;
-      }
-    }
-    this.line_height = line_height;
-
-    if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.UNSPECIFIED || (MeasureSpec.getMode(
-        heightMeasureSpec) == MeasureSpec.AT_MOST && ypos + line_height < height)) {
-      height = ypos + line_height;
-    }
-    setMeasuredDimension(width, height);
-  }
-
-  @Override protected ViewGroup.LayoutParams generateDefaultLayoutParams() {
-    return new LayoutParams(dpToPx(7), dpToPx(7));
-  }
-
-  public static int dpToPx(int dp) {
-    return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
-  }
-
-  @Override protected boolean checkLayoutParams(ViewGroup.LayoutParams p) {
-    return p instanceof LayoutParams;
-  }
-
-  @Override protected void onLayout(boolean changed, int l, int t, int r, int b) {
-    final int count = getChildCount();
-    final int width = r - l;
-    int xpos = getPaddingLeft();
-    int ypos = getPaddingTop();
-
-    for (int i = 0; i < count; i++) {
-      final View child = getChildAt(i);
-      if (child.getVisibility() != GONE) {
-        final int childw = child.getMeasuredWidth();
-        final int childh = child.getMeasuredHeight();
-        final LayoutParams lp = (LayoutParams) child.getLayoutParams();
-        if (xpos + childw > width) {
-          xpos = getPaddingLeft();
-          ypos += line_height;
+        public LayoutParams(int width, int height) {
+            super(width, height);
         }
-        child.layout(xpos, ypos, xpos + childw, ypos + childh);
-        xpos += childw + lp.horizontal_spacing;
-      }
+
+        public LayoutParams(LayoutParams source) {
+            super(source);
+        }
     }
-  }
+
 }
-

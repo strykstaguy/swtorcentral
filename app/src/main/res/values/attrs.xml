@@ -144,4 +144,5 @@
         </attr>
         <attr name="labels" format="reference"/>
     </declare-styleable>
+
 </resources>
