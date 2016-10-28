@@ -84,6 +84,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.qozix\tileview\2.2.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="32b0023f00ad6cf94b375e9ca0fb4bfffb3d3265">
+        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.qozix-tileview-2.2.3_e13d5b8d99e76fdbcf5626608a895a7220e0064b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.afollestad.material-dialogs\core\0.9.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -99,15 +108,6 @@
         revision="24.0.2"
         sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_4b0d8d765f41e20b054f1d63765a147ed73ac18c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\exploded-aar\com.github.hackware1993\MagicIndicator\1.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="140c169cf5062f0711a4848071b3f69ca3af84ca">
-        <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.hackware1993-MagicIndicator-1.4.0_7dff4ac5d1744b8d7f27f86bce63948863a53ed4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -133,7 +133,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="1310d913480fd895723f33c874a2db185740749d">
+        sha1="368cb0e9b37fd7eeccdbcbb5852eebd7f809eecd">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4b3eb8b4bacebd2e4ee265922edcf9cc9f65a0db\classes.dex" />
     </item>
     <item
@@ -196,7 +196,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="25b66535153da1a85595f050867e391f4cd5ad42">
+        sha1="4c3a03b28a8068010d09d5dcabc48ac0240a108d">
         <dex dex="C:\Users\e9900375\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_829e3bc3836d7070112dba4caa272c9d5d83d2cd\classes.dex" />
     </item>
     <item

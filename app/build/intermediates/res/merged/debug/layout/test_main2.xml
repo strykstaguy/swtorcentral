@@ -135,48 +135,15 @@
                 android:background="@drawable/cardview_background_bottom">
             </LinearLayout>
 
-
-            <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
-                android:id="@+id/timeline1"
-                android:layout_width="30dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="25dp"
+            <LinearLayout
+                android:id="@+id/mapTython"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
                 android:layout_gravity="center_horizontal"
-                app:firstColor="@color/md_grey_600"
-                app:firstSize="15"
-                app:lastColor="@color/md_grey_600"
-                app:lastSize="15"
-                app:lineColor="@color/md_grey_600"
-                app:lineWidth="10dp"
-                app:middleColor="@color/md_grey_600"
-                app:middleSize="0"
-                app:timeline_type="line" />
+                android:layout_margin="@dimen/dim_10">
+            </LinearLayout>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="145dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="2dp"
-                app:cardPreventCornerOverlap="false">
-
-            </android.support.v7.widget.CardView>
-
-            <com.stryksta.swtorcentral.ui.views.timeline.RoundTimelineView
-                android:id="@+id/timeline2"
-                android:layout_width="30dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="-3dp"
-                android:layout_gravity="center_horizontal"
-                app:firstColor="@color/md_grey_600"
-                app:firstSize="15"
-                app:lastColor="@color/md_grey_600"
-                app:lastSize="15"
-                app:lineColor="@color/md_grey_600"
-                app:lineWidth="10dp"
-                app:middleColor="@color/md_grey_600"
-                app:middleSize="0"
-                app:timeline_type="line" />
         </LinearLayout>
 
 
