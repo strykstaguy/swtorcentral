@@ -21,7 +21,7 @@ import com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud;
 import com.stryksta.swtorcentral.ui.views.chipcloud.ChipListener;
 
 public class Chip extends TextView implements View.OnClickListener{
-    private float cornerRadius = Integer.MIN_VALUE;
+    private float cornerRadius = 0;
     private RectF labelBounds = new RectF();
     private Paint labelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
@@ -67,8 +67,14 @@ public class Chip extends TextView implements View.OnClickListener{
     private void init(Context context, AttributeSet attrs) {
         DisplayMetrics dm = getResources().getDisplayMetrics();
 
-        mLabelColor = ContextCompat.getColor(context, R.color.swtor_blue);
-        mLabelColorSelected = ContextCompat.getColor(context, R.color.swtor_blue_dark);
+        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.Chip, 0, 0);
+
+        mLabelColor = a.getColor(R.styleable.Chip_chipLabelColor, ContextCompat.getColor(context, R.color.swtor_blue));
+        mLabelColorSelected = a.getColor(R.styleable.Chip_chipLabelSelectedColor, ContextCompat.getColor(context, R.color.swtor_blue_dark));
+        mFontColor = a.getColor(R.styleable.Chip_chipLabelFontColor, ContextCompat.getColor(context, R.color.white));
+        mFontColorSelected = a.getColor(R.styleable.Chip_chipLabelSelectedFontColor, ContextCompat.getColor(context, R.color.white));
+        cornerRadius = a.getDimension(R.styleable.Chip_chipCornerRadius, 0);
+
 
         // Default padding
         if (getPaddingLeft() == 0

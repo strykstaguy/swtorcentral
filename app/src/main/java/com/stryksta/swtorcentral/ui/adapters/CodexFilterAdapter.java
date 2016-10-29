@@ -14,6 +14,7 @@ import com.stryksta.swtorcentral.models.DatacronItem;
 import com.stryksta.swtorcentral.models.FilterItem;
 import com.stryksta.swtorcentral.ui.activities.PlanetActivity;
 import com.stryksta.swtorcentral.ui.views.TextViewLabel;
+import com.stryksta.swtorcentral.ui.views.chipcloud.Chip;
 
 import java.util.ArrayList;
 import java.util.logging.Filter;
@@ -49,11 +50,11 @@ public class CodexFilterAdapter extends RecyclerView.Adapter<CodexFilterAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        public TextViewLabel txtTitle;
+        public Chip txtTitle;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            txtTitle = (TextViewLabel) itemView.findViewById(R.id.txtTitle);
+            txtTitle = (Chip) itemView.findViewById(R.id.txtTitle);
             txtTitle.setOnClickListener(this);
         }
 

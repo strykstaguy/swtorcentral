@@ -4,8 +4,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.WindowManager;
@@ -19,27 +21,29 @@ import com.stryksta.swtorcentral.ui.adapters.CodexAdapter;
 import com.stryksta.swtorcentral.ui.adapters.CodexFilterAdapter;
 import com.stryksta.swtorcentral.ui.adapters.DropMenuAdapter;
 import com.stryksta.swtorcentral.models.CodexItem;
-import com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud;
-import com.stryksta.swtorcentral.ui.views.chipcloud.ChipListener;
 import com.stryksta.swtorcentral.util.database.CodexDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CodexActivity extends AppCompatActivity {
+public class CodexActivity extends AppCompatActivity implements OnFilterDoneListener{
     private Toolbar mToolbar;
 
+    private RecyclerView mFilterRecyclerView;
     private RecyclerView mRecyclerView;
 
     private LinearLayoutManager mLayoutManager;
+    private StaggeredGridLayoutManager mFilterLayoutManager;
 
     private CodexDatabase codexDB;
-    ArrayList<String> cdxCategoryItems;
+    ArrayList<FilterItem> cdxCategoryItems;
     ArrayList<CodexItem> cdxItems;
 
+    String filterCategory;
     String drpFaction;
 
     private CodexAdapter mRecycleAdapter;
+    private CodexFilterAdapter mFilterRecycleAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,32 +72,13 @@ public class CodexActivity extends AppCompatActivity {
         drpFaction = "All";
 
         //Set RecyclerViews
+        mFilterRecyclerView = (RecyclerView) findViewById(R.id.listFilter);
         mRecyclerView = (RecyclerView) findViewById(R.id.listCodexes);
 
         //Get Codex Categories
         codexDB = new CodexDatabase(CodexActivity.this);
         cdxCategoryItems = codexDB.getCategories();
         cdxItems = codexDB.getAllCodexes();
-
-        //String[] mStringArray =  cdxItems.toArray(new String[cdxItems.size()]);
-        ChipCloud chipCloud = (ChipCloud) findViewById(R.id.chip_cloud);
-        for (String mString : cdxCategoryItems) {
-            chipCloud.addChip(mString);
-        }
-
-        chipCloud.setChipListener(new ChipListener() {
-            @Override
-            public void chipSelected(int index, String text) {
-               // Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
-                updateItems(text);
-            }
-
-            @Override
-            public void chipDeselected(int index) {
-
-            }
-        });
-
         //Close DB
         codexDB.close();
 
@@ -103,12 +88,29 @@ public class CodexActivity extends AppCompatActivity {
             mRecyclerView.setLayoutManager(mLayoutManager);
         }
 
+        //Set Filter Adapter
+        if (mFilterRecyclerView != null) {
+            mFilterLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL);
+            mFilterRecyclerView.setLayoutManager(mFilterLayoutManager);
+        }
+
         //Set Codex Adapter
         mRecycleAdapter = new CodexAdapter(cdxItems);
         mRecyclerView.setAdapter(mRecycleAdapter);
+
+        //Set Filter Adapter
+        mFilterRecycleAdapter = new CodexFilterAdapter(cdxCategoryItems, CodexActivity.this);
+        mFilterRecyclerView.setAdapter(mFilterRecycleAdapter);
     }
 
-    public void updateItems(String cdxCategory) {
+    @Override
+    public void onFilterDone(int position, String positionTitle, String urlValue) {
+
+        Toast.makeText(getApplicationContext(), "Postion: " + position + ", Title: " + positionTitle, Toast.LENGTH_SHORT).show();
+        //updateItems(drpCategory, drpFaction);
+    }
+
+    public void updateItems(String cdxCategory, String cdxFaction) {
 
         codexDB = new CodexDatabase(CodexActivity.this);
 

@@ -38,30 +38,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/dim_5"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:fitsSystemWindows="true"
-            android:orientation="horizontal"
-            app:layout_collapseMode="parallax">
+            android:gravity="left"
+            android:layout_marginRight="@dimen/dim_10"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:padding="@dimen/dim_5"
+            android:orientation="horizontal">
 
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-
-            <com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud
-                xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/chip_cloud"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listFilter"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                chipcloud:deselectedColor="@color/swtor_blue_dark"
-                chipcloud:deselectedFontColor="@color/white"
-                chipcloud:selectedColor="@color/white"
-                chipcloud:selectedFontColor="@color/swtor_blue"
-                chipcloud:cornerRadius="2dp"
-                chipcloud:selectMode="none"/>
-</HorizontalScrollView>
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
+
+
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView

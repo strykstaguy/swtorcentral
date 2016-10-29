@@ -3,16 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+              android:layout_margin="@dimen/dim_10"
     android:orientation="horizontal">
 
-    <com.stryksta.swtorcentral.ui.views.TextViewLabel
+    <com.stryksta.swtorcentral.ui.views.chipcloud.Chip
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/dim_5"
         android:text="Achivements: Datacrons"
         android:textSize="14sp"
-        android:textColor="#FFF"
-        app:labelColor="@color/swtor_blue"
-        app:labelColorSelected="@color/swtor_blue_dark"/>
+        app:chipCornerRadius="2dp"
+        app:chipLabelColor="@color/swtor_blue_dark"
+        app:chipLabelSelectedColor="@color/white"
+        app:chipLabelFontColor="@color/white"
+        app:chipLabelSelectedFontColor="@color/swtor_blue"/>
 </LinearLayout>

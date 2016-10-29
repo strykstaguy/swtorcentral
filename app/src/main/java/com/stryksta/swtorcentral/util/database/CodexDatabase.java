@@ -49,8 +49,8 @@ public class CodexDatabase extends SQLiteAssetHelper {
     }
 */
 
-    public  ArrayList<String> getCategories() {
-        ArrayList<String> categoryItem = new ArrayList<>();
+    public  ArrayList<FilterItem> getCategories() {
+        ArrayList<FilterItem> categoryItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
         @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
@@ -64,12 +64,12 @@ public class CodexDatabase extends SQLiteAssetHelper {
                 .toString();
         Cursor c = db.rawQuery(sqlSelect, null);
 
-        categoryItem.add("All");
+        categoryItem.add(new FilterItem("All"));
 
         if (c.moveToFirst()) {
             do {
                 String cdxCategory = c.getString(c.getColumnIndex("cdxCategory"));
-                categoryItem.add(cdxCategory);
+                categoryItem.add(new FilterItem(cdxCategory));
             } while (c.moveToNext());
         }
         c.close();

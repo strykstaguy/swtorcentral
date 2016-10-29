@@ -145,4 +145,12 @@
         <attr name="labels" format="reference"/>
     </declare-styleable>
 
+    <declare-styleable name="Chip">
+        <attr name="chipLabelColor" format="color" />
+        <attr name="chipLabelFontColor" format="color" />
+        <attr name="chipLabelSelectedColor" format="color" />
+        <attr name="chipLabelSelectedFontColor" format="color" />
+        <attr name="chipCornerRadius" format="dimension"/>
+    </declare-styleable>
+
 </resources>

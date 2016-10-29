@@ -47,7 +47,8 @@ public class TestActivity extends AppCompatActivity {
 
         TileView tileView = new TileView( this );
         tileView.setSize( 1024, 1024 );  // the original size of the untiled image
-        tileView.addDetailLevel( 1f, "tiles/tython/tython_%d_%d.png", 256, 256);
+        tileView.addDetailLevel( 1f, "tiles/tython/256/tython_%d_%d.png", 256, 256);
+        tileView.addDetailLevel( 0.500f, "tiles/tython/128/tython_%d_%d.png", 128, 128);
         tileView.setScaleLimits(0, 3);
         tileView.setShouldRenderWhilePanning( true );
         //tileView.setScale( 0.5f );
