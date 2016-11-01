@@ -1,5 +1,6 @@
 package com.stryksta.swtorcentral.ui.adapters;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -23,6 +24,7 @@ public class CodexFilterAdapter extends RecyclerView.Adapter<CodexFilterAdapter.
 
     private ArrayList<FilterItem> cdxItems;
     private OnFilterDoneListener onFilterDoneListener;
+    private int mSelectedPostion = 0;
 
     public CodexFilterAdapter(ArrayList<FilterItem> cdxItems, OnFilterDoneListener onFilterDoneListener) {
         super();
@@ -41,6 +43,12 @@ public class CodexFilterAdapter extends RecyclerView.Adapter<CodexFilterAdapter.
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         FilterItem cdxRow = cdxItems.get(position);
         viewHolder.txtTitle.setText(cdxRow.getTitle());
+
+        if (position == mSelectedPostion) {
+            viewHolder.txtTitle.setSelected(true);
+        } else {
+            viewHolder.txtTitle.setSelected(false);
+        }
     }
 
     @Override
@@ -61,17 +69,17 @@ public class CodexFilterAdapter extends RecyclerView.Adapter<CodexFilterAdapter.
         @Override
         public void onClick(View v) {
             //Toast.makeText(v.getContext(),  String.valueOf(v.getId()), Toast.LENGTH_SHORT).show();
-            if (v.getId() == txtTitle.getId()) {
+            //notifyDataSetChanged();
 
-                if (txtTitle.getSelected()) {
-                    txtTitle.setSelected(false);
-                } else {
-                    txtTitle.setSelected(true);
-                }
-            }
+            int countPos = getAdapterPosition();
+            notifyItemChanged(mSelectedPostion);
+            mSelectedPostion = getLayoutPosition();
+            notifyItemChanged(mSelectedPostion);
+
+            //notifyItemRangeChanged(0, cdxItems.size());
 
 
-            onFilterDone(getAdapterPosition(), cdxItems.get(getAdapterPosition()).getTitle());
+            onFilterDone(countPos, cdxItems.get(countPos).getTitle());
         }
     }
 

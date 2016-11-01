@@ -85,6 +85,8 @@ public class Chip extends TextView implements View.OnClickListener{
             setPadding(padding, padding, padding, padding);
         }
 
+        setTextColor(mFontColor);
+        setSelected(false);
         setOnClickListener(this);
     }
 

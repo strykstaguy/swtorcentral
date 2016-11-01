@@ -468,9 +468,9 @@ public final class R {
 		public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0700a2;
 		public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f0700a3;
 		public static final int item_touch_helper_swipe_escape_velocity = 0x7f0700a4;
-		public static final int notification_large_icon_height = 0x7f0700db;
-		public static final int notification_large_icon_width = 0x7f0700dc;
-		public static final int notification_subtext_size = 0x7f0700dd;
+		public static final int notification_large_icon_height = 0x7f0700dc;
+		public static final int notification_large_icon_width = 0x7f0700dd;
+		public static final int notification_subtext_size = 0x7f0700de;
 	}
 	public static final class drawable {
 		public static final int abc_ab_share_pack_mtrl_alpha = 0x7f020000;

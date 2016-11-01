@@ -21,7 +21,9 @@ import com.stryksta.swtorcentral.ui.adapters.CodexAdapter;
 import com.stryksta.swtorcentral.ui.adapters.CodexFilterAdapter;
 import com.stryksta.swtorcentral.ui.adapters.DropMenuAdapter;
 import com.stryksta.swtorcentral.models.CodexItem;
+import com.stryksta.swtorcentral.ui.views.ItemOffsetDecoration;
 import com.stryksta.swtorcentral.util.database.CodexDatabase;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,17 +102,19 @@ public class CodexActivity extends AppCompatActivity implements OnFilterDoneList
 
         //Set Filter Adapter
         mFilterRecycleAdapter = new CodexFilterAdapter(cdxCategoryItems, CodexActivity.this);
+        mFilterRecyclerView.addItemDecoration(new ItemOffsetDecoration(CodexActivity.this, R.dimen.md_grid_spacing));
         mFilterRecyclerView.setAdapter(mFilterRecycleAdapter);
     }
 
     @Override
     public void onFilterDone(int position, String positionTitle, String urlValue) {
 
-        Toast.makeText(getApplicationContext(), "Postion: " + position + ", Title: " + positionTitle, Toast.LENGTH_SHORT).show();
-        //updateItems(drpCategory, drpFaction);
+        //Toast.makeText(getApplicationContext(), "Postion: " + position + ", Title: " + positionTitle, Toast.LENGTH_SHORT).show();
+        //mFilterRecyclerView.findViewHolderForLayoutPosition(position).itemView.
+        updateItems(positionTitle);
     }
 
-    public void updateItems(String cdxCategory, String cdxFaction) {
+    public void updateItems(String cdxCategory) {
 
         codexDB = new CodexDatabase(CodexActivity.this);
 
