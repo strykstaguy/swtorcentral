@@ -1,5 +1,6 @@
 package com.stryksta.swtorcentral.ui.activities;
 
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -17,35 +18,34 @@ import com.baiiu.filter.DropDownMenu;
 import com.baiiu.filter.interfaces.OnFilterDoneListener;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.models.FilterItem;
+import com.stryksta.swtorcentral.models.ServerItem;
 import com.stryksta.swtorcentral.ui.adapters.CodexAdapter;
 import com.stryksta.swtorcentral.ui.adapters.CodexFilterAdapter;
 import com.stryksta.swtorcentral.ui.adapters.DropMenuAdapter;
 import com.stryksta.swtorcentral.models.CodexItem;
 import com.stryksta.swtorcentral.ui.views.ItemOffsetDecoration;
+import com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud;
+import com.stryksta.swtorcentral.ui.views.chipcloud.ChipListener;
 import com.stryksta.swtorcentral.util.database.CodexDatabase;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CodexActivity extends AppCompatActivity implements OnFilterDoneListener{
+public class CodexActivity extends AppCompatActivity{
     private Toolbar mToolbar;
 
-    private RecyclerView mFilterRecyclerView;
     private RecyclerView mRecyclerView;
 
     private LinearLayoutManager mLayoutManager;
-    private StaggeredGridLayoutManager mFilterLayoutManager;
 
     private CodexDatabase codexDB;
-    ArrayList<FilterItem> cdxCategoryItems;
+    ArrayList<String> cdxCategoryItems;
     ArrayList<CodexItem> cdxItems;
 
-    String filterCategory;
     String drpFaction;
 
     private CodexAdapter mRecycleAdapter;
-    private CodexFilterAdapter mFilterRecycleAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,8 +73,7 @@ public class CodexActivity extends AppCompatActivity implements OnFilterDoneList
         //Default Filters
         drpFaction = "All";
 
-        //Set RecyclerViews
-        mFilterRecyclerView = (RecyclerView) findViewById(R.id.listFilter);
+        //Set RecyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.listCodexes);
 
         //Get Codex Categories
@@ -82,7 +81,25 @@ public class CodexActivity extends AppCompatActivity implements OnFilterDoneList
         cdxCategoryItems = codexDB.getCategories();
         cdxItems = codexDB.getAllCodexes();
         //Close DB
-        codexDB.close();
+       //codexDB.close();
+
+        ChipCloud chipCloud = (ChipCloud) findViewById(R.id.chip_cloud);
+        for (String mString : cdxCategoryItems) {
+            chipCloud.addChip(mString);
+        }
+
+        chipCloud.setChipListener(new ChipListener() {
+            @Override
+            public void chipSelected(int index, String text) {
+                //Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
+                updateItems(text);
+            }
+
+            @Override
+            public void chipDeselected(int index) {
+
+            }
+        });
 
         //Set Codex Adapter
         if (mRecyclerView != null) {
@@ -90,43 +107,38 @@ public class CodexActivity extends AppCompatActivity implements OnFilterDoneList
             mRecyclerView.setLayoutManager(mLayoutManager);
         }
 
-        //Set Filter Adapter
-        if (mFilterRecyclerView != null) {
-            mFilterLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL);
-            mFilterRecyclerView.setLayoutManager(mFilterLayoutManager);
-        }
 
-        //Set Codex Adapter
-        mRecycleAdapter = new CodexAdapter(cdxItems);
-        mRecyclerView.setAdapter(mRecycleAdapter);
-
-        //Set Filter Adapter
-        mFilterRecycleAdapter = new CodexFilterAdapter(cdxCategoryItems, CodexActivity.this);
-        mFilterRecyclerView.addItemDecoration(new ItemOffsetDecoration(CodexActivity.this, R.dimen.md_grid_spacing));
-        mFilterRecyclerView.setAdapter(mFilterRecycleAdapter);
     }
 
-    @Override
-    public void onFilterDone(int position, String positionTitle, String urlValue) {
+    public class getCodexes extends AsyncTask<Void, Void, ArrayList<CodexItem>> {
 
-        //Toast.makeText(getApplicationContext(), "Postion: " + position + ", Title: " + positionTitle, Toast.LENGTH_SHORT).show();
-        //mFilterRecyclerView.findViewHolderForLayoutPosition(position).itemView.
-        updateItems(positionTitle);
+        @Override
+        protected ArrayList<CodexItem> doInBackground(Void... voids) {
+
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(ArrayList<CodexItem> result) {
+            //Set Codex Adapter
+            mRecycleAdapter = new CodexAdapter(cdxItems);
+            mRecyclerView.setAdapter(mRecycleAdapter);
+        }
     }
 
     public void updateItems(String cdxCategory) {
 
-        codexDB = new CodexDatabase(CodexActivity.this);
+        //codexDB = new CodexDatabase(CodexActivity.this);
 
-        //Update List to reflect new completed/incomplete items
-        cdxItems.clear();
-        cdxItems = codexDB.getCodexes(cdxCategory);
+        ArrayList<CodexItem> cdxUpdatedItems;
+        cdxUpdatedItems = codexDB.getCodexes(cdxCategory);
 
         //Refresh RecyclerView
-        mRecycleAdapter.updateItems(cdxItems);
-        mRecycleAdapter.notifyDataSetChanged();
+        mRecycleAdapter.updateItems(cdxUpdatedItems);
 
-        codexDB.close();
+        //codexDB.close();
     }
 
     @Override

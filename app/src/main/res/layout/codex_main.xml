@@ -23,8 +23,6 @@
             app:titleEnabled="false"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-
-
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -35,21 +33,27 @@
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
-        <LinearLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
+            android:fillViewport="true"
+            android:scrollbars="none"
             android:layout_marginRight="@dimen/dim_10"
             android:layout_marginLeft="@dimen/dim_10"
-            android:padding="@dimen/dim_5"
-            android:orientation="horizontal">
+            android:overScrollMode="ifContentScrolls">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/listFilter"
+            <com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud
+                xmlns:chipcloud="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/chip_cloud"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                chipcloud:deselectedColor="@color/swtor_blue_dark"
+                chipcloud:deselectedFontColor="@color/white"
+                chipcloud:selectedColor="@color/white"
+                chipcloud:selectedFontColor="@color/swtor_blue"
+                chipcloud:cornerRadius="2dp"
+                chipcloud:selectMode="single"/>
+        </HorizontalScrollView>
 
 
     </android.support.design.widget.AppBarLayout>

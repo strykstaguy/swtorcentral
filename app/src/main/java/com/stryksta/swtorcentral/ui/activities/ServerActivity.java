@@ -101,10 +101,10 @@ public class ServerActivity extends AppCompatActivity {
     private class GetServerStatus extends AsyncTask<String, Void, ArrayList<ServerItem>> {
 
     	protected void onPreExecute() {
- 			super.onPreExecute();
+            super.onPreExecute();
             serverItemsUS = new ArrayList<>();
             serverItemsEU = new ArrayList<>();
- 		}
+        }
 
 		@Override
 		protected ArrayList<ServerItem> doInBackground(String... urls) {

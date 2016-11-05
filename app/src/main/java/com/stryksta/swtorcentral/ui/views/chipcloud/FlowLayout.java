@@ -3,6 +3,7 @@ package com.stryksta.swtorcentral.ui.views.chipcloud;
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 public class FlowLayout extends ViewGroup {
 
     private int line_height;
+    private int mRows = 2;
 
     public static class LayoutParams extends ViewGroup.LayoutParams {
 
@@ -44,6 +46,10 @@ public class FlowLayout extends ViewGroup {
         int height = MeasureSpec.getSize(heightMeasureSpec) - getPaddingTop() - getPaddingBottom();
         final int count = getChildCount();
         int line_height = 0;
+        int perRowCount = (int) Math.ceil(count / mRows);
+        int finalWidthRow1 = width;
+        int finalWidthRow2 = width;
+
 
         int xpos = getPaddingLeft();
         int ypos = getPaddingTop();
@@ -64,12 +70,17 @@ public class FlowLayout extends ViewGroup {
                 final int childw = child.getMeasuredWidth();
                 line_height = Math.max(line_height, child.getMeasuredHeight() + lp.vertical_spacing);
 
-                if (xpos + childw > width) {
+                if (i == perRowCount) {
+                    int xposRow1 = xpos;
                     xpos = getPaddingLeft();
                     ypos += line_height;
+                    finalWidthRow1 = xposRow1;
+                    //Log.d("SWTORCentral", "xPOS is " + xpos2);
                 }
 
                 xpos += childw + lp.horizontal_spacing;
+                finalWidthRow2 = xpos;
+                //Log.d("SWTORCentral", "xPOS is " + xpos);
             }
         }
         this.line_height = line_height;
@@ -78,7 +89,12 @@ public class FlowLayout extends ViewGroup {
                 heightMeasureSpec) == MeasureSpec.AT_MOST && ypos + line_height < height)) {
             height = ypos + line_height;
         }
-        setMeasuredDimension(width, height);
+
+        int longestRow = Math.max(finalWidthRow1, finalWidthRow2);
+        //Log.d("SWTORCentral", "Row 1 is " + finalWidthRow1);
+        //Log.d("SWTORCentral", "Row 2 is " + finalWidthRow2);
+
+        setMeasuredDimension(longestRow, height);
     }
 
     @Override protected ViewGroup.LayoutParams generateDefaultLayoutParams() {
@@ -95,6 +111,7 @@ public class FlowLayout extends ViewGroup {
 
     @Override protected void onLayout(boolean changed, int l, int t, int r, int b) {
         final int count = getChildCount();
+        int perRowCount = (int) Math.ceil(count / mRows);
         final int width = r - l;
         int xpos = getPaddingLeft();
         int ypos = getPaddingTop();
@@ -105,10 +122,21 @@ public class FlowLayout extends ViewGroup {
                 final int childw = child.getMeasuredWidth();
                 final int childh = child.getMeasuredHeight();
                 final LayoutParams lp = (LayoutParams) child.getLayoutParams();
+
+
+
+                if (i == perRowCount) {
+                    xpos = getPaddingLeft();
+                    ypos += line_height;
+                    //Log.d("SWTORCentral", "Count " + perRowCount);
+                }
+
+                /*
                 if (xpos + childw > width) {
                     xpos = getPaddingLeft();
                     ypos += line_height;
                 }
+                */
                 child.layout(xpos, ypos, xpos + childw, ypos + childh);
                 xpos += childw + lp.horizontal_spacing;
             }

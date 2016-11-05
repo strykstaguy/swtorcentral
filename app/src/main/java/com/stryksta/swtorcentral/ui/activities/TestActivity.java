@@ -44,18 +44,17 @@ public class TestActivity extends AppCompatActivity {
         if (bundle != null) {
         }
 
-
+/*
         TileView tileView = new TileView( this );
         tileView.setSize( 1024, 1024 );  // the original size of the untiled image
         tileView.addDetailLevel( 1f, "tiles/tython/256/tython_%d_%d.png", 256, 256);
         tileView.addDetailLevel( 0.500f, "tiles/tython/128/tython_%d_%d.png", 128, 128);
-        tileView.setScaleLimits(0, 3);
+        tileView.setScaleLimits(0, 5);
         tileView.setShouldRenderWhilePanning( true );
-        //tileView.setScale( 0.5f );
+        tileView.setScale( 0.5f );
         ((LinearLayout)findViewById(R.id.mapTython)).addView(tileView);
         //setContentView( tileView );
-
-        /*
+*/
         ChipCloud chipCloud = (ChipCloud) findViewById(R.id.chip_cloud);
         chipCloud.addChip("Planets");
         chipCloud.addChip("Lore");
@@ -65,6 +64,15 @@ public class TestActivity extends AppCompatActivity {
         chipCloud.addChip("Bestiary");
         chipCloud.addChip("Lost Knowledge");
         chipCloud.addChip("Persons of Note");
+        chipCloud.addChip("Test 1");
+        chipCloud.addChip("Test 2");
+        chipCloud.addChip("Test 3");
+        chipCloud.addChip("Test 4");
+        chipCloud.addChip("Test 5");
+        chipCloud.addChip("Test 6");
+        chipCloud.addChip("Test 7");
+        chipCloud.addChip("Test 8");
+        chipCloud.addChip("Test 9");
         chipCloud.setChipListener(new ChipListener() {
             @Override
             public void chipSelected(int index, String text) {
@@ -76,7 +84,7 @@ public class TestActivity extends AppCompatActivity {
 
             }
         });
-            */
+
         /*
         txtLabel = (TextViewLabel) findViewById(R.id.txtLabel);
         txtLabel.setOnClickListener(new View.OnClickListener() {

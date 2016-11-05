@@ -49,8 +49,8 @@ public class CodexDatabase extends SQLiteAssetHelper {
     }
 */
 
-    public  ArrayList<FilterItem> getCategories() {
-        ArrayList<FilterItem> categoryItem = new ArrayList<>();
+    public  ArrayList<String> getCategories() {
+        ArrayList<String> categoryItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
         @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
@@ -64,12 +64,12 @@ public class CodexDatabase extends SQLiteAssetHelper {
                 .toString();
         Cursor c = db.rawQuery(sqlSelect, null);
 
-        categoryItem.add(new FilterItem("All"));
+        categoryItem.add("All");
 
         if (c.moveToFirst()) {
             do {
                 String cdxCategory = c.getString(c.getColumnIndex("cdxCategory"));
-                categoryItem.add(new FilterItem(cdxCategory));
+                categoryItem.add(cdxCategory);
             } while (c.moveToNext());
         }
         c.close();
@@ -80,35 +80,30 @@ public class CodexDatabase extends SQLiteAssetHelper {
     public ArrayList<CodexItem> getCodexes(String category) {
         ArrayList<CodexItem> categoryItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
+        Cursor c;
 
-
-
-
-        StringBuilder queryBuilder = new StringBuilder();
-        queryBuilder.append("SELECT * ");
-        queryBuilder.append("FROM codexes ");
-
-        //If Category isn't all, include in query
-        if (category != "All") {
-            queryBuilder.append("WHERE codexes.cdxCategory = '" + category + "' ");
+        if (category == "All") {
+            @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+            String sqlSelect = builder
+                    .append("SELECT * ")
+                    .append("FROM codexes ")
+                    .append("WHERE codexes.cdxTitle GLOB '*[A-Za-z]*' ")
+                    .append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC")
+                    .toString();
+            c = db.rawQuery(sqlSelect, null);
+        } else {
+            @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+            String sqlSelect = builder
+                    .append("SELECT * ")
+                    .append("FROM codexes ")
+                    .append("WHERE codexes.cdxCategory = ? ")
+                    .append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ")
+                    .append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC")
+                    .toString();
+            c = db.rawQuery(sqlSelect, new String[]{String.valueOf(category)});
         }
 
-        queryBuilder.append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC");
-        String sqlSelect = queryBuilder.toString();
-        /*
-        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
-        String sqlSelect = builder
-                .append("SELECT * ")
-                .append("FROM codexes ")
-                .append("WHERE codexes.cdxCategory = ? ")
-                .append("WHERE codexes.cdxCategory = ? ")
-                .append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ")
-                .append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC")
-                .toString();
-        */
-
-        Cursor c = db.rawQuery(sqlSelect, null);
-        //Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(category), String.valueOf(faction)});
+        //c = db.rawQuery(sqlSelect, null);
 
         if (c.moveToFirst()) {
             do {

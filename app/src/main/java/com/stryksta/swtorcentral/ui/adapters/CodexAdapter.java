@@ -25,7 +25,10 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
 	}
 
     public void updateItems(ArrayList<CodexItem> cdxItems) {
-        this.cdxItems = cdxItems;
+        this.cdxItems.clear();
+        this.cdxItems.addAll(cdxItems);
+        notifyDataSetChanged();
+       // this.cdxItems = cdxItems;
     }
 
 	@Override
