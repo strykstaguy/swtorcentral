@@ -64,7 +64,7 @@ public class CodexDatabase extends SQLiteAssetHelper {
                 .toString();
         Cursor c = db.rawQuery(sqlSelect, null);
 
-        categoryItem.add("All");
+        //categoryItem.add("All");
 
         if (c.moveToFirst()) {
             do {
@@ -80,28 +80,16 @@ public class CodexDatabase extends SQLiteAssetHelper {
     public ArrayList<CodexItem> getCodexes(String category) {
         ArrayList<CodexItem> categoryItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
-        Cursor c;
 
-        if (category == "All") {
-            @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
-            String sqlSelect = builder
-                    .append("SELECT * ")
-                    .append("FROM codexes ")
-                    .append("WHERE codexes.cdxTitle GLOB '*[A-Za-z]*' ")
-                    .append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC")
-                    .toString();
-            c = db.rawQuery(sqlSelect, null);
-        } else {
-            @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
-            String sqlSelect = builder
-                    .append("SELECT * ")
-                    .append("FROM codexes ")
-                    .append("WHERE codexes.cdxCategory = ? ")
-                    .append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ")
-                    .append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC")
-                    .toString();
-            c = db.rawQuery(sqlSelect, new String[]{String.valueOf(category)});
-        }
+        @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
+        String sqlSelect = builder
+                .append("SELECT * ")
+                .append("FROM codexes ")
+                .append("WHERE codexes.cdxCategory = ? ")
+                .append("AND codexes.cdxTitle GLOB '*[A-Za-z]*' ")
+                .append("ORDER BY codexes.cdxLevel ASC, codexes.cdxTitle ASC")
+                .toString();
+        Cursor c = db.rawQuery(sqlSelect, new String[]{String.valueOf(category)});
 
         //c = db.rawQuery(sqlSelect, null);
 

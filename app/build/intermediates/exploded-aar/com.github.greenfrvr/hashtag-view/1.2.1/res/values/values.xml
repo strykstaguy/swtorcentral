@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HashtagView"><attr format="color|reference" name="tagTextColor"/><attr format="dimension" name="tagTextSize"/><attr format="enum" name="tagTextGravity"><enum name="left" value="3"/><enum name="right" value="5"/><enum name="center" value="17"/></attr><attr format="enum" name="tagEllipsize"><enum name="start" value="0"/><enum name="middle" value="1"/><enum name="end" value="2"/><enum name="marquee" value="3"/></attr><attr format="color|reference" name="tagBackground"/><attr format="color|reference" name="tagForeground"/><attr format="reference" name="tagDrawableLeft"/><attr format="reference" name="tagSelectedDrawableLeft"/><attr format="reference" name="tagDrawableRight"/><attr format="reference" name="tagSelectedDrawableRight"/><attr format="dimension" name="tagDrawablePadding"/><attr format="dimension" name="tagMargin"/><attr format="dimension" name="tagPaddingLeft"/><attr format="dimension" name="tagPaddingRight"/><attr format="dimension" name="tagPaddingTop"/><attr format="dimension" name="tagPaddingBottom"/><attr format="dimension" name="tagMinWidth"/><attr format="dimension" name="tagMaxWidth"/><attr format="dimension" name="rowMargin"/><attr format="enum" name="rowGravity"><enum name="left" value="3"/><enum name="right" value="5"/><enum name="center" value="17"/></attr><attr format="enum" name="rowDistribution"><enum name="left" value="0"/><enum name="middle" value="1"/><enum name="right" value="2"/><enum name="random" value="3"/></attr><attr format="enum" name="rowMode"><enum name="wrap" value="0"/><enum name="stretch" value="1"/><enum name="equal" value="2"/></attr><attr format="integer" name="rowsQuantity"/><attr format="boolean" name="selectionMode"/><attr format="boolean" name="dynamicMode"/></declare-styleable>
+    <!-- From: file:/Users/greenfrvr/Code/Android/hashtag-view/hashtag-view/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="default_item_margin">2dp</dimen>
+    <dimen name="default_item_padding">4dp</dimen>
+    <dimen name="default_row_margin">2dp</dimen>
+    <dimen name="default_text_size">14sp</dimen>
+    <dimen name="min_item_width">0dp</dimen>
+</resources>

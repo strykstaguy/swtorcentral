@@ -10,12 +10,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.baiiu.filter.DropDownMenu;
 import com.baiiu.filter.interfaces.OnFilterDoneListener;
+import com.greenfrvr.hashtagview.HashtagView;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.models.FilterItem;
 import com.stryksta.swtorcentral.models.ServerItem;
@@ -23,11 +25,17 @@ import com.stryksta.swtorcentral.ui.adapters.CodexAdapter;
 import com.stryksta.swtorcentral.ui.adapters.CodexFilterAdapter;
 import com.stryksta.swtorcentral.ui.adapters.DropMenuAdapter;
 import com.stryksta.swtorcentral.models.CodexItem;
+import com.stryksta.swtorcentral.ui.adapters.ServerAdapter;
 import com.stryksta.swtorcentral.ui.views.ItemOffsetDecoration;
 import com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud;
 import com.stryksta.swtorcentral.ui.views.chipcloud.ChipListener;
 import com.stryksta.swtorcentral.util.database.CodexDatabase;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +50,6 @@ public class CodexActivity extends AppCompatActivity{
     private CodexDatabase codexDB;
     ArrayList<String> cdxCategoryItems;
     ArrayList<CodexItem> cdxItems;
-
-    String drpFaction;
 
     private CodexAdapter mRecycleAdapter;
 
@@ -70,16 +76,14 @@ public class CodexActivity extends AppCompatActivity{
 
         getSupportActionBar().setTitle("Codexes");
 
-        //Default Filters
-        drpFaction = "All";
-
         //Set RecyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.listCodexes);
 
         //Get Codex Categories
         codexDB = new CodexDatabase(CodexActivity.this);
+        new CodexActivity.GetCodexes().execute();
         cdxCategoryItems = codexDB.getCategories();
-        cdxItems = codexDB.getAllCodexes();
+
         //Close DB
        //codexDB.close();
 
@@ -91,8 +95,8 @@ public class CodexActivity extends AppCompatActivity{
         chipCloud.setChipListener(new ChipListener() {
             @Override
             public void chipSelected(int index, String text) {
-                //Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
-                updateItems(text);
+                Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
+                //updateItems(text);
             }
 
             @Override
@@ -107,27 +111,7 @@ public class CodexActivity extends AppCompatActivity{
             mRecyclerView.setLayoutManager(mLayoutManager);
         }
 
-
     }
-
-    public class getCodexes extends AsyncTask<Void, Void, ArrayList<CodexItem>> {
-
-        @Override
-        protected ArrayList<CodexItem> doInBackground(Void... voids) {
-
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<CodexItem> result) {
-            //Set Codex Adapter
-            mRecycleAdapter = new CodexAdapter(cdxItems);
-            mRecyclerView.setAdapter(mRecycleAdapter);
-        }
-    }
-
     public void updateItems(String cdxCategory) {
 
         //codexDB = new CodexDatabase(CodexActivity.this);
@@ -156,5 +140,35 @@ public class CodexActivity extends AppCompatActivity{
     protected void onDestroy() {
         super.onDestroy();
         //FilterUrl.instance().clear();
+    }
+
+    private class GetCodexes extends AsyncTask<String, Void, ArrayList<CodexItem>> {
+
+        protected void onPreExecute() {
+            super.onPreExecute();
+            cdxItems = new ArrayList<>();
+        }
+
+        @Override
+        protected ArrayList<CodexItem> doInBackground(String... urls) {
+
+            try {
+                cdxItems = codexDB.getAllCodexes();
+            } catch (Exception e) {
+                if(e.getMessage() != null) {
+                    Log.e("SWTORCentral", e.getMessage());
+                }
+            }
+
+            // Debug the task thread name
+            //Log.d("SWTORCentral", Thread.currentThread().getName());
+            return null;
+        }
+
+        protected void onPostExecute(ArrayList<CodexItem> result) {
+            //Set Codex Adapter
+            mRecycleAdapter = new CodexAdapter(cdxItems);
+            mRecyclerView.setAdapter(mRecycleAdapter);
+        }
     }
 }

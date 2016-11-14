@@ -1,7 +1,7 @@
-#Sat Nov 05 17:03:15 CDT 2016
-base.0=C\:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_829e3bc3836d7070112dba4caa272c9d5d83d2cd
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_4b3eb8b4bacebd2e4ee265922edcf9cc9f65a0db\\classes.dex
-base.1=C\:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_4b3eb8b4bacebd2e4ee265922edcf9cc9f65a0db
-file.0=C\:\\Users\\e9900375\\Desktop\\swtorcentral\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_829e3bc3836d7070112dba4caa272c9d5d83d2cd\\classes.dex
+#Mon Nov 14 15:20:07 CST 2016
+base.0=C\:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c606d91890e0c7d19f868dc5c42127e08f43c9a8
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2593976f1ab07c12be821e2c7901836240e8c076\\classes.dex
+base.1=C\:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2593976f1ab07c12be821e2c7901836240e8c076
+file.0=C\:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c606d91890e0c7d19f868dc5c42127e08f43c9a8\\classes.dex
