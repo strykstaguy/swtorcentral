@@ -5,40 +5,20 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-import com.baiiu.filter.DropDownMenu;
-import com.baiiu.filter.interfaces.OnFilterDoneListener;
-import com.greenfrvr.hashtagview.HashtagView;
 import com.stryksta.swtorcentral.R;
-import com.stryksta.swtorcentral.models.FilterItem;
-import com.stryksta.swtorcentral.models.ServerItem;
-import com.stryksta.swtorcentral.ui.adapters.CodexAdapter;
-import com.stryksta.swtorcentral.ui.adapters.CodexFilterAdapter;
-import com.stryksta.swtorcentral.ui.adapters.DropMenuAdapter;
 import com.stryksta.swtorcentral.models.CodexItem;
-import com.stryksta.swtorcentral.ui.adapters.ServerAdapter;
-import com.stryksta.swtorcentral.ui.views.ItemOffsetDecoration;
-import com.stryksta.swtorcentral.ui.views.chipcloud.ChipCloud;
-import com.stryksta.swtorcentral.ui.views.chipcloud.ChipListener;
+import com.stryksta.swtorcentral.ui.adapters.CodexAdapter;
 import com.stryksta.swtorcentral.util.database.CodexDatabase;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class CodexActivity extends AppCompatActivity{
     private Toolbar mToolbar;
@@ -81,29 +61,11 @@ public class CodexActivity extends AppCompatActivity{
 
         //Get Codex Categories
         codexDB = new CodexDatabase(CodexActivity.this);
+       // cdxCategoryItems = codexDB.getCategories();
         new CodexActivity.GetCodexes().execute();
-        cdxCategoryItems = codexDB.getCategories();
 
         //Close DB
        //codexDB.close();
-
-        ChipCloud chipCloud = (ChipCloud) findViewById(R.id.chip_cloud);
-        for (String mString : cdxCategoryItems) {
-            chipCloud.addChip(mString);
-        }
-
-        chipCloud.setChipListener(new ChipListener() {
-            @Override
-            public void chipSelected(int index, String text) {
-                Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
-                //updateItems(text);
-            }
-
-            @Override
-            public void chipDeselected(int index) {
-
-            }
-        });
 
         //Set Codex Adapter
         if (mRecyclerView != null) {
@@ -153,21 +115,26 @@ public class CodexActivity extends AppCompatActivity{
         protected ArrayList<CodexItem> doInBackground(String... urls) {
 
             try {
+                //cdxItems = codexDB.getCodexes("Achievement: Datacrons");
                 cdxItems = codexDB.getAllCodexes();
             } catch (Exception e) {
                 if(e.getMessage() != null) {
                     Log.e("SWTORCentral", e.getMessage());
                 }
             }
-
-            // Debug the task thread name
-            //Log.d("SWTORCentral", Thread.currentThread().getName());
             return null;
         }
 
         protected void onPostExecute(ArrayList<CodexItem> result) {
             //Set Codex Adapter
             mRecycleAdapter = new CodexAdapter(cdxItems);
+            mRecyclerView.setNestedScrollingEnabled(false);
+            mRecyclerView.addItemDecoration(
+                    new HorizontalDividerItemDecoration.Builder(CodexActivity.this)
+                            .color(ContextCompat.getColor(CodexActivity.this, R.color.backgroundlight))
+                            .sizeResId(R.dimen.divider)
+                            .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
+                            .build());
             mRecyclerView.setAdapter(mRecycleAdapter);
         }
     }

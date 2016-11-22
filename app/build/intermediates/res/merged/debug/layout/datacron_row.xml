@@ -66,6 +66,7 @@
                     android:textSize="@dimen/md_text_body"
                     android:maxLines="4"
                     android:ellipsize="end"/>
+
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

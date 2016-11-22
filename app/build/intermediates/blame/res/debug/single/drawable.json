@@ -388,12 +388,12 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\swtorcentral\\filter-lib\\unspecified\\res\\drawable\\layer_filter_checked.xml"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_transparent.xml",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\drawable\\md_transparent.xml"
-    },
-    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_bottom.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\scrim_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_transparent.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.afollestad.material-dialogs\\core\\0.9.0.1\\res\\drawable\\md_transparent.xml"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_foreground_selector.xml",
@@ -432,12 +432,12 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\advanced_class_sith_assassin.xml"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_dialog_material_background.xml"
-    },
-    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_companion.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\ic_companion.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_top.xml",

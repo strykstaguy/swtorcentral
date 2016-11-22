@@ -11,8 +11,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
-import com.qozix.tileview.TileView;
 import com.stryksta.swtorcentral.R;
 
 import com.stryksta.swtorcentral.ui.views.TextViewLabel;
@@ -44,17 +42,6 @@ public class TestActivity extends AppCompatActivity {
         if (bundle != null) {
         }
 
-/*
-        TileView tileView = new TileView( this );
-        tileView.setSize( 1024, 1024 );  // the original size of the untiled image
-        tileView.addDetailLevel( 1f, "tiles/tython/256/tython_%d_%d.png", 256, 256);
-        tileView.addDetailLevel( 0.500f, "tiles/tython/128/tython_%d_%d.png", 128, 128);
-        tileView.setScaleLimits(0, 5);
-        tileView.setShouldRenderWhilePanning( true );
-        tileView.setScale( 0.5f );
-        ((LinearLayout)findViewById(R.id.mapTython)).addView(tileView);
-        //setContentView( tileView );
-*/
         ChipCloud chipCloud = (ChipCloud) findViewById(R.id.chip_cloud);
         chipCloud.addChip("Planets");
         chipCloud.addChip("Lore");

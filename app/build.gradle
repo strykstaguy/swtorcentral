@@ -46,8 +46,6 @@ dependencies {
     compile 'org.jsoup:jsoup:1.9.2'
     compile 'com.afollestad.material-dialogs:core:0.9.0.1'
     compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
-    compile 'com.qozix:tileview:2.2.3'
-    compile 'com.github.greenfrvr:hashtag-view:1.2.1'
 
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile files('libs/android-sqlite-asset-helper.jar')

@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -15,12 +16,12 @@ import android.widget.TextView;
 import com.stryksta.swtorcentral.R;
 
 public class TextViewLabel extends TextView implements View.OnClickListener{
-    private float cornerRadius = Integer.MIN_VALUE;
+    private float cornerRadius = 0;
     private RectF labelBounds = new RectF();
     private Paint labelPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private boolean mIsSelected;
-    private ColorStateList mLabelColor;
-    private ColorStateList mLabelColorSelected;
+    private int mLabelColor;
+    private int mLabelColorSelected;
 
     public TextViewLabel(Context context) {
         super(context);
@@ -42,11 +43,9 @@ public class TextViewLabel extends TextView implements View.OnClickListener{
 
         if (attrs != null) {
             TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.TextViewLabel);
-            mLabelColor = ta.getColorStateList(R.styleable.TextViewLabel_labelColor);
-            mLabelColorSelected = ta.getColorStateList(R.styleable.TextViewLabel_labelColorSelected);
-            if (mLabelColor != null) {
-                setLabelColor(mLabelColor.getDefaultColor());
-            }
+            mLabelColor = ta.getColor(R.styleable.TextViewLabel_labelColor, ContextCompat.getColor(context, R.color.swtor_blue));
+            mLabelColorSelected = ta.getColor(R.styleable.TextViewLabel_labelColorSelected, ContextCompat.getColor(context, R.color.swtor_blue));
+            cornerRadius = ta.getDimension(R.styleable.TextViewLabel_labelCornerRadius, 0);
         }
 
         // Default padding
@@ -59,6 +58,8 @@ public class TextViewLabel extends TextView implements View.OnClickListener{
         }
 
         setOnClickListener(this);
+        setSelected(false);
+        setLabelColor(mLabelColor);
     }
 
     /**
@@ -70,8 +71,7 @@ public class TextViewLabel extends TextView implements View.OnClickListener{
     }
 
     /**
-     * Sets the corner radius on the label. By default the corner radius is 1/20th of the
-     * labels width.
+     * Sets the corner radius on the label. By default the corner radius is 0
      * @param cornerRadius The radius of each corner
      */
     public void setCornerRadius(float cornerRadius) {
@@ -84,9 +84,9 @@ public class TextViewLabel extends TextView implements View.OnClickListener{
     public void setSelected(boolean checked) {
         mIsSelected = checked;
         if (mIsSelected) {
-            setLabelColor(mLabelColorSelected.getDefaultColor());
+            setLabelColor(mLabelColorSelected);
         } else if (!mIsSelected) {
-            setLabelColor(mLabelColor.getDefaultColor());
+            setLabelColor(mLabelColor);
         }
 
         requestLayout();
@@ -110,11 +110,7 @@ public class TextViewLabel extends TextView implements View.OnClickListener{
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (cornerRadius == Integer.MIN_VALUE) {
-            drawLabel(canvas, getWidth()/20);
-        } else {
-            drawLabel(canvas, cornerRadius);
-        }
+        drawLabel(canvas, cornerRadius);
         super.onDraw(canvas);
     }
 

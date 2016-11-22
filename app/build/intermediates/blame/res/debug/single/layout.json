@@ -176,10 +176,6 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\preference-v7\\24.2.1\\res\\layout\\preference_recyclerview.xml"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_item.xml",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.github.greenfrvr\\hashtag-view\\1.2.1\\res\\layout\\layout_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\layout\\design_navigation_item_header.xml"
     },

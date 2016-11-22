@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.models.CodexItem;
+import com.stryksta.swtorcentral.ui.views.TextViewLabel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,14 +60,14 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
             }
 
             if(TextUtils.isEmpty(codexRow.getPlanets())){
-                //viewHolder.cdxPlants.setBackgroundColor(Color.parseColor("#FF0000"));
+                viewHolder.cdxPlants.setLabelColor(Color.parseColor("#FF0000"));
                 //viewHolder.cdxPlants.setText("Empty");
                 //viewHolder.cdxPlants.setVisibility(View.GONE);
             }
 
             if(TextUtils.isEmpty(codexRow.getLevel())){
                 //viewHolder.cdxPlants.setText("Empty");
-                //viewHolder.cdxPlants.setBackgroundColor(Color.parseColor("#FF0000"));
+                viewHolder.cdxLevel.setLabelColor(Color.parseColor("#FF0000"));
                 //viewHolder.cdxLevel.setVisibility(View.GONE);
             }
 		}
@@ -81,17 +82,17 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
 
 		public TextView cdxTitle;
 		public TextView cdxDescription;
-		public TextView cdxLevel;
-		public TextView cdxFaction;
-		public TextView cdxPlants;
+		public TextViewLabel cdxLevel;
+		public TextViewLabel cdxFaction;
+		public TextViewLabel cdxPlants;
 
 		public ViewHolder(View itemView) {
 			super(itemView);
 			cdxTitle = (TextView) itemView.findViewById(R.id.cdxTitle);
 			cdxDescription = (TextView) itemView.findViewById(R.id.cdxDescription);
-			cdxLevel = (TextView) itemView.findViewById(R.id.cdxLevel);
-			cdxPlants = (TextView) itemView.findViewById(R.id.cdxPlants);
-			cdxFaction = (TextView) itemView.findViewById(R.id.cdxFaction);
+			cdxLevel = (TextViewLabel) itemView.findViewById(R.id.lblLevelTag);
+			cdxPlants = (TextViewLabel) itemView.findViewById(R.id.lblPlanetTag);
+			cdxFaction = (TextViewLabel) itemView.findViewById(R.id.lblLabelFactionTag);
 		}
 	}
 

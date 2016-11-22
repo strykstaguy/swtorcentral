@@ -5,53 +5,86 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="969527104103231"
+    timestamp="6999321830743"
     token="-5267623122052274636"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="2975" />
+        duration="536" />
     <task
         name="instant-run-dex"
-        duration="1381" />
+        duration="589" />
     <task
         name="instant-run-transform"
-        duration="208" />
+        duration="64" />
     <task
         name="verifier"
-        duration="11" />
+        duration="12" />
 
     <artifact
         location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\reload-dex\debug\classes.dex"
         type="RELOAD_DEX" />
 
     <build
-        timestamp="966278508700684"
+        timestamp="2611808482467"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Cody\Desktop\swtorcentral\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="968092809944155"
-        verifier="CLASS_ADDED" >
+        timestamp="4772114795369"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="6257680845167"
+        verifier="FIELD_TYPE_CHANGE" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="6615164998396"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
             type="RESOURCES" />
         <artifact
             location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
             type="DEX" />
-    </build>
-    <build
-        timestamp="969423264230129"
-        verifier="CLASS_ADDED" >
         <artifact
-            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="969527104103231"
+        timestamp="6766446705134"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\builds\debug\6766446705134\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="6835804401886"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\builds\debug\6835804401886\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="6999321830743"
         verifier="COMPATIBLE" >
         <artifact
             location="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\reload-dex\debug\classes.dex"
