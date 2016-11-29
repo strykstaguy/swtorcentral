@@ -3,55 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <FrameLayout
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="top"
-        android:orientation="vertical">
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="2dp"
+        app:cardPreventCornerOverlap="false"
+        android:clickable="true"
+        android:foreground="@drawable/card_foreground">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardview"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
-            android:elevation="2dp"
-            app:cardCornerRadius="2dp"
-            app:cardPreventCornerOverlap="false"
-            android:foreground="@drawable/card_foreground"
-            app:cardBackgroundColor="@color/white">
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/txtNewsCategory"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="1dp"
-                android:textSize="16sp"
-                android:padding="@dimen/dim_5"
-                android:background="@color/swtor_accent"
-                android:textColor="@color/white"
-                android:text="News"
-                android:fontFamily="sans-serif-light"/>
+            <ImageView
+                android:id="@+id/imageViewNews"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_sorcerer"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_margin="10dp"
-                android:padding="10dp">
+                android:layout_margin="5dp"
+                android:padding="5dp">
 
                 <TextView
                     android:id="@+id/txtTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:textColor="@color/md_black_1000"
-                    android:textSize="@dimen/text_title"
+                    android:textSize="@dimen/md_text_title"
                     android:focusableInTouchMode="false"
                     android:fontFamily="sans-serif"
                     android:text="dsfasdfasdfasdf"/>
@@ -60,16 +54,23 @@
                     android:id="@+id/txtDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     android:textColor="@color/subtext_dark"
-                    android:textSize="@dimen/text_body"
-                    android:maxLines="4"
+                    android:textSize="@dimen/md_text_body"
+                    android:maxLines="3"
                     android:ellipsize="end"
                     android:fontFamily="sans-serif-light"
                     android:text="sdaflpwejropqwijruf;alsfjaso;dfjiaso;ifuapsofjasopdfjasopdfjiaso;dlfjasodfjasopdfjiaops45344v52354fg52364455fgv5456v45642v35456423456243562442523465v5423654236552365nrqwel;rj"/>
+
+                <TextView
+                    android:id="@+id/lblNewsTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/swtor_accent"
+                    android:textSize="14dp"
+                    android:gravity="right"
+                    android:fontFamily="sans-serif-light"
+                    android:text="News"/>
             </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-    </FrameLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>

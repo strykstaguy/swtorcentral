@@ -65,12 +65,6 @@ public class ClassesFragment extends Fragment{
 
         //Set Adapter
         mRecycleAdapter = new ClassesCategoryAdapter(classItems);
-        mRecyclerView.addItemDecoration(
-                new HorizontalDividerItemDecoration.Builder(getActivity())
-                        .color(ContextCompat.getColor(getActivity(), R.color.backgroundlight))
-                        .sizeResId(R.dimen.divider)
-                        .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
-                        .build());
         mRecyclerView.setAdapter(mRecycleAdapter);
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener()
         {

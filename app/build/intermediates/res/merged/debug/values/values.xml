@@ -399,6 +399,7 @@
     <color name="md_scrim_start">#0000</color>
     <color name="md_secondary">#8a000000</color>
     <color name="md_selected">#14000000</color>
+    <color name="md_seperator">#F6F6F6</color>
     <color name="md_teal_100">#B2DFDB</color>
     <color name="md_teal_200">#80CBC4</color>
     <color name="md_teal_300">#4DB6AC</color>

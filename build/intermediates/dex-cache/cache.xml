@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="59ae90f12afcb9978e7a0b7a29b3332ec63bb8bc">
+        sha1="65de8fb5d3ea0dcefa237c326c04f9f0f0b57eff">
         <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2593976f1ab07c12be821e2c7901836240e8c076\classes.dex" />
     </item>
     <item
@@ -79,7 +79,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="188240bb3dfdd88847c1c13ceabc454e1e8186ea">
+        sha1="3132a17954fa11458fc382567a647048b4d5ebcb">
         <dex dex="C:\Users\Cody\Desktop\swtorcentral\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c606d91890e0c7d19f868dc5c42127e08f43c9a8\classes.dex" />
     </item>
     <item

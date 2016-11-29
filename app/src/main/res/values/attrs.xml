@@ -153,5 +153,4 @@
         <attr name="chipLabelSelectedFontColor" format="color" />
         <attr name="chipCornerRadius" format="dimension"/>
     </declare-styleable>
-
 </resources>

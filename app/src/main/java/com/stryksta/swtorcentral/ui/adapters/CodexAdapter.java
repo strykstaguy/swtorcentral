@@ -1,6 +1,5 @@
 package com.stryksta.swtorcentral.ui.adapters;
 
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
@@ -34,7 +33,7 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
 
 	@Override
 	public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int position) {
-		View view = View.inflate(viewGroup.getContext(), R.layout.codex_row, null);
+		View view = View.inflate(viewGroup.getContext(), R.layout.codex_detail_row, null);
 		ViewHolder holder = new ViewHolder(view);
 		return holder;
 	}
@@ -47,7 +46,7 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
 			viewHolder.cdxTitle.setText(codexRow.getTitle());
 			viewHolder.cdxDescription.setText(codexRow.getDescription());
 			viewHolder.cdxFaction.setText(codexRow.getFaction());
-
+            /*
             if (codexRow.getLevel() != null && !codexRow.getLevel().equals("null")) {
                 viewHolder.cdxLevel.setText("Level: " + codexRow.getLevel());
             }
@@ -69,7 +68,7 @@ public class CodexAdapter extends RecyclerView.Adapter<CodexAdapter.ViewHolder>{
                 //viewHolder.cdxPlants.setText("Empty");
                 viewHolder.cdxLevel.setLabelColor(Color.parseColor("#FF0000"));
                 //viewHolder.cdxLevel.setVisibility(View.GONE);
-            }
+            }*/
 		}
 	}
 

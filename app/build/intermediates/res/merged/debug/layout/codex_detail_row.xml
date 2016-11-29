@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="2dp"
+        app:cardPreventCornerOverlap="false"
+        android:foreground="@drawable/card_foreground"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim_10">
+
+            <TextView
+                android:id="@+id/cdxTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="Tython"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/md_text_title" />
+
+            <TextView
+                android:id="@+id/cdxDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/subtext_dark"
+                android:fontFamily="sans-serif-light"
+                android:text="The mysterious Deep Core world of Tython is the birthplace of the Jedi Order. Millennia ago, Tythonian warriors and scholars developed a unique mystic and martial philosophy while studying the Force. Today, their Jedi descendants excavate ancient Tythonian ruins and relearn what was lost. After the recent destruction of the Jedi Temple on Coruscant, the Jedi made their new home on Tython. The mountainous planet remains mostly unexplored, and the violent natives pose a constant threat. The order remains committed to rebuilding here, however, and is now training a new generation of Padawans."
+                android:paddingBottom="5.0dip"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textSize="@dimen/md_text_body"
+                android:layout_below="@+id/cdxTitle"
+                android:layout_marginLeft="9dp"
+                android:layout_marginStart="9dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cdxDescription"
+                android:orientation="horizontal">
+
+                <com.stryksta.swtorcentral.ui.views.TextViewLabel
+                    android:id="@+id/lblLabelFactionTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="12sp"
+                    android:text="Faction"
+                    app:labelColor="@color/md_grey_200"
+                    app:labelColorSelected="@color/md_grey_200"
+                    app:labelCornerRadius="2dp"
+                    android:textColor="@color/md_black_1000"/>
+
+                <com.stryksta.swtorcentral.ui.views.TextViewLabel
+                    android:id="@+id/lblCategoryTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="12sp"
+                    android:text="Category"
+                    app:labelColor="@color/md_grey_200"
+                    app:labelColorSelected="@color/md_grey_200"
+                    app:labelCornerRadius="2dp"
+                    android:textColor="@color/md_black_1000"/>
+
+                <com.stryksta.swtorcentral.ui.views.TextViewLabel
+                    android:id="@+id/lblPlanetTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="12sp"
+                    android:text="Planet"
+                    app:labelColor="@color/md_grey_200"
+                    app:labelColorSelected="@color/md_grey_200"
+                    app:labelCornerRadius="2dp"
+                    android:textColor="@color/md_black_1000"/>
+
+                <com.stryksta.swtorcentral.ui.views.TextViewLabel
+                    android:id="@+id/lblLevelTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="12sp"
+                    android:text="Level"
+                    app:labelColor="@color/md_grey_200"
+                    app:labelColorSelected="@color/md_grey_200"
+                    app:labelCornerRadius="2dp"
+                    android:textColor="@color/md_black_1000"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -432,20 +432,20 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\advanced_class_sith_assassin.xml"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_companion.xml",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\ic_companion.xml"
-    },
-    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_top.xml",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\scrim_top.xml"
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_companion.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\ic_companion.xml"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_ic_visibility.xml",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.1\\res\\drawable\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\scrim_top.xml",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable\\scrim_top.xml"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\card_middle_shadow.xml",

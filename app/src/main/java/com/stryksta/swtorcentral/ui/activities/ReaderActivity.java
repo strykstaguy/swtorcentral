@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -19,6 +20,7 @@ import com.stryksta.swtorcentral.models.RssItem;
 import com.stryksta.swtorcentral.util.RecyclerItemClickListener;
 import com.stryksta.swtorcentral.util.RssReader;
 import com.stryksta.swtorcentral.util.database.RssDatabaseHandler;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 
@@ -50,6 +52,8 @@ public class ReaderActivity extends Fragment {
 		}
 
         vw_layout = inflater.inflate(R.layout.reader_main, container, false);
+
+		getActivity().setTitle("News");
 
         //Set RecyclerView
         mRecyclerView = (RecyclerView) vw_layout.findViewById(R.id.readerList);
@@ -121,8 +125,6 @@ public class ReaderActivity extends Fragment {
                     //Set Adapter
                     mRecycleAdapter = new ReaderAdapter(getActivity(), rssItems);
 
-					//mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), GridLayoutManager.VERTICAL));
-
                     mRecyclerView.setAdapter(mRecycleAdapter);
 
 					if (MainActivity.isNetworkAvailable(getActivity())) {
@@ -151,5 +153,10 @@ public class ReaderActivity extends Fragment {
 		}
 		
 	}
-	
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		//getActivity().getActionBar().setTitle("News");
+	}
 }

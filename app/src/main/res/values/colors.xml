@@ -68,6 +68,7 @@
     <color name="md_header">@color/md_secondary</color>
 
     <color name="md_divider">#1f000000</color>
+    <color name="md_seperator">#F6F6F6</color>
 
     <color name="md_selected">#14000000</color>
 

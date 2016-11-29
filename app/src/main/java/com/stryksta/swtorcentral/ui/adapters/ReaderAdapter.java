@@ -4,10 +4,13 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.stryksta.swtorcentral.R;
 import com.stryksta.swtorcentral.models.RssItem;
+import com.stryksta.swtorcentral.ui.views.TextViewLabel;
 
 import java.util.ArrayList;
 
@@ -50,13 +53,12 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
         }*/
         //Log.d("SWTORCentral", readerRow.getCategory());
         //viewHolder.imgBackground.setImageResource(R.drawable.placeholder);
-        /*
+
         Picasso.with(mContext)
                 .load(readerRow.getImage())
-                .into(viewHolder.imgBackground);
+                .into(viewHolder.imageViewNews);
 
-        viewHolder.imgBackground.setTag(readerRow.getImage());
-        */
+        viewHolder.imageViewNews.setTag(readerRow.getImage());
     }
 
     @Override
@@ -69,12 +71,14 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
         public TextView txtTitle;
         public TextView txtNewsCategory;
         public TextView txtDescription;
+        public ImageView imageViewNews;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtTitle = (TextView) itemView.findViewById(R.id.txtTitle);
-            txtNewsCategory = (TextView) itemView.findViewById(R.id.txtNewsCategory);
+            txtNewsCategory = (TextView) itemView.findViewById(R.id.lblNewsTag);
             txtDescription = (TextView) itemView.findViewById(R.id.txtDescription);
+            imageViewNews = (ImageView) itemView.findViewById(R.id.imageViewNews);
         }
     }
 }

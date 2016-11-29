@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
+import com.stryksta.swtorcentral.models.CodexCategoryItem;
 import com.stryksta.swtorcentral.models.CodexItem;
 import com.stryksta.swtorcentral.models.FilterItem;
 import com.stryksta.swtorcentral.models.PlanetCodexItem;
@@ -49,8 +50,8 @@ public class CodexDatabase extends SQLiteAssetHelper {
     }
 */
 
-    public  ArrayList<String> getCategories() {
-        ArrayList<String> categoryItem = new ArrayList<>();
+    public  ArrayList<CodexCategoryItem> getCategories() {
+        ArrayList<CodexCategoryItem> categoryItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
         @SuppressWarnings("StringBufferReplaceableByString") StringBuilder builder = new StringBuilder();
@@ -69,7 +70,7 @@ public class CodexDatabase extends SQLiteAssetHelper {
         if (c.moveToFirst()) {
             do {
                 String cdxCategory = c.getString(c.getColumnIndex("cdxCategory"));
-                categoryItem.add(cdxCategory);
+                categoryItem.add(new CodexCategoryItem(cdxCategory));
             } while (c.moveToNext());
         }
         c.close();

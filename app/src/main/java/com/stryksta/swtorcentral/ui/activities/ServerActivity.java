@@ -75,14 +75,14 @@ public class ServerActivity extends AppCompatActivity {
 
         mRecyclerViewUS.addItemDecoration(
                 new HorizontalDividerItemDecoration.Builder(ServerActivity.this)
-                        .color(ContextCompat.getColor(ServerActivity.this, R.color.backgroundlight))
+                        .color(ContextCompat.getColor(ServerActivity.this, R.color.md_seperator))
                         .sizeResId(R.dimen.divider)
                         .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
                         .build());
 
         mRecyclerViewEU.addItemDecoration(
                 new HorizontalDividerItemDecoration.Builder(ServerActivity.this)
-                        .color(ContextCompat.getColor(ServerActivity.this, R.color.backgroundlight))
+                        .color(ContextCompat.getColor(ServerActivity.this, R.color.md_seperator))
                         .sizeResId(R.dimen.divider)
                         .marginResId(R.dimen.divider_leftmargin, R.dimen.divider_rightmargin)
                         .build());
