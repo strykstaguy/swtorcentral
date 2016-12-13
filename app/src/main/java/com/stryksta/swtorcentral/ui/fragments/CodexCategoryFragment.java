@@ -16,6 +16,7 @@ import com.stryksta.swtorcentral.models.ClassItem;
 import com.stryksta.swtorcentral.models.CodexCategoryItem;
 import com.stryksta.swtorcentral.models.CodexItem;
 import com.stryksta.swtorcentral.ui.activities.ClassActivity;
+import com.stryksta.swtorcentral.ui.activities.CodexDetailActivity;
 import com.stryksta.swtorcentral.ui.adapters.ClassesCategoryAdapter;
 import com.stryksta.swtorcentral.ui.adapters.CodexCategoryAdapter;
 import com.stryksta.swtorcentral.util.FragmentUtils;
@@ -68,16 +69,24 @@ public class CodexCategoryFragment extends Fragment{
 
         //Set Adapter
         mRecycleAdapter = new CodexCategoryAdapter(getActivity(), cdxCategoryItems);
+        mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setAdapter(mRecycleAdapter);
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), mRecyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             public void onItemClick(View view, int position) {
-                CodexDetailFragment codexDetailFragment = new CodexDetailFragment();
+                //CodexDetailFragment codexDetailFragment = new CodexDetailFragment();
 
-                Bundle args = new Bundle();
-                args.putString("codexCategory", cdxCategoryItems.get(position).getCategory());
-                codexDetailFragment.setArguments(args);
+                //Bundle args = new Bundle();
+                //args.putString("codexCategory", cdxCategoryItems.get(position).getCategory());
+                //codexDetailFragment.setArguments(args);
 
-                FragmentUtils.addFragmentsInActivity(getActivity(), R.id.codexFrame, codexDetailFragment, "Codex Detail");
+                //FragmentUtils.addFragmentsInActivity(getActivity(), R.id.codexFrame, codexDetailFragment, "Codex Detail");
+
+                Bundle bundle = new Bundle();
+                bundle.putString("cdxCategory", cdxCategoryItems.get(position).getCategory());
+
+                Intent intent = new Intent(getActivity(), CodexDetailActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
 
             public void onItemLongClick(View view, int position) {

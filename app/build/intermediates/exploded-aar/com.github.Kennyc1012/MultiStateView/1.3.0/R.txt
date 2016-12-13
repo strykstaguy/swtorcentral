@@ -1,0 +1,16 @@
+int attr msv_animateViewChanges 0x7f010004
+int attr msv_emptyView 0x7f010001
+int attr msv_errorView 0x7f010002
+int attr msv_loadingView 0x7f010000
+int attr msv_viewState 0x7f010003
+int id content 0x7f020001
+int id empty 0x7f020002
+int id error 0x7f020003
+int id loading 0x7f020004
+int id tag_multistateview 0x7f020000
+int[] styleable MultiStateView { 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004 }
+int styleable MultiStateView_msv_animateViewChanges 4
+int styleable MultiStateView_msv_emptyView 1
+int styleable MultiStateView_msv_errorView 2
+int styleable MultiStateView_msv_loadingView 0
+int styleable MultiStateView_msv_viewState 3

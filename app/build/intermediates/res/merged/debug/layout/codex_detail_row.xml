@@ -42,8 +42,6 @@
                 android:fontFamily="sans-serif-light"
                 android:text="The mysterious Deep Core world of Tython is the birthplace of the Jedi Order. Millennia ago, Tythonian warriors and scholars developed a unique mystic and martial philosophy while studying the Force. Today, their Jedi descendants excavate ancient Tythonian ruins and relearn what was lost. After the recent destruction of the Jedi Temple on Coruscant, the Jedi made their new home on Tython. The mountainous planet remains mostly unexplored, and the violent natives pose a constant threat. The order remains committed to rebuilding here, however, and is now training a new generation of Padawans."
                 android:paddingBottom="5.0dip"
-                android:maxLines="3"
-                android:ellipsize="end"
                 android:textSize="@dimen/md_text_body"
                 android:layout_below="@+id/cdxTitle"
                 android:layout_marginLeft="9dp"

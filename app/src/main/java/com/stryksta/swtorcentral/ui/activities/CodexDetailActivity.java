@@ -1,5 +1,6 @@
 package com.stryksta.swtorcentral.ui.activities;
 
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
@@ -55,12 +57,9 @@ public class CodexDetailActivity extends AppCompatActivity {
             cdxPlanetName = bundle.getString("cdxPlanetName");
         }
 
-        getSupportActionBar().setTitle(cdxPlanetName + " " + cdxCategory);
+        getSupportActionBar().setTitle(cdxCategory);
 
         codexDatabase = new CodexDatabase(CodexDetailActivity.this);
-        cdxItems = codexDatabase.getCodexesByCategory(cdxCategory, cdxPlanetID);
-        codexDatabase.close();
-
         mRecyclerView = (RecyclerView) findViewById(R.id.codexDetailList);
 
         if (mRecyclerView != null) {
@@ -68,9 +67,7 @@ public class CodexDetailActivity extends AppCompatActivity {
             mRecyclerView.setLayoutManager(mLayoutManager);
         }
 
-        mRecycleAdapter = new CodexAdapter(cdxItems);
-        mRecyclerView.setAdapter(mRecycleAdapter);
-
+        new GetCodexes().execute(cdxCategory);
     }
 
     @Override
@@ -82,5 +79,33 @@ public class CodexDetailActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private class GetCodexes extends AsyncTask<String, Void, ArrayList<CodexItem>> {
+
+        protected void onPreExecute() {
+            super.onPreExecute();
+            cdxItems = new ArrayList<>();
+        }
+
+        @Override
+        protected ArrayList<CodexItem> doInBackground(String... urls) {
+
+            try {
+                cdxItems = codexDatabase.getCodexes(urls[0]);
+            } catch (Exception e) {
+                if(e.getMessage() != null) {
+                    Log.e("SWTORCentral", e.getMessage());
+                }
+            }
+            return null;
+        }
+
+        protected void onPostExecute(ArrayList<CodexItem> result) {
+            //Set Codex Adapter
+            mRecycleAdapter = new CodexAdapter(cdxItems);
+            mRecyclerView.setNestedScrollingEnabled(false);
+            mRecyclerView.setAdapter(mRecycleAdapter);
+        }
     }
 }

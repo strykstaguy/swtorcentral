@@ -6,6 +6,7 @@ import java.util.List;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import com.stryksta.swtorcentral.models.CodexCategoryItem;
@@ -79,6 +80,9 @@ public class CodexDatabase extends SQLiteAssetHelper {
     }
 
     public ArrayList<CodexItem> getCodexes(String category) {
+
+        long startTime = System.nanoTime();
+
         ArrayList<CodexItem> categoryItem = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
@@ -111,6 +115,12 @@ public class CodexDatabase extends SQLiteAssetHelper {
         }
         c.close();
         db.close();
+
+        long endTime = System.nanoTime();
+        long diff = endTime - startTime;
+        double milliseconds = diff / 1000000.0;
+        double seconds = (double)endTime - startTime / 1000000000.0;
+        Log.v("SWTOR/CODEX DB", "That took " + seconds + " milliseconds");
         return categoryItem;
     }
 

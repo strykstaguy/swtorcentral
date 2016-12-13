@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-nodpi\\pl_alderaan.png"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pl_taris.png",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-nodpi\\pl_taris.png"
-    },
-    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pl_coruscant.png",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-nodpi\\pl_coruscant.png"
+    },
+    {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pl_taris.png",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-nodpi\\pl_taris.png"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pl_balmorra.png",
@@ -56,12 +56,12 @@
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-nodpi\\pl_ziost.png"
     },
     {
-        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pl_korriban.png",
-        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-nodpi\\pl_korriban.png"
-    },
-    {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pl_hoth.png",
         "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-nodpi\\pl_hoth.png"
+    },
+    {
+        "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pl_korriban.png",
+        "source": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\src\\main\\res\\drawable-nodpi\\pl_korriban.png"
     },
     {
         "merged": "C:\\Users\\Cody\\Desktop\\swtorcentral\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\pl_voss.png",
